@@ -77,7 +77,9 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 /* ---------- portada ---------- */
 .portada { padding-block: clamp(40px, 9vw, 104px) 56px }
 .portada h1 { font-weight: 900; line-height: .95; letter-spacing: -.035em; margin-top: 18px }
-.portada h1 .l1 { display: block; font-size: clamp(34px, 6.4vw, 76px) }
+.portada h1 { display: inline-block }   /* el título mide lo que «estremeñu»: el logo de la primera línea acaba donde acaba la palabra */
+.portada h1 .l1 { display: flex; align-items: center; justify-content: space-between; gap: .4em; font-size: clamp(34px, 6.4vw, 76px) }
+.portada h1 .logo-portada { height: 1em; width: auto; flex: none; display: block }
 .portada h1 .l2 { display: block; font-size: clamp(44px, 13vw, 172px); color: var(--texto); white-space: nowrap }
 .cambio { position: relative; display: inline-block }
 .cambio .viejo, .cambio .nuevo { display: inline-block }
@@ -399,7 +401,7 @@ span.fila .tit { color: var(--texto-2) }
 <section id="v-inicio" class="vista portada" hidden>
   <div class="envoltura">
     <div class="antetitulo">CEPA Coria · Curso 2026-2027</div>
-    <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
+    <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de<img class="logo-portada" src="img/logo-naranja.png" alt="" width="640" height="240"></span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
     <section class="carrusel" id="carrusel" aria-roledescription="carrusel" aria-label="El taller">
       <div class="pestanas" role="tablist"><button type="button" role="tab" id="pt-taller" aria-controls="dp-taller" aria-selected="true" data-i="0">El taller</button><button type="button" role="tab" id="pt-zona" aria-controls="dp-zona" aria-selected="false" data-i="1">La zona</button><button type="button" role="tab" id="pt-trabajo" aria-controls="dp-trabajo" aria-selected="false" data-i="2">Cómo trabaja</button><button type="button" role="tab" id="pt-web" aria-controls="dp-web" aria-selected="false" data-i="3">Esta web</button></div>
