@@ -92,6 +92,10 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 @keyframes entra { 0% { opacity: 0; transform: translateY(-.55em) } 100% { opacity: 1; transform: none } }
 @keyframes subraya { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
 .portada .lema { max-width: 58ch; font-size: clamp(17px, 2vw, 20px); color: var(--texto-2); margin: 28px 0 0 }
+.intro { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--linea) }
+.intro h2 { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde) }
+.intro p { margin: 10px 0 0; color: var(--texto-2); font-size: 16px; max-width: 46ch }
+@media (max-width: 860px) { .intro { grid-template-columns: minmax(0, 1fr); gap: 22px } }
 .portada blockquote { margin: 36px 0 0; padding-left: 18px; border-left: 3px solid var(--naranja); max-width: 56ch; font-weight: 700; font-size: 18px; line-height: 1.5 }
 .portada blockquote cite { display: block; font-style: normal; font-weight: 500; font-size: 13px; color: var(--texto-3); margin-top: 8px }
 .secciones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--linea); border: 1px solid var(--linea); margin-top: 56px }
@@ -239,6 +243,11 @@ span.fila .tit { color: var(--texto-2) }
     <div class="antetitulo">CEPA Coria · Curso 2026-2027</div>
     <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
+    <div class="intro">
+      <section><h2>El taller</h2><p>El Taller de estremeñu es un programa no formal del CEPA Coria, abierto a toda la población de Coria y su comarca. Se reúne los lunes y los jueves de 17:55 a 18:50, de octubre a mayo, en la biblioteca del centro.</p></section>
+      <section><h2>Cómo trabaja</h2><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así. Coria sale más que ningún otro sitio porque es el pueblo mejor estudiado.</p></section>
+      <section><h2>Esta web</h2><p>Reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los mapas que usamos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></section>
+    </div>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.<cite>Apuntes del taller, «Antes de empezar»</cite></blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
       <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado no">En preparación</span></a>
