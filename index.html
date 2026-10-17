@@ -170,11 +170,10 @@ span.fila .tit { color: var(--texto-2) }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px }
 .chip { font-weight: 800; font-size: 12px; letter-spacing: .06em; padding: 3px 8px; border-radius: 4px; color: var(--fondo); background: var(--c, var(--naranja)) }
 @media (max-width: 600px) { .textos a { grid-template-columns: minmax(0, 1fr); gap: 6px } }
-.texto-pag { display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-areas: "tcab tcab" "cuerpo panel" "ilus panel" "glos panel"; column-gap: 48px; padding-block: 8px 24px; max-width: 1080px }
+.texto-pag { display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-areas: "tcab tcab" "cuerpo panel" "ilus panel"; column-gap: 48px; padding-block: 8px 24px; max-width: 1080px }
 .texto-pag .tcab { grid-area: tcab }
 .texto-pag .cuerpo { grid-area: cuerpo; min-width: 0 }
 .texto-pag .panel { grid-area: panel; align-self: start; position: sticky; top: calc(var(--cab) + env(safe-area-inset-top, 0px) + 20px) }
-.texto-pag .glos { grid-area: glos; min-width: 0 }
 .texto-pag .ilus { grid-area: ilus; min-width: 0; margin-top: 30px }
 .ilus figure { margin: 0 0 26px }
 .ilus figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
@@ -239,7 +238,6 @@ span.fila .tit { color: var(--texto-2) }
 .panel .tt { display: block; font-weight: 700; font-size: 15px; line-height: 1.35 }
 .panel .cu { display: block; color: var(--texto-3); font-size: 13px; margin-top: 2px }
 .panel .nota { color: var(--texto-3); font-size: 13px; margin: 10px 0 0 }
-.glos { margin-top: 36px }
 .dic-partes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 28px }
 .dic-parte { background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 12px; padding: 22px 22px 18px }
 .dic-parte h3 { margin: 0 0 8px; font-size: 22px; font-weight: 900; color: var(--naranja) }
@@ -248,11 +246,8 @@ span.fila .tit { color: var(--texto-2) }
 .dic-parte .nota { font-size: 14px; color: var(--texto-3) }
 .dic-parte .buscador { margin-top: 18px }
 .dic-parte .buscador input { background: var(--fondo); font-size: 17px }
-.glos .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
-.glos dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 0; padding-top: 16px; border-top: 1px solid var(--linea); font-size: 15px }
-.glos dt { font-weight: 800 } .glos dd { margin: 0; color: var(--texto-2) }
 @media (max-width: 900px) {
-  .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" "glos" }
+  .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" }
   .texto-pag .panel { position: static; margin-top: 24px }
   .texto-pag.modo-fon .panel { display: none }
   .cuerpo { font-size: 18px }
@@ -607,8 +602,7 @@ function pintarTexto(t) {
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
     <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p></aside>
-    ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}
-    ${t.glosario.length ? `<div class="glos"><dl>${t.glosario.map(g => `<dt>${esc(g.forma)}</dt><dd>${esc(g.glosa)}</dd>`).join('')}</dl></div>` : ''}`;
+    ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
   tp.querySelectorAll('[data-modo]').forEach(b => b.addEventListener('click', () => {
