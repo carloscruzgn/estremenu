@@ -1,0 +1,86 @@
+{
+  "codigo": "V01",
+  "tipo": "regional",
+  "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+  "titulo": ["El cierre de las", "vocales finales"],
+  "cabecera": "El cierre de las vocales finales",
+  "ejemplos": [
+    {"base": "libr", "antes": "o", "despues": "u"},
+    {"base": "grand", "antes": "e", "despues": "i"}
+  ],
+
+  "oleadas": [
+    {
+      "rotulo": "1912",
+      "fuentes": "Krüger 1914",
+      "terminos": {
+        "10006": "Ahigal", "10124": "Mohedas de Granadilla (lista de Krüger; su forma es jambre)", "10146": "Pinofranqueado y El Castillo",
+        "10207": "Villa del Campo", "10089": "Guijo de Galisteo", "10088": "Guijo de Coria", "10127": "Montehermoso",
+        "10061": "Ceclavín", "10218": "Zarza la Mayor", "10082": "Garrovillas", "10216": "Zarza de Granadilla, por el despoblado de Granadilla",
+        "10041": "Caminomorisco, por Cambroncino", "10211": "Villanueva de la Sierra", "10189": "Torrejoncillo",
+        "10129": "Morcillo, por la nota al pie", "10004": "Acehúche, por jambri (§ 139)", "10050": "Casar de Palomero, por mujeri (§ 132)"
+      }
+    },
+    {
+      "rotulo": "1956-1979",
+      "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía González Salgado 2024",
+      "terminos": {
+        "10041": "Velo", "10051": "Velo", "10108": "Velo", "10135": "Velo", "10146": "Velo, ALEP",
+        "10040": "Cummins", "10053": "Cummins", "10059": "Cummins", "10067": "Cummins", "10088": "Cummins",
+        "10089": "Cummins", "10101": "Cummins", "10127": "Cummins", "10128": "Cummins, ALEP", "10143": "Cummins",
+        "10150": "Cummins", "10189": "Cummins", "10207": "Cummins",
+        "10084": "ALEP", "10144": "ALEP", "10216": "ALEP", "37221": "ALEP"
+      }
+    },
+    {
+      "rotulo": "1992-2011",
+      "fuentes": "Flores del Manzano 1992; González Salgado 2003 (encuestas de 1995-1997); Paniagua 2002; Alcón 2002; Iglesias Ovejero 2010; Portaje 2011",
+      "terminos": {
+        "10072": "González Salgado 2003", "10089": "González Salgado 2003, Alcón 2002", "10050": "González Salgado 2003",
+        "10006": "González Salgado 2003, Paniagua 2002", "10150": "González Salgado 2003, Portaje 2011",
+        "10061": "González Salgado 2003", "10082": "González Salgado 2003", "10053": "González Salgado 2003",
+        "10034": "Flores del Manzano 1992",
+        "37234": "Iglesias Ovejero 2010", "37221": "Iglesias Ovejero 2010", "37245": "Iglesias Ovejero 2010",
+        "37269": "Iglesias Ovejero 2010", "37371": "Iglesias Ovejero 2010"
+      }
+    }
+  ],
+
+  "fuera": {
+    "rotulo": {"k": "Y fuera del área", "h": "También allí", "s": "Alcántara, la sierra del Jerte y El Sahugo"},
+    "terminos": {
+      "10008": "Alcántara, Krüger 1914", "37303": "El Sahugo, ALEP vía González Salgado 2024",
+      "10147": "Piornal", "10184": "El Torno", "10196": "Valdastillas", "10054": "Casas del Castañar",
+      "10154": "Rebollar", "10036": "Cabrero", "10025": "Barrado"
+    },
+    "_nota": "Los serranos del Jerte, por Flores del Manzano 1992, p. 128. Madroñera no entra: ni la ficha V01 ni su cola traen cierre allí"
+  },
+
+  "probable": {
+    "comarcas": ["gata", "hurdes", "trasierra", "alagon", "rebollar"],
+    "terminos": [],
+    "excluir": ["10152"]
+  },
+  "algunos": {
+    "comarcas": ["tajosalor", "agadones"],
+    "_nota": "Débil en el recuadro de RV01: Tajo-Salor por el ALPI vía Montero Curiel 2006, p. 27; Los Agadones por El Sahugo"
+  },
+  "nunca": {"10152": "Pozuelo de Zarzón: Krüger 1914 y Alcón 2002"},
+  "llamada": {"termino": "10152", "texto": "<b>Pozuelo de Zarzón</b> no cierra, aunque lo rodean pueblos que sí"},
+
+  "noroeste": {
+    "rotulo": {"k": "En el resto de Extremadura", "h": "Un rasgo del noroeste", "s": "Fuera de él apenas hay datos, y donde se ha buscado no ha aparecido"},
+    "en_contra": {
+      "comarcas": ["ambroz", "vera"],
+      "terminos": ["10107", "10035", "10130", "10183"],
+      "fuente": "Flores del Manzano 1992, p. 128"
+    },
+    "rotulos_mapa": [
+      {"texto": "Ambroz", "comarca": "ambroz", "dx": -0.6, "dy": 1.6, "clase": "small"},
+      {"texto": "La Vera", "comarca": "vera", "dx": 1.0, "dy": -1.4, "clase": "small"},
+      {"texto": "Badajoz", "provincia": "06", "dx": 0, "dy": 0, "clase": "big"}
+    ]
+  },
+
+  "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · ALEP · Flores del Manzano 1992 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+}
