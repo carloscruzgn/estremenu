@@ -159,9 +159,8 @@ span.fila .tit { color: var(--texto-2) }
 .indice li:has(a.fila-ap):hover { background: var(--fondo-2) }
 .indice li:has(a.fila-ap):hover .t { color: var(--naranja) }
 .indice .ir { color: var(--naranja); font-weight: 800; font-size: 13px; white-space: nowrap }
-/* Un apartado de los apuntes: columna de lectura de unos 66 caracteres, mapas más anchos que el texto */
-.apartado { max-width: 980px; padding-block: 8px 24px }
-.apartado > * { max-width: 68ch }
+/* Un apartado de los apuntes: una sola columna de lectura; los mapas, del mismo ancho que el texto, se amplían al pulsarlos */
+.apartado { max-width: 46rem; padding-block: 8px 24px }
 .apartado .volver { display: inline-block; margin-bottom: 22px }
 .apartado h2 { font-weight: 900; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.05; letter-spacing: -.02em; margin: 10px 0 26px }
 .apartado p { font-size: 18px; line-height: 1.72; color: rgba(238, 244, 233, .88); margin: 0 0 18px }
@@ -170,7 +169,7 @@ span.fila .tit { color: var(--texto-2) }
 .apartado li { margin-bottom: 8px }
 .apartado li b { color: var(--texto); font-weight: 800 }
 .apartado li::marker { color: var(--naranja) }
-.apartado figure { max-width: 100%; margin: 30px 0 34px }
+.apartado figure { margin: 30px 0 34px }
 .apartado figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
 .apartado figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px }
