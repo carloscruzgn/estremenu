@@ -94,10 +94,34 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 @keyframes entra { 0% { opacity: 0; transform: translateY(-.55em) } 100% { opacity: 1; transform: none } }
 @keyframes subraya { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
 .portada .lema { max-width: 58ch; font-size: clamp(17px, 2vw, 20px); color: var(--texto-2); margin: 28px 0 0 }
-.intro { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--linea) }
-.intro h2 { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde) }
-.intro p { margin: 10px 0 0; color: var(--texto-2); font-size: 16px; max-width: 46ch }
-@media (max-width: 860px) { .intro { grid-template-columns: minmax(0, 1fr); gap: 22px } }
+/* Carrusel de la portada: tres diapositivas con pestañas; cada una tiene sitio para una foto (figure.foto), que se enseña cuando lleva imagen */
+.carrusel { margin-top: 40px; background: var(--fondo-2); border-radius: 10px; overflow: hidden }
+.pestanas { display: flex; gap: 0; border-bottom: 1px solid var(--linea) }
+.pestanas button { flex: 1 1 0; min-width: 0; background: none; border: 0; cursor: pointer; padding: 16px 18px 14px; text-align: left; font-weight: 800; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--texto-3); position: relative }
+.pestanas button:hover { color: var(--texto) }
+.pestanas button[aria-selected="true"] { color: var(--verde) }
+.pestanas button::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--naranja); transform: scaleX(0); transform-origin: 0 50% }
+.pestanas button[aria-selected="true"]::after { transform: scaleX(1) }
+.carrusel.auto .pestanas button[aria-selected="true"]::after { animation: avance 8s linear both }
+.carrusel.auto.pausa .pestanas button[aria-selected="true"]::after { animation-play-state: paused }
+@keyframes avance { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+.ventana { overflow: hidden; touch-action: pan-y }
+.pista { display: flex; transition: transform .55s cubic-bezier(.4,0,.2,1) }
+.diapo { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; padding: 30px 28px 34px }
+.diapo.con-foto { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) }
+.diapo h3 { font-weight: 900; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; letter-spacing: -.01em; margin: 0 }
+.diapo p { margin: 12px 0 0; color: var(--texto-2); font-size: 18px; line-height: 1.6; max-width: 60ch }
+.diapo .foto { margin: 0; border-radius: 8px; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; background: var(--fondo-3) }
+.diapo .foto img { width: 100%; height: 100%; object-fit: cover; display: block }
+.flechas { display: flex; justify-content: flex-end; gap: 6px; padding: 0 20px 18px }
+.flechas button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--linea); background: none; font-weight: 900; font-size: 18px; cursor: pointer }
+.flechas button:hover { background: var(--fondo-3) }
+@media (max-width: 640px) {
+  .pestanas button { padding: 14px 10px 12px; font-size: 11px; letter-spacing: .1em; text-align: center }
+  .diapo { padding: 22px 18px 26px } .diapo.con-foto { grid-template-columns: minmax(0, 1fr) }
+  .diapo p { font-size: 16px }
+}
+@media (prefers-reduced-motion: reduce) { .pista { transition: none } }
 .portada blockquote { margin: 36px 0 0; padding-left: 18px; border-left: 3px solid var(--naranja); max-width: 56ch; font-weight: 700; font-size: 18px; line-height: 1.5 }
 .portada blockquote cite { display: block; font-style: normal; font-weight: 500; font-size: 13px; color: var(--texto-3); margin-top: 8px }
 .secciones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--linea); border: 1px solid var(--linea); margin-top: 56px }
@@ -245,11 +269,15 @@ span.fila .tit { color: var(--texto-2) }
     <div class="antetitulo">CEPA Coria · Curso 2026-2027</div>
     <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
-    <div class="intro">
-      <section><h2>El taller</h2><p>El Taller de estremeñu es un programa no formal del CEPA Coria, abierto a toda la población de Coria y su comarca. Se reúne los lunes y los jueves de 17:55 a 18:50, de octubre a mayo, en la biblioteca del centro.</p></section>
-      <section><h2>Cómo trabaja</h2><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así. Coria sale más que ningún otro sitio porque es el pueblo mejor estudiado.</p></section>
-      <section><h2>Esta web</h2><p>Reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los mapas que usamos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></section>
-    </div>
+    <section class="carrusel" id="carrusel" aria-roledescription="carrusel" aria-label="El taller">
+      <div class="pestanas" role="tablist"><button type="button" role="tab" id="pt-taller" aria-controls="dp-taller" aria-selected="true" data-i="0">El taller</button><button type="button" role="tab" id="pt-trabajo" aria-controls="dp-trabajo" aria-selected="false" data-i="1">Cómo trabaja</button><button type="button" role="tab" id="pt-web" aria-controls="dp-web" aria-selected="false" data-i="2">Esta web</button></div>
+      <div class="ventana"><div class="pista" id="pista">
+          <article class="diapo" role="tabpanel" id="dp-taller" aria-labelledby="pt-taller" data-foto=""><div><h3>Un programa del CEPA Coria abierto a toda la comarca</h3><p>El Taller de estremeñu es un programa no formal del CEPA Coria, abierto a toda la población de Coria y su comarca. Se reúne los lunes y los jueves de 17:55 a 18:50, de octubre a mayo, en la biblioteca del centro.</p></div><figure class="foto" hidden></figure></article>
+          <article class="diapo" role="tabpanel" id="dp-trabajo" aria-labelledby="pt-trabajo" data-foto=""><div><h3>Leer en voz alta y escuchar a quien lo sabe</h3><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así. Coria sale más que ningún otro sitio porque es el pueblo mejor estudiado.</p></div><figure class="foto" hidden></figure></article>
+          <article class="diapo" role="tabpanel" id="dp-web" aria-labelledby="pt-web" data-foto=""><div><h3>Todo el material del taller, en un sitio</h3><p>Reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los mapas que usamos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></div><figure class="foto" hidden></figure></article>
+      </div></div>
+      <div class="flechas"><button type="button" id="c-ant" aria-label="Anterior">‹</button><button type="button" id="c-sig" aria-label="Siguiente">›</button></div>
+    </section>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.<cite>Apuntes del taller, «Antes de empezar»</cite></blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
       <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado no">En preparación</span></a>
@@ -378,6 +406,31 @@ async function ir() {
   if (mapa) mapa.pausar(sec !== 'rasgo');
   if (rasgo) await abrirRasgo(rasgo);
 }
+
+// Carrusel de la portada. Avanza solo cada 8 s (la barra naranja de la pestaña marca el tiempo), se para al pasar el ratón
+// o al tocarlo, y se mueve con las pestañas, las flechas o deslizando el dedo. Sin avance automático si se pide menos movimiento.
+// Para poner una foto en una diapositiva: data-foto="img/…" en su <article>.
+(function carrusel() {
+  const c = $('carrusel'), pista = $('pista'), tabs = [...c.querySelectorAll('[role="tab"]')], diapos = [...c.querySelectorAll('.diapo')];
+  for (const d of diapos) if (d.dataset.foto) { const f = d.querySelector('.foto'); f.innerHTML = `<img src="${d.dataset.foto}" alt="">`; f.hidden = false; d.classList.add('con-foto'); }
+  let i = 0;
+  const ir = n => {
+    i = (n + diapos.length) % diapos.length;
+    pista.style.transform = `translateX(${-100 * i}%)`;
+    tabs.forEach((t, k) => { t.setAttribute('aria-selected', k === i); t.tabIndex = k === i ? 0 : -1; });
+    diapos.forEach((d, k) => d.toggleAttribute('inert', k !== i));
+  };
+  if (!sinMov) c.classList.add('auto');
+  tabs.forEach((t, k) => { t.addEventListener('click', () => ir(k)); t.addEventListener('animationend', () => ir(i + 1)); });
+  $('c-ant').addEventListener('click', () => ir(i - 1)); $('c-sig').addEventListener('click', () => ir(i + 1));
+  c.addEventListener('keydown', e => { if (e.key === 'ArrowRight') ir(i + 1); if (e.key === 'ArrowLeft') ir(i - 1); });
+  c.addEventListener('pointerenter', () => c.classList.add('pausa')); c.addEventListener('pointerleave', () => c.classList.remove('pausa'));
+  c.addEventListener('focusin', () => c.classList.add('pausa')); c.addEventListener('focusout', () => c.classList.remove('pausa'));
+  let x0 = null;
+  pista.addEventListener('pointerdown', e => { x0 = e.clientX; c.classList.add('pausa'); });
+  pista.addEventListener('pointerup', e => { if (x0 !== null && Math.abs(e.clientX - x0) > 50) ir(i + (e.clientX < x0 ? 1 : -1)); x0 = null; });
+  ir(0);
+})();
 
 // La portada: extremeño → estremeñu. Primero la x por la s, después la o por la u.
 function animarPortada() {
