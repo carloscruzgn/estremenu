@@ -21,5 +21,23 @@
  "estado": "Queda en algunas palabras",
  "origenes": [
   "Leonés"
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "ejemplos": [
+  {
+   "base": "matan",
+   "antes": "za",
+   "despues": "cia"
+  },
+  {
+   "base": "alaban",
+   "antes": "za",
+   "despues": "cia"
+  },
+  {
+   "base": "gran",
+   "antes": "za",
+   "despues": "cia"
+  }
  ]
 }

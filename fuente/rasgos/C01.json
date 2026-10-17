@@ -1,0 +1,145 @@
+{
+ "codigo": "C01",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La jota de",
+  "jigu y jacha"
+ ],
+ "cabecera": "La jota de jigu y jacha",
+ "ejemplos": [],
+ "_ejemplos": "El molde de la portadilla cambia una letra al final y la F- aspirada cambia la primera: ++decidir la portadilla del reel cuando se haga++. La web toma los ejemplos de fuente/apuntes/C01.json",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 220-223",
+   "terminos": {
+    "10216": "Zarza de Granadilla y Granadilla: h- probablemente exclusiva en Zarza; predominante en Granadilla",
+    "10152": "Pozuelo de Zarzón: h- probablemente exclusiva; jadel",
+    "10207": "Villa del Campo: h- probablemente exclusiva; jigu, jumu, jadel, jwenti",
+    "10089": "Guijo de Galisteo: h- probablemente exclusiva; jebreru, jwera",
+    "10127": "Montehermoso: h- probablemente exclusiva; jwegu",
+    "10146": "Pinofranqueado y El Castillo: h- exclusiva en Pinofranqueado; jwenti",
+    "10211": "Villanueva de la Sierra: h- con pérdida suelta en hacer; jyel",
+    "10084": "Gata: h- con pérdida suelta en hacer; jwente",
+    "10129": "Morcillo: h- con pérdida suelta en hacer; jyerru",
+    "10189": "Torrejoncillo: h- con pérdida suelta en hacer; jigu",
+    "10006": "Ahigal: h- predominante; jyerru, jechu",
+    "10124": "Mohedas de Granadilla: h- predominante; jumu",
+    "10041": "Caminomorisco, por Cambroncino: h- predominante; jaze, jwegu",
+    "10061": "Ceclavín: h- predominante; jigu, jumu",
+    "10218": "Zarza la Mayor: h- predominante; jigu",
+    "10082": "Garrovillas: h- predominante; jyerru en habla enfática",
+    "10050": "Casar de Palomero: h- rara; jambre en «tengo hambre»",
+    "10187": "Torre de Don Miguel: h- rara; jaba",
+    "10088": "Guijo de Coria: jadel"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía Alonso Pascua 2023",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10051": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10108": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10135": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10146": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10040": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10053": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10059": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10067": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10088": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10089": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10101": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10127": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10128": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10143": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10150": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10189": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10207": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "37221": "ALEP: aspiración, y f- conservada en alguna voz"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Paniagua 2002; Alcón 2002; Iglesias Ovejero 2010; Portaje 2011",
+   "terminos": {
+    "37234": "Iglesias Ovejero 2010, p. 45: jambri, Jelipi, joci, «uno de los fenómenos peculiares más regulares»",
+    "37221": "Iglesias Ovejero 2010, p. 45: jambri, Jelipi, joci, «uno de los fenómenos peculiares más regulares»",
+    "37245": "Iglesias Ovejero 2010, p. 45: jambri, Jelipi, joci, «uno de los fenómenos peculiares más regulares»",
+    "37269": "Iglesias Ovejero 2010, p. 45: jambri, Jelipi, joci, «uno de los fenómenos peculiares más regulares»",
+    "37371": "Iglesias Ovejero 2010, p. 45: jambri, Jelipi, joci, «uno de los fenómenos peculiares más regulares»",
+    "10006": "González Salgado 2003, p. 597: hambre, hembra, hilo; Paniagua 2002",
+    "10089": "González Salgado 2003, p. 597: harina, hambre, hierro; Alcón 2002",
+    "10082": "González Salgado 2003, p. 597: hierro, humo",
+    "10150": "Portaje 2011: «difícilmente jadel» entre los jóvenes"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Alcántara, la sierra del Jerte, Madroñera y El Sahugo"
+  },
+  "terminos": {
+   "10008": "Alcántara: h- rara, Krüger 1914, § 222",
+   "10147": "Piornal: juenti, juerza, Flores del Manzano 1992, p. 128",
+   "10183": "Tornavacas: aspira también en mayores de noventa años, Flores del Manzano 1992, n. 24",
+   "10113": "Madroñera, González Salgado 2003, vía Montero Curiel 2006, pp. 38-39",
+   "37303": "El Sahugo: ALEP vía Alonso Pascua 2023"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": [
+   "10072",
+   "10164",
+   "10205",
+   "10094"
+  ]
+ },
+ "_probable": "Fuerte en el recuadro de RC01: casi toda Extremadura, por el ALPI vía Montero Curiel 2006, p. 14, y Flores del Manzano 1992, p. 128. Campo Arañuelo, Villuercas y La Siberia, en blanco en RC01, van sin datos: el ALPI lo dice sin pueblos",
+ "algunos": {
+  "comarcas": [
+   "sanpedro",
+   "agadones"
+  ],
+  "_nota": "Débil en el recuadro de RC01: Sierra de San Pedro; Los Agadones, por El Sahugo"
+ },
+ "nunca": {
+  "10072": "Eljas: conserva la f- portuguesa, figueira, ferru (González Salgado 2003)",
+  "10164": "San Martín de Trevejo: la fala conserva la f- (Montero Curiel 2006, p. 38)",
+  "10205": "Valverde del Fresno: la fala conserva la f- (Montero Curiel 2006, p. 38)",
+  "10094": "Herrera de Alcántara: conserva la f- (Montero Curiel 2006, p. 38)"
+ },
+ "llamada": {
+  "termino": "10072",
+  "texto": "En la <b>fala</b> se dice con f: <i>figueira</i>, <i>ferru</i>"
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+}

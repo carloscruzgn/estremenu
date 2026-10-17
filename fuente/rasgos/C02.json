@@ -1,0 +1,137 @@
+{
+ "codigo": "C02",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La jota",
+  "que no rasca"
+ ],
+ "cabecera": "La jota que no rasca",
+ "ejemplos": [],
+ "_ejemplos": "La jota aspirada se escribe j, como la castellana: no hay letra que cambie. ++decidir la portadilla del reel cuando se haga++",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, § 351",
+   "terminos": {
+    "10216": "Zarza de Granadilla y Granadilla: velar y débil junto a la aspirada",
+    "10050": "Casar de Palomero: aspirada más frecuente, junto a la velar débil",
+    "10006": "Ahigal: solo aspirada",
+    "10124": "Mohedas de Granadilla: solo aspirada",
+    "10187": "Torre de Don Miguel: solo aspirada",
+    "10041": "Caminomorisco, por Cambroncino: solo aspirada",
+    "10146": "Pinofranqueado y El Castillo: solo aspirada",
+    "10084": "Gata: solo aspirada",
+    "10089": "Guijo de Galisteo: solo aspirada",
+    "10088": "Guijo de Coria: solo aspirada",
+    "10127": "Montehermoso: solo aspirada",
+    "10129": "Morcillo: solo aspirada",
+    "10189": "Torrejoncillo: solo aspirada",
+    "10004": "Acehúche: solo aspirada",
+    "10061": "Ceclavín: solo aspirada",
+    "10218": "Zarza la Mayor: solo aspirada",
+    "10211": "Villanueva de la Sierra: aspirada nasal, obeja, teja",
+    "10207": "Villa del Campo: aspirada nasal",
+    "10152": "Pozuelo de Zarzón: aspirada nasal y oral",
+    "10082": "Garrovillas: trabaja (§ 338, n. 1)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
+    "10051": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
+    "10108": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
+    "10135": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
+    "10146": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
+    "10040": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10053": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10059": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10067": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10088": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10089": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10101": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10127": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10128": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10143": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10150": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10189": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10207": "Cummins, § 12: «en toda la región, en todas las edades»"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Alcón 2002; Iglesias Ovejero 2010",
+   "terminos": {
+    "10072": "González Salgado 2003, pp. 597-598: aspirada general",
+    "10089": "González Salgado 2003, pp. 597-598: aspirada general; Alcón 2002: muhé, navaha, trabaho",
+    "10050": "González Salgado 2003, pp. 597-598: aspirada general; con sonidos intermedios hacia la velar (González Salgado 2003)",
+    "10006": "González Salgado 2003, pp. 597-598: aspirada general",
+    "10150": "González Salgado 2003, pp. 597-598: aspirada general",
+    "10061": "González Salgado 2003, pp. 597-598: aspirada general",
+    "10082": "González Salgado 2003, pp. 597-598: aspirada general; con sonidos intermedios hacia la velar (González Salgado 2003)",
+    "10053": "González Salgado 2003, pp. 597-598: aspirada general",
+    "10175": "González Salgado 2003, pp. 597-598: aspirada general",
+    "37234": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37221": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37245": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37269": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37371": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "En toda Extremadura",
+   "s": "Solo Campanario la dice como en Castilla"
+  },
+  "terminos": {
+   "10008": "Alcántara: entre «los pueblos al sur del Tajo» de solo aspirada, Krüger 1914, § 351"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": [
+   "06028"
+  ]
+ },
+ "_probable": "Fuerte en el recuadro de RC02: toda Extremadura, por Montero Curiel 2006, p. 44, y González Salgado 2003, pp. 597-598",
+ "nunca": {
+  "06028": "Campanario: la única localidad extremeña con jota velar, González Salgado 2003, pp. 597-598"
+ },
+ "llamada": {
+  "termino": "06028",
+  "texto": "En <b>Campanario</b> la jota rasca, como en Castilla"
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+}

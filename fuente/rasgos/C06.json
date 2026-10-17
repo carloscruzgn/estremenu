@@ -1,0 +1,154 @@
+{
+ "codigo": "C06",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La r del final",
+  "se vuelve l"
+ ],
+ "cabecera": "La r del final se vuelve l",
+ "_titulo": "El de la página C06 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "come",
+   "antes": "r",
+   "despues": "l"
+  },
+  {
+   "base": "muje",
+   "antes": "r",
+   "despues": "l"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 279-282",
+   "terminos": {
+    "10187": "Torre de Don Miguel: ayel, kosel",
+    "10211": "Villanueva de la Sierra: ayel, mejol, mujel",
+    "10084": "Gata: ayel, lugal, kantal, moril, mejol",
+    "10207": "Villa del Campo: ayel, kodel, mujel, pradel",
+    "10089": "Guijo de Galisteo: ayel, moril, kodel",
+    "10127": "Montehermoso: ayel, kazaol, pradel (el informante vivía en Guijo de Galisteo)",
+    "10129": "Morcillo: ayel, kosel, mejol, mujel",
+    "10189": "Torrejoncillo: ayel, kozel, mujel, kazaol, balol",
+    "10004": "Acehúche: ayel, kozel, flol; y Menchol en un bautizo de 1659 (Valle Morea 2002)",
+    "10061": "Ceclavín: ayel, kozel, mujel",
+    "10216": "Zarza de Granadilla y Granadilla: ayel, moril, junto a mujer, mejor con -r en el mismo informante",
+    "10006": "Ahigal: ayel, junto a mejor",
+    "10124": "Mohedas de Granadilla: ayel, dormil",
+    "10050": "Casar de Palomero: ayel, dormil en el punto 5*; en el punto 5, aye, mejo, sin consonante",
+    "10152": "Pozuelo de Zarzón: ayel, dormil, kantal, mejol",
+    "10088": "Guijo de Coria: ayel, idil, jadel, peil"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
+    "10051": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
+    "10108": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
+    "10135": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
+    "10146": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
+    "10040": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10053": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10059": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10067": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10088": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10089": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10101": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10127": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10128": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10143": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10150": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10189": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
+    "10207": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Paniagua 2002; Alcón 2002; Ortigo 2002; Iglesias Ovejero 2010; Portaje 2011",
+   "terminos": {
+    "37234": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "37221": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "37245": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "37269": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "37371": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "10006": "Paniagua 2002: aballal, jadel, trael, calol, «en hablantes de todas las edades»",
+    "10089": "Alcón 2002 y Ortigo 2002: sabel, bailal, tenel, mejol, mujel",
+    "10150": "Portaje 2011: abril, cerral"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Madroñera"
+  },
+  "terminos": {
+   "10113": "Madroñera: comel, sabol (Montero 1997, vía Montero Curiel 2006, p. 44)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "trasierra",
+   "alagon",
+   "rebollar"
+  ],
+  "terminos": [
+   "10082"
+  ],
+  "excluir": []
+ },
+ "_probable": "Garrovillas en claro: en 1912 dejaba caer la -r, y Marcos de Sande 1947, fuente C, escribe -l en el refranero (criterio 3)",
+ "algunos": {
+  "comarcas": [
+   "ambroz",
+   "jerte",
+   "vera",
+   "miajadas",
+   "bejar"
+  ],
+  "_nota": "Débil en el recuadro de RC06, por Ariza 1993a, vía Montero Curiel 2006"
+ },
+ "noroeste": {
+  "rotulo": {
+   "k": "En el resto de Extremadura",
+   "h": "Un rasgo del norte de Cáceres",
+   "s": "Al sur, la r del final se cae: comé, ará"
+  },
+  "en_contra": {
+   "comarcas": [],
+   "terminos": [
+    "10008",
+    "10145",
+    "10208",
+    "10032",
+    "10133",
+    "10195"
+   ],
+   "fuente": "Krüger 1914, § 281: sin consonante en Alcántara, Piedras Albas, Villa del Rey, Brozas y Navas del Madroño; Trujillo, Montero Curiel 2006, p. 44"
+  },
+  "rotulos_mapa": [
+   {
+    "texto": "Tajo-Salor",
+    "comarca": "tajosalor",
+    "dx": 0,
+    "dy": 0,
+    "clase": "small"
+   },
+   {
+    "texto": "Badajoz",
+    "provincia": "06",
+    "dx": 0,
+    "dy": 0,
+    "clase": "big"
+   }
+  ]
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006, y otras fuentes del taller"
+}

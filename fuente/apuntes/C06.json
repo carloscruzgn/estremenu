@@ -19,5 +19,28 @@
   ]
  ],
  "estado": "Se va perdiendo",
- "origenes": []
+ "origenes": [],
+ "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "ejemplos": [
+  {
+   "base": "come",
+   "antes": "r",
+   "despues": "l"
+  },
+  {
+   "base": "muje",
+   "antes": "r",
+   "despues": "l"
+  },
+  {
+   "base": "canta",
+   "antes": "r",
+   "despues": "l"
+  },
+  {
+   "base": "seño",
+   "antes": "r",
+   "despues": "l"
+  }
+ ]
 }

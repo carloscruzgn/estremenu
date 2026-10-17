@@ -21,5 +21,18 @@
  "estado": "Todavía se oye",
  "origenes": [
   "Del sur"
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "ejemplos": [
+  {
+   "base": "niño",
+   "antes": "s",
+   "despues": "ʰ"
+  },
+  {
+   "base": "cabrilla",
+   "antes": "s",
+   "despues": "ʰ"
+  }
  ]
 }

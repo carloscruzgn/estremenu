@@ -1,0 +1,124 @@
+{
+ "codigo": "V07",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Matancia, quiciás, alabancia:",
+  "la i que se cuela"
+ ],
+ "cabecera": "La i que se cuela",
+ "_titulo": "El de la página V07 de los apuntes del alumnado. La cola de V07 apunta que Cummins da [kiθjá] sin -s y que la página tiene que corregir quiciás",
+ "ejemplos": [
+  {
+   "base": "matan",
+   "antes": "za",
+   "despues": "cia"
+  },
+  {
+   "base": "alaban",
+   "antes": "za",
+   "despues": "cia"
+  }
+ ],
+ "_oleadas": "Sin oleada de 1912: Krüger no trae ningún caso (cola de V07, por KRUGER-FORMAS.csv)",
+ "oleadas": [
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía González Salgado 2024",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
+    "10051": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
+    "10108": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
+    "10135": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
+    "10146": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
+    "10127": "Cummins, § 7: matancia, choriciu, los aperius, ericiu, barrial, mamia",
+    "10150": "Cummins, § 7: matancia, grancia, quiciá",
+    "10189": "Cummins, § 7: matancia, quiciá, alabancia, holgacián",
+    "10088": "Cummins, § 7: matancia, choriciu, quiciá",
+    "10101": "Cummins, § 7: grancia",
+    "10040": "Cummins, § 7: los aperius, quiciá",
+    "10067": "Cummins, § 7: enjambración, graniciu, temporial, borniu",
+    "10089": "Cummins, § 7: alabancia",
+    "10053": "Cummins, § 7: mamia",
+    "10128": "ALEP: blasfemiar",
+    "10216": "ALEP: blasfemiar"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Paniagua 2002; Alcón 2002; Iglesias Ovejero 2010",
+   "terminos": {
+    "37234": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
+    "37221": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
+    "37245": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
+    "37269": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
+    "37371": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
+    "10006": "Paniagua 2002, p. 77: grancia, jeringoncia, panarria, urnia, borniu, esturniu",
+    "10089": "Alcón 2002, p. 221: alabancia, armación, morrial"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "Por todo el oeste",
+   "s": "Hasta una raya que baja de Casatejada a Puebla del Maestre"
+  },
+  "terminos": {
+   "10058": "Casatejada",
+   "10190": "Torrejón el Rubio",
+   "10168": "Santa Marta de Magasca",
+   "10113": "Madroñera",
+   "10109": "Logrosán",
+   "10126": "Montánchez",
+   "10073": "Escurial",
+   "06096": "Orellana de la Sierra",
+   "06105": "Puebla del Maestre",
+   "06083": "Mérida, por Flores del Manzano 1992, n. 23",
+   "37303": "El Sahugo, ALEP vía Alonso Pascua 2023"
+  },
+  "_nota": "Los nueve pueblos de la raya oriental, González Salgado 2003, p. 607, n. 38: el rasgo llega hasta ellos"
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "rebollar",
+   "monfrague",
+   "tajosalor",
+   "sanpedro",
+   "miajadas",
+   "montanchez",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "tentudia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Fuerte en el recuadro de RV07: el oeste de la raya de González Salgado 2003, p. 607, y El Rebollar",
+ "algunos": {
+  "comarcas": [
+   "aranuelo",
+   "villuercas",
+   "serena",
+   "campinasur",
+   "siberia",
+   "jerte",
+   "ambroz",
+   "robledo",
+   "agadones",
+   "francia",
+   "bejar"
+  ],
+  "_nota": "Débil en el recuadro de RV07: el este de la raya; las cuatro salmantinas, por grancias del ALCyL, vía González Salgado 2024"
+ },
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · ALEP · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+}

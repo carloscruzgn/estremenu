@@ -708,7 +708,7 @@ function pintarCabeza(codigo, R, pagina) {
   $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === codigo).titulo;
   const ej = (pagina && pagina.ejemplos) || (R && R.ejemplos) || [];
   $('r-ejemplos').hidden = !ej.length;
-  $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span></div>`).join('');
+  $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span>${esc(e.cola || '')}</div>`).join('');
   clearInterval(ejemploTimer);
   let i = 0;
   const muestra = () => {
@@ -868,7 +868,7 @@ async function crearMapa(baseP) {
     }
     return s;
   }
-  let shots = {}, wideBB = areaBB;
+  let shots = {}, wideBB = areaBB, probBB = areaBB;
   function encuadres() {
     // Rectángulo libre de rótulos (arriba) y leyenda (abajo), en píxeles del lienzo
     const top = H * (movil ? 0.3 : 0.24), bottom = H * (movil ? 0.86 : 0.88);
@@ -876,6 +876,7 @@ async function crearMapa(baseP) {
     shots = {
       area: autofit(areaBB, -10, 58, rect),
       wide: autofit(wideBB, -8, 62, rect),
+      prob: autofit(probBB, -8, 62, rect),
       ext: autofit(extBB, -4, 58, rect),
     };
   }
@@ -906,7 +907,7 @@ async function crearMapa(baseP) {
     (RS.oleadas || []).forEach((o, i) => E.push({ id: 'ola' + (i + 1), ola: i + 1, nombre: o.rotulo, k: 'Pueblos donde se ha recogido', anio: o.rotulo, s: o.fuentes, cam: 'area' }));
     const hay = c => Object.values(CL).some(x => x.cls === c);
     if (hay('out')) E.push({ id: 'fuera', nombre: 'Fuera del área', ...(RS.fuera.rotulo || {}), cam: 'wide' });
-    if (hay('prob') || hay('part') || hay('never')) E.push({ id: 'prob', nombre: 'Extensión probable', k: 'Uniendo los datos', h: 'La extensión probable', s: '', cam: 'wide' });
+    if (hay('prob') || hay('part') || hay('never')) E.push({ id: 'prob', nombre: 'Extensión probable', k: 'Uniendo los datos', h: 'La extensión probable', s: '', cam: 'prob' });
     if ((RS.tipo || 'regional') !== 'general' && RS.noroeste) E.push({ id: 'nw', nombre: 'Resto de Extremadura', ...(RS.noroeste.rotulo || {}), cam: 'ext' });
     return E;
   }
@@ -1091,6 +1092,8 @@ async function crearMapa(baseP) {
     cargarRasgo(datos) {
       RS = datos.rasgo; CL = datos.clases; sel = null;
       wideBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && CL[d.code].cls === 'out')).map(d => d.rings));
+      // La extensión probable se encuadra con todo lo que pinta: en un rasgo de toda Extremadura, la región entera
+      probBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && ['out', 'prob', 'part', 'never'].includes(CL[d.code].cls))).map(d => d.rings));
       medir(); encuadres();
       for (const l of etiquetas.splice(0)) l.e.remove();
       etiqueta('Coria<span class="punto"></span>', coria[0], coria[1], HREG, 'con-punto', null, '10067');

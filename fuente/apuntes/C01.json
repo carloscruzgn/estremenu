@@ -21,5 +21,26 @@
  "estado": "Queda en algunas palabras",
  "origenes": [
   "Castellano viejo"
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "h",
+   "despues": "j",
+   "cola": "acha"
+  },
+  {
+   "base": "",
+   "antes": "h",
+   "despues": "j",
+   "cola": "iguera"
+  },
+  {
+   "base": "",
+   "antes": "h",
+   "despues": "j",
+   "cola": "arina"
+  }
  ]
 }

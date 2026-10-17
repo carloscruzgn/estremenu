@@ -14,8 +14,8 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
 - **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`, y en `fuentes/` la Charis SIL recortada a los signos de la fonética, con su licencia OFL.
 - **fuente/** — lo que se escribe a mano para cada rasgo y el programa que prepara los datos:
-  - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web.
-  - `apuntes/<código>.json`: el texto de la página del rasgo en los apuntes del alumnado y los ejemplos de la cabecera.
+  - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web. V01 vino del generador; C06, V07, C01, C02 y C03 se escribieron aquí el 18/10/2026 y el generador los toma de aquí cuando se haga su reel. Al lado, la hoja de criterios de cada tanda (`criterios_…md`), con las decisiones dudosas y su alternativa.
+  - `apuntes/<código>.json`: el texto de la página del rasgo en los apuntes del alumnado y los ejemplos de la cabecera, sacados de la misma página. Un ejemplo es `{base, antes, despues}` y, si el cambio no va al final, `cola` con lo que sigue (*hacha → jacha*).
   - `apuntes/apartados.json`: el texto de los apartados de los apuntes del alumnado, por párrafos, con los arranques en negrita y los mapas.
   - `catalogo.json`: los títulos de las páginas de rasgo de los apuntes y qué rasgos tienen mapa y página.
   - `textos/TEX-NN.json`: cada texto leído en el taller, con la fecha de la pestaña Sesiones de la app, sus rasgos destacados, las palabras marcadas con el código de su rasgo y el glosario de la guía, que la web no muestra. Salen del texto marcado de la guía de clase (guia-clase-pdf.zip).

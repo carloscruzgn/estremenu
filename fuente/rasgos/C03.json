@@ -1,0 +1,152 @@
+{
+ "codigo": "C03",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La s que se",
+  "convierte en aire"
+ ],
+ "cabecera": "La s que se convierte en aire",
+ "ejemplos": [
+  {
+   "base": "niño",
+   "antes": "s",
+   "despues": "ʰ"
+  },
+  {
+   "base": "cabrilla",
+   "antes": "s",
+   "despues": "ʰ"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912-1932",
+   "fuentes": "Krüger 1914, §§ 386-402, grupos B y C; Bierhenke 1932, vía González Salgado 2007",
+   "terminos": {
+    "10124": "Mohedas de Granadilla: grupo B, vacila entre s y pérdida",
+    "10152": "Pozuelo de Zarzón: grupo B",
+    "10187": "Torre de Don Miguel: grupo B; abiʰpa, eʰpejo, agoʰto",
+    "10189": "Torrejoncillo: grupo B",
+    "10061": "Ceclavín: grupo B",
+    "10006": "Ahigal: grupo C, pérdida en pausa; epeju, freka",
+    "10050": "Casar de Palomero: grupo C; freʰka, abiʰpa",
+    "10041": "Caminomorisco, por Cambroncino: grupo C; lajetreya",
+    "10146": "Pinofranqueado y El Castillo: grupo C; lajoriya, abipa",
+    "10084": "Gata: grupo C, con pocos ejemplos",
+    "10127": "Montehermoso: grupo C; dojombri (el informante vivía en Guijo de Galisteo)",
+    "10218": "Zarza la Mayor: grupo C",
+    "10082": "Garrovillas: grupo C",
+    "10211": "Villanueva de la Sierra: maehtro, ehcurril, Bierhenke 1932, vía González Salgado 2007; Krüger la daba conservada"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 75: la -s de final de sílaba, «como j castellana, relajada»",
+    "10051": "Velo Nieto 1956, p. 75: la -s de final de sílaba, «como j castellana, relajada»",
+    "10108": "Velo Nieto 1956, p. 75: la -s de final de sílaba, «como j castellana, relajada»",
+    "10135": "Velo Nieto 1956, p. 75: la -s de final de sílaba, «como j castellana, relajada»",
+    "10146": "Velo Nieto 1956, p. 75: la -s de final de sílaba, «como j castellana, relajada»",
+    "10040": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10053": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10059": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10067": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10088": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10089": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10101": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10127": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10128": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10143": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10150": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10189": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10207": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Paniagua 2002; Montero Curiel 2006, p. 42",
+   "terminos": {
+    "10089": "Guijo de Galisteo: general",
+    "10050": "Casar de Palomero: general",
+    "10006": "Ahigal: general; González Salgado 2003; Paniagua 2002, p. 78",
+    "10150": "Portaje: general",
+    "10061": "Ceclavín: general; aspira y repone la -s en pausa, Montero Curiel 2006, p. 42",
+    "10082": "Garrovillas: general",
+    "10053": "Casas de Don Gómez: general",
+    "10175": "Serradilla: general",
+    "10045": "Cañaveral: Montero Curiel 2006, p. 42, sin fecha de recogida",
+    "10099": "Holguera: Montero Curiel 2006, p. 42, sin fecha de recogida",
+    "10155": "Riolobos: Montero Curiel 2006, p. 42, sin fecha de recogida",
+    "10152": "aspira y repone la -s en pausa, Montero Curiel 2006, p. 42"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "En toda Extremadura",
+   "s": "De la sierra del Jerte a Trujillo"
+  },
+  "terminos": {
+   "10147": "Piornal: Flores del Manzano 1992, p. 129",
+   "10183": "Tornavacas: Flores del Manzano 1992, p. 129",
+   "10195": "Trujillo: aspira y pierde siempre, Montero Curiel 2006, p. 42",
+   "10219": "Zorita: Montero Curiel 2006, p. 42",
+   "10092": "Herguijuela: Montero Curiel 2006, p. 42",
+   "10186": "Torrecillas de la Tiesa: Montero Curiel 2006, p. 42",
+   "10113": "Madroñera: Montero Curiel 2006, p. 42"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": [
+   "10072",
+   "10062"
+  ]
+ },
+ "_probable": "Fuerte en el recuadro de RC03: las 24 comarcas, por González Salgado 2003, pp. 598-602, y Montero Curiel 2006, pp. 41-42",
+ "algunos": {
+  "comarcas": [
+   "rebollar"
+  ],
+  "_nota": "Débil en el recuadro de RC03: Iglesias Ovejero 2010, p. 49, la da esporádica, doháreas, por «influjo meridional»"
+ },
+ "nunca": {
+  "10072": "Eljas: la única localidad del noroeste que González Salgado 2003 da sin aspirar",
+  "10062": "Cedillo: sin aspirar, González Salgado 2003"
+ },
+ "llamada": {
+  "termino": "10072",
+  "texto": "En <b>Eljas</b> la s no se aspira"
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller"
+}
