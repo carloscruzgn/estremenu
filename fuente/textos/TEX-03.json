@@ -1008,5 +1008,21 @@
    "glosa": "encenderla"
   }
  ],
+ "imagenes": [
+  {
+   "src": "img/textos/TEX-03-fig2.webp",
+   "ancho": 1619,
+   "alto": 1059,
+   "alt": "Dibujo de una zancaburra con el nombre de cada pieza",
+   "pie": "Las piezas de la zancaburra en el dibujo de Cummins (fig. 2, p. 233), rotuladas en la grafía del taller. Las que llevan C 1 las nombra el informante de esta conversación."
+  },
+  {
+   "src": "img/textos/TEX-03-lam24.webp",
+   "ancho": 1400,
+   "alto": 848,
+   "alt": "Fotografía de un hombre sacando agua con una zancaburra",
+   "pie": "Una de las zancaburras que fotografió Cummins (lám. 24, p. 254). El hombre baja el cubo tirando de la vara; al soltarla, la piedra del otro extremo lo sube lleno."
+  }
+ ],
  "_fuente": "Texto marcado de la guía de clase (TEX-03, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
 }

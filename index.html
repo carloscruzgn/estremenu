@@ -170,11 +170,16 @@ span.fila .tit { color: var(--texto-2) }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px }
 .chip { font-weight: 800; font-size: 12px; letter-spacing: .06em; padding: 3px 8px; border-radius: 4px; color: var(--fondo); background: var(--c, var(--naranja)) }
 @media (max-width: 600px) { .textos a { grid-template-columns: minmax(0, 1fr); gap: 6px } }
-.texto-pag { display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-areas: "tcab tcab" "cuerpo panel" "glos panel"; column-gap: 48px; padding-block: 8px 24px; max-width: 1080px }
+.texto-pag { display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-areas: "tcab tcab" "cuerpo panel" "ilus panel" "glos panel"; column-gap: 48px; padding-block: 8px 24px; max-width: 1080px }
 .texto-pag .tcab { grid-area: tcab }
 .texto-pag .cuerpo { grid-area: cuerpo; min-width: 0 }
 .texto-pag .panel { grid-area: panel; align-self: start; position: sticky; top: calc(var(--cab) + env(safe-area-inset-top, 0px) + 20px) }
 .texto-pag .glos { grid-area: glos; min-width: 0 }
+.texto-pag .ilus { grid-area: ilus; min-width: 0; margin-top: 30px }
+.ilus figure { margin: 0 0 26px }
+.ilus figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
+.ilus figure img { display: block; width: 100%; height: auto }
+.ilus figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px; line-height: 1.5 }
 .texto-pag h2 { font-weight: 900; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 10px 0 0 }
 .texto-pag .meta { color: var(--texto-2); font-size: 15px; margin: 12px 0 0; max-width: 64ch; line-height: 1.55 }
 .texto-pag .meta b { color: var(--texto); font-weight: 800 }
@@ -208,7 +213,7 @@ span.fila .tit { color: var(--texto-2) }
 .glos dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 14px 0 0; font-size: 15px }
 .glos dt { font-weight: 800 } .glos dd { margin: 0; color: var(--texto-2) }
 @media (max-width: 900px) {
-  .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "glos" }
+  .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" "glos" }
   .texto-pag .panel { position: static; margin-top: 24px }
   .cuerpo { font-size: 18px }
 }
@@ -544,6 +549,7 @@ function pintarTexto(t) {
       <span class="leido">Leído en el taller el ${fecha(t.leido)}</span></div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
     <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p></aside>
+    ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}
     ${t.glosario.length ? `<div class="glos"><div class="ante">Para entender el texto</div><dl>${t.glosario.map(g => `<dt>${esc(g.forma)}</dt><dd>${esc(g.glosa)}</dd>`).join('')}</dl></div>` : ''}`;
   const cu = $('cuerpo-texto');
   const foco = c => { cu.classList.toggle('foco', !!c); cu.querySelectorAll('a.m').forEach(a => a.classList.toggle('on', !!c && a.dataset.r.split(' ').includes(c))); };

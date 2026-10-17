@@ -11,7 +11,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `rasgos/<código>.json`: la página del rasgo en los apuntes y, si tiene mapa, el fichero del rasgo del generador de reels y la clase de cada término.
   - `textos.json`: los textos leídos en el taller.
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
-- **img/** — el logo del centro, todo en blanco para la banda naranja de arriba, y en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive.
+- **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, y en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`.
 - **fuente/** — lo que se escribe a mano para cada rasgo y el programa que prepara los datos:
   - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web.
   - `apuntes/<código>.json`: el texto de la página del rasgo en los apuntes del alumnado y los ejemplos de la cabecera.
@@ -22,7 +22,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
 
 ## Añadir un texto
 
-1. Escribir `fuente/textos/TEX-NN.json` como los que hay: `bloques` de tipo `verso`, `linea`, `pregunta` o `corte`, y en cada línea `tokens`, con `{"t": …}` para el texto corrido y `{"w": palabra, "r": [códigos]}` para las palabras marcadas.
+1. Escribir `fuente/textos/TEX-NN.json` como los que hay: `bloques` de tipo `verso`, `linea`, `pregunta` o `corte`, y en cada línea `tokens`, con `{"t": …}` para el texto corrido y `{"w": palabra, "r": [códigos]}` para las palabras marcadas. Si lleva ilustraciones, `imagenes` con `src`, `ancho`, `alto`, `alt` y `pie`, y las imágenes en `img/textos/`.
 2. En `fuente/`: `node construir.mjs`.
 
 ## Añadir un rasgo
