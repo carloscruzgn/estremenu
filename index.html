@@ -155,6 +155,38 @@ span.fila .tit { color: var(--texto-2) }
 .indice .n { font-weight: 900; color: var(--verde); font-variant-numeric: tabular-nums }
 .indice .t { font-weight: 700; font-size: 18px }
 .indice a { color: var(--naranja); text-decoration: none; font-weight: 800; font-size: 13px; white-space: nowrap }
+.indice a.fila-ap { display: contents; color: inherit; font-size: inherit; font-weight: inherit; white-space: normal }
+.indice li:has(a.fila-ap):hover { background: var(--fondo-2) }
+.indice li:has(a.fila-ap):hover .t { color: var(--naranja) }
+.indice .ir { color: var(--naranja); font-weight: 800; font-size: 13px; white-space: nowrap }
+/* Un apartado de los apuntes: columna de lectura de unos 66 caracteres, mapas más anchos que el texto */
+.apartado { max-width: 980px; padding-block: 8px 24px }
+.apartado > * { max-width: 68ch }
+.apartado .volver { display: inline-block; margin-bottom: 22px }
+.apartado h2 { font-weight: 900; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.05; letter-spacing: -.02em; margin: 10px 0 26px }
+.apartado p { font-size: 18px; line-height: 1.72; color: rgba(238, 244, 233, .88); margin: 0 0 18px }
+.apartado p b { color: var(--texto); font-weight: 800 }
+.apartado ul { margin: 0 0 20px; padding-left: 1.2em; font-size: 18px; line-height: 1.6; color: rgba(238, 244, 233, .88) }
+.apartado li { margin-bottom: 8px }
+.apartado li b { color: var(--texto); font-weight: 800 }
+.apartado li::marker { color: var(--naranja) }
+.apartado figure { max-width: 100%; margin: 30px 0 34px }
+.apartado figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
+.apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
+.apartado figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px }
+.apartado figcaption b { color: var(--verde); font-weight: 800; letter-spacing: .06em; margin-right: 6px }
+.apartado .boton { display: inline-block; margin: 8px 0 20px; padding: 12px 18px; border-radius: 6px; background: var(--naranja); color: var(--fondo); font-weight: 800; text-decoration: none }
+.pasos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--linea); max-width: 100% !important }
+.pasos a { text-decoration: none; padding: 12px 14px; border-radius: 6px; background: var(--fondo-2); display: grid; gap: 2px; min-width: 0 }
+.pasos a:hover { background: var(--fondo-3) }
+.pasos a span { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.pasos a b { font-weight: 800; font-size: 16px }
+.pasos .sig { text-align: right; grid-column: 2 }
+@media (max-width: 640px) { .apartado p, .apartado ul { font-size: 17px } }
+.visor { position: fixed; inset: 0; z-index: 50; background: rgba(8, 18, 6, .94) }
+.visor .caja { position: absolute; inset: 0; overflow: auto; display: grid; place-items: center; padding: 56px 12px 12px }
+.visor img { width: clamp(1000px, 100vw - 24px, 1600px); max-width: none; height: auto; border-radius: 6px }
+.visor .cerrar { position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px)); z-index: 1; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--naranja); color: #fff; font-size: 26px; line-height: 1; cursor: pointer }
 .series { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 36px }
 .serie { border-top: 3px solid var(--verde); padding-top: 14px }
 .serie .num { font-weight: 900; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums }
@@ -281,7 +313,7 @@ span.fila .tit { color: var(--texto-2) }
     </section>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.</blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
-      <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado no">En preparación</span></a>
+      <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado" id="estado-apuntes">Siete apartados</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#mapas"><h2>Mapas</h2><p>Los mapas del taller: el área, la historia y las fuentes.</p><span class="estado no">En preparación</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes.</p><span class="estado no">En preparación</span></a>
@@ -293,19 +325,18 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">Los apuntes, apartado por apartado</div>
     <h2 class="titulo-vista">El contenido del taller</h2>
-    <p class="entradilla">Una guía para tener a mano, escrita para leerse sin diccionario y sin prisa. Aquí irán los apartados enteros, con sus mapas.</p>
-    <ol class="indice">
-      <li><span class="n"></span><span class="t">Antes de empezar</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">1</span><span class="t">Dónde estamos</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">2</span><span class="t">De dónde viene lo que hablamos</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">3</span><span class="t">¿Cómo se llama lo que hablamos?</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">4</span><span class="t">Los que vinieron a escucharnos</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">5</span><span class="t">Hablar bien y hablar mal</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">6</span><span class="t">Cómo se escribe lo que se habla</span><span class="pendiente">En preparación</span></li>
-      <li><span class="n">7</span><span class="t">Los rasgos, uno a uno</span><a href="#rasgos">Ver los rasgos</a></li>
-    </ol>
+    <p class="entradilla">Una guía para tener a mano, escrita para leerse sin diccionario y sin prisa: los apuntes del alumnado, apartado por apartado, con sus mapas.</p>
+    <ol class="indice" id="indice-apuntes"></ol>
   </div>
 </section>
+
+<section id="v-apartado" class="vista" hidden>
+  <div class="envoltura">
+    <article class="apartado" id="apartado"></article>
+  </div>
+</section>
+
+<div class="visor" id="visor" hidden><button type="button" class="cerrar" id="visor-cerrar" aria-label="Cerrar">×</button><div class="caja" id="visor-caja"><img id="visor-img" alt=""></div></div>
 
 <section id="v-rasgos" class="vista" hidden>
   <div class="envoltura">
@@ -379,7 +410,7 @@ span.fila .tit { color: var(--texto-2) }
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let CAT = null, mapa = null, cargandoMapa = null, BASE = null;
+let CAT = null, AP = null, mapa = null, cargandoMapa = null, BASE = null;
 
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
 
@@ -397,15 +428,44 @@ function pintarLista() {
 async function ir() {
   const h = decodeURIComponent(location.hash.slice(1)) || 'inicio';
   const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && r.mapa);
-  const sec = rasgo ? 'rasgo' : ['inicio', 'apuntes', 'rasgos', 'mapas', 'diccionario'].includes(h) ? h : 'inicio';
+  const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : ['inicio', 'apuntes', 'rasgos', 'mapas', 'diccionario'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   if (sec === 'inicio') animarPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo');
+  if (apartado) pintarApartado(apartado);
   if (rasgo) await abrirRasgo(rasgo);
 }
+
+// ================= el contenido del taller: los apartados de los apuntes =================
+const nombreAp = a => a.n ? a.n + '. ' + a.titulo : a.titulo;
+function pintarIndiceApuntes() {
+  $('indice-apuntes').innerHTML = AP.apartados.map(a => `<li><a class="fila-ap" href="#apuntes-${a.id}"><span class="n">${a.n}</span><span class="t">${esc(a.titulo)}</span><span class="ir">Leer</span></a></li>`).join('');
+}
+function pintarApartado(a) {
+  const k = AP.apartados.indexOf(a), ant = AP.apartados[k - 1], sig = AP.apartados[k + 1];
+  const txt = b => (b.arranque ? `<b>${esc(b.arranque)}</b> ` : '') + esc(b.texto);
+  const bloques = a.bloques.map(b =>
+    b.t === 'p' ? `<p>${txt(b)}</p>`
+    : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
+    : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
+    : '').join('');
+  const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : '';
+  $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
+    <div class="antetitulo">${a.n ? 'El contenido del taller · apartado ' + a.n : 'El contenido del taller'}</div>
+    <h2>${esc(a.titulo)}</h2>${bloques}${extra}
+    <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
+}
+// Visor de mapas a pantalla completa: el mapa a lo ancho, con desplazamiento si no cabe
+function abrirVisor(src) { $('visor-img').src = src; $('visor').hidden = false; document.body.style.overflow = 'hidden'; $('visor-cerrar').focus(); }
+function cerrarVisor() { $('visor').hidden = true; document.body.style.overflow = ''; }
+document.addEventListener('click', e => { const b = e.target.closest('[data-ampliar]'); if (b) abrirVisor(b.dataset.ampliar); });
+$('visor-cerrar').addEventListener('click', cerrarVisor);
+$('visor').addEventListener('click', e => { if (e.target.id === 'visor-caja' || e.target.id === 'visor') cerrarVisor(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor').hidden) cerrarVisor(); });
 
 // Carrusel de la portada. Avanza solo cada 8 s (la barra naranja de la pestaña marca el tiempo), se para al pasar el ratón
 // o al tocarlo, y se mueve con las pestañas, las flechas o deslizando el dedo. Sin avance automático si se pide menos movimiento.
@@ -860,6 +920,10 @@ try {
   CAT = await json('datos/rasgos.json');
   pintarLista();
 } catch (e) { $('lista-rasgos').innerHTML = '<p class="entradilla">No se ha podido cargar la lista de rasgos.</p>'; }
+try {
+  AP = await json('datos/apuntes.json');
+  pintarIndiceApuntes();
+} catch (e) { $('indice-apuntes').innerHTML = '<li><span class="t">No se han podido cargar los apuntes.</span></li>'; }
 addEventListener('hashchange', ir);
 ir();
 </script>

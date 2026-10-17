@@ -95,4 +95,8 @@ for (const r of CAT.rasgos.filter(r => r.mapa)) {
   console.log(r.codigo, 'clases:', JSON.stringify(resumen), '· en contra:', Object.values(clases).filter(c => c.neg).length);
 }
 fs.writeFileSync(path.join(destino, 'rasgos.json'), JSON.stringify(CAT));
+// Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
+const AP = leer('apuntes/apartados.json');
+fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
+console.log('apuntes.json:', AP.apartados.length, 'apartados,', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'mapa').length, 'mapas');
 console.log('rasgos.json:', CAT.rasgos.length, 'rasgos,', CAT.rasgos.filter(r => r.mapa).length, 'con mapa');
