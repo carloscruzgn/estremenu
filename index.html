@@ -703,15 +703,15 @@ async function animarPortada() {
 }
 
 // ================= página de un rasgo =================
-let ejemploTimer = null;
+let ejemploTimer = null, cabezaN = 0;
 function pintarCabeza(codigo, R, pagina) {
   $('r-cod').textContent = codigo;
   $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === codigo).titulo;
   const ej = (pagina && pagina.ejemplos) || (R && R.ejemplos) || [];
   $('r-ejemplos').hidden = !ej.length;
   $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span>${esc(e.cola || '')}</div>`).join('');
-  clearInterval(ejemploTimer);
-  const miTimer = ejemploTimer = Symbol();   // marca de esta cabecera: si se abre otro rasgo antes de cargar la letra, esta no arranca
+  clearInterval(ejemploTimer); ejemploTimer = null;
+  const miCabeza = ++cabezaN;   // si se abre otro rasgo antes de cargar la letra, esta cabecera no arranca
   let i = 0;
   // El hueco de la letra que cae se ajusta al ancho de la que entra, como en la portada: si no, jacha deja un hueco donde estaba la h
   const ajustaHueco = c => {
@@ -730,7 +730,7 @@ function pintarCabeza(codigo, R, pagina) {
   // en los ejemplos el cambio va más rápido que en la portada
   for (const el of document.querySelectorAll('.ejemplo .cambio')) { el.querySelector('.viejo').style.animationDelay = '.5s'; el.querySelector('.nuevo').style.animationDelay = '.85s'; el.querySelector('.subr').style.animationDelay = '1.4s'; }
   // Se mide con la letra ya cargada
-  if (ej.length) document.fonts.ready.then(() => { if (ejemploTimer !== miTimer) return; muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); });
+  if (ej.length) document.fonts.ready.then(() => { if (cabezaN !== miCabeza) return; muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); });
   $('r-texto').innerHTML = !pagina ? '' : `<div class="ante">En los apuntes</div>
     ${pagina.apartados.map(([t, p]) => `<h3>${esc(t)}</h3><p>${esc(p)}</p>`).join('')}
     <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
