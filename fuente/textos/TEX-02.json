@@ -914,5 +914,51 @@
    "glosa": "muy caro"
   }
  ],
+ "fonetica": {
+  "informante": "GC 1",
+  "pagina": 181,
+  "bloques": [
+   {
+    "tipo": "pregunta",
+    "texto": "Estos cerdos son del país, ¿no?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "sí, són del paí. ai̯ ótraʰ klási, ke aƀrám beníu đe ándi séa, son yá đe maʰmáṙka, maxrándi, mayóri, đe tamáñu. éʰtu som própjuθel ter̄énu."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Los crían Vds.?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "tambjén ai̯ kjen loʰkómpra. éʰtu soŋ kriáu̯ eŋ kása."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo se matan?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "pweʰtambjén se swélim·matál poṙ kwandu se kóhin lahaθei̯túna, poṙ đisjémbri. se eŋgóṙđan, se séƀan, i por entónθi swélim·matalsi, la matánθja ke se ḷáma, i se áθi la ĉasína ke ḷamámuhakí, yá pa tol áñu, el imbutíđu, el ĉoríθju, i tál."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "¿Cómo se matan? ¿Viene un hombre …?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "nó, nó, nó, loʰmatámuʰ nusótru. uŋ kuĉíḷu así pol, po la gargánta, ke le penétra el kwélpu, kláru mwéreŋ, lwőgu kon un, déʰtu, se áθin únuʰmanóhu xrandítu, ke ḷáman ĉamúʰku, i se ĉamúʰkan al fwőgu, i se pélam pa ke kéđe límpju e pélu el toθínu."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "Y los jamones, ¿se curan?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "ésu se konséṙƀaŋ, mwi ƀjén. ésuʰno tjénim·máʰke, una ƀé preparáu̯, eĉáli sál, no tjénim·maʰméʰkla ke sál sóla. ƀréga, ƀréga, ƀréga (llama a los dos cerdos). sál sóla, en una kamíta, i se tjéniŋ, tendíuʰ, ke kóham bjén la sál, pweʰla sál lo konséṙƀa tó, lwu ᵈiʰpwéʰya se kwéṙgam pa ke se tjéniŋ ya sekítu, una kósa eʰkisíta, ƀáli mu káru ésu, sí, sí."
+   }
+  ]
+ },
  "_fuente": "Texto marcado de la guía de clase (TEX-02, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
 }

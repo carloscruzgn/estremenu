@@ -1008,6 +1008,28 @@
    "glosa": "encenderla"
   }
  ],
+ "fonetica": {
+  "informante": "C 1",
+  "pagina": 168,
+  "bloques": [
+   {
+    "tipo": "fon",
+    "texto": "ésu se ḷáma θaŋkaƀúr̄a, ¿el pálu̯ ke áθi hórka?, se ḷáma θaŋkaƀúr̄a, pa sakál par̄íƀa el ágwa. mírjuʰte, según eʰtá la hórka, éʰteʰla hórka keu̯ʰté a ƀíʰtu. le póniŋ aí um palítu, ¿ƀerđá?, i a éʰti, ƀelakí eʰti lárgu, lo átaŋ akí đe móᵈu ke pwéđa hirál, ¿sáƀjuʰte? aí, eʰtá el ĉárku, o el póθu, andeʰtá el ágwa. akí ai̯ ótru ƀaráˡ, ótra ƀára ke kórta paƀáhu andi se kwérga el kaĉár̄u pa sakál el ágwa. akí atrás, se li póni muĉu pésu, pésu, sáƀjuʰte, kon el ohéʰtu, kon el ohéʰtu đe ke, el ómƀri tíra đe éḷu paƀáhu pa enḷenál el kaĉár̄u đel ágwa, maʰlwőgu el pésu éʰti, komweʰmaʰpésu, lo ke ai̯ aḷí atráʰ, pweʰel ágwa míʰma eʰkúsal ómbri ᵈe tirál, el pésu éʰti tíra par̄íƀal ágwa. lwőgu ža, una ƀéʰke ƀjéni par̄íƀa, pweʰtá al niƀél andi tjéniŋ ke ƀaθjála, i el ómbri na maʰtjéni ke kuhél i baθjál. ƀwőlƀi a tirál, ƀwőlƀi a enḷenál, ƀwőlƀi a suƀíl, i así aproʰsimađaménti, ¿nó?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "éʰtu, saƀráu̯ʰte lo kéʰ, ¿nó?, éʰtu eʰtomíḷu. mírjuʰte, el tomíḷu el señól. éʰtu tjéni una ƀertú, keʰkortándulu, em·méᵈju tjénjuna klú. ᵃóra se leƀánta mu póku, porkéʰmu tjérnu, ¿nó?, si eʰtuƀjéra mas éĉu, pwe se le notáƀa mehól. éʰtu ᵈíθin el tomíḷu el señól, se kórta pol méᵈju i tjénjuna klú. mírjuʰte. éʰtu ža ehótra kósa. se sáka, i áθi kor̄éa, ƀelaí, éʰtu eʰtorƀíʰka. ƀelakí lái̯ maxrándi."
+   },
+   {
+    "tipo": "pregunta",
+    "texto": "Y el tomillo, ¿se usa en la cocina?"
+   },
+   {
+    "tipo": "fon",
+    "texto": "éʰti nó, éʰti nó. éʰti eʰmáʰpa komélu el ganáu̯. se úsa, akí, eʰtándu séku, ᵃóra eʰtá ƀérdi, ¿nó?, peru, el keʰtá séku, keʰtá mwőrtu ža, se úsa pa enθendél·la lúmbri."
+   }
+  ]
+ },
  "imagenes": [
   {
    "src": "img/textos/TEX-03-fig2.webp",

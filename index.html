@@ -192,6 +192,37 @@ span.fila .tit { color: var(--texto-2) }
 .cuerpo .pregunta { font-style: italic; color: var(--texto-2) }
 .cuerpo .corte { height: 14px }
 .cuerpo .aside { font-style: italic; color: var(--texto-3) }
+@font-face { font-family: 'Charis fonetica'; src: url(img/fuentes/charis-fonetica.woff2) format('woff2'); font-display: swap }
+.modo { display: inline-flex; margin-top: 18px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
+.modo button { font: inherit; font-size: 13px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer }
+.modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
+.texto-pag .fon { grid-area: cuerpo; min-width: 0; margin-top: 30px; display: none }
+.texto-pag.modo-fon .fon { display: block }
+.texto-pag.modo-fon #cuerpo-texto { display: none }
+.texto-pag.modo-fon .panel { opacity: .45 }
+.fon .fila { display: grid; grid-template-columns: 76px minmax(0, 1fr); column-gap: 14px; margin-bottom: 18px }
+.fon .fila.p { margin-bottom: 4px }
+.fon .quien { font-size: 12px; font-weight: 800; letter-spacing: .06em; color: var(--verde); padding-top: .5em }
+.fon .preg { font-style: italic; color: var(--texto-2); font-size: 17px; line-height: 1.6 }
+.fon .fonet { font-family: 'Charis fonetica', 'Charis SIL', 'Gentium Plus', 'Noto Serif', serif; font-size: 20px; line-height: 1.75 }
+.fon .fonet .aside { font-family: Montserrat, sans-serif; font-size: 15px; font-style: italic; color: var(--texto-3) }
+.fon .pie { font-size: 13px; color: var(--texto-3); margin-top: 6px }
+.signos { margin-bottom: 26px; border: 1px solid var(--linea); border-radius: 10px; background: var(--fondo-2) }
+.signos > summary { cursor: pointer; padding: 14px 18px; font-weight: 800; font-size: 14px; letter-spacing: .04em; color: var(--naranja); list-style: none; display: flex; justify-content: space-between; gap: 12px }
+.signos > summary::-webkit-details-marker { display: none }
+.signos > summary::after { content: '+'; font-size: 20px; line-height: 1; color: var(--texto-2) }
+.signos[open] > summary::after { content: '−' }
+.signos .dentro { padding: 0 18px 18px; font-size: 14px; line-height: 1.55 }
+.signos .intro { color: var(--texto-2); margin: 0 0 6px }
+.signos h4 { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde); margin: 18px 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--linea) }
+.signos .nota { color: var(--texto-3); margin: 0 0 6px }
+.signos dl { margin: 0 }
+.signos .sg { display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--linea) }
+.signos .sg:last-child { border-bottom: 0 }
+.signos dt { font-family: 'Charis fonetica', serif; font-size: 24px; line-height: 1.1; color: var(--naranja) }
+.signos dd { margin: 0; color: var(--texto-2) }
+.signos .ej { display: block; margin-top: 3px; color: var(--texto) }
+.signos .ej i { font-style: normal; font-family: 'Charis fonetica', serif; font-size: 16px }
 .cuerpo a.m { color: inherit; text-decoration: none; font-weight: 700; background-image: linear-gradient(90deg, var(--c1) 0 50%, var(--c2, var(--c1)) 50% 100%); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 3px; padding-bottom: 1px; transition: background-size .25s, color .25s, opacity .25s }
 .cuerpo a.m:hover, .cuerpo a.m:focus-visible { background-size: 100% 100%; color: var(--fondo) }
 .cuerpo.anima a.m { animation: brota .6s calc(var(--i) * 45ms + 300ms) backwards cubic-bezier(.2, .8, .3, 1) }
@@ -209,13 +240,24 @@ span.fila .tit { color: var(--texto-2) }
 .panel .cu { display: block; color: var(--texto-3); font-size: 13px; margin-top: 2px }
 .panel .nota { color: var(--texto-3); font-size: 13px; margin: 10px 0 0 }
 .glos { margin-top: 36px }
+.dic-partes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 28px }
+.dic-parte { background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 12px; padding: 22px 22px 18px }
+.dic-parte h3 { margin: 0 0 8px; font-size: 22px; font-weight: 900; color: var(--naranja) }
+.dic-parte h4 { margin: 22px 0 4px; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.dic-parte p { color: var(--texto-2); line-height: 1.6; margin: 0 0 10px }
+.dic-parte .nota { font-size: 14px; color: var(--texto-3) }
+.dic-parte .buscador { margin-top: 18px }
+.dic-parte .buscador input { background: var(--fondo); font-size: 17px }
 .glos .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
-.glos dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 14px 0 0; font-size: 15px }
+.glos dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 0; padding-top: 16px; border-top: 1px solid var(--linea); font-size: 15px }
 .glos dt { font-weight: 800 } .glos dd { margin: 0; color: var(--texto-2) }
 @media (max-width: 900px) {
   .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" "glos" }
   .texto-pag .panel { position: static; margin-top: 24px }
+  .texto-pag.modo-fon .panel { display: none }
   .cuerpo { font-size: 18px }
+  .fon .fila { grid-template-columns: minmax(0, 1fr) } .fon .quien { padding-top: 0 }
+  .fon .fonet { font-size: 18px }
 }
 @media (prefers-reduced-motion: reduce) { .cuerpo.anima a.m { animation: none } }
 /* Página de un rasgo sin mapa interactivo: una sola columna */
@@ -369,8 +411,8 @@ span.fila .tit { color: var(--texto-2) }
       <div class="ventana"><div class="pista" id="pista">
           <article class="diapo" role="tabpanel" id="dp-taller" aria-labelledby="pt-taller" data-foto=""><div><h3>Un programa del CEPA Coria abierto a toda la comarca</h3><p>El Taller de estremeñu es un programa no formal del CEPA Coria, abierto a toda la población de Coria y su comarca. Se reúne los lunes y los jueves de 17:55 a 18:50, de octubre a mayo, en la biblioteca del centro.</p></div><figure class="foto" hidden></figure></article>
           <article class="diapo" role="tabpanel" id="dp-zona" aria-labelledby="pt-zona" data-foto=""><div><h3>El noroeste de Cáceres, y un poco de Salamanca</h3><p>El taller estudia el habla de la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria. Esa habla no se para en la raya de la provincia: sigue por El Rebollar, en Salamanca. En los tres pueblos de la fala, Valverde del Fresno, Eljas y San Martín de Trevejo, se habla otra cosa, hermana del gallego y del portugués, que queda aparte. Coria sale más que ningún otro sitio porque es el pueblo mejor estudiado.</p></div><figure class="foto" hidden></figure></article>
-          <article class="diapo" role="tabpanel" id="dp-trabajo" aria-labelledby="pt-trabajo" data-foto=""><div><h3>Leer en voz alta y escuchar a quien lo sabe</h3><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así.</p></div><figure class="foto" hidden></figure></article>
-          <article class="diapo" role="tabpanel" id="dp-web" aria-labelledby="pt-web" data-foto=""><div><h3>Todo el material del taller, en un sitio</h3><p>Esta web reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los mapas que usamos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></div><figure class="foto" hidden></figure></article>
+          <article class="diapo" role="tabpanel" id="dp-trabajo" aria-labelledby="pt-trabajo" data-foto=""><div><h3>Leer en voz alta y escuchar a quien lo sabe</h3><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, pequeñas publicaciones en periódicos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así.</p></div><figure class="foto" hidden></figure></article>
+          <article class="diapo" role="tabpanel" id="dp-web" aria-labelledby="pt-web" data-foto=""><div><h3>Todo el material del taller, en un sitio</h3><p>Esta web reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los textos que leemos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></div><figure class="foto" hidden></figure></article>
       </div></div>
       <div class="flechas"><button type="button" id="c-ant" aria-label="Anterior">‹</button><button type="button" id="c-sig" aria-label="Siguiente">›</button></div>
     </section>
@@ -429,12 +471,24 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">Diccionario del noroeste</div>
     <h2 class="titulo-vista">Diccionario</h2>
-    <p class="entradilla">Las voces del noroeste con la comarca donde se han recogido, la fuente que las da y sus variantes.</p>
-    <div class="buscador">
-      <label for="busca-voz">Buscar una voz</label>
-      <input id="busca-voz" type="search" placeholder="jigu, peringolla, chamuʰcu…" disabled>
+    <div class="dic-partes">
+      <article class="dic-parte">
+        <h3>El diccionario</h3>
+        <p>Las voces del noroeste con la comarca donde se han recogido, la fuente que las da y sus variantes. Está en construcción: crece con cada obra que se vacía.</p>
+        <div class="buscador">
+          <label for="busca-voz">Buscar una voz</label>
+          <input id="busca-voz" type="search" placeholder="jigu, peringolla, chamuʰcu…" disabled>
+        </div>
+        <h4>Las fuentes</h4>
+        <p class="nota">La lista de las obras de las que salen las voces.</p>
+        <p><span class="pendiente">En preparación</span></p>
+      </article>
+      <article class="dic-parte">
+        <h3>Las palabras del taller</h3>
+        <p>Las palabras que van aportando quienes vienen al taller, a medida que salen en clase.</p>
+        <p><span class="pendiente">En preparación</span></p>
+      </article>
     </div>
-    <p style="margin-top:20px"><span class="pendiente">En preparación</span></p>
   </div>
 </section>
 
@@ -546,17 +600,39 @@ function pintarTexto(t) {
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
-      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span></div>
+      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>
+      ${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}</div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
+    ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
+      ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
+      : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
     <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p></aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}
-    ${t.glosario.length ? `<div class="glos"><div class="ante">Para entender el texto</div><dl>${t.glosario.map(g => `<dt>${esc(g.forma)}</dt><dd>${esc(g.glosa)}</dd>`).join('')}</dl></div>` : ''}`;
+    ${t.glosario.length ? `<div class="glos"><dl>${t.glosario.map(g => `<dt>${esc(g.forma)}</dt><dd>${esc(g.glosa)}</dd>`).join('')}</dl></div>` : ''}`;
+  const tp = $('texto-pag');
+  tp.classList.remove('modo-fon');
+  tp.querySelectorAll('[data-modo]').forEach(b => b.addEventListener('click', () => {
+    const fon = b.dataset.modo === 'fon';
+    tp.classList.toggle('modo-fon', fon);
+    tp.querySelectorAll('[data-modo]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    if (fon) pintarSignos();
+  }));
   const cu = $('cuerpo-texto');
   const foco = c => { cu.classList.toggle('foco', !!c); cu.querySelectorAll('a.m').forEach(a => a.classList.toggle('on', !!c && a.dataset.r.split(' ').includes(c))); };
   $('texto-pag').querySelectorAll('[data-foco]').forEach(a => {
     a.addEventListener('pointerenter', () => foco(a.dataset.foco)); a.addEventListener('pointerleave', () => foco(null));
     a.addEventListener('focus', () => foco(a.dataset.foco)); a.addEventListener('blur', () => foco(null));
   });
+}
+
+// Los signos de Cummins (GEN-06), en el desplegable de la transcripción
+let SIG = null;
+async function pintarSignos() {
+  const caja = document.querySelector('#signos .dentro');
+  if (!caja || caja.dataset.listo) return;
+  try { SIG = SIG || await (await fetch('datos/signos.json')).json(); } catch (e) { caja.textContent = 'No se han podido cargar los signos.'; return; }
+  caja.dataset.listo = '1';
+  caja.innerHTML = `<p class="intro">${esc(SIG.intro)}</p>` + SIG.grupos.map(g => `<h4>${esc(g.titulo)}</h4>${g.nota ? `<p class="nota">${esc(g.nota)}</p>` : ''}<dl>${g.signos.map(x => `<div class="sg"><dt>${esc(x.s)}</dt><dd>${esc(x.t)}${(x.e || []).length ? `<span class="ej">${x.e.map(([f, l]) => `<i>[${esc(f)}]</i> → ${esc(l)}`).join(' · ')}</span>` : ''}</dd></div>`).join('')}</dl>`).join('');
 }
 
 // ================= el contenido del taller: los apartados de los apuntes =================

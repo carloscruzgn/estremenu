@@ -104,6 +104,8 @@ const TX = fs.readdirSync(path.join(aqui, 'textos')).filter(f => /^TEX-\d+\.json
 for (const t of TX) for (const c of t.rasgos) if (!CAT.rasgos.some(r => r.codigo === c)) console.warn(t.codigo, 'destaca un rasgo que no está en el catálogo:', c);
 fs.writeFileSync(path.join(destino, 'textos.json'), JSON.stringify(TX));
 console.log('textos.json:', TX.length, 'textos');
+// Los signos de Cummins, para la transcripción de sus conversaciones
+fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-cummins.json')));
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
 const AP = leer('apuntes/apartados.json');
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));

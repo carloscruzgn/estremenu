@@ -10,19 +10,21 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `rasgos.json`: la lista de los treinta y un rasgos de los apuntes del alumnado, con cuáles tienen mapa.
   - `rasgos/<código>.json`: la página del rasgo en los apuntes y, si tiene mapa, el fichero del rasgo del generador de reels y la clase de cada término.
   - `textos.json`: los textos leídos en el taller.
+  - `signos.json`: los signos de Cummins, de la hoja GEN-06, para el desplegable de la transcripción.
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
-- **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, y en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`.
+- **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`, y en `fuentes/` la Charis SIL recortada a los signos de la fonética, con su licencia OFL.
 - **fuente/** — lo que se escribe a mano para cada rasgo y el programa que prepara los datos:
   - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web.
   - `apuntes/<código>.json`: el texto de la página del rasgo en los apuntes del alumnado y los ejemplos de la cabecera.
   - `apuntes/apartados.json`: el texto de los apartados de los apuntes del alumnado, por párrafos, con los arranques en negrita y los mapas.
   - `catalogo.json`: los títulos de las páginas de rasgo de los apuntes y qué rasgos tienen mapa y página.
   - `textos/TEX-NN.json`: cada texto leído en el taller, con la fecha de la pestaña Sesiones de la app, sus rasgos destacados, las palabras marcadas con el código de su rasgo y el glosario. Salen del texto marcado de la guía de clase (guia-clase-pdf.zip).
+  - `signos-cummins.json`: los signos de Cummins, con el texto de GEN-06.
   - `comarcas.json`: las comarcas REDEX y el área del taller, la del generador de reels.
 
 ## Añadir un texto
 
-1. Escribir `fuente/textos/TEX-NN.json` como los que hay: `bloques` de tipo `verso`, `linea`, `pregunta` o `corte`, y en cada línea `tokens`, con `{"t": …}` para el texto corrido y `{"w": palabra, "r": [códigos]}` para las palabras marcadas. Si lleva ilustraciones, `imagenes` con `src`, `ancho`, `alto`, `alt` y `pie`, y las imágenes en `img/textos/`.
+1. Escribir `fuente/textos/TEX-NN.json` como los que hay: `bloques` de tipo `verso`, `linea`, `pregunta` o `corte`, y en cada línea `tokens`, con `{"t": …}` para el texto corrido y `{"w": palabra, "r": [códigos]}` para las palabras marcadas. Si es de Cummins, `fonetica` con `informante`, `pagina` y `bloques` de tipo `pregunta` o `fon`, copiados de la hoja TEX del aula; sale el conmutador a la transcripción. Si lleva ilustraciones, `imagenes` con `src`, `ancho`, `alto`, `alt` y `pie`, y las imágenes en `img/textos/`.
 2. En `fuente/`: `node construir.mjs`.
 
 ## Añadir un rasgo
