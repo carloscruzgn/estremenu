@@ -9,7 +9,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `base.json`: los términos municipales de Extremadura y de las cinco comarcas salmantinas, con su comarca y si son del área del taller, y las provincias vecinas y Portugal.
   - `rasgos.json`: la lista de los treinta y un rasgos de los apuntes del alumnado, con cuáles tienen mapa.
   - `rasgos/<código>.json`: el fichero del rasgo del generador de reels, la clase de cada término y la página de los apuntes.
-- **img/** — el logo del centro en blanco.
+- **img/** — el logo del centro, en color para la banda blanca de arriba.
 - **fuente/** — lo que se escribe a mano para cada rasgo y el programa que prepara los datos:
   - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web.
   - `apuntes/<código>.json`: el texto de la página del rasgo en los apuntes del alumnado.

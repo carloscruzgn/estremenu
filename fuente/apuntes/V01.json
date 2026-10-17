@@ -19,5 +19,43 @@
   ]
  ],
  "estado": "Se va perdiendo",
- "origen": "Leonés"
+ "origen": "Leonés",
+ "_ejemplos": "Ejemplos de la cabecera de la web, de la página de los apuntes: el reel conserva los suyos (libro, grande), porque cada ejemplo alarga su portadilla 1,4 s",
+ "ejemplos": [
+  {
+   "base": "libr",
+   "antes": "o",
+   "despues": "u"
+  },
+  {
+   "base": "grand",
+   "antes": "e",
+   "despues": "i"
+  },
+  {
+   "base": "tiemp",
+   "antes": "o",
+   "despues": "u"
+  },
+  {
+   "base": "noch",
+   "antes": "e",
+   "despues": "i"
+  },
+  {
+   "base": "caball",
+   "antes": "o",
+   "despues": "u"
+  },
+  {
+   "base": "gent",
+   "antes": "e",
+   "despues": "i"
+  },
+  {
+   "base": "setiembr",
+   "antes": "e",
+   "despues": "i"
+  }
+ ]
 }

@@ -26,6 +26,8 @@
   --probable: #ffc4a0;
   --negro: #0c0c0c;
   --f: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --banda: #ffffff;        /* banda superior */
+  --banda-texto: #132e0d;
   --cab: 64px;
   color-scheme: dark;
 }
@@ -36,24 +38,24 @@ img { max-width: 100% }
 [hidden] { display: none !important }
 html { scroll-padding-top: calc(var(--cab) + 12px) }
 body { background: var(--fondo); color: var(--texto); font: 500 16px/1.6 var(--f); -webkit-font-smoothing: antialiased }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--fondo) }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--banda) }
 a { color: inherit }
 button { font: inherit; color: inherit }
 :focus-visible { outline: 3px solid var(--naranja); outline-offset: 2px }
 .envoltura { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
 
 /* ---------- cabecera, como la del reel: logo, raya y nombre ---------- */
-.cab { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--fondo); border-bottom: 1px solid var(--linea) }
+.cab { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--banda); color: var(--banda-texto); box-shadow: 0 1px 0 rgba(0,0,0,.08) }
 .cab .envoltura { display: flex; align-items: center; gap: 20px; min-height: var(--cab) }
 .marca { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: none }
 .marca img { height: 34px; width: auto; display: block }
-.marca .raya { width: 2px; height: 30px; background: rgba(255,255,255,.45) }
+.marca .raya { width: 2px; height: 30px; background: rgba(19,46,13,.3) }
 .marca span { font-weight: 800; font-size: 15px; letter-spacing: .01em; white-space: nowrap }
 .menu { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none }
 .menu::-webkit-scrollbar { display: none }
-.menu a { text-decoration: none; font-weight: 700; font-size: 14px; padding: 8px 12px; border-radius: 6px; color: var(--texto-2); white-space: nowrap }
-.menu a:hover { color: var(--texto); background: var(--fondo-2) }
-.menu a[aria-current="page"] { color: var(--texto); box-shadow: inset 0 -3px 0 var(--naranja); border-radius: 0 }
+.menu a { text-decoration: none; font-weight: 700; font-size: 14px; padding: 8px 12px; border-radius: 6px; color: rgba(19,46,13,.68); white-space: nowrap }
+.menu a:hover { color: var(--banda-texto); background: #eef4e9 }
+.menu a[aria-current="page"] { color: var(--banda-texto); box-shadow: inset 0 -3px 0 var(--naranja); border-radius: 0; background: none }
 @media (max-width: 640px) {
   .cab .envoltura { flex-wrap: wrap; gap: 0; padding-block: 8px 0 }
   .marca span { font-size: 14px }
@@ -168,6 +170,7 @@ span.fila .tit { color: var(--texto-2) }
 .etiq.grande { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: rgba(255,255,255,.55) }
 .etiq.peq { font-weight: 700; font-size: 12px; color: rgba(255,255,255,.85) }
 .etiq .punto { display: block; width: 10px; height: 10px; border-radius: 50%; background: var(--negro); border: 2px solid #fff; margin: 5px auto 0 }
+.etiq.con-punto { transform: translate(-50%, calc(-100% + 7px)) }   /* el centro del punto, en el sitio del pueblo */
 .etiq.llamada { transform: translate(14px, -50%); white-space: normal; width: 210px; font-weight: 700; font-size: 13px; line-height: 1.3; background: rgba(12, 12, 12, .82); padding: 7px 10px; border-radius: 6px; text-shadow: none }
 .etiq.llamada b { color: var(--verde); font-weight: 900 }
 .globo { position: absolute; pointer-events: none; background: var(--negro); color: #fff; font-weight: 700; font-size: 13px; padding: 4px 8px; border-radius: 4px; transform: translate(12px, -130%); white-space: nowrap; opacity: 0; transition: opacity .15s }
@@ -219,9 +222,9 @@ span.fila .tit { color: var(--texto-2) }
 
 <header class="cab">
   <div class="envoltura">
-    <a class="marca" href="#inicio"><img src="img/logo-blanco.png" alt="CEPA Coria"><i class="raya"></i><span>Taller de estremeñu</span></a>
+    <a class="marca" href="#inicio"><img src="img/logo.png" alt="CEPA Coria"><i class="raya"></i><span>Taller de estremeñu</span></a>
     <nav class="menu" aria-label="Secciones">
-      <a href="#apuntes" data-sec="apuntes">Apuntes</a>
+      <a href="#apuntes" data-sec="apuntes">Contenido</a>
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
       <a href="#mapas" data-sec="mapas">Mapas</a>
       <a href="#diccionario" data-sec="diccionario">Diccionario</a>
@@ -238,7 +241,7 @@ span.fila .tit { color: var(--texto-2) }
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.<cite>Apuntes del taller, «Antes de empezar»</cite></blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
-      <a href="#apuntes"><h2>Apuntes</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado no">En preparación</span></a>
+      <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado no">En preparación</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#mapas"><h2>Mapas</h2><p>Los mapas del taller: el área, la historia, las fuentes y los rasgos.</p><span class="estado no">En preparación</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes.</p><span class="estado no">En preparación</span></a>
@@ -248,8 +251,8 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-apuntes" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">Apuntes del taller</div>
-    <h2 class="titulo-vista">Apuntes</h2>
+    <div class="antetitulo">Los apuntes, apartado por apartado</div>
+    <h2 class="titulo-vista">El contenido del taller</h2>
     <p class="entradilla">Una guía para tener a mano, escrita para leerse sin diccionario y sin prisa. Aquí irán los apartados enteros, con sus mapas.</p>
     <ol class="indice">
       <li><span class="n"></span><span class="t">Antes de empezar</span><span class="pendiente">En preparación</span></li>
@@ -266,7 +269,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-rasgos" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">Apuntes · apartado 7</div>
+    <div class="antetitulo">El contenido del taller · apartado 7</div>
     <h2 class="titulo-vista">Los rasgos, uno a uno</h2>
     <p class="entradilla">Cada rasgo con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
     <div class="grupos" id="lista-rasgos"></div>
@@ -389,7 +392,7 @@ let ejemploTimer = null;
 function pintarCabeza(R, pagina) {
   $('r-cod').textContent = R.codigo;
   $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === R.codigo).titulo;
-  const ej = R.ejemplos || [];
+  const ej = (pagina && pagina.ejemplos) || R.ejemplos || [];
   $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span></div>`).join('');
   clearInterval(ejemploTimer);
   let i = 0;
@@ -572,7 +575,8 @@ async function crearMapa(baseP) {
   // ---------- estado del rasgo ----------
   let RS = null, CL = {}, ESTADOS = [], actual = 0, sel = null;
   const etiquetas = [];
-  function etiqueta(html, x, y, z, cls, cuando) { const e = document.createElement('div'); e.className = 'etiq ' + (cls || ''); e.innerHTML = html; lienzo.appendChild(e); etiquetas.push({ e, v: new THREE.Vector3(x, y, z), cuando }); return e; }
+  // Una etiqueta atada a un término (codigo) se coloca cada vez sobre la tapa del bloque, a la altura que tenga
+  function etiqueta(html, x, y, z, cls, cuando, codigo) { const e = document.createElement('div'); e.className = 'etiq ' + (cls || ''); e.innerHTML = html; lienzo.appendChild(e); etiquetas.push({ e, v: new THREE.Vector3(x, y, z), cuando, codigo }); return e; }
   const cen = codes => { let x = 0, y = 0; codes.forEach(c => { x += byCode[c].userData.d.c[0]; y += byCode[c].userData.d.c[1]; }); return [x / codes.length, y / codes.length]; };
 
   function construirEstados() {
@@ -660,6 +664,7 @@ async function crearMapa(baseP) {
     const lr = lienzo.getBoundingClientRect(), rr = [...$('rotulo').children].filter(c => !c.hidden && c.textContent).map(c => c.getBoundingClientRect());
     const tapa = (x, y) => rr.some(r => x > r.left - lr.left - 120 && x < r.right - lr.left + 120 && y > r.top - lr.top - 10 && y < r.bottom - lr.top + 24);
     for (const l of etiquetas) {
+      if (l.codigo) l.v.z = byCode[l.codigo].userData.h + 0.01;
       const [x, y, z] = proj(l.v);
       const ok = (!l.cuando || l.cuando.includes(id)) && z < 1 && x > -40 && x < W + 40 && y > 0 && y < H && !tapa(x, y);
       l.e.style.left = x + 'px'; l.e.style.top = y + 'px'; l.e.style.opacity = ok ? 1 : 0;
@@ -767,10 +772,10 @@ async function crearMapa(baseP) {
       wideBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && CL[d.code].cls === 'out')).map(d => d.rings));
       medir(); encuadres();
       for (const l of etiquetas.splice(0)) l.e.remove();
-      etiqueta('Coria<span class="punto"></span>', coria[0], coria[1], HREG + 0.15, '');
+      etiqueta('Coria<span class="punto"></span>', coria[0], coria[1], HREG, 'con-punto', null, '10067');
       etiqueta('Portugal', extBB.cx - extBB.w * 0.56, extBB.cy - extBB.h * 0.1, 0.1, 'grande');
       etiqueta('Salamanca', extBB.cx + extBB.w * 0.1, extBB.cy + extBB.h * 0.62, 0.2, 'grande');
-      if (RS.llamada) { const pz = byCode[RS.llamada.termino].userData.d.c; etiqueta(RS.llamada.texto, pz[0], pz[1], HCORE, 'llamada', ['prob']); }
+      if (RS.llamada) { const pz = byCode[RS.llamada.termino].userData.d.c; etiqueta(RS.llamada.texto, pz[0], pz[1], HCORE, 'llamada', ['prob'], RS.llamada.termino); }
       if (RS.noroeste) for (const r of RS.noroeste.rotulos_mapa || []) {
         const codes = r.comarca ? base.comarcas[r.comarca].terminos : base.munis.filter(d => d.code.startsWith(r.provincia)).map(d => d.code);
         const [x, y] = cen(codes.filter(c => byCode[c])); etiqueta(esc(r.texto), x + (r.dx || 0), y + (r.dy || 0), 0.1, r.clase === 'big' ? 'grande' : 'peq', ['nw']);
