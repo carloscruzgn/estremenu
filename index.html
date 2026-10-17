@@ -1021,8 +1021,8 @@ async function crearMapa(baseP) {
     if (E.id === 'area') f = [filaL('#85be6d', 'Área del taller'), filaL('#3d6a33', 'Área de contacto')];
     else if (E.ola) f = [filaL('#ff914d', 'Recogido en estos años'), ...(E.ola > 1 ? [filaL('#a95f33', 'Recogido antes')] : [])];
     else if (E.id === 'fuera') f = [filaL('#ff914d', L.reg)];
-    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('never')) f.push(filaL('#0c0c0c', 'No se ha recogido', true)); }
-    else if (E.id === 'nw') { f = [filaL('#ff914d', L.reg)]; if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (Object.values(CL).some(x => x.neg)) f.push(filaL('#0a1a07', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
+    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never')) f.push(filaL('#0c0c0c', 'No se ha recogido', true)); }
+    else if (E.id === 'nw') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (Object.values(CL).some(x => x.neg)) f.push(filaL('#0a1a07', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
     $('leyenda').innerHTML = f.join('');
   }
   function pintarBotones() {
