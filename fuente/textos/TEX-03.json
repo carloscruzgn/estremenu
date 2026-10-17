@@ -1,0 +1,1012 @@
+{
+ "codigo": "TEX-03",
+ "corpus": "CUM-B",
+ "titulo": "La zancaburra",
+ "tipo": "conversacion",
+ "autor": "John Cummins",
+ "fuente": "El habla de Coria y sus cercanías, 1974. Conversación grabada en Coria, con el informante C 1, entre 1967 y 1972.",
+ "grafia": "En la grafía del taller. Las preguntas de Cummins, en cursiva.",
+ "leido": "2026-10-15",
+ "rasgos": [
+  "C01",
+  "C02",
+  "C03"
+ ],
+ "bloques": [
+  {
+   "tipo": "linea",
+   "n": 1,
+   "tokens": [
+    {
+     "t": "Esu se llama zancaburra, ¿el palu que azi "
+    },
+    {
+     "w": "jorca",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": "?, se"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 2,
+   "tokens": [
+    {
+     "t": "llama zancaburra, pa sacal parriba el agua. Miri "
+    },
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 3,
+   "tokens": [
+    {
+     "t": "según "
+    },
+    {
+     "w": "eʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " la "
+    },
+    {
+     "w": "jorca",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": ", "
+    },
+    {
+     "w": "eʰteʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " la "
+    },
+    {
+     "w": "jorca",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " que "
+    },
+    {
+     "w": "uʰté",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " a "
+    },
+    {
+     "w": "viʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 4,
+   "tokens": [
+    {
+     "t": "Le ponin aí un palitu, ¿verdá?, i a "
+    },
+    {
+     "w": "eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", velaquí "
+    },
+    {
+     "w": "eʰti",
+     "r": [
+      "C03"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 5,
+   "tokens": [
+    {
+     "t": "largu, lo atan aquí de modu que pueda "
+    },
+    {
+     "w": "jiral",
+     "r": [
+      "C02"
+     ]
+    },
+    {
+     "t": ", ¿sabi"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 6,
+   "tokens": [
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": "? Aí, "
+    },
+    {
+     "w": "eʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " el charcu, o el pozu, "
+    },
+    {
+     "w": "andeʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " el agua."
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 7,
+   "tokens": [
+    {
+     "t": "Aquí ai otru varal, otra vara que corta "
+    },
+    {
+     "w": "pabaju",
+     "r": [
+      "C02"
+     ]
+    },
+    {
+     "t": " andi se"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 8,
+   "tokens": [
+    {
+     "t": "cuerga el cacharru pa sacal el agua. Aquí atrás, se li"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 9,
+   "tokens": [
+    {
+     "t": "poni muchu pesu, pesu, sabi "
+    },
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", con el "
+    },
+    {
+     "w": "ojeʰtu",
+     "r": [
+      "C02",
+      "C03"
+     ]
+    },
+    {
+     "t": ", con"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 10,
+   "tokens": [
+    {
+     "t": "el "
+    },
+    {
+     "w": "ojeʰtu",
+     "r": [
+      "C02",
+      "C03"
+     ]
+    },
+    {
+     "t": " de que, el ombri tira de ellu "
+    },
+    {
+     "w": "pabaju",
+     "r": [
+      "C02"
+     ]
+    },
+    {
+     "t": " pa"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 11,
+   "tokens": [
+    {
+     "t": "enllenal el cacharru del agua, "
+    },
+    {
+     "w": "maʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " luegu el pesu "
+    },
+    {
+     "w": "eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 12,
+   "tokens": [
+    {
+     "t": "comu "
+    },
+    {
+     "w": "eʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "maʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " pesu, lo que ai allí "
+    },
+    {
+     "w": "atráʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", "
+    },
+    {
+     "w": "pueʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " el agua"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 13,
+   "tokens": [
+    {
+     "w": "miʰma",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "eʰcusal",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " ombri de tiral, el pesu "
+    },
+    {
+     "w": "eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " tira"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 14,
+   "tokens": [
+    {
+     "t": "parribal agua. Luegu ya, una "
+    },
+    {
+     "w": "veʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " que vieni parriba,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 15,
+   "tokens": [
+    {
+     "w": "pueʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " al nivel andi tienin que vaziala, i el ombri na"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 16,
+   "tokens": [
+    {
+     "w": "maʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " tieni que "
+    },
+    {
+     "w": "cujel",
+     "r": [
+      "C02"
+     ]
+    },
+    {
+     "t": " i vazial. Vuelvi a tiral, vuelvi a"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 17,
+   "tokens": [
+    {
+     "t": "enllenal, vuelvi a subil, i así "
+    },
+    {
+     "w": "aproʰsimadamenti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", ¿no?"
+    }
+   ]
+  },
+  {
+   "tipo": "corte"
+  },
+  {
+   "tipo": "linea",
+   "n": 18,
+   "tokens": [
+    {
+     "w": "Eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", sabrá "
+    },
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " lo "
+    },
+    {
+     "w": "queʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", ¿no?, "
+    },
+    {
+     "w": "eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "eʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " tomillu. Miri"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 19,
+   "tokens": [
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ", el tomillu el señol. "
+    },
+    {
+     "w": "Eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " tieni una virtú, "
+    },
+    {
+     "w": "queʰ",
+     "r": [
+      "C03"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 20,
+   "tokens": [
+    {
+     "t": "cortándulu, emmediu tieni una clu. Aora se levanta mu"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 21,
+   "tokens": [
+    {
+     "t": "pocu, "
+    },
+    {
+     "w": "porquéʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " mu tiernu, ¿no?, si "
+    },
+    {
+     "w": "eʰtuviera",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " mas echu,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 22,
+   "tokens": [
+    {
+     "t": "pue se le notaba "
+    },
+    {
+     "w": "mejol",
+     "r": [
+      "C02"
+     ]
+    },
+    {
+     "t": ". "
+    },
+    {
+     "w": "Eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " dizin el tomillu el"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 23,
+   "tokens": [
+    {
+     "t": "señol, se corta pol mediu i tieni una clu. Miri "
+    },
+    {
+     "w": "uʰte",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 24,
+   "tokens": [
+    {
+     "w": "Eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " ya "
+    },
+    {
+     "w": "eʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " otra cosa. Se saca, i azi correa, velaí,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 25,
+   "tokens": [
+    {
+     "w": "eʰtu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "eʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "torviʰca",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": ". Velaquí lai majrandi."
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "Y el tomillo, ¿se usa en la cocina?"
+  },
+  {
+   "tipo": "linea",
+   "n": 26,
+   "tokens": [
+    {
+     "w": "Eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " no, "
+    },
+    {
+     "w": "eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " no. "
+    },
+    {
+     "w": "Eʰti",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "eʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "maʰ",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " pa comelu el ganau. Se"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 27,
+   "tokens": [
+    {
+     "t": "usa, aquí, "
+    },
+    {
+     "w": "eʰtandu",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " secu, aora "
+    },
+    {
+     "w": "eʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " verdi, ¿no?, peru,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 28,
+   "tokens": [
+    {
+     "t": "el "
+    },
+    {
+     "w": "queʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " secu, "
+    },
+    {
+     "w": "queʰtá",
+     "r": [
+      "C03"
+     ]
+    },
+    {
+     "t": " muertu ya, se usa pa"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 29,
+   "tokens": [
+    {
+     "t": "enzendel·la lumbri."
+    }
+   ]
+  }
+ ],
+ "glosario": [
+  {
+   "n": 1,
+   "forma": "azi jorca",
+   "glosa": "hace horquilla"
+  },
+  {
+   "n": 2,
+   "forma": "zancaburra",
+   "glosa": "cigüeñal"
+  },
+  {
+   "n": 2,
+   "forma": "Miri uʰte",
+   "glosa": "mire usted"
+  },
+  {
+   "n": 3,
+   "forma": "eʰteʰ la",
+   "glosa": "este es la"
+  },
+  {
+   "n": 3,
+   "forma": "a viʰtu",
+   "glosa": "ha visto"
+  },
+  {
+   "n": 4,
+   "forma": "velaquí",
+   "glosa": "aquí está"
+  },
+  {
+   "n": 5,
+   "forma": "jiral",
+   "glosa": "bascular"
+  },
+  {
+   "n": 5,
+   "forma": "sabi uʰte",
+   "glosa": "sabe usted"
+  },
+  {
+   "n": 6,
+   "forma": "andeʰtá",
+   "glosa": "donde está"
+  },
+  {
+   "n": 7,
+   "forma": "varal",
+   "glosa": "el palo que bascula"
+  },
+  {
+   "n": 7,
+   "forma": "andi",
+   "glosa": "donde"
+  },
+  {
+   "n": 8,
+   "forma": "cuerga",
+   "glosa": "cuelga"
+  },
+  {
+   "n": 8,
+   "forma": "cacharru",
+   "glosa": "el cubo"
+  },
+  {
+   "n": 9,
+   "forma": "ojeʰtu",
+   "glosa": "objeto"
+  },
+  {
+   "n": 10,
+   "forma": "tira de ellu",
+   "glosa": "tira de él"
+  },
+  {
+   "n": 11,
+   "forma": "enllenal",
+   "glosa": "llenar"
+  },
+  {
+   "n": 11,
+   "forma": "maʰ luegu",
+   "glosa": "después"
+  },
+  {
+   "n": 12,
+   "forma": "comu eʰ maʰ pesu",
+   "glosa": "como pesa más"
+  },
+  {
+   "n": 13,
+   "forma": "eʰcusal ombri",
+   "glosa": "le ahorra al hombre"
+  },
+  {
+   "n": 14,
+   "forma": "parribal",
+   "glosa": "para arriba el"
+  },
+  {
+   "n": 14,
+   "forma": "veʰ",
+   "glosa": "vez"
+  },
+  {
+   "n": 15,
+   "forma": "pueʰtá",
+   "glosa": "pues está"
+  },
+  {
+   "n": 15,
+   "forma": "vaziala",
+   "glosa": "vaciarla"
+  },
+  {
+   "n": 16,
+   "forma": "na maʰ",
+   "glosa": "nada más"
+  },
+  {
+   "n": 16,
+   "forma": "cujel",
+   "glosa": "coger"
+  },
+  {
+   "n": 17,
+   "forma": "aproʰsimadamenti",
+   "glosa": "más o menos"
+  },
+  {
+   "n": 18,
+   "forma": "lo queʰ",
+   "glosa": "lo que es"
+  },
+  {
+   "n": 19,
+   "forma": "el señol",
+   "glosa": "del señor"
+  },
+  {
+   "n": 19,
+   "forma": "virtú",
+   "glosa": "propiedad"
+  },
+  {
+   "n": 20,
+   "forma": "emmediu",
+   "glosa": "en medio"
+  },
+  {
+   "n": 20,
+   "forma": "clu",
+   "glosa": "cruz"
+  },
+  {
+   "n": 21,
+   "forma": "porquéʰ mu",
+   "glosa": "porque es muy"
+  },
+  {
+   "n": 21,
+   "forma": "echu",
+   "glosa": "crecido"
+  },
+  {
+   "n": 22,
+   "forma": "mejol",
+   "glosa": "mejor"
+  },
+  {
+   "n": 22,
+   "forma": "dizin",
+   "glosa": "dicen"
+  },
+  {
+   "n": 23,
+   "forma": "pol mediu",
+   "glosa": "por medio"
+  },
+  {
+   "n": 24,
+   "forma": "azi correa",
+   "glosa": "sirve para correas"
+  },
+  {
+   "n": 25,
+   "forma": "torviʰca",
+   "glosa": "torvisco"
+  },
+  {
+   "n": 25,
+   "forma": "lai",
+   "glosa": "la hay"
+  },
+  {
+   "n": 26,
+   "forma": "comelu",
+   "glosa": "comerlo"
+  },
+  {
+   "n": 27,
+   "forma": "eʰtandu",
+   "glosa": "estando"
+  },
+  {
+   "n": 28,
+   "forma": "queʰtá",
+   "glosa": "que está"
+  },
+  {
+   "n": 29,
+   "forma": "enzendel·la",
+   "glosa": "encenderla"
+  }
+ ],
+ "_fuente": "Texto marcado de la guía de clase (TEX-03, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
+}

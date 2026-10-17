@@ -159,6 +159,65 @@ span.fila .tit { color: var(--texto-2) }
 .indice li:has(a.fila-ap):hover { background: var(--fondo-2) }
 .indice li:has(a.fila-ap):hover .t { color: var(--naranja) }
 .indice .ir { color: var(--naranja); font-weight: 800; font-size: 13px; white-space: nowrap }
+/* Los textos del taller: lista por fecha de lectura y página de cada texto con su panel de rasgos a la derecha */
+.textos { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 14px; max-width: 900px }
+.textos a { display: grid; grid-template-columns: 148px minmax(0, 1fr); gap: 22px; align-items: start; text-decoration: none; padding: 20px 22px; border-radius: 10px; background: var(--fondo-2) }
+.textos a:hover { background: var(--fondo-3) }
+.textos a:hover h3 { color: var(--naranja) }
+.textos .fecha { font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--verde); line-height: 1.4 }
+.textos h3 { font-weight: 900; font-size: 24px; letter-spacing: -.01em; margin: 0 }
+.textos .de { color: var(--texto-2); font-size: 15px; margin-top: 4px }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px }
+.chip { font-weight: 800; font-size: 12px; letter-spacing: .06em; padding: 3px 8px; border-radius: 4px; color: var(--fondo); background: var(--c, var(--naranja)) }
+@media (max-width: 600px) { .textos a { grid-template-columns: minmax(0, 1fr); gap: 6px } }
+.texto-pag { display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-areas: "tcab tcab" "cuerpo panel" "glos panel"; column-gap: 48px; padding-block: 8px 24px; max-width: 1080px }
+.texto-pag .tcab { grid-area: tcab }
+.texto-pag .cuerpo { grid-area: cuerpo; min-width: 0 }
+.texto-pag .panel { grid-area: panel; align-self: start; position: sticky; top: calc(var(--cab) + env(safe-area-inset-top, 0px) + 20px) }
+.texto-pag .glos { grid-area: glos; min-width: 0 }
+.texto-pag h2 { font-weight: 900; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 10px 0 0 }
+.texto-pag .meta { color: var(--texto-2); font-size: 15px; margin: 12px 0 0; max-width: 64ch; line-height: 1.55 }
+.texto-pag .meta b { color: var(--texto); font-weight: 800 }
+.texto-pag .leido { display: inline-block; margin-top: 14px; font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--verde) }
+.cuerpo { margin-top: 30px; font-size: 19px; line-height: 1.75 }
+.cuerpo .verso { display: grid; grid-template-columns: 34px minmax(0, 1fr); line-height: 1.6; padding-block: 2px }
+.cuerpo .verso .nv { font-size: 12px; color: var(--texto-3); font-variant-numeric: tabular-nums; padding-top: .45em }
+.cuerpo .verso.sangria .vt { padding-left: 2em }
+.cuerpo p { margin: 0 0 16px }
+.cuerpo .pregunta { font-style: italic; color: var(--texto-2) }
+.cuerpo .corte { height: 14px }
+.cuerpo .aside { font-style: italic; color: var(--texto-3) }
+.cuerpo a.m { color: inherit; text-decoration: none; font-weight: 700; background-image: linear-gradient(90deg, var(--c1) 0 50%, var(--c2, var(--c1)) 50% 100%); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 3px; padding-bottom: 1px; transition: background-size .25s, color .25s, opacity .25s }
+.cuerpo a.m:hover, .cuerpo a.m:focus-visible { background-size: 100% 100%; color: var(--fondo) }
+.cuerpo.anima a.m { animation: brota .6s calc(var(--i) * 45ms + 300ms) backwards cubic-bezier(.2, .8, .3, 1) }
+@keyframes brota { 0% { background-size: 0 3px; color: inherit } 55% { background-size: 100% 100%; color: var(--fondo) } 100% { background-size: 100% 3px } }
+.cuerpo.foco a.m { opacity: .35 }
+.cuerpo.foco a.m.on { opacity: 1; background-size: 100% 100%; color: var(--fondo) }
+.panel .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
+.panel ul { list-style: none; margin: 0; padding: 0 }
+.panel li { border-bottom: 1px solid var(--linea) }
+.panel a { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 12px; padding: 12px 4px; text-decoration: none; align-items: start }
+.panel a:hover, .panel a:focus-visible { background: var(--fondo-2) }
+.panel .sw { width: 14px; height: 14px; border-radius: 3px; background: var(--c); margin-top: 3px }
+.panel .cod { font-weight: 900; font-size: 13px; color: var(--c) }
+.panel .tt { display: block; font-weight: 700; font-size: 15px; line-height: 1.35 }
+.panel .cu { display: block; color: var(--texto-3); font-size: 13px; margin-top: 2px }
+.panel .nota { color: var(--texto-3); font-size: 13px; margin: 10px 0 0 }
+.glos { margin-top: 36px }
+.glos .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
+.glos dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 14px 0 0; font-size: 15px }
+.glos dt { font-weight: 800 } .glos dd { margin: 0; color: var(--texto-2) }
+@media (max-width: 900px) {
+  .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "glos" }
+  .texto-pag .panel { position: static; margin-top: 24px }
+  .cuerpo { font-size: 18px }
+}
+@media (prefers-reduced-motion: reduce) { .cuerpo.anima a.m { animation: none } }
+/* Página de un rasgo sin mapa interactivo: una sola columna */
+.rasgo.sin-mapa { grid-template-columns: minmax(0, 46rem); grid-template-areas: "cabeza" "texto"; grid-template-rows: auto 1fr }
+.rasgo.sin-mapa .lienzo, .rasgo.sin-mapa .estados, .rasgo.sin-mapa .info { display: none }
+.rasgo .en-textos { margin-top: 26px }
+.rasgo .en-textos a { color: var(--naranja); font-weight: 700 }
 /* Un apartado de los apuntes: una sola columna de lectura; los mapas, del mismo ancho que el texto, se amplían al pulsarlos */
 .apartado { max-width: 46rem; padding-block: 8px 24px }
 .apartado .volver { display: inline-block; margin-bottom: 22px }
@@ -287,7 +346,7 @@ span.fila .tit { color: var(--texto-2) }
     <nav class="menu" aria-label="Secciones">
       <a href="#apuntes" data-sec="apuntes">Contenido</a>
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
-      <a href="#mapas" data-sec="mapas">Mapas</a>
+      <a href="#textos" data-sec="textos">Textos</a>
       <a href="#diccionario" data-sec="diccionario">Diccionario</a>
     </nav>
   </div>
@@ -314,7 +373,7 @@ span.fila .tit { color: var(--texto-2) }
     <nav class="secciones" aria-label="Secciones del taller">
       <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado" id="estado-apuntes">Siete apartados</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
-      <a href="#mapas"><h2>Mapas</h2><p>Los mapas del taller: el área, la historia y las fuentes.</p><span class="estado no">En preparación</span></a>
+      <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes.</p><span class="estado no">En preparación</span></a>
     </nav>
   </div>
@@ -346,17 +405,18 @@ span.fila .tit { color: var(--texto-2) }
   </div>
 </section>
 
-<section id="v-mapas" class="vista" hidden>
+<section id="v-textos" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">Mapas del taller</div>
-    <h2 class="titulo-vista">Mapas</h2>
-    <p class="entradilla">Los mapas que se usan en el aula, por series. Los de cada rasgo están en su página, en <a href="#rasgos">Rasgos</a>.</p>
-    <div class="series">
-      <div class="serie"><div class="num">2</div><h2>Mapas base</h2><p>Las comarcas de Extremadura y el área del taller con sus ríos.</p></div>
-      <div class="serie"><div class="num">15</div><h2>Históricos</h2><p>De las lenguas indoeuropeas a las cañadas de la Mesta.</p></div>
-      <div class="serie"><div class="num">4</div><h2>De fuentes</h2><p>Dónde preguntaron Krüger, Cummins y González Salgado.</p></div>
-    </div>
-    <p style="margin-top:28px"><span class="pendiente">En preparación</span></p>
+    <div class="antetitulo">Lo que hemos leído en clase</div>
+    <h2 class="titulo-vista">Los textos del taller</h2>
+    <p class="entradilla">Cada texto con la fecha en que lo leímos. Las palabras que tienen alguno de sus rasgos destacados van marcadas y llevan a la página del rasgo.</p>
+    <ol class="textos" id="lista-textos"></ol>
+  </div>
+</section>
+
+<section id="v-texto" class="vista" hidden>
+  <div class="envoltura">
+    <div class="texto-pag" id="texto-pag"></div>
   </div>
 </section>
 
@@ -409,7 +469,7 @@ span.fila .tit { color: var(--texto-2) }
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let CAT = null, AP = null, mapa = null, cargandoMapa = null, BASE = null;
+let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = null;
 
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
 
@@ -417,8 +477,8 @@ function pintarLista() {
   const por = {};
   for (const r of CAT.rasgos) (por[r.codigo[0]] ||= []).push(r);
   $('lista-rasgos').innerHTML = Object.entries(CAT.grupos).map(([g, nombre]) => !por[g] ? '' : `
-    <section class="grupo"><h2>${esc(nombre)}</h2><ol>${por[g].map(r => r.mapa
-      ? `<li><a class="fila" href="#${r.codigo}"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="marca-mapa">Mapa</span></a></li>`
+    <section class="grupo"><h2>${esc(nombre)}</h2><ol>${por[g].map(r => r.mapa || r.pagina
+      ? `<li><a class="fila" href="#${r.codigo}"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span>${r.mapa ? '<span class="marca-mapa">Mapa</span>' : '<span></span>'}</a></li>`
       : `<li><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="pendiente">En preparación</span></span></li>`).join('')}</ol></section>`).join('');
   const n = CAT.rasgos.filter(r => r.mapa).length;
   $('estado-rasgos').textContent = n === 1 ? '1 con mapa interactivo' : n + ' con mapa interactivo';
@@ -426,17 +486,71 @@ function pintarLista() {
 
 async function ir() {
   const h = decodeURIComponent(location.hash.slice(1)) || 'inicio';
-  const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && r.mapa);
+  const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && (r.mapa || r.pagina));
+  const texto = TX && TX.find(t => t.codigo === h);
   const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : ['inicio', 'apuntes', 'rasgos', 'mapas', 'diccionario'].includes(h) ? h : 'inicio';
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   if (sec === 'inicio') animarPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo');
   if (apartado) pintarApartado(apartado);
+  if (texto) pintarTexto(texto);
   if (rasgo) await abrirRasgo(rasgo);
+}
+
+// ================= los textos del taller =================
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const fecha = f => { const [a, m, d] = f.split('-').map(Number); return `${d} de ${MESES[m - 1]} de ${a}`; };
+const COLORES_R = ['#ff914d', '#85be6d', '#ffc4a0'];   // un color por rasgo destacado, en el orden del texto
+const tituloR = c => (CAT && CAT.rasgos.find(r => r.codigo === c) || {}).titulo || c;
+function pintarListaTextos() {
+  const orden = [...TX].sort((a, b) => a.leido.localeCompare(b.leido));
+  $('lista-textos').innerHTML = orden.map(t => `<li><a href="#${t.codigo}"><span class="fecha">Leído el<br>${fecha(t.leido)}</span><span><h3>${esc(t.titulo)}</h3><span class="de">${esc(t.autor)}</span>
+    <span class="chips">${t.rasgos.map((c, k) => `<span class="chip" style="--c:${COLORES_R[k]}">${c}</span>`).join('')}</span></span></a></li>`).join('');
+  const n = TX.length, nombres = ['Ningún texto', 'Un texto', 'Dos textos', 'Tres textos', 'Cuatro textos', 'Cinco textos'];
+  $('estado-textos').textContent = nombres[n] || n + ' textos';
+}
+function pintarTexto(t) {
+  const col = Object.fromEntries(t.rasgos.map((c, k) => [c, COLORES_R[k]]));
+  const cuenta = Object.fromEntries(t.rasgos.map(c => [c, 0]));
+  let i = 0;
+  const tok = k => {
+    if (k.aside) return `<span class="aside">${esc(k.aside)}</span>`;
+    if (!k.w) return esc(k.t);
+    k.r.forEach(c => cuenta[c] = (cuenta[c] || 0) + 1);
+    const c1 = col[k.r[0]], c2 = col[k.r[1]] || c1;
+    return `<a class="m" href="#${k.r[0]}" data-r="${k.r.join(' ')}" style="--c1:${c1};--c2:${c2};--i:${i++}" title="${esc(k.r.map(c => c + ' · ' + tituloR(c)).join(' | '))}">${esc(k.w)}</a>`;
+  };
+  let cuerpo = '';
+  if (t.tipo === 'poema') {
+    cuerpo = t.bloques.map(b => `<div class="verso${b.sangria ? ' sangria' : ''}"><span class="nv">${b.n % 5 === 0 ? b.n : ''}</span><span class="vt">${b.tokens.map(tok).join('')}</span></div>`).join('');
+  } else {
+    let par = [];
+    const cierra = () => { if (par.length) { cuerpo += `<p>${par.join(' ')}</p>`; par = []; } };
+    for (const b of t.bloques) {
+      if (b.tipo === 'linea') par.push(b.tokens.map(tok).join(''));
+      else { cierra(); cuerpo += b.tipo === 'pregunta' ? `<p class="pregunta">${esc(b.texto)}</p>` : '<div class="corte"></div>'; }
+    }
+    cierra();
+  }
+  const panel = t.rasgos.map(c => `<li><a href="#${c}" data-foco="${c}" style="--c:${col[c]}"><span class="sw"></span><span><span class="cod">${c}</span><span class="tt">${esc(tituloR(c))}</span><span class="cu">${cuenta[c]} ${cuenta[c] === 1 ? 'palabra' : 'palabras'} en el texto</span></span></a></li>`).join('');
+  $('texto-pag').innerHTML = `<div class="tcab"><a class="volver" href="#textos">← Los textos del taller</a>
+      <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
+      <h2>${esc(t.titulo)}</h2>
+      <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
+      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span></div>
+    <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
+    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p></aside>
+    ${t.glosario.length ? `<div class="glos"><div class="ante">Para entender el texto</div><dl>${t.glosario.map(g => `<dt>${esc(g.forma)}</dt><dd>${esc(g.glosa)}</dd>`).join('')}</dl></div>` : ''}`;
+  const cu = $('cuerpo-texto');
+  const foco = c => { cu.classList.toggle('foco', !!c); cu.querySelectorAll('a.m').forEach(a => a.classList.toggle('on', !!c && a.dataset.r.split(' ').includes(c))); };
+  $('texto-pag').querySelectorAll('[data-foco]').forEach(a => {
+    a.addEventListener('pointerenter', () => foco(a.dataset.foco)); a.addEventListener('pointerleave', () => foco(null));
+    a.addEventListener('focus', () => foco(a.dataset.foco)); a.addEventListener('blur', () => foco(null));
+  });
 }
 
 // ================= el contenido del taller: los apartados de los apuntes =================
@@ -515,10 +629,11 @@ async function animarPortada() {
 
 // ================= página de un rasgo =================
 let ejemploTimer = null;
-function pintarCabeza(R, pagina) {
-  $('r-cod').textContent = R.codigo;
-  $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === R.codigo).titulo;
-  const ej = (pagina && pagina.ejemplos) || R.ejemplos || [];
+function pintarCabeza(codigo, R, pagina) {
+  $('r-cod').textContent = codigo;
+  $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === codigo).titulo;
+  const ej = (pagina && pagina.ejemplos) || (R && R.ejemplos) || [];
+  $('r-ejemplos').hidden = !ej.length;
   $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span></div>`).join('');
   clearInterval(ejemploTimer);
   let i = 0;
@@ -533,12 +648,18 @@ function pintarCabeza(R, pagina) {
   if (ej.length) { muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); }
   $('r-texto').innerHTML = !pagina ? '' : `<div class="ante">En los apuntes</div>
     ${pagina.apartados.map(([t, p]) => `<h3>${esc(t)}</h3><p>${esc(p)}</p>`).join('')}
-    <div class="datos"><span>${esc(pagina.origen)}</span><span>${esc(pagina.estado)}</span></div>`;
+    <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
+    ${R ? '' : '<p class="nota-mapa" style="color:var(--texto-3);font-size:14px;margin-top:18px">El mapa interactivo de este rasgo está en preparación.</p>'}`;
+  const en = TX ? TX.filter(t => t.rasgos.includes(codigo)) : [];
+  if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>`).join(' · ')}</p></div>`);
 }
 
 async function abrirRasgo(r) {
-  const [base, datos] = await Promise.all([BASE ||= json('datos/base.json'), json('datos/rasgos/' + r.codigo + '.json')]);
-  pintarCabeza(datos.rasgo, datos.pagina);
+  const datos = await json('datos/rasgos/' + r.codigo + '.json');
+  pintarCabeza(r.codigo, datos.rasgo, datos.pagina);
+  document.querySelector('.rasgo').classList.toggle('sin-mapa', !datos.rasgo);
+  if (!datos.rasgo) { if (mapa) mapa.pausar(true); return; }
+  const base = await (BASE ||= json('datos/base.json'));
   if (!mapa) mapa = await (cargandoMapa ||= crearMapa(base));
   mapa.cargarRasgo(datos);
   mapa.pausar(false);
@@ -919,6 +1040,10 @@ try {
   CAT = await json('datos/rasgos.json');
   pintarLista();
 } catch (e) { $('lista-rasgos').innerHTML = '<p class="entradilla">No se ha podido cargar la lista de rasgos.</p>'; }
+try {
+  TX = await json('datos/textos.json');
+  pintarListaTextos();
+} catch (e) { $('lista-textos').innerHTML = '<li>No se han podido cargar los textos.</li>'; }
 try {
   AP = await json('datos/apuntes.json');
   pintarIndiceApuntes();

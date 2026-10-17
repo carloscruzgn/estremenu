@@ -1,0 +1,918 @@
+{
+ "codigo": "TEX-02",
+ "corpus": "CUM-N",
+ "titulo": "La matanza",
+ "tipo": "conversacion",
+ "autor": "John Cummins",
+ "fuente": "El habla de Coria y sus cercanías, 1974. Conversación grabada en Guijo de Coria, con el informante GC 1, entre 1967 y 1972.",
+ "grafia": "En la grafía del taller. Las preguntas de Cummins, en cursiva.",
+ "leido": "2026-10-08",
+ "rasgos": [
+  "V01",
+  "C06",
+  "V07"
+ ],
+ "bloques": [
+  {
+   "tipo": "pregunta",
+   "texto": "Estos cerdos son del país, ¿no?"
+  },
+  {
+   "tipo": "linea",
+   "n": 1,
+   "tokens": [
+    {
+     "t": "Sí, son del paí. Ai otraʰ "
+    },
+    {
+     "w": "clasi",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", que abrán "
+    },
+    {
+     "w": "veníu",
+     "r": [
+      "V01"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 2,
+   "tokens": [
+    {
+     "t": "de "
+    },
+    {
+     "w": "andi",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " sea, son ya de maʰ marca, majrandi,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 3,
+   "tokens": [
+    {
+     "w": "mayori",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", de "
+    },
+    {
+     "w": "tamañu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ". "
+    },
+    {
+     "w": "Eʰtu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " son "
+    },
+    {
+     "w": "própiu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": "zel "
+    },
+    {
+     "w": "terrenu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "¿Los crían Vds.?"
+  },
+  {
+   "tipo": "linea",
+   "n": 4,
+   "tokens": [
+    {
+     "t": "También ai quien loʰ compra. "
+    },
+    {
+     "w": "Eʰtu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " son "
+    },
+    {
+     "w": "criáu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " en casa."
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "¿Cuándo se matan?"
+  },
+  {
+   "tipo": "linea",
+   "n": 5,
+   "tokens": [
+    {
+     "t": "Pueʰ también se suelim"
+    },
+    {
+     "w": "matal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " por "
+    },
+    {
+     "w": "cuandu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " se "
+    },
+    {
+     "w": "cojin",
+     "r": [
+      "V01"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 6,
+   "tokens": [
+    {
+     "t": "laʰ azeituna, por "
+    },
+    {
+     "w": "disiembri",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ". Se engordan, se seban,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 7,
+   "tokens": [
+    {
+     "t": "i por "
+    },
+    {
+     "w": "entonzi",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " suelim"
+    },
+    {
+     "w": "matalsi",
+     "r": [
+      "V01",
+      "C06"
+     ]
+    },
+    {
+     "t": ", la "
+    },
+    {
+     "w": "matanzia",
+     "r": [
+      "V07"
+     ]
+    },
+    {
+     "t": " que se llama,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 8,
+   "tokens": [
+    {
+     "t": "i se "
+    },
+    {
+     "w": "azi",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " la chasina que "
+    },
+    {
+     "w": "llamamuʰ",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " aquí, ya pa tol "
+    },
+    {
+     "w": "añu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 9,
+   "tokens": [
+    {
+     "t": "el "
+    },
+    {
+     "w": "imbutidu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", el "
+    },
+    {
+     "w": "choriziu",
+     "r": [
+      "V01",
+      "V07"
+     ]
+    },
+    {
+     "t": ", i tal."
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "¿Cómo se matan? ¿Viene un hombre…?"
+  },
+  {
+   "tipo": "linea",
+   "n": 10,
+   "tokens": [
+    {
+     "t": "No, no, no, loʰ "
+    },
+    {
+     "w": "matamuʰ",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "nusotru",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ". Un "
+    },
+    {
+     "w": "cuchillu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " así "
+    },
+    {
+     "w": "pol",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 11,
+   "tokens": [
+    {
+     "w": "po",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " la garganta, que le penetra el "
+    },
+    {
+     "w": "cuelpu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", "
+    },
+    {
+     "w": "claru",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " mueren,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 12,
+   "tokens": [
+    {
+     "w": "luegu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " con un, "
+    },
+    {
+     "w": "deʰtu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", se "
+    },
+    {
+     "w": "azin",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "unuʰ",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "manoju",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "jranditu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 13,
+   "tokens": [
+    {
+     "t": "que llaman "
+    },
+    {
+     "w": "chamuʰcu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", i se chamuʰcan al "
+    },
+    {
+     "w": "fuegu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 14,
+   "tokens": [
+    {
+     "t": "i se pelan pa que quede "
+    },
+    {
+     "w": "limpiu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " e "
+    },
+    {
+     "w": "pelu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " el "
+    },
+    {
+     "w": "tozinu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "Y los jamones, ¿se curan?"
+  },
+  {
+   "tipo": "linea",
+   "n": 15,
+   "tokens": [
+    {
+     "w": "Esu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " se conservan, mui bien. "
+    },
+    {
+     "w": "Esuʰ",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " no "
+    },
+    {
+     "w": "tienim",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": "maʰ que,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 16,
+   "tokens": [
+    {
+     "t": "una ve "
+    },
+    {
+     "w": "preparáu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", "
+    },
+    {
+     "w": "echali",
+     "r": [
+      "V01",
+      "C06"
+     ]
+    },
+    {
+     "t": " sal, no "
+    },
+    {
+     "w": "tienim",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": "maʰ meʰcla"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 17,
+   "tokens": [
+    {
+     "t": "que sal sola. Brega, brega, brega "
+    },
+    {
+     "aside": "llama a los dos cerdos"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 18,
+   "tokens": [
+    {
+     "t": "Sal sola, en una camita, i se "
+    },
+    {
+     "w": "tienin",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", "
+    },
+    {
+     "w": "tendíuʰ",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 19,
+   "tokens": [
+    {
+     "t": "que cojan bien la sal, pueʰ la sal lo conserva to,"
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 20,
+   "tokens": [
+    {
+     "w": "luu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " diʰpueʰ ya se cuelgan pa que se "
+    },
+    {
+     "w": "tienin",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " ya "
+    },
+    {
+     "w": "sequitu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ","
+    }
+   ]
+  },
+  {
+   "tipo": "linea",
+   "n": 21,
+   "tokens": [
+    {
+     "t": "una cosa eʰquisita, "
+    },
+    {
+     "w": "vali",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " mu "
+    },
+    {
+     "w": "caru",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "esu",
+     "r": [
+      "V01"
+     ]
+    },
+    {
+     "t": ", sí, sí."
+    }
+   ]
+  }
+ ],
+ "glosario": [
+  {
+   "n": 1,
+   "forma": "paí",
+   "glosa": "país"
+  },
+  {
+   "n": 1,
+   "forma": "clasi",
+   "glosa": "clases, razas"
+  },
+  {
+   "n": 1,
+   "forma": "abrán veníu",
+   "glosa": "habrán venido"
+  },
+  {
+   "n": 2,
+   "forma": "andi",
+   "glosa": "donde"
+  },
+  {
+   "n": 2,
+   "forma": "maʰ marca",
+   "glosa": "más tamaño, más alzada"
+  },
+  {
+   "n": 2,
+   "forma": "majrandi",
+   "glosa": "más grande"
+  },
+  {
+   "n": 3,
+   "forma": "mayori",
+   "glosa": "mayores"
+  },
+  {
+   "n": 3,
+   "forma": "própiuz del terrenu",
+   "glosa": "propios del lugar, de la raza de aquí"
+  },
+  {
+   "n": 4,
+   "forma": "loʰ compra",
+   "glosa": "los compra"
+  },
+  {
+   "n": 4,
+   "forma": "criáu",
+   "glosa": "criados"
+  },
+  {
+   "n": 5,
+   "forma": "suelimmatal",
+   "glosa": "suelen matar"
+  },
+  {
+   "n": 5,
+   "forma": "cojin",
+   "glosa": "cogen"
+  },
+  {
+   "n": 6,
+   "forma": "seban",
+   "glosa": "ceban"
+  },
+  {
+   "n": 7,
+   "forma": "entonzi",
+   "glosa": "entonces"
+  },
+  {
+   "n": 7,
+   "forma": "matanzia",
+   "glosa": "matanza"
+  },
+  {
+   "n": 8,
+   "forma": "azi",
+   "glosa": "hace"
+  },
+  {
+   "n": 8,
+   "forma": "chasina",
+   "glosa": "chacina, los embutidos"
+  },
+  {
+   "n": 8,
+   "forma": "tol añu",
+   "glosa": "todo el año"
+  },
+  {
+   "n": 9,
+   "forma": "imbutidu",
+   "glosa": "embutido"
+  },
+  {
+   "n": 9,
+   "forma": "choriziu",
+   "glosa": "chorizo"
+  },
+  {
+   "n": 10,
+   "forma": "nusotru",
+   "glosa": "nosotros"
+  },
+  {
+   "n": 11,
+   "forma": "po la",
+   "glosa": "por la"
+  },
+  {
+   "n": 11,
+   "forma": "cuelpu",
+   "glosa": "cuerpo"
+  },
+  {
+   "n": 12,
+   "forma": "deʰtu",
+   "glosa": "de esto, mientras busca la palabra"
+  },
+  {
+   "n": 12,
+   "forma": "azin",
+   "glosa": "hacen"
+  },
+  {
+   "n": 12,
+   "forma": "jranditu",
+   "glosa": "grandecito"
+  },
+  {
+   "n": 13,
+   "forma": "chamuʰcu",
+   "glosa": "manojo con que se chamusca"
+  },
+  {
+   "n": 13,
+   "forma": "chamuʰcan",
+   "glosa": "chamuscan"
+  },
+  {
+   "n": 14,
+   "forma": "e pelu",
+   "glosa": "de pelo"
+  },
+  {
+   "n": 14,
+   "forma": "tozinu",
+   "glosa": "tocino"
+  },
+  {
+   "n": 15,
+   "forma": "esu",
+   "glosa": "eso, los jamones"
+  },
+  {
+   "n": 15,
+   "forma": "tienimmaʰ",
+   "glosa": "tienen más"
+  },
+  {
+   "n": 16,
+   "forma": "ve",
+   "glosa": "vez"
+  },
+  {
+   "n": 16,
+   "forma": "echali",
+   "glosa": "echarle"
+  },
+  {
+   "n": 16,
+   "forma": "meʰcla",
+   "glosa": "mezcla"
+  },
+  {
+   "n": 17,
+   "forma": "brega",
+   "glosa": "voz para llamar al cerdo"
+  },
+  {
+   "n": 18,
+   "forma": "camita",
+   "glosa": "cama de sal"
+  },
+  {
+   "n": 18,
+   "forma": "tendíuʰ",
+   "glosa": "tendidos"
+  },
+  {
+   "n": 19,
+   "forma": "to",
+   "glosa": "todo"
+  },
+  {
+   "n": 20,
+   "forma": "luu diʰpueʰ ya",
+   "glosa": "luego después ya"
+  },
+  {
+   "n": 20,
+   "forma": "sequitu",
+   "glosa": "sequito, curado"
+  },
+  {
+   "n": 21,
+   "forma": "eʰquisita",
+   "glosa": "exquisita"
+  },
+  {
+   "n": 21,
+   "forma": "mu caru",
+   "glosa": "muy caro"
+  }
+ ],
+ "_fuente": "Texto marcado de la guía de clase (TEX-02, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
+}

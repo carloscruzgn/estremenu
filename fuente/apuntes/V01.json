@@ -1,5 +1,5 @@
 {
- "_fuente": "Apuntes del alumnado, página V01 (Google Doc Apuntes_alumnado_estremenu, 05/10/2026)",
+ "_fuente": "Apuntes del alumnado, página V01 (Google Doc Apuntes_alumnado_estremenu, 05/10/2026), con la h volada de 00-CRITERIOS-DE-TRANSCRIPCION",
  "apartados": [
   [
    "Qué es",
@@ -19,7 +19,6 @@
   ]
  ],
  "estado": "Se va perdiendo",
- "origen": "Leonés",
  "_ejemplos": "Ejemplos de la cabecera de la web, de la página de los apuntes: el reel conserva los suyos (libro, grande), porque cada ejemplo alarga su portadilla 1,4 s",
  "ejemplos": [
   {
@@ -57,5 +56,8 @@
    "antes": "e",
    "despues": "i"
   }
+ ],
+ "origenes": [
+  "Leonés"
  ]
 }

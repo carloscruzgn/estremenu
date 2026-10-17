@@ -94,7 +94,16 @@ for (const r of CAT.rasgos.filter(r => r.mapa)) {
   fs.writeFileSync(path.join(destino, 'rasgos', r.codigo + '.json'), JSON.stringify({ rasgo: R, clases, pagina }));
   console.log(r.codigo, 'clases:', JSON.stringify(resumen), '· en contra:', Object.values(clases).filter(c => c.neg).length);
 }
+// Los rasgos sin mapa interactivo: solo su página de los apuntes
+for (const r of CAT.rasgos.filter(r => !r.mapa && r.pagina)) {
+  fs.writeFileSync(path.join(destino, 'rasgos', r.codigo + '.json'), JSON.stringify({ rasgo: null, clases: null, pagina: leer(path.join('apuntes', r.codigo + '.json')) }));
+}
 fs.writeFileSync(path.join(destino, 'rasgos.json'), JSON.stringify(CAT));
+// Los textos leídos en el taller, con las palabras de sus rasgos destacados marcadas
+const TX = fs.readdirSync(path.join(aqui, 'textos')).filter(f => /^TEX-\d+\.json$/.test(f)).sort().map(f => leer(path.join('textos', f)));
+for (const t of TX) for (const c of t.rasgos) if (!CAT.rasgos.some(r => r.codigo === c)) console.warn(t.codigo, 'destaca un rasgo que no está en el catálogo:', c);
+fs.writeFileSync(path.join(destino, 'textos.json'), JSON.stringify(TX));
+console.log('textos.json:', TX.length, 'textos');
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
 const AP = leer('apuntes/apartados.json');
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
