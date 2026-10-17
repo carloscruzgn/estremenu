@@ -192,13 +192,13 @@ span.fila .tit { color: var(--texto-2) }
 .cuerpo .corte { height: 14px }
 .cuerpo .aside { font-style: italic; color: var(--texto-3) }
 @font-face { font-family: 'Charis fonetica'; src: url(img/fuentes/charis-fonetica.woff2) format('woff2'); font-display: swap }
-.modo { display: inline-flex; margin-top: 18px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
+.modo { display: inline-flex; margin-top: 20px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
 .modo button { font: inherit; font-size: 13px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer }
 .modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 .texto-pag .fon { grid-area: cuerpo; min-width: 0; margin-top: 30px; display: none }
 .texto-pag.modo-fon .fon { display: block }
 .texto-pag.modo-fon #cuerpo-texto { display: none }
-.texto-pag.modo-fon .panel { opacity: .45 }
+.texto-pag.modo-fon .panel :is(.ante, ul, .nota) { opacity: .45 }
 .fon .fila { display: grid; grid-template-columns: 76px minmax(0, 1fr); column-gap: 14px; margin-bottom: 18px }
 .fon .fila.p { margin-bottom: 4px }
 .fon .quien { font-size: 12px; font-weight: 800; letter-spacing: .06em; color: var(--verde); padding-top: .5em }
@@ -249,7 +249,6 @@ span.fila .tit { color: var(--texto-2) }
 @media (max-width: 900px) {
   .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" }
   .texto-pag .panel { position: static; margin-top: 24px }
-  .texto-pag.modo-fon .panel { display: none }
   .cuerpo { font-size: 18px }
   .fon .fila { grid-template-columns: minmax(0, 1fr) } .fon .quien { padding-top: 0 }
   .fon .fonet { font-size: 18px }
@@ -595,13 +594,12 @@ function pintarTexto(t) {
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
-      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>
-      ${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}</div>
+      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span></div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
-    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p></aside>
+    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}</aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
