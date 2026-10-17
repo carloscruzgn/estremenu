@@ -433,21 +433,24 @@ async function ir() {
 })();
 
 // La portada: extremeño → estremeñu. Primero la x por la s, después la o por la u.
-function animarPortada() {
+async function animarPortada() {
   const t = $('titulo-portada');
   if (t.dataset.hecho) return; t.dataset.hecho = 1;
+  // Se mide con la letra ya cargada y en em, para que el hueco crezca o mengüe con el título al cambiar el ancho de la ventana
+  try { await document.fonts.ready; } catch (e) {}
   const cambios = [...t.querySelectorAll('.cambio')];
-  const anchos = cambios.map(c => [c.querySelector('.viejo').getBoundingClientRect().width, c.querySelector('.nuevo').getBoundingClientRect().width]);
+  const em = parseFloat(getComputedStyle(t).fontSize);
+  const anchos = cambios.map(c => [c.querySelector('.viejo').getBoundingClientRect().width / em, c.querySelector('.nuevo').getBoundingClientRect().width / em]);
   const viejo = c => c.querySelector('.viejo');
-  cambios.forEach((c, i) => { viejo(c).style.width = anchos[i][0] + 'px'; });
-  if (sinMov) { cambios.forEach((c, i) => { viejo(c).style.transition = 'none'; viejo(c).style.width = anchos[i][1] + 'px'; c.classList.add('fijo'); }); return; }
+  cambios.forEach((c, i) => { viejo(c).style.width = anchos[i][0] + 'em'; });
+  if (sinMov) { cambios.forEach((c, i) => { viejo(c).style.transition = 'none'; viejo(c).style.width = anchos[i][1] + 'em'; c.classList.add('fijo'); }); return; }
   cambios.forEach((c, i) => {
     const d = 0.7 + i * 0.8;   // segundos: la s a los 0,7 y la u a los 1,5
     c.querySelector('.viejo').style.animationDelay = d + 's';
     c.querySelector('.nuevo').style.animationDelay = (d + 0.35) + 's';
     c.querySelector('.subr').style.animationDelay = (d + 0.95) + 's';
     c.classList.add('anima');
-    setTimeout(() => { viejo(c).style.width = anchos[i][1] + 'px'; }, (d + 0.3) * 1000);
+    setTimeout(() => { viejo(c).style.width = anchos[i][1] + 'em'; }, (d + 0.3) * 1000);
   });
 }
 
