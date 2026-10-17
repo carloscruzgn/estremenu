@@ -74,7 +74,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .portada { padding-block: clamp(40px, 9vw, 104px) 56px }
 .portada h1 { font-weight: 900; line-height: .95; letter-spacing: -.035em; margin-top: 18px }
 .portada h1 .l1 { display: block; font-size: clamp(34px, 6.4vw, 76px) }
-.portada h1 .l2 { display: block; font-size: clamp(64px, 14vw, 172px); color: var(--texto) }
+.portada h1 .l2 { display: block; font-size: clamp(44px, 13vw, 172px); color: var(--texto); white-space: nowrap }
 .cambio { position: relative; display: inline-block }
 .cambio .viejo, .cambio .nuevo { display: inline-block }
 .cambio .nuevo { position: absolute; left: 0; top: 0; color: var(--naranja) }
@@ -83,6 +83,9 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .cambio.anima .nuevo { animation: entra 1s 1.25s both cubic-bezier(.2,1.4,.4,1) }
 .cambio.anima .subr { animation: subraya .5s 1.85s both ease-out }
 .cambio.fijo .viejo { opacity: 0 } .cambio.fijo .nuevo { opacity: 1 } .cambio.fijo .subr { transform: scaleX(1) }
+/* En la portada, extremeño pasa a estremeñu: la x y la o caen, la s y la u entran; el hueco se ajusta al ancho de la letra nueva */
+.portada .cambio .viejo { text-align: center; transition: width .45s cubic-bezier(.4,0,.2,1) }
+.portada .cambio .nuevo { width: 100%; text-align: center }
 @keyframes cae { 0% { opacity: 1; transform: none } 100% { opacity: 0; transform: translateY(.45em) } }
 @keyframes entra { 0% { opacity: 0; transform: translateY(-.55em) } 100% { opacity: 1; transform: none } }
 @keyframes subraya { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
@@ -231,7 +234,7 @@ span.fila .tit { color: var(--texto-2) }
 <section id="v-inicio" class="vista portada" hidden>
   <div class="envoltura">
     <div class="antetitulo">CEPA Coria · Curso 2026-2027</div>
-    <h1><span class="l1">Taller de</span><span class="l2">estremeñ<span class="cambio" id="cambio-portada"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
+    <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.<cite>Apuntes del taller, «Antes de empezar»</cite></blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
@@ -357,9 +360,28 @@ async function ir() {
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
-  if (sec === 'inicio') { const c = $('cambio-portada'); if (!c.dataset.hecho) { c.dataset.hecho = 1; c.classList.add(sinMov ? 'fijo' : 'anima'); } }
+  if (sec === 'inicio') animarPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo');
   if (rasgo) await abrirRasgo(rasgo);
+}
+
+// La portada: extremeño → estremeñu. Primero la x por la s, después la o por la u.
+function animarPortada() {
+  const t = $('titulo-portada');
+  if (t.dataset.hecho) return; t.dataset.hecho = 1;
+  const cambios = [...t.querySelectorAll('.cambio')];
+  const anchos = cambios.map(c => [c.querySelector('.viejo').getBoundingClientRect().width, c.querySelector('.nuevo').getBoundingClientRect().width]);
+  const viejo = c => c.querySelector('.viejo');
+  cambios.forEach((c, i) => { viejo(c).style.width = anchos[i][0] + 'px'; });
+  if (sinMov) { cambios.forEach((c, i) => { viejo(c).style.transition = 'none'; viejo(c).style.width = anchos[i][1] + 'px'; c.classList.add('fijo'); }); return; }
+  cambios.forEach((c, i) => {
+    const d = 0.7 + i * 0.8;   // segundos: la s a los 0,7 y la u a los 1,5
+    c.querySelector('.viejo').style.animationDelay = d + 's';
+    c.querySelector('.nuevo').style.animationDelay = (d + 0.35) + 's';
+    c.querySelector('.subr').style.animationDelay = (d + 0.95) + 's';
+    c.classList.add('anima');
+    setTimeout(() => { viejo(c).style.width = anchos[i][1] + 'px'; }, (d + 0.3) * 1000);
+  });
 }
 
 // ================= página de un rasgo =================
