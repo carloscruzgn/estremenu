@@ -26,8 +26,8 @@
   --probable: #ffc4a0;
   --negro: #0c0c0c;
   --f: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --banda: #ffffff;        /* banda superior */
-  --banda-texto: #132e0d;
+  --banda: #ff914d;        /* banda superior: el naranja del centro, con texto en blanco */
+  --banda-texto: #ffffff;
   --cab: 64px;
   color-scheme: dark;
 }
@@ -45,21 +45,23 @@ button { font: inherit; color: inherit }
 .envoltura { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
 
 /* ---------- cabecera, como la del reel: logo, raya y nombre ---------- */
-.cab { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--banda); color: var(--banda-texto); box-shadow: 0 1px 0 rgba(0,0,0,.08) }
+.cab { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--banda); color: var(--banda-texto) }
 .cab .envoltura { display: flex; align-items: center; gap: 20px; min-height: var(--cab) }
 .marca { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: none }
 .marca img { height: 34px; width: auto; display: block }
-.marca .raya { width: 2px; height: 30px; background: rgba(19,46,13,.3) }
+.marca .raya { width: 2px; height: 30px; background: rgba(255,255,255,.6) }
 .marca span { font-weight: 800; font-size: 15px; letter-spacing: .01em; white-space: nowrap }
 .menu { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none }
 .menu::-webkit-scrollbar { display: none }
-.menu a { text-decoration: none; font-weight: 700; font-size: 14px; padding: 8px 12px; border-radius: 6px; color: rgba(19,46,13,.68); white-space: nowrap }
-.menu a:hover { color: var(--banda-texto); background: #eef4e9 }
-.menu a[aria-current="page"] { color: var(--banda-texto); box-shadow: inset 0 -3px 0 var(--naranja); border-radius: 0; background: none }
+.menu a { text-decoration: none; font-weight: 800; font-size: 14px; padding: 8px 12px; border-radius: 6px; color: rgba(255,255,255,.82); white-space: nowrap }
+.menu a:hover { color: var(--banda-texto); background: rgba(255,255,255,.16) }
+.menu a[aria-current="page"] { color: var(--banda-texto); box-shadow: inset 0 -3px 0 var(--banda-texto); border-radius: 0; background: none }
+.cab :focus-visible { outline-color: var(--banda-texto) }
 @media (max-width: 640px) {
   .cab .envoltura { flex-wrap: wrap; gap: 0; padding-block: 8px 0 }
   .marca span { font-size: 14px }
   .menu { width: 100%; margin: 6px 0 0; margin-left: -12px }
+  .menu a { padding: 8px 9px; font-size: 13px }
 }
 
 /* ---------- vistas ---------- */
@@ -226,7 +228,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <header class="cab">
   <div class="envoltura">
-    <a class="marca" href="#inicio"><img src="img/logo.png" alt="CEPA Coria"><i class="raya"></i><span>Taller de estremeñu</span></a>
+    <a class="marca" href="#inicio"><img src="img/logo-todo-blanco.png" alt="CEPA Coria"><i class="raya"></i><span>Taller de estremeñu</span></a>
     <nav class="menu" aria-label="Secciones">
       <a href="#apuntes" data-sec="apuntes">Contenido</a>
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
