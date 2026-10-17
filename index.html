@@ -310,6 +310,7 @@ span.fila .tit { color: var(--texto-2) }
 .ejemplos { height: 64px; position: relative; margin-top: 18px; font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -.02em }
 .ejemplo { position: absolute; left: 0; top: 0; opacity: 0; transition: opacity .35s }
 .ejemplo.ve { opacity: 1 }
+.ejemplo .cambio .viejo { white-space: nowrap; text-align: left }
 .lienzo canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab }
 .lienzo canvas:active { cursor: grabbing }
 .rotulo { position: absolute; left: 22px; top: 18px; right: 22px; pointer-events: none; transition: opacity .35s, transform .35s }
@@ -710,16 +711,26 @@ function pintarCabeza(codigo, R, pagina) {
   $('r-ejemplos').hidden = !ej.length;
   $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span>${esc(e.cola || '')}</div>`).join('');
   clearInterval(ejemploTimer);
+  const miTimer = ejemploTimer = Symbol();   // marca de esta cabecera: si se abre otro rasgo antes de cargar la letra, esta no arranca
   let i = 0;
+  // El hueco de la letra que cae se ajusta al ancho de la que entra, como en la portada: si no, jacha deja un hueco donde estaba la h
+  const ajustaHueco = c => {
+    const v = c.querySelector('.viejo'), n = c.querySelector('.nuevo'), em = parseFloat(getComputedStyle(c).fontSize);
+    clearTimeout(c._t); v.style.transition = 'none'; v.style.width = '';
+    const w0 = v.getBoundingClientRect().width / em, w1 = n.getBoundingClientRect().width / em;
+    v.style.width = (sinMov ? w1 : w0) + 'em'; void v.offsetWidth;
+    if (!sinMov) { v.style.transition = 'width .45s cubic-bezier(.4,0,.2,1)'; c._t = setTimeout(() => { v.style.width = w1 + 'em'; }, 800); }
+  };
   const muestra = () => {
     document.querySelectorAll('.ejemplo').forEach((el, j) => el.classList.toggle('ve', j === i));
     const c = document.querySelector('#ej' + i + ' .cambio');
-    if (c) { c.classList.remove('anima', 'fijo'); void c.offsetWidth; c.classList.add(sinMov ? 'fijo' : 'anima'); c.style.setProperty('--d', 0); }
+    if (c) { ajustaHueco(c); c.classList.remove('anima', 'fijo'); void c.offsetWidth; c.classList.add(sinMov ? 'fijo' : 'anima'); c.style.setProperty('--d', 0); }
     i = (i + 1) % ej.length;
   };
   // en los ejemplos el cambio va más rápido que en la portada
   for (const el of document.querySelectorAll('.ejemplo .cambio')) { el.querySelector('.viejo').style.animationDelay = '.5s'; el.querySelector('.nuevo').style.animationDelay = '.85s'; el.querySelector('.subr').style.animationDelay = '1.4s'; }
-  if (ej.length) { muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); }
+  // Se mide con la letra ya cargada
+  if (ej.length) document.fonts.ready.then(() => { if (ejemploTimer !== miTimer) return; muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); });
   $('r-texto').innerHTML = !pagina ? '' : `<div class="ante">En los apuntes</div>
     ${pagina.apartados.map(([t, p]) => `<h3>${esc(t)}</h3><p>${esc(p)}</p>`).join('')}
     <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
