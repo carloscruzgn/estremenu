@@ -708,7 +708,7 @@ span.fila .tit { color: var(--texto-2) }
       <p class="otros-tit">También salen en los mapas</p>
       <ul class="otros">
         <li><b>1906</b><span><strong>Ramón Menéndez Pidal</strong>, <i>El dialecto leonés</i>: algunos pueblos del norte de Cáceres, que se citan a través de Krüger.</span></li>
-        <li><b>1929</b><span><strong>Fink</strong> y <strong>Bierhenke</strong>: la Sierra de Gata, en alemán, que se cita a través de otros autores.</span></li>
+        <li><b>1929</b><span><strong>Oskar Fink</strong> y <strong>Wilhelm Bierhenke</strong>: la Sierra de Gata, en alemán, que se cita a través de otros autores.</span></li>
         <li><b>1980</b><span><strong>Antonio Viudas Camarasa</strong>, <i>Diccionario extremeño</i>: reúne las palabras publicadas hasta entonces, con el pueblo de cada una, pero sin la fecha en que se recogieron.</span></li>
         <li><b>1992</b><span><strong>Fernando Flores del Manzano</strong>, «Modalidades de habla extremeña en la Sierra de Gredos»: Piornal y la sierra del Jerte, fuera del área.</span></li>
         <li><b>2023</b><span><strong>Borja Alonso Pascua</strong>: las hablas de Salamanca, con los datos del ALEP, atlas encuestado en 1976-1981, y los del COSER.</span></li>
@@ -1118,9 +1118,12 @@ function pintarApartado(a) {
   // Referencia bibliográfica: **negrita** para un segundo autor dentro de la entrada, *cursiva* para los títulos
   const ref = s => esc(s.replace(/\\([\[\]])/g, '$1')).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>');
   // El autor que repite el de la entrada anterior va con raya; en una obra en colaboración, solo el primero: ——— y OTRO, A. (Carlos, 18/10/2026)
+  // El director o editor de una obra va como el autor, con su papel detrás: ——— (dir.)
   const primero = a => a.split(/,? y (?=[A-ZÁÉÍÓÚÑ]{2})/)[0];
-  const autorRef = (a, ant) => !ant || primero(a) !== primero(ant) ? esc(a)
-    : a === ant ? '<span class="mismo">———</span>' : `<span class="mismo">———</span> y ${esc(a.slice(primero(a).length).replace(/^,? y /, ''))}`;
+  const sinRol = a => a.replace(/\s*\((?:dir|ed|eds|coord)\.\)$/, '');
+  const rol = a => (a.match(/\s*\((?:dir|ed|eds|coord)\.\)$/) || [''])[0];
+  const autorRef = (a, ant) => !ant || sinRol(primero(a)) !== sinRol(primero(ant)) ? esc(a)
+    : sinRol(a) === sinRol(ant) ? `<span class="mismo">———</span>${esc(rol(a))}` : `<span class="mismo">———</span> y ${esc(a.slice(primero(a).length).replace(/^,? y /, ''))}`;
   const txt = b => (b.arranque ? `<b>${esc(b.arranque)}</b> ` : '') + esc(b.texto);
   const bloques = a.bloques.map(b =>
     b.t === 'p' ? `<p>${txt(b)}</p>`

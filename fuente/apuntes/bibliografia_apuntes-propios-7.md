@@ -1,307 +1,365 @@
 # **7. Bibliografía**
 
-Dos listas manejadas por Claude, construidas sobre el índice de bibliografía del taller, que trae de cada fichero el grado de fuente y hasta dónde se ha leído. La primaria recoge las obras consultadas de primera mano, con su cita normativa hasta donde el índice la da. La secundaria recoge lo que no se ha consultado o se cita de segunda mano, con la vía por la que llega. Quedan los comentarios que Claude deja sobre la ubicación y los datos que le faltan.
+Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, con letra si un autor repite año; el autor repetido va con raya. La primaria recoge las obras leídas de primera mano en el proyecto; la secundaria, las que se citan a través de otras o están en la carpeta sin leer, con la vía por la que llegan. Lo que falta por comprobar va entre marcas ++.
 
 ## **7.1. Bibliografía primaria**
 
-**ALCÓN OLIVERA, José M.ª.** «El habla en Guijo de Galisteo y pueblos cercanos», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 220-224. \[Bibliografia/Libros y artículos\] · fuente C
+**ALCÓN OLIVERA, José María (2002).** «El habla en Guijo de Galisteo y pueblos cercanos», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 220-224.
 
-**ARIZA, Manuel.** «Apuntes de geografía lingüística extremeña», *AEF* 3, 1980, pp. 21-29. \[Bibliografia/Libros y artículos\]
+**ALONSO PASCUA, Borja (2021).** «El pretérito perfecto compuesto en las hablas fronterizas hispano-portuguesas: transferencias semánticas y morfológicas», *Revista de Filología Románica* 38, pp. 91-104.
 
-**ARIZA, Manuel.** «Dos estudios de historia lingüística de Extremadura (I. Documentos y fueros de los siglos XIII y XIV. II. Las Ordenanzas del Concejo de Valencia de Alcántara)», *Anuario de Estudios Filológicos* VIII, 1985, pp. 7-18. \[Bibliografia/Libros y artículos\] · interés B
+**——— (2023).** «Las hablas de Salamanca en el continuo lingüístico noroccidental: una puesta al día», *Revista de Investigación Lingüística* 26, pp. 15-34.
 
-**ARIZA, Manuel.** «Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, 1995, pp. 77-88. \[Bibliografia/Libros y artículos\]
+**ARIZA VIGUERA, Manuel (1980).** «Apuntes de geografía lingüística extremeña (Datos extraídos del ALPI y otras encuestas)», *Anuario de Estudios Filológicos* III, pp. 21-29.
 
-**ARIZA, Manuel.** «Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, 1993, pp. 149-161 (Ariza 1993b). \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (1985).** «Dos estudios de historia lingüística de Extremadura (I. Documentos y fueros de los siglos XIII y XIV. II. Las Ordenanzas del Concejo de Valencia de Alcántara)», *Anuario de Estudios Filológicos* VIII, pp. 7-18.
 
-**ARIZA, Manuel, y SALVADOR PLANS, Antonio.** «/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, 1992, pp. 173-176. \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (1993a).** «Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* XVI, pp. 7-22.
 
-**ARIZA VIGUERA, Manuel.** «Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* 16, 1993, pp. 7-22 (Ariza 1993a). \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (1993b).** «Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, pp. 149-161.
 
-**ARIZA VIGUERA, Manuel.** «De nuevo sobre Serradilla y el chinato», *Cauce. Revista de Filología y su Didáctica* 18-19, 1995-96, pp. 689-701. \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (1995).** «Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, pp. 77-88.
 
-**ARIZA VIGUERA, Manuel.** «Sobre la lengua de Luis Chamizo», *Anuario de Estudios Filológicos* XXX, 2007, pp. 9-18 (Ariza 2007). \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (1995-1996).** «De nuevo sobre Serradilla y el chinato», *Cauce. Revista de Filología y su Didáctica* 18-19, pp. 689-701.
 
-**AUPEX y SEPAD.** *Ecopunto lingüístico. Ayúdanos a recuperar palabras en peligro de extinción*, programa «Nuestros Mayores Activos», Junta de Extremadura, Consejería de Sanidad y Dependencia, y Asociación de Universidades Populares de Extremadura, sin fecha ni ISBN. \[Bibliografia/Diccionarios\] · fuente C · interés C
+**——— (2007).** «Sobre la lengua de Luis Chamizo», *Anuario de Estudios Filológicos* XXX, pp. 9-18.
 
-**BARROSO GUTIÉRREZ, Félix.** «Apuntes sobre el habla de Las Hurdes», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 180-187. \[Bibliografia/Libros y artículos\] · fuente C
+**——— y SALVADOR PLANS, Antonio (1992a).** «/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, pp. 173-176.
 
-**BASTARDÍN CANDÓN, Teresa.** *Teoría y práctica del asturleonés*, UCA. ++año de edición no dado por el índice++ \[Bibliografia/Libros y artículos\]
+**AUPEX y SEPAD ([2010]).** *eCopunto lingüístico. Ayúdanos a recuperar palabras en peligro de extinción*, programa «Nuestros Mayores Activos», Badajoz, Junta de Extremadura y Universidades Populares de Extremadura.
 
-**BECERRA PÉREZ, ++nombre de pila no dado por el índice++.** «La constitución histórica del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 127-151. \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**AYUNTAMIENTO DE PORTAJE (2011).** *Portaje, tradición y legado*, introducción de Carlos Cruz González, Portaje, Ayuntamiento de Portaje.
 
-**CAMISÓN, Juan J.** «A vueltas con la H (o cómo escribir las aspiraciones en extremeño)», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 108-126. \[Bibliografia/Libros y artículos\] · fuente C · interés C
+**BARROSO GUTIÉRREZ, Félix (2002).** «Apuntes sobre el habla de Las Hurdes», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 180-187.
 
-**CAMPO, Baltasar.** «La espelujá», manuscrito en facsímil, en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 326-328. \[Bibliografia/Libros y artículos\]
+**——— (2016).** «Una pieza teatral de 1901 en el habla coloquial de Tierras de Granadilla», en Manuel Trinidad Martín (ed.), *Congreso Internacional APLEx 2004: Patrimonio Lingüístico Extremeño. Actas*, Cáceres, Biblioteca Virtual Extremeña, 2016, pp. 90-110.
 
-**CARMONA GARCÍA, Ismael.** *Ortografía del extremeño*, OSCEC, 2017. \[Bibliografia/OSCEC\]
+**BASTARDÍN CANDÓN, Teresa (s. f.).** *Teoría y práctica de dialectología hispánica. Variedades lingüísticas históricas I: el asturleonés*, material docente del Grado en Filología Hispánica, Cádiz, Universidad de Cádiz.
 
-**CARMONA GARCÍA, Ismael.** *Diccionario de equivalencias castellano-estremeñu*, OSCEC, 2017. \[Bibliografia/OSCEC\]
+**BECERRA PÉREZ, Miguel (2002).** «La constitución histórica del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 127-151.
 
-**CARMONA GARCÍA, Ismael.** «El estremeñu», *Hápax* 4. ++año no dado por el índice++ \[Bibliografia/OSCEC\]
+**CAMISÓN FERNÁNDEZ, Juan José (2002).** «A vueltas con la H (o cómo escribir las aspiraciones en extremeño)», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 108-126.
 
-**CARRASCO GONZÁLEZ, Juan M.** «Hablas y dialectos portugueses o galaico-portugueses en Extremadura», *AEF* XIX, 1996. \[Bibliografia/Libros y artículos\]
+**CAMPO, Baltasar (2002).** «La espelujá», manuscrito en facsímil, en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 326-328.
 
-**CASILLAS ANTÚNEZ, Francisco José.** «Historia y toponimia de la tierra de Coria», *Alcántara* 68, 2008, pp. 21-44. \[Bibliografia/Libros y artículos\] · fuente A/B · interés C
+**CARMONA GARCÍA, Ismael (2011).** «El estremeñu», *Hápax. Revista de la Sociedad de Estudios de Lengua y Literatura* 4, pp. 77-102.
 
-**CUMMINS, John G.** *El habla de Coria y sus cercanías*, Tamesis Books, 1974. \[papel de Carlos; Bibliografia/Libros y artículos\]
+**——— (2017a).** *Diccionario de equivalencias castellano-estremeñu*, s. l., OSCEC.
 
-**DÍAZ LUCIO, ++nombre de pila no dado por el índice++.** «Motes en Cadalso», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 243-245, firmado en septiembre de 2002. \[Bibliografia/Libros y artículos\] · fuente C · interés C
+**——— (2017b).** *Ortografía del extremeño*, s. l., OSCEC.
 
-**FERNÁNDEZ DE MOLINA ORTÉS, Elena.** «El habla en Extremadura. Investigaciones sobre la morfosintaxis y el léxico regional», *Anuario de Estudios Filológicos* XXXVIII, 2015, pp. 57-72. \[Bibliografia/Libros y artículos\] · fuente B · interés C
+**CARRASCO GONZÁLEZ, Juan María (1996).** «Hablas y dialectos portugueses o galaico-portugueses en Extremadura (Parte I: Grupos dialectales. Clasificación de las hablas de Jálama)», *Anuario de Estudios Filológicos* XIX, pp. 135-148.
 
-**FLORES DEL MANZANO, Fernando.** «Reflexiones en torno a una experiencia didáctica», 1986. ++publicación no identificada por el índice++ \[Bibliografia/Libros y artículos\]
+**CASILLAS ANTÚNEZ, Francisco José (2008).** «Historia y toponimia de la tierra de Coria», *Alcántara* 68, pp. 21-44.
 
-**FLORES DEL MANZANO, Fernando.** «Modalidades de habla extremeña en la Sierra de Gredos», en *Actas del II Congreso Internacional de Historia de la Lengua Española*, ed. M. Ariza, R. Cano, J. M. Mendoza y A. Narbona, Madrid, Pabellón de España, 1992, pp. 121-134. \[Bibliografia/Libros y artículos\] · interés C
+**CUMMINS, John G. (1974).** *El habla de Coria y sus cercanías*, Londres, Tamesis Books.
 
-**FLORES DEL MANZANO, Fernando.** *Con acento extremeño. Habla dialectal y literatura de tradición oral en el aula*, Mérida, Junta de Extremadura, 1999. \[Bibliografia/Libros y artículos\] · fuente A/B · interés A
+**DÍAZ LUCIO, Julián (2002).** «Motes en Cadalso», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 243-245.
 
-**FLORES DEL MANZANO, Fernando.** «“El extremeño” y la escuela: léxico dialectal y cambio sociocultural», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 198-209. \[Bibliografia/Libros y artículos\] · fuente C · interés C
+**DÍEZ ELCUAZ, José Ignacio (2013).** «La comarca salmantina de El Rebollar», *Salamanca. Revista de Estudios* 58, pp. 197-221.
 
-**FRADES GASPAR, Domingo.** «La fala en Extremadura», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 210-214. \[Bibliografia/Libros y artículos\] · fuente C · interés C
+**FERNÁNDEZ DE MOLINA ORTÉS, Elena (2015).** «El habla en Extremadura. Investigaciones sobre la morfosintaxis y el léxico regional», *Anuario de Estudios Filológicos* XXXVIII, pp. 57-72.
 
-**FRANCISCO SÁNCHEZ, Gonzalo.** «El posesivo tónico precedido de artículo», *RIL* 19, 2016. \[Bibliografia/Libros y artículos\]
+**FLORES DEL MANZANO, Fernando (1985a).** «Reflexiones en torno a una experiencia didáctica: literatura y dialecto extremeño en la enseñanza», *Revista de Estudios Extremeños* XLII-3, pp. 595-603.
 
-**GARCÍA, Mina.** «Gratitud a nuestros mayores», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 331-333. \[Bibliografia/Libros y artículos\]
+**——— (1992).** «Modalidades de habla extremeña en la Sierra de Gredos», en M. Ariza, R. Cano, J. M. Mendoza y A. Narbona (eds.), *Actas del II Congreso Internacional de Historia de la Lengua Española*, Madrid, Pabellón de España, 1992, pp. 121-134.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Fuentes del vocabulario y áreas léxicas de Extremadura», 2001, pp. 125-139. ++título de la publicación no dado por el índice++ \[Bibliografia/Libros y artículos\]
+**——— (1999).** *Con acento extremeño. Habla dialectal y literatura de tradición oral en el aula*, Mérida, Junta de Extremadura.
 
-**GONZÁLEZ SALGADO, José Antonio.** «La conciencia lingüística de los hablantes extremeños», Actas Zamora Vicente, 2003. \[Bibliografia/Libros y artículos\]
+**——— (2002).** «“El extremeño” y la escuela: léxico dialectal y cambio sociocultural», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 198-209.
 
-**GONZÁLEZ SALGADO, José Antonio.** «La fonética de las hablas extremeñas», *REE* LIX-2, 2003, pp. 589-619. \[Bibliografia/Libros y artículos\]
+**FRADES GASPAR, Domingo (2002).** «La fala en Extremadura», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 210-214.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Las hablas del norte de la provincia de Cáceres a comienzos del siglo XX. A propósito de la traducción de *Studien zur Lautgeschichte westspanischer Mundarten*», *Alcántara* 66, 2007, pp. 39-52. \[Bibliografia/Libros y artículos\] · fuente A/B · interés B
+**FRANCISCO SÁNCHEZ, Gonzalo (2016).** «El posesivo tónico precedido de artículo en la sierra de Francia (sur de Salamanca) y zonas próximas. El presunto islote hurdano», *Revista de Investigación Lingüística* 19, pp. 227-249.
 
-**GONZÁLEZ SALGADO, José Antonio.** «La estructura del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 278-299. \[Bibliografia/Libros y artículos\] · fuente A · interés B
+**GARCÍA, Mina (2002).** «Gratitud a nuestros mayores», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 331-333.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Diez problemas de dialectología extremeña», *REE* LXV-1, 2009. \[Bibliografia/Libros y artículos\]
+**GONZÁLEZ SALGADO, José Antonio (2001).** «Fuentes del vocabulario y áreas léxicas de Extremadura», en Alexandre Veiga, Miguel González Pereira y Montserrat Souto Gómez (eds.), *De lenguas y lenguajes*, A Coruña, Toxosoutos, 2001, pp. 125-139.
 
-**GONZÁLEZ SALGADO, José Antonio.** «La dialectología en la Revista de Estudios Extremeños (1927-2013)», *REE* LXX-2, 2014, pp. 1153-1194. \[Bibliografia/Libros y artículos\]
+**——— (2002b).** «La estructura del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 278-299.
 
-**GONZÁLEZ SALGADO, José Antonio.** «La sufijación diminutiva en la toponimia extremeña», en *Actas del VIII Congreso de Estudios Extremeños*, 2007, pp. 1969-1982. \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (2003a).** «La fonética de las hablas extremeñas», *Revista de Estudios Extremeños* LIX-2, pp. 589-619.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Repertorio bibliográfico de las hablas extremeñas», geolectos.com, dic. 2025. \[Bibliografia/Libros y artículos\]
+**——— (2003b).** «La conciencia lingüística de los hablantes extremeños», en Carmen Alemany Bay y otros (eds.), *Con Alonso Zamora Vicente. Actas del Congreso Internacional «La lengua, la Academia, lo popular, los clásicos, los contemporáneos…»*, Alicante, Universidad de Alicante, 2003, vol. II, pp. 725-735.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Fonética asturleonesa en las hablas populares de Extremadura», *Estudis Romànics* 46, 2024, pp. 131-171. \[Bibliografia/Libros y artículos\]
+**——— (2007a).** «Las hablas del norte de la provincia de Cáceres a comienzos del siglo XX. A propósito de la traducción de *Studien zur Lautgeschichte westspanischer Mundarten*», *Alcántara* 66, pp. 39-52.
 
-**HOYOS PIÑAS, Juan Martín.** «La diversidad de hablas en el ámbito lingüístico extremeño», *Interlingüística* 14, 2003. \[Bibliografia/Libros y artículos\]
+**——— (2007b).** «La sufijación diminutiva en la toponimia extremeña», en F. Hermoso Ruiz (coord.), *VIII Congreso de Estudios Extremeños. Libro de actas*, Badajoz, Diputación de Badajoz, 2007, pp. 1969-1982.
 
-**KOPONEN, Emilia.** «Diferencias en la aspiración y pérdida de la /s/ implosiva», *Estudios interlingüísticos* 3, 2015. \[Bibliografia/Libros y artículos\]
+**——— (2009b).** «Diez problemas de dialectología extremeña», *Revista de Estudios Extremeños* LXV-1, pp. 347-378.
 
-**KRÜGER, Fritz.** *Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo, 1914. \[Bibliografia/Libros y artículos\] · fuente A · interés A
+**——— (2014).** «La dialectología en la *Revista de Estudios Extremeños* (1927-2013)», *Revista de Estudios Extremeños* LXX-2, pp. 1153-1194.
 
-**LÓPEZ FERNÁNDEZ, Manuel.** «De Granadilla a Montemolín. La Orden de Santiago y la Vía de la Plata en tierras de Extremadura (siglos XII-XIII)», *Revista de Estudios Extremeños* LXXV-II, 2019, pp. 319-347. \[Bibliografia/Libros y artículos\] · fuente A · interés C
+**——— (2024).** «Fonética asturleonesa en las hablas populares de Extremadura», *Estudis Romànics* 46, pp. 131-171.
 
-**MARTÍN, Aníbal.** *Yo hablo, ellas cantorin. Las aventuras de un extremeño por los caminos de la diversidad lingüística*, Pie de Página, 2023. \[papel de Carlos; Bibliografia/Libros y artículos\] · fuente C · interés A
+**——— (2025).** *Repertorio bibliográfico de las hablas extremeñas*, versión reducida, actualizada el 4 de diciembre de 2025, en línea, geolectos.com.
 
-**MARTÍNEZ TERRÓN, ++nombre de pila no dado por el índice++.** «El “habla popular” en las letras extremeñas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 308-316. \[Bibliografia/Libros y artículos\] · fuente C · interés D
+**HERRERO INGELMO, José Luis (2006).** «El leonés en Salamanca cien años después», texto de agosto de 2006; publicado en José R. Morala (ed.), *Ramón Menéndez Pidal y el dialecto leonés (1906-2006)*, Instituto Castellano y Leonés de la Lengua, 2007, pp. 207-235 ++libro, lugar y páginas, de la web del autor: comprobar++.
 
-**MONTERO CURIEL, Pilar.** *El extremeño*, Madrid, Arco/Libros, 2006 (Cuadernos de Lengua Española, 91). \[papel de Carlos; Bibliografia/Libros y artículos\] · fuente B/A · interés A
+**HOYOS PIÑAS, Juan Martín (2003).** «La diversidad de hablas en el ámbito lingüístico extremeño», *Interlingüística* 14, pp. 587-592.
 
-**MONTERO CURIEL, Pilar.** «Fonética extremeña en el Atlas Lingüístico de la Península Ibérica». ++revista, año y páginas no dados por el índice++ \[Bibliografia/Libros y artículos\]
+**IGLESIAS OVEJERO, Ángel (2010).** «Situación del habla de El Rebollar (Salamanca): analogías y contrastes con las hablas extremeñas», *Lletres Asturianes* 103, pp. 35-59. Primera versión en Manuel Trinidad Martín (ed.), *Congreso Internacional APLEx 2004: Patrimonio Lingüístico Extremeño. Actas*, Cáceres, Biblioteca Virtual Extremeña, 2016, pp. 339-354.
 
-**MONTERO CURIEL, Pilar.** «Las hablas extremeñas en la literatura regional», *REE* LXX-1, 2014. \[Bibliografia/Libros y artículos\]
+**KOPONEN, Emilia (2015).** «Diferencias en la aspiración y pérdida de la /s/ implosiva entre el norte y el sur del extremeño», *Estudios Interlingüísticos* 3, pp. 47-65.
 
-**NIETO CABALLERO, Guadalupe.** «Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *REE* LXXII-II, 2016, pp. 851-868. \[Bibliografia/Libros y artículos\] · fuente A · interés B
+**KRÜGER, Fritz (1914).** *Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo.
 
-**ORTIGO, ++nombre completo no consta ni en el texto ni en el índice++.** «Carta desde el escaño a un amigo emigrante», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 236-242. \[Bibliografia/Libros y artículos\] · fuente C · interés A
+**LÓPEZ FERNÁNDEZ, Manuel (2019).** «De Granadilla a Montemolín. La Orden de Santiago y la Vía de la Plata en tierras de Extremadura (siglos XII-XIII)», *Revista de Estudios Extremeños* LXXV-2, pp. 319-347.
 
-**PANIAGUA MONTERO, Juan Carlos.** «El habla de Ahigal: rasgos generales y algunas cuestiones léxicas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 76-91. \[Bibliografia/Libros y artículos\] · fuente C
+**MARCOS DE SANDE, Moisés (1947).** «Del folklore garrovillano. Tradiciones garrovillanas, leyendas religiosas, caballerescas, tipos legendarios, supersticiones, idioma, refranero y vocabulario», *Revista de Estudios Extremeños* III (1-2), pp. 76-114.
 
-**PAREDES GARCÍA, Florentino.** «¿Son dialectales los autores dialectales?», 2002. ++publicación no dada por el índice++ \[Bibliografia/Libros y artículos\]
+**MARTÍN, Aníbal (2023).** *Yo hablo, ellas cantorin. Las aventuras de un extremeño por los caminos de la diversidad lingüística*, Pie de Página.
 
-**SALVADOR PLANS, Antonio.** «Dialectología y folclore en Extremadura en el tránsito del siglo XIX al XX», *REE* LIV-3, 1998, pp. 807-831. \[Bibliografia/Libros y artículos\] · fuente A/B · interés B
+**MARTÍNEZ TERRÓN, Luis (2002).** «El “habla popular” en las letras extremeñas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 308-315.
 
-**SALVADOR PLANS, Antonio.** «La conciencia dialectal en Gabriel y Galán», *Alcántara* 63, 2005, pp. 9-32. \[Bibliografia/Libros y artículos\] · fuente A · interés B
+**MONTERO CURIEL, Pilar (1991).** «Fonética extremeña en el *Atlas Lingüístico de la Península Ibérica*», *Anuario de Estudios Filológicos* XIV, pp. 317-334.
 
-**SALVADOR PLANS, Antonio.** «La transmisión textual de *Extremeñas* de José María Gabriel y Galán», en F. Hermoso Ruiz (coord.), *Actas del VIII Congreso de Estudios Extremeños*, Badajoz, Junta de Extremadura, 2007, pp. 2152-2175. \[Bibliografia/Libros y artículos\] · fuente A · interés B
+**——— (2006a).** *El extremeño*, Madrid, Arco/Libros (Cuadernos de Lengua Española, 91).
 
-**SANDE BUSTAMANTE, María de las Mercedes de.** «Lengua y habla como signos de identidad propia, sociocultural e histórica», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 300-305. \[Bibliografia/Libros y artículos\] · fuente C · interés C
+**——— (2014).** «Las hablas extremeñas en la literatura regional y su presencia en la *Revista de Estudios Extremeños* (1927-2012)», *Revista de Estudios Extremeños* LXX-1, pp. 625-658.
 
-**Trabajos de institutos extremeños**, volumen colectivo, ++título exacto por tomar de la portada++. \[Bibliografia/Obras colectivas\], leído parcialmente.
+**NIETO CABALLERO, Guadalupe (2016).** «Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *Revista de Estudios Extremeños* LXXII-2, pp. 851-868.
 
-**VALLE MOREA, Nicolás.** «La ortografía del extremeño. Un análisis retrospectivo», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 262-277. \[Bibliografia/Libros y artículos\] · fuente C · interés B
+**ORTIGO, ++nombre completo; puede ser seudónimo++ (2002).** «Carta desde el escaño a un amigo emigrante», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 236-242.
 
-**VELO NIETO, Gervasio.** *Coria. Reconquista de la Alta Extremadura*, 1956. \[Bibliografia/Libros y artículos\]
+**OSCEC y UNIVERSIDAD POPULAR DE CÁCERES (2025).** *Manual del curso de lengua extremeña*, s. l., OSCEC y Universidad Popular de Cáceres.
 
-**VIUDAS CAMARASA, Antonio.** *Diccionario extremeño*, 1980 (facsímil de 2013). \[Bibliografia/Diccionarios\] · fuente A · interés B
+**PANIAGUA MONTERO, Juan Carlos (2002).** «El habla de Ahigal: rasgos generales y algunas cuestiones léxicas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 76-91.
 
-**VIUDAS CAMARASA, Antonio.** «El dialecto extremeño», *Bol. AEPE* VIII-15, 1976. \[Bibliografia/Libros y artículos\]
+**PAREDES GARCÍA, Florentino (2002).** «¿Son dialectales los autores “dialectales”? El caso de Gabriel y Galán y Chamizo», en Cristina Castillo y José Manuel Lucía (eds.), *Decíamos ayer… Estudios de alumnos en honor a María Cruz García de Enterría*, Alcalá de Henares, Universidad de Alcalá, 2002, pp. 285-301.
 
-**VIUDAS CAMARASA, Antonio.** «Fonética extremeña en el siglo XIX». ++revista, año y páginas no dados por el índice++ \[Bibliografia/Libros y artículos\]
+**SALVADOR PLANS, Antonio (1998a).** «Dialectología y folclore en Extremadura en el tránsito del siglo XIX al XX», *Revista de Estudios Extremeños* LIV-3, pp. 807-831.
 
-## **7.2 Bibliografía secundaria**
+**——— (2005a).** «La conciencia dialectal en Gabriel y Galán», *Alcántara* 63, pp. 9-32.
 
-**ALCÓN OLIVERA, José M.ª.** *Requilorios*, Cáceres, Institución Cultural El Brocense, 1984 — sin localizar; no se busca (búsqueda cerrada).
+**——— (2007).** «La transmisión textual de *Extremeñas* de José María Gabriel y Galán», en F. Hermoso Ruiz (coord.), *VIII Congreso de Estudios Extremeños. Libro de actas*, Badajoz, Diputación de Badajoz, 2007, pp. 2152-2175.
 
-**ALPI, cuadernos de encuesta de Aurelio Espinosa, 1931**, recuperados por David Heap — vía González Salgado 2007.
+**SANDE BUSTAMANTE, María de las Mercedes de (2002).** «Lengua y habla como signos de identidad propia, sociocultural e histórica», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 300-305.
 
-**ALVAR, Manuel.** «Lengua, dialecto y hablas», 1961 — vía Viudas.
+**TRABAJOS DE ESTUDIANTES DE ESO Y BACHILLERATO (s. f.).** *Trabajos de estudiantes de ESO y Bachillerato en relación con el dialecto extremeño y las variedades lingüísticas de Extremadura*, recopilación de seis trabajos, ++sin datos de edición++.
 
-**ALVAR, Manuel (dir.).** *Manual de dialectología hispánica. El español de España*, Barcelona, Ariel, pp. 171-182 — vía la reseña de Torres Torres y vía Montero Curiel 2006.
+**VALLE MOREA, Nicolás (2002).** «La ortografía del extremeño. Un análisis retrospectivo», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 262-277.
 
-**ÁLVAREZ MARTÍNEZ.** «Extremeño», en Alvar (dir.), *Manual de dialectología hispánica* — vía Montero Curiel 2006.
+**VELO NIETO, Juan José (1956).** «El habla de las Hurdes», *Revista de Estudios Extremeños* XII (1-4), pp. 59-207.
 
-**AMADOR.** «Proyecto del diccionario del habla cedillense» — en la carpeta, sin consultar.
+**VELO Y NIETO, Gervasio (1956).** *Coria. Reconquista de la Alta Extremadura*, Cáceres, Departamento Provincial de Seminarios de F. E. T. y de las J. O. N. S.
 
-**ARÉS VIDAL, C., y RODRÍGUEZ CEPEDA, E.** «Ramón Menéndez Pidal y José María Gabriel y Galán (cinco cartas inéditas de Don Ramón sobre el Romancero)», *Homenaje Universitario a Dámaso Alonso*, Madrid, Gredos, 1970, pp. 161-170 — vía Salvador Plans 2005.
+**VIUDAS CAMARASA, Antonio (1976).** «El dialecto extremeño», *Boletín de la Asociación Europea de Profesores de Español* VIII, 15, pp. 123-131.
 
-**ARIZA, M.** *Comentarios de textos dialectales*, Madrid, Arco/Libros, 1994, y *Sobre fonética histórica del español*, Madrid, Arco/Libros, 1994 — vía Montero Curiel 2006.
+**——— (1980).** *Diccionario extremeño*, Cáceres, Universidad de Extremadura (Anejos del *Anuario de Estudios Filológicos*); ed. facsímil, Cáceres, Periódico Extremadura y Diputación de Cáceres, 2013.
 
-**ARIZA, Manuel, y SALVADOR PLANS, Antonio.** «Sobre la conservación de sonoras en la provincia de Cáceres», *ZRPh* 108, 1992, pp. 276-292 — vía Salvador Plans 1998 y vía Montero Curiel 2006 (su «1992b»).
+**——— (1992).** «Fonética extremeña en el siglo XIX», en Manuel Ariza y otros (eds.), *Actas del II Congreso Internacional de Historia de la Lengua Española*, Madrid, Pabellón de España, 1992, t. II, pp. 291-299.
 
-**BARAJAS SALAS, E.** «Préstamos léxicos portugueses en el extremeño: *cansera* y *entallar*», *Campo Abierto* 4, 1987, pp. 139-154 — vía Fernández de Molina 2015.
+## **7.2. Bibliografía secundaria**
 
-**BECERRA PÉREZ, M.** «Precisiones sobre el dialectalismo de Gabriel y Galán», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 31-61 — vía Nieto Caballero 2016.
+**ALCÓN OLIVERA, José María (1984).** *Requilorios*, Cáceres, Institución Cultural El Brocense — sin localizar.
 
-**BERJANO ESCOBAR, Daniel.** «Ensayo de un vocabulario del dialecto de la Sierra de Gata», *Revista de Extremadura* XI, 01/10/1909, pp. 481-485 — vía Martín 2023 y vía González Salgado 2007, p. 40, n. 4; también vía Montero Curiel 2006, p. 72.
+**ALPI (1931).** Cuadernos de encuesta de Aurelio M. Espinosa (hijo) en Extremadura para el *Atlas Lingüístico de la Península Ibérica*, recuperados por David Heap — vía González Salgado 2007a.
 
-**BERNAL ESTÉVEZ, Ángel.** *Poblamiento, transformación y organización social del espacio extremeño (siglos XIII al XV)*, Editora Regional de Extremadura, 1998 — vía Casillas Antúnez 2008 y vía López Fernández 2019.
+**ALVAR, Manuel (1960).** «Los dialectalismos en la poesía española del siglo XX», *Revista de Filología Española* XLIII, pp. 57-79 — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
-**BIERHENKE.** *Ländliche Gewerbe der Sierra de Gata*, Hamburgo, Seminar für Romanische Sprache und Kultur, pp. 84-104, y «Das Dreschen in der Sierra de Gata», *Volkstum und Kultur der Romanen* II, 1929 — vía Viudas 1980, vía González Salgado 2007 y 2024, y vía Cummins 1974.
+**——— (1961).** «Hacia los conceptos de lengua, dialecto y hablas», *Nueva Revista de Filología Hispánica* XV, pp. 51-60 — vía Viudas.
 
-**CABALLERO GONZÁLEZ, Sebastián.** «El castillo de Palombeiro en Casar de Palomero», *Alcántara* 64, 2006, pp. 41-54 — vía López Fernández 2019.
+**——— (1965).** *Poesía española dialectal*, Madrid — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
-**CANELLADA, M.ª Josefa.** «Notas de entonación extremeña», *RFE* XXV, 1941, pp. 79-91 — vía Flores del Manzano 1999, p. 37, y vía Montero Curiel 2006, p. 47.
+**——— (dir.) (1996).** *Manual de dialectología hispánica. El español de España*, Barcelona, Ariel — vía la reseña de Torres Torres y vía Montero Curiel 2006a.
 
-**CARRASCO GONZÁLEZ.** *Dialectología fronteriza de Extremadura*, 2021 — vía reseña.
+**——— (dir.) (s. f.).** *Atlas Lingüístico de España y Portugal* (ALEP), inédito; encuestas de José Jesús Gómez Asencio de finales de los setenta — vía Alonso Pascua 2023 y González Salgado 2024.
 
-**CASADO DE OTAOLA, L. (ed.).** *El Romancero tradicional extremeño. Las primeras colecciones \[1809-1910\]*, Mérida, Asamblea de Extremadura y Fundación Ramón Menéndez Pidal, 1995 — vía Salvador Plans 1998.
+**ÁLVAREZ MARTÍNEZ, María Ángeles (1996).** «Extremeño», en Manuel Alvar (dir.), *Manual de dialectología hispánica. El español de España*, Barcelona, Ariel, 1996, pp. 171-182 — vía Montero Curiel 2006a.
 
-**CASILLAS ANTÚNEZ, Francisco José.** «Dos topónimos oscuros: Cachorrilla y Pescueza», *Alcántara* 66, 2007, pp. 29-37, y *La toponimia de la tierra de Coria*, 2008 — vía la investigación en línea de la primera versión de estos apuntes. ++comprobar que el libro existe++
+**AMADOR MORENO, Silvia (2020).** «Proyecto del diccionario del habla cedillense de la segunda mitad del siglo XX», *Revista de Estudios Extremeños* LXXVI-1, pp. 673-681 — en la carpeta, sin leer.
 
-**CASILLAS ANTÚNEZ, Francisco José.** «Los hidrónimos prerromanos Alagón y Árrago», *Alcántara* 65, 2006 — vía Casillas Antúnez 2008.
+**ARÉS VIDAL, C., y RODRÍGUEZ CEPEDA, E. (1970).** «Ramón Menéndez Pidal y José María Gabriel y Galán (cinco cartas inéditas de Don Ramón sobre el Romancero)», en *Homenaje Universitario a Dámaso Alonso*, Madrid, Gredos, 1970, pp. 161-170 — vía Salvador Plans 2005a.
 
-**CINTRA.** *A linguagem dos foros de Castelo Rodrigo*, 1959 — vía Martínez Díez o vía blog, sin precisar, y vía González Salgado.
+**ARIZA VIGUERA, Manuel (1994a).** *Comentario de textos dialectales*, Madrid, Arco/Libros — vía Montero Curiel 2006a.
 
-**CORTÉS GÓMEZ, E.** *El habla popular de Higuera de Vargas (Badajoz)*, Badajoz, 1979 — vía Fernández de Molina 2015 y vía Montero Curiel 2006.
+**——— (1994b).** *Sobre fonética histórica del español*, Madrid, Arco/Libros — vía Montero Curiel 2006a.
 
-**CRUZ GONZÁLEZ, Carlos** (introducción), y **AMAS DE CASA DE PORTAJE.** *Portaje, tradición y legado*, Ayuntamiento de Portaje, 2011 — en la carpeta, sin consultar (fuente C).
+**——— y SALVADOR PLANS, Antonio (1992b).** «Sobre la conservación de sonoras en la provincia de Cáceres», *Zeitschrift für romanische Philologie* 108, pp. 276-292 — vía Salvador Plans 1998a y vía Montero Curiel 2006a.
 
-**CRUZ GONZÁLEZ, Carlos.** Libro de ESPA sobre el extremeño, CEPA de Coria, curso 2024-2025. — en la carpeta, sin consultar (fuente C).
+**BARAJAS SALAS, E. (1987).** «Préstamos léxicos portugueses en el extremeño: *cansera* y *entallar*», *Campo Abierto* 4, pp. 139-154 — vía Fernández de Molina 2015.
 
-**DOMÍNGUEZ MORCILLO, Ángel.** «Notas sobre las hablas populares extremeñas», en Javier Marcos Arévalo (coord.), *Antropología cultural de Extremadura*, Mérida, Editora Regional de Extremadura, 1989, p. 853 — vía González Salgado 2007.
+**BECERRA PÉREZ, Miguel (2006).** «Precisiones sobre el dialectalismo de Gabriel y Galán», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 31-61 — vía Nieto Caballero 2016.
 
-**DÍAZ DÍAZ.** *Apuntes de nuestro castúo hablar* — en la carpeta, sin consultar.
+**BERJANO ESCOBAR, Daniel (1909).** «Ensayo de un vocabulario del dialecto de la Sierra de Gata», *Revista de Extremadura* XI, pp. 481-485 — vía Martín 2023 y vía González Salgado 2007a, p. 40, n. 4; también vía Montero Curiel 2006a, p. 72.
 
-**ESCOBAR PRIETO, Eugenio.** «Galisteo. Monografía histórica», *Revista de Extremadura* VIII, 1906 — vía López Fernández 2019.
+**BERNAL ESTÉVEZ, Ángel (1998).** *Poblamiento, transformación y organización social del espacio extremeño (siglos XIII al XV)*, Mérida, Editora Regional de Extremadura — vía Casillas Antúnez 2008 y vía López Fernández 2019.
 
-**ESPINOSA, Aurelio (hijo), y RODRÍGUEZ-CASTELLANO, Lorenzo.** «La aspiración de la *h* en el sur y oeste de España», *RFE* XXIII, 1936 — vía González Salgado 2007.
+**BIERHENKE, Wilhelm (1929).** «Das Dreschen in der Sierra de Gata», *Volkstum und Kultur der Romanen* II, pp. 20-82 — vía Viudas 1980, vía González Salgado 2007a y 2024, y vía Cummins 1974.
 
-**ESPINOSA hijo.** *Arcaísmos dialectales. La conservación de ‘s’ y ‘z’ sonoras en Cáceres y Salamanca*, Madrid, Anejo XIX de la *RFE* (según Montero Curiel 2006) / CSIC (según González Salgado 2007), 1935 — vía Viudas 1976 y 1980, vía Cummins, vía Montero Curiel 2006 y vía González Salgado 2007.
+**——— (1932).** *Ländliche Gewerbe der Sierra de Gata. Sach- und wortkundliche Untersuchungen*, Hamburgo, Seminar für romanische Sprachen und Kultur (Hamburger Studien zu Volkstum und Kultur der Romanen, 10) — vía Viudas 1980, vía González Salgado 2007a y 2024, y vía Cummins 1974.
 
-**FERGUSON, Charles A.** «Diglossia», 1959 — vía la exposición de su definición en sas.upenn.edu.
+**CABALLERO GONZÁLEZ, Sebastián (2006).** «El castillo de Palombeiro en Casar de Palomero», *Alcántara* 64, pp. 41-54 — vía López Fernández 2019.
 
-**FERNÁNDEZ CORRALES, José M.ª.** «Toponimia y arqueología en la provincia de Cáceres», *Norba* 5, 1984 — vía Casillas Antúnez 2008.
+**CANELLADA, María Josefa (1941).** «Notas de entonación extremeña», *Revista de Filología Española* XXV, pp. 79-91 — vía Flores del Manzano 1999, p. 37, y vía Montero Curiel 2006a, p. 47.
 
-**FERNÁNDEZ DE MOLINA ORTÉS, Elena.** «La investigación científica en el habla de Extremadura», *AEF* XXXVII, 2014, pp. 5-20 — vía la investigación en línea de la primera versión de estos apuntes.
+**CARRASCO GONZÁLEZ, Juan María (2021).** *Dialectología fronteriza de Extremadura. Descripción e historia de las variedades lingüísticas en la frontera extremeña*, Berlín, Peter Lang — vía reseña.
 
-**FLORES DEL MANZANO, Fernando.** «Incidencia del factor histórico en la configuración geolingüística de Extremadura», *Actas del I Congreso Internacional de Historia de la Lengua Española*, II, Madrid, Arco/Libros, 1988, pp. 1449-1459 — vía Montero Curiel 2006.
+**CASADO DE OTAOLA, L. (ed.) (1995).** *El Romancero tradicional extremeño. Las primeras colecciones [1809-1910]*, Mérida, Asamblea de Extremadura y Fundación Ramón Menéndez Pidal — vía Salvador Plans 1998a.
 
-**FLORES DEL MANZANO, Fernando.** *Mitos y leyendas de tradición oral en la Alta Extremadura*, ERE, 1998 — vía Flores del Manzano 1999.
+**CASILLAS ANTÚNEZ, Francisco José (2006a).** *La toponimia de Coria y sus cercanías*, tesis doctoral, Universidad de Extremadura, dir. Antonio Salvador Plans — dato de la búsqueda en línea del 18/10/2026, sin consultar.
 
-**FLORES DEL MANZANO, F.** «Vocabulario doméstico de la alta Extremadura», *REE* XLI, 1985, pp. 325-351 — vía Fernández de Molina 2015.
+**——— (2006b).** «Los hidrónimos prerromanos Alagón y Árrago», *Alcántara* 65, pp. 61-67 — vía Casillas Antúnez 2008.
 
-**GABRIEL Y GALÁN ACEVEDO, J.** *José María Gabriel y Galán. Su vida. Su obra. Su tiempo*, Mérida, Editora Regional de Extremadura, 2004; y *Obras completas* (ed. J. M.ª y J. Gabriel y Galán Acevedo), Mérida, Junta de Extremadura, 2005 — vía Salvador Plans 2005 y Nieto Caballero 2016.
+**——— (2007).** «Dos topónimos oscuros: Cachorrilla y Pescueza», *Alcántara* 66, pp. 29-37 — vía la investigación en línea de la primera versión de estos apuntes.
 
-**GARCÍA MATOS, Manuel.** *Cancionero popular de la provincia de Cáceres*, CSIC, 1982, 2 vols. — vía Flores del Manzano 1999.
+**CINTRA, Luís F. Lindley (1959).** *A linguagem dos foros de Castelo Rodrigo*, Lisboa, Centro de Estudos Filológicos — vía Martínez Díez o vía blog, sin precisar, y vía González Salgado.
 
-**GARCÍA MOUTON.** *Lenguas y dialectos de España*, 1994 — vía Fernández de Molina, sin precisar cuál.
+**CORTÉS GÓMEZ, E. (1979).** *El habla popular de Higuera de Vargas (Badajoz)*, Badajoz — vía Fernández de Molina 2015 y vía Montero Curiel 2006a.
 
-**GARCÍA SANTOS, J. F.** «El extremeño en la poesía de Gabriel y Galán», *Salamanca. Revista de Estudios* 52, 2005, pp. 235-249 — vía Nieto Caballero 2016.
+**COSTAS GONZÁLEZ, Xosé Henrique (1992).** ++«Notas sociolingüísticas sobre os falares galegos da ribeira Trevellana (Cáceres)», *A Trabe de Ouro* 11, pp. 409-417, o «Breve caracterización das falas (fundamentalmente galegas) do val do río das Ellas», *Cadernos de Lingua* 6, pp. 85-107: cuál de los dos, en Montero Curiel 2006a++ — vía Montero Curiel 2006a.
 
-**GARCÍA-PLATA DE OSMA, R.** *Demosofía extremeña. La musa religiosa popular*, Cáceres, 1917 — vía Salvador Plans 1998.
+**DÍAZ DÍAZ, Emilio (1969).** «Apuntes de nuestro castúo hablar», *Revista de Estudios Extremeños* XXV-3, pp. 575-579 — en la carpeta, sin leer.
 
-**GONZÁLEZ SALGADO, J. A.** «El extremeño oral y escrito en variedad dialectal», *I Congreso sobre el Extremeño*, Calzadilla, 2002, documento inédito — vía Fernández de Molina 2015.
+**DOMÍNGUEZ MORCILLO, Ángel (1989).** «Notas sobre las hablas populares extremeñas», en Javier Marcos Arévalo (coord.), *Antropología cultural de Extremadura*, Mérida, Editora Regional de Extremadura, 1989, p. 853 — vía González Salgado 2007a.
 
-**GONZÁLEZ SALGADO, J. A.** «El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, 2003, pp. 137-140 — vía Fernández de Molina 2015.
+**ESCOBAR PRIETO, Eugenio (1906).** «Galisteo. Monografía histórica», *Revista de Extremadura* VIII, ++páginas++ — vía López Fernández 2019.
 
-**GONZÁLEZ SALGADO, José Antonio.** «Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, 2009, pp. 51-70 — vía la investigación en línea de la primera versión de estos apuntes (es el «2009a» de las fichas de rasgo).
+**ESPINOSA, Aurelio M. (hijo) (1935).** *Arcaísmos dialectales. La conservación de ‘s’ y ‘z’ sonoras en Cáceres y Salamanca*, Madrid, Centro de Estudios Históricos (Anejos de la *Revista de Filología Española*, XIX) — vía Viudas 1976 y 1980, vía Cummins 1974, vía Montero Curiel 2006a y vía González Salgado 2007a.
 
-**GONZÁLEZ SALGADO, J. A.**, 2012, apuntes de metodología del *Tesoro léxico de las hablas extremeñas* — vía Fernández de Molina 2015 (citado en nota, sin entrada en su bibliografía).
+**——— y RODRÍGUEZ-CASTELLANO, Lorenzo (1936).** «La aspiración de la *h* en el sur y oeste de España», *Revista de Filología Española* XXIII, pp. 225-254 y 337-378 — vía González Salgado 2007a.
 
-**GONZÁLEZ SALGADO, José Antonio.** Tesis *Cartografía lingüística de Extremadura*, UCM — en la carpeta, sin consultar.
+**ÉVOLE, Pedro (1932-1936).** Textos en el habla de Garrovillas, ++publicación++ — vía la antología de Martín 2023.
 
-**HIDALGO CABALLERO, M.** «Pervivencia actual de la *ll* en el suroeste de España», *RFE* LIX, 1977, pp. 119-143 — vía Montero Curiel 2006.
+**FERGUSON, Charles A. (1959).** «Diglossia», *Word* 15, pp. 325-340 — vía la exposición de su definición en sas.upenn.edu.
 
-**HOYOS PIÑAS, J. M.** «Nuevas notas sobre morfosintaxis extremeñas», *Interlingüística* 15 (2), 2004, pp. 737-742 — vía Fernández de Molina 2015.
+**FERNÁNDEZ CORRALES, José María (1984).** «Toponimia y arqueología en la provincia de Cáceres», *Norba* 5, pp. 29-38 — vía Casillas Antúnez 2008.
 
-**IZQUIERDO HERNÁNDEZ, Nicolás.** «Algo sobre el habla popular de Extremadura», *Revista de Extremadura* III, n.º XXV, 1901, pp. 299-305 — vía González Salgado 2007 y vía Martín 2023.
+**FERNÁNDEZ DE MOLINA ORTÉS, Elena (2014).** «La investigación científica en el habla de Extremadura: monografías dialectales y estudios sobre fonética y fonología extremeña», *Anuario de Estudios Filológicos* XXXVII, pp. 5-20 — vía la investigación en línea de la primera versión de estos apuntes.
 
-**LAPESA.** *Historia de la lengua española*, 1981 — vía resumen de memoria, sin cotejar.
+**FINK, Oskar (1929a).** «Contribución al vocabulario de Sierra de Gata», *Volkstum und Kultur der Romanen* II, pp. 83-87 — vía Cummins 1974, vía González Salgado 2007a y 2024 y vía Fernández de Molina 2015.
 
-**LLORENTE MALDONADO, Antonio.** *Toponimia e Historia*, 1971 — vía Casillas Antúnez 2008.
+**——— (1929b).** *Studien über die Mundarten der Sierra de Gata*, Hamburgo — vía Cummins 1974, vía González Salgado 2007a y 2024 y vía Fernández de Molina 2015.
 
-**LOPE BLANCH, Juan M.** Reseña de Cummins 1974, *NRFH* XXV, 1976, pp. 393-394 — vía la investigación en línea de la primera versión de estos apuntes.
+**FLORES DEL MANZANO, Fernando (1985b).** «Vocabulario doméstico de la alta Extremadura», *Revista de Estudios Extremeños* XLI, pp. 325-351 — vía Fernández de Molina 2015.
 
-**LUMERA GUERRERO, M.** «Algunas notas de morfosintaxis del habla de Plasencia», *Alcántara* 17, 1989, pp. 159-173 (también en *Actas del II Congreso Internacional de Historia de la Lengua Española*, 1992, II, pp. 187-197) — vía Fernández de Molina 2015.
+**——— (1988).** «Incidencia del factor histórico en la configuración geolingüística de Extremadura», en *Actas del I Congreso Internacional de Historia de la Lengua Española*, II, Madrid, Arco/Libros, 1988, pp. 1449-1459 — vía Montero Curiel 2006a.
 
-**MALDONADO y SÁEZ.** *El Fuero de Coria*, IEAL, 1949 — vía Casillas y vía Cummins.
+**——— (1998).** *Mitos y leyendas de tradición oral en la Alta Extremadura*, Mérida, Editora Regional de Extremadura — vía Flores del Manzano 1999.
 
-**MANSO FLORES, Ana Alicia.** «Sobre los nombres para el “pimiento” en el Val de Xálima», *Cuadernos de Investigación Filológica* 52, 2022, pp. 97-126 — vía la investigación en línea de la primera versión de estos apuntes.
+**GABRIEL Y GALÁN ACEVEDO, J. (2004).** *José María Gabriel y Galán. Su vida. Su obra. Su tiempo*, Mérida, Editora Regional de Extremadura — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
-**MARCOS DE SANDE, Moisés.** «Algunas palabras del vocabulario garrovillano», *RDTP* XV, 1959, pp. 153-154 — referencia dada vía Fernández de Molina 2015; sin localizar, no se busca.
+**——— (2005).** José María Gabriel y Galán, *Obras completas*, ed. de J. M.ª y J. Gabriel y Galán Acevedo, Mérida, Junta de Extremadura — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
-**MARTÍNEZ DÍEZ.** Fueros de la familia Coria Cima-Coa, 1977 y 1983 — vía ficha de FRONTESPO y blog.
+**GARCÍA MATOS, Manuel (1982).** *Cancionero popular de la provincia de Cáceres*, CSIC, 2 volúmenes — vía Flores del Manzano 1999.
 
-**MENÉNDEZ PIDAL, Ramón.** *El dialecto leonés*, 1906 (ed. Oviedo, BIDEA, 1962) — vía Cummins, p. 23, y vía Montero Curiel 2006.
+**GARCÍA MOUTON, Pilar (1994).** *Lenguas y dialectos de España*, Madrid, Arco/Libros — vía Fernández de Molina, sin precisar cuál.
 
-**MIGUÉLEZ RODRÍGUEZ, Eugenio.** *Diccionario de las hablas leonesas*, León, 1993, y *El dialecto leonés y el nombre de las cosas*, León, 2000 — vía Paniagua 2002.
+**GARCÍA SANTOS, J. F. (2005).** «El extremeño en la poesía de Gabriel y Galán», *Salamanca. Revista de Estudios* 52, pp. 235-249 — vía Nieto Caballero 2016.
 
-**MONTAÑA CONCHIÑA, Juan Luis de la.** *La Extremadura cristiana (1142-1350). Poblamiento, poder y sociedad*, UEx, 2003, y «Albalat y la Atalaya de Pedro Velídiz», *Alcántara* 25, 1992, pp. 99-114 — vía López Fernández 2019.
+**GARCÍA-PLATA DE OSMA, R. (1917).** *Demosofía extremeña. La musa religiosa popular*, Cáceres — vía Salvador Plans 1998a.
 
-**MONTERO CURIEL, Pilar.** «Los dialectalismos extremeños en el Diccionario de Autoridades», *AEF* XXIX, 2006, pp. 187-204 — en la carpeta, sin consultar (referencia vía Fernández de Molina 2015).
+**GONZÁLEZ SALGADO, José Antonio (2000).** *Cartografía lingüística de Extremadura. Origen y distribución del léxico extremeño*, tesis doctoral, Madrid, Universidad Complutense; ed. en Madrid, Universidad Complutense, 2003 — en la carpeta, sin leer.
 
-**MONTERO CURIEL, P.** *Vocabulario de Madroñera*, 1995; y MONTERO CURIEL y SALVADOR PLANS, «El habla de Campanario», 2003 — vía Montero Curiel 2006.
+**——— (2002a).** «El extremeño oral y escrito en variedad dialectal», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, documento inédito — vía Fernández de Molina 2015.
 
-**MONTERO CURIEL, Pilar.** *El habla de Madroñera*, 1997 — vía González Salgado y vía Montero Curiel 2006.
+**——— (2003c).** «El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, pp. 137-140 — vía Fernández de Molina 2015.
 
-**NARBONA, CANO y MORILLO.** *El español hablado en Andalucía*, Barcelona, Ariel, 1998, p. 175 — vía González Salgado 2007.
+**——— (2009a).** «Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, pp. 51-70 — vía la investigación en línea de la primera versión de estos apuntes.
 
-**PATO, Enrique.** «Los perfectos fuertes analógicos en español», en línea en la web del COSER — vía González Salgado 2007 (consultado por él el 29/11/2006).
+**——— (2012).** Apuntes de metodología del *Tesoro léxico de las hablas extremeñas*, ++sin referencia++ — vía Fernández de Molina 2015, que lo cita en nota sin entrada en su bibliografía.
 
-**PENNY, Ralph.** *El habla pasiega* — vía Cummins, p. 25.
+**HIDALGO CABALLERO, Manuel (1977).** «Pervivencia actual de la *ll* en el suroeste de España», *Revista de Filología Española* LIX, pp. 119-143 — vía Montero Curiel 2006a.
 
-**PÉREZ RUBIO y MORENO MORALES.** *Los pueblos de la Tierra de Montánchez* — en la carpeta, sin consultar.
+**HOYOS PIÑAS, Juan Martín (2004).** «Nuevas notas sobre morfosintaxis extremeñas», *Interlingüística* 15 (2), pp. 737-742 — vía Fernández de Molina 2015.
 
-**QUIJADA GONZÁLEZ, Domingo.** «La pervivencia del léxico asturleonés en Montehermoso y norte de Extremadura», 2018 — en la carpeta, sin consultar.
+**IZQUIERDO HERNÁNDEZ, Nicolás (1901).** «Algo sobre el habla popular de Extremadura», *Revista de Extremadura* III, n.º XXV, pp. 299-305 — vía González Salgado 2007a y vía Martín 2023.
 
-**REBOLLO TORÍO, M. Á.** «Ortografía y grafías en los escritores extremeños», *Actas del VIII Congreso de Estudios Extremeños*, 2007, pp. 2046-2058 — en la carpeta desde el 16/09/2026, sin consultar; referencia vía Nieto Caballero 2016.
+**LAPESA, Rafael (1981).** *Historia de la lengua española*, 9.ª ed., Madrid, Gredos — vía resumen de memoria, sin cotejar.
 
-**REQUEJO VICENTE.** «El habla de Las Hurdes», en Jerónimo Roncero Pascual (dir.), *Crónica del II Congreso Nacional de Hurdanos y Hurdanófilos*, Nuñomoral, 1998, p. 137 — vía González Salgado 2007.
+**LLORENTE MALDONADO DE GUEVARA, Antonio (1971).** *Toponimia e historia*, Granada, Universidad de Granada ++1969 en el repositorio de la Universidad de Granada++ — vía Casillas Antúnez 2008.
 
-**Revista de Estudios Extremeños**, 2024-1, 2025-1 y 2025-2 — en la carpeta, sin consultar.
+**LOPE BLANCH, Juan M. (1976).** Reseña de Cummins 1974, *Nueva Revista de Filología Hispánica* XXV, pp. 393-394 — vía la investigación en línea de la primera versión de estos apuntes.
 
-**ROMERO Y ESPINOSA, Luis**, «Caracteres prosódicos del lenguaje vulgar frexnense», y **MARTÍNEZ, Matías Ramón**, «El lenguaje vulgar extremeño», en *El Folk-lore Frexnense y Bético-Extremeño*, Fregenal de la Sierra, 1883-1884, pp. 34-37 y 37-47 — vía González Salgado 2007.
+**LUMERA GUERRERO, M. (1989).** «Algunas notas de morfosintaxis del habla de Plasencia», *Alcántara* 17, pp. 159-173 (también en *Actas del II Congreso Internacional de Historia de la Lengua Española*, 1992, II, pp. 187-197) — vía Fernández de Molina 2015.
 
-**SALVADOR PLANS, Antonio.** «La manipulación política del lenguaje», 1998b — vía González Salgado 2009.
+**MALDONADO Y FERNÁNDEZ DEL TORCO, José, y SÁEZ, Emilio (1949).** *El Fuero de Coria*, Madrid, Instituto de Estudios de Administración Local — vía Casillas Antúnez 2008 y vía Cummins 1974.
 
-**SALVADOR PLANS, A.** «El habla popular en la prosa de José María Gabriel y Galán», *Salamanca. Revista de Estudios* 52, 2005, pp. 315-340; «El habla popular en los escritores extremeños finiseculares», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 249-279; y «Lengua, casticismo e intrahistoria en Luis Chamizo», *Analecta Malacitana*, anejo XXIV, 1999, pp. 255-268 — vía Nieto Caballero 2016.
+**MANSO FLORES, Ana Alicia (2022).** «Sobre los nombres para el “pimiento” en el Val de Xálima», *Cuadernos de Investigación Filológica* 52, pp. 97-126 — vía la investigación en línea de la primera versión de estos apuntes.
 
-**SALVADOR PLANS, A.** «Notas sobre la diversidad dialectal de Extremadura», en *Homenaje al Profesor Estanislao Ramón Trives*, Murcia, Universidad, 2003, pp. 719-743 — vía Montero Curiel 2006.
+**MARCOS DE SANDE, Moisés (1959).** «Algunas palabras del vocabulario garrovillano», *Revista de Dialectología y Tradiciones Populares* XV, pp. 153-154 — vía Fernández de Molina 2015; sin localizar.
 
-**SALVADOR PLANS, A.** «¿Tres pueblos de habla extremeña en Andalucía?», *AEF* IV, 1981, pp. 221-231 — vía Montero Curiel 2006.
+**MARTÍNEZ, Matías Ramón (1883-1884).** «El lenguaje vulgar extremeño», en *El Folk-lore Frexnense y Bético-Extremeño*, Fregenal de la Sierra, Imprenta de El Eco, pp. 37-47 — vía González Salgado 2007a.
 
-**SÁNCHEZ SALOR, Eustaquio.** «Topónimos derivados de nombres de posesores latinos de la provincia de Cáceres», 1979 — vía Casillas Antúnez 2008.
+**MARTÍNEZ DÍEZ, Gonzalo (1977).** «Los fueros de la familia Coria-Cima Coa», ++publicación; en el § 7 anterior, 1977 y 1983++ — vía ficha de FRONTESPO y blog.
 
-**SANDE BUSTAMANTE, M. de.** *El léxico y la toponimia de las tierras de Alcántara (Cáceres)*, Salamanca, 1986 — vía Fernández de Molina 2015.
+**MENÉNDEZ PIDAL, Ramón (1906).** *El dialecto leonés* (ed. Oviedo, Instituto de Estudios Asturianos, 1962) — vía Cummins 1974, p. 23, y vía Montero Curiel 2006a.
 
-**SANTOS COCO.** «Vocabulario extremeño», *Revista del Centro de Estudios Extremeños* XIV, 1940, pp. 65-96, 135-166 y 261-292; XV, 1941, pp. 69-96; XVI, 1942, pp. 35-48; XVIII, 1944, pp. 243-253; XXVI, 1952, pp. 535-542; y «Apuntes lingüísticos de Extremadura», X, 1936, pp. 167-181 — vía González Salgado 2014, vía Cummins y vía Montero Curiel 2006.
+**MIGUÉLEZ RODRÍGUEZ, Eugenio (1993).** *Diccionario de las hablas leonesas*, León — vía Paniagua Montero 2002.
 
-**SEGURA COVARSÍ, E.** «Extremeñas. El dialecto», *Alcántara* X, 81-83, 1954, pp. 3-11; **ALVAR, M.**, *Poesía española dialectal*, Madrid, 1965, y «Los dialectalismos en la poesía española del siglo XX», *RFE* 43, 1960, pp. 57-79 — vía Salvador Plans 2005 y Nieto Caballero 2016.
+**——— (2000).** *El dialecto leonés y el nombre de las cosas*, León — vía Paniagua Montero 2002.
 
-**\[Tesis de la Universidad de Extremadura\],** ***El habla de las Hurdes (Altas) en la sincronía actual*** — repositorio Dehesa, sin autor ni año comprobados — vía la investigación en línea de la primera versión de estos apuntes.
+**MONTAÑA CONCHIÑA, Juan Luis de la (1992).** «Albalat y la Atalaya de Pedro Velídiz», *Alcántara* 25, pp. 99-114 — vía López Fernández 2019.
 
-**\[Reseña de Espinosa 1935\]**, *Bulletin Hispanique* 39, 1937 — vía la investigación en línea de la primera versión de estos apuntes; sin leer.
+**——— (2003).** *La Extremadura cristiana (1142-1350). Poblamiento, poder y sociedad*, Cáceres, Universidad de Extremadura — vía López Fernández 2019.
 
-**\[Vocabularios locales del** ***Diccionario Virtual de Extremadura*****\]**: del Valle del Alagón (procedente de Cummins); de Coria (*El diccionario de un coriano*); de Torrejoncillo (*Diccionario Torrejoncillano*, coord. Manuel J. Torres, 2009); de Calzadilla (web municipal cerrada); de Las Hurdes y de Casares de las Hurdes; y «Diccionario Hurdano» de José Luis Sánchez Martín, blog Lecthurdana, 2008 — vía la investigación en línea de la primera versión de estos apuntes.
+**MONTERO CURIEL, Pilar (1995).** *Vocabulario de Madroñera (Cáceres)*, Cáceres, Universidad de Extremadura — vía Montero Curiel 2006a.
 
-**VELO NIETO, Juan José.** *El habla de las Hurdes*, 1956 — en la carpeta, SIN LEER; citado además vía González Salgado 2014, vía Barroso 2002, vía Cummins y vía Montero Curiel 2006 (que la fecha en 1950).
+**——— (1997).** *El habla de Madroñera (Cáceres)*, Cáceres, Universidad de Extremadura — vía González Salgado y vía Montero Curiel 2006a.
 
-**VIUDAS, ARIZA y SALVADOR PLANS.** *El habla en Extremadura*, 1987 — vía Salvador Plans 1998, vía Paniagua 2002, vía Fernández de Molina 2015 y vía Montero Curiel 2006.
+**——— (1998).** «La dialectología precientífica en Extremadura», *Anuario de Estudios Filológicos* XXI, pp. 257-276 — en la carpeta, sin leer.
 
-**ZAMORA VICENTE, A.** *El habla de Mérida* (1943), *Dialectología española* (1960, 2.ª ed. 1985) y el texto de 1950 sobre Gabriel y Galán — vía Viudas, Nieto Caballero, Almeida, Paniagua 2002, Cummins y Montero Curiel 2006.
+**——— (2006b).** «Los dialectalismos extremeños en el *Diccionario de Autoridades*», *Anuario de Estudios Filológicos* XXIX, pp. 187-204 — en la carpeta, sin leer.
 
-**ZAMORA VICENTE, A.** «Leonesismos en el extremeño de Mérida», *RFE* XXVI, 1942, pp. 89-90, y «Sobre el léxico dialectal», *RFE* 26, 1942, pp. 315-319 — vía Fernández de Molina 2015.
+**——— y SALVADOR PLANS, Antonio (2003).** «El habla de Campanario», ++publicación y páginas++ — vía Montero Curiel 2006a.
 
-**ZAMORA VICENTE, A.** «El dialectalismo de José María Gabriel y Galán», *Filología* II, 1950, pp. 113-175 (reeditado en *Estudios de dialectología hispánica*, Santiago, 1986, pp. 73-128) — vía Salvador Plans 2005, Nieto Caballero 2016 y Montero Curiel 2006.
+**NARBONA, Antonio, CANO, Rafael, y MORILLO, Ramón (1998).** *El español hablado en Andalucía*, Barcelona, Ariel, p. 175 — vía González Salgado 2007a.
+
+**PATO, Enrique (2004).** «Los perfectos fuertes analógicos en español», en línea, web del COSER ++año de la versión en línea, y si es el mismo trabajo que el de las actas de APLEx 2004 (Cáceres, 2016)++ — vía González Salgado 2007a, que la consultó el 29/11/2006.
+
+**PENNY, Ralph J. (1970).** *El habla pasiega. Ensayo de dialectología montañesa*, Londres, Tamesis — vía Cummins 1974, p. 25.
+
+**PÉREZ RUBIO, José Antonio, y MORENO MORALES, Marcelino (2018).** «Los pueblos de las “Tierras de Montánchez”. Episodios históricos y cambios socioeconómicos», *Revista de Estudios Extremeños* LXXIV-1, pp. 29-104 — en la carpeta, sin leer.
+
+**QUIJADA GONZÁLEZ, Domingo (2018).** «La pervivencia del léxico asturleonés en Montehermoso y norte de Extremadura», en línea, web de los Coloquios Históricos de Extremadura, 19 de noviembre de 2018 — en la carpeta, mirada por encima.
+
+**REBOLLO TORÍO, Miguel Ángel (2007).** «Ortografía y grafías en los escritores extremeños», en F. Hermoso Ruiz (coord.), *VIII Congreso de Estudios Extremeños. Libro de actas*, Badajoz, Diputación de Badajoz, 2007, pp. 2046-2058 — en la carpeta, sin leer; referencia vía Nieto Caballero 2016.
+
+**REQUEJO VICENTE, ++nombre de pila++ (1998).** «El habla de Las Hurdes», en Jerónimo Roncero Pascual (dir.), *Crónica del II Congreso Nacional de Hurdanos y Hurdanófilos*, Nuñomoral, 1998, p. 137 — vía González Salgado 2007a.
+
+**ROL BENITO, ++nombre de pila++ (2004).** ++título y publicación: las ordenanzas de Cañaveral de 1552++ — vía González Salgado 2024.
+
+**ROMERO Y ESPINOSA, Luis (1883-1884).** «Caracteres prosódicos del lenguaje vulgar frexnense», en *El Folk-lore Frexnense y Bético-Extremeño*, Fregenal de la Sierra, Imprenta de El Eco, pp. 34-37 — vía González Salgado 2007a.
+
+**SALVADOR PLANS, Antonio (1981).** «¿Tres pueblos de habla extremeña en Andalucía?», *Anuario de Estudios Filológicos* IV, pp. 221-231 — vía Montero Curiel 2006a.
+
+**——— (1998b).** «La manipulación política del lenguaje: el caso de Extremadura», en *Lusitanica et Romanica. Festschrift für Dieter Woll*, Hamburgo, Helmut Buske, 1998, pp. 303-315 — vía González Salgado 2009b.
+
+**——— (1999).** «Lengua, casticismo e intrahistoria en Luis Chamizo», *Analecta Malacitana*, anejo XXIV, pp. 255-268 — vía Nieto Caballero 2016.
+
+**——— (2003).** «Notas sobre la diversidad dialectal de Extremadura», en *Homenaje al Profesor Estanislao Ramón Trives*, Murcia, Universidad de Murcia, 2003, pp. 719-743 — vía Montero Curiel 2006a.
+
+**——— (2005b).** «El habla popular en la prosa de José María Gabriel y Galán», *Salamanca. Revista de Estudios* 52, pp. 315-340 — vía Nieto Caballero 2016.
+
+**——— (2006).** «El habla popular en los escritores extremeños finiseculares», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 249-279 — vía Nieto Caballero 2016.
+
+**SÁNCHEZ SALOR, Eustaquio (1979).** «Topónimos derivados de nombres de possessores latinos en la provincia de Cáceres», ++publicación y páginas++ — vía Casillas Antúnez 2008.
+
+**SANDE BUSTAMANTE, María de las Mercedes de (1986).** *El léxico y la toponimia de las tierras de Alcántara (Cáceres)*, Salamanca — vía Fernández de Molina 2015.
+
+**SANTOS COCO, Francisco (1936).** «Apuntes lingüísticos de Extremadura», *Revista del Centro de Estudios Extremeños* X, pp. 167-181 — vía Montero Curiel 2006a.
+
+**——— (1940-1952).** «Vocabulario extremeño», *Revista del Centro de Estudios Extremeños* XIV, 1940, pp. 65-96, 135-166 y 261-292; XV, 1941, pp. 69-96; XVI, 1942, pp. 33-48; XVIII, 1944, pp. 243-253; y *Revista de Estudios Extremeños* VIII, 1952, pp. 535-542 — vía González Salgado 2014, vía Cummins 1974 y vía Montero Curiel 2006a.
+
+**SEGURA COVARSÍ, E. (1954).** «Extremeñas. El dialecto», *Alcántara* X, 81-83, pp. 3-11 — vía Salvador Plans 2005a y Nieto Caballero 2016.
+
+**TRINIDAD MARTÍN, Manuel (ed.) (2016).** *Congreso Internacional APLEx 2004: Patrimonio Lingüístico Extremeño. Actas*, Cáceres, Biblioteca Virtual Extremeña — en la carpeta; leídos Barroso Gutiérrez 2016 e Iglesias Ovejero, pp. 339-354.
+
+**VALIENTE MARTÍN, Ana Belén (2024).** *El habla de las Hurdes (Altas) en la sincronía actual: Casares de las Hurdes, Ladrillar y Nuñomoral*, tesis doctoral, Universidad de Extremadura, dir. Antonio Salvador Plans — vía la investigación en línea de la primera versión de estos apuntes; autora y fecha, de la búsqueda del 18/10/2026.
+
+**VIUDAS CAMARASA, Antonio, ARIZA VIGUERA, Manuel, y SALVADOR PLANS, Antonio (1987).** *El habla en Extremadura*, Mérida, Editora Regional de Extremadura — vía Salvador Plans 1998a, vía Paniagua Montero 2002, vía Fernández de Molina 2015 y vía Montero Curiel 2006a.
+
+**ZAMORA VICENTE, Alonso (1942a).** «Leonesismos en el extremeño de Mérida», *Revista de Filología Española* XXVI, pp. 89-90 — vía Fernández de Molina 2015.
+
+**——— (1942b).** «Sobre el léxico dialectal», *Revista de Filología Española* XXVI, pp. 315-319 — vía Fernández de Molina 2015.
+
+**——— (1943).** *El habla de Mérida y sus cercanías*, Madrid (Anejos de la *Revista de Filología Española*, XXIX) — vía Viudas, Nieto Caballero, Almeida, Paniagua Montero 2002, Cummins 1974 y Montero Curiel 2006a.
+
+**——— (1950).** «El dialectalismo de José María Gabriel y Galán», *Filología* II, pp. 113-175 (reeditado en *Estudios de dialectología hispánica*, Santiago, 1986, pp. 73-128) — vía Salvador Plans 2005a, Nieto Caballero 2016 y Montero Curiel 2006a.
+
+**——— (1960).** *Dialectología española*, Madrid, Gredos (2.ª ed. 1967) — vía Viudas, Nieto Caballero, Almeida, Paniagua Montero 2002, Cummins 1974 y Montero Curiel 2006a.
+
+**[Reseña de Espinosa 1935] (1937).** *Bulletin Hispanique* 39, ++autor y páginas++ — vía la investigación en línea de la primera versión de estos apuntes; sin leer.
+
+**[Vocabularios locales del Diccionario Virtual de Extremadura] (s. f.).** del Valle del Alagón (procedente de Cummins); de Coria (*El diccionario de un coriano*); de Torrejoncillo (*Diccionario Torrejoncillano*, coord. Manuel J. Torres, 2009); de Calzadilla (web municipal cerrada); de Las Hurdes y de Casares de las Hurdes; y «Diccionario Hurdano» de José Luis Sánchez Martín, blog Lecthurdana, 2008 — vía la investigación en línea de la primera versión de estos apuntes.
