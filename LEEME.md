@@ -48,7 +48,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Se da al alumnado 
 2. En `fuente/`: `node diccionario.mjs <carpeta del espejo>`. Lee los avisos: siglas formadas por regla, lemas sin testimonios.
 3. Publicar como siempre. La web no lee la hoja: se pone al día cuando se vuelve a correr.
 
-El formulario «Envía una palabra» manda a Formspree (formulario mqpejala, cuenta ccruzg04@educarex.es), que lo reenvía por correo. La clave se comprueba en la página contra `datos/claves.json`; Formspree no la comprueba. En el artifact de claude.ai el envío no sale, porque su página no deja conectar con otros sitios: se prueba en estremenu.pages.dev.
+El formulario «Envía una palabra» manda a Formspree (formulario mqpejala, cuenta ccruzg04@educarex.es), que lo reenvía por correo. La clave se comprueba en la página contra `datos/claves.json`; Formspree no la comprueba. Se prueba en estremenu.pages.dev.
 
 ## Colores
 
@@ -56,4 +56,4 @@ Los del cuerpo del reel: fondo #132e0d, área #85be6d, contacto #3d6a33, recogid
 
 ## Vista en el navegador
 
-Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img, lib y _headers; directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. publicar.sh pone además en el pie la fecha de la publicación, en hora de Madrid, sobre la que lleva index.html (`<time data-fecha>`), que es la que se ve en el artifact. `_headers` va sin cabeceras desde el 18/10/2026: los buscadores pueden indexarla (Carlos). Hasta entonces llevaba `X-Robots-Tag: noindex, nofollow`, mientras las notas de los pueblos no estaban en limpio.
+Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img, lib y _headers; directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. publicar.sh pone además en el pie la fecha de la publicación, en hora de Madrid, sobre la que lleva index.html (`<time data-fecha>`). `_headers` va sin cabeceras desde el 18/10/2026: los buscadores pueden indexarla (Carlos). Hasta entonces llevaba `X-Robots-Tag: noindex, nofollow`, mientras las notas de los pueblos no estaban en limpio.
