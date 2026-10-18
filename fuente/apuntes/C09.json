@@ -21,5 +21,19 @@
  "estado": "Queda en algunas palabras",
  "origenes": [
   "Castellano viejo"
+ ],
+ "ejemplos": [
+  {
+   "base": "co",
+   "antes": "c",
+   "despues": "d",
+   "cola": "ina"
+  },
+  {
+   "base": "a",
+   "antes": "c",
+   "despues": "d",
+   "cola": "eiti"
+  }
  ]
 }

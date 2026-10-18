@@ -58,25 +58,25 @@
   {
    "codigo": "C08",
    "titulo": "Mairi, pairi, lairón",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C09",
    "titulo": "Los sonidos antiguos de adeiti y codina",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C11",
    "titulo": "Pollo y poyo: la ll de siempre",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C16",
    "titulo": "Pranta, brancu, cravel: la r que ocupa el sitio de la l",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -94,13 +94,13 @@
   {
    "codigo": "C20",
    "titulo": "Idil, eʰpué, ondi: la consonante que se pierde al empezar",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C27",
    "titulo": "Lambel, lomba, camba: la b que no se fue",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -112,13 +112,13 @@
   {
    "codigo": "M03",
    "titulo": "Chiquininu, muchachina: el diminutivo en -inu",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M04",
    "titulo": "El mi corral, la tu madre",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -142,13 +142,13 @@
   {
    "codigo": "M11",
    "titulo": "Dijun, jidun, vinun, estuvun",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M14",
    "titulo": "Conozu, paezu, cuando amaneza",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -166,7 +166,7 @@
   {
    "codigo": "M23",
    "titulo": "Velaí, velaquí",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -178,7 +178,7 @@
   {
    "codigo": "M27",
    "titulo": "Comiorin, llegorin; echái, bebéi: lo que se dice en Las Hurdes",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {

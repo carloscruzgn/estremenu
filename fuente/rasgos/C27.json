@@ -1,0 +1,95 @@
+{
+ "codigo": "C27",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Lambel, lomba, camba:",
+  "la b que no se fue"
+ ],
+ "cabecera": "Lambel, lomba, camba: la b que no se fue",
+ "_titulo": "El de la página C27 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "La b entra en medio: el reel va sin ejemplos. La cabecera de la web lleva loma → lomba y cama → camba",
+ "_oleadas": "Sin oleada de 1912: Krüger no pregunta por lamer ni por lomo, y anota plomo, paloma sin b en todos sus puntos (§ 299)",
+ "oleadas": [
+  {
+   "rotulo": "1929-1932",
+   "fuentes": "Fink 1929; Bierhenke 1932, vía cita",
+   "terminos": {
+    "10084": "Gata: lambel (Fink) y cambones «muros del lagar» (Bierhenke)",
+    "10146": "Pinofranqueado: lambel, y en Aldehuela, si es su alquería (Fink)",
+    "10041": "Caminomorisco, por Cambroncino: lambel (Fink)",
+    "10164": "San Martín de Trevejo: lambel (Fink)",
+    "10100": "Hoyos: cambones (Bierhenke)",
+    "10211": "Villanueva de la Sierra: cambones (Bierhenke)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976; ALEP 1976-1981",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 96: lamber, lambeúra, lambuzo, lombo, lombito, chambuscar, carambelo, cambreón",
+    "10051": "Velo Nieto 1956, p. 96: lamber, lambeúra, lambuzo, lombo, lombito, chambuscar, carambelo, cambreón",
+    "10108": "Velo Nieto 1956, p. 96: lamber, lambeúra, lambuzo, lombo, lombito, chambuscar, carambelo, cambreón",
+    "10135": "Velo Nieto 1956, p. 96: lamber, lambeúra, lambuzo, lombo, lombito, chambuscar, carambelo, cambreón",
+    "10146": "Velo Nieto 1956, p. 96: lamber, lambeúra, lambuzo, lombo, lombito, chambuscar, carambelo, cambreón",
+    "10150": "Cummins, § 9f: lambel, «muy corriente»",
+    "10127": "Cummins, § 9f: lambel, «muy corriente»; pero lomu, sin b",
+    "10088": "Cummins, § 9f: lambel, «muy corriente»",
+    "10053": "Cummins, § 9f: lambel, «muy corriente»",
+    "10189": "Cummins, § 9f: lambial",
+    "37269": "Robleda: lambel, en la lista del maestro (Iglesias Ovejero 2010, p. 39)",
+    "10216": "Zarza de Granadilla: camba «cama del arado» (ALEP, vía cita)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Cartografía lingüística de Extremadura, González Salgado (encuestas de 1995-1997); Paniagua 2002",
+   "terminos": {
+    "10050": "Casar de Palomero: lomba «caballón» (CLE, vía cita)",
+    "10006": "Ahigal: camba (CLE, vía cita). Paniagua 2002: lambel, lomba, calambucu, cambizu, eschambariláu, y la ultracorrección tarimba",
+    "10174": "Segura de Toro: camba (CLE, vía cita)"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "El Sahugo y Piornal"
+  },
+  "terminos": {
+   "37303": "El Sahugo: ALEP, vía Alonso Pascua 2023",
+   "10147": "Piornal: lambercuza (Flores del Manzano 1992, p. 129)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "tajosalor",
+   "sanpedro",
+   "lacara",
+   "olivenza",
+   "suroeste"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Fuerte el occidente en el recuadro de RC27, por González Salgado 2003, p. 607: lamber, lombo, lomba «de la frontera salmantina a la de Huelva». Guijo de Galisteo (Alcón 2002) y Garrovillas (Marcos de Sande 1947), fuente C, quedan en claro",
+ "algunos": {
+  "comarcas": [
+   "rebollar",
+   "monfrague",
+   "ambroz"
+  ],
+  "_nota": "El Rebollar, «esporádicos» (Iglesias Ovejero 2010, p. 47). Monfragüe y el Ambroz, por Segura de Toro"
+ },
+ "nunca": {
+  "10205": "Valverde del Fresno: lamel (Fink 1929, vía cita)",
+  "10072": "Eljas: lamel (Fink 1929, vía cita)"
+ },
+ "fuentes_cierre": "Datos: Fink 1929 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+}

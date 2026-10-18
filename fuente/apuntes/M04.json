@@ -22,5 +22,19 @@
  "origenes": [
   "Leonés",
   "Castellano viejo"
+ ],
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "",
+   "despues": "el",
+   "cola": " mi corral"
+  },
+  {
+   "base": "",
+   "antes": "",
+   "despues": "la",
+   "cola": " tu madre"
+  }
  ]
 }

@@ -1,0 +1,162 @@
+{
+ "codigo": "M27",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Comiorin, llegorin;",
+  "echái, bebéi"
+ ],
+ "cabecera": "Comiorin, llegorin; echái, bebéi",
+ "_titulo": "El de la página M27 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "comi",
+   "antes": "eron",
+   "despues": "orin"
+  },
+  {
+   "base": "lleg",
+   "antes": "aron",
+   "despues": "orin"
+  },
+  {
+   "base": "ech",
+   "antes": "ad",
+   "despues": "ái"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1906",
+   "fuentes": "Menéndez Pidal, El dialecto leonés, 1906, vía Krüger 1914",
+   "terminos": {
+    "37269": "Robleda: vinioren, trujioren (Menéndez Pidal, vía Krüger, pp. 364 y 370)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; ALEP 1976-1981",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 103: -oren pervive en las alquerías del norte, lindantes con Salamanca; imperativos vai, mirai, andai (p. 107). Barroso 2002 (C), 1979-1980: comiorin, subiorin, llegorin; echái, bebéi",
+    "10051": "Velo Nieto 1956, p. 103: -oren pervive en las alquerías del norte, lindantes con Salamanca; imperativos vai, mirai, andai (p. 107). Barroso 2002 (C), 1979-1980: comiorin, subiorin, llegorin; echái, bebéi",
+    "10108": "Velo Nieto 1956, p. 103: -oren pervive en las alquerías del norte, lindantes con Salamanca; imperativos vai, mirai, andai (p. 107). Barroso 2002 (C), 1979-1980: comiorin, subiorin, llegorin; echái, bebéi",
+    "10135": "Velo Nieto 1956, p. 103: -oren pervive en las alquerías del norte, lindantes con Salamanca; imperativos vai, mirai, andai (p. 107). Barroso 2002 (C), 1979-1980: comiorin, subiorin, llegorin; echái, bebéi",
+    "10146": "Velo Nieto 1956, p. 103: -oren pervive en las alquerías del norte, lindantes con Salamanca; imperativos vai, mirai, andai (p. 107). Barroso 2002 (C), 1979-1980: comiorin, subiorin, llegorin; echái, bebéi",
+    "37221": "Navasfrías: las desinencias -estes, -eistis, -oren (ALEP, vía Alonso Pascua 2023)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2009a",
+   "terminos": {
+    "10072": "Eljas: chegorin, deixorin (González Salgado 2009a)",
+    "10164": "San Martín de Trevejo: chegorin, deixorin (González Salgado 2009a; Montero Curiel 2006, pp. 19-23)"
+   }
+  }
+ ],
+ "llamada": {
+  "termino": "10067",
+  "texto": "<b>Coria</b>: hoy no se dice, pero en documentos de 1310 y 1357 está escrito dioron y oyoron"
+ },
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "La sierra del Jerte, con el mandato"
+  },
+  "terminos": {
+   "10147": "Piornal: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10184": "El Torno: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10196": "Valdastillas: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10054": "Casas del Castañar: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10154": "Rebollar: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10036": "Cabrero: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10025": "Barrado: cantal, arrimai (Flores del Manzano 1992, p. 131, sin pueblo)"
+  }
+ },
+ "probable": {
+  "comarcas": [],
+  "terminos": [
+   "10050"
+  ],
+  "excluir": []
+ },
+ "_probable": "Casar de Palomero, en Las Hurdes de REDEX, queda en claro: no lo encuestó nadie para este rasgo",
+ "algunos": {
+  "comarcas": [
+   "gata",
+   "jerte",
+   "rebollar"
+  ],
+  "_nota": "Débil en el recuadro de RM27. El Rebollar: Iglesias Ovejero 2010, p. 54, da el imperativo en -ái «no muy frecuente» y no trae -oren; El Payo, bebéi eso (COSER, sin fecha)"
+ },
+ "nunca": {
+  "10004": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10005": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10903": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10016": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10038": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10040": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10047": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10053": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10059": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10061": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10067": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10076": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10088": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10089": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10099": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10101": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10127": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10129": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10143": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10150": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10151": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10152": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10155": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10189": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10202": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10207": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10218": "Cummins no registra ni un caso en sus trece localidades (§§ 26-30); Krüger 1914, § 444: el tipo «no se conoce en Extremadura»",
+  "10216": "Zarza de Granadilla y Granadilla: Krüger 1914, § 444",
+  "10006": "Ahigal: Krüger 1914, § 444",
+  "10124": "Mohedas de Granadilla: Krüger 1914, § 444",
+  "10082": "Garrovillas: Krüger 1914, § 444",
+  "10205": "Valverde del Fresno: chegaran (Montero Curiel 2006, pp. 19-23)"
+ },
+ "noroeste": {
+  "rotulo": {
+   "k": "En el resto de Extremadura",
+   "h": "Un rasgo del norte",
+   "s": "En 1912 Krüger no lo halló en ningún pueblo extremeño"
+  },
+  "en_contra": {
+   "comarcas": [],
+   "terminos": [
+    "10008",
+    "10145",
+    "10208",
+    "10032",
+    "10133"
+   ],
+   "fuente": "Krüger 1914, §§ 442 y 444: «el tipo -ioren, -ionen, -iuren no se conoce en Extremadura»"
+  },
+  "rotulos_mapa": [
+   {
+    "texto": "Tajo-Salor",
+    "comarca": "tajosalor",
+    "dx": 0,
+    "dy": 0,
+    "clase": "small"
+   },
+   {
+    "texto": "Badajoz",
+    "provincia": "06",
+    "dx": 0,
+    "dy": 0,
+    "clase": "big"
+   }
+  ]
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · ALEP · González Salgado 2009, y otras fuentes del taller"
+}

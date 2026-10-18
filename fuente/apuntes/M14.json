@@ -21,5 +21,22 @@
  "estado": "Se va perdiendo",
  "origenes": [
   "Leonés"
+ ],
+ "ejemplos": [
+  {
+   "base": "conoz",
+   "antes": "co",
+   "despues": "u"
+  },
+  {
+   "base": "crez",
+   "antes": "co",
+   "despues": "u"
+  },
+  {
+   "base": "amanez",
+   "antes": "ca",
+   "despues": "a"
+  }
  ]
 }

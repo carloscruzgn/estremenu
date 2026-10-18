@@ -21,5 +21,22 @@
  "estado": "Todavía se oye",
  "origenes": [
   "Leonés"
+ ],
+ "ejemplos": [
+  {
+   "base": "muchach",
+   "antes": "ito",
+   "despues": "inu"
+  },
+  {
+   "base": "corder",
+   "antes": "ito",
+   "despues": "inu"
+  },
+  {
+   "base": "gat",
+   "antes": "ito",
+   "despues": "inu"
+  }
  ]
 }

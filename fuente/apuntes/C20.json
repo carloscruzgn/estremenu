@@ -19,5 +19,25 @@
   ]
  ],
  "estado": "Todavía se oye",
- "origenes": []
+ "origenes": [],
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "g",
+   "despues": "",
+   "cola": "uadaña"
+  },
+  {
+   "base": "",
+   "antes": "d",
+   "despues": "",
+   "cola": "iferencia"
+  },
+  {
+   "base": "",
+   "antes": "",
+   "despues": "d",
+   "cola": "ambas"
+  }
+ ]
 }

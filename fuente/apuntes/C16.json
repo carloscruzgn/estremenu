@@ -22,5 +22,25 @@
  "origenes": [
   "Leonés",
   "Portugués"
+ ],
+ "ejemplos": [
+  {
+   "base": "p",
+   "antes": "l",
+   "despues": "r",
+   "cola": "anta"
+  },
+  {
+   "base": "c",
+   "antes": "l",
+   "despues": "r",
+   "cola": "avel"
+  },
+  {
+   "base": "f",
+   "antes": "l",
+   "despues": "r",
+   "cola": "auta"
+  }
  ]
 }

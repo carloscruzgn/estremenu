@@ -21,5 +21,19 @@
  "estado": "Queda en algunas palabras",
  "origenes": [
   "Leonés"
+ ],
+ "ejemplos": [
+  {
+   "base": "lom",
+   "antes": "",
+   "despues": "b",
+   "cola": "a"
+  },
+  {
+   "base": "cam",
+   "antes": "",
+   "despues": "b",
+   "cola": "a"
+  }
  ]
 }

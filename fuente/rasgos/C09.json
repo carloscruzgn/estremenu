@@ -1,0 +1,111 @@
+{
+ "codigo": "C09",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Los sonidos antiguos",
+  "de adeiti y codina"
+ ],
+ "cabecera": "Los sonidos antiguos de adeiti y codina",
+ "_titulo": "El de la página C09 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "El cambio no va al final: el reel va sin ejemplos. La cabecera de la web lleva cocina → codina y aceiti → adeiti",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 268 y 358-361; Menéndez Pidal 1906, vía Krüger",
+   "terminos": {
+    "10207": "Villa del Campo: kaza, koza, meza, nozotrus con [z]; bedinu, jadel, idi, radimu, kodel, adeiti, dodi, tredi con [đ], «especialmente frecuente»",
+    "10082": "Garrovillas: kaza, kezu, iglezia con [z]; bedinu, adelu, idilu, kindi, ondi, jodi; el otro informante, «normalmente [θ]». Évole 1932-1936 y Marcos de Sande 1947 (C): adeiti, jadel, dorra",
+    "10088": "Guijo de Coria: jadel, jadelu, idil, adeiti, pero bezinu con sorda (§ 361)",
+    "10089": "Guijo de Galisteo: bedinu, jadellu, jadi, idil, kodel, adeiti, godu, tidón; endina, ya «de antes» en 1912",
+    "10127": "Montehermoso: bedinu, jadi, jadelu, idilu, probeditu, pradel (el informante vivía en Guijo de Galisteo)",
+    "10189": "Torrejoncillo: idi, jadi, bedinu, adeiti, korteda; el informante, de 70 años, prefería la sorda",
+    "10004": "Acehúche: bedinu, jadi, adeite; solo de los viejos se dice que la usan (§ 361)",
+    "10152": "Pozuelo de Zarzón: jadel, jade, aislados entre muchos con [θ]",
+    "10146": "Pinofranqueado: jadelu, sendiya, aislados entre muchos con [θ]",
+    "10084": "Gata: jade, jadelo, aislados entre muchos con [θ]",
+    "10116": "Malpartida de Plasencia: restos, por Menéndez Pidal (vía Krüger, § 361, p. 283)",
+    "10175": "Serradilla: restos, por Menéndez Pidal (vía Krüger, § 361, p. 283)",
+    "10056": "Casas de Millán: restos, por Menéndez Pidal (vía Krüger, § 361, p. 283)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976; ALEP 1976-1981",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 89: jadel, quidás, dagal, «sólo esporádicamente, sobre todo en Las Hurdes Bajas»",
+    "10051": "Velo Nieto 1956, p. 89: jadel, quidás, dagal, «sólo esporádicamente, sobre todo en Las Hurdes Bajas»",
+    "10108": "Velo Nieto 1956, p. 89: jadel, quidás, dagal, «sólo esporádicamente, sobre todo en Las Hurdes Bajas»",
+    "10135": "Velo Nieto 1956, p. 89: jadel, quidás, dagal, «sólo esporádicamente, sobre todo en Las Hurdes Bajas»",
+    "10146": "Velo Nieto 1956, p. 89: jadel, quidás, dagal, «sólo esporádicamente, sobre todo en Las Hurdes Bajas»",
+    "10150": "Cummins, § 11: Po 1, con [z] y [ð], idíl y hadél «bastante común todavía», adéiti, kodína, bedéru y otras nueve",
+    "10127": "Cummins, § 11: MH 5, de 85 años, kodína, adéiti, zenída, bedéru; MH 2, háđin junto a háθi (CUM-T)",
+    "10040": "Cummins, apéndice I (CUM-I): Cal 5, háđi, hađél, hađélu",
+    "37234": "Iglesias Ovejero 2010, pp. 46-47: káza, nuzótrus con [z]; dagal, jadi con [d], «en franca decadencia»; idil, jadel en la lista del maestro de Robleda",
+    "37221": "Iglesias Ovejero 2010, pp. 46-47: káza, nuzótrus con [z]; dagal, jadi con [d], «en franca decadencia»; idil, jadel en la lista del maestro de Robleda",
+    "37245": "Iglesias Ovejero 2010, pp. 46-47: káza, nuzótrus con [z]; dagal, jadi con [d], «en franca decadencia»; idil, jadel en la lista del maestro de Robleda",
+    "37269": "Iglesias Ovejero 2010, pp. 46-47: káza, nuzótrus con [z]; dagal, jadi con [d], «en franca decadencia»; idil, jadel en la lista del maestro de Robleda",
+    "37371": "Iglesias Ovejero 2010, pp. 46-47: káza, nuzótrus con [z]; dagal, jadi con [d], «en franca decadencia»; idil, jadel en la lista del maestro de Robleda"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Flores del Manzano 1992; Paniagua 2002; Alcón 2002; Ortigo 2002; Portaje 2011",
+   "terminos": {
+    "10006": "González Salgado 2003, p. 608: «siempre en lexicalizaciones». Paniagua 2002: jadel, jidi, quidás",
+    "10089": "González Salgado 2003, p. 608: lexicalizaciones. Ortigo 2002, por escrito: jadi, idil, adeiti, podu",
+    "10175": "González Salgado 2003, p. 608: lexicalizaciones; «habituales entre todo tipo de hablantes» (Salvador Plans 2003, vía Montero Curiel 2006)",
+    "10034": "Cabezabellosa: Flores del Manzano 1992, n. 17",
+    "10127": "Alcón 2002: adeiti, dorra, «más pronunciado en Montehermoso»",
+    "10150": "Ayuntamiento de Portaje 2011: idil, jadel"
+   }
+  }
+ ],
+ "llamada": {
+  "termino": "10150",
+  "texto": "<b>Portaje</b>: hacia 1970, una docena de palabras con los sonidos antiguos en un solo hablante"
+ },
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Talaván, Madroñera, la sierra del Jerte y El Sahugo"
+  },
+  "terminos": {
+   "10178": "Talaván: restos, por Menéndez Pidal (vía Krüger, § 361)",
+   "10147": "Piornal: zaldu, jadel, codina, entre los mayores (Flores del Manzano 1992, p. 129)",
+   "37303": "El Sahugo: la d, ALEP, vía Alonso Pascua 2023",
+   "10113": "Madroñera: sonoras en Espinosa 1935 (vía Montero Curiel 2006); restos hoy (González Salgado 2024, n. 7)",
+   "37002": "Agallas: dagal (COSER, sin fecha, vía Alonso Pascua 2023, p. 26)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "alagon"
+  ],
+  "terminos": [],
+  "excluir": [
+   "10072",
+   "10164",
+   "10205"
+  ]
+ },
+ "_probable": "Fuerte el Alagón en el recuadro de RC09. La fala queda fuera: sus sonoras son las del portugués (10-MAPAS, «Sonoras antiguas»)",
+ "algunos": {
+  "comarcas": [
+   "gata",
+   "trasierra",
+   "monfrague",
+   "tajosalor",
+   "jerte",
+   "miajadas",
+   "bejar"
+  ],
+  "_nota": "Débil en el recuadro de RC09; Miajadas-Trujillo y la Sierra de Béjar por Espinosa 1935, vía Montero Curiel 2006"
+ },
+ "nunca": {
+  "10216": "Zarza de Granadilla y Granadilla: azeite, sin [đ] en ninguna voz (Krüger 1914, § 358)"
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+}

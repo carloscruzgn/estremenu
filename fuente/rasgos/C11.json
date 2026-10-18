@@ -1,0 +1,185 @@
+{
+ "codigo": "C11",
+ "tipo": "distincion",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Pollo y poyo:",
+  "la ll de siempre"
+ ],
+ "cabecera": "Pollo y poyo: la ll de siempre",
+ "_titulo": "El de la página C11 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "No hay letra que cambie: la ll se conserva. Ni el reel ni la cabecera de la web llevan ejemplos",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 290-291 y 318-320",
+   "terminos": {
+    "10216": "Zarza de Granadilla y Granadilla: silla, llwebi, kaballu, gallu, pollu; ni una vez la y",
+    "10006": "Ahigal: gallu, pollu, kaballu, llabi (informante oído en Granadilla)",
+    "10124": "Mohedas de Granadilla: kaballu",
+    "10050": "Casar de Palomero: silla, llama, llwebi",
+    "10152": "Pozuelo de Zarzón: llama, llwebi",
+    "10211": "Villanueva de la Sierra: pollu, silla, gallu, llama",
+    "10084": "Gata: llama",
+    "10207": "Villa del Campo: pollu, kaballu, silla, rrwilla; «tiende al paso de l' a y sin llegar a él», mejiya junto a mejilla",
+    "10089": "Guijo de Galisteo: pollu, kaballu, silla, rrwilla, llwebi",
+    "10127": "Montehermoso: pollu, kaballu, rrwilla, llobel, dollabi (el informante vivía en Guijo de Galisteo)",
+    "10129": "Morcillo: pollu, gallu, llwebi",
+    "10189": "Torrejoncillo: pollo, kaballu, silla, jornilla, llama, llwebi",
+    "10187": "Torre de Don Miguel: silla, llwebe (§ 55), aunque en el § 320 dice que le faltan datos",
+    "10061": "Ceclavín: vacila «en una misma persona»: gayo junto a balli y silla; los otros dos informantes, bayi y siya",
+    "10082": "Garrovillas: vacila: gallu, silla, llama, llwebi, pero kabayu, yabe"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 75: «el yeísmo está todavía poco extendido»; los mayores distinguen y los niños dicen siya, gayina. En 1912 Krüger dio yeísmo en Cambroncino, El Castillo y Pinofranqueado; Espinosa, en 1931, Pinofranqueado sin yeísmo",
+    "10051": "Velo Nieto 1956, p. 75: «el yeísmo está todavía poco extendido»; los mayores distinguen y los niños dicen siya, gayina. En 1912 Krüger dio yeísmo en Cambroncino, El Castillo y Pinofranqueado; Espinosa, en 1931, Pinofranqueado sin yeísmo",
+    "10108": "Velo Nieto 1956, p. 75: «el yeísmo está todavía poco extendido»; los mayores distinguen y los niños dicen siya, gayina. En 1912 Krüger dio yeísmo en Cambroncino, El Castillo y Pinofranqueado; Espinosa, en 1931, Pinofranqueado sin yeísmo",
+    "10135": "Velo Nieto 1956, p. 75: «el yeísmo está todavía poco extendido»; los mayores distinguen y los niños dicen siya, gayina. En 1912 Krüger dio yeísmo en Cambroncino, El Castillo y Pinofranqueado; Espinosa, en 1931, Pinofranqueado sin yeísmo",
+    "10146": "Velo Nieto 1956, p. 75: «el yeísmo está todavía poco extendido»; los mayores distinguen y los niños dicen siya, gayina. En 1912 Krüger dio yeísmo en Cambroncino, El Castillo y Pinofranqueado; Espinosa, en 1931, Pinofranqueado sin yeísmo",
+    "10040": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10053": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10059": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10067": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas; Coria, Cummins, § 15: la madre, C 5, kaʰtíḷu, gáḷu, kabáḷu; la hija, C 6, de dieciocho años, kaʰtížu, gažiníta",
+    "10088": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10089": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10101": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10127": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10128": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10143": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10150": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10189": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "10207": "Cummins, § 15: la ll se mantiene «en Coria lo mismo que en los pueblos más remotos» entre viejos y medianos; los jóvenes de la ciudad, yeístas",
+    "37234": "Iglesias Ovejero 2010, p. 49: «dominaba la distinción entre ll e y»; el yeísmo, entre lo que separa a Extremadura de El Rebollar (p. 59)",
+    "37221": "Iglesias Ovejero 2010, p. 49: «dominaba la distinción entre ll e y»; el yeísmo, entre lo que separa a Extremadura de El Rebollar (p. 59)",
+    "37245": "Iglesias Ovejero 2010, p. 49: «dominaba la distinción entre ll e y»; el yeísmo, entre lo que separa a Extremadura de El Rebollar (p. 59)",
+    "37269": "Iglesias Ovejero 2010, p. 49: «dominaba la distinción entre ll e y»; el yeísmo, entre lo que separa a Extremadura de El Rebollar (p. 59)",
+    "37371": "Iglesias Ovejero 2010, p. 49: «dominaba la distinción entre ll e y»; el yeísmo, entre lo que separa a Extremadura de El Rebollar (p. 59)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Flores del Manzano 1992; Paniagua 2002; Portaje 2011",
+   "terminos": {
+    "10072": "Eljas: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10089": "Guijo de Galisteo: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10050": "Casar de Palomero: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10006": "Ahigal: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603); Paniagua 2002, p. 78: se distingue, «aunque extrañamente» los jóvenes tienden al yeísmo",
+    "10150": "Portaje: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603); Ayuntamiento de Portaje 2011: distinción en pérdida entre jóvenes",
+    "10082": "Garrovillas: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10053": "Casas de Don Gómez: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10175": "Serradilla: «Cáceres distingue, con islotes yeístas» (González Salgado 2003, pp. 602-603)",
+    "10034": "Cabezabellosa: escapa del yeísmo creciente (Flores del Manzano 1992, p. 129)"
+   }
+  }
+ ],
+ "llamada": {
+  "termino": "10061",
+  "texto": "<b>Ceclavín</b> ya vacilaba en 1912, y hacia 1996 era un islote yeísta"
+ },
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Piedras Albas, Madroñera y la sierra del Jerte"
+  },
+  "terminos": {
+   "10145": "Piedras Albas: punto de distinción (Krüger 1914, § 320)",
+   "10113": "Madroñera: distinción en todas las edades (vía Montero Curiel 2006, pp. 23-25)",
+   "10130": "Navaconcejo: los mayores y las mujeres escapan del yeísmo (Flores del Manzano 1992, p. 129)",
+   "10147": "Piornal: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10184": "El Torno: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10196": "Valdastillas: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10054": "Casas del Castañar: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10154": "Rebollar: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10036": "Cabrero: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)",
+   "10025": "Barrado: escapa del yeísmo, con la norma piornalega (Flores del Manzano 1992, p. 129)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "monfrague",
+   "jerte",
+   "miajadas",
+   "montanchez",
+   "villuercas",
+   "aranuelo"
+  ],
+  "terminos": [
+   "10037",
+   "10148"
+  ],
+  "excluir": []
+ },
+ "_probable": "Cáceres en fuerte en el recuadro de RC11, salvo Las Hurdes, Tajo-Salor, Sierra de San Pedro y La Vera, en débil. Cáceres y Plasencia, ciudades sin comarca, con la provincia",
+ "algunos": {
+  "comarcas": [
+   "tajosalor",
+   "sanpedro",
+   "vera"
+  ],
+  "_nota": "Débil en el recuadro de RC11"
+ },
+ "nunca": {
+  "10004": "Acehúche: siya, bayi, kabayo, yama, yubia; yeísmo sin excepción (Krüger 1914, § 290)",
+  "10218": "Zarza la Mayor: siya, gayu, poyu, yama, ywebi; yeísmo sin excepción (Krüger 1914, § 290)",
+  "10174": "Segura de Toro: islote yeísta (González Salgado 2003, pp. 602-603)"
+ },
+ "noroeste": {
+  "rotulo": {
+   "k": "En el resto de Extremadura",
+   "h": "Cáceres distingue, Badajoz no",
+   "s": "Hacia 1996, con islotes yeístas en Cáceres"
+  },
+  "en_contra": {
+   "comarcas": [
+    "lacara",
+    "olivenza",
+    "suroeste",
+    "vegasaltas",
+    "campinasur",
+    "tentudia",
+    "serena",
+    "siberia",
+    "barros",
+    "zafra"
+   ],
+   "terminos": [
+    "10008",
+    "10032",
+    "10133",
+    "10208",
+    "10018",
+    "10058",
+    "10192",
+    "10109",
+    "06006",
+    "06037",
+    "06123",
+    "06155",
+    "06015",
+    "06083"
+   ],
+   "fuente": "Krüger 1914, § 290: yeísmo en Alcántara, Brozas, Navas del Madroño y Villa del Rey; González Salgado 2003, pp. 602-603: islotes yeístas de Cáceres (Villa del Rey, Aliseda, Casatejada, Torremocha, Logrosán) y Badajoz yeísta"
+  },
+  "rotulos_mapa": [
+   {
+    "texto": "Badajoz",
+    "provincia": "06",
+    "dx": 0,
+    "dy": 0,
+    "clase": "big"
+   }
+  ]
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+}

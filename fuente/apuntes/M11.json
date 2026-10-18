@@ -19,5 +19,22 @@
   ]
  ],
  "estado": "Se va perdiendo",
- "origenes": []
+ "origenes": [],
+ "ejemplos": [
+  {
+   "base": "dij",
+   "antes": "eron",
+   "despues": "un"
+  },
+  {
+   "base": "vin",
+   "antes": "ieron",
+   "despues": "un"
+  },
+  {
+   "base": "estuv",
+   "antes": "ieron",
+   "despues": "un"
+  }
+ ]
 }

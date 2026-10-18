@@ -1,0 +1,116 @@
+{
+ "codigo": "C20",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Idil, eʰpué, ondi:",
+  "la consonante que se pierde al empezar"
+ ],
+ "cabecera": "Idil, eʰpué, ondi: la consonante que se pierde al empezar",
+ "_titulo": "El de la página C20 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "El cambio no va al final: el reel va sin ejemplos. La cabecera de la web lleva guadaña → uadaña, diferencia → iferencia y ambas → dambas",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 210, 72 y 193",
+   "terminos": {
+    "10207": "Villa del Campo: idi «dice», junto a dezillu",
+    "10089": "Guijo de Galisteo: idi, idil",
+    "10127": "Montehermoso: idilu (el informante vivía en Guijo de Galisteo)",
+    "10082": "Garrovillas: idilu. Marcos de Sande 1947 (C): idil, ehnocau",
+    "10088": "Guijo de Coria: idil (§§ 279 y 361)",
+    "10189": "Torrejoncillo: idi (§ 358)",
+    "10050": "Casar de Palomero: kwatro weye «cuatro bueyes», sin b (§ 72)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 98: me ice la verdá, le ije, si osotros queréis",
+    "10051": "Velo Nieto 1956, p. 98: me ice la verdá, le ije, si osotros queréis",
+    "10108": "Velo Nieto 1956, p. 98: me ice la verdá, le ije, si osotros queréis",
+    "10135": "Velo Nieto 1956, p. 98: me ice la verdá, le ije, si osotros queréis",
+    "10146": "Velo Nieto 1956, p. 98: me ice la verdá, le ije, si osotros queréis",
+    "10040": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10053": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10059": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»; Cummins, § 26g: iθíl, iθían, íhu",
+    "10067": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»; Cummins, § 26g: ídin",
+    "10088": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10089": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10101": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10127": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»; Cummins, § 26g: iθímuʰ; y dil, dambus",
+    "10128": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10143": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10150": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»; Cummins, § 8g: uadaña; dambus",
+    "10189": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "10207": "Cummins, § 8g: la d- «se pronuncia muy relajada en la región de Coria, llegando en muchos casos a perderse por completo»",
+    "37234": "Iglesias Ovejero 2010, pp. 39 y 53: idil en la lista del maestro de Robleda; idis, idía, idiendu, idí",
+    "37221": "Iglesias Ovejero 2010, pp. 39 y 53: idil en la lista del maestro de Robleda; idis, idía, idiendu, idí",
+    "37245": "Iglesias Ovejero 2010, pp. 39 y 53: idil en la lista del maestro de Robleda; idis, idía, idiendu, idí",
+    "37269": "Iglesias Ovejero 2010, pp. 39 y 53: idil en la lista del maestro de Robleda; idis, idía, idiendu, idí",
+    "37371": "Iglesias Ovejero 2010, pp. 39 y 53: idil en la lista del maestro de Robleda; idis, idía, idiendu, idí"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "alagon"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Fuerte el Alagón en el recuadro de RC20. Pozuelo, Morcillo, Ceclavín, Acehúche y Zarza la Mayor, puntos de Krüger con dize, quedan en claro porque los rodean pueblos que lo tienen",
+ "algunos": {
+  "comarcas": [
+   "gata",
+   "tajosalor",
+   "jerte"
+  ],
+  "_nota": "Débil en el recuadro de RC20"
+ },
+ "nunca": {
+  "10187": "Torre de Don Miguel: dize (Krüger 1914, § 210)",
+  "10211": "Villanueva de la Sierra: dize (Krüger 1914, § 210)",
+  "10084": "Gata: dize (Krüger 1914, § 210)",
+  "10216": "Zarza de Granadilla y Granadilla: dize, dizi (Krüger 1914, § 210)",
+  "10124": "Mohedas de Granadilla: dize, dizi (Krüger 1914, § 210)",
+  "10006": "Ahigal: dizi, jazi, con sorda (Krüger 1914, §§ 46 y 210)"
+ },
+ "noroeste": {
+  "rotulo": {
+   "k": "En el resto de Extremadura",
+   "h": "Un rasgo de la Tierra de Coria",
+   "s": "En 1912, «dize, dizi» en el resto de Extremadura"
+  },
+  "en_contra": {
+   "comarcas": [],
+   "terminos": [
+    "10008",
+    "10145",
+    "10208",
+    "10032",
+    "10133"
+   ],
+   "fuente": "Krüger 1914, § 210: la pérdida de d- «se limita a algunos pueblos extremeños», y en el resto dize, dizi"
+  },
+  "rotulos_mapa": [
+   {
+    "texto": "Tajo-Salor",
+    "comarca": "tajosalor",
+    "dx": 0,
+    "dy": 0,
+    "clase": "small"
+   },
+   {
+    "texto": "Badajoz",
+    "provincia": "06",
+    "dx": 0,
+    "dy": 0,
+    "clase": "big"
+   }
+  ]
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010, y otras fuentes del taller"
+}

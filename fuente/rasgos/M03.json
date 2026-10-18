@@ -1,0 +1,114 @@
+{
+ "codigo": "M03",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Chiquininu, muchachina:",
+  "el diminutivo en -inu"
+ ],
+ "cabecera": "Chiquininu, muchachina: el diminutivo en -inu",
+ "_titulo": "El de la página M03 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "muchach",
+   "antes": "ito",
+   "despues": "inu"
+  },
+  {
+   "base": "corder",
+   "antes": "ito",
+   "despues": "inu"
+  }
+ ],
+ "_oleadas": "Sin oleada de 1912: Krüger no documenta -ino en ningún punto; su única voz preguntada, pobrecito, sale con -ito y pudo venir inducida (§§ 358 y 5)",
+ "oleadas": [
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 101-102: -ino en todas las alquerías, una suertina, un poquino, mu chiquirrinino",
+    "10051": "Velo Nieto 1956, pp. 101-102: -ino en todas las alquerías, una suertina, un poquino, mu chiquirrinino",
+    "10108": "Velo Nieto 1956, pp. 101-102: -ino en todas las alquerías, una suertina, un poquino, mu chiquirrinino",
+    "10135": "Velo Nieto 1956, pp. 101-102: -ino en todas las alquerías, una suertina, un poquino, mu chiquirrinino",
+    "10146": "Velo Nieto 1956, pp. 101-102: -ino en todas las alquerías, una suertina, un poquino, mu chiquirrinino",
+    "10040": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»; Cummins, § 20b: kaĉína, kapína, por akína",
+    "10053": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10059": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10067": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»; Cummins, § 20b: korderínu, ĉibínu, patína; y -ín, korderín, ĉikiḷín",
+    "10088": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10089": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10101": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10127": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10128": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10143": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10150": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "10189": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»; Cummins, § 20b: pwöblínu, hoθínu",
+    "10207": "Cummins, § 20b: -ino, -ina «se oye incesantemente en el habla de todos mis informantes»",
+    "37234": "Iglesias Ovejero 2010, p. 51: dagalín, dagalinus, dagalina, chiquininu",
+    "37221": "Iglesias Ovejero 2010, p. 51: dagalín, dagalinus, dagalina, chiquininu",
+    "37245": "Iglesias Ovejero 2010, p. 51: dagalín, dagalinus, dagalina, chiquininu",
+    "37269": "Iglesias Ovejero 2010, p. 51: dagalín, dagalinus, dagalina, chiquininu",
+    "37371": "Iglesias Ovejero 2010, p. 51: dagalín, dagalinus, dagalina, chiquininu"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997), mapa 418; Alcón 2002; Portaje 2011",
+   "terminos": {
+    "10006": "Ahigal, punto Cc 102: -ino (González Salgado, mapa 418). Paniagua 2002: -inu, -ina el frecuente",
+    "10089": "Alcón 2002: chiquininu, tapaerina, meloninu, perina",
+    "10150": "Ayuntamiento de Portaje 2011"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Los Agadones"
+  },
+  "terminos": {
+   "37303": "El Sahugo: -ino (ALEP, vía Alonso Pascua 2023)",
+   "37002": "Agallas: mantina, unos paninos (COSER, sin fecha, vía Alonso Pascua 2023, p. 26)",
+   "37306": "Serradilla del Arroyo: biesnietino (COSER, sin fecha, vía Alonso Pascua 2023, p. 26)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Cáceres en fuerte en el recuadro de RM03, por Montero Curiel 2006, pp. 28 y 60. Sin blancos. La fala, Casar de Palomero y Garrovillas, en claro",
+ "algunos": {
+  "comarcas": [
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra"
+  ],
+  "_nota": "Badajoz en débil en el recuadro de RM03: allí gana -ito (Montero Curiel 2006, p. 60)"
+ },
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller"
+}

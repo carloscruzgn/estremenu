@@ -1,0 +1,123 @@
+{
+ "codigo": "M11",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Dijun, jidun,",
+  "vinun, estuvun"
+ ],
+ "cabecera": "Dijun, jidun, vinun, estuvun",
+ "_titulo": "El de la página M11 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "vin",
+   "antes": "ieron",
+   "despues": "un"
+  },
+  {
+   "base": "dij",
+   "antes": "eron",
+   "despues": "un"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 442-444",
+   "terminos": {
+    "10152": "Pozuelo de Zarzón: estubon; y sirbyeron, dyeron, llegaron",
+    "10050": "Casar de Palomero: estubon, binon; y sirbyeron, nazyeron, zerraron",
+    "10187": "Torre de Don Miguel: estubon",
+    "10211": "Villanueva de la Sierra: estubon, binun",
+    "10146": "Pinofranqueado y El Castillo: etubun; en El Castillo, estubon, binun",
+    "10084": "Gata: estubon",
+    "10089": "Guijo de Galisteo: estubun; y nazyerun",
+    "10189": "Torrejoncillo: estubun",
+    "10061": "Ceclavín: estubun, con la s débil; y dyerun"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 106: tuvón, supon, dijon, trajon, vinon, anduvon, hizon",
+    "10051": "Velo Nieto 1956, p. 106: tuvón, supon, dijon, trajon, vinon, anduvon, hizon",
+    "10108": "Velo Nieto 1956, p. 106: tuvón, supon, dijon, trajon, vinon, anduvon, hizon",
+    "10135": "Velo Nieto 1956, p. 106: tuvón, supon, dijon, trajon, vinon, anduvon, hizon",
+    "10146": "Velo Nieto 1956, p. 106: tuvón, supon, dijon, trajon, vinon, anduvon, hizon",
+    "10040": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: híθun, bínun, díhun, eʰtúbun, tráhun",
+    "10053": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10059": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: púsun, bínun, díhun, trúhun",
+    "10067": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: púsun, híθun, bínun, tráhun",
+    "10088": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10089": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10101": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10127": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: púsun, bínun, díhun, eʰtúbun, trúhun",
+    "10128": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10143": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
+    "10150": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: bínun, díhun, eʰtúbun, trúhun",
+    "10189": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: bínun, díhun, eʰtúbun, trúhun",
+    "10207": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Villa del Campo: sin forma fuerte en Cummins; el informante de 1912 solo conocía las castellanas. Sube con la comarca, afinando a lo probable",
+    "37234": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
+    "37221": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
+    "37245": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
+    "37269": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
+    "37371": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2007; Alcón 2002; Portaje 2011",
+   "terminos": {
+    "10096": "Hervás: estos perfectos, en una hablante de 65 años, en 2005 (González Salgado 2007, p. 50)",
+    "10089": "Alcón 2002: jidun, vinun, trujun, supun, dijun, «muy frecuentes»",
+    "10150": "Ayuntamiento de Portaje 2011"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Alcuéscar, El Sahugo y la sierra del Jerte"
+  },
+  "terminos": {
+   "37303": "El Sahugo: perfectos analógicos (ALEP, vía Alonso Pascua 2023)",
+   "10010": "Alcuéscar: hizon, pudon, vinon (Menéndez Pidal, vía Krüger, § 442, n. 1)",
+   "10147": "Piornal: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10184": "El Torno: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10196": "Valdastillas: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10054": "Casas del Castañar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10154": "Rebollar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10036": "Cabrero: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
+   "10025": "Barrado: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "alagon"
+  ],
+  "terminos": [
+   "10006"
+  ],
+  "excluir": []
+ },
+ "_probable": "Fuerte en el recuadro de RM11 Sierra de Gata, Las Hurdes y el Alagón. Ahigal en claro: Paniagua 2002, fuente C, lo da «casi sistemático» en adultos, y Krüger no tiene allí ningún perfecto",
+ "algunos": {
+  "comarcas": [
+   "trasierra",
+   "ambroz",
+   "jerte",
+   "montanchez"
+  ],
+  "_nota": "Débil en el recuadro de RM11; la Sierra de Montánchez, por Alcuéscar"
+ },
+ "nunca": {
+  "10072": "Eljas: el pasado en -orin (Montero Curiel 2006, pp. 19-23)",
+  "10164": "San Martín de Trevejo: el pasado en -orin (Montero Curiel 2006, pp. 19-23)",
+  "10205": "Valverde del Fresno: chegaran (Montero Curiel 2006, pp. 19-23)"
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2007, y otras fuentes del taller"
+}
