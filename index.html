@@ -128,8 +128,11 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pestanas button[aria-selected="true"] { color: var(--verde) }
 .pestanas button::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--naranja); transform: scaleX(0); transform-origin: 0 50% }
 .pestanas button[aria-selected="true"]::after { transform: scaleX(1) }
-.carrusel.auto .pestanas button[aria-selected="true"]::after { animation: avance 8s linear both }
-.carrusel.auto.pausa .pestanas button[aria-selected="true"]::after { animation-play-state: paused }
+.carrusel.auto .pestanas button[aria-selected="true"]::after { animation: avance 12s linear both }
+.carrusel.auto.pausa .pestanas button[aria-selected="true"]::after, .carrusel.auto.parado .pestanas button[aria-selected="true"]::after { animation-play-state: paused }
+.flechas .pausa-btn { width: auto; border-radius: 999px; padding: 0 14px; font-size: 13px; font-weight: 800; margin-right: auto; display: inline-flex; align-items: center; gap: 6px }
+.flechas .pausa-btn span { font-size: 10px; letter-spacing: -1px }
+.carrusel:not(.auto) .pausa-btn { display: none }
 @keyframes avance { from { transform: scaleX(0) } to { transform: scaleX(1) } }
 .ventana { overflow: hidden; touch-action: pan-y }
 .pista { display: flex; transition: transform .55s cubic-bezier(.4,0,.2,1) }
@@ -431,11 +434,11 @@ span.fila .tit { color: var(--texto-2) }
       <div class="pestanas" role="tablist"><button type="button" role="tab" id="pt-taller" aria-controls="dp-taller" aria-selected="true" data-i="0">El taller</button><button type="button" role="tab" id="pt-zona" aria-controls="dp-zona" aria-selected="false" data-i="1">La zona</button><button type="button" role="tab" id="pt-trabajo" aria-controls="dp-trabajo" aria-selected="false" data-i="2">Cómo trabaja</button><button type="button" role="tab" id="pt-web" aria-controls="dp-web" aria-selected="false" data-i="3">Esta web</button></div>
       <div class="ventana"><div class="pista" id="pista">
           <article class="diapo" role="tabpanel" id="dp-taller" aria-labelledby="pt-taller" data-foto=""><div><h3>Un programa del CEPA Coria abierto a toda la comarca</h3><p>El Taller de estremeñu es un programa no formal del CEPA Coria, abierto a toda la población de Coria y su comarca. Se reúne los lunes y los jueves de 17:55 a 18:50, de octubre a mayo, en la biblioteca del centro.</p></div><figure class="foto" hidden></figure></article>
-          <article class="diapo" role="tabpanel" id="dp-zona" aria-labelledby="pt-zona" data-foto=""><div><h3>El noroeste de Cáceres, y un poco de Salamanca</h3><p>El taller estudia el habla de la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria. Esa habla no se para en la raya de la provincia: sigue por El Rebollar, en Salamanca. En los tres pueblos de la fala, Valverde del Fresno, Eljas y San Martín de Trevejo, se habla otra cosa, hermana del gallego y del portugués, que queda aparte. Coria sale más que ningún otro sitio porque es el pueblo mejor estudiado.</p></div><figure class="foto" hidden></figure></article>
+          <article class="diapo" role="tabpanel" id="dp-zona" aria-labelledby="pt-zona" data-foto=""><div><h3>El noroeste de Cáceres, y un poco de Salamanca</h3><p>El taller estudia el habla de la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria. Esa habla no se para en la raya de la provincia: sigue por El Rebollar, en Salamanca. En los tres pueblos de la fala, Valverde del Fresno, Eljas y San Martín de Trevejo, se habla otra cosa, hermana del gallego y del portugués, que queda aparte.</p></div><figure class="foto" hidden></figure></article>
           <article class="diapo" role="tabpanel" id="dp-trabajo" aria-labelledby="pt-trabajo" data-foto=""><div><h3>Leer en voz alta y escuchar a quien lo sabe</h3><p>Leemos en voz alta textos de la comarca: conversaciones que grabaron los investigadores que vinieron a estudiarla, cuentos, pequeñas publicaciones en periódicos, romances y poemas. Al leerlos salen los rasgos del habla, y quienes la conservan o la recuerdan cuentan si en su pueblo se dice así.</p></div><figure class="foto" hidden></figure></article>
           <article class="diapo" role="tabpanel" id="dp-web" aria-labelledby="pt-web" data-foto=""><div><h3>Todo el material del taller, en un sitio</h3><p>Esta web reúne el material del taller: los apuntes, apartado por apartado; los rasgos del habla, cada uno con su mapa por pueblos y por fechas; los textos que leemos en clase, y el diccionario de las voces del noroeste. Está en construcción y se irá completando a lo largo del curso.</p></div><figure class="foto" hidden></figure></article>
       </div></div>
-      <div class="flechas"><button type="button" id="c-ant" aria-label="Anterior">‹</button><button type="button" id="c-sig" aria-label="Siguiente">›</button></div>
+      <div class="flechas"><button type="button" id="c-pausa" class="pausa-btn" aria-pressed="false" aria-label="Pausar el carrusel"><span aria-hidden="true">❚❚</span> Pausa</button><button type="button" id="c-ant" aria-label="Anterior">‹</button><button type="button" id="c-sig" aria-label="Siguiente">›</button></div>
     </section>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.</blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
@@ -699,8 +702,8 @@ $('visor-cerrar').addEventListener('click', cerrarVisor);
 $('visor').addEventListener('click', e => { if (e.target.id === 'visor-caja' || e.target.id === 'visor') cerrarVisor(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor').hidden) cerrarVisor(); });
 
-// Carrusel de la portada. Avanza solo cada 8 s (la barra naranja de la pestaña marca el tiempo), se para al pasar el ratón
-// o al tocarlo, y se mueve con las pestañas, las flechas o deslizando el dedo. Sin avance automático si se pide menos movimiento.
+// Carrusel de la portada. Avanza solo cada 12 s (la barra naranja de la pestaña marca el tiempo), se para al pasar el ratón
+// o al tocarlo, y se mueve con las pestañas, las flechas o deslizando el dedo. Sin avance automático si se pide menos movimiento. El botón Pausa lo para hasta que se vuelve a pulsar.
 // Para poner una foto en una diapositiva: data-foto="img/…" en su <article>.
 (function carrusel() {
   const c = $('carrusel'), pista = $('pista'), tabs = [...c.querySelectorAll('[role="tab"]')], diapos = [...c.querySelectorAll('.diapo')];
@@ -715,6 +718,13 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor'
   if (!sinMov) c.classList.add('auto');
   tabs.forEach((t, k) => { t.addEventListener('click', () => ir(k)); t.addEventListener('animationend', () => ir(i + 1)); });
   $('c-ant').addEventListener('click', () => ir(i - 1)); $('c-sig').addEventListener('click', () => ir(i + 1));
+  const bp = $('c-pausa');
+  bp.addEventListener('click', () => {
+    const parado = c.classList.toggle('parado');
+    bp.setAttribute('aria-pressed', String(parado));
+    bp.setAttribute('aria-label', parado ? 'Seguir con el carrusel' : 'Pausar el carrusel');
+    bp.innerHTML = parado ? '<span aria-hidden="true">▶</span> Seguir' : '<span aria-hidden="true">❚❚</span> Pausa';
+  });
   c.addEventListener('keydown', e => { if (e.key === 'ArrowRight') ir(i + 1); if (e.key === 'ArrowLeft') ir(i - 1); });
   c.addEventListener('pointerenter', () => c.classList.add('pausa')); c.addEventListener('pointerleave', () => c.classList.remove('pausa'));
   c.addEventListener('focusin', () => c.classList.add('pausa')); c.addEventListener('focusout', () => c.classList.remove('pausa'));
