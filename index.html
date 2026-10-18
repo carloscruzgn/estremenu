@@ -1128,8 +1128,9 @@ async function crearMapa(baseP) {
     (RS.oleadas || []).forEach((o, i) => E.push({ id: 'ola' + (i + 1), ola: i + 1, nombre: o.rotulo, k: 'Pueblos donde se ha recogido', anio: o.rotulo, s: o.fuentes, cam: 'area' }));
     const hay = c => Object.values(CL).some(x => x.cls === c);
     if (hay('out')) E.push({ id: 'fuera', nombre: 'Fuera del área', ...(RS.fuera.rotulo || {}), cam: 'wide' });
-    if (hay('prob') || hay('part') || hay('never')) E.push({ id: 'prob', nombre: 'Extensión probable', k: 'Uniendo los datos', h: 'La extensión probable', s: '', cam: 'prob' });
-    if ((RS.tipo || 'regional') !== 'general' && RS.noroeste) E.push({ id: 'nw', nombre: 'Resto de Extremadura', ...(RS.noroeste.rotulo || {}), cam: 'ext' });
+    // La extensión probable recoge siempre el resto de Extremadura: lo que antes era un estado aparte va aquí (Carlos, 18/10/2026)
+    const nw = RS.noroeste && RS.noroeste.rotulo;
+    E.push({ id: 'prob', nombre: 'Extensión probable', k: 'Uniendo los datos', h: 'La extensión probable', s: nw ? [nw.h, nw.s].filter(Boolean).join('. ') : '', cam: 'prob' });
     return E;
   }
 
@@ -1158,9 +1159,9 @@ async function crearMapa(baseP) {
     if (x.cls === 'prob') { h = HPROB; c.copy(C.prob); }
     if (x.cls === 'part') { h = HPART; c.copy(C.part); }
     if (x.cls === 'never') c.copy(C.never);
-    if (id === 'prob') return { h, c, em };
-    if (x.neg) { h = HNEG; c.copy(C.neg); }
-    else if (x.cls === 'base' && !sal) c.copy(C.extBase);
+    // El dato del pueblo en contra manda sobre el tono de su comarca (probable o en algunos pueblos)
+    if (x.neg) { h = d.area === 'core' ? HCORE : d.area === 'contact' ? HB : HNEG; c.copy(C.never); }
+    else if (x.cls === 'base' && d.area === 'none' && !sal) c.copy(C.extBase);
     return { h, c, em };
   }
 
@@ -1176,7 +1177,7 @@ async function crearMapa(baseP) {
     const { p, t } = posDe(shotDe(E));
     camera.position.copy(p0); camera.lookAt(t0); camera.updateMatrixWorld();
     const cam = { p0, t0, p1: p, t1: t };
-    const ol = { a0: areaLine.userData.o, a1: E.lineaArea != null ? E.lineaArea : (E.id === 'nw' ? 0 : (E.id === 'prob' ? 0.5 : 0.95)), e0: extLine.userData.o, e1: E.lineaExt != null ? E.lineaExt : (E.id === 'nw' ? 0.9 : 0), i0: isoO, i1: E.iso ? 1 : 0 };
+    const ol = { a0: areaLine.userData.o, a1: E.lineaArea != null ? E.lineaArea : (E.id === 'prob' ? 0.5 : 0.95), e0: extLine.userData.o, e1: E.lineaExt != null ? E.lineaExt : (E.id === 'prob' ? 0.9 : 0), i0: isoO, i1: E.iso ? 1 : 0 };
     anim = { t0: performance.now(), dur: (inmediato || sinMov) ? 1 : 1700, desde, hasta, cam, ol };
     controls.enabled = false;
     pintarRotulo(E); pintarLeyenda(E); pintarBotones(); pintarInfo();
@@ -1253,8 +1254,7 @@ async function crearMapa(baseP) {
     if (E.id === 'area') f = [filaL('#85be6d', 'Área del taller'), filaL('#3d6a33', 'Área de contacto')];
     else if (E.ola) f = [filaL('#ff914d', 'Recogido en estos años'), ...(E.ola > 1 ? [filaL('#a95f33', 'Recogido antes')] : [])];
     else if (E.id === 'fuera') f = [filaL('#ff914d', L.reg)];
-    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never')) f.push(filaL('#0c0c0c', tipo === 'distincion' ? L.neg : 'No se ha recogido', true)); }
-    else if (E.id === 'nw') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (Object.values(CL).some(x => x.neg)) f.push(filaL('#0a1a07', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
+    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never') || Object.values(CL).some(x => x.neg)) f.push(filaL('#0c0c0c', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
     $('leyenda').innerHTML = f.join('');
   }
   function pintarBotones() {
@@ -1309,10 +1309,11 @@ async function crearMapa(baseP) {
     const filas = [];
     (RS.oleadas || []).forEach(o => { if (o.terminos && o.terminos[d.code]) filas.push(li('#ff914d', o.rotulo, o.terminos[d.code])); });
     if (RS.fuera && RS.fuera.terminos && RS.fuera.terminos[d.code] && !filas.length) filas.push(li('#ff914d', 'Recogido', RS.fuera.terminos[d.code]));
-    if (x.cls === 'never' && RS.nunca) filas.push(li('#0c0c0c', RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'No se ha recogido', RS.nunca[d.code], true));
-    if (x.cls === 'prob') filas.push(li('#ffc4a0', 'Probable', 'sin dato del pueblo, por los de su comarca'));
-    if (x.cls === 'part') filas.push(li('#b84c1e', 'En algunos pueblos de la comarca', ''));
-    if (x.neg) filas.push(li('#0a1a07', RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido', RS.noroeste && RS.noroeste.en_contra && RS.noroeste.en_contra.fuente, true));
+    const enContra = RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido';
+    if (x.cls === 'never' && RS.nunca) filas.push(li('#0c0c0c', enContra, RS.nunca[d.code], true));
+    if (x.cls === 'prob' && !x.neg) filas.push(li('#ffc4a0', 'Probable', 'sin dato del pueblo, por los de su comarca'));
+    if (x.cls === 'part' && !x.neg) filas.push(li('#b84c1e', 'En algunos pueblos de la comarca', ''));
+    if (x.neg) filas.push(li('#0c0c0c', enContra, RS.noroeste && RS.noroeste.en_contra && RS.noroeste.en_contra.fuente, true));
     if (!filas.length) filas.push(li('#2f5a25', 'Sin datos para este rasgo', '', true));
     box.innerHTML = `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
   }
@@ -1360,7 +1361,7 @@ async function crearMapa(baseP) {
       RS = datos.rasgo; CL = datos.clases; sel = null;
       wideBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && CL[d.code].cls === 'out')).map(d => d.rings));
       // La extensión probable se encuadra con todo lo que pinta: en un rasgo de toda Extremadura, la región entera
-      probBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && ['out', 'prob', 'part', 'never'].includes(CL[d.code].cls))).map(d => d.rings));
+      probBB = bbox(base.munis.filter(d => d.area === 'core' || /^(06|10)/.test(d.code) || (CL[d.code] && ['out', 'prob', 'part', 'never'].includes(CL[d.code].cls))).map(d => d.rings));
       medir(); encuadres();
       for (const l of etiquetas.splice(0)) l.e.remove();
       etiqueta('Coria<span class="punto"></span>', coria[0], coria[1], HREG, 'con-punto', null, '10067');
@@ -1369,7 +1370,7 @@ async function crearMapa(baseP) {
       if (RS.llamada) { const pz = byCode[RS.llamada.termino].userData.d.c; etiqueta(RS.llamada.texto, pz[0], pz[1], HCORE, 'llamada', ['prob'], RS.llamada.termino); }
       if (RS.noroeste) for (const r of RS.noroeste.rotulos_mapa || []) {
         const codes = r.comarca ? base.comarcas[r.comarca].terminos : base.munis.filter(d => d.code.startsWith(r.provincia)).map(d => d.code);
-        const [x, y] = cen(codes.filter(c => byCode[c])); etiqueta(esc(r.texto), x + (r.dx || 0), y + (r.dy || 0), 0.1, r.clase === 'big' ? 'grande' : 'peq', ['nw']);
+        const [x, y] = cen(codes.filter(c => byCode[c])); etiqueta(esc(r.texto), x + (r.dx || 0), y + (r.dy || 0), 0.1, r.clase === 'big' ? 'grande' : 'peq', ['prob']);
       }
       ESTADOS = construirEstados();
       const { p, t } = posDe(shots.area); controls.target.copy(t); ponerCam(p, t);
