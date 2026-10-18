@@ -35,7 +35,7 @@
      ]
     },
     {
-     "t": " las nochis en la iverná! ¡Y yo sólita en la casa que ya va pa treci añus que me se fue el maríu pa Buenus Airis y no he vueltu a sabel na de él! ¡Bien sola que me dejó, y ni sé si es vivu o muertu! ¡Ay Cristu Benditu, lo que rejundin las nochis del iviernu! ¡Solita tengu que dormil, bien sólita, que ni un hombri ha vuelto a pisal mi cuartu desde que él se marchó pa Buenus Airis! ¡Y ni un hiju me dio, que pol esu ici la genti que soy machorra, y a lo mejol el machorra era él! ¡Ay qué nochis más largas...!"
+     "t": " las nochis en la iverná! ¡Y yo solita en la casa que ya va pa treci añus que me se fue el maríu pa Buenus Airis y no he vueltu a sabel na de él! ¡Bien sola que me dejó, y ni sé si es vivu o muertu! ¡Ay Cristu Benditu, lo que rejundin las nochis del iviernu! ¡Solita tengu que dormil, bien solita, que ni un hombri ha vuelto a pisal mi cuartu desde que él se marchó pa Buenus Airis! ¡Y ni un hiju me dio, que pol esu ici la genti que soy machorra, y a lo mejol el machorra era él! ¡Ay qué nochis más largas...!"
     }
    ]
   },
@@ -365,7 +365,7 @@
    "quien": "Colasa",
    "tokens": [
     {
-     "t": "¡Sí, perú tenía cá tizón que jarreaba cá tufu...! Se conocí que "
+     "t": "¡Sí, peru tenía cá tizón que jarreaba cá tufu...! Se conoci que "
     },
     {
      "w": "el su",
@@ -813,7 +813,7 @@
   },
   {
    "n": 68,
-   "forma": "Se conocí",
+   "forma": "Se conoci",
    "glosa": "se conoce"
   },
   {
@@ -1070,7 +1070,7 @@
    {
     "codigo": "C09",
     "parrafos": [
-     "Dos palabras, y siempre con d: *hacer*, en *jadin*, *jadel*, *jadi* y *jadremus*, y *aceite*, en *adeiti*, tres veces. Ninguna más: *ici* ‘dice’, *vecina*, *paeci* o *conocí* van con c, como en castellano.",
+     "Dos palabras, y siempre con d: *hacer*, en *jadin*, *jadel*, *jadi* y *jadremus*, y *aceite*, en *adeiti*, tres veces. Ninguna más: *ici* ‘dice’, *vecina*, *paeci* o *conoci* van con c, como en castellano.",
      "*Hacer* es de las palabras en que más duró: en 1912 Krüger la encontró suelta en Pozuelo de Zarzón, Pinofranqueado y Gata, y precisamente en *hacer*. *Decir*, que otras fuentes dan con d tanto como *hacer*, Corrales lo escribe con c. *Jadel* lleva además la j de la F- latina: dos rasgos viejos en una palabra.",
      "En el mismo texto, la d del castellano se cae a cada paso, *maríu*, *dao*, *teníu*, *pueo*, y la de *adeiti* y *jadel* no se cae nunca. Si fuera una d como las otras, se caería como ellas.",
      "Krüger no la oyó en 1912 en Zarza de Granadilla ni en Granadilla, que decían *azeite*. Corrales la escribía once años antes, a unos kilómetros."
@@ -1080,8 +1080,8 @@
    {
     "codigo": "M03",
     "parrafos": [
-     "Ocho en -inu, -ina: *poquinu*, *cosinas*, *braserinu*, *desmejoraína*, *penina*, *alantinu*, *ratinu*. Siete en -itu, -ita: *sólita*, tres veces, *mesmitu*, *probecita*, *derrengaítus*, *tiesitu*. Ninguno en -illo.",
-     "El -itu va en frases hechas, *sólita* ‘sola del todo’ y *agora mesmitu*, y en la lástima: *probecita*, *derrengaítus*, *se quea tiesitu* ‘se queda muerto’. El -inu, en lo demás. No es regla cerrada: *desmejoraína* y *penina* también son lástima.",
+     "Ocho en -inu, -ina: *poquinu*, *cosinas*, *braserinu*, *desmejoraína*, *penina*, *alantinu*, *ratinu*. Siete en -itu, -ita: *solita*, tres veces, *mesmitu*, *probecita*, *derrengaítus*, *tiesitu*. Ninguno en -illo.",
+     "El -itu va en frases hechas, *solita* ‘sola del todo’ y *agora mesmitu*, y en la lástima: *probecita*, *derrengaítus*, *se quea tiesitu* ‘se queda muerto’. El -inu, en lo demás. No es regla cerrada: *desmejoraína* y *penina* también son lástima.",
      "Un vecino de Ahigal describía en 2002 el mismo reparto: -inu, -ina el frecuente, -ito, -ita con valor de conmiseración y en lexicalizaciones, y -illo «extrañísimo». Corrales lo hacía igual cien años antes."
     ],
     "pregunta": "¿Cuándo decís -inu y cuándo -itu? ¿Os suena mejor *probecita* o *probecina*?"
