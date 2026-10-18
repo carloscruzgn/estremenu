@@ -488,6 +488,18 @@ span.fila .tit { color: var(--texto-2) }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
 .apartado figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px }
 .apartado figcaption b { color: var(--verde); font-weight: 800; letter-spacing: .06em; margin-right: 6px }
+/* Galería de mapas del anexo: en pequeño, con el título destacado; el mapa entero se amplía al tocarlo (Carlos, 19/10/2026) */
+.apartado .nota-galeria { font-size: 14px; color: var(--texto-3); margin: 0 0 14px }
+.apartado ul.galeria { list-style: none; padding: 0; margin: 0 0 30px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px }
+@media (max-width: 560px) { .apartado ul.galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px } }
+.apartado ul.galeria li { margin: 0 }
+.apartado ul.galeria button { display: flex; flex-direction: column; gap: 3px; width: 100%; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: zoom-in }
+.apartado ul.galeria img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131; border-radius: 6px; margin-bottom: 7px; transition: opacity .15s }
+.apartado ul.galeria .tit { font-weight: 800; font-size: 15.5px; line-height: 1.3; color: var(--texto) }
+.apartado ul.galeria .fecha { font-size: 13px; line-height: 1.35; color: var(--texto-3) }
+.apartado ul.galeria button:hover img { opacity: .85 }
+.apartado ul.galeria button:hover .tit, .apartado ul.galeria button:focus-visible .tit { color: var(--naranja) }
+.apartado ul.galeria button:focus-visible { outline: 2px solid var(--naranja); outline-offset: 4px; border-radius: 6px }
 /* Página de un autor: la de un apartado, con su retrato o portada a un lado y las fichas de los informantes */
 .apartado .entradilla-autor { font-size: 20px; line-height: 1.55; color: var(--texto-2); margin: -10px 0 26px }
 .apartado h3 { font-weight: 900; font-size: 22px; letter-spacing: -.01em; color: var(--naranja); margin: 34px 0 10px }
@@ -1216,6 +1228,7 @@ function pintarApartado(a) {
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
     : b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
     : b.t === 'refs' ? `<ul class="refs">${b.items.map((x, i) => `<li><b>${autorRef(x.autor, i ? b.items[i - 1].autor : '')} (${esc(x.anio)})</b>. ${ref(x.resto)}</li>`).join('')}</ul>`
+    : b.t === 'galeria' ? `<p class="nota-galeria">Toca un mapa para verlo en grande.</p><ul class="galeria">${b.mapas.map(m => `<li><button type="button" data-ampliar="img/mapas/${m.codigo}.webp" aria-label="Ampliar el mapa: ${esc(m.titulo)}"><img src="img/mapas/${m.codigo}.webp" alt="" loading="lazy" width="1600" height="1131"><span class="tit">${esc(m.titulo)}</span>${m.fecha ? `<span class="fecha">${esc(m.fecha.charAt(0).toUpperCase() + m.fecha.slice(1))}</span>` : ''}</button></li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo + (b.fecha ? ', ' + b.fecha : '')).replace(/([^.])$/, '$1.')} Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';

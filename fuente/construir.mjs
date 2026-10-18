@@ -129,10 +129,10 @@ AP.apartados = AP.apartados.filter(a => a !== antes);
 AP.apartados.push(leer('apuntes/bibliografia.json'));
 // y detrás, el anexo con los mapas históricos por orden de fechas (Carlos, 19/10/2026); cada mapa tiene que estar en img/mapas
 const ANX = leer('apuntes/anexo.json');
-for (const b of ANX.bloques) if (b.t === 'mapa' && !fs.existsSync(path.join(aqui, '..', 'img', 'mapas', b.codigo + '.webp'))) { console.error('anexo.json: falta img/mapas/' + b.codigo + '.webp'); process.exit(1); }
+for (const b of ANX.bloques.flatMap(b => b.t === 'galeria' ? b.mapas : b.t === 'mapa' ? [b] : [])) if (!fs.existsSync(path.join(aqui, '..', 'img', 'mapas', b.codigo + '.webp'))) { console.error('anexo.json: falta img/mapas/' + b.codigo + '.webp'); process.exit(1); }
 AP.apartados.push(ANX);
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
-console.log('apuntes.json:', AP.apartados.length, 'apartados,', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'mapa').length, 'mapas');
+console.log('apuntes.json:', AP.apartados.length, 'apartados,', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'mapa').length, 'mapas en el texto y', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'galeria').reduce((n, b) => n + b.mapas.length, 0), 'en galería');
 console.log('rasgos.json:', CAT.rasgos.length, 'rasgos,', CAT.rasgos.filter(r => r.mapa).length, 'con mapa,', (CAT.fuera || []).length, 'fuera del taller');
 
 // ---------- las tres encuestas ----------
