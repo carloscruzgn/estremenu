@@ -10,6 +10,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `rasgos.json`: la lista de los treinta y un rasgos de los apuntes del alumnado, con cuáles tienen mapa.
   - `rasgos/<código>.json`: la página del rasgo en los apuntes y, si tiene mapa, el fichero del rasgo del generador de reels y la clase de cada término.
   - `textos.json`: los textos leídos en el taller.
+  - `autores.json`: las páginas «Sobre el autor» de los textos, una por autor o fuente, con sus informantes; copia de `fuente/autores.json`.
   - `portada.json`: el mapa de la portada —España y Portugal, Extremadura, el área del taller y los términos—, en kilómetros y simplificado, para la animación del título.
   - `signos.json`: los signos de Cummins, de la hoja GEN-06, para el desplegable de la transcripción.
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
@@ -21,6 +22,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `catalogo.json`: los títulos de las páginas de rasgo de los apuntes y qué rasgos tienen mapa y página.
   - `textos/TEX-NN.json`: cada texto leído en el taller, con la fecha de la pestaña Sesiones de la app, sus rasgos destacados, las palabras marcadas con el código de su rasgo y el glosario de la guía, que la web no muestra. Salen del texto marcado de la guía de clase (guia-clase-pdf.zip).
   - `signos-cummins.json`: los signos de Cummins, con el texto de GEN-06.
+  - `autores.json`: las páginas «Sobre el autor» de los textos: una por autor o fuente (Gabriel y Galán; Cummins, con un apartado por informante), con los textos que la enlazan, sacadas de la sección 1 de la guía de clase de cada texto. Bloques `h`, `p`, `cita`, `informante` y `fuentes`; el `*título*` va en cursiva. Para la foto o la portada, `imagen` con `src`, `ancho`, `alto`, `alt` y `pie`, y la imagen en `img/autores/`. Un texto nuevo de un autor que ya tiene página se añade a sus `textos` y, si es de Cummins, con su `informante`.
   - `comarcas.json`: las comarcas REDEX y el área del taller, la del generador de reels.
 
 ## Añadir un texto

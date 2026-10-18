@@ -1,0 +1,68 @@
+{
+  "_": "Las páginas «Sobre el autor» de los textos del taller. Salen de la sección 1 de la guía de clase de cada texto (guia-clase-pdf.zip), adaptadas a mano. Lo que se corrige, se corrige en la guía y se vuelve a copiar.",
+  "autores": [
+    {
+      "id": "gyg",
+      "antetitulo": "El autor de «El embargo»",
+      "titulo": "José María Gabriel y Galán",
+      "entradilla": "Un poeta de Frades de la Sierra que escribió con el habla del Guijo de Granadilla.",
+      "enlace": "Gabriel y Galán y «El embargo»",
+      "imagen": null,
+      "textos": ["TEX-01"],
+      "bloques": [
+        { "t": "h", "texto": "Su vida" },
+        { "t": "p", "texto": "Nació en Frades de la Sierra, en la provincia de Salamanca, el 28 de junio de 1870. Fue maestro en Guijuelo y en Piedrahíta. Se casó con Desideria en Plasencia el 26 de enero de 1898, dejó la escuela y a finales de ese año se instaló en Guijo de Granadilla, donde ya había pasado temporadas para verla. Allí administró fincas. Tuvieron cuatro hijos: Jesús, Juan, Esteban Blas y María Purificación." },
+        { "t": "p", "texto": "La fama le llegó en 1901, con la flor natural de los Juegos Florales de Salamanca por «El ama», en unos juegos que presidía Unamuno. Entre 1902 y 1904 publicó *Castellanas*, *Extremeñas* y *Campesinas*. En diciembre de 1902 Cáceres le dio un banquete de homenaje, y en abril de 1903 el Guijo lo nombró hijo adoptivo. Murió en el Guijo el 6 de enero de 1905, con treinta y cuatro años. Su casa, en la plaza de España, la legaron sus descendientes en 1980 y es hoy la Casa-Museo Gabriel y Galán, abierta desde 1985." },
+        { "t": "h", "texto": "La «jerga» del Guijo" },
+        { "t": "p", "texto": "Desde que llegó al Guijo se encontró con un habla distinta de la suya, por la tierra y por la clase de gente. Él la llamaba «jerga», casi nunca «dialecto». En una carta de octubre de 1900 explicaba por qué no había mandado unos versos a un amigo:" },
+        { "t": "cita", "texto": "Por temor a que no fuera muy de su agrado la jerga lingüística de por aquí, que es graciosísima y pintoresca y expresiva para oída pronunciar, pero no para escrita y leída con nuestro acento, porque de este modo pierde todo su sabor." },
+        { "t": "p", "texto": "La anotaba al vuelo. Del eclipse de sol del 25 de mayo de 1900 copió lo que dijo el vaquero que estaba con él, «¡Si los clisis jueran largos y amenúo, yo cascaba deseguía!», y lo que dijo el porquerillo cuando volvió el sol, que se había parecido a «una luna renegría, con el reondel mal jechu». En enero de 1901 le mandó a Unamuno «medio centenar de palabrejas de las de acá»." },
+        { "t": "p", "texto": "El habla que recoge es la de un borde del área del taller. La tierra de Granadilla mira más hacia Plasencia que hacia Coria, y en 1912 Krüger encontró en los pueblos de alrededor del Guijo mucha mezcla: en un mismo hablante, mujer y mejor junto a ayel y moril." },
+        { "t": "h", "texto": "La pregunta de Menéndez Pidal" },
+        { "t": "p", "texto": "Ramón Menéndez Pidal, el gran filólogo de la época, preparaba entonces su estudio del dialecto leonés. Hacia finales de 1902 le escribió para hacerle la pregunta que todavía se hace cualquiera que lo lee: si el habla de sus poesías era la de Guijo de Granadilla, la de Frades de la Sierra o una mezcla que no se ciñera a ninguno de los dos pueblos. Al recibir *Extremeñas* le escribió que, de todos los poemas, le parecían sobresalir «el Embargo y Cara de cielo», y le confesó que no entendía varias palabras. Semanas después volvió a la carga: quería saber «si liendro es = bieldo». Es la palabra del verso 18." },
+        { "t": "h", "texto": "«El embargo»" },
+        { "t": "p", "texto": "*Extremeñas* lleva fecha de 1902 y salió a la calle en enero de 1903. La primera edición trae nueve poemas, y «El embargo» es el tercero. No se había publicado antes." },
+        { "t": "p", "texto": "Habla un campesino al que se le acaba de morir la mujer. Se ha gastado lo que tenía en comida y en medicinas para ella, y el juez viene a embargarle la casa. No hay narrador: el poema entero es su voz. Ofrece al embargo sus herramientas, el sacho, las hoces colgadas del techo, la segureja y el cacho de bieldo, porque ya no tiene para quién trabajar. Solo pide que nadie toque la cama donde ella ha muerto." },
+        { "t": "p", "texto": "El prólogo de la primera edición era del poeta catalán Joan Maragall, que para explicar qué es la poesía copió los versos 27 a 36, de «¡Pero a vel, señol jues» a «y una nochi muerto», y escribió: «Esto no es un vano halago: esto te remueve las entrañas». Ese prólogo desapareció de las ediciones siguientes." },
+        { "t": "p", "texto": "Los versos pares riman en é-o, del primero al último: ésos, mieo, muerto, dinero… güelo. Por eso en los finales de verso la -o no se cierra en -u, aunque dentro del verso esté todu. La -e, en cambio, se cierra casi siempre: hay veintidós -i en el poema. El texto que leemos es el de las *Obras completas* de 1909, con la ortografía de hoy." },
+        { "t": "h", "texto": "Lo que se ha dicho de su lengua" },
+        { "t": "p", "texto": "El poeta Gerardo Diego lo resumió en 1954: «Es simplemente negado o totalmente glorificado». Para unos estudiosos, sus poemas están escritos en español vulgar, con un baño de dialecto por encima. Para otros, es recreación literaria y no copia del habla, pero da pistas suficientes de cómo se hablaba. Al estudiar «El embargo» se ha visto que muchas de sus formas no son solo de aquí, sino de todo el castellano popular, y que sumadas recrean el habla del norte de Cáceres. Quien lo estudió hizo suya una frase que otro estudioso había escrito de Chamizo: «el poeta no inventa nada»." },
+        { "t": "fuentes", "texto": "Salvador Plans, 2005 y 2007; Nieto Caballero, 2016; Krüger, 1914; Casa-Museo Gabriel y Galán. El detalle, en la guía de clase de «El embargo»." }
+      ]
+    },
+    {
+      "id": "cummins",
+      "antetitulo": "El autor de las conversaciones",
+      "titulo": "John G. Cummins y su libro",
+      "entradilla": "*El habla de Coria y sus cercanías*, de 1974, de donde salen las conversaciones que leemos en el taller. Es la única monografía de la comarca.",
+      "enlace": "Cummins, su libro y quien habla",
+      "imagen": null,
+      "textos": ["TEX-02", "TEX-03"],
+      "bloques": [
+        { "t": "h", "texto": "El libro" },
+        { "t": "p", "texto": "John G. Cummins, un profesor inglés, publicó *El habla de Coria y sus cercanías* en Londres, en 1974. Para Coria y siete pueblos de su entorno es lo primero que se escribió de su habla. No quería quedarse en el habla de su momento: quería compararla con lo que habían apuntado antes Krüger, en 1912, y Espinosa, en los años treinta, para saber qué rasgos se habían debilitado y cuáles se habían mantenido o reforzado." },
+        { "t": "h", "texto": "Cómo grabó" },
+        { "t": "p", "texto": "Hizo tres viajes: seis semanas en la primavera de 1967, cinco en la de 1969 y dos meses en el verano de 1972. Grabó en magnetófono y estudió las cintas en Aberdeen, en Escocia. Lo cuenta así:" },
+        { "t": "cita", "texto": "Las más de las grabaciones se hicieron disimuladamente para que no se cohibiesen los hablantes, e incluyen conversaciones en que hablan entre sí con libertad y familiaridad. Procuré siempre ganar la confianza de los habitantes, haciéndome pasar por turista que quería ver y oír todo lo típico de la región […]. No pagué a ningún informante." },
+        { "t": "p", "texto": "No buscó solo al viejo que no sabía leer, como se hacía entonces: habló con cuarenta y dos personas de todas las edades y condiciones, de trece pueblos. Llevaba el cuestionario del atlas lingüístico de Andalucía, pero lo usó para empezar a hablar, no como un interrogatorio." },
+        { "t": "h", "texto": "Por qué copió conversaciones" },
+        { "t": "p", "texto": "Pensaba que una lista ordenada de rasgos, por necesaria que fuera, no daba idea del verdadero carácter del habla. Por eso puso al final del libro veintiuna conversaciones con sus informantes principales, de la A a la U, copiadas letra por letra con un alfabeto lleno de signos para apuntar cada sonido. Son las que leemos en clase: vecinos de la comarca hablando de sus cosas hace sesenta años." },
+        { "t": "h", "texto": "La comarca que encontró" },
+        { "t": "p", "texto": "Cuando llegó Cummins, la comarca cambiaba deprisa. Las carreteras nuevas habían roto el aislamiento: Montehermoso, que antes miraba a Coria, tenía autobús a Plasencia y hacía allí su mercado. Los pantanos de Borbollón y de Gabriel y Galán habían traído el regadío, y con él el algodón y el tabaco en lugar del trigo, y colonos de otras regiones, sobre todo de Andalucía, en pueblos nuevos como La Moheda y Puebla de Argeme. La emigración había hecho lo demás:" },
+        { "t": "cita", "texto": "Es posible y hasta normal hablar con informantes viejos cuya familia entera se encuentra en Francia, Alemania o Suiza; hay pueblos medio despoblados, habitados en gran parte por viejos, niños de escuela y tullidos." },
+        { "t": "p", "texto": "La radio, la televisión, el cine, la iglesia y la escuela empujaban en la misma dirección. Cummins lo resumió en una frase de dos caras: los nuevos regadíos habían aliviado la miseria de los pueblos, y eso, para la conservación del habla antigua, era una desgracia." },
+        { "t": "h", "texto": "Las personas que hablan" },
+        { "t": "p", "texto": "Cummins no da nombres: cada informante lleva las letras de su pueblo y un número, y de cada uno apunta la edad, el oficio, si sabe leer y si ha salido del pueblo. Lo que dice cada uno es suyo: una persona no es un pueblo." },
+        { "t": "informante", "id": "gc1", "codigo": "GC 1", "pueblo": "Guijo de Coria", "texto": "TEX-02", "ficha": "Hombre de 73 años. Nació en Guijo de Coria. Labriego jubilado. No ha viajado. Analfabeto.", "parrafos": [
+          "Nació, por tanto, entre 1894 y 1899. Cuando Krüger pasó por el Guijo, en 1912, tenía entre trece y dieciocho años. Es el único informante del pueblo. En la comarca al pueblo lo llaman el Guiju, y a los de allí, guijeñuʰ; Guijo de Galisteo es el otru Guiju o el Guijitu.",
+          "En «La matanza» contesta a cinco preguntas sobre sus cerdos: de qué raza son, quién los cría, cuándo se matan, cómo se matan y cómo se curan los jamones. En su casa no había matarife: «No, no, no, loʰ matamuʰ nusotru». Los cerdos estaban cerca, porque en mitad de la última respuesta se pone a llamarlos: «Brega, brega, brega»."
+        ] },
+        { "t": "informante", "id": "c1", "codigo": "C 1", "pueblo": "Coria", "texto": "TEX-03", "ficha": "Hombre de 59 años. Nació en Coria. Pastor. Ha ido con su ganado a otras partes del norte de Cáceres (Malladas, Garrovillas). Sabe leer y escribir.", "parrafos": [
+          "Nació entre 1908 y 1913. Es el mismo pastor de «Las ovejas», la conversación que va justo antes en el libro. Coria es el centro de la encuesta: de los cuarenta y dos informantes, nueve son de la ciudad, y como Krüger no pasó por Coria en 1912, Cummins es la primera documentación de su habla.",
+          "En «La zancaburra» le explica a Cummins cómo funciona el cigüeñal con que se sacaba el agua del pozo: la horca, el palo que bascula sobre ella, la vara con el cubo y la piedra que hace de contrapeso. Cummins dibujó la zancaburra pieza a pieza y la fotografió. En el mismo apartado del libro apunta lo que la estaba dejando atrás: el canal, la acequia de cemento que traía el agua de los nuevos pantanos. Después, sin que nadie se lo pregunte, C 1 le enseña dos plantas del campo, el tomillo del señor y la torvisca."
+        ] },
+        { "t": "fuentes", "texto": "Cummins, *El habla de Coria y sus cercanías*, 1974, pp. 20-29, y las fichas de sus informantes. El detalle, en las guías de clase de «La matanza» y «La zancaburra»." }
+      ]
+    }
+  ]
+}

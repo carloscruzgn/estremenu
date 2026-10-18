@@ -358,6 +358,26 @@ span.fila .tit { color: var(--texto-2) }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
 .apartado figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px }
 .apartado figcaption b { color: var(--verde); font-weight: 800; letter-spacing: .06em; margin-right: 6px }
+/* Página de un autor: la de un apartado, con su retrato o portada a un lado y las fichas de los informantes */
+.apartado .entradilla-autor { font-size: 20px; line-height: 1.55; color: var(--texto-2); margin: -10px 0 26px }
+.apartado h3 { font-weight: 900; font-size: 22px; letter-spacing: -.01em; color: var(--naranja); margin: 34px 0 10px }
+.apartado blockquote { margin: 0 0 18px; padding: 2px 0 2px 18px; border-left: 3px solid var(--verde); font-size: 17px; line-height: 1.65; color: var(--texto-2); font-style: italic }
+.apartado .retrato { float: right; width: min(42%, 240px); margin: 6px 0 16px 24px }
+.apartado .retrato img { width: 100%; height: auto; display: block; border-radius: 6px; aspect-ratio: auto }
+.apartado .retrato figcaption { margin-top: 6px }
+@media (max-width: 560px) { .apartado .retrato { float: none; width: min(70%, 260px); margin: 0 0 22px } }
+.apartado .informante { clear: both; background: var(--fondo-2); border-radius: 10px; padding: 18px 20px 6px; margin: 0 0 18px; scroll-margin-top: calc(var(--cab) + 20px) }
+.apartado .informante .cab-inf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 10px }
+.apartado .informante .cod-inf { font-weight: 900; font-size: 24px; color: var(--naranja) }
+.apartado .informante .pueblo { font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.apartado .informante .ficha { font-size: 16px; color: var(--texto); border-left: 3px solid var(--naranja); padding-left: 12px }
+.apartado .informante p { font-size: 17px }
+.apartado .informante .al-texto { display: inline-block; margin: 0 0 14px; font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
+.apartado .informante .al-texto:hover { text-decoration: underline }
+.apartado .fuentes { clear: both; font-size: 14px; color: var(--texto-3); border-top: 1px solid var(--linea); padding-top: 14px; margin-top: 30px }
+.texto-pag .sobre { display: inline-block; margin: 14px 0 0 18px; font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
+.texto-pag .sobre:hover { text-decoration: underline }
+@media (max-width: 560px) { .texto-pag .sobre { display: block; margin: 10px 0 0 } }
 .apartado .boton { display: inline-block; margin: 8px 0 20px; padding: 12px 18px; border-radius: 6px; background: var(--naranja); color: var(--fondo); font-weight: 800; text-decoration: none }
 .pasos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--linea); max-width: 100% !important }
 .pasos a { text-decoration: none; padding: 12px 14px; border-radius: 6px; background: var(--fondo-2); display: grid; gap: 2px; min-width: 0 }
@@ -526,6 +546,12 @@ span.fila .tit { color: var(--texto-2) }
   </div>
 </section>
 
+<section id="v-autor" class="vista" hidden>
+  <div class="envoltura">
+    <article class="apartado" id="autor"></article>
+  </div>
+</section>
+
 <div class="visor" id="visor" hidden><button type="button" class="cerrar" id="visor-cerrar" aria-label="Cerrar">×</button><div class="caja" id="visor-caja"><img id="visor-img" alt=""></div></div>
 
 <section id="v-rasgos" class="vista" hidden>
@@ -644,6 +670,7 @@ span.fila .tit { color: var(--texto-2) }
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let AU = null;
 let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = null;
 
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
@@ -665,15 +692,18 @@ async function ir() {
   const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && (r.mapa || r.pagina));
   const texto = TX && TX.find(t => t.codigo === h);
   const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #autor-cummins, o #autor-cummins-gc1 para ir a un informante
+  const autor = AU && h.startsWith('autor-') && AU.autores.find(x => h === 'autor-' + x.id || h.startsWith('autor-' + x.id + '-'));
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : autor ? 'autor' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
   if (apartado) pintarApartado(apartado);
   if (texto) pintarTexto(texto);
+  if (autor) pintarAutor(autor, h.slice(('autor-' + autor.id).length + 1));
   if (rasgo) await abrirRasgo(rasgo);
   if (sec === 'encuestas') await abrirEncuestas();
 }
@@ -718,7 +748,7 @@ function pintarTexto(t) {
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
-      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span></div>
+      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>${(() => { const a = AU && AU.autores.find(x => x.textos.includes(t.codigo)); if (!a) return ''; const inf = a.bloques.find(b => b.t === 'informante' && b.texto === t.codigo); return `<a class="sobre" href="#autor-${a.id}${inf ? '-' + inf.id : ''}">${esc(a.enlace)} →</a>`; })()}</div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
@@ -769,6 +799,24 @@ function pintarApartado(a) {
     <div class="antetitulo">${a.n ? 'El contenido del taller · apartado ' + a.n : 'El contenido del taller'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
+}
+// Página de un autor o de una fuente: bloques como los de un apartado, con las fichas de los informantes y un enlace a su texto
+function pintarAutor(a, sub) {
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/\*([^*]+)\*/g, '<i>$1</i>');   // *título* en cursiva
+  const tit = c => (TX && TX.find(t => t.codigo === c) || {}).titulo || c;
+  const bloques = a.bloques.map(b =>
+    b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
+    : b.t === 'p' ? `<p>${esc(b.texto)}</p>`
+    : b.t === 'cita' ? `<blockquote>${esc(b.texto)}</blockquote>`
+    : b.t === 'informante' ? `<section class="informante" id="inf-${b.id}"><div class="cab-inf"><span class="cod-inf">${esc(b.codigo)}</span><span class="pueblo">${esc(b.pueblo)}</span></div><p class="ficha">«${esc(b.ficha)}»</p>${b.parrafos.map(x => `<p>${esc(x)}</p>`).join('')}<a class="al-texto" href="#${b.texto}">Leer «${esc(tit(b.texto))}» →</a></section>`
+    : b.t === 'fuentes' ? `<p class="fuentes">${esc(b.texto)}</p>`
+    : '').join('');
+  const fig = a.imagen ? `<figure class="retrato"><button type="button" data-ampliar="${a.imagen.src}" aria-label="Ampliar: ${esc(a.imagen.alt)}"><img src="${a.imagen.src}" alt="${esc(a.imagen.alt)}" width="${a.imagen.ancho}" height="${a.imagen.alto}"></button><figcaption>${esc(a.imagen.pie)}</figcaption></figure>` : '';
+  $('autor').innerHTML = `<a class="volver" href="#textos">← Los textos del taller</a>
+    <div class="antetitulo">${esc(a.antetitulo)}</div>
+    <h2>${esc(a.titulo)}</h2><p class="entradilla-autor">${esc(a.entradilla)}</p>${fig}${bloques}
+    <nav class="pasos" aria-label="Sus textos en el taller">${a.textos.map(c => `<a href="#${c}"><span>Leer en el taller</span><b>«${esc(tit(c))}»</b></a>`).join('')}</nav>`;
+  if (sub) { const el = document.getElementById('inf-' + sub); if (el) requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); }
 }
 // Visor de mapas a pantalla completa: el mapa a lo ancho, con desplazamiento si no cabe
 function abrirVisor(src) { $('visor-img').src = src; $('visor').hidden = false; document.body.style.overflow = 'hidden'; $('visor-cerrar').focus(); }
@@ -1521,6 +1569,7 @@ try {
   TX = await json('datos/textos.json');
   pintarListaTextos();
 } catch (e) { $('lista-textos').innerHTML = '<li>No se han podido cargar los textos.</li>'; }
+try { AU = await json('datos/autores.json'); } catch (e) { AU = null; }
 try {
   AP = await json('datos/apuntes.json');
   pintarIndiceApuntes();

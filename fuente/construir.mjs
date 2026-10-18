@@ -104,6 +104,11 @@ const TX = fs.readdirSync(path.join(aqui, 'textos')).filter(f => /^TEX-\d+\.json
 for (const t of TX) for (const c of t.rasgos) if (!CAT.rasgos.some(r => r.codigo === c)) console.warn(t.codigo, 'destaca un rasgo que no está en el catálogo:', c);
 fs.writeFileSync(path.join(destino, 'textos.json'), JSON.stringify(TX));
 console.log('textos.json:', TX.length, 'textos');
+// Las páginas «Sobre el autor» de los textos: cada texto que nombran tiene que existir
+const AU = leer('autores.json');
+for (const a of AU.autores) for (const c of a.textos) if (!TX.some(t => t.codigo === c)) { console.error('autores.json:', a.id, 'nombra un texto que no está:', c); process.exit(1); }
+fs.writeFileSync(path.join(destino, 'autores.json'), JSON.stringify(AU));
+console.log('autores.json:', AU.autores.length, 'páginas de autor');
 // Los signos de Cummins, para la transcripción de sus conversaciones
 fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-cummins.json')));
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
