@@ -73,6 +73,9 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pendiente { display: inline-block; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3); border: 1px solid var(--linea); padding: 3px 8px; border-radius: 4px }
 .pie { border-top: 1px solid var(--linea); color: var(--texto-3); font-size: 13px }
 .pie .envoltura { padding-block: 22px }
+.pie p { margin: 0 0 6px; max-width: 72ch }
+.pie p:last-child { margin-bottom: 0 }
+.pie .autor { color: var(--texto-2) }
 
 /* ---------- portada ---------- */
 .portada { padding-block: clamp(40px, 9vw, 104px) 56px }
@@ -515,7 +518,11 @@ span.fila .tit { color: var(--texto-2) }
 
 </main>
 
-<footer class="pie"><div class="envoltura">Taller de estremeñu · CEPA Coria · Curso 2026-2027. Versión de trabajo, sin difundir.</div></footer>
+<footer class="pie"><div class="envoltura">
+<p class="autor">Taller de estremeñu del CEPA Coria · Curso 2026-2027. Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
+<p>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución 4.0 (CC BY 4.0)</a>. Los textos de otros autores conservan sus derechos.</p>
+<p>Versión de trabajo, sin difundir.</p>
+</div></footer>
 
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
