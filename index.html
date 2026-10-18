@@ -106,6 +106,11 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .encuestas-breve ul.otros li { font-size: 14px; color: var(--texto-2) }
 .encuestas-breve ul.otros li b { color: var(--texto-3); font-weight: 800 }
 .encuestas-breve ul.otros li strong { color: var(--texto-2); font-weight: 700 }
+.encuestas-breve ul.otros.destacadas li { font-size: 15px; color: var(--texto) }
+.encuestas-breve ul.otros.destacadas li b { color: var(--naranja) }
+.encuestas-breve ul.otros.destacadas li strong { color: var(--texto); font-weight: 800 }
+.encuestas-breve ul.otros:not(.destacadas) li { font-size: 13px; color: var(--texto-3) }
+.encuestas-breve .otros-tit { margin: 16px 0 0; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3) }
 .encuestas-breve .enlaces { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 18px }
 .encuestas-breve .enlaces a { font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
 .encuestas-breve .enlaces a:hover { text-decoration: underline }
@@ -695,12 +700,27 @@ span.fila .tit { color: var(--texto-2) }
       <div class="enlaces"><a href="#encuestas">Las tres encuestas, en detalle →</a></div>
       <details class="otros-estudios">
       <summary>Otros estudios</summary>
-      <ul class="otros">
+      <ul class="otros destacadas">
         <li><b>1956</b><span><strong>Juan José Velo Nieto</strong>, «El habla de las Hurdes»: la monografía de Las Hurdes, recogida en 41 de sus 42 alquerías, a medio camino entre Krüger y González Salgado.</span></li>
-        <li><b>1980</b><span><strong>Antonio Viudas Camarasa</strong>, <i>Diccionario extremeño</i>: reúne las palabras publicadas hasta entonces, con el pueblo de cada una, pero sin la fecha en que se recogieron.</span></li>
         <li><b>2006</b><span><strong>Pilar Montero Curiel</strong>, <i>El extremeño</i>: el resumen de lo estudiado en toda Extremadura. No trae encuestas propias.</span></li>
         <li><b>2010</b><span><strong>Ángel Iglesias Ovejero</strong>, natural de Robleda: el habla de El Rebollar, ya en Salamanca, comparada con las de Extremadura.</span></li>
       </ul>
+      <p class="otros-tit">También salen en los mapas</p>
+      <ul class="otros">
+        <li><b>1906</b><span><strong>Ramón Menéndez Pidal</strong>, <i>El dialecto leonés</i>: algunos pueblos del norte de Cáceres, que se citan a través de Krüger.</span></li>
+        <li><b>1929</b><span><strong>Fink</strong> y <strong>Bierhenke</strong>: la Sierra de Gata, en alemán, que se cita a través de otros autores.</span></li>
+        <li><b>1980</b><span><strong>Antonio Viudas Camarasa</strong>, <i>Diccionario extremeño</i>: reúne las palabras publicadas hasta entonces, con el pueblo de cada una, pero sin la fecha en que se recogieron.</span></li>
+        <li><b>1992</b><span><strong>Fernando Flores del Manzano</strong>, «Modalidades de habla extremeña en la Sierra de Gredos»: Piornal y la sierra del Jerte, fuera del área.</span></li>
+        <li><b>2023</b><span><strong>Borja Alonso Pascua</strong>: las hablas de Salamanca, con los datos del ALEP, atlas encuestado en 1976-1981, y los del COSER.</span></li>
+      </ul>
+      <p class="otros-tit">Testimonios de hablantes</p>
+      <ul class="otros">
+        <li><b>1901</b><span>El sainete de <strong>Vicente Corrales Jiménez</strong>, de Santibáñez el Bajo, que publicó Félix Barroso Gutiérrez en 2016.</span></li>
+        <li><b>1947</b><span><strong>Moisés Marcos de Sande</strong>, «Del folklore garrovillano»: el refranero y el habla de Garrovillas.</span></li>
+        <li><b>2002</b><span><i>I Congreso sobre el extremeño o habla extremeña</i>, Calzadilla: hablantes y estudiosos de cada pueblo, como <strong>José M.ª Alcón Olivera</strong> en Guijo de Galisteo, <strong>Juan Carlos Paniagua Montero</strong> en Ahigal, <strong>Félix Barroso Gutiérrez</strong> en Las Hurdes y <strong>Baltasar Campo</strong> en Calzadilla.</span></li>
+        <li><b>2011</b><span><i>Portaje, tradición y legado</i>: el vocabulario de Portaje, recogido por las amas de casa del pueblo.</span></li>
+      </ul>
+      <div class="enlaces"><a href="#apuntes-8">Toda la bibliografía del taller →</a></div>
       </details>
     </section>
     <div class="grupos" id="lista-rasgos"></div>
