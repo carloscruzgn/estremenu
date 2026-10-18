@@ -1233,7 +1233,7 @@ function pintarApartado(a) {
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
-    <div class="antetitulo">${a.n ? 'El contenido · apartado ' + a.n : 'El contenido'}</div>
+    <div class="antetitulo">${a.antetitulo ? 'El contenido · ' + esc(a.antetitulo) : a.n ? 'El contenido · apartado ' + a.n : 'El contenido'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
 }
