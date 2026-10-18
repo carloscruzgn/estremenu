@@ -194,7 +194,7 @@
    "pagina": true
   }
  ],
- "_fuera": "Rasgos del catálogo de los apuntes del profesor (03-INDICE-RASGOS, 18/10/2026) que no pasan al taller, para que se entienda la numeración. Nombres del índice, aclarados. C10 se retiró al fundirse en C07.",
+ "_fuera": "Rasgos del catálogo de los apuntes del profesor (03-INDICE-RASGOS, 18/10/2026) que no pasan al taller, para que se entienda la numeración. Nombres del índice, aclarados. C10, retirado al fundirse en C07, no se lista (Carlos, 18/10/2026): la numeración se reordenará más adelante.",
  "fuera": [
   {
    "codigo": "V02",
@@ -223,10 +223,6 @@
   {
    "codigo": "C05",
    "titulo": "Neutralización de -r y -l al final de sílaba"
-  },
-  {
-   "codigo": "C10",
-   "titulo": "Retirado: se unió a C07"
   },
   {
    "codigo": "C12",
