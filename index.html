@@ -150,7 +150,6 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .mapa-portada .onda.va { animation: onda 1.6s ease-out 2 }
 @keyframes onda { from { transform: scale(1); opacity: .9 } to { transform: scale(6); opacity: 0 } }
 .mapa-portada text { font: 800 1px var(--f); fill: var(--texto); letter-spacing: .02em }
-.heroe .rotulo-portada { position: absolute; z-index: 1; left: 16px; right: 16px; bottom: 22px; font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); transition: opacity .5s ease; text-align: center; text-shadow: 0 0 10px var(--fondo); pointer-events: none }
 .heroe .saltar { position: absolute; z-index: 2; right: max(16px, env(safe-area-inset-right, 0px)); top: 14px; background: rgba(19, 46, 13, .6); border: 1px solid var(--linea); border-radius: 999px; padding: 6px 14px; font-weight: 800; font-size: 12px; letter-spacing: .08em; color: var(--texto-2); cursor: pointer; transition: opacity .4s ease }
 .heroe .saltar:hover { color: var(--texto) }
 .heroe .entra { transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.3,1) }
@@ -482,7 +481,6 @@ span.fila .tit { color: var(--texto-2) }
 <section id="v-inicio" class="vista portada" hidden>
   <div class="heroe espera" id="heroe">
     <svg class="mapa-portada" id="mapa-portada" aria-hidden="true" preserveAspectRatio="xMidYMid meet"></svg>
-    <div class="rotulo-portada" id="rotulo-portada" aria-hidden="true"></div>
     <button type="button" class="saltar" id="saltar-portada" hidden>Saltar</button>
     <div class="envoltura">
     <div class="antetitulo entra">CEPA Coria · Curso 2026-2027</div>
@@ -810,11 +808,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor'
   ir(0);
 })();
 
-// El mapa de la portada (datos/portada.json, de construir.mjs). La Península, Extremadura y el noroeste; después el mapa
+// El mapa de la portada (datos/portada.json, de construir.mjs). La Península, Extremadura y el noroeste, sin rótulos: habla solo el mapa (Carlos, 18/10/2026); después el mapa
 // se queda en claro y entran el título y el cambio de letras. Se salta tocando la cabecera, con el botón o con una tecla.
 // Sin movimiento, el mapa sale ya en su sitio y en claro.
 async function animarMapaPortada() {
-  const h = $('heroe'), svg = $('mapa-portada'), rot = $('rotulo-portada'), bs = $('saltar-portada');
+  const h = $('heroe'), svg = $('mapa-portada'), bs = $('saltar-portada');
   if (h.dataset.hecho) return; h.dataset.hecho = 1;
   let P;
   try { P = await json('datos/portada.json'); } catch (e) { h.classList.remove('espera'); animarPortada(); return; }
@@ -855,7 +853,7 @@ async function animarMapaPortada() {
     if (final) return; final = true;
     vista = 'area'; const c = V().area; pon(c); escalaCoria(c);
     [ext, prov, area, term, coria].forEach(g => op(g, 1));
-    svg.classList.add('claro'); rot.style.opacity = 0; bs.hidden = true;
+    svg.classList.add('claro'); bs.hidden = true;
     h.classList.remove('espera'); animarPortada();
   };
   addEventListener('resize', () => { if (vista) { const c = V()[vista]; pon(c); escalaCoria(c); } });
@@ -871,7 +869,6 @@ async function animarMapaPortada() {
   addEventListener('keydown', function k(e) { if (!final && e.key !== 'Tab') salta(); if (final) removeEventListener('keydown', k); });
 
   const espera = ms => new Promise(r => setTimeout(r, ms));
-  const rotula = async t => { rot.style.opacity = 0; await espera(250); if (final) return; rot.textContent = t; rot.style.opacity = 1; };
   // Viaje de una vista a otra: el centro se mueve en línea y el ancho cambia en escala logarítmica, para que el acercamiento sea parejo
   const viaja = (de, a, ms) => new Promise(res => {
     const A = V()[de], B = V()[a], t0 = performance.now();
@@ -884,13 +881,11 @@ async function animarMapaPortada() {
     };
     requestAnimationFrame(paso);
   });
-  rotula('La península ibérica');
   await espera(1100); if (final) return;
-  rotula('Extremadura'); op(ext, 1);
+  op(ext, 1);
   await viaja('espana', 'extremadura', 1500); if (final) return;
   op(prov, 1);
   await espera(500); if (final) return;
-  rotula('El noroeste de Cáceres y El Rebollar');
   setTimeout(() => { if (!final) { op(area, 1); op(term, 1); } }, 500);
   await viaja('extremadura', 'area', 1600); if (final) return;
   op(coria, 1); onda.classList.add('va');
