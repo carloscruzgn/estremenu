@@ -204,8 +204,8 @@ const abreviaturas = Object.entries(CATS.entradas).filter(([k]) => (k.startsWith
 
 const salida = {
   fecha: fechaEspejo, muestra: esMuestra, lemas: entradas.length,
-  // Cada entrada: [id, lema, html de la tarjeta, formas para buscar, claves de variación, glosas para buscar, primera glosa]
-  e: entradas.map(e => [e.id, e.lema, e.h, e.f.join('|'), e.k.join('|'), e.g, e.g1]),
+  // Cada entrada: [id, lema, html de la tarjeta, formas para buscar, claves de variación, glosas para buscar, primera glosa, número de testimonios]
+  e: entradas.map(e => [e.id, e.lema, e.h, e.f.join('|'), e.k.join('|'), e.g, e.g1, e.ts.length]),
   fuentes, abreviaturas, taller: { nuevas, confirma }
 };
 fs.writeFileSync(path.resolve(aqui, '../datos/diccionario.json'), JSON.stringify(salida));
