@@ -487,7 +487,6 @@ span.fila .tit { color: var(--texto-2) }
 .apartado figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
 .apartado figcaption { font-size: 13px; color: var(--texto-3); margin-top: 8px }
-.apartado figcaption b { color: var(--verde); font-weight: 800; letter-spacing: .06em; margin-right: 6px }
 /* Galería de mapas del anexo: en pequeño, con el título destacado; el mapa entero se amplía al tocarlo (Carlos, 19/10/2026) */
 .apartado .nota-galeria { font-size: 14px; color: var(--texto-3); margin: 0 0 14px }
 .apartado ul.galeria { list-style: none; padding: 0; margin: 0 0 30px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px }
@@ -1229,7 +1228,7 @@ function pintarApartado(a) {
     : b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
     : b.t === 'refs' ? `<ul class="refs">${b.items.map((x, i) => `<li><b>${autorRef(x.autor, i ? b.items[i - 1].autor : '')} (${esc(x.anio)})</b>. ${ref(x.resto)}</li>`).join('')}</ul>`
     : b.t === 'galeria' ? `<p class="nota-galeria">Toca un mapa para verlo en grande.</p><ul class="galeria">${b.mapas.map(m => `<li><button type="button" data-ampliar="img/mapas/${m.codigo}.webp" aria-label="Ampliar el mapa: ${esc(m.titulo)}"><img src="img/mapas/${m.codigo}.webp" alt="" loading="lazy" width="1600" height="1131"><span class="tit">${esc(m.titulo)}</span>${m.fecha ? `<span class="fecha">${esc(m.fecha.charAt(0).toUpperCase() + m.fecha.slice(1))}</span>` : ''}</button></li>`).join('')}</ul>`
-    : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption>${/^H/.test(b.codigo) ? '' : `<b>${b.codigo}</b>`}${esc(b.titulo + (b.fecha ? ', ' + b.fecha : '')).replace(/([^.])$/, '$1.')} Toca el mapa para verlo en grande.</figcaption></figure>`
+    : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption>${esc(b.titulo + (b.fecha ? ', ' + b.fecha : '')).replace(/([^.])$/, '$1.')} Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
