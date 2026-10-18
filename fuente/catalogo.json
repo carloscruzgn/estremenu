@@ -1,5 +1,5 @@
 {
- "_fuente": "Títulos de las páginas de rasgo de los apuntes del alumnado (Google Doc Apuntes_alumnado_estremenu, 05/10/2026), con la h volada de 00-CRITERIOS-DE-TRANSCRIPCION",
+ "_fuente": "Títulos de las páginas de rasgo de los apuntes del alumnado (Google Doc Apuntes_alumnado_estremenu), con la h volada de 00-CRITERIOS-DE-TRANSCRIPCION; uniformados el 18/10/2026 como «descripción: ejemplos» (Carlos), en el Doc y aquí",
  "grupos": {
   "V": "Vocales",
   "C": "Consonantes",
@@ -21,13 +21,13 @@
   },
   {
    "codigo": "V07",
-   "titulo": "Matancia, quiciás, alabancia: la i que se cuela",
+   "titulo": "La i que se cuela: matancia, quiciá, alabancia",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C01",
-   "titulo": "La jota de jigu y jacha",
+   "titulo": "La jota donde el castellano tiene h: jigu, jacha, jarina",
    "mapa": true,
    "pagina": true
   },
@@ -57,139 +57,139 @@
   },
   {
    "codigo": "C08",
-   "titulo": "Mairi, pairi, lairón",
+   "titulo": "La d que se vuelve i delante de la r: mairi, pairi, lairón",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C09",
-   "titulo": "Los sonidos antiguos de adeiti y codina",
+   "titulo": "Los sonidos antiguos que se conservan: adeiti, codina",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C11",
-   "titulo": "Pollo y poyo: la ll de siempre",
+   "titulo": "La ll de siempre, distinta de la y: pollo y poyo",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C16",
-   "titulo": "Pranta, brancu, cravel: la r que ocupa el sitio de la l",
+   "titulo": "La r que ocupa el sitio de la l: pranta, brancu, cravel",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C18",
-   "titulo": "Laʰ fotaʰ, lacié, lojatus: la s que endurece lo que viene detrás",
+   "titulo": "La s que endurece lo que viene detrás: laʰ fotaʰ, lacié, lojatus",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C19",
-   "titulo": "Güevu, güertu, güele",
+   "titulo": "La g que aparece delante de ue: güevu, güertu, güele",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C20",
-   "titulo": "Idil, eʰpué, ondi: la consonante que se pierde al empezar",
+   "titulo": "La consonante que se pierde al empezar: idil, eʰpué, ondi",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "C27",
-   "titulo": "Lambel, lomba, camba: la b que no se fue",
+   "titulo": "La b que no se fue: lambel, lomba, camba",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M01",
-   "titulo": "Chozu y choza, cuestu y cuesta: el tamaño en la última letra",
+   "titulo": "El tamaño en la última letra: chozu y choza, cuestu y cuesta",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M03",
-   "titulo": "Chiquininu, muchachina: el diminutivo en -inu",
+   "titulo": "El diminutivo en -inu: chiquininu, muchachina",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M04",
-   "titulo": "El mi corral, la tu madre",
+   "titulo": "El artículo delante del posesivo: el mi corral, la tu madre",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M05",
-   "titulo": "La Juana, el Pericu",
+   "titulo": "El artículo delante del nombre: la Juana, el Pericu",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M08",
-   "titulo": "Me se cayó, mos vamos, comelu",
+   "titulo": "Los pronombres, en otro orden y con otra forma: me se cayó, mos vamos, comelu",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M09",
-   "titulo": "Tíu Manuel, chachu, compañeru: cómo nos llamamos",
+   "titulo": "Cómo nos llamamos: tíu Manuel, chachu, compañeru",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M11",
-   "titulo": "Dijun, jidun, vinun, estuvun",
+   "titulo": "El pasado que acaba en -un: dijun, jidun, vinun, estuvun",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M14",
-   "titulo": "Conozu, paezu, cuando amaneza",
+   "titulo": "Verbos que pierden la c de -zc-: conozu, paezu, cuando amaneza",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M15",
-   "titulo": "Haiga, vaiga, duelga",
+   "titulo": "Subjuntivos con una g de más: haiga, vaiga, duelga",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M21",
-   "titulo": "Unus pocus de, una poca de",
+   "titulo": "Poco que concuerda con lo que acompaña: unus pocus de, una poca de",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M23",
-   "titulo": "Velaí, velaquí",
+   "titulo": "Palabras para señalar: velaí, velaquí",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M24",
-   "titulo": "Asina, entavía, aluegu, dendi, mu",
+   "titulo": "Las palabras pequeñas: asina, entavía, aluegu, dendi, mu",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M27",
-   "titulo": "Comiorin, llegorin; echái, bebéi: lo que se dice en Las Hurdes",
+   "titulo": "Pasados en -orin y mandatos en -ái y -éi: comiorin, llegorin; echái, bebéi",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M28",
-   "titulo": "Caí el caldu, me queé laʰ llaviʰ: verbos que cambian de sentido",
+   "titulo": "Verbos que cambian de sentido: caí el caldu, me queé laʰ llaviʰ",
    "mapa": true,
    "pagina": true
   },
   {
    "codigo": "P01",
-   "titulo": "El tonillo",
+   "titulo": "La entonación y las vocales que se alargan: el tonillo",
    "mapa": true,
    "pagina": true
   }

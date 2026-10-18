@@ -3,10 +3,10 @@
  "tipo": "regional",
  "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
  "titulo": [
-  "El cierre de las",
-  "vocales finales"
+  "Las vocales del final se cierran:",
+  "libru, nochi"
  ],
- "cabecera": "El cierre de las vocales finales",
+ "cabecera": "Las vocales del final se cierran: libru, nochi",
  "ejemplos": [
   {
    "base": "libr",

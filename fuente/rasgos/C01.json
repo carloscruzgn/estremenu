@@ -3,10 +3,10 @@
  "tipo": "regional",
  "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
  "titulo": [
-  "La jota de",
-  "jigu y jacha"
+  "La jota donde el castellano tiene h:",
+  "jigu, jacha, jarina"
  ],
- "cabecera": "La jota de jigu y jacha",
+ "cabecera": "La jota donde el castellano tiene h: jigu, jacha, jarina",
  "ejemplos": [],
  "_ejemplos": "El molde de la portadilla cambia una letra al final y la F- aspirada cambia la primera: ++decidir la portadilla del reel cuando se haga++. La web toma los ejemplos de fuente/apuntes/C01.json",
  "oleadas": [

@@ -3,10 +3,10 @@
  "tipo": "regional",
  "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
  "titulo": [
-  "La s que se",
-  "convierte en aire"
+  "La s que se convierte en aire:",
+  "loʰ niñoʰ, eʰcuela"
  ],
- "cabecera": "La s que se convierte en aire",
+ "cabecera": "La s que se convierte en aire: loʰ niñoʰ, eʰcuela",
  "ejemplos": [
   {
    "base": "niño",
