@@ -76,6 +76,29 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pie p { margin: 0 0 6px; max-width: 72ch }
 .pie p:last-child { margin-bottom: 0 }
 .pie .autor { color: var(--texto-2) }
+.pie .licencia { display: flex; gap: 12px; align-items: center }
+.pie .licencia img { display: block; width: 88px; height: auto; flex: none }
+@media (max-width: 520px) { .pie .licencia { flex-direction: column; align-items: flex-start; gap: 8px } }
+/* Lista de rasgos: lo que no entra en el taller, al final de cada grupo, en gris y sin enlace */
+.grupo li.sep { border-bottom: 0; padding: 18px 4px 6px; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3) }
+.grupo li.fuera .fila { background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(238, 244, 233, .025) 7px 14px); padding-block: 10px }
+.grupo li.fuera .tit, .grupo li.fuera .cod { color: var(--texto-3); font-weight: 600; font-size: 15px }
+/* Lista de rasgos: de dónde salen los datos */
+.encuestas-breve { margin-top: 30px; max-width: 760px; background: var(--fondo-2); border-radius: 10px; padding: 20px 22px 22px }
+.encuestas-breve h2 { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde) }
+.encuestas-breve p { margin: 10px 0 0; color: var(--texto-2); font-size: 16px }
+.encuestas-breve ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px }
+.encuestas-breve li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; font-size: 15px; line-height: 1.5; color: var(--texto-2) }
+.encuestas-breve li b { color: var(--naranja); font-weight: 900; font-variant-numeric: tabular-nums }
+.encuestas-breve li strong { color: var(--texto); font-weight: 800 }
+.encuestas-breve .enlaces { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 18px }
+.encuestas-breve .enlaces a { font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
+.encuestas-breve .enlaces a:hover { text-decoration: underline }
+@media (max-width: 520px) { .encuestas-breve li { grid-template-columns: minmax(0, 1fr); gap: 0 } }
+/* Mapa de las encuestas: letras de las áreas y muestras de raya en la leyenda */
+.etiq.letra { font-weight: 900; font-size: 24px; color: rgba(255, 255, 255, .9) }
+.leyenda .cuad.linea { height: 3px }
+.leyenda .cuad.trazos { height: 0; border-top: 3px dashed; background: none !important }
 
 /* ---------- portada ---------- */
 .portada { padding-block: clamp(40px, 9vw, 104px) 56px }
@@ -445,7 +468,18 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">El contenido del taller · apartado 7</div>
     <h2 class="titulo-vista">Los rasgos, uno a uno</h2>
-    <p class="entradilla">Cada rasgo con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
+    <p class="entradilla">Los que han estudiado el habla del noroeste desde 1912 han descrito muchos más rasgos de los que caben en un curso. Los apuntes del profesor los reúnen en un catálogo con número propio: V para las vocales, C para las consonantes, M para la gramática y P para la entonación. Cada rasgo conserva siempre su número, y un número no se vuelve a usar.</p>
+    <p class="entradilla">El taller trabaja una selección de treinta y uno, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en gris y sin página. Cada uno de los treinta y uno tiene la suya, con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y, cuando está hecho, su mapa por pueblos y por fechas.</p>
+    <section class="encuestas-breve" aria-labelledby="eb-tit">
+      <h2 id="eb-tit">De dónde salen los datos</h2>
+      <p>Casi todo lo que cuentan las páginas de los rasgos sale de tres encuestas, hechas en tres momentos. Son las tres fechas que lleva cada rasgo.</p>
+      <ul>
+        <li><b>1912</b><span><strong>Fritz Krüger</strong>, un joven alemán que recorrió una treintena de pueblos del norte de Cáceres buscando a la gente más vieja.</span></li>
+        <li><b>1967-1972</b><span><strong>John Cummins</strong>, un profesor inglés que habló con 42 personas de Coria y de doce pueblos de alrededor y grabó sus conversaciones.</span></li>
+        <li><b>1995-1997</b><span><strong>José Antonio González Salgado</strong>, un profesor extremeño que preguntó en 58 pueblos de toda Extremadura, nueve de ellos en el área del taller o en su borde.</span></li>
+      </ul>
+      <div class="enlaces"><a href="#encuestas">Las tres encuestas, en el mapa →</a><a href="#apuntes-4">Su historia, en el apartado 4 →</a></div>
+    </section>
     <div class="grupos" id="lista-rasgos"></div>
   </div>
 </section>
@@ -520,7 +554,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <footer class="pie"><div class="envoltura">
 <p class="autor">Taller de estremeñu del CEPA Coria · Curso 2026-2027. Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
-<p>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución 4.0 (CC BY 4.0)</a>. Los textos de otros autores conservan sus derechos.</p>
+<p class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><span>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</span></p>
 <p>Versión de trabajo, sin difundir.</p>
 </div></footer>
 
@@ -535,12 +569,13 @@ let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = n
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
 
 function pintarLista() {
-  const por = {};
+  const por = {}, fuera = {};
   for (const r of CAT.rasgos) (por[r.codigo[0]] ||= []).push(r);
+  for (const r of CAT.fuera || []) (fuera[r.codigo[0]] ||= []).push(r);
   $('lista-rasgos').innerHTML = Object.entries(CAT.grupos).map(([g, nombre]) => !por[g] ? '' : `
     <section class="grupo"><h2>${esc(nombre)}</h2><ol>${por[g].map(r => r.mapa || r.pagina
       ? `<li><a class="fila" href="#${r.codigo}"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span>${r.mapa ? '<span class="marca-mapa">Mapa</span>' : '<span></span>'}</a></li>`
-      : `<li><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="pendiente">En preparación</span></span></li>`).join('')}</ol></section>`).join('');
+      : `<li><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="pendiente">En preparación</span></span></li>`).join('')}${(fuera[g] || []).length ? '<li class="sep">No entran en el taller</li>' + fuera[g].map(r => `<li class="fuera"><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span></span></span></li>`).join('') : ''}</ol></section>`).join('');
   const n = CAT.rasgos.filter(r => r.mapa).length;
   $('estado-rasgos').textContent = n === 1 ? '1 con mapa interactivo' : n + ' con mapa interactivo';
 }
@@ -550,7 +585,8 @@ async function ir() {
   const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && (r.mapa || r.pagina));
   const texto = TX && TX.find(t => t.codigo === h);
   const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario'].includes(h) ? h : 'inicio';
+  const encuestas = h === 'encuestas';
+  const sec = rasgo || encuestas ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
@@ -560,6 +596,7 @@ async function ir() {
   if (apartado) pintarApartado(apartado);
   if (texto) pintarTexto(texto);
   if (rasgo) await abrirRasgo(rasgo);
+  if (encuestas) await abrirEncuestas();
 }
 
 // ================= los textos del taller =================
@@ -648,7 +685,7 @@ function pintarApartado(a) {
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
-  const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : '';
+  const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en el mapa</a>' : '';
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
     <div class="antetitulo">${a.n ? 'El contenido del taller · apartado ' + a.n : 'El contenido del taller'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
@@ -754,6 +791,35 @@ async function abrirRasgo(r) {
   const base = await (BASE ||= json('datos/base.json'));
   if (!mapa) mapa = await (cargandoMapa ||= crearMapa(base));
   mapa.cargarRasgo(datos);
+  mapa.pausar(false);
+}
+
+// ================= las tres encuestas =================
+let ENCUESTAS = null;
+async function abrirEncuestas() {
+  ENCUESTAS ||= await json('datos/encuestas.json');
+  clearInterval(ejemploTimer); ejemploTimer = null; ++cabezaN;
+  $('r-cod').textContent = 'De dónde salen los datos';
+  $('r-tit').textContent = 'Las tres encuestas';
+  $('r-ejemplos').hidden = true; $('r-ejemplos').innerHTML = '';
+  $('r-texto').innerHTML = `<div class="ante">Las tres encuestas</div>
+    <h3>Fritz Krüger, 1912</h3>
+    <p>Estuvo en la primavera de 1912 y publicó su libro en 1914, en alemán. En el área del taller tiene veintidós puntos con número y dos sin él, Guijo de Coria y Abadía, con una persona o dos en cada uno, casi siempre de las más viejas. A ocho de esos pueblos no llegó: preguntó a alguien de allí que vivía o estaba en otro sitio, y en el mapa van en color claro. A Coria no fue.</p>
+    <p>Cambroncino y El Castillo, que son alquerías, van en el término de su municipio, y Granadilla, en el de Zarza de Granadilla.</p>
+    <h3>John Cummins, 1967-1972</h3>
+    <p>Tres campañas, en 1967, 1969 y 1972, y un libro en 1974, <i>El habla de Coria y sus cercanías</i>. Coria y doce pueblos de alrededor, con 42 personas de todas las edades. En el mapa, la altura de cada pueblo es el número de personas con que habló: quince en Montehermoso, nueve en Coria y una sola en ocho de los trece. Villa del Campo, en claro, se encuestó fuera del pueblo.</p>
+    <h3>José Antonio González Salgado, 1995-1997</h3>
+    <p>Recorrió 58 pueblos de toda Extremadura con un cuestionario de más de quinientas preguntas, a personas de entre sesenta y ochenta años. Del área del taller y de su borde, nueve: Casar de Palomero, Eljas, Ahigal, Guijo de Galisteo, Casas de Don Gómez, Portaje, Ceclavín, Garrovillas y Serradilla. Tampoco fue a Coria.</p>
+    <h3>Las tres juntas</h3>
+    <p>Solo coinciden en Guijo de Galisteo. En otros diez pueblos hay dos fechas: Villa del Campo, Montehermoso, Torrejoncillo y Guijo de Coria tienen la de 1912 y la de Cummins; Casar de Palomero, Ahigal, Ceclavín y Garrovillas, la de 1912 y la de los años noventa; Portaje y Casas de Don Gómez, la de Cummins y la de los noventa. Cuando un rasgo no sale en una de las fechas, muchas veces es porque a ese pueblo no fueron o porque no lo preguntaron.</p>
+    <h3>Las áreas de las palabras</h3>
+    <p>En 2001, González Salgado dibujó con sus datos un mapa de las áreas del vocabulario de Extremadura. Dos rayas principales la parten en cuatro: una separa la Alta Extremadura de la Baja, y otra separa el oeste, más cercano al portugués, del centro y el este. Esa raya pasa por Coria. Quedan así tres áreas grandes, A, la Alta Extremadura; B, la Baja; y C, el oeste; y tres pequeñas: D, la de Las Hurdes, Plasencia y Coria; E, a lo largo de la raya de Castilla; y F, el sur de Badajoz.</p>
+    <p>Es un esquema a mano, solo de palabras y sobre 58 puntos. Sus rayas no siguen los términos municipales, y por eso van dibujadas encima del mapa en lugar de pintar pueblos. El área D no es el área del taller.</p>
+    <p class="en-textos"><a href="#apuntes-4">La historia de cada encuesta, en el apartado 4 del contenido</a></p>`;
+  document.querySelector('.rasgo').classList.remove('sin-mapa');
+  const base = await (BASE ||= json('datos/base.json'));
+  if (!mapa) mapa = await (cargandoMapa ||= crearMapa(base));
+  mapa.cargarEncuestas(ENCUESTAS);
   mapa.pausar(false);
 }
 
@@ -886,7 +952,7 @@ async function crearMapa(baseP) {
     }
     return s;
   }
-  let shots = {}, wideBB = areaBB, probBB = areaBB;
+  let shots = {}, wideBB = areaBB, probBB = areaBB, redBB = areaBB;
   function encuadres() {
     // Rectángulo libre de rótulos (arriba) y leyenda (abajo), en píxeles del lienzo
     const top = H * (movil ? 0.3 : 0.24), bottom = H * (movil ? 0.86 : 0.88);
@@ -896,6 +962,7 @@ async function crearMapa(baseP) {
       wide: autofit(wideBB, -8, 62, rect),
       prob: autofit(probBB, -8, 62, rect),
       ext: autofit(extBB, -4, 58, rect),
+      red: autofit(redBB, -8, 60, rect),
     };
   }
   function medir() {
@@ -904,6 +971,7 @@ async function crearMapa(baseP) {
     res.set(W, H);
     // LineMaterial copia la resolución al crearse: hay que dársela otra vez en cada cambio de tamaño
     areaLine.material.resolution.set(W, H); extLine.material.resolution.set(W, H);
+    for (const l of isoLines) l.material.resolution.set(W, H);
   }
 
   // ---------- controles ----------
@@ -914,6 +982,21 @@ async function crearMapa(baseP) {
 
   // ---------- estado del rasgo ----------
   let RS = null, CL = {}, ESTADOS = [], actual = 0, sel = null;
+  // Modo «encuestas»: los estados llevan su propia capa de términos (capa), y pueden enseñar las rayas de González Salgado 2001 (iso)
+  let MODO = 'rasgo', EN = null, isoO = 0;
+  const isoLines = [];
+  function crearIsoglosas(L) {
+    for (const l of L) {
+      const pos = [];
+      for (let i = 0; i < l.pts.length - 1; i++) pos.push(l.pts[i][0], l.pts[i][1], 0, l.pts[i + 1][0], l.pts[i + 1][1], 0);
+      const g = new LineSegmentsGeometry(); g.setPositions(pos);
+      const mat = new LineMaterial({ color: l.principal ? 0xffffff : 0xffc4a0, linewidth: l.principal ? 3.5 : 2.5, transparent: true, opacity: 0, resolution: res, dashed: !l.principal, dashSize: 0.35, gapSize: 0.22 });
+      const s = new LineSegments2(g, mat);
+      if (!l.principal) s.computeLineDistances();
+      s.userData.op = l.principal ? 0.95 : 0.9; s.visible = false;
+      scene.add(s); isoLines.push(s);
+    }
+  }
   const etiquetas = [];
   // Una etiqueta atada a un término (codigo) se coloca cada vez sobre la tapa del bloque, a la altura que tenga
   function etiqueta(html, x, y, z, cls, cuando, codigo) { const e = document.createElement('div'); e.className = 'etiq ' + (cls || ''); e.innerHTML = html; lienzo.appendChild(e); etiquetas.push({ e, v: new THREE.Vector3(x, y, z), cuando, codigo }); return e; }
@@ -935,6 +1018,12 @@ async function crearMapa(baseP) {
     let h = HB, c = (sal ? C.spainLow : C.base).clone(), em = 0;
     if (d.area === 'core') { h = HCORE; c.copy(C.core); }
     if (d.area === 'contact') c.copy(C.contact);
+    if (E.capa) {
+      if (E.ext && d.area === 'none' && !sal) c.copy(C.extBase);
+      const v = E.capa[d.code];
+      if (v) { h = v.h; c.copy(v.c); }
+      return { h, c, em };
+    }
     const id = E.id;
     if (id === 'area') return { h, c, em };
     if (E.ola) {
@@ -964,7 +1053,7 @@ async function crearMapa(baseP) {
     const hasta = munis.map(m => objetivo(m, E));
     const sh = shots[E.cam], { p, t } = posDe(sh);
     const cam = { p0: camera.position.clone(), t0: controls.target.clone(), p1: p, t1: t };
-    const ol = { a0: areaLine.userData.o, a1: E.id === 'nw' ? 0 : (E.id === 'prob' ? 0.5 : 0.95), e0: extLine.userData.o, e1: E.id === 'nw' ? 0.9 : 0 };
+    const ol = { a0: areaLine.userData.o, a1: E.lineaArea != null ? E.lineaArea : (E.id === 'nw' ? 0 : (E.id === 'prob' ? 0.5 : 0.95)), e0: extLine.userData.o, e1: E.lineaExt != null ? E.lineaExt : (E.id === 'nw' ? 0.9 : 0), i0: isoO, i1: E.iso ? 1 : 0 };
     anim = { t0: performance.now(), dur: (inmediato || sinMov) ? 1 : 1700, desde, hasta, cam, ol };
     controls.enabled = false;
     pintarRotulo(E); pintarLeyenda(E); pintarBotones(); pintarInfo();
@@ -982,7 +1071,7 @@ async function crearMapa(baseP) {
     });
     const tc = fin ? 1 : ease(clamp(T / 0.8));
     ponerCam(new THREE.Vector3().lerpVectors(anim.cam.p0, anim.cam.p1, tc), controls.target.lerpVectors(anim.cam.t0, anim.cam.t1, tc));
-    areaLine.userData.o = lerp(anim.ol.a0, anim.ol.a1, tc); extLine.userData.o = lerp(anim.ol.e0, anim.ol.e1, tc);
+    areaLine.userData.o = lerp(anim.ol.a0, anim.ol.a1, tc); extLine.userData.o = lerp(anim.ol.e0, anim.ol.e1, tc); isoO = lerp(anim.ol.i0, anim.ol.i1, tc);
     if (fin) { anim = null; controls.enabled = true; controls.update(); }
     return true;
   }
@@ -996,6 +1085,7 @@ async function crearMapa(baseP) {
     }
     areaLine.material.opacity = areaLine.userData.o; areaLine.position.z = HCORE + 0.01;
     extLine.material.opacity = extLine.userData.o; extLine.position.z = HB + 0.01;
+    for (const l of isoLines) { l.material.opacity = isoO * l.userData.op; l.visible = isoO > 0.01; l.position.z = HCORE + 0.03; }
   }
   const proj = v => { const p = v.clone().project(camera); return [(p.x + 1) / 2 * W, (1 - p.y) / 2 * H, p.z]; };
   function pintarEtiquetas() {
@@ -1033,6 +1123,7 @@ async function crearMapa(baseP) {
   }
   const filaL = (color, texto, ol) => `<div class="fila-l"><span class="cuad${ol ? ' ol' : ''}" style="background:${color}"></span>${esc(texto)}</div>`;
   function pintarLeyenda(E) {
+    if (E.leyenda) { $('leyenda').innerHTML = E.leyenda.map(f => `<div class="fila-l"><span class="cuad${f.tipo ? ' ' + f.tipo : ''}" style="background:${f.c};color:${f.c}"></span>${esc(f.t)}</div>`).join(''); return; }
     const tipo = RS.tipo || 'regional', hay = c => Object.values(CL).some(x => x.cls === c);
     const L = Object.assign({ reg: 'Recogido en el pueblo', prob: 'Probable', part: 'En algunos pueblos de la comarca', neg: tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido', sin: 'Sin datos' }, RS.leyenda || {});
     let f = [];
@@ -1088,6 +1179,7 @@ async function crearMapa(baseP) {
   function pintarInfo() {
     const box = $('info');
     if (!sel) { box.innerHTML = '<p class="vacio">Toca un pueblo del mapa.</p>'; return; }
+    if (MODO === 'encuestas') { box.innerHTML = infoEncuestas(sel.userData.d); return; }
     const d = sel.userData.d, x = CL[d.code] || { cls: 'base', again: [], neg: false };
     const com = d.comarca && base.comarcas[d.comarca] ? base.comarcas[d.comarca].nombre : (d.code.startsWith('06') ? 'Provincia de Badajoz' : d.code.startsWith('37') ? 'Salamanca' : '');
     const li = (color, b, nota, ol) => `<li><span class="cuad${ol ? ' ol' : ''}" style="background:${color};${ol ? 'outline:1px solid rgba(255,255,255,.5)' : ''}"></span><span><b>${esc(b)}</b>${nota ? ' · <span class="nota">' + esc(nota) + '</span>' : ''}</span></li>`;
@@ -1102,12 +1194,42 @@ async function crearMapa(baseP) {
     box.innerHTML = `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
   }
 
+  function infoEncuestas(d) {
+    const com = d.comarca && base.comarcas[d.comarca] ? base.comarcas[d.comarca].nombre : (d.code.startsWith('06') ? 'Provincia de Badajoz' : d.code.startsWith('37') ? 'Salamanca' : '');
+    const li = (color, b, nota, ol) => `<li><span class="cuad${ol ? ' ol' : ''}" style="background:${color};${ol ? 'outline:1px solid rgba(255,255,255,.5)' : ''}"></span><span><b>${esc(b)}</b>${nota ? ' · <span class="nota">' + esc(nota) + '</span>' : ''}</span></li>`;
+    const filas = [], k = EN.kruger[d.code], cu = EN.cummins[d.code], gs = EN.gs[d.code];
+    if (k) filas.push(li(k.distancia ? '#ffc4a0' : '#ff914d', 'Krüger, 1912', k.texto));
+    if (cu) filas.push(li(cu.distancia ? '#ffc4a0' : '#ff914d', 'Cummins, 1967-1972', cu.informantes + (cu.informantes === 1 ? ' persona' : ' personas') + (cu.distancia ? ', encuestada fuera del pueblo' : '')));
+    if (gs) filas.push(li('#ff914d', 'González Salgado, 1995-1997', 'punto de su encuesta'));
+    if (!filas.length) filas.push(li('#2f5a25', 'Ninguna de las tres encuestas pasó por aquí', '', true));
+    return `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
+  }
+  function estadosEncuestas(F) {
+    const K = {}, CU = {}, G = {}, J = {};
+    for (const [c, v] of Object.entries(F.kruger)) K[c] = v.distancia ? { h: HPROB, c: C.prob } : { h: HREG, c: C.reg };
+    for (const [c, v] of Object.entries(F.cummins)) CU[c] = { h: 0.3 + v.informantes * 0.09, c: v.distancia ? C.prob : C.reg };
+    for (const c of Object.keys(F.gs)) G[c] = { h: HREG, c: C.reg };
+    for (const c of Object.keys(F.nombres)) {
+      const n = [F.kruger, F.cummins, F.gs].filter(r => r[c]).length;
+      J[c] = n === 3 ? { h: 1.15, c: C.reg } : n === 2 ? { h: 0.7, c: C.part } : { h: 0.38, c: C.prob };
+    }
+    const enPueblo = [{ c: '#ff914d', t: 'Encuestado en el pueblo' }, { c: '#ffc4a0', t: 'Encuestado a distancia' }];
+    return [
+      { id: 'kruger', nombre: 'Krüger, 1912', k: 'Primavera de 1912', h: 'Fritz Krüger', s: 'En claro, donde no llegó: preguntó a alguien del pueblo que estaba en otro sitio', cam: 'red', capa: K, leyenda: enPueblo },
+      { id: 'cummins', nombre: 'Cummins, 1967-1972', k: '1967, 1969 y 1972', h: 'John Cummins', s: 'Coria y doce pueblos. La altura es el número de personas con que habló, de una a quince', cam: 'red', capa: CU, leyenda: enPueblo },
+      { id: 'gs', nombre: 'González Salgado, 1995-1997', k: '1995-1997', h: 'José Antonio González Salgado', s: 'Nueve de sus 58 pueblos están en el área del taller o en su borde', cam: 'red', capa: G, leyenda: [{ c: '#ff914d', t: 'Encuestado' }] },
+      { id: 'juntas', nombre: 'Las tres juntas', k: 'Dónde se pueden comparar fechas', h: 'Las tres, solo en Guijo de Galisteo', s: 'En otros diez pueblos hay dos fechas', cam: 'red', capa: J, leyenda: [{ c: '#ff914d', t: 'Las tres encuestas' }, { c: '#b84c1e', t: 'Dos encuestas' }, { c: '#ffc4a0', t: 'Una encuesta' }] },
+      { id: 'areas', nombre: 'Las áreas de las palabras', k: 'González Salgado 2001', h: 'Las áreas de las palabras', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
+    ];
+  }
+
   // ---------- tamaño ----------
   new ResizeObserver(() => { medir(); encuadres(); if (!anim && ESTADOS.length) { const { p, t } = posDe(shots[ESTADOS[actual].cam]); controls.target.copy(t); ponerCam(p, t); controls.update(); } pedir(); }).observe(lienzo);
   medir();
 
   return {
     cargarRasgo(datos) {
+      MODO = 'rasgo'; EN = null;
       RS = datos.rasgo; CL = datos.clases; sel = null;
       wideBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && CL[d.code].cls === 'out')).map(d => d.rings));
       // La extensión probable se encuadra con todo lo que pinta: en un rasgo de toda Extremadura, la región entera
@@ -1124,6 +1246,22 @@ async function crearMapa(baseP) {
       }
       ESTADOS = construirEstados();
       const { p, t } = posDe(shots.area); controls.target.copy(t); ponerCam(p, t);
+      irA(0);
+    },
+    cargarEncuestas(F) {
+      MODO = 'encuestas'; EN = F; RS = null; CL = {}; sel = null;
+      if (!isoLines.length) crearIsoglosas(F.isoglosas);
+      const red = new Set(Object.keys(F.nombres));
+      redBB = bbox(base.munis.filter(d => d.area === 'core' || red.has(d.code)).map(d => d.rings));
+      medir(); encuadres();
+      for (const l of etiquetas.splice(0)) l.e.remove();
+      etiqueta('Coria<span class="punto"></span>', coria[0], coria[1], HREG, 'con-punto', null, '10067');
+      etiqueta('Portugal', extBB.cx - extBB.w * 0.56, extBB.cy - extBB.h * 0.1, 0.1, 'grande');
+      etiqueta('Salamanca', extBB.cx + extBB.w * 0.1, extBB.cy + extBB.h * 0.62, 0.2, 'grande');
+      for (const c of F.coinciden) { const pz = byCode[c].userData.d.c, dd = (F.desplazar || {})[c] || [0, 0]; etiqueta(esc(F.nombres[c]), pz[0] + dd[0], pz[1] + dd[1], HREG, 'peq', ['juntas'], c); }
+      for (const L of F.letras) etiqueta(L.t, L.x, L.y, 0.25, 'letra', ['areas']);
+      ESTADOS = estadosEncuestas(F);
+      const { p, t } = posDe(shots.red); controls.target.copy(t); ponerCam(p, t);
       irA(0);
     },
     pausar(p) { pausado = p; if (!p) { medir(); pedir(); } },

@@ -1,0 +1,63 @@
+{
+ "_fuente": "Puntos de Krüger: ficha de obra Kruger_1914 (§ 13, pp. 15-16), con los ocho encuestados a distancia; Cambroncino va en el término de Caminomorisco, El Castillo en el de Pinofranqueado y Granadilla en el de Zarza de Granadilla, como en los .json de los rasgos. Cummins: COMARCAS-Y-MUNICIPIOS.md, sección 8 (Cummins 1974, pp. 26-29), y Villa del Campo a distancia según el mapa F04 (10-MAPAS). González Salgado: los nueve puntos del noroeste de la nota 3 de González Salgado 2001 (COMARCAS-Y-MUNICIPIOS.md, sección 7). Letras: un punto dentro de cada área del mapa de la p. 132, para el rótulo.",
+ "kruger": [
+  {"n": "1", "nombre": "Zarza de Granadilla", "termino": "10216"},
+  {"n": "2", "nombre": "Granadilla", "termino": "10216"},
+  {"n": "3", "nombre": "Ahigal", "termino": "10006", "distancia": true},
+  {"n": "4", "nombre": "Mohedas de Granadilla", "termino": "10124"},
+  {"n": "5 y 7", "nombre": "Casar de Palomero", "termino": "10050"},
+  {"n": "6", "nombre": "Pozuelo de Zarzón", "termino": "10152", "distancia": true},
+  {"n": "8", "nombre": "Torre de Don Miguel", "termino": "10187"},
+  {"n": "9", "nombre": "Cambroncino", "termino": "10041", "distancia": true},
+  {"n": "10", "nombre": "Villanueva de la Sierra", "termino": "10211"},
+  {"n": "11", "nombre": "El Castillo", "termino": "10146", "distancia": true},
+  {"n": "12", "nombre": "Gata", "termino": "10084", "distancia": true},
+  {"n": "13", "nombre": "Villa del Campo", "termino": "10207"},
+  {"n": "14", "nombre": "Guijo de Galisteo", "termino": "10089"},
+  {"n": "15", "nombre": "Montehermoso", "termino": "10127", "distancia": true},
+  {"n": "16", "nombre": "Morcillo", "termino": "10129"},
+  {"n": "17", "nombre": "Pinofranqueado", "termino": "10146", "distancia": true},
+  {"n": "18", "nombre": "Torrejoncillo", "termino": "10189"},
+  {"n": "19", "nombre": "Acehúche", "termino": "10004", "distancia": true},
+  {"n": "21", "nombre": "Ceclavín", "termino": "10061"},
+  {"n": "22", "nombre": "Zarza la Mayor", "termino": "10218"},
+  {"n": "26", "nombre": "Garrovillas", "termino": "10082"},
+  {"n": "", "nombre": "Guijo de Coria", "termino": "10088"},
+  {"n": "", "nombre": "Abadía", "termino": "10001"}
+ ],
+ "cummins": [
+  {"nombre": "Calzadilla", "termino": "10040", "informantes": 5},
+  {"nombre": "Casas de Don Gómez", "termino": "10053", "informantes": 3},
+  {"nombre": "Casillas de Coria", "termino": "10059", "informantes": 1},
+  {"nombre": "Coria", "termino": "10067", "informantes": 9},
+  {"nombre": "Guijo de Coria", "termino": "10088", "informantes": 1},
+  {"nombre": "Guijo de Galisteo", "termino": "10089", "informantes": 2},
+  {"nombre": "Huélaga", "termino": "10101", "informantes": 1},
+  {"nombre": "Montehermoso", "termino": "10127", "informantes": 15},
+  {"nombre": "Moraleja", "termino": "10128", "informantes": 1},
+  {"nombre": "Pescueza", "termino": "10143", "informantes": 1},
+  {"nombre": "Portaje", "termino": "10150", "informantes": 1},
+  {"nombre": "Torrejoncillo", "termino": "10189", "informantes": 1},
+  {"nombre": "Villa del Campo", "termino": "10207", "informantes": 1, "distancia": true}
+ ],
+ "gs": [
+  {"nombre": "Casar de Palomero", "termino": "10050"},
+  {"nombre": "Eljas", "termino": "10072"},
+  {"nombre": "Ahigal", "termino": "10006"},
+  {"nombre": "Guijo de Galisteo", "termino": "10089"},
+  {"nombre": "Casas de Don Gómez", "termino": "10053"},
+  {"nombre": "Portaje", "termino": "10150"},
+  {"nombre": "Ceclavín", "termino": "10061"},
+  {"nombre": "Garrovillas", "termino": "10082"},
+  {"nombre": "Serradilla", "termino": "10175"}
+ ],
+ "desplazar": {"_": "Desplazamiento del rótulo, en unidades del mapa (unos 10 km), para que no se pisen en «Las tres juntas»", "10088": [-0.9, 0.25], "10089": [0.5, 0]},
+ "letras": [
+  {"t": "A", "lon": -5.95, "lat": 39.6},
+  {"t": "B", "lon": -6.0, "lat": 38.75},
+  {"t": "C", "lon": -7.0, "lat": 39.6},
+  {"t": "D", "lon": -6.25, "lat": 40.25},
+  {"t": "E", "lon": -5.3, "lat": 39.55},
+  {"t": "F", "lon": -6.3, "lat": 38.15}
+ ]
+}

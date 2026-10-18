@@ -193,5 +193,164 @@
    "mapa": false,
    "pagina": true
   }
+ ],
+ "_fuera": "Rasgos del catálogo de los apuntes del profesor (03-INDICE-RASGOS, 18/10/2026) que no pasan al taller, para que se entienda la numeración. Nombres del índice, aclarados. C10 se retiró al fundirse en C07.",
+ "fuera": [
+  {
+   "codigo": "V02",
+   "titulo": "Vacilaciones de timbre en las vocales átonas"
+  },
+  {
+   "codigo": "V03",
+   "titulo": "Reducción de diptongos y diptongaciones anómalas"
+  },
+  {
+   "codigo": "V04",
+   "titulo": "Nasalización de vocales"
+  },
+  {
+   "codigo": "V06",
+   "titulo": "Conservación de la -e final antigua"
+  },
+  {
+   "codigo": "V08",
+   "titulo": "Metátesis de vocales"
+  },
+  {
+   "codigo": "C04",
+   "titulo": "Villa del Campo: la -s ante vocal que suena como r"
+  },
+  {
+   "codigo": "C05",
+   "titulo": "Neutralización de -r y -l al final de sílaba"
+  },
+  {
+   "codigo": "C10",
+   "titulo": "Retirado: se unió a C07"
+  },
+  {
+   "codigo": "C12",
+   "titulo": "Žeísmo, rehilamiento de la y"
+  },
+  {
+   "codigo": "C13",
+   "titulo": "Seseo y ceceo"
+  },
+  {
+   "codigo": "C14",
+   "titulo": "Metátesis -rl- > -lr- y otras consonantes que cambian de sitio"
+  },
+  {
+   "codigo": "C15",
+   "titulo": "Equivalencia acústica y cruce de palabras"
+  },
+  {
+   "codigo": "C17",
+   "titulo": "Las consonantes finales -d y -z"
+  },
+  {
+   "codigo": "C21",
+   "titulo": "Consonante antihiática"
+  },
+  {
+   "codigo": "C22",
+   "titulo": "Epéntesis de -n-"
+  },
+  {
+   "codigo": "C23",
+   "titulo": "Velarización de la -n final"
+  },
+  {
+   "codigo": "C24",
+   "titulo": "Simplificación de grupos cultos"
+  },
+  {
+   "codigo": "C25",
+   "titulo": "Palatalización de la n- inicial"
+  },
+  {
+   "codigo": "C26",
+   "titulo": "Palatalización de la s- inicial"
+  },
+  {
+   "codigo": "C28",
+   "titulo": "Aspiración de G- y J- latinas ante e, i"
+  },
+  {
+   "codigo": "C29",
+   "titulo": "La l leonesa en grupos cultos"
+  },
+  {
+   "codigo": "C30",
+   "titulo": "Palatalización de la L- inicial"
+  },
+  {
+   "codigo": "C31",
+   "titulo": "Otros cambios de consonante sin sistema"
+  },
+  {
+   "codigo": "M02",
+   "titulo": "Sufijos"
+  },
+  {
+   "codigo": "M06",
+   "titulo": "Omisión del artículo"
+  },
+  {
+   "codigo": "M07",
+   "titulo": "Contracciones de en con el artículo"
+  },
+  {
+   "codigo": "M10",
+   "titulo": "Tratamiento de respeto con la segunda persona del plural"
+  },
+  {
+   "codigo": "M12",
+   "titulo": "Futuro de subjuntivo medieval y participios en -udo"
+  },
+  {
+   "codigo": "M13",
+   "titulo": "Gerundio sobre el tema de perfecto"
+  },
+  {
+   "codigo": "M16",
+   "titulo": "Semus y seis"
+  },
+  {
+   "codigo": "M17",
+   "titulo": "Futuro y condicional sincopados y analógicos"
+  },
+  {
+   "codigo": "M18",
+   "titulo": "Formas verbales apocopadas y otras peculiaridades"
+  },
+  {
+   "codigo": "M19",
+   "titulo": "El tú impersonal"
+  },
+  {
+   "codigo": "M20",
+   "titulo": "Omisión de la preposición de"
+  },
+  {
+   "codigo": "M22",
+   "titulo": "Preposición de con verbos y a + infinitivo"
+  },
+  {
+   "codigo": "M25",
+   "titulo": "Pa- como prefijo adverbial"
+  },
+  {
+   "codigo": "M26",
+   "titulo": "Nasal añadida en conjunciones y adverbios"
+  },
+  {
+   "codigo": "M29",
+   "titulo": "Imperfecto por condicional y por imperfecto de subjuntivo"
+  },
+  {
+   "codigo": "M30",
+   "titulo": "Formas apocopadas: pon, sal"
+  }
  ]
 }

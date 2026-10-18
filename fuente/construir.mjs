@@ -110,4 +110,31 @@ fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-
 const AP = leer('apuntes/apartados.json');
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
 console.log('apuntes.json:', AP.apartados.length, 'apartados,', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'mapa').length, 'mapas');
-console.log('rasgos.json:', CAT.rasgos.length, 'rasgos,', CAT.rasgos.filter(r => r.mapa).length, 'con mapa');
+console.log('rasgos.json:', CAT.rasgos.length, 'rasgos,', CAT.rasgos.filter(r => r.mapa).length, 'con mapa,', (CAT.fuera || []).length, 'fuera del taller');
+
+// ---------- las tres encuestas ----------
+// Los puntos de cada red y las rayas del mapa de áreas léxicas de González Salgado 2001, con la misma proyección
+const ENC = leer('encuestas.json');
+const ISO = leer('isoglosas_GS2001.json');
+const xy = ([lon, lat]) => { const q = proj([lon, lat]); return [+q[0].toFixed(3), +(-q[1]).toFixed(3)]; };
+const enc = { kruger: {}, cummins: {}, gs: {}, nombres: {}, coinciden: [], desplazar: {}, isoglosas: [], letras: [] };
+const kp = {};
+for (const p of ENC.kruger) (kp[p.termino] ||= []).push(p);
+for (const [code, ps] of Object.entries(kp)) enc.kruger[code] = {
+  distancia: ps.every(p => p.distancia),
+  texto: ps.map(p => `${p.nombre}, ${p.n ? (p.n.includes(' ') ? 'puntos ' : 'punto ') + p.n : 'sin número'}${p.distancia ? ', a distancia' : ''}`).join('; '),
+  nombre: ps[0].nombre,
+};
+for (const p of ENC.cummins) enc.cummins[p.termino] = { nombre: p.nombre, informantes: p.informantes, distancia: !!p.distancia };
+for (const p of ENC.gs) enc.gs[p.termino] = p.nombre;
+const redes = [enc.kruger, enc.cummins, enc.gs];
+const enRed = [...new Set(redes.flatMap(Object.keys))];
+const faltanEnc = enRed.filter(c => !todos.has(c));
+if (faltanEnc.length) { console.error('encuestas.json: códigos que no están en el mapa:', faltanEnc.join(' ')); process.exit(1); }
+for (const c of enRed) enc.nombres[c] = (enc.cummins[c] && enc.cummins[c].nombre) || enc.gs[c] || enc.kruger[c].nombre;
+enc.coinciden = enRed.filter(c => redes.filter(r => r[c]).length > 1);
+enc.isoglosas = ISO.features.map(f => ({ linea: f.properties.linea, principal: ['vertical', 'horizontal'].includes(f.properties.linea), pts: f.geometry.coordinates.map(xy) }));
+enc.desplazar = Object.fromEntries(Object.entries(ENC.desplazar || {}).filter(([k]) => k !== '_'));
+enc.letras = ENC.letras.map(l => { const [x, y] = xy([l.lon, l.lat]); return { t: l.t, x, y }; });
+fs.writeFileSync(path.join(destino, 'encuestas.json'), JSON.stringify(enc));
+console.log('encuestas.json:', Object.keys(enc.kruger).length, 'términos de Krüger,', Object.keys(enc.cummins).length, 'de Cummins,', Object.keys(enc.gs).length, 'de González Salgado;', enc.coinciden.length, 'con dos o tres;', enc.isoglosas.length, 'rayas');
