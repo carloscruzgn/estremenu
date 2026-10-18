@@ -403,6 +403,11 @@ span.fila .tit { color: var(--texto-2) }
 .cuerpo .pregunta { font-style: italic; color: var(--texto-2) }
 .cuerpo .corte { height: 14px }
 .cuerpo .aside { font-style: italic; color: var(--texto-3) }
+.cuerpo .acto { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--naranja); margin: 28px 0 10px }
+.cuerpo .acto:first-child { margin-top: 0 }
+.cuerpo .acot { font-style: italic; color: var(--texto-2); font-size: .88em; line-height: 1.55 }
+.cuerpo .turno .quien { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--texto-3); margin-right: 4px }
+.cuerpo .fin-acto { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--texto-3); text-align: center }
 @font-face { font-family: 'Charis fonetica'; src: url(img/fuentes/charis-fonetica.woff2) format('woff2'); font-display: swap }
 .modo { display: inline-flex; margin-top: 20px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
 .modo button { font: inherit; font-size: 13px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer }
@@ -536,6 +541,7 @@ span.fila .tit { color: var(--texto-2) }
 .detalle ul.det-otros a.tit { text-decoration: none }
 .detalle ul.det-otros a.tit:hover { color: var(--naranja) }
 .tarjeta-autor .ir { font-weight: 900; font-size: 20px; color: var(--naranja) }
+.tarjeta-autor.sin-img { grid-template-columns: minmax(0, 1fr) auto; padding-left: 18px }
 .apartado .boton { display: inline-block; margin: 8px 0 20px; padding: 12px 18px; border-radius: 6px; background: var(--naranja); color: var(--fondo); font-weight: 800; text-decoration: none }
 .pasos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--linea); max-width: 100% !important }
 .pasos a { text-decoration: none; padding: 12px 14px; border-radius: 6px; background: var(--fondo-2); display: grid; gap: 2px; min-width: 0 }
@@ -1105,6 +1111,12 @@ function pintarTexto(t) {
   let cuerpo = '';
   if (t.tipo === 'poema') {
     cuerpo = t.bloques.map(b => `<div class="verso${b.sangria ? ' sangria' : ''}"><span class="nv">${b.n % 5 === 0 ? b.n : ''}</span><span class="vt">${b.tokens.map(tok).join('')}</span></div>`).join('');
+  } else if (t.tipo === 'teatro') {
+    // Teatro (TEX-04): actos, acotaciones en cursiva y turnos con quien habla delante
+    cuerpo = t.bloques.map(b => b.tipo === 'acto' ? `<h3 class="acto">${esc(b.texto)}</h3>`
+      : b.tipo === 'acot' ? `<p class="acot">${esc(b.texto)}</p>`
+      : b.tipo === 'fin' ? `<p class="fin-acto">${esc(b.texto)}</p>`
+      : `<p class="turno"><span class="quien">${esc(b.quien)}</span> ${b.tokens.map(tok).join('')}</p>`).join('');
   } else {
     let par = [];
     const cierra = () => { if (par.length) { cuerpo += `<p>${par.join(' ')}</p>`; par = []; } };
@@ -1116,7 +1128,7 @@ function pintarTexto(t) {
   }
   const panel = t.rasgos.map(c => `<li><a href="#${c}" data-foco="${c}" style="--c:${col[c]}"><span class="sw"></span><span><span class="cod">${c}</span><span class="tt">${esc(tituloR(c))}</span><span class="cu">${cuenta[c]} ${cuenta[c] === 1 ? 'palabra' : 'palabras'} en el texto</span></span></a></li>`).join('');
   $('texto-pag').innerHTML = `<div class="tcab"><a class="volver" href="#textos">← Los textos del taller</a>
-      <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
+      <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : t.tipo === 'teatro' ? 'Teatro' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
       <span class="leido">${pendiente(t) ? 'Pendiente de leer en el taller' : `Leído en el taller el ${fecha(t.leido)}`}</span>${tarjetaAutor(t)}</div>
@@ -1215,7 +1227,7 @@ function tarjetaAutor(t) {
   if (!a) return '';
   const inf = a.bloques.find(b => b.t === 'informante' && b.texto === t.codigo);
   const sub = inf ? `${a.resumen}: ${inf.codigo}, de ${inf.pueblo}` : a.resumen;
-  return `<a class="tarjeta-autor" href="#autor-${a.id}${inf ? '-' + inf.id : ''}">${a.imagen ? `<img src="${a.imagen.src}" alt="" width="${a.imagen.ancho}" height="${a.imagen.alto}" loading="lazy">` : ''}<span><b>Aprende más sobre ${esc(a.corto)} y «${esc(t.titulo)}»</b><span class="sub">${esc(sub)}</span></span><span class="ir" aria-hidden="true">→</span></a>`;
+  return `<a class="tarjeta-autor${a.imagen ? '' : ' sin-img'}" href="#autor-${a.id}${inf ? '-' + inf.id : ''}">${a.imagen ? `<img src="${a.imagen.src}" alt="" width="${a.imagen.ancho}" height="${a.imagen.alto}" loading="lazy">` : ''}<span><b>Aprende más sobre ${esc(a.corto)} y «${esc(t.titulo)}»</b><span class="sub">${esc(sub)}</span></span><span class="ir" aria-hidden="true">→</span></a>`;
 }
 // Página de un autor o de una fuente: bloques como los de un apartado, con las fichas de los informantes y un enlace a su texto
 function pintarAutor(a, sub) {

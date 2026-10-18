@@ -65,6 +65,55 @@
         ] },
         { "t": "fuentes", "texto": "Cummins, *El habla de Coria y sus cercanías*, 1974, pp. 20-29, y las fichas de sus informantes. El detalle, en las guías de clase de «La matanza» y «La zancaburra»." }
       ]
+    },
+    {
+      "id": "corrales",
+      "antetitulo": "El autor de «El seranu de las comadris»",
+      "titulo": "Vicente Corrales Jiménez",
+      "entradilla": "Un secretario de ayuntamiento que en 1901 escribió un sainete con el habla de Santibáñez el Bajo.",
+      "corto": "Vicente Corrales",
+      "resumen": "El autor, el manuscrito y el seranu",
+      "textos": [
+        "TEX-04"
+      ],
+      "bloques": [
+        {
+          "t": "h",
+          "texto": "El autor"
+        },
+        {
+          "t": "p",
+          "texto": "Vicente Corrales Jiménez era secretario del Ayuntamiento de Santibáñez el Bajo, en Tierras de Granadilla, y firmó el sainete en marzo de 1901. Vivió más de ochenta años. Santibáñez está a unos cinco kilómetros de Guijo de Granadilla, donde vivía entonces Gabriel y Galán, y según Félix Barroso los dos mantuvieron al parecer «cierta amistad (aunque sólo fuera en temporadas de caza)». El sainete está escrito a imitación del poeta, y es de los mismos años que *Extremeñas*, donde salió «El embargo»."
+        },
+        {
+          "t": "h",
+          "texto": "El manuscrito"
+        },
+        {
+          "t": "p",
+          "texto": "Lo encontraron Félix Barroso y Jaime Montero Corrales, bisnieto del autor, en un arcón de la casa que fue del bisabuelo, «cosido a mano» y en mal estado. El encabezamiento va en castellano y el resto en habla. Barroso lo copió entero y lo publicó en las actas de un congreso sobre el patrimonio lingüístico extremeño, celebrado en Cáceres en 2004 y publicado en 2016."
+        },
+        {
+          "t": "h",
+          "texto": "El seranu"
+        },
+        {
+          "t": "p",
+          "texto": "Un seranu es la reunión de las noches de invierno junto a la lumbre, para charlar mientras se hila o se hacen otras labores. La obra tiene cuatro actos y pasa la noche de los Santos Inocentes. En el primero, unas comadres se juntan en la cocina de Ciriaca, que vive sola desde que el marido se fue a Buenos Aires, y una vecina llama a pedir pan. En el segundo, otras dos comadres van por la calle criticando a un matrimonio rico y agarrado. En el taller se leen esos dos."
+        },
+        {
+          "t": "h",
+          "texto": "Cómo leerlo"
+        },
+        {
+          "t": "p",
+          "texto": "Es un texto de autor, no una grabación. Corrales escribe la s del final de sílaba como en castellano, y lo mismo la jota y la ll, así que el texto no dice cómo las pronunciaba. Lo que escribe con constancia sí dice algo: la j de *jadel* y *jarina*, la -l de *sabel* y *dormil*, y la d de *adeiti* y *jadel*, que no se cae nunca. La transcripción tenía erratas, que aquí van corregidas."
+        },
+        {
+          "t": "fuentes",
+          "texto": "Félix Barroso Gutiérrez, «Una pieza teatral de 1901 en el habla coloquial de Tierras de Granadilla», en Manuel Trinidad Martín (ed.), *Congreso Internacional APLEx 2004: Patrimonio Lingüístico Extremeño. Actas*, Cáceres, 2016, pp. 90-110."
+        }
+      ]
     }
   ]
 }
