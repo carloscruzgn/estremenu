@@ -1071,15 +1071,19 @@ async function crearMapa(baseP) {
   let shots = {}, wideBB = areaBB, probBB = areaBB, redBB = areaBB;
   function encuadres() {
     // Rectángulo libre de rótulos (arriba) y leyenda (abajo), en píxeles del lienzo
-    const top = H * (movil ? 0.3 : 0.24), bottom = H * (movil ? 0.86 : 0.88);
-    const rect = [W * 0.05, top, W * 0.95, bottom];
-    shots = {
-      area: autofit(areaBB, -10, 58, rect),
-      wide: autofit(wideBB, -8, 62, rect),
-      prob: autofit(probBB, -8, 62, rect),
-      ext: autofit(extBB, -4, 58, rect),
-      red: autofit(redBB, -8, 60, rect),
-    };
+    const top = H * (movil ? 0.3 : 0.24);
+    shots = {};
+    for (const cam of ['area', 'wide', 'prob', 'ext', 'red']) shots[cam] = shotPara(cam, top);
+  }
+  function shotPara(cam, top) {
+    const [bb, az, el] = { area: [areaBB, -10, 58], wide: [wideBB, -8, 62], prob: [probBB, -8, 62], ext: [extBB, -4, 58], red: [redBB, -8, 60] }[cam];
+    return autofit(bb, az, el, [W * 0.05, top, W * 0.95, H * (movil ? 0.86 : 0.88)]);
+  }
+  // En la página de las encuestas el rótulo ocupa más del lienzo: el mapa empieza por debajo de él, para que no se escondan pueblos ni letras
+  function shotDe(E) {
+    if (MODO !== 'encuestas') return shots[E.cam];
+    const rb = $('rotulo').getBoundingClientRect().bottom - lienzo.getBoundingClientRect().top;
+    return shotPara(E.cam, Math.min(H * 0.5, Math.max(H * (movil ? 0.3 : 0.24), rb + 44)));
   }
   function medir() {
     W = lienzo.clientWidth; H = lienzo.clientHeight;
@@ -1167,8 +1171,11 @@ async function crearMapa(baseP) {
     const E = ESTADOS[actual];
     const desde = munis.map(m => ({ h: m.userData.h, c: m.userData.c.clone() }));
     const hasta = munis.map(m => objetivo(m, E));
-    const sh = shots[E.cam], { p, t } = posDe(sh);
-    const cam = { p0: camera.position.clone(), t0: controls.target.clone(), p1: p, t1: t };
+    const p0 = camera.position.clone(), t0 = controls.target.clone();
+    pintarRotulo(E);
+    const { p, t } = posDe(shotDe(E));
+    camera.position.copy(p0); camera.lookAt(t0); camera.updateMatrixWorld();
+    const cam = { p0, t0, p1: p, t1: t };
     const ol = { a0: areaLine.userData.o, a1: E.lineaArea != null ? E.lineaArea : (E.id === 'nw' ? 0 : (E.id === 'prob' ? 0.5 : 0.95)), e0: extLine.userData.o, e1: E.lineaExt != null ? E.lineaExt : (E.id === 'nw' ? 0.9 : 0), i0: isoO, i1: E.iso ? 1 : 0 };
     anim = { t0: performance.now(), dur: (inmediato || sinMov) ? 1 : 1700, desde, hasta, cam, ol };
     controls.enabled = false;
@@ -1344,7 +1351,7 @@ async function crearMapa(baseP) {
   }
 
   // ---------- tamaño ----------
-  new ResizeObserver(() => { medir(); encuadres(); if (!anim && ESTADOS.length) { const { p, t } = posDe(shots[ESTADOS[actual].cam]); controls.target.copy(t); ponerCam(p, t); controls.update(); } pedir(); }).observe(lienzo);
+  new ResizeObserver(() => { medir(); encuadres(); if (!anim && ESTADOS.length) { const { p, t } = posDe(shotDe(ESTADOS[actual])); controls.target.copy(t); ponerCam(p, t); controls.update(); } pedir(); }).observe(lienzo);
   medir();
 
   return {
