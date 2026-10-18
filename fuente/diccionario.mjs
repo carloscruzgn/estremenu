@@ -106,12 +106,13 @@ function lugares(ts) {
 }
 
 // ---------- página del original ----------
+// Con la columna «página» (versión 2 de la hoja) va tal cual: «p. 40», «§ 239, p. 185». Sin ella, de las notas.
 function pagina(t) {
   if (t['página'] !== undefined) return t['página'] ? String(t['página']) : '';
   const n = t.notas || '';
   if (/^\s*VÍA/i.test(n)) return '';
   const m = n.match(/\bp\. (\d+)/);
-  return m ? m[1] : '';
+  return m ? 'p. ' + m[1] : '';
 }
 
 // ---------- entradas ----------
@@ -149,7 +150,7 @@ for (const L of LEMAS) {
       const s = sigla(t.fuente); usadas.add(t.fuente);
       const inf = /^Informante\b/.test(t.fuente);
       const p = inf ? '' : pagina(t);
-      const txt = s + (p ? ', p. ' + p : '') + (varias ? ', ac. ' + t['acepción'] : '');
+      const txt = s + (p ? ', ' + p : '') + (varias ? ', ac. ' + t['acepción'] : '');
       if (!vistos.has(txt)) { vistos.add(txt); partes.push(txt); }
     }
     h += `<p class="e-lin"><span class="e-et">Fuentes:</span> ${esc(partes.join('; '))}.</p>`;
