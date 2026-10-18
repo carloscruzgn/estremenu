@@ -4,7 +4,7 @@
  "titulo": "El seranu de las comadris",
  "tipo": "teatro",
  "autor": "Vicente Corrales Jiménez",
- "fuente": "Sainete fechado en Santibáñez el Bajo en marzo de 1901, actos I y II, en la transcripción de Félix Barroso (2016).",
+ "fuente": "Sainete fechado en Santibáñez el Bajo en marzo de 1901, actos I a III, en la transcripción de Félix Barroso (2016).",
  "grafia": "Con la grafía del autor y las erratas de la transcripción corregidas. Las acotaciones, en cursiva.",
  "leido": null,
  "rasgos": [
@@ -583,6 +583,249 @@
   {
    "tipo": "fin",
    "texto": "Cae el telón · Fin del acto segundo"
+  },
+  {
+   "tipo": "acto",
+   "texto": "Acto tercero"
+  },
+  {
+   "tipo": "acot",
+   "texto": "Sobre el escenario, en un rincón, una mesa de matanza, con cuchillos matanceros clavados y alguna que otra barreña. Algunas artesas y artesuelas. Otros cachivaches de la matanza. En una mesa, unos hombres juegan a las cartas. Un niño está dormido sobre una silla. Se han acabado las faenas matanceras y se aguarda la hora de la cena, que, en las matanzas, siempre es tarde. Un hombre, vestido a la antigua usanza (sombrero, chambra, bombachos, zajones, albarcas...) sale al escenario y se dirige a una mujer que anda trajinando en una artesa."
+  },
+  {
+   "tipo": "turno",
+   "quien": "Quico",
+   "tokens": [
+    {
+     "t": "Cucha Gervasia, ¿pol qué no vas agora, que entoavía quea un güen ratu pa cena, y le levas un "
+    },
+    {
+     "w": "poquinu",
+     "r": [
+      "M03"
+     ]
+    },
+    {
+     "t": " de olla a la parienta Ciriaca, que hogañu no ha matau? Vai tú, que ya aviarán la cena las muchachas, ¡hala, vaiti lista!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "Aguarda un pocu, Quicu, que tengu que avial lo que está en la artesa y que miri a vel cómu van en la cocina. ¡A vel cómu está el adobu, a vel si se ha tomau bien, que hay que embusá los chorizus de ranchera y al cuidu de las muchachas, y que lo tenga tó preparau pa la cena: el poti de alubias, el guisau de la cami del gallu y la ensalá con muchu poleu!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Uno de los hombres que están jugando a las cartas, despierta al chiquillo que duerme en una silla)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Miterio",
+   "tokens": [
+    {
+     "t": "¡Chachu, dispierta! ¡Qué mo de dormil! ¡Anda vaiti paí con los otrus muchachus a pidil el rabu! ¡Venga, cogi unas tapaeras y vaiti a metel bulla pa la calli!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Otro de los hombres que juegan a las cartas, interviene. Estos hombres visten a la antigua usanza, con sombreros de paño, chaleco y demás)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Genaro",
+   "tokens": [
+    {
+     "t": "¡Dejá en pá al muchachu, Miteriu! Tú, a lo tuyu, sigui juegandu a las cartas y trai pacá la jarra y escancia algu de vinu. "
+    },
+    {
+     "aside": "(Alcanza la jarra y reparte vino a los jugadores. Luego llama a voces)"
+    },
+    {
+     "t": " ¡Eh, Ruga, Grigoria, Sabel..., venil pacá alguna y llevarvos a esti muchachu a darli algu de cenal y, aluegu, lo acostáis, que está pasmaítu de sueñu!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Viene una de las que han sido llamadas y se lleva al muchacho en brazos. Entre tanto, Gervasia, prepara la olla, cogiendo una morcilla y otras cosas de una artesuela, para llevárselas a Ciriaca. Otro de los hombres que juega a las cartas exclama, algo socarrón)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Basilio",
+   "tokens": [
+    {
+     "t": "¡Gervasia, métile una güeña longaniza a Ciriaca, que la probi, endispués de tantu tiempu, andará falta de ellas!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "Tú, tan desvergonzau comu siempri. ¡No podía sel otru! ¡No, si pol algu te llaman Basiliu «Verracu»! ¡A toas horas con lo mesmu! ¡Peru qué desbocarrau serás, joíu!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Interviene el último de los jugadores, mientras saca la petaca y lía un cigarro)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Críspulo",
+   "tokens": [
+    {
+     "t": "¡Calla la boca, Basilio, y cogi las cartas, que te toca cal y si tantas ganas tienis pídiselo a Ciriaca, que a lo mejó hacéis un buen apañu! Ella lleva ya unus añus de más, sin que naidi le bata el chocolati, y tú, comu estás solterón, pos te podías apañal con ella, manque a lo mejol antis de empezal a "
+    },
+    {
+     "w": "jadel",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "t": " los deberis, te "
+    },
+    {
+     "w": "jadi",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "t": " rezal un páternosti..."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Basilio",
+   "tokens": [
+    {
+     "t": "¡Ay Críspulu, Críspulu..., mejol es que afeches "
+    },
+    {
+     "w": "el tu",
+     "r": [
+      "M04"
+     ]
+    },
+    {
+     "t": " picu, que en tocanti a esu, tos sabemus bien que tienis muchu que callal; asín que no me estiris de la lengua, que bien dici el reflán que «pa tapal una boca, "
+    },
+    {
+     "w": "jadin",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "t": " falta muchas estopas»! ¡Anda, echa vinu de la jarra y échali tamién a Genaru y Miteriu!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Quico llena la jarra de vino y la coloca en la mesa)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Quico",
+   "tokens": [
+    {
+     "t": "¡Hala, bebel, bebel tó lo que queráis y sin reñil ni caldearus, que no quieru yo quimeras en "
+    },
+    {
+     "w": "la mi",
+     "r": [
+      "M04"
+     ]
+    },
+    {
+     "t": " matanza! Si queréis cantal o pateal lo que queráis, peru lo que no quieru son gallarucus que saquin la lengua a paseu, que se sabi cómu acaban aluegu las cosas..."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Genaro",
+   "tokens": [
+    {
+     "t": "¡Esu, esu, amos al cante, y que se acabin las "
+    },
+    {
+     "w": "peninas",
+     "r": [
+      "M03"
+     ]
+    },
+    {
+     "t": "! ¡Venga pallá Miteriu, jarréate una de esas que sólu tú sabis! ¡Venga, que hoy estamus de matanza!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Se arranca Miterio con la copla aflamencada)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Miterio",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "«Sigue, sigue pateandu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "no dejes de pateal,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que esa novia que tú tienis"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "te la tengo que quital...»"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Sale Gervasia con la olla)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "Quedal con Dió y que siga la jarana."
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Mientras cae el telón y se oye el eco de los cantares)"
+  },
+  {
+   "tipo": "fin",
+   "texto": "Cae el telón · Fin del acto tercero"
   }
  ],
  "glosario": [
@@ -1050,18 +1293,198 @@
    "n": 132,
    "forma": "apuntaol",
    "glosa": "apuntador"
+  },
+  {
+   "n": 133,
+   "forma": "Cucha",
+   "glosa": "escucha, oye"
+  },
+  {
+   "n": 133,
+   "forma": "entoavía",
+   "glosa": "todavía"
+  },
+  {
+   "n": 134,
+   "forma": "levas",
+   "glosa": "¿llevas?"
+  },
+  {
+   "n": 135,
+   "forma": "parienta",
+   "glosa": "pariente"
+  },
+  {
+   "n": 135,
+   "forma": "hogañu",
+   "glosa": "este año"
+  },
+  {
+   "n": 136,
+   "forma": "aviarán",
+   "glosa": "prepararán"
+  },
+  {
+   "n": 137,
+   "forma": "avial",
+   "glosa": "preparar"
+  },
+  {
+   "n": 140,
+   "forma": "embusá",
+   "glosa": "embutir"
+  },
+  {
+   "n": 140,
+   "forma": "ranchera",
+   "glosa": "?"
+  },
+  {
+   "n": 142,
+   "forma": "poti",
+   "glosa": "pote, olla"
+  },
+  {
+   "n": 142,
+   "forma": "cami",
+   "glosa": "carne"
+  },
+  {
+   "n": 143,
+   "forma": "poleu",
+   "glosa": "poleo"
+  },
+  {
+   "n": 144,
+   "forma": "Chachu",
+   "glosa": "muchacho"
+  },
+  {
+   "n": 144,
+   "forma": "mo",
+   "glosa": "modo"
+  },
+  {
+   "n": 145,
+   "forma": "pidil el rabu",
+   "glosa": "?"
+  },
+  {
+   "n": 146,
+   "forma": "tapaeras",
+   "glosa": "tapaderas"
+  },
+  {
+   "n": 147,
+   "forma": "Dejá en pá",
+   "glosa": "dejad en paz"
+  },
+  {
+   "n": 148,
+   "forma": "escancia",
+   "glosa": "sirve"
+  },
+  {
+   "n": 153,
+   "forma": "pasmaítu",
+   "glosa": "pasmado"
+  },
+  {
+   "n": 155,
+   "forma": "endispués",
+   "glosa": "después"
+  },
+  {
+   "n": 158,
+   "forma": "desbocarrau",
+   "glosa": "deslenguado"
+  },
+  {
+   "n": 159,
+   "forma": "te toca cal",
+   "glosa": "¿te toca dar?"
+  },
+  {
+   "n": 161,
+   "forma": "mejó",
+   "glosa": "mejor"
+  },
+  {
+   "n": 161,
+   "forma": "apañu",
+   "glosa": "arreglo"
+  },
+  {
+   "n": 165,
+   "forma": "páternosti",
+   "glosa": "padrenuestro"
+  },
+  {
+   "n": 166,
+   "forma": "afeches el tu",
+   "glosa": "cierres el"
+  },
+  {
+   "n": 167,
+   "forma": "en tocanti a",
+   "glosa": "en cuanto a"
+  },
+  {
+   "n": 168,
+   "forma": "estiris",
+   "glosa": "tires"
+  },
+  {
+   "n": 169,
+   "forma": "reflán",
+   "glosa": "refrán"
+  },
+  {
+   "n": 173,
+   "forma": "caldearus",
+   "glosa": "acaloraros"
+  },
+  {
+   "n": 173,
+   "forma": "quimeras",
+   "glosa": "riñas"
+  },
+  {
+   "n": 175,
+   "forma": "gallarucus",
+   "glosa": "?"
+  },
+  {
+   "n": 177,
+   "forma": "amos",
+   "glosa": "vamos"
+  },
+  {
+   "n": 177,
+   "forma": "peninas",
+   "glosa": "penas"
+  },
+  {
+   "n": 180,
+   "forma": "pateandu",
+   "glosa": "zapateando"
+  },
+  {
+   "n": 184,
+   "forma": "Quedal",
+   "glosa": "quedad"
   }
  ],
  "_fuente": "Texto de la hoja TEX-04 (hoja-aula-pdf.zip, vcj01_datos.py) con las marcas de la guía de clase (guia-clase-pdf.zip, 19/10/2026)",
  "detalle": {
   "_fuente": "Guía de clase de TEX-04, secciones de los rasgos destacados y de los demás rasgos, resumida a mano el 19/10/2026: sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
-  "resumen": "Lo que hace Corrales con cada uno, y los demás rasgos de los dos actos",
+  "resumen": "Lo que hace Corrales con cada uno, y los demás rasgos de los tres actos",
   "entradilla": "Vicente Corrales escribió el sainete en Santibáñez el Bajo en 1901, once años antes de la encuesta de Krüger. Lo que hace con sus tres rasgos destacados se puede comparar con lo que oyeron los que vinieron después en los pueblos de alrededor. Lo general de cada rasgo, con su mapa, está en su página.",
   "rasgos": [
    {
     "codigo": "M04",
     "parrafos": [
-     "Once veces, en boca de cinco de las seis mujeres: *a la mi casa*, *la mi comadri*, *al mi maríu*, *la mi vecina*, *al mi hombri*, *el su maríu*, *la su casa*. Y con lástima, *la mi probi* y *los mis probis*, ‘la pobre’ y ‘los pobres’.",
+     "Trece veces. Once, en boca de cinco de las seis mujeres de los dos primeros actos: *a la mi casa*, *la mi comadri*, *al mi maríu*, *la mi vecina*, *al mi hombri*, *el su maríu*, *la su casa*, y con lástima, *la mi probi* y *los mis probis*, ‘la pobre’ y ‘los pobres’. Y dos en la de los hombres del tercero: *el tu picu* y *la mi matanza*. No es cosa solo de mujeres.",
      "Sin artículo van un refrán, *más sabi el tontu en su casa que el discretu en la ajena*, y una frase hecha, *sacar de sus casillas*: ahí Corrales escribe como en castellano. Y *Mairi mía*, con el posesivo detrás.",
      "En Ahigal, al lado, un vecino contaba en 2002 que el artículo no se pone con el padre, la madre, los hermanos ni los abuelos: *su padri de Juan*. Corrales lo pone con el marido, que no está en esa lista."
     ],
@@ -1070,7 +1493,7 @@
    {
     "codigo": "C09",
     "parrafos": [
-     "Dos palabras, y siempre con d: *hacer*, en *jadin*, *jadel*, *jadi* y *jadremus*, y *aceite*, en *adeiti*, tres veces. Ninguna más: *ici* ‘dice’, *vecina*, *paeci* o *conoci* van con c, como en castellano.",
+     "Dos palabras, y casi siempre con d: *hacer*, en *jadin*, *jadel*, *jadi* y *jadremus*, y *aceite*, en *adeiti*, tres veces. La excepción es de Críspulo, en el acto III: *hacéis*, con h y con c, tres líneas antes de *jadel* y *jadi*. Ninguna palabra más: *ici* ‘dice’, *vecina*, *paeci*, *conoci*, *cocina* o *dici* van con c, como en castellano.",
      "*Hacer* es de las palabras en que más duró: en 1912 Krüger la encontró suelta en Pozuelo de Zarzón, Pinofranqueado y Gata, y precisamente en *hacer*. *Decir*, que otras fuentes dan con d tanto como *hacer*, Corrales lo escribe con c. *Jadel* lleva además la j de la F- latina: dos rasgos viejos en una palabra.",
      "En el mismo texto, la d del castellano se cae a cada paso, *maríu*, *dao*, *teníu*, *pueo*, y la de *adeiti* y *jadel* no se cae nunca. Si fuera una d como las otras, se caería como ellas.",
      "Krüger no la oyó en 1912 en Zarza de Granadilla ni en Granadilla, que decían *azeite*. Corrales la escribía once años antes, a unos kilómetros."
@@ -1080,8 +1503,8 @@
    {
     "codigo": "M03",
     "parrafos": [
-     "Ocho en -inu, -ina: *poquinu*, *cosinas*, *braserinu*, *desmejoraína*, *penina*, *alantinu*, *ratinu*. Siete en -itu, -ita: *solita*, tres veces, *mesmitu*, *probecita*, *derrengaítus*, *tiesitu*. Ninguno en -illo.",
-     "El -itu va en frases hechas, *solita* ‘sola del todo’ y *agora mesmitu*, y en la lástima: *probecita*, *derrengaítus*, *se quea tiesitu* ‘se queda muerto’. El -inu, en lo demás. No es regla cerrada: *desmejoraína* y *penina* también son lástima.",
+     "Diez en -inu, -ina: *poquinu*, tres veces, *cosinas*, *braserinu*, *desmejoraína*, *penina*, *peninas*, *alantinu*, *ratinu*. Ocho en -itu, -ita: *solita*, tres veces, *mesmitu*, *probecita*, *derrengaítus*, *tiesitu*, *pasmaítu*. Ninguno en -illo.",
+     "El -itu va en frases hechas, *solita* ‘sola del todo’ y *agora mesmitu*, y en la lástima o el cariño: *probecita*, *derrengaítus*, *se quea tiesitu* ‘se queda muerto’, el niño *pasmaítu de sueñu*. El -inu, en lo demás. No es regla cerrada: *desmejoraína* y *penina* también son lástima.",
      "Un vecino de Ahigal describía en 2002 el mismo reparto: -inu, -ina el frecuente, -ito, -ita con valor de conmiseración y en lexicalizaciones, y -illo «extrañísimo». Corrales lo hacía igual cien años antes."
     ],
     "pregunta": "¿Cuándo decís -inu y cuándo -itu? ¿Os suena mejor *probecita* o *probecina*?"
@@ -1111,11 +1534,11 @@
    },
    {
     "codigo": "C08",
-    "texto": "*Mairi mía*."
+    "texto": "*Mairi mía*. En el acto cuarto, *pairi* y *Pairinuestro*."
    },
    {
     "codigo": "C19",
-    "texto": "*güeñas*, *güenu*, *güertu*."
+    "texto": "*güeñas*, *güenu*, *güertu*, *güen*, *güeña*."
    },
    {
     "codigo": "C20",
@@ -1131,12 +1554,17 @@
    },
    {
     "codigo": "M24",
-    "texto": "*asín*, *aluegu*, *agora*, *cuasi*, *mesmu*, *dende*, *antis*, *manque*, *en cuantis*."
+    "texto": "*asín*, *aluegu*, *agora*, *cuasi*, *mesmu*, *dende*, *antis*, *manque*, *en cuantis*, *entoavía*, *hogañu*, *endispués*, *en tocanti a*, *tamién*."
    },
    {
     "codigo": "M25",
     "titulo": "Pa- delante del adverbio",
     "texto": "*pacá*, *paí pal Tesu*."
+   },
+   {
+    "codigo": "V02",
+    "titulo": "Vocales átonas que cambian",
+    "texto": "*dispierta*, *endispués*."
    },
    {
     "codigo": "V05",
