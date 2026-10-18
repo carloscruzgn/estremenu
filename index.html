@@ -790,7 +790,7 @@ span.fila .tit { color: var(--texto-2) }
       <h3 id="dic-t1">Buscar una palabra</h3>
       <div class="dic-busca">
         <label for="busca-voz">Escribe una palabra</label>
-        <input id="busca-voz" type="search" autocomplete="off" spellcheck="false" placeholder="acordal, abeja, achiperre…">
+        <input id="busca-voz" type="search" autocomplete="off" spellcheck="false" placeholder="acordal, zancaburra, jedel…">
         <div class="dic-modo" role="group" aria-label="Dónde buscar">
           <button type="button" data-modo="voz" aria-pressed="true">En la palabra</button>
           <button type="button" data-modo="glosa" aria-pressed="false">En el significado</button>
@@ -1012,7 +1012,7 @@ $('busca-voz').addEventListener('input', buscarDic);
 for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListener('click', () => {
   modoDic = b.dataset.modo;
   for (const o of document.querySelectorAll('.dic-modo button')) o.setAttribute('aria-pressed', String(o === b));
-  $('busca-voz').placeholder = modoDic === 'glosa' ? 'despertar, abeja, aceite…' : 'acordal, abeja, achiperre…';
+  $('busca-voz').placeholder = modoDic === 'glosa' ? 'despertar, escarabajo, columpio…' : 'acordal, zancaburra, jedel…';
   buscarDic(); $('busca-voz').focus();
 });
 for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya']) $(id).addEventListener('click', ev => {
