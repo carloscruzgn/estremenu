@@ -1,0 +1,146 @@
+{
+ "codigo": "C07",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La d que se cae:",
+  "sembrao, comío, tó"
+ ],
+ "cabecera": "La d que se cae: sembrao, comío, tó",
+ "_titulo": "El de la página C07 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "sembra",
+   "antes": "d",
+   "despues": "",
+   "cola": "o"
+  },
+  {
+   "base": "com",
+   "antes": "id",
+   "despues": "í",
+   "cola": "o"
+  },
+  {
+   "base": "n",
+   "antes": "ada",
+   "despues": "á"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 48, 51, 76, 220, 254-255, 261 y 279",
+   "terminos": {
+    "10216": "Granadilla: eskuchao «escuchado», kuñao, na «nada»; en Zarza de Granadilla, rrwilla «rodilla», jigao «hígado» (Krüger 1914, §§ 51, 162, 76, 220 y 254-255)",
+    "10187": "Torre de Don Miguel: eskuchao, kuñao, ko «codo», y na junto a nada (Krüger 1914, §§ 51 y 254-255)",
+    "10189": "Torrejoncillo: ekuchao, kuñao, jugao, maura «madura», nío, na, ko, jigau (Krüger 1914, §§ 51, 162, 220, 254-255 y 261)",
+    "10152": "Pozuelo de Zarzón: a kusao «ha escuchado», jugao, la komía, nío, rrwilla (Krüger 1914, §§ 76, 254-255 y 261)",
+    "10089": "Guijo de Galisteo: eskuchau, jugau, kojíu, sabau, níu, poéis, rrwilla, na, ko, jigau, deus «dedos» (Krüger 1914, §§ 48, 51, 76, 220, 254-255 y 261)",
+    "10207": "Villa del Campo: kuchau, kuñau, jugau, maura, sabau, poéis, rrwilla, na, ko, jigau, deu junto a dedu (Krüger 1914, §§ 48, 51, 76, 220 y 254-255)",
+    "10061": "Ceclavín: a kuchau, kuñau, maura, rrwilla, kou «codo», igau «hígado», deus (Krüger 1914, §§ 48, 51, 76, 220 y 254-255)",
+    "10211": "Villanueva de la Sierra: eskusao, sabau, na, jigau (Krüger 1914, §§ 51, 162, 220 y 254-255)",
+    "10084": "Gata: eskusao, jugao, kojío, maura, nío, na, ko; mio «miedo» (Krüger 1914, §§ 51, 162, 82, 254-255 y 261)",
+    "10041": "Caminomorisco, por Cambroncino: eʰkusao, kuñau, kou, lozeu «los dedos» (Krüger 1914, §§ 48, 51 y 254-255)",
+    "10146": "Pinofranqueado: kojíu, sabau, níu, na, ko, jigau, lozeu; en El Castillo, jugao, sabau, na, ko, jeriu «herido» (Krüger 1914, §§ 48, 51, 220, 254-255 y 261)",
+    "10050": "Casar de Palomero: kojío, na (Krüger 1914, §§ 51, 162 y 255)",
+    "10006": "Ahigal: na, kou, níu, rrwilla, jigau, eriu «herido», deu (Krüger 1914, §§ 48, 51, 76, 220 y 261)",
+    "10127": "Montehermoso: la komía, poéis, rrwilla, na, ko, jigau (Krüger 1914, §§ 48, 51, 76, 220 y 255)",
+    "10129": "Morcillo: ko «codo» (Krüger 1914, §§ 51 y 162)",
+    "10218": "Zarza la Mayor: maura, níu, ko, jigau (Krüger 1914, §§ 51, 162, 220, 254 y 261)",
+    "10082": "Garrovillas: kou «codo», jigau «hígado» (Krüger 1914, §§ 51, 162 y 220)",
+    "10088": "Guijo de Coria: peil «pedir» (Krüger 1914, § 279, p. 211)"
+   }
+  },
+  {
+   "rotulo": "1947-1979",
+   "fuentes": "Marcos de Sande 1947; Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 94: «casi constante», suol, pareón, preicar, escuilla, meico; y acorralá, bofetá",
+    "10051": "Velo Nieto 1956, p. 94: «casi constante», suol, pareón, preicar, escuilla, meico; y acorralá, bofetá",
+    "10108": "Velo Nieto 1956, p. 94: «casi constante», suol, pareón, preicar, escuilla, meico; y acorralá, bofetá",
+    "10135": "Velo Nieto 1956, p. 94: «casi constante», suol, pareón, preicar, escuilla, meico; y acorralá, bofetá",
+    "10146": "Velo Nieto 1956, p. 94: «casi constante», suol, pareón, preicar, escuilla, meico; y acorralá, bofetá",
+    "10040": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10053": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10059": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10067": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10088": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10089": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10101": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10127": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10128": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10143": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10150": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10189": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "10207": "Cummins, § 9a, p. 56: «es normal en el habla de todos, cualquiera que sea su edad o su grado cultural»",
+    "37234": "Iglesias Ovejero 2010, p. 47: «muy marcado», el baju «badajo», cestáu",
+    "37221": "Iglesias Ovejero 2010, p. 47: «muy marcado», el baju «badajo», cestáu",
+    "37245": "Iglesias Ovejero 2010, p. 47: «muy marcado», el baju «badajo», cestáu",
+    "37269": "Iglesias Ovejero 2010, p. 47: «muy marcado», el baju «badajo», cestáu; y puíu, comíu en la lista de correcciones del maestro de Robleda (p. 39)",
+    "37371": "Iglesias Ovejero 2010, p. 47: «muy marcado», el baju «badajo», cestáu",
+    "10082": "Garrovillas: lamíu, na, partíu, perdíu, tovía, probaliá (Marcos de Sande 1947, p. 98)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Alcón 2002; Paniagua 2002; Díaz Lucio 2002",
+   "terminos": {
+    "10089": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general; Alcón 2002, p. 223: comío, crúo, mercao, ná, tó",
+    "10050": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10006": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general; Paniagua 2002, p. 78: se pierde, salvo cuando viene de la antigua z sonora (jadel, jidi) y en voces recientes como pesadilla",
+    "10150": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10061": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10082": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10053": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10175": "González Salgado 2003, p. 609: la consonante que más veces se pierde, sobre todo en los participios, sin localización especial porque es general",
+    "10039": "Cadalso: en los motes, Cuadrau, Pelá, Reservá, Guisao, Botao, Peinao (Díaz Lucio 2002)"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Marcos de Sande 1947 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "General en todo tipo de hablantes (Montero Curiel 2006, p. 39). González Salgado 2003, p. 609, no le da localización especial, porque es general."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

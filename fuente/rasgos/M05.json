@@ -1,0 +1,107 @@
+{
+ "codigo": "M05",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "La Juana,",
+  "el Pericu"
+ ],
+ "cabecera": "La Juana, el Pericu",
+ "_titulo": "El de la página M05 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "",
+   "despues": "la",
+   "cola": " Juana"
+  },
+  {
+   "base": "",
+   "antes": "",
+   "despues": "el",
+   "cola": " Pericu"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10040": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú; y el gíhu «Guijo de Coria»",
+    "10053": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10059": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10067": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10088": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú; y el gihítu «Guijo de Galisteo»",
+    "10089": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10101": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10127": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú; y la pwöbra «Puebla de Argeme»",
+    "10128": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú; y la θárθa «Zarza la Mayor»",
+    "10143": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10150": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú; y la peʰkwéθa «Pescueza»",
+    "10189": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "10207": "Cummins, § 29, p. 105: «el artículo se usa constantemente ante nombres propios»: la Simona, la Petra, la Bertina, la Pilal, la Aurelina, la Marí, y hasta la Lulú",
+    "37269": "Robleda: el artículo «sólo se antepone generalmente a los nombres de mujer», la Pepa, la Juana (Iglesias Ovejero 2010, p. 52)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 223: la Juana, el Pericu"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "nunca": {
+  "10006": "Ahigal: no se pone artículo al nombre de pila, solo a los motes de mujer, tía Anastasia la Caldera (Paniagua 2002, p. 81)",
+  "10039": "Cadalso: el artículo va con el mote y no con el nombre, el tío Florentino Zorrino, la tía Mónica Pelá (Díaz Lucio 2002)"
+ },
+ "llamada": {
+  "termino": "10006",
+  "texto": "En <b>Ahigal</b> el artículo va solo con los motes de mujer"
+ },
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Paniagua 2002 · Díaz Lucio 2002, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, p. 52: la Catalina, el Pedro, también la Vanesa, el Kevin, sin pueblo. Iglesias Ovejero 2010, p. 52, lo da más regular en Extremadura que en El Rebollar."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

@@ -1,0 +1,141 @@
+{
+ "codigo": "M08",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Me se cayó,",
+  "mos vamos, comelu"
+ ],
+ "cabecera": "Me se cayó, mos vamos, comelu",
+ "_titulo": "El de la página M08 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "se me",
+   "despues": "me se",
+   "cola": " cayó"
+  },
+  {
+   "base": "",
+   "antes": "n",
+   "despues": "m",
+   "cola": "os vamos"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 112, 171, 286 y 448",
+   "terminos": {
+    "10089": "Guijo de Galisteo: mos «nos», bu «os», nusotrus; julgallu, oyellu «juzgarlo, oírlo» (Krüger 1914, §§ 112, 171 y 286)",
+    "10127": "Montehermoso: mos «nos» (Krüger 1914, § 171, p. 133)",
+    "10146": "Pinofranqueado: mo «nos», bo «os»; en El Castillo, mu «nos», bu «os» (Krüger 1914, § 171, p. 133)",
+    "10006": "Ahigal: nusotru (Krüger 1914, § 112, p. 100)",
+    "10061": "Ceclavín: nusotrus (Krüger 1914, § 112, p. 100)",
+    "10207": "Villa del Campo: juzgallu, oyellu, dezillu, serbilli, con l palatal (Krüger 1914, §§ 286 y 448)",
+    "10211": "Villanueva de la Sierra: oillo «oírlo», junto a judgalo (Krüger 1914, § 286)",
+    "10216": "Zarza de Granadilla: serbille «servirle», con l palatal (Krüger 1914, § 448, p. 372)"
+   }
+  },
+  {
+   "rotulo": "1947-1979",
+   "fuentes": "Marcos de Sande 1947; Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 107-108: mos, vos, sos o sus «os»; nojotros, mosotros, nusotros, vusotros; no me se escapa, no te se ocurra",
+    "10051": "Velo Nieto 1956, pp. 107-108: mos, vos, sos o sus «os»; nojotros, mosotros, nusotros, vusotros; no me se escapa, no te se ocurra",
+    "10108": "Velo Nieto 1956, pp. 107-108: mos, vos, sos o sus «os»; nojotros, mosotros, nusotros, vusotros; no me se escapa, no te se ocurra",
+    "10135": "Velo Nieto 1956, pp. 107-108: mos, vos, sos o sus «os»; nojotros, mosotros, nusotros, vusotros; no me se escapa, no te se ocurra",
+    "10146": "Velo Nieto 1956, pp. 107-108: mos, vos, sos o sus «os»; nojotros, mosotros, nusotros, vusotros; no me se escapa, no te se ocurra",
+    "10040": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y mwéʰtra (§ 23)",
+    "10053": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y menoʰkabándunu (§ 23)",
+    "10059": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y nuhempleában, me se fwé a la bíʰta, me se murjó úna (§§ 23 y 31)",
+    "10067": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y lu háθin, moʰtráhun una simjénti, yó me pái ke (§§ 23 y 31)",
+    "10088": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "10089": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "10101": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y si kéda: bjérta la bóka (§ 23)",
+    "10127": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y mos, musótru, mwéʰtra; li se bína; ¡se káli! (§§ 23 y 31)",
+    "10128": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "10143": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi; y yó me paréθi ke (§ 31)",
+    "10150": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "10189": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "10207": "Cummins, § 23, p. 94: la vocal del pronombre átono se cierra, komélu, tenélu, se li díθi",
+    "37234": "Iglesias Ovejero 2010, p. 53: mos, mus, mosotros, musotrus; me se, te se; y pónmilu, póntilu, pónsilu (p. 51)",
+    "37221": "Iglesias Ovejero 2010, p. 53: mos, mus, mosotros, musotrus; me se, te se; y pónmilu, póntilu, pónsilu (p. 51)",
+    "37245": "Iglesias Ovejero 2010, p. 53: mos, mus, mosotros, musotrus; me se, te se; y pónmilu, póntilu, pónsilu (p. 51); y vos alternando con mos (p. 53)",
+    "37269": "Iglesias Ovejero 2010, p. 53: mos, mus, mosotros, musotrus; me se, te se; y pónmilu, póntilu, pónsilu (p. 51)",
+    "37371": "Iglesias Ovejero 2010, p. 53: mos, mus, mosotros, musotrus; me se, te se; y pónmilu, póntilu, pónsilu (p. 51)",
+    "10082": "Garrovillas: moh «nos» (Marcos de Sande 1947)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002; Paniagua 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 223: me se cayó, mos, mosotros, muestros",
+    "10006": "Paniagua 2002, p. 81: jazelu, traelu, dili, a veces jazel·lu; mos «nos», sos «os»"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "La sierra del Jerte"
+  },
+  "terminos": {
+   "10147": "Piornal: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10184": "El Torno: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10196": "Valdastillas: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10054": "Casas del Castañar: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10154": "Rebollar: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10036": "Cabrero: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)",
+   "10025": "Barrado: me se (Flores del Manzano 1992, pp. 130-131, para el habla de Gredos)"
+  },
+  "_nota": "Los serranos del Jerte, como en RM08, con Flores del Manzano 1992 sin pueblo (común 7 de la segunda tanda)"
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Marcos de Sande 1947 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, pp. 54-56: nusotros, mosotros, vusotros; me se, te se, mos se; mos, sos, sin pueblo."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

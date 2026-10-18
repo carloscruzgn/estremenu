@@ -19,5 +19,19 @@
   ]
  ],
  "estado": "Se va perdiendo",
- "origenes": []
+ "origenes": [],
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "se me",
+   "despues": "me se",
+   "cola": " cayó"
+  },
+  {
+   "base": "",
+   "antes": "n",
+   "despues": "m",
+   "cola": "os vamos"
+  }
+ ]
 }

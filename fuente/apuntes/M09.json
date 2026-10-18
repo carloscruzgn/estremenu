@@ -21,5 +21,19 @@
  "estado": "Todavía se oye",
  "origenes": [
   "De todas partes"
+ ],
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "",
+   "despues": "tíu",
+   "cola": " Manuel"
+  },
+  {
+   "base": "",
+   "antes": "",
+   "despues": "tía",
+   "cola": " Martina"
+  }
  ]
 }

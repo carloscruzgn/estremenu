@@ -1,0 +1,124 @@
+{
+ "codigo": "M28",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Caí el caldu, me queé laʰ llaviʰ:",
+  "verbos que cambian de sentido"
+ ],
+ "cabecera": "Caí el caldu, me queé laʰ llaviʰ: verbos que cambian de sentido",
+ "_titulo": "El de la página M28 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "el",
+   "despues": "la",
+   "cola": " calor"
+  },
+  {
+   "base": "me ",
+   "antes": "dejé",
+   "despues": "queé",
+   "cola": ""
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 186, 262 y 435",
+   "terminos": {
+    "10152": "Pozuelo de Zarzón: topa, femenino, frente al topo de Torre de Don Miguel (Krüger 1914, § 186, p. 144)",
+    "10211": "Villanueva de la Sierra: topa, femenino, frente al topo de Torre de Don Miguel (Krüger 1914, § 186, p. 144)",
+    "10146": "Pinofranqueado: el alejumbri «la legumbre», en masculino (Krüger 1914, § 262, p. 201, y § 435, p. 359)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 99-100: la nogala, la peral, la tocona, el chinche; y p. 110, voy en casa D. Mariano; y acordar «despertar» (pp. 115-118)",
+    "10051": "Velo Nieto 1956, pp. 99-100: la nogala, la peral, la tocona, el chinche; y p. 110, voy en casa D. Mariano",
+    "10108": "Velo Nieto 1956, pp. 99-100: la nogala, la peral, la tocona, el chinche; y p. 110, voy en casa D. Mariano; y la puente cimera y la puente bajera, en Mestas (pp. 99-100)",
+    "10135": "Velo Nieto 1956, pp. 99-100: la nogala, la peral, la tocona, el chinche; y p. 110, voy en casa D. Mariano",
+    "10146": "Velo Nieto 1956, pp. 99-100: la nogala, la peral, la tocona, el chinche; y p. 110, voy en casa D. Mariano",
+    "10059": "Cummins, § 34, p. 108: le kedáron el nómbri de pañĉéti, aḷí keában el míḷu",
+    "10127": "Cummins, § 34, p. 108: aŋ kedáu ya la páha de loʰθerjáli; y la mehól aθéiti ke ái (§ 20a, p. 87)",
+    "10101": "Cummins, § 34, p. 108: la yúnta… ba keándu:n lumítu",
+    "10067": "Cummins, § 34, p. 108: éʰta párti kémuʰkedáu, ésa kása la bán a kaél, para kreθél·la θéra",
+    "37234": "Iglesias Ovejero 2010, p. 54: caer «verter» y «hacer caer», la dagala cayó la lechi; quedar «dejar»; coger «caber»; y p. 52, el o la calol, la puenti",
+    "37221": "Iglesias Ovejero 2010, p. 54: caer «verter» y «hacer caer», la dagala cayó la lechi; quedar «dejar»; coger «caber»; y p. 52, el o la calol, la puenti",
+    "37245": "Iglesias Ovejero 2010, p. 54: caer «verter» y «hacer caer», la dagala cayó la lechi; quedar «dejar»; coger «caber»; y p. 52, el o la calol, la puenti",
+    "37269": "Iglesias Ovejero 2010, p. 54: caer «verter» y «hacer caer», la dagala cayó la lechi; quedar «dejar»; coger «caber»; y p. 52, el o la calol, la puenti",
+    "37371": "Iglesias Ovejero 2010, p. 54: caer «verter» y «hacer caer», la dagala cayó la lechi; quedar «dejar»; coger «caber»; y p. 52, el o la calol, la puenti"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002; Paniagua 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 224: habemuh doh hermanus; me queé las llavih en casa; caí el caldu al suelu; entru loh lechonis en la corralá; la puente, la aceiti",
+    "10006": "Paniagua 2002, p. 82: quedar «dejar», sobrar transitivo, has sobráu muchu, soñar siempre con se; no se usan entrar por meter ni caer por tirar"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Plasencia"
+  },
+  "terminos": {
+   "10148": "Plasencia: haber, quedar, caer, entrar y coger con otro sentido; soñar con se (Lumera Guerrero 1989 y 1992, vía Fernández de Molina 2015, p. 61)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, pp. 57-60: quedar «dejar», caer «tirar», entrar «meter», coger «caber»; y en la p. 59, soñarse en toda Extremadura.",
+  "comarcas": {
+   "jerte": "Flores del Manzano 1992, p. 131, da caer, quedar, entrar y correr con otro sentido en el habla de esta parte de Gredos; y la pus, p. 130.",
+   "vera": "Flores del Manzano 1992, p. 131, da caer, quedar, entrar y correr con otro sentido en el habla de esta parte de Gredos; y la pus, p. 130.",
+   "ambroz": "Flores del Manzano 1992, p. 131, da caer, quedar, entrar y correr con otro sentido en el habla de esta parte de Gredos; y la pus, p. 130."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

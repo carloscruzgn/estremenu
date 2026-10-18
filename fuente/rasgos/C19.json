@@ -1,0 +1,116 @@
+{
+ "codigo": "C19",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Güevu, güertu,",
+  "güele"
+ ],
+ "cabecera": "Güevu, güertu, güele",
+ "_titulo": "El de la página C19 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "hu",
+   "despues": "gü",
+   "cola": "ele"
+  },
+  {
+   "base": "",
+   "antes": "hu",
+   "despues": "gü",
+   "cola": "elve"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 193, 195-196, 260 y 357",
+   "terminos": {
+    "10050": "Casar de Palomero: ungweso «un hueso», frente a wesos; un gwe «un buey» (Krüger 1914, §§ 193 y 196)",
+    "10152": "Pozuelo de Zarzón: ungwebo «un huevo», frente a webo; un gwe (Krüger 1914, §§ 193 y 196)",
+    "10211": "Villanueva de la Sierra: ungwebu, frente a webu; un gwertu «un huerto» (Krüger 1914, §§ 195-196)",
+    "10207": "Villa del Campo: ungwebu, frente a webus; un gwertu; zirgwela «ciruela» (Krüger 1914, §§ 195-196 y 357)",
+    "10089": "Guijo de Galisteo: ungwebu, ungwesu, frente a webus, wesus; zirgwela (Krüger 1914, §§ 196 y 357)",
+    "10127": "Montehermoso: ungwesu, frente a wesu (Krüger 1914, § 196)",
+    "10129": "Morcillo: ungwebo, frente a webos (Krüger 1914, § 196)",
+    "10146": "Pinofranqueado: ungwebu, ungwesu, frente a webu, wesu; un gweltu «un huerto», gwetru «vuestro», un gwe, zirgwela; en El Castillo, ungwebu, un gwe (Krüger 1914, §§ 193, 195-196 y 357)",
+    "10189": "Torrejoncillo: ungwebu, frente a dowebus «dos huevos» (Krüger 1914, § 196)",
+    "10082": "Garrovillas: ungwesu, frente a wesu; zigwela (Krüger 1914, §§ 196 y 357)",
+    "10041": "Caminomorisco, por Cambroncino: ungwei «un buey», ungwesu, un gwertu, un gwe, zirgwela (Krüger 1914, §§ 193, 195-196 y 357)",
+    "10218": "Zarza la Mayor: ungwebu, con la b muy débil (Krüger 1914, § 260, p. 199)",
+    "10061": "Ceclavín: ungweu «un huevo»; zirgwela (Krüger 1914, §§ 260 y 357)",
+    "10084": "Gata: ungweo «un huevo»; zilgwela (Krüger 1914, §§ 260 y 357)",
+    "10187": "Torre de Don Miguel: loz gwebos «los huevos» (Krüger 1914, § 195, p. 150)"
+   }
+  },
+  {
+   "rotulo": "1947-1979",
+   "fuentes": "Marcos de Sande 1947; Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 97: güele, güelve, güevos, güeso, güestro, cirgüela, y la g también en goler, golver, golienda",
+    "10051": "Velo Nieto 1956, p. 97: güele, güelve, güevos, güeso, güestro, cirgüela, y la g también en goler, golver, golienda",
+    "10108": "Velo Nieto 1956, p. 97: güele, güelve, güevos, güeso, güestro, cirgüela, y la g también en goler, golver, golienda",
+    "10135": "Velo Nieto 1956, p. 97: güele, güelve, güevos, güeso, güestro, cirgüela, y la g también en goler, golver, golienda",
+    "10146": "Velo Nieto 1956, p. 97: güele, güelve, güevos, güeso, güestro, cirgüela, y la g también en goler, golver, golienda",
+    "10150": "Cummins, § 17, p. 80: gwöbu «huevo», y al revés, wadáña «guadaña»",
+    "10067": "Cummins, § 17, p. 80: wéltu, wélta «vuelto, vuelta», sin la b",
+    "10127": "Cummins, § 17, p. 80: wéltu, wélta «vuelto, vuelta», sin la b",
+    "10053": "Cummins, § 17, p. 80: wéyi «buey», sin la b",
+    "10082": "Garrovillas: güertu, güeli, agüelu, Güesu (Marcos de Sande 1947, pp. 98-99)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 222: güele, güerto, güelve, y la g también en regolver, gómito, jugón, gabina, golel"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Marcos de Sande 1947 · Velo Nieto 1956 · Cummins 1974 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, pp. 34-35, da güevo, güeso, güerto, sin pueblo."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

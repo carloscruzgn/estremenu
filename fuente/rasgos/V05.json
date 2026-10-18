@@ -1,0 +1,128 @@
+{
+ "codigo": "V05",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Palabras que ganan o pierden",
+  "una vocal al principio"
+ ],
+ "cabecera": "Palabras que ganan o pierden una vocal al principio: arrecogel, bujeru",
+ "_titulo": "El de la página V05 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "",
+   "despues": "a",
+   "cola": "limpial"
+  },
+  {
+   "base": "",
+   "antes": "ha",
+   "despues": "",
+   "cola": "bía"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 46, 166, 174, 254 y 435",
+   "terminos": {
+    "10006": "Ahigal: anal «nadar» (Krüger 1914, § 46, p. 55)",
+    "10089": "Guijo de Galisteo: anal «nadar» (Krüger 1914, § 46, p. 55)",
+    "10127": "Montehermoso: anal «nadar» (Krüger 1914, § 46, p. 55)",
+    "10129": "Morcillo: anal «nadar» (Krüger 1914, § 46, p. 55)",
+    "10146": "Pinofranqueado: el alejumbri «la legumbre», el nosu «el oso» (Krüger 1914, § 435, p. 359)",
+    "10207": "Villa del Campo: kuchau «escuchado» (Krüger 1914, § 254, p. 194); bía «veía» (§ 166, p. 129)",
+    "10061": "Ceclavín: a kuchau «ha escuchado» (Krüger 1914, § 174, p. 133)",
+    "10152": "Pozuelo de Zarzón: a kusao «ha escuchado» (Krüger 1914, § 174, p. 133)",
+    "10084": "Gata: lesias «iglesias», sobre la lesia (Krüger 1914, § 166, p. 129, y § 435, p. 360); bía «veía» (§ 166, p. 129)",
+    "10216": "Granadilla: bía «veía» (Krüger 1914, § 166, p. 129)",
+    "10050": "Casar de Palomero: bía «veía» (Krüger 1914, § 166, p. 129)",
+    "10211": "Villanueva de la Sierra: bía «veía» (Krüger 1914, § 166, p. 129)"
+   }
+  },
+  {
+   "rotulo": "1947-1979",
+   "fuentes": "Marcos de Sande 1947; Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 80 y 82: la a añadida, «sin que apenas exista hablante que los pronuncie de otra forma», aluego, adespués, ajuyir, atoavía, abajar, arrecoger; y la vocal perdida, nebro, cendaja, mondicias, nular, flojar",
+    "10051": "Velo Nieto 1956, pp. 80 y 82: la a añadida, «sin que apenas exista hablante que los pronuncie de otra forma», aluego, adespués, ajuyir, atoavía, abajar, arrecoger; y la vocal perdida, nebro, cendaja, mondicias, nular, flojar",
+    "10108": "Velo Nieto 1956, pp. 80 y 82: la a añadida, «sin que apenas exista hablante que los pronuncie de otra forma», aluego, adespués, ajuyir, atoavía, abajar, arrecoger; y la vocal perdida, nebro, cendaja, mondicias, nular, flojar",
+    "10135": "Velo Nieto 1956, pp. 80 y 82: la a añadida, «sin que apenas exista hablante que los pronuncie de otra forma», aluego, adespués, ajuyir, atoavía, abajar, arrecoger; y la vocal perdida, nebro, cendaja, mondicias, nular, flojar",
+    "10146": "Velo Nieto 1956, pp. 80 y 82: la a añadida, «sin que apenas exista hablante que los pronuncie de otra forma», aluego, adespués, ajuyir, atoavía, abajar, arrecoger; y la vocal perdida, nebro, cendaja, mondicias, nular, flojar",
+    "10040": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y kwándu bía ágwa, ¿no bíahanóĉi…? (§ 26e, pp. 97-98); eŋ ká de tía martína (§ 28, p. 102)",
+    "10053": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y el señól gobernadól bía mandáu (§ 26e, pp. 97-98)",
+    "10059": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y na maφía dormíu «nada más había dormido», ža bía teníu (§ 26e, pp. 97-98)",
+    "10067": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y tjéni ke ber síu «tiene que haber sido» (§ 26e, pp. 97-98)",
+    "10088": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10089": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10101": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10127": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y buheru «agujero» (§ 5b); eŋ ká luθjána «en casa de Luciana» (§ 28, p. 102)",
+    "10128": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10143": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel; y buheru «agujero» (§ 5b)",
+    "10150": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10189": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10207": "Cummins, § 5a: la a añadida «se mantiene con gran vitalidad en el habla viva», alimpial, arecohi, aluegu, afecal, arrompel",
+    "10082": "Garrovillas: alagarto, esperales, arronjar, alantri (Marcos de Sande 1947, p. 98)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002; Paniagua 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 222: aterral, abarullá, endelgazar, endrento, alangosto, afusilar, arrebujar, probalidad, endenante, ancá «en casa de»",
+    "10006": "Paniagua 2002, p. 78: enasa, eñú, con e añadida"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Marcos de Sande 1947 · Velo Nieto 1956 · Cummins 1974 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, pp. 35-36, da la vocal perdida en los hablantes mayores, sin pueblo: bujero, lacena, maca, nano, tiricia; y en la p. 50, el amoto, el afoto, el arradio.",
+  "comarcas": {
+   "jerte": "Flores del Manzano 1992, p. 128, lo da en el habla de esta parte de Gredos: la a añadida en agañotal y la vocal perdida en lacena.",
+   "vera": "Flores del Manzano 1992, p. 128, lo da en el habla de esta parte de Gredos: la a añadida en agañotal y la vocal perdida en lacena.",
+   "ambroz": "Flores del Manzano 1992, p. 128, lo da en el habla de esta parte de Gredos: la a añadida en agañotal y la vocal perdida en lacena."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

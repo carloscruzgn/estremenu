@@ -16,7 +16,7 @@
   {
    "codigo": "V05",
    "titulo": "Palabras que ganan o pierden una vocal al principio: arrecogel, bujeru",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -52,7 +52,7 @@
   {
    "codigo": "C07",
    "titulo": "La d que se cae: sembrao, comío, tó",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -88,7 +88,7 @@
   {
    "codigo": "C19",
    "titulo": "Güevu, güertu, güele",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -106,7 +106,7 @@
   {
    "codigo": "M01",
    "titulo": "Chozu y choza, cuestu y cuesta: el tamaño en la última letra",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -124,19 +124,19 @@
   {
    "codigo": "M05",
    "titulo": "La Juana, el Pericu",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M08",
    "titulo": "Me se cayó, mos vamos, comelu",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
    "codigo": "M09",
    "titulo": "Tíu Manuel, chachu, compañeru: cómo nos llamamos",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -154,7 +154,7 @@
   {
    "codigo": "M15",
    "titulo": "Haiga, vaiga, duelga",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -184,7 +184,7 @@
   {
    "codigo": "M28",
    "titulo": "Caí el caldu, me queé laʰ llaviʰ: verbos que cambian de sentido",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {

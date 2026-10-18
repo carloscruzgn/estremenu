@@ -19,5 +19,19 @@
   ]
  ],
  "estado": "Todavía se oye",
- "origenes": []
+ "origenes": [],
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "el",
+   "despues": "la",
+   "cola": " calor"
+  },
+  {
+   "base": "me ",
+   "antes": "dejé",
+   "despues": "queé",
+   "cola": ""
+  }
+ ]
 }

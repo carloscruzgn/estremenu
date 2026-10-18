@@ -1,0 +1,119 @@
+{
+ "codigo": "M09",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Tíu Manuel, chachu, compañeru:",
+  "cómo nos llamamos"
+ ],
+ "cabecera": "Tíu Manuel, chachu, compañeru: cómo nos llamamos",
+ "_titulo": "El de la página M09 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "",
+   "antes": "",
+   "despues": "tíu",
+   "cola": " Manuel"
+  },
+  {
+   "base": "",
+   "antes": "",
+   "despues": "tía",
+   "cola": " Martina"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1947-1979",
+   "fuentes": "Marcos de Sande 1947; Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 107-108: tío, tía; chacho, chacha a los adolescentes y dagalino, dagalina a los niños",
+    "10051": "Velo Nieto 1956, pp. 107-108: tío, tía; chacho, chacha a los adolescentes y dagalino, dagalina a los niños",
+    "10108": "Velo Nieto 1956, pp. 107-108: tío, tía; chacho, chacha a los adolescentes y dagalino, dagalina a los niños",
+    "10135": "Velo Nieto 1956, pp. 107-108: tío, tía; chacho, chacha a los adolescentes y dagalino, dagalina a los niños",
+    "10146": "Velo Nieto 1956, pp. 107-108: tío, tía; chacho, chacha a los adolescentes y dagalino, dagalina a los niños",
+    "10040": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»; y tíu manwél, tía martína, ¡ái, kumpañéru!, ¡ĉáĉa! para arrear a una mula",
+    "10053": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10059": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»; y ¡ĉáĉu! me se fwé a la bíʰta",
+    "10067": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»; y ĉáĉu",
+    "10088": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10089": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10101": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10127": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»; y tju manwél, tju gregórju",
+    "10128": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10143": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10150": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10189": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "10207": "Cummins, § 30, p. 106: tío y tía ante el nombre, «de uso muy corriente»; compañero, que «tiene gran vitalidad»",
+    "37234": "Iglesias Ovejero 2010, p. 52: tio y tia átonos ante el nombre y el mote, tio Capeas, tio Mingu; dagal, dagala, «hoy en decadencia»",
+    "37221": "Iglesias Ovejero 2010, p. 52: tio y tia átonos ante el nombre y el mote, tio Capeas, tio Mingu; dagal, dagala, «hoy en decadencia»; y en Navasfrías, el ti Sé",
+    "37245": "Iglesias Ovejero 2010, p. 52: tio y tia átonos ante el nombre y el mote, tio Capeas, tio Mingu; dagal, dagala, «hoy en decadencia»",
+    "37269": "Iglesias Ovejero 2010, p. 52: tio y tia átonos ante el nombre y el mote, tio Capeas, tio Mingu; dagal, dagala, «hoy en decadencia»; y en Robleda, sin artículo, tio Pedru Hiju, tia Luisina",
+    "37371": "Iglesias Ovejero 2010, p. 52: tio y tia átonos ante el nombre y el mote, tio Capeas, tio Mingu; dagal, dagala, «hoy en decadencia»",
+    "10082": "Garrovillas: manina «hermanina», p. 99; manu «hermano», p. 112 (Marcos de Sande 1947)"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Díaz Lucio 2002",
+   "terminos": {
+    "10039": "Cadalso: tío y tía para todos, sin ser familia, el tío Florentino Zorrino (Díaz Lucio 2002)"
+   }
+  }
+ ],
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Trujillo"
+  },
+  "terminos": {
+   "10195": "Trujillo: señor, señora, señá (Montero Curiel 2006, pp. 60-61)"
+  }
+ },
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Marcos de Sande 1947 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "Montero Curiel 2006, pp. 60-61: tío y tía ante el nombre en las generaciones antiguas, sin pueblo."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}

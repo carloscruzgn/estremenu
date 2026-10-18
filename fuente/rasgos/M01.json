@@ -1,0 +1,115 @@
+{
+ "codigo": "M01",
+ "tipo": "general",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Chozu y choza, cuestu y cuesta:",
+  "el tamaño en la última letra"
+ ],
+ "cabecera": "Chozu y choza, cuestu y cuesta: el tamaño en la última letra",
+ "_titulo": "El de la página M01 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "choz",
+   "antes": "a",
+   "despues": "u"
+  },
+  {
+   "base": "cuest",
+   "antes": "a",
+   "despues": "u"
+  },
+  {
+   "base": "sierr",
+   "antes": "a",
+   "despues": "u"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 74, 76 y 186",
+   "terminos": {
+    "10152": "Pozuelo de Zarzón: topa, frente al topo de Torre de Don Miguel (Krüger 1914, § 186, p. 144)",
+    "10211": "Villanueva de la Sierra: topa, frente al topo de Torre de Don Miguel (Krüger 1914, § 186, p. 144)",
+    "10187": "Torre de Don Miguel: topo, frente a la topa de Pozuelo y Villanueva (Krüger 1914, § 186, p. 144)",
+    "10216": "Granadilla: mirlu junto a myelra (Krüger 1914, § 74, p. 78); en Zarza de Granadilla, un kacho «un poco» (§ 258, p. 198)",
+    "10127": "Montehermoso: kuchilla, en la serie de cuchillo (Krüger 1914, § 76, p. 79)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 99: el encino «encina pequeña», el sierro, ventanillo, la buraca «agujero pequeño»",
+    "10051": "Velo Nieto 1956, p. 99: el encino «encina pequeña», el sierro, ventanillo, la buraca «agujero pequeño»",
+    "10108": "Velo Nieto 1956, p. 99: el encino «encina pequeña», el sierro, ventanillo, la buraca «agujero pequeño»",
+    "10135": "Velo Nieto 1956, p. 99: el encino «encina pequeña», el sierro, ventanillo, la buraca «agujero pequeño»",
+    "10146": "Velo Nieto 1956, p. 99: el encino «encina pequeña», el sierro, ventanillo, la buraca «agujero pequeño»",
+    "10040": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10053": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10059": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87); y kon la ĉoréra ke koría akéḷu, sin concordancia (p. 87)",
+    "10067": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87); y múḷahai póku, sin concordancia (p. 87)",
+    "10088": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10089": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10101": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10127": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10128": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10143": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10150": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10189": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "10207": "Cummins, § 20a, pp. 85-87: diecisiete parejas en los pueblos de su encuesta, como ĉóθu / ĉóθa, kwéʰtu / kwéʰta, sjér̄u / sjér̄a, ljéndru «bieldo» / ljéndra «bieldo grande», yúgu / yúga; y un taréa, um prósa dicho de un hombre (p. 87)",
+    "37234": "Iglesias Ovejero 2010, p. 52: cesta / cestu, destrala / destral, con la -a para lo pequeño; jarra / jarru, liendra / liendru, joya / joyu, con la -a para lo grande",
+    "37221": "Iglesias Ovejero 2010, p. 52: cesta / cestu, destrala / destral, con la -a para lo pequeño; jarra / jarru, liendra / liendru, joya / joyu, con la -a para lo grande",
+    "37245": "Iglesias Ovejero 2010, p. 52: cesta / cestu, destrala / destral, con la -a para lo pequeño; jarra / jarru, liendra / liendru, joya / joyu, con la -a para lo grande",
+    "37269": "Iglesias Ovejero 2010, p. 52: cesta / cestu, destrala / destral, con la -a para lo pequeño; jarra / jarru, liendra / liendru, joya / joyu, con la -a para lo grande",
+    "37371": "Iglesias Ovejero 2010, p. 52: cesta / cestu, destrala / destral, con la -a para lo pequeño; jarra / jarru, liendra / liendru, joya / joyu, con la -a para lo grande"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades",
+   "rebollar"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Rasgo general del español hablado: toda Extremadura en probable, con El Rebollar, sin blancos salvo dato en contra con pueblo (Carlos, 18/10/2026; 10-MAPAS, «Rasgos generales del español hablado»)",
+ "noroeste": {
+  "rotulo": {
+   "k": "En toda Extremadura",
+   "h": "Un rasgo del español hablado",
+   "s": "Se da por probable en toda Extremadura: donde no hay dato, las encuestas no lo buscaron"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010, y otras fuentes del taller",
+ "extension": {
+  "probable": "Velo Nieto 1956, p. 99, lo da en Las Hurdes, y Cummins, § 20a, pp. 85-87, en la Tierra de Coria, donde la pareja yúgu / yúga no se ha registrado más al norte. Del resto de Extremadura no hay dato."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
+}
