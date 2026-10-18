@@ -1253,7 +1253,7 @@ async function crearMapa(baseP) {
     if (E.id === 'area') f = [filaL('#85be6d', 'Área del taller'), filaL('#3d6a33', 'Área de contacto')];
     else if (E.ola) f = [filaL('#ff914d', 'Recogido en estos años'), ...(E.ola > 1 ? [filaL('#a95f33', 'Recogido antes')] : [])];
     else if (E.id === 'fuera') f = [filaL('#ff914d', L.reg)];
-    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never')) f.push(filaL('#0c0c0c', 'No se ha recogido', true)); }
+    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never')) f.push(filaL('#0c0c0c', tipo === 'distincion' ? L.neg : 'No se ha recogido', true)); }
     else if (E.id === 'nw') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (Object.values(CL).some(x => x.neg)) f.push(filaL('#0a1a07', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
     $('leyenda').innerHTML = f.join('');
   }
@@ -1309,10 +1309,10 @@ async function crearMapa(baseP) {
     const filas = [];
     (RS.oleadas || []).forEach(o => { if (o.terminos && o.terminos[d.code]) filas.push(li('#ff914d', o.rotulo, o.terminos[d.code])); });
     if (RS.fuera && RS.fuera.terminos && RS.fuera.terminos[d.code] && !filas.length) filas.push(li('#ff914d', 'Recogido', RS.fuera.terminos[d.code]));
-    if (x.cls === 'never' && RS.nunca) filas.push(li('#0c0c0c', 'No se ha recogido', RS.nunca[d.code], true));
+    if (x.cls === 'never' && RS.nunca) filas.push(li('#0c0c0c', RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'No se ha recogido', RS.nunca[d.code], true));
     if (x.cls === 'prob') filas.push(li('#ffc4a0', 'Probable', 'sin dato del pueblo, por los de su comarca'));
     if (x.cls === 'part') filas.push(li('#b84c1e', 'En algunos pueblos de la comarca', ''));
-    if (x.neg) filas.push(li('#0a1a07', 'Se ha buscado y no se ha recogido', RS.noroeste && RS.noroeste.en_contra && RS.noroeste.en_contra.fuente, true));
+    if (x.neg) filas.push(li('#0a1a07', RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido', RS.noroeste && RS.noroeste.en_contra && RS.noroeste.en_contra.fuente, true));
     if (!filas.length) filas.push(li('#2f5a25', 'Sin datos para este rasgo', '', true));
     box.innerHTML = `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
   }
