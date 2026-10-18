@@ -115,6 +115,8 @@ fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-
 fs.writeFileSync(path.join(destino, 'claves.json'), JSON.stringify(leer('claves.json')));
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
 const AP = leer('apuntes/apartados.json');
+// y al final, la bibliografía, del § 7 de los apuntes propios (fuente/apuntes/bibliografia.py)
+AP.apartados.push(leer('apuntes/bibliografia.json'));
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
 console.log('apuntes.json:', AP.apartados.length, 'apartados,', AP.apartados.flatMap(a => a.bloques).filter(b => b.t === 'mapa').length, 'mapas');
 console.log('rasgos.json:', CAT.rasgos.length, 'rasgos,', CAT.rasgos.filter(r => r.mapa).length, 'con mapa,', (CAT.fuera || []).length, 'fuera del taller');

@@ -466,6 +466,9 @@ span.fila .tit { color: var(--texto-2) }
 .apartado li { margin-bottom: 8px }
 .apartado li b { color: var(--texto); font-weight: 800 }
 .apartado li::marker { color: var(--naranja) }
+.apartado ul.refs { list-style: none; padding-left: 0 }
+.apartado ul.refs li { font-size: 16px; line-height: 1.55; padding-left: 1.6em; text-indent: -1.6em; margin-bottom: 10px }
+.apartado ul.refs b { font-weight: 800 }
 .apartado figure { margin: 30px 0 34px }
 .apartado figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
@@ -640,7 +643,7 @@ span.fila .tit { color: var(--texto-2) }
     </section>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.</blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
-      <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado" id="estado-apuntes">Siete apartados</span></a>
+      <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado" id="estado-apuntes">Ocho apartados</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes, las que aporta el taller y el formulario para enviar las tuyas.</p><span class="estado no">En revisión</span></a>
@@ -652,7 +655,7 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">Los apuntes, apartado por apartado</div>
     <h2 class="titulo-vista">El contenido del taller</h2>
-    <p class="entradilla">Una guía para tener a mano, escrita para leerse sin diccionario y sin prisa: los apuntes del alumnado, apartado por apartado, con sus mapas.</p>
+    <p class="entradilla">Una guía para tener a mano, escrita para leerse sin diccionario y sin prisa: los apuntes del alumnado, apartado por apartado, con sus mapas, y al final la bibliografía del taller.</p>
     <ol class="indice" id="indice-apuntes"></ol>
   </div>
 </section>
@@ -1088,10 +1091,14 @@ function pintarIndiceApuntes() {
 }
 function pintarApartado(a) {
   const k = AP.apartados.indexOf(a), ant = AP.apartados[k - 1], sig = AP.apartados[k + 1];
+  // Referencia bibliográfica: **negrita** para un segundo autor dentro de la entrada, *cursiva* para los títulos
+  const ref = s => esc(s.replace(/\\([\[\]])/g, '$1')).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>');
   const txt = b => (b.arranque ? `<b>${esc(b.arranque)}</b> ` : '') + esc(b.texto);
   const bloques = a.bloques.map(b =>
     b.t === 'p' ? `<p>${txt(b)}</p>`
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
+    : b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
+    : b.t === 'refs' ? `<ul class="refs">${b.items.map(x => `<li><b>${esc(x.autor)}</b> ${ref(x.resto)}</li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
