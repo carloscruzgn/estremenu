@@ -111,6 +111,8 @@ fs.writeFileSync(path.join(destino, 'autores.json'), JSON.stringify(AU));
 console.log('autores.json:', AU.autores.length, 'páginas de autor');
 // Los signos de Cummins, para la transcripción de sus conversaciones
 fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-cummins.json')));
+// Las claves del formulario del diccionario, solo en resumen SHA-256 (las claves en claro no están en el repositorio)
+fs.writeFileSync(path.join(destino, 'claves.json'), JSON.stringify(leer('claves.json')));
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
 const AP = leer('apuntes/apartados.json');
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));

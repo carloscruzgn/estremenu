@@ -233,6 +233,99 @@ a.fila .cod { color: var(--naranja) }
 span.fila .tit { color: var(--texto-2) }
 @media (max-width: 520px) { .fila { grid-template-columns: 44px minmax(0, 1fr); } .fila .pendiente, .fila .marca-mapa { grid-column: 2; justify-self: start } }
 
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-latin-400-italic.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(img/fuentes/eb-garamond-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-latin-ext-400-italic.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF }
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(img/fuentes/eb-garamond-latin-ext-700-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-greek-400-italic.woff2) format('woff2'); unicode-range: U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-greek-ext-400-italic.woff2) format('woff2'); unicode-range: U+1F00-1FFF }
+@font-face { font-family: 'IM Fell English SC'; font-style: normal; font-weight: 400; font-display: swap; src: url(img/fuentes/im-fell-english-sc-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
+/* ---------- diccionario: consulta, palabras del taller y envío ---------- */
+#v-diccionario .dic-aviso { margin-top: 22px; max-width: 760px; padding: 14px 18px; border-left: 4px solid var(--probable); background: var(--fondo-2); border-radius: 0 8px 8px 0; color: var(--texto-2); font-size: 15px; line-height: 1.55 }
+#v-diccionario .dic-aviso b { color: var(--texto) }
+#v-diccionario .dic-aviso .fecha-dic { display: block; margin-top: 6px; font-size: 13px; color: var(--texto-3) }
+.dic-bloque { position: relative; margin-top: 48px; padding: 30px 28px 28px; border-radius: 14px; max-width: 900px }
+.dic-bloque h3 { margin: 0; font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.01em; line-height: 1.1 }
+.dic-num { position: absolute; top: -18px; left: 24px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 17px; color: var(--fondo) }
+.dic-consulta { background: var(--fondo-2); border: 1px solid var(--linea) }
+.dic-consulta .dic-num { background: var(--naranja) }
+.dic-taller { background: linear-gradient(var(--fondo-3), var(--fondo-2)); border: 1px solid var(--linea) }
+.dic-taller .dic-num { background: var(--verde) }
+.dic-envio { border: 2px solid var(--naranja) }
+.dic-envio .dic-num { background: var(--probable) }
+.dic-intro { color: var(--texto-2); max-width: 62ch; margin: 10px 0 0; font-size: 16px; line-height: 1.6 }
+.dic-busca { margin-top: 20px }
+.dic-busca label { display: block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde); margin-bottom: 8px }
+.dic-busca input { width: 100%; font: 700 21px var(--f); color: var(--texto); background: var(--fondo); border: 1px solid var(--linea); border-radius: 8px; padding: 14px 16px }
+.dic-busca input:focus { border-color: var(--naranja); outline: none; box-shadow: 0 0 0 3px rgba(255,145,77,.3) }
+.dic-modo { display: inline-flex; margin-top: 12px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
+.dic-modo button { font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 8px 15px; cursor: pointer }
+.dic-modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
+.dic-cuenta { margin: 14px 0 0; font-size: 14px; color: var(--texto-3) }
+.dic-lista { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px }
+.dic-lista button { font-size: 16px; font-weight: 700; background: var(--fondo); border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; cursor: pointer; color: var(--texto) }
+.dic-lista button:hover { border-color: var(--naranja); color: var(--naranja) }
+.dic-lista button[aria-current="true"] { background: var(--naranja); border-color: var(--naranja); color: #fff }
+.dic-lista .gl { font-weight: 500; color: var(--texto-3); font-size: 14px; margin-left: 6px }
+.dic-lista button[aria-current="true"] .gl { color: rgba(255,255,255,.85) }
+/* La tarjeta de la entrada, como en el diccionario impreso: papel blanco, EB Garamond y el lema en IM Fell */
+.dic-ficha { margin-top: 22px; background: #fff; color: #1b1b1b; border-radius: 6px; padding: 26px 30px 22px; box-shadow: 0 10px 30px rgba(0,0,0,.35); font-family: 'EB Garamond', Garamond, 'Times New Roman', serif; font-size: 20px; line-height: 1.5; color-scheme: light }
+.dic-ficha p { margin: 0; padding-left: 1.2em; text-indent: -1.2em }
+.dic-ficha .e-lema { font-family: 'IM Fell English SC', 'EB Garamond', serif; font-size: 1.35em; letter-spacing: .01em; color: #000 }
+.dic-ficha .e-lin { font-size: .8em; margin-top: 8px; color: #333 }
+.dic-ficha .e-et { font-variant: small-caps; letter-spacing: .04em; color: #555 }
+.dic-ficha .pie-ficha { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid #e2ded6; font-family: var(--f); font-size: 13px }
+.dic-ficha .pie-ficha button { font: inherit; font-weight: 800; color: #b84c1e; background: none; border: 0; padding: 4px 0; cursor: pointer }
+.dic-ficha .pie-ficha button:disabled { color: #bbb; cursor: default }
+@media (max-width: 600px) { .dic-bloque { padding: 26px 16px 20px } .dic-ficha { padding: 20px 18px 16px; font-size: 18px } }
+.desp { margin-top: 18px; border: 1px solid var(--linea); border-radius: 10px; background: var(--fondo) }
+.desp + .desp { margin-top: 10px }
+.desp > summary { cursor: pointer; padding: 14px 18px; font-weight: 800; font-size: 15px; letter-spacing: .03em; color: var(--naranja); list-style: none; display: flex; justify-content: space-between; gap: 12px }
+.desp > summary::-webkit-details-marker { display: none }
+.desp > summary::after { content: '+'; font-size: 20px; line-height: 1; color: var(--texto-2) }
+.desp[open] > summary::after { content: '−' }
+.desp .dentro { padding: 0 18px 18px; font-size: 15px; line-height: 1.55 }
+.desp .intro { color: var(--texto-2); margin: 0 0 12px }
+.dic-dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 0 }
+.dic-dl dt { font-weight: 800; color: var(--texto); white-space: nowrap }
+.dic-dl dd { margin: 0; color: var(--texto-2) }
+.dic-cifras { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px }
+.dic-cifras div { flex: 1 1 0; min-width: 92px; max-width: 170px; padding: 12px 16px; border-radius: 10px; background: var(--fondo) }
+.dic-cifras b { display: block; font-size: 34px; font-weight: 900; line-height: 1; color: var(--naranja) }
+.dic-cifras span { font-size: 13px; font-weight: 700; color: var(--texto-2) }
+.dic-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 24px }
+.dic-col h4 { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.dic-col .nota { margin: 4px 0 10px; font-size: 14px; color: var(--texto-3) }
+.dic-aport { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea) }
+.dic-aport li { padding: 10px 2px; border-bottom: 1px solid var(--linea) }
+.dic-aport button { font: inherit; font-weight: 800; font-size: 18px; color: var(--naranja); background: none; border: 0; padding: 0; cursor: pointer; text-align: left }
+.dic-aport button:hover { text-decoration: underline }
+.dic-aport .gl { color: var(--texto-2); font-size: 15px }
+.dic-aport .dd { display: block; font-size: 13px; color: var(--texto-3); margin-top: 2px }
+.dic-aport .vacio { color: var(--texto-3); font-size: 15px; font-style: italic }
+#dic-form { margin-top: 22px; display: grid; gap: 18px; max-width: 640px }
+#dic-form .campo { border: 0; margin: 0; padding: 0; min-width: 0 }
+#dic-form label:not(.op), #dic-form legend { display: block; font-weight: 800; font-size: 16px; margin-bottom: 7px; color: var(--texto); padding: 0 }
+#dic-form .opc { font-weight: 500; color: var(--texto-3) }
+#dic-form input[type=text], #dic-form input:not([type]), #dic-form textarea { width: 100%; font: 600 19px var(--f); color: var(--texto); background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 8px; padding: 13px 15px; resize: vertical }
+#dic-form input:focus, #dic-form textarea:focus { border-color: var(--naranja); outline: none; box-shadow: 0 0 0 3px rgba(255,145,77,.3) }
+#dic-form #f-clave { text-transform: uppercase; letter-spacing: .12em; max-width: 260px }
+#dic-form .op { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; padding: 9px 4px; cursor: pointer }
+#dic-form .op input { width: 22px; height: 22px; accent-color: var(--naranja); margin: 0 }
+#dic-form .error { margin: 8px 0 0; color: #ffb38a; font-weight: 700; font-size: 15px }
+#dic-form .ya { margin: 10px 0 0; padding: 10px 14px; border-radius: 8px; background: rgba(133,190,109,.14); color: var(--texto); font-size: 15px; line-height: 1.5 }
+#dic-form .ya button { font: inherit; font-weight: 800; color: var(--verde); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline }
+#dic-form .trampa { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0 }
+#dic-form .dic-datos { margin: 4px 0 0; font-size: 14px; line-height: 1.6; color: var(--texto-3) }
+#dic-form .dic-datos a { color: var(--texto-2) }
+#dic-form .enviar { justify-self: start; font-weight: 900; font-size: 18px; color: #fff; background: var(--naranja); border: 0; border-radius: 10px; padding: 15px 26px; cursor: pointer }
+#dic-form .enviar:disabled { opacity: .6; cursor: progress }
+#dic-form .estado-envio { margin: 0; padding: 14px 16px; border-radius: 8px; font-size: 17px; font-weight: 700; line-height: 1.5 }
+#dic-form .estado-envio.ok { background: rgba(133,190,109,.18); color: var(--texto) }
+#dic-form .estado-envio.mal { background: rgba(255,145,77,.16); color: #ffcfb3 }
+
 /* ---------- apuntes, mapas, diccionario ---------- */
 .indice { list-style: none; padding: 0; margin: 36px 0 0; max-width: 760px; border-top: 1px solid var(--linea) }
 .indice li { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; padding: 14px 4px; border-bottom: 1px solid var(--linea) }
@@ -322,14 +415,6 @@ span.fila .tit { color: var(--texto-2) }
 .panel .tt { display: block; font-weight: 700; font-size: 15px; line-height: 1.35 }
 .panel .cu { display: block; color: var(--texto-3); font-size: 13px; margin-top: 2px }
 .panel .nota { color: var(--texto-3); font-size: 13px; margin: 10px 0 0 }
-.dic-partes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 28px }
-.dic-parte { background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 12px; padding: 22px 22px 18px }
-.dic-parte h3 { margin: 0 0 8px; font-size: 22px; font-weight: 900; color: var(--naranja) }
-.dic-parte h4 { margin: 22px 0 4px; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
-.dic-parte p { color: var(--texto-2); line-height: 1.6; margin: 0 0 10px }
-.dic-parte .nota { font-size: 14px; color: var(--texto-3) }
-.dic-parte .buscador { margin-top: 18px }
-.dic-parte .buscador input { background: var(--fondo); font-size: 17px }
 @media (max-width: 900px) {
   .texto-pag { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tcab" "panel" "cuerpo" "ilus" }
   .texto-pag .panel { position: static; margin-top: 24px }
@@ -530,7 +615,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#apuntes"><h2>El contenido del taller</h2><p>De dónde estamos a cómo se escribe lo que se habla, apartado por apartado, con sus mapas.</p><span class="estado" id="estado-apuntes">Siete apartados</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
-      <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes.</p><span class="estado no">En preparación</span></a>
+      <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes, las que aporta el taller y el formulario para enviar las tuyas.</p><span class="estado no">En revisión</span></a>
     </nav>
   </div>
 </section>
@@ -604,24 +689,70 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">Diccionario del noroeste</div>
     <h2 class="titulo-vista">Diccionario</h2>
-    <div class="dic-partes">
-      <article class="dic-parte">
-        <h3>El diccionario</h3>
-        <p>Las voces del noroeste con la comarca donde se han recogido, la fuente que las da y sus variantes. Está en construcción: crece con cada obra que se vacía.</p>
-        <div class="buscador">
-          <label for="busca-voz">Buscar una voz</label>
-          <input id="busca-voz" type="search" placeholder="jigu, peringolla, chamuʰcu…" disabled>
+    <p class="entradilla">Las voces del noroeste de Cáceres con el pueblo o la comarca donde se han recogido, la obra que las da y sus variantes. Debajo, las que ha aportado el taller, y el formulario para enviar las que vayas recogiendo.</p>
+    <div class="dic-aviso" id="dic-aviso" role="note"><b>Diccionario en revisión.</b> Las entradas salen de una hoja de trabajo que todavía no se ha revisado voz a voz, y pueden cambiar. Los étimos son los del DLE y también están en revisión.</div>
+
+    <section class="dic-bloque dic-consulta" aria-labelledby="dic-t1">
+      <div class="dic-num">1</div>
+      <h3 id="dic-t1">Buscar una palabra</h3>
+      <div class="dic-busca">
+        <label for="busca-voz">Escribe una palabra</label>
+        <input id="busca-voz" type="search" autocomplete="off" spellcheck="false" placeholder="acordal, abeja, achiperre…">
+        <div class="dic-modo" role="group" aria-label="Dónde buscar">
+          <button type="button" data-modo="voz" aria-pressed="true">En la palabra</button>
+          <button type="button" data-modo="glosa" aria-pressed="false">En el significado</button>
         </div>
-        <h4>Las fuentes</h4>
-        <p class="nota">La lista de las obras de las que salen las voces.</p>
-        <p><span class="pendiente">En preparación</span></p>
-      </article>
-      <article class="dic-parte">
-        <h3>Las palabras del taller</h3>
-        <p>Las palabras que van aportando quienes vienen al taller, a medida que salen en clase.</p>
-        <p><span class="pendiente">En preparación</span></p>
-      </article>
-    </div>
+      </div>
+      <p class="dic-cuenta" id="dic-cuenta" aria-live="polite"></p>
+      <ul class="dic-lista" id="dic-lista"></ul>
+      <article class="dic-ficha" id="dic-ficha" hidden aria-live="polite"></article>
+      <details class="desp">
+        <summary>Las fuentes</summary>
+        <div class="dentro"><p class="intro">Cada voz lleva la sigla de la obra que la da, con la página. La fecha es la del dato: cuándo se recogió, o cuándo se publicó si no consta.</p><dl class="dic-dl" id="dic-fuentes"></dl></div>
+      </details>
+      <details class="desp">
+        <summary>Las abreviaturas</summary>
+        <div class="dentro"><dl class="dic-dl" id="dic-abrev"></dl></div>
+      </details>
+    </section>
+
+    <section class="dic-bloque dic-taller" aria-labelledby="dic-t2">
+      <div class="dic-num">2</div>
+      <h3 id="dic-t2">Las palabras del taller</h3>
+      <p class="dic-intro">Lo que aportan quienes vienen al taller. Unas palabras no estaban en ninguna de las obras; otras sí, y el taller confirma que se siguen diciendo hoy.</p>
+      <div class="dic-cifras" id="dic-cifras"></div>
+      <div class="dic-col">
+        <div><h4>Palabras nuevas</h4><p class="nota">No las traía ninguna de las obras del diccionario.</p><ul class="dic-aport" id="dic-nuevas"></ul></div>
+        <div><h4>Palabras que el taller confirma</h4><p class="nota">Ya estaban documentadas; aquí, la fecha más antigua y dónde.</p><ul class="dic-aport" id="dic-confirma"></ul></div>
+      </div>
+    </section>
+
+    <section class="dic-bloque dic-envio" aria-labelledby="dic-t3">
+      <div class="dic-num">3</div>
+      <h3 id="dic-t3">Envía una palabra</h3>
+      <p class="dic-intro">Para quienes vienen al taller, con la clave que se da en clase. Escribe la palabra como la dices; si ya está en el diccionario, te lo diremos al escribirla, y conviene enviarla igual: sirve saber dónde se sigue diciendo.</p>
+      <form id="dic-form" novalidate>
+        <div class="campo"><label for="f-clave">Tu clave</label><input id="f-clave" name="clave" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="A00 XX XX" required><p class="error" id="e-clave" hidden></p></div>
+        <div class="campo"><label for="f-palabra">La palabra</label><input id="f-palabra" name="palabra" autocomplete="off" spellcheck="false" required><p class="ya" id="f-ya" hidden></p></div>
+        <div class="campo"><label for="f-significa">¿Qué significa?</label><textarea id="f-significa" name="significa" rows="2" required></textarea></div>
+        <div class="campo"><label for="f-donde">¿Dónde se dice?</label><input id="f-donde" name="donde" placeholder="El pueblo" required></div>
+        <fieldset class="campo"><legend>¿Se usa?</legend>
+          <label class="op"><input type="radio" name="uso" value="Se dice mucho" required> Se dice mucho</label>
+          <label class="op"><input type="radio" name="uso" value="Se dice poco"> Se dice poco</label>
+          <label class="op"><input type="radio" name="uso" value="Ya no se dice, se recuerda"> Ya no se dice, se recuerda</label>
+        </fieldset>
+        <fieldset class="campo"><legend>¿Quién la dice?</legend>
+          <label class="op"><input type="radio" name="quien" value="Yo" required> Yo</label>
+          <label class="op"><input type="radio" name="quien" value="Mis padres o abuelos"> Mis padres o abuelos</label>
+          <label class="op"><input type="radio" name="quien" value="Otras personas"> Otras personas</label>
+        </fieldset>
+        <div class="campo"><label for="f-frase">Una frase en que se diga <span class="opc">(si quieres)</span></label><textarea id="f-frase" name="frase" rows="2"></textarea></div>
+        <input type="text" name="_gotcha" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="dic-datos">Lo que envías con este formulario llega por correo al profesor del taller, Carlos Cruz González (<a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a>), a través de Formspree, un servicio de formularios con servidores en Estados Unidos que guarda una copia durante 30 días. Sirve solo para estudiar las palabras del taller y, si se decide, para incluirlas en el diccionario de vocablos del noroeste. Tu nombre no se publica nunca sin tu autorización expresa: junto a la palabra sale solo el pueblo. Los datos no se usan para nada más ni se ceden a nadie. Si quieres que se borre lo que has enviado, escribe a ese correo o díselo al profesor en clase.</p>
+        <button type="submit" class="enviar" id="f-enviar">Enviar la palabra</button>
+        <p class="estado-envio" id="f-estado" role="status" hidden></p>
+      </form>
+    </section>
   </div>
 </section>
 
@@ -710,7 +841,142 @@ async function ir() {
   if (autor) pintarAutor(autor, h.slice(('autor-' + autor.id).length + 1));
   if (rasgo) await abrirRasgo(rasgo);
   if (sec === 'encuestas') await abrirEncuestas();
+  if (sec === 'diccionario') await abrirDiccionario();
 }
+
+// ================= el diccionario =================
+// datos/diccionario.json lo escribe fuente/diccionario.mjs desde el espejo de la hoja. Cada entrada:
+// [id, lema, html de la tarjeta, formas, claves de variación, glosas para buscar, primera glosa].
+let DIC = null, modoDic = 'voz', fichaActual = -1;
+const FORMSPREE = 'https://formspree.io/f/mqpejala';
+const normDic = s => String(s || '').toLowerCase().replace(/ʰ/g, 'h').replace(/ñ/g, '\u0001').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\u0001/g, 'ñ').replace(/[^a-zñ ]+/g, '').replace(/\s+/g, ' ').trim();
+const claveDic = f => normDic(String(f || '').replace(/\([^)]*\)/g, '')).split(' ').map(p => p
+  .replace(/(r|l)(se|si)$/, 'RSE').replace(/(o|u)s$/, 'US').replace(/(e|i)s$/, 'IS')
+  .replace(/(o|u)$/, 'U').replace(/(e|i)$/, 'I').replace(/(r|l)$/, 'R')).join(' ');
+const corta = (s, n = 42) => s.length > n ? s.slice(0, n - 1).replace(/[\s,;]+\S*$/, '') + '…' : s;
+
+async function abrirDiccionario() {
+  if (DIC) return;
+  try { DIC = await json('datos/diccionario.json'); }
+  catch (e) { $('dic-cuenta').textContent = 'No se ha podido cargar el diccionario.'; return; }
+  DIC.idx = Object.fromEntries(DIC.e.map((e, i) => [e[0], i]));
+  const n = DIC.lemas.toLocaleString('es-ES');
+  $('dic-aviso').insertAdjacentHTML('beforeend', `<span class="fecha-dic">Datos de la hoja del ${DIC.fecha ? fecha(DIC.fecha) : '—'} · ${n} ${DIC.lemas === 1 ? 'lema' : 'lemas'}${DIC.muestra ? ' · muestra de prueba con las primeras entradas de la A' : ''}</span>`);
+  $('dic-fuentes').innerHTML = DIC.fuentes.map(f => `<dt>${esc(f.sigla)}</dt><dd>${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</dd>`).join('');
+  $('dic-abrev').innerHTML = DIC.abreviaturas.map(a => `<dt>${esc(a.a)}</dt><dd>${esc(a.v)}</dd>`).join('');
+  pintarTaller();
+  buscarDic();
+}
+
+function buscarDic() {
+  if (!DIC) return;
+  const q = normDic($('busca-voz').value), lista = $('dic-lista');
+  if (!q) { lista.innerHTML = ''; $('dic-cuenta').textContent = `${DIC.lemas.toLocaleString('es-ES')} palabras en el diccionario. Escribe una para buscarla.`; return; }
+  let res;
+  if (modoDic === 'glosa') {
+    const re = new RegExp('(^| )' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    res = DIC.e.filter(e => re.test(e[5]));
+  } else {
+    const k = claveDic(q), pre = [], dentro = [];
+    for (const e of DIC.e) {
+      const fs = e[3].split('|');
+      if (fs.some(f => f.startsWith(q)) || e[4].split('|').includes(k)) pre.push(e);
+      else if (q.length > 2 && fs.some(f => f.includes(q))) dentro.push(e);
+    }
+    res = pre.concat(dentro);
+  }
+  const n = res.length;
+  $('dic-cuenta').textContent = n ? (n === 1 ? 'Una palabra.' : `${n.toLocaleString('es-ES')} palabras${n > 60 ? '; se ven las 60 primeras' : ''}.`) : 'No está en el diccionario. Si la conoces, puedes enviarla con el formulario de abajo.';
+  lista.innerHTML = res.slice(0, 60).map(e => `<li><button type="button" data-id="${e[0]}"${DIC.idx[e[0]] === fichaActual ? ' aria-current="true"' : ''}>${esc(e[1])}<span class="gl">${esc(corta(e[6]))}</span></button></li>`).join('');
+  const exacta = res.find(e => normDic(e[1]) === q);
+  if (exacta && DIC.idx[exacta[0]] !== fichaActual) verEntrada(exacta[0], false);
+}
+
+function verEntrada(id, desplazar = true) {
+  const i = DIC.idx[id]; if (i === undefined) return;
+  fichaActual = i;
+  const e = DIC.e[i], ant = DIC.e[i - 1], sig = DIC.e[i + 1];
+  const f = $('dic-ficha');
+  f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
+  f.hidden = false;
+  for (const b of document.querySelectorAll('#dic-lista button')) { if (b.dataset.id === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }
+  if (desplazar) f.scrollIntoView({ behavior: sinMov ? 'auto' : 'smooth', block: 'center' });
+}
+
+function pintarTaller() {
+  const { nuevas, confirma } = DIC.taller;
+  const pueblos = new Set([...nuevas, ...confirma].flatMap(x => x.lugar.split(', ')).filter(Boolean));
+  $('dic-cifras').innerHTML = [[nuevas.length, nuevas.length === 1 ? 'palabra nueva' : 'palabras nuevas'], [confirma.length, confirma.length === 1 ? 'confirmada' : 'confirmadas'], [pueblos.size, pueblos.size === 1 ? 'pueblo' : 'pueblos']].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+  const item = x => `<li><button type="button" data-id="${x.id}">${esc(x.lema)}</button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc(x.lugar)}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
+  $('dic-nuevas').innerHTML = nuevas.length ? nuevas.map(item).join('') : '<li class="vacio">Todavía no ha entrado ninguna.</li>';
+  $('dic-confirma').innerHTML = confirma.length ? confirma.map(item).join('') : '<li class="vacio">Todavía no ha entrado ninguna.</li>';
+}
+
+$('busca-voz').addEventListener('input', buscarDic);
+for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListener('click', () => {
+  modoDic = b.dataset.modo;
+  for (const o of document.querySelectorAll('.dic-modo button')) o.setAttribute('aria-pressed', String(o === b));
+  $('busca-voz').placeholder = modoDic === 'glosa' ? 'despertar, abeja, aceite…' : 'acordal, abeja, achiperre…';
+  buscarDic(); $('busca-voz').focus();
+});
+for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya']) $(id).addEventListener('click', ev => {
+  const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha' && id !== 'dic-lista');
+});
+
+// ---------- el formulario ----------
+// La clave se comprueba en la página contra datos/claves.json (SHA-256 de la sal más la clave normalizada):
+// frena el uso casual, no a quien sepa saltárselo. Formspree no la comprueba.
+let CLAVES = null, yaEnDic = [];
+const normClave = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+async function sha256(s) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); }
+async function claveValida(c) {
+  if (!window.crypto || !crypto.subtle) return true;
+  CLAVES ||= await json('datos/claves.json');
+  return CLAVES.h.includes(await sha256(CLAVES.sal + normClave(c)));
+}
+let tPal = 0;
+$('f-palabra').addEventListener('input', () => {
+  clearTimeout(tPal);
+  tPal = setTimeout(async () => {
+    await abrirDiccionario();
+    const q = normDic($('f-palabra').value), ya = $('f-ya');
+    if (!DIC || q.length < 2) { ya.hidden = true; yaEnDic = []; return; }
+    const k = claveDic(q);
+    const hay = DIC.e.filter(e => e[3].split('|').includes(q) || e[4].split('|').includes(k)).slice(0, 3);
+    yaEnDic = hay.map(e => e[0] + ' ' + e[1]);
+    if (!hay.length) { ya.hidden = true; return; }
+    ya.innerHTML = `Ya está en el diccionario: ${hay.map(e => `<button type="button" data-id="${e[0]}">${esc(e[1])}</button>, «${esc(corta(e[6], 60))}»`).join('; ')}. Envíala igual si la dices o la has oído: sirve saber dónde se sigue diciendo.`;
+    ya.hidden = false;
+  }, 250);
+});
+$('dic-form').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const fm = ev.target, est = $('f-estado'), bot = $('f-enviar'), err = $('e-clave');
+  est.hidden = true; err.hidden = true;
+  if (!fm.checkValidity()) { fm.reportValidity(); return; }
+  const clave = fm.clave.value.trim();
+  if (!(await claveValida(clave))) { err.textContent = 'Esa clave no es correcta. Mírala en la tarjeta que te dieron en clase.'; err.hidden = false; fm.clave.focus(); return; }
+  const c = normClave(clave), alumno = c.slice(0, 3);
+  const datos = {
+    clave: c.slice(0, 3) + ' ' + c.slice(3, 5) + ' ' + c.slice(5), alumno,
+    palabra: fm.palabra.value.trim(), significa: fm.significa.value.trim(), donde: fm.donde.value.trim(),
+    uso: fm.uso.value, quien: fm.quien.value, frase: fm.frase.value.trim(),
+    ya_en_diccionario: yaEnDic.join('; ') || 'no', _gotcha: fm._gotcha.value,
+    _subject: `Palabra del taller: ${fm.palabra.value.trim()} (${alumno})`
+  };
+  bot.disabled = true; bot.textContent = 'Enviando…';
+  try {
+    const r = await fetch(FORMSPREE, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(datos) });
+    if (!r.ok) throw new Error(r.status);
+    est.className = 'estado-envio ok'; est.textContent = `Enviada «${datos.palabra}». Gracias: la veremos en clase.`;
+    for (const n of ['palabra', 'significa', 'donde', 'frase']) fm[n].value = '';
+    for (const r of fm.querySelectorAll('input[type=radio]')) r.checked = false;
+    $('f-ya').hidden = true; yaEnDic = [];
+  } catch (e) {
+    est.className = 'estado-envio mal'; est.textContent = 'No se ha podido enviar. Prueba otra vez dentro de un rato, o díselo al profesor en clase.';
+  }
+  est.hidden = false; bot.disabled = false; bot.textContent = 'Enviar la palabra';
+});
 
 // ================= los textos del taller =================
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];

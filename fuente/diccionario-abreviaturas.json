@@ -1,0 +1,9 @@
+{
+  "nota": "Abreviaturas de las entradas del diccionario de la web. Las de los étimos, que son las del DLE, se añaden desde indices.py del generador del PDF. Las marcadas con · salen siempre.",
+  "entradas": {
+    "adj.": "adjetivo", "adv.": "adverbio", "f.": "femenino", "interj.": "interjección", "loc.": "locución",
+    "m.": "masculino", "pl.": "plural", "prnl.": "pronominal", "s.": "sustantivo", "sust.": "sustantiva",
+    "tr.": "transitivo", "intr.": "intransitivo", "v.": "verbo",
+    "·ac.": "acepción", "·p.": "página", "·INF [A06]": "informante del taller, con su código"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "nota": "Siglas para cuando el espejo no trae la pestaña FUENTES (hoja anterior a la versión 2). Las de 05-DECISIONES, 04/10/2026; las demás se forman con la regla y el programa lo avisa. Con FUENTES en el espejo, este fichero no se usa.",
+  "siglas": {
+    "Cummins 1974": { "sigla": "CUM 1974", "ref": "Cummins, John G., *El habla de Coria y sus cercanías*, 1974." },
+    "Velo Nieto 1956": { "sigla": "VEL 1956", "ref": "Velo Nieto, Juan José, *El habla de las Hurdes*, 1956." },
+    "González Salgado 2001": { "sigla": "GSA 2001", "ref": "González Salgado 2001" },
+    "González Salgado 2003": { "sigla": "GSA 2003", "ref": "González Salgado 2003" },
+    "eCopunto Lingüístico (AUPEX), s. f.": { "sigla": "eCO", "ref": "eCopunto Lingüístico (AUPEX), s. f." },
+    "Marcos de Sande 1947": { "sigla": "MDS 1947", "ref": "Marcos de Sande, Moisés, «Del folklore garrovillano», *REE* III (1-2), 1947, pp. 76-114." },
+    "Corrales Jiménez 1901": { "sigla": "VCJ 1901", "ref": "Corrales Jiménez 1901, sainete, vía Barroso." }
+  }
+}
