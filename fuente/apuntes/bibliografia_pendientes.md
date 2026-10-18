@@ -76,4 +76,5 @@ Generado por bibliografia.py. Referencias del § 7 de los apuntes propios que no
 - **\[Vocabularios locales del** ***Diccionario Virtual de Extremadura*****\]**: del Valle del Alagón (procedente de Cummins); de Coria (*El diccionario de un coriano*); de Torrejoncillo (*Diccionario Torrejoncillano*, coord. Manuel J. Torres, 2009); de Calzadilla (web municipal cerrada); de Las Hurdes y de Casares de las Hurdes; y «Diccionario Hurdano» de José Luis Sánchez Martín, blog Lecthurdana, 2008 — sin nombre de pila, sin páginas
 - **VELO NIETO, Juan José.** *El habla de las Hurdes*, 1956 — sin lugar ni editorial
 - **VIUDAS, ARIZA y SALVADOR PLANS.** *El habla en Extremadura*, 1987 — sin lugar ni editorial, sin nombre de pila
+- **ZAMORA VICENTE, A.** *El habla de Mérida*, *Dialectología española* (1960, 2.ª ed. 1985) y el texto de 1950 sobre Gabriel y Galán — varias obras, alguna sin datos
 

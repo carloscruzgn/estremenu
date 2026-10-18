@@ -16,160 +16,199 @@
    "t": "refs",
    "items": [
     {
-     "autor": "ALCÓN OLIVERA, José M.ª.",
-     "resto": "«El habla en Guijo de Galisteo y pueblos cercanos», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 220-224."
+     "autor": "ALCÓN OLIVERA, José M.ª",
+     "anio": "2002",
+     "resto": "«El habla en Guijo de Galisteo y pueblos cercanos», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 220-224."
     },
     {
-     "autor": "ARIZA, Manuel.",
-     "resto": "«Apuntes de geografía lingüística extremeña», *AEF* 3, 1980, pp. 21-29."
+     "autor": "ARIZA, Manuel",
+     "anio": "1980",
+     "resto": "«Apuntes de geografía lingüística extremeña», *AEF* 3, pp. 21-29."
     },
     {
-     "autor": "ARIZA, Manuel.",
-     "resto": "«Dos estudios de historia lingüística de Extremadura (I. Documentos y fueros de los siglos XIII y XIV. II. Las Ordenanzas del Concejo de Valencia de Alcántara)», *Anuario de Estudios Filológicos* VIII, 1985, pp. 7-18."
+     "autor": "ARIZA, Manuel",
+     "anio": "1985",
+     "resto": "«Dos estudios de historia lingüística de Extremadura (I. Documentos y fueros de los siglos XIII y XIV. II. Las Ordenanzas del Concejo de Valencia de Alcántara)», *Anuario de Estudios Filológicos* VIII, pp. 7-18."
     },
     {
-     "autor": "ARIZA, Manuel.",
-     "resto": "«Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, 1995, pp. 77-88."
+     "autor": "ARIZA, Manuel",
+     "anio": "1993",
+     "resto": "«Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, pp. 149-161."
     },
     {
-     "autor": "ARIZA, Manuel.",
-     "resto": "«Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, 1993, pp. 149-161."
+     "autor": "ARIZA, Manuel",
+     "anio": "1995",
+     "resto": "«Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, pp. 77-88."
     },
     {
-     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio.",
-     "resto": "«/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, 1992, pp. 173-176."
+     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio",
+     "anio": "1992a",
+     "resto": "«/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, pp. 173-176."
     },
     {
-     "autor": "ARIZA VIGUERA, Manuel.",
-     "resto": "«Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* 16, 1993, pp. 7-22."
+     "autor": "ARIZA VIGUERA, Manuel",
+     "anio": "1993",
+     "resto": "«Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* 16, pp. 7-22."
     },
     {
-     "autor": "ARIZA VIGUERA, Manuel.",
-     "resto": "«De nuevo sobre Serradilla y el chinato», *Cauce. Revista de Filología y su Didáctica* 18-19, 1995-96, pp. 689-701."
+     "autor": "ARIZA VIGUERA, Manuel",
+     "anio": "1995-96",
+     "resto": "«De nuevo sobre Serradilla y el chinato», *Cauce. Revista de Filología y su Didáctica* 18-19, pp. 689-701."
     },
     {
-     "autor": "ARIZA VIGUERA, Manuel.",
-     "resto": "«Sobre la lengua de Luis Chamizo», *Anuario de Estudios Filológicos* XXX, 2007, pp. 9-18."
+     "autor": "ARIZA VIGUERA, Manuel",
+     "anio": "2007",
+     "resto": "«Sobre la lengua de Luis Chamizo», *Anuario de Estudios Filológicos* XXX, pp. 9-18."
     },
     {
-     "autor": "BARROSO GUTIÉRREZ, Félix.",
-     "resto": "«Apuntes sobre el habla de Las Hurdes», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 180-187."
+     "autor": "BARROSO GUTIÉRREZ, Félix",
+     "anio": "2002",
+     "resto": "«Apuntes sobre el habla de Las Hurdes», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 180-187."
     },
     {
      "autor": "CAMISÓN, Juan J.",
-     "resto": "«A vueltas con la H (o cómo escribir las aspiraciones en extremeño)», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 108-126."
+     "anio": "2002",
+     "resto": "«A vueltas con la H (o cómo escribir las aspiraciones en extremeño)», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 108-126."
     },
     {
-     "autor": "CAMPO, Baltasar.",
-     "resto": "«La espelujá», manuscrito en facsímil, en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 326-328."
+     "autor": "CAMPO, Baltasar",
+     "anio": "2002",
+     "resto": "«La espelujá», manuscrito en facsímil, en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 326-328."
     },
     {
-     "autor": "CARMONA GARCÍA, Ismael.",
-     "resto": "*Ortografía del extremeño*, OSCEC, 2017."
+     "autor": "CARMONA GARCÍA, Ismael",
+     "anio": "2017a",
+     "resto": "*Diccionario de equivalencias castellano-estremeñu*, OSCEC."
     },
     {
-     "autor": "CARMONA GARCÍA, Ismael.",
-     "resto": "*Diccionario de equivalencias castellano-estremeñu*, OSCEC, 2017."
+     "autor": "CARMONA GARCÍA, Ismael",
+     "anio": "2017b",
+     "resto": "*Ortografía del extremeño*, OSCEC."
     },
     {
-     "autor": "CASILLAS ANTÚNEZ, Francisco José.",
-     "resto": "«Historia y toponimia de la tierra de Coria», *Alcántara* 68, 2008, pp. 21-44."
+     "autor": "CASILLAS ANTÚNEZ, Francisco José",
+     "anio": "2008",
+     "resto": "«Historia y toponimia de la tierra de Coria», *Alcántara* 68, pp. 21-44."
     },
     {
      "autor": "CUMMINS, John G.",
-     "resto": "*El habla de Coria y sus cercanías*, Tamesis Books, 1974."
+     "anio": "1974",
+     "resto": "*El habla de Coria y sus cercanías*, Tamesis Books."
     },
     {
-     "autor": "FERNÁNDEZ DE MOLINA ORTÉS, Elena.",
-     "resto": "«El habla en Extremadura. Investigaciones sobre la morfosintaxis y el léxico regional», *Anuario de Estudios Filológicos* XXXVIII, 2015, pp. 57-72."
+     "autor": "FERNÁNDEZ DE MOLINA ORTÉS, Elena",
+     "anio": "2015",
+     "resto": "«El habla en Extremadura. Investigaciones sobre la morfosintaxis y el léxico regional», *Anuario de Estudios Filológicos* XXXVIII, pp. 57-72."
     },
     {
-     "autor": "FLORES DEL MANZANO, Fernando.",
-     "resto": "«Modalidades de habla extremeña en la Sierra de Gredos», en *Actas del II Congreso Internacional de Historia de la Lengua Española*, ed. M. Ariza, R. Cano, J. M. Mendoza y A. Narbona, Madrid, Pabellón de España, 1992, pp. 121-134."
+     "autor": "FLORES DEL MANZANO, Fernando",
+     "anio": "1992",
+     "resto": "«Modalidades de habla extremeña en la Sierra de Gredos», en *Actas del II Congreso Internacional de Historia de la Lengua Española*, ed. M. Ariza, R. Cano, J. M. Mendoza y A. Narbona, Madrid, Pabellón de España, pp. 121-134."
     },
     {
-     "autor": "FLORES DEL MANZANO, Fernando.",
-     "resto": "*Con acento extremeño. Habla dialectal y literatura de tradición oral en el aula*, Mérida, Junta de Extremadura, 1999."
+     "autor": "FLORES DEL MANZANO, Fernando",
+     "anio": "1999",
+     "resto": "*Con acento extremeño. Habla dialectal y literatura de tradición oral en el aula*, Mérida, Junta de Extremadura."
     },
     {
-     "autor": "FLORES DEL MANZANO, Fernando.",
-     "resto": "«“El extremeño” y la escuela: léxico dialectal y cambio sociocultural», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 198-209."
+     "autor": "FLORES DEL MANZANO, Fernando",
+     "anio": "2002",
+     "resto": "«“El extremeño” y la escuela: léxico dialectal y cambio sociocultural», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 198-209."
     },
     {
-     "autor": "FRADES GASPAR, Domingo.",
-     "resto": "«La fala en Extremadura», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 210-214."
+     "autor": "FRADES GASPAR, Domingo",
+     "anio": "2002",
+     "resto": "«La fala en Extremadura», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 210-214."
     },
     {
-     "autor": "GARCÍA, Mina.",
-     "resto": "«Gratitud a nuestros mayores», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 331-333."
+     "autor": "GARCÍA, Mina",
+     "anio": "2002",
+     "resto": "«Gratitud a nuestros mayores», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 331-333."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«La fonética de las hablas extremeñas», *REE* LIX-2, 2003, pp. 589-619."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2002",
+     "resto": "«La estructura del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 278-299."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«Las hablas del norte de la provincia de Cáceres a comienzos del siglo XX. A propósito de la traducción de *Studien zur Lautgeschichte westspanischer Mundarten*», *Alcántara* 66, 2007, pp. 39-52."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2003b",
+     "resto": "«La fonética de las hablas extremeñas», *REE* LIX-2, pp. 589-619."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«La estructura del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 278-299."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2007a",
+     "resto": "«La sufijación diminutiva en la toponimia extremeña», en *Actas del VIII Congreso de Estudios Extremeños*, pp. 1969-1982."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«La dialectología en la Revista de Estudios Extremeños (1927-2013)», *REE* LXX-2, 2014, pp. 1153-1194."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2007b",
+     "resto": "«Las hablas del norte de la provincia de Cáceres a comienzos del siglo XX. A propósito de la traducción de *Studien zur Lautgeschichte westspanischer Mundarten*», *Alcántara* 66, pp. 39-52."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«La sufijación diminutiva en la toponimia extremeña», en *Actas del VIII Congreso de Estudios Extremeños*, 2007, pp. 1969-1982."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2014",
+     "resto": "«La dialectología en la Revista de Estudios Extremeños (1927-2013)», *REE* LXX-2, pp. 1153-1194."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«Fonética asturleonesa en las hablas populares de Extremadura», *Estudis Romànics* 46, 2024, pp. 131-171."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2024",
+     "resto": "«Fonética asturleonesa en las hablas populares de Extremadura», *Estudis Romànics* 46, pp. 131-171."
     },
     {
-     "autor": "KRÜGER, Fritz.",
-     "resto": "*Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo, 1914."
+     "autor": "KRÜGER, Fritz",
+     "anio": "1914",
+     "resto": "*Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo."
     },
     {
-     "autor": "LÓPEZ FERNÁNDEZ, Manuel.",
-     "resto": "«De Granadilla a Montemolín. La Orden de Santiago y la Vía de la Plata en tierras de Extremadura (siglos XII-XIII)», *Revista de Estudios Extremeños* LXXV-II, 2019, pp. 319-347."
+     "autor": "LÓPEZ FERNÁNDEZ, Manuel",
+     "anio": "2019",
+     "resto": "«De Granadilla a Montemolín. La Orden de Santiago y la Vía de la Plata en tierras de Extremadura (siglos XII-XIII)», *Revista de Estudios Extremeños* LXXV-II, pp. 319-347."
     },
     {
-     "autor": "MARTÍN, Aníbal.",
-     "resto": "*Yo hablo, ellas cantorin. Las aventuras de un extremeño por los caminos de la diversidad lingüística*, Pie de Página, 2023."
+     "autor": "MARTÍN, Aníbal",
+     "anio": "2023",
+     "resto": "*Yo hablo, ellas cantorin. Las aventuras de un extremeño por los caminos de la diversidad lingüística*, Pie de Página."
     },
     {
-     "autor": "MONTERO CURIEL, Pilar.",
-     "resto": "*El extremeño*, Madrid, Arco/Libros, 2006 (Cuadernos de Lengua Española, 91)."
+     "autor": "MONTERO CURIEL, Pilar",
+     "anio": "2006a",
+     "resto": "*El extremeño*, Madrid, Arco/Libros (Cuadernos de Lengua Española, 91)."
     },
     {
-     "autor": "NIETO CABALLERO, Guadalupe.",
-     "resto": "«Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *REE* LXXII-II, 2016, pp. 851-868."
+     "autor": "NIETO CABALLERO, Guadalupe",
+     "anio": "2016",
+     "resto": "«Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *REE* LXXII-II, pp. 851-868."
     },
     {
-     "autor": "PANIAGUA MONTERO, Juan Carlos.",
-     "resto": "«El habla de Ahigal: rasgos generales y algunas cuestiones léxicas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 76-91."
+     "autor": "PANIAGUA MONTERO, Juan Carlos",
+     "anio": "2002",
+     "resto": "«El habla de Ahigal: rasgos generales y algunas cuestiones léxicas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 76-91."
     },
     {
-     "autor": "SALVADOR PLANS, Antonio.",
-     "resto": "«Dialectología y folclore en Extremadura en el tránsito del siglo XIX al XX», *REE* LIV-3, 1998, pp. 807-831."
+     "autor": "SALVADOR PLANS, Antonio",
+     "anio": "1998",
+     "resto": "«Dialectología y folclore en Extremadura en el tránsito del siglo XIX al XX», *REE* LIV-3, pp. 807-831."
     },
     {
-     "autor": "SALVADOR PLANS, Antonio.",
-     "resto": "«La conciencia dialectal en Gabriel y Galán», *Alcántara* 63, 2005, pp. 9-32."
+     "autor": "SALVADOR PLANS, Antonio",
+     "anio": "2005b",
+     "resto": "«La conciencia dialectal en Gabriel y Galán», *Alcántara* 63, pp. 9-32."
     },
     {
-     "autor": "SALVADOR PLANS, Antonio.",
-     "resto": "«La transmisión textual de *Extremeñas* de José María Gabriel y Galán», en F. Hermoso Ruiz (coord.), *Actas del VIII Congreso de Estudios Extremeños*, Badajoz, Junta de Extremadura, 2007, pp. 2152-2175."
+     "autor": "SALVADOR PLANS, Antonio",
+     "anio": "2007",
+     "resto": "«La transmisión textual de *Extremeñas* de José María Gabriel y Galán», en F. Hermoso Ruiz (coord.), *Actas del VIII Congreso de Estudios Extremeños*, Badajoz, Junta de Extremadura, pp. 2152-2175."
     },
     {
-     "autor": "SANDE BUSTAMANTE, María de las Mercedes de.",
-     "resto": "«Lengua y habla como signos de identidad propia, sociocultural e histórica», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 300-305."
+     "autor": "SANDE BUSTAMANTE, María de las Mercedes de",
+     "anio": "2002",
+     "resto": "«Lengua y habla como signos de identidad propia, sociocultural e histórica», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 300-305."
     },
     {
-     "autor": "VALLE MOREA, Nicolás.",
-     "resto": "«La ortografía del extremeño. Un análisis retrospectivo», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, 2002, pp. 262-277."
+     "autor": "VALLE MOREA, Nicolás",
+     "anio": "2002",
+     "resto": "«La ortografía del extremeño. Un análisis retrospectivo», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 262-277."
     }
    ]
   },
@@ -181,172 +220,254 @@
    "t": "refs",
    "items": [
     {
-     "autor": "ALCÓN OLIVERA, José M.ª.",
-     "resto": "*Requilorios*, Cáceres, Institución Cultural El Brocense, 1984."
+     "autor": "ALCÓN OLIVERA, José M.ª",
+     "anio": "1984",
+     "resto": "*Requilorios*, Cáceres, Institución Cultural El Brocense."
+    },
+    {
+     "autor": "ALVAR, M.",
+     "anio": "1960",
+     "resto": "«Los dialectalismos en la poesía española del siglo XX», *RFE* 43, pp. 57-79."
+    },
+    {
+     "autor": "ALVAR, M.",
+     "anio": "1965",
+     "resto": "*Poesía española dialectal*, Madrid."
     },
     {
      "autor": "ARÉS VIDAL, C., y RODRÍGUEZ CEPEDA, E.",
-     "resto": "«Ramón Menéndez Pidal y José María Gabriel y Galán (cinco cartas inéditas de Don Ramón sobre el Romancero)», *Homenaje Universitario a Dámaso Alonso*, Madrid, Gredos, 1970, pp. 161-170."
+     "anio": "1970",
+     "resto": "«Ramón Menéndez Pidal y José María Gabriel y Galán (cinco cartas inéditas de Don Ramón sobre el Romancero)», *Homenaje Universitario a Dámaso Alonso*, Madrid, Gredos, pp. 161-170."
     },
     {
      "autor": "ARIZA, M.",
-     "resto": "*Comentarios de textos dialectales*, Madrid, Arco/Libros, 1994, y *Sobre fonética histórica del español*, Madrid, Arco/Libros, 1994."
+     "anio": "1994a",
+     "resto": "*Comentarios de textos dialectales*, Madrid, Arco/Libros."
     },
     {
-     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio.",
-     "resto": "«Sobre la conservación de sonoras en la provincia de Cáceres», *ZRPh* 108, 1992, pp. 276-292."
+     "autor": "ARIZA, M.",
+     "anio": "1994b",
+     "resto": "*Sobre fonética histórica del español*, Madrid, Arco/Libros."
+    },
+    {
+     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio",
+     "anio": "1992b",
+     "resto": "«Sobre la conservación de sonoras en la provincia de Cáceres», *ZRPh* 108, pp. 276-292."
     },
     {
      "autor": "BARAJAS SALAS, E.",
-     "resto": "«Préstamos léxicos portugueses en el extremeño: *cansera* y *entallar*», *Campo Abierto* 4, 1987, pp. 139-154."
+     "anio": "1987",
+     "resto": "«Préstamos léxicos portugueses en el extremeño: *cansera* y *entallar*», *Campo Abierto* 4, pp. 139-154."
     },
     {
      "autor": "BECERRA PÉREZ, M.",
-     "resto": "«Precisiones sobre el dialectalismo de Gabriel y Galán», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 31-61."
+     "anio": "2006",
+     "resto": "«Precisiones sobre el dialectalismo de Gabriel y Galán», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, pp. 31-61."
     },
     {
-     "autor": "BERJANO ESCOBAR, Daniel.",
-     "resto": "«Ensayo de un vocabulario del dialecto de la Sierra de Gata», *Revista de Extremadura* XI, 01/10/1909, pp. 481-485."
+     "autor": "BERJANO ESCOBAR, Daniel",
+     "anio": "1909",
+     "resto": "«Ensayo de un vocabulario del dialecto de la Sierra de Gata», *Revista de Extremadura* XI, pp. 481-485."
     },
     {
-     "autor": "BERNAL ESTÉVEZ, Ángel.",
-     "resto": "*Poblamiento, transformación y organización social del espacio extremeño (siglos XIII al XV)*, Editora Regional de Extremadura, 1998."
+     "autor": "BERNAL ESTÉVEZ, Ángel",
+     "anio": "1998",
+     "resto": "*Poblamiento, transformación y organización social del espacio extremeño (siglos XIII al XV)*, Editora Regional de Extremadura."
     },
     {
-     "autor": "CABALLERO GONZÁLEZ, Sebastián.",
-     "resto": "«El castillo de Palombeiro en Casar de Palomero», *Alcántara* 64, 2006, pp. 41-54."
+     "autor": "CABALLERO GONZÁLEZ, Sebastián",
+     "anio": "2006",
+     "resto": "«El castillo de Palombeiro en Casar de Palomero», *Alcántara* 64, pp. 41-54."
     },
     {
-     "autor": "CANELLADA, M.ª Josefa.",
-     "resto": "«Notas de entonación extremeña», *RFE* XXV, 1941, pp. 79-91."
+     "autor": "CANELLADA, M.ª Josefa",
+     "anio": "1941",
+     "resto": "«Notas de entonación extremeña», *RFE* XXV, pp. 79-91."
     },
     {
      "autor": "CORTÉS GÓMEZ, E.",
-     "resto": "*El habla popular de Higuera de Vargas (Badajoz)*, Badajoz, 1979."
+     "anio": "1979",
+     "resto": "*El habla popular de Higuera de Vargas (Badajoz)*, Badajoz."
     },
     {
-     "autor": "DOMÍNGUEZ MORCILLO, Ángel.",
-     "resto": "«Notas sobre las hablas populares extremeñas», en Javier Marcos Arévalo (coord.), *Antropología cultural de Extremadura*, Mérida, Editora Regional de Extremadura, 1989, p. 853."
+     "autor": "DOMÍNGUEZ MORCILLO, Ángel",
+     "anio": "1989",
+     "resto": "«Notas sobre las hablas populares extremeñas», en Javier Marcos Arévalo (coord.), *Antropología cultural de Extremadura*, Mérida, Editora Regional de Extremadura, p. 853."
     },
     {
-     "autor": "FERNÁNDEZ DE MOLINA ORTÉS, Elena.",
-     "resto": "«La investigación científica en el habla de Extremadura», *AEF* XXXVII, 2014, pp. 5-20."
-    },
-    {
-     "autor": "FLORES DEL MANZANO, Fernando.",
-     "resto": "«Incidencia del factor histórico en la configuración geolingüística de Extremadura», *Actas del I Congreso Internacional de Historia de la Lengua Española*, II, Madrid, Arco/Libros, 1988, pp. 1449-1459."
-    },
-    {
-     "autor": "FLORES DEL MANZANO, Fernando.",
-     "resto": "*Mitos y leyendas de tradición oral en la Alta Extremadura*, ERE, 1998."
+     "autor": "FERNÁNDEZ DE MOLINA ORTÉS, Elena",
+     "anio": "2014",
+     "resto": "«La investigación científica en el habla de Extremadura», *AEF* XXXVII, pp. 5-20."
     },
     {
      "autor": "FLORES DEL MANZANO, F.",
-     "resto": "«Vocabulario doméstico de la alta Extremadura», *REE* XLI, 1985, pp. 325-351."
+     "anio": "1985",
+     "resto": "«Vocabulario doméstico de la alta Extremadura», *REE* XLI, pp. 325-351."
+    },
+    {
+     "autor": "FLORES DEL MANZANO, Fernando",
+     "anio": "1988",
+     "resto": "«Incidencia del factor histórico en la configuración geolingüística de Extremadura», *Actas del I Congreso Internacional de Historia de la Lengua Española*, II, Madrid, Arco/Libros, pp. 1449-1459."
+    },
+    {
+     "autor": "FLORES DEL MANZANO, Fernando",
+     "anio": "1998",
+     "resto": "*Mitos y leyendas de tradición oral en la Alta Extremadura*, ERE."
     },
     {
      "autor": "GABRIEL Y GALÁN ACEVEDO, J.",
-     "resto": "*José María Gabriel y Galán. Su vida. Su obra. Su tiempo*, Mérida, Editora Regional de Extremadura, 2004; y *Obras completas* (ed. J. M.ª y J. Gabriel y Galán Acevedo), Mérida, Junta de Extremadura, 2005."
+     "anio": "2004",
+     "resto": "*José María Gabriel y Galán. Su vida. Su obra. Su tiempo*, Mérida, Editora Regional de Extremadura."
     },
     {
-     "autor": "GARCÍA MATOS, Manuel.",
-     "resto": "*Cancionero popular de la provincia de Cáceres*, CSIC, 1982, 2 vols."
+     "autor": "GABRIEL Y GALÁN ACEVEDO, J.",
+     "anio": "2005",
+     "resto": "*Obras completas* (ed. J. M.ª y J. Gabriel y Galán Acevedo), Mérida, Junta de Extremadura."
+    },
+    {
+     "autor": "GARCÍA MATOS, Manuel",
+     "anio": "1982",
+     "resto": "*Cancionero popular de la provincia de Cáceres*, CSIC, 2 vols."
     },
     {
      "autor": "GARCÍA SANTOS, J. F.",
-     "resto": "«El extremeño en la poesía de Gabriel y Galán», *Salamanca. Revista de Estudios* 52, 2005, pp. 235-249."
+     "anio": "2005",
+     "resto": "«El extremeño en la poesía de Gabriel y Galán», *Salamanca. Revista de Estudios* 52, pp. 235-249."
     },
     {
      "autor": "GARCÍA-PLATA DE OSMA, R.",
-     "resto": "*Demosofía extremeña. La musa religiosa popular*, Cáceres, 1917."
+     "anio": "1917",
+     "resto": "*Demosofía extremeña. La musa religiosa popular*, Cáceres."
     },
     {
      "autor": "GONZÁLEZ SALGADO, J. A.",
-     "resto": "«El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, 2003, pp. 137-140."
+     "anio": "2003a",
+     "resto": "«El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, pp. 137-140."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, José Antonio.",
-     "resto": "«Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, 2009, pp. 51-70."
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
+     "anio": "2009",
+     "resto": "«Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, pp. 51-70."
     },
     {
      "autor": "HIDALGO CABALLERO, M.",
-     "resto": "«Pervivencia actual de la *ll* en el suroeste de España», *RFE* LIX, 1977, pp. 119-143."
+     "anio": "1977",
+     "resto": "«Pervivencia actual de la *ll* en el suroeste de España», *RFE* LIX, pp. 119-143."
     },
     {
      "autor": "HOYOS PIÑAS, J. M.",
-     "resto": "«Nuevas notas sobre morfosintaxis extremeñas», *Interlingüística* 15 (2), 2004, pp. 737-742."
+     "anio": "2004",
+     "resto": "«Nuevas notas sobre morfosintaxis extremeñas», *Interlingüística* 15 (2), pp. 737-742."
     },
     {
-     "autor": "IZQUIERDO HERNÁNDEZ, Nicolás.",
-     "resto": "«Algo sobre el habla popular de Extremadura», *Revista de Extremadura* III, n.º XXV, 1901, pp. 299-305."
+     "autor": "IZQUIERDO HERNÁNDEZ, Nicolás",
+     "anio": "1901",
+     "resto": "«Algo sobre el habla popular de Extremadura», *Revista de Extremadura* III, n.º XXV, pp. 299-305."
     },
     {
      "autor": "LOPE BLANCH, Juan M.",
-     "resto": "Reseña de Cummins 1974, *NRFH* XXV, 1976, pp. 393-394."
+     "anio": "1976",
+     "resto": "Reseña de Cummins 1974, *NRFH* XXV, pp. 393-394."
     },
     {
      "autor": "LUMERA GUERRERO, M.",
-     "resto": "«Algunas notas de morfosintaxis del habla de Plasencia», *Alcántara* 17, 1989, pp. 159-173 (también en *Actas del II Congreso Internacional de Historia de la Lengua Española*, 1992, II, pp. 187-197)."
+     "anio": "1989",
+     "resto": "«Algunas notas de morfosintaxis del habla de Plasencia», *Alcántara* 17, pp. 159-173 (también en *Actas del II Congreso Internacional de Historia de la Lengua Española*, 1992, II, pp. 187-197)."
     },
     {
-     "autor": "MANSO FLORES, Ana Alicia.",
-     "resto": "«Sobre los nombres para el “pimiento” en el Val de Xálima», *Cuadernos de Investigación Filológica* 52, 2022, pp. 97-126."
+     "autor": "MANSO FLORES, Ana Alicia",
+     "anio": "2022",
+     "resto": "«Sobre los nombres para el “pimiento” en el Val de Xálima», *Cuadernos de Investigación Filológica* 52, pp. 97-126."
     },
     {
-     "autor": "MARCOS DE SANDE, Moisés.",
-     "resto": "«Algunas palabras del vocabulario garrovillano», *RDTP* XV, 1959, pp. 153-154."
+     "autor": "MARCOS DE SANDE, Moisés",
+     "anio": "1959",
+     "resto": "«Algunas palabras del vocabulario garrovillano», *RDTP* XV, pp. 153-154."
     },
     {
-     "autor": "MENÉNDEZ PIDAL, Ramón.",
-     "resto": "*El dialecto leonés*, 1906 (ed. Oviedo, BIDEA, 1962)."
+     "autor": "MENÉNDEZ PIDAL, Ramón",
+     "anio": "1906",
+     "resto": "*El dialecto leonés* (ed. Oviedo, BIDEA, 1962)."
     },
     {
-     "autor": "MIGUÉLEZ RODRÍGUEZ, Eugenio.",
-     "resto": "*Diccionario de las hablas leonesas*, León, 1993, y *El dialecto leonés y el nombre de las cosas*, León, 2000."
+     "autor": "MIGUÉLEZ RODRÍGUEZ, Eugenio",
+     "anio": "1993",
+     "resto": "*Diccionario de las hablas leonesas*, León."
     },
     {
-     "autor": "MONTAÑA CONCHIÑA, Juan Luis de la.",
-     "resto": "*La Extremadura cristiana (1142-1350). Poblamiento, poder y sociedad*, UEx, 2003, y «Albalat y la Atalaya de Pedro Velídiz», *Alcántara* 25, 1992, pp. 99-114."
+     "autor": "MIGUÉLEZ RODRÍGUEZ, Eugenio",
+     "anio": "2000",
+     "resto": "*El dialecto leonés y el nombre de las cosas*, León."
     },
     {
-     "autor": "MONTERO CURIEL, Pilar.",
-     "resto": "«Los dialectalismos extremeños en el Diccionario de Autoridades», *AEF* XXIX, 2006, pp. 187-204."
+     "autor": "MONTAÑA CONCHIÑA, Juan Luis de la",
+     "anio": "1992",
+     "resto": "«Albalat y la Atalaya de Pedro Velídiz», *Alcántara* 25, pp. 99-114."
+    },
+    {
+     "autor": "MONTAÑA CONCHIÑA, Juan Luis de la",
+     "anio": "2003",
+     "resto": "*La Extremadura cristiana (1142-1350). Poblamiento, poder y sociedad*, UEx."
+    },
+    {
+     "autor": "MONTERO CURIEL, Pilar",
+     "anio": "2006b",
+     "resto": "«Los dialectalismos extremeños en el Diccionario de Autoridades», *AEF* XXIX, pp. 187-204."
     },
     {
      "autor": "REBOLLO TORÍO, M. Á.",
-     "resto": "«Ortografía y grafías en los escritores extremeños», *Actas del VIII Congreso de Estudios Extremeños*, 2007, pp. 2046-2058."
+     "anio": "2007",
+     "resto": "«Ortografía y grafías en los escritores extremeños», *Actas del VIII Congreso de Estudios Extremeños*, pp. 2046-2058."
     },
     {
      "autor": "SALVADOR PLANS, A.",
-     "resto": "«El habla popular en la prosa de José María Gabriel y Galán», *Salamanca. Revista de Estudios* 52, 2005, pp. 315-340; «El habla popular en los escritores extremeños finiseculares», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, 2006, pp. 249-279; y «Lengua, casticismo e intrahistoria en Luis Chamizo», *Analecta Malacitana*, anejo XXIV, 1999, pp. 255-268."
+     "anio": "1981",
+     "resto": "«¿Tres pueblos de habla extremeña en Andalucía?», *AEF* IV, pp. 221-231."
     },
     {
      "autor": "SALVADOR PLANS, A.",
-     "resto": "«Notas sobre la diversidad dialectal de Extremadura», en *Homenaje al Profesor Estanislao Ramón Trives*, Murcia, Universidad, 2003, pp. 719-743."
+     "anio": "1999",
+     "resto": "«Lengua, casticismo e intrahistoria en Luis Chamizo», *Analecta Malacitana*, anejo XXIV, pp. 255-268."
     },
     {
      "autor": "SALVADOR PLANS, A.",
-     "resto": "«¿Tres pueblos de habla extremeña en Andalucía?», *AEF* IV, 1981, pp. 221-231."
+     "anio": "2003",
+     "resto": "«Notas sobre la diversidad dialectal de Extremadura», en *Homenaje al Profesor Estanislao Ramón Trives*, Murcia, Universidad, pp. 719-743."
     },
     {
-     "autor": "SANDE BUSTAMANTE, M. de.",
-     "resto": "*El léxico y la toponimia de las tierras de Alcántara (Cáceres)*, Salamanca, 1986."
+     "autor": "SALVADOR PLANS, A.",
+     "anio": "2005a",
+     "resto": "«El habla popular en la prosa de José María Gabriel y Galán», *Salamanca. Revista de Estudios* 52, pp. 315-340."
+    },
+    {
+     "autor": "SALVADOR PLANS, A.",
+     "anio": "2006",
+     "resto": "«El habla popular en los escritores extremeños finiseculares», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, pp. 249-279."
+    },
+    {
+     "autor": "SANDE BUSTAMANTE, M. de",
+     "anio": "1986",
+     "resto": "*El léxico y la toponimia de las tierras de Alcántara (Cáceres)*, Salamanca."
     },
     {
      "autor": "SEGURA COVARSÍ, E.",
-     "resto": "«Extremeñas. El dialecto», *Alcántara* X, 81-83, 1954, pp. 3-11; **ALVAR, M.**, *Poesía española dialectal*, Madrid, 1965, y «Los dialectalismos en la poesía española del siglo XX», *RFE* 43, 1960, pp. 57-79."
+     "anio": "1954",
+     "resto": "«Extremeñas. El dialecto», *Alcántara* X, 81-83, pp. 3-11."
     },
     {
      "autor": "ZAMORA VICENTE, A.",
-     "resto": "*El habla de Mérida*, *Dialectología española* (1960, 2.ª ed. 1985) y el texto de 1950 sobre Gabriel y Galán."
+     "anio": "1942a",
+     "resto": "«Leonesismos en el extremeño de Mérida», *RFE* XXVI, pp. 89-90."
     },
     {
      "autor": "ZAMORA VICENTE, A.",
-     "resto": "«Leonesismos en el extremeño de Mérida», *RFE* XXVI, 1942, pp. 89-90, y «Sobre el léxico dialectal», *RFE* 26, 1942, pp. 315-319."
+     "anio": "1942b",
+     "resto": "«Sobre el léxico dialectal», *RFE* 26, pp. 315-319."
     },
     {
      "autor": "ZAMORA VICENTE, A.",
-     "resto": "«El dialectalismo de José María Gabriel y Galán», *Filología* II, 1950, pp. 113-175 (reeditado en *Estudios de dialectología hispánica*, Santiago, 1986, pp. 73-128)."
+     "anio": "1950",
+     "resto": "«El dialectalismo de José María Gabriel y Galán», *Filología* II, pp. 113-175 (reeditado en *Estudios de dialectología hispánica*, Santiago, 1986, pp. 73-128)."
     }
    ]
   }
