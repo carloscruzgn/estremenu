@@ -73,6 +73,7 @@
       "entradilla": "Un secretario de ayuntamiento que en 1901 escribió un sainete con el habla de Santibáñez el Bajo.",
       "corto": "Vicente Corrales",
       "resumen": "El autor, el manuscrito y el seranu",
+      "imagen": { "src": "img/autores/corrales-candil.webp", "ancho": 600, "alto": 800, "alt": "Dibujo a carboncillo de un candil de aceite encendido", "pie": "Un candil de aceite. Ilustración hecha para esta web." },
       "textos": [
         "TEX-04"
       ],
