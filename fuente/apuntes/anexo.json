@@ -1,0 +1,24 @@
+{
+  "_fuente": "Los quince mapas históricos (H01-H15) de la carpeta Mapas de Drive, por orden de las fechas que enseñan; títulos y fechas, de 10-MAPAS y de la cabecera de cada mapa. Lo escribió Claude el 19/10/2026, a petición de Carlos. construir.mjs lo pone detrás de la bibliografía.",
+  "id": "9",
+  "n": "9",
+  "titulo": "Anexo: mapas históricos",
+  "bloques": [
+    { "t": "p", "texto": "Los quince mapas de historia del taller, de las primeras lenguas indoeuropeas a las cañadas de la Mesta, por orden de fechas. El de la Hispania romana, el del primer avance cristiano y el de las lenguas romances hacia 1300 salen también en el apartado 2." },
+    { "t": "mapa", "codigo": "H05", "titulo": "Las lenguas indoeuropeas", "fecha": "del 4000 al 1000 a. C." },
+    { "t": "mapa", "codigo": "H06", "titulo": "Las lenguas prerromanas", "fecha": "hacia el 200 a. C." },
+    { "t": "mapa", "codigo": "H07", "titulo": "Hispania hacia el 197 a. C." },
+    { "t": "mapa", "codigo": "H08", "titulo": "El Imperio romano con Trajano", "fecha": "hacia el 117 d. C." },
+    { "t": "mapa", "codigo": "H09", "titulo": "Hispania romana", "fecha": "hacia el 120 d. C." },
+    { "t": "mapa", "codigo": "H10", "titulo": "Invasiones y reino visigodo", "fecha": "del 409 al 585" },
+    { "t": "mapa", "codigo": "H11", "titulo": "La conquista musulmana", "fecha": "del 711 al 722" },
+    { "t": "mapa", "codigo": "H02", "titulo": "Lenguas romances hacia 950" },
+    { "t": "mapa", "codigo": "H12", "titulo": "Las Extremaduras", "fecha": "siglos X a XIII" },
+    { "t": "mapa", "codigo": "H01", "titulo": "Primer avance cristiano", "fecha": "siglo XII" },
+    { "t": "mapa", "codigo": "H13", "titulo": "La repoblación de la Transierra", "fecha": "siglos XII y XIII" },
+    { "t": "mapa", "codigo": "H03", "titulo": "Lenguas romances hacia 1212" },
+    { "t": "mapa", "codigo": "H14", "titulo": "La repoblación de Extremadura", "fecha": "siglo XIII" },
+    { "t": "mapa", "codigo": "H04", "titulo": "Lenguas romances hacia 1300" },
+    { "t": "mapa", "codigo": "H15", "titulo": "Las cañadas de la Mesta", "fecha": "siglos XIII a XIX" }
+  ]
+}
