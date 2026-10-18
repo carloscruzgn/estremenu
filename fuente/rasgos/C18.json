@@ -1,0 +1,103 @@
+{
+ "codigo": "C18",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Laʰ fotaʰ, lacié, lojatus:",
+  "la s que endurece lo que viene detrás"
+ ],
+ "cabecera": "Laʰ fotaʰ, lacié, lojatus: la s que endurece lo que viene detrás",
+ "_titulo": "El de la página C18 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "El cambio va en medio: el reel va sin ejemplos. La cabecera de la web lleva es buena → efuena, muchas veces → muchafeces y La Pesga → La Peja, de la página C18",
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 189 y 403-409",
+   "terminos": {
+    "10152": "Pozuelo de Zarzón: eʰfwena 'es buena' (§ 403)",
+    "10041": "Caminomorisco, por Cambroncino: lozyenti 'los dientes', lozeu 'los dedos' (§§ 48 y 189)",
+    "10211": "Villanueva de la Sierra: eʰfwena 'es buena', en casos sueltos (§ 407)",
+    "10146": "Pinofranqueado y El Castillo: lozyenti 'los dientes', lozeu 'los dedos', layabi 'las llaves'; en El Castillo, efwena 'es buena', lo frazu 'los brazos'",
+    "10089": "Guijo de Galisteo: efwena 'es buena', lafakas 'las vacas', lo frazus 'los brazos', efyeja 'es vieja'",
+    "10129": "Morcillo: efwena 'es buena'; en lo demás, la s se hace sonora y se pierde sin cambiar la consonante (§§ 406-408)",
+    "10189": "Torrejoncillo: efwena 'es buena', efyeja 'es vieja', kantafyen 'cantas bien', en casos sueltos; y lodyentis, con la d sonora",
+    "10218": "Zarza la Mayor: lofwesu 'los huesos' (§ 404)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 95-96 y 99: «con carácter general»; lojatos, lacié, lafeces, muchafeces; dentro de la palabra, rajón, mujo, La Peja",
+    "10051": "Velo Nieto 1956, pp. 95-96 y 99: «con carácter general»; lojatos, lacié, lafeces, muchafeces; dentro de la palabra, rajón, mujo, La Peja",
+    "10108": "Velo Nieto 1956, pp. 95-96 y 99: «con carácter general»; lojatos, lacié, lafeces, muchafeces; dentro de la palabra, rajón, mujo, La Peja",
+    "10135": "Velo Nieto 1956, pp. 95-96 y 99: «con carácter general»; lojatos, lacié, lafeces, muchafeces; dentro de la palabra, rajón, mujo, La Peja",
+    "10146": "Velo Nieto 1956, pp. 95-96 y 99: «con carácter general»; lojatos, lacié, lafeces, muchafeces; dentro de la palabra, rajón, mujo, La Peja",
+    "10040": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10053": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10059": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10067": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10088": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10089": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10101": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10127": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10128": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10143": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10150": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10189": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína",
+    "10207": "Cummins, § 13e: el efecto más fuerte de la s aspirada es sobre la b, la d o la g que siguen, que «se ensordece»: laφakína, loθomíŋgu, laxalína"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "González Salgado 2003 y 2007 (encuestas de 1995-1997); Paniagua 2002",
+   "terminos": {
+    "10089": "Guijo de Galisteo: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10050": "Casar de Palomero: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10006": "Ahigal: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente. Paniagua 2002, p. 78, dentro de la palabra: ajuariza, La Peja, refalatera, efalagal",
+    "10150": "Portaje: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10061": "Ceclavín: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10082": "Garrovillas: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10053": "Casas de Don Gómez: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente",
+    "10175": "Serradilla: González Salgado 2003, p. 600: «muy frecuente»; en 2007, p. 46, sobre las mismas encuestas, no lo da por frecuente"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": [
+   "10072",
+   "10062"
+  ]
+ },
+ "_probable": "Las 24 comarcas, como en C03: el rasgo es consecuencia de la aspiración de la -s, general en Extremadura (Montero Curiel 2006, pp. 41-43). Fuera Eljas y Cedillo, que no aspiran la -s (González Salgado 2003, C03)",
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 y 2007 · Montero Curiel 2006, y otras fuentes del taller"
+}

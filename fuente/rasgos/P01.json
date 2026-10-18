@@ -1,0 +1,100 @@
+{
+ "codigo": "P01",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "El tonillo"
+ ],
+ "cabecera": "El tonillo",
+ "_titulo": "El de la página P01 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "cal",
+   "antes": "or",
+   "despues": "ooo"
+  },
+  {
+   "base": "muj",
+   "antes": "er",
+   "despues": "eee"
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 281 y 60",
+   "terminos": {
+    "10050": "Casar de Palomero: con la caída de la -r final, la vocal de antes se alarga (Krüger 1914, § 281)",
+    "10041": "Caminomorisco, por Cambroncino: con la caída de la -r final, la vocal de antes se alarga (Krüger 1914, § 281)",
+    "10146": "Pinofranqueado y El Castillo: con la caída de la -r final, la vocal de antes se alarga (Krüger 1914, § 281); kalo «calor», muje «mujer» en Pinofranqueado",
+    "10218": "Zarza la Mayor: con la caída de la -r final, la vocal de antes se alarga (Krüger 1914, § 281)",
+    "10082": "Garrovillas: con la caída de la -r final, la vocal de antes se alarga (Krüger 1914, § 281); y la hiel, con la e cerrada por la sílaba alargada al perder la -l (§ 60)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Barroso 2002, 1979-1980; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 74: un «matiz tenuemente cantarino», con final «descendente y apagado»",
+    "10051": "Velo Nieto 1956, p. 74: un «matiz tenuemente cantarino», con final «descendente y apagado». Barroso 2002 (C), pp. 182-183: lo oyó al llegar en 1979-1980, y en 2002 sigue vivo sobre todo en Nuñomoral y Casares, aunque «pierde terreno a marchas forzadas»",
+    "10108": "Velo Nieto 1956, p. 74: un «matiz tenuemente cantarino», con final «descendente y apagado»",
+    "10135": "Velo Nieto 1956, p. 74: un «matiz tenuemente cantarino», con final «descendente y apagado». Barroso 2002 (C), pp. 182-183: lo oyó al llegar en 1979-1980, y en 2002 sigue vivo sobre todo en Nuñomoral y Casares, aunque «pierde terreno a marchas forzadas»",
+    "10146": "Velo Nieto 1956, p. 74: un «matiz tenuemente cantarino», con final «descendente y apagado»",
+    "37234": "Iglesias Ovejero 2010, p. 51: las cadencias de la exclamación y la pregunta, muy marcadas, «casi con un quiebro de la voz y arrastrando la sílaba final»",
+    "37221": "Iglesias Ovejero 2010, p. 51: las cadencias de la exclamación y la pregunta, muy marcadas, «casi con un quiebro de la voz y arrastrando la sílaba final»",
+    "37245": "Iglesias Ovejero 2010, p. 51: las cadencias de la exclamación y la pregunta, muy marcadas, «casi con un quiebro de la voz y arrastrando la sílaba final»",
+    "37269": "Iglesias Ovejero 2010, p. 51: las cadencias de la exclamación y la pregunta, muy marcadas, «casi con un quiebro de la voz y arrastrando la sílaba final»",
+    "37371": "Iglesias Ovejero 2010, p. 51: las cadencias de la exclamación y la pregunta, muy marcadas, «casi con un quiebro de la voz y arrastrando la sílaba final»"
+   }
+  }
+ ],
+ "_oleadas": "Krüger declara que no estudia la melodía (§ 5); Cummins y González Salgado no la tratan: su silencio no vale en contra",
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Entera Extremadura en fuerte en el recuadro de RP01, por Canellada 1941 vía Montero Curiel 2006, p. 47",
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "En toda Extremadura",
+   "s": "Más claro en Badajoz que en Cáceres, según Canellada en 1941"
+  },
+  "terminos": {
+   "06010": "Almendral: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)",
+   "06025": "Calamonte: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)",
+   "06083": "Mérida: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)",
+   "06084": "Mirandilla: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)",
+   "06140": "Valencia del Mombuey: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)",
+   "06149": "Villafranca de los Barros: tono medio más alto que el castellano y sílabas fuertes alargadas (Canellada 1941, vía Montero Curiel 2006, p. 47)"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Barroso 2002 · Iglesias Ovejero 2010 · Canellada 1941, vía Montero Curiel 2006"
+}

@@ -21,5 +21,19 @@
  "estado": "Todavía se oye",
  "origenes": [
   "Castellano viejo"
+ ],
+ "ejemplos": [
+  {
+   "base": "una poca ",
+   "antes": "",
+   "despues": "de",
+   "cola": " agua"
+  },
+  {
+   "base": "unaʰ cuantaʰ ",
+   "antes": "",
+   "despues": "de",
+   "cola": " niñaʰ"
+  }
  ]
 }

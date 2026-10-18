@@ -1,0 +1,137 @@
+{
+ "codigo": "M24",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Asina, entavía,",
+  "aluegu, dendi, mu"
+ ],
+ "cabecera": "Asina, entavía, aluegu, dendi, mu",
+ "_titulo": "El de la página M24 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [
+  {
+   "base": "as",
+   "antes": "í",
+   "despues": "ina"
+  },
+  {
+   "base": "de",
+   "antes": "sde",
+   "despues": "ndi"
+  },
+  {
+   "base": "mu",
+   "antes": "y",
+   "despues": ""
+  }
+ ],
+ "oleadas": [
+  {
+   "rotulo": "1912",
+   "fuentes": "Krüger 1914, §§ 89, 177 y 316",
+   "terminos": {
+    "10216": "Zarza de Granadilla y Granadilla: mu «muy»; en Granadilla, también mui (Krüger 1914, §§ 89 y 177)",
+    "10207": "Villa del Campo: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10129": "Morcillo: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10006": "Ahigal: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10050": "Casar de Palomero: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10152": "Pozuelo de Zarzón: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10041": "Caminomorisco, por Cambroncino: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10211": "Villanueva de la Sierra: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10146": "Pinofranqueado, por El Castillo: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10084": "Gata: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10089": "Guijo de Galisteo: mu «muy» (Krüger 1914, §§ 89 y 177)",
+    "10187": "Torre de Don Miguel: mu «muy», junto a mui (Krüger 1914, §§ 89 y 177)"
+   }
+  },
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, pp. 110-112: antiel, endenantes, dispués, entovía, todía, ansina, ende, endaora, sotro",
+    "10051": "Velo Nieto 1956, pp. 110-112: antiel, endenantes, dispués, entovía, todía, ansina, ende, endaora, sotro",
+    "10108": "Velo Nieto 1956, pp. 110-112: antiel, endenantes, dispués, entovía, todía, ansina, ende, endaora, sotro",
+    "10135": "Velo Nieto 1956, pp. 110-112: antiel, endenantes, dispués, entovía, todía, ansina, ende, endaora, sotro",
+    "10146": "Velo Nieto 1956, pp. 110-112: antiel, endenantes, dispués, entovía, todía, ansina, ende, endaora, sotro",
+    "10040": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10053": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y entre más «cuanto más», no sea que «a no ser que»",
+    "10059": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y dendelwúgu, dendakí, entó «entonces»",
+    "10067": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y de que «tan pronto como», por ese misterio «por eso»",
+    "10088": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10089": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10101": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y desque «desde que»",
+    "10127": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y de que «tan pronto como», depatrás «antes», endelögwu",
+    "10128": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10143": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10150": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu; y o sí sí «más o menos»",
+    "10189": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "10207": "Cummins, § 28: «de gran vitalidad», entubía, ándi, asína, asín, óra, áura, ogáñu, kwási, mu",
+    "37234": "Iglesias Ovejero 2010, p. 56: dendi «desde», ú «dónde», áina «casi», hogañu",
+    "37221": "Iglesias Ovejero 2010, p. 56: dendi «desde», ú «dónde», áina «casi», hogañu",
+    "37245": "Iglesias Ovejero 2010, p. 56: dendi «desde», ú «dónde», áina «casi», hogañu",
+    "37269": "Iglesias Ovejero 2010, p. 56: dendi «desde», ú «dónde», áina «casi», hogañu",
+    "37371": "Iglesias Ovejero 2010, p. 56: dendi «desde», ú «dónde», áina «casi», hogañu"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Alcón 2002; Paniagua 2002",
+   "terminos": {
+    "10089": "Alcón 2002, p. 224: ansí, agota, aluego, pos, dende, antiel",
+    "10006": "Paniagua 2002, pp. 82-83: ¿di? y ¿diga?, y to «además», primel y tercel para los dos géneros, dambus"
+   }
+  }
+ ],
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Entera Extremadura en fuerte en el recuadro de RM24, por Montero Curiel 2006, pp. 53-54, y el mu «limitado en lo esencial a Extremadura» de Krüger, § 316",
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "También allí",
+   "s": "Madroñera, Zorita, Herguijuela y la sierra del Jerte"
+  },
+  "terminos": {
+   "10113": "Madroñera: sotro, sotra «este otro»; la fuerza de «la mayoría de» en los ancianos (Montero Curiel 2006, pp. 54 y 57)",
+   "10219": "Zorita: sotro, sotra «este otro» (Montero Curiel 2006, p. 57)",
+   "10092": "Herguijuela: sotro, sotra «este otro» (Montero Curiel 2006, p. 57)",
+   "10147": "Piornal: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10184": "El Torno: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10196": "Valdastillas: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10054": "Casas del Castañar: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10154": "Rebollar: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10036": "Cabrero: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10025": "Barrado: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
+  }
+ },
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller"
+}

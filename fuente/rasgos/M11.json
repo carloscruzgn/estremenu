@@ -57,7 +57,7 @@
     "10143": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»",
     "10150": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: bínun, díhun, eʰtúbun, trúhun",
     "10189": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Cummins, § 26c: bínun, díhun, eʰtúbun, trúhun",
-    "10207": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente»; Villa del Campo: sin forma fuerte en Cummins; el informante de 1912 solo conocía las castellanas. Sube con la comarca, afinando a lo probable",
+    "10207": "Cummins, § 26c: «las formas fuertes de la tercera persona del plural son de uso muy corriente», sin forma de Villa del Campo. En 1912 su informante solo conocía las castellanas (Krüger)",
     "37234": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
     "37221": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
     "37245": "Iglesias Ovejero 2010, p. 54: dijun, trajun, trujun, vinun",
@@ -67,11 +67,10 @@
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "González Salgado 2007; Alcón 2002; Portaje 2011",
+   "fuentes": "González Salgado 2007; Alcón 2002",
    "terminos": {
     "10096": "Hervás: estos perfectos, en una hablante de 65 años, en 2005 (González Salgado 2007, p. 50)",
-    "10089": "Alcón 2002: jidun, vinun, trujun, supun, dijun, «muy frecuentes»",
-    "10150": "Ayuntamiento de Portaje 2011"
+    "10089": "Alcón 2002: jidun, vinun, trujun, supun, dijun, «muy frecuentes»"
    }
   }
  ],
@@ -84,13 +83,13 @@
   "terminos": {
    "37303": "El Sahugo: perfectos analógicos (ALEP, vía Alonso Pascua 2023)",
    "10010": "Alcuéscar: hizon, pudon, vinon (Menéndez Pidal, vía Krüger, § 442, n. 1)",
-   "10147": "Piornal: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10184": "El Torno: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10196": "Valdastillas: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10054": "Casas del Castañar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10154": "Rebollar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10036": "Cabrero: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10025": "Barrado: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, sin pueblo)"
+   "10147": "Piornal: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10184": "El Torno: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10196": "Valdastillas: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10054": "Casas del Castañar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10154": "Rebollar: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10036": "Cabrero: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10025": "Barrado: dijon, puson, jizon, vinon (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
   }
  },
  "probable": {

@@ -15,7 +15,7 @@
    "rotulo": "1912",
    "fuentes": "Krüger 1914, § 128",
    "terminos": {
-    "10050": "Casar de Palomero: la mi tía, la su tía. Krüger no preguntaba gramática: su silencio en los demás puntos no vale"
+    "10050": "Casar de Palomero: la mi tía, la su tía"
    }
   },
   {
@@ -49,11 +49,10 @@
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "Alcón 2002; Baltasar Campo, La espelujá; Portaje 2011",
+   "fuentes": "Alcón 2002; Baltasar Campo, La espelujá",
    "terminos": {
     "10089": "Alcón 2002: la mi casa, el mi güertu, loh mih lechonih",
-    "10040": "Baltasar Campo, La espelujá: hi la mi hija estaba educa",
-    "10150": "Ayuntamiento de Portaje 2011"
+    "10040": "Baltasar Campo, La espelujá: hi la mi hija estaba educa"
    }
   }
  ],
@@ -64,14 +63,14 @@
    "s": "El Sahugo y la sierra del Jerte"
   },
   "terminos": {
-   "37303": "El Sahugo: ALEP, vía Alonso Pascua 2023",
-   "10147": "Piornal: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10184": "El Torno: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10196": "Valdastillas: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10054": "Casas del Castañar: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10154": "Rebollar: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10036": "Cabrero: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)",
-   "10025": "Barrado: eh la mi mujel (Flores del Manzano 1992, p. 131, sin pueblo)"
+   "37303": "El Sahugo: artículo con posesivo en el ALEP, 1976-1981 (vía Alonso Pascua 2023)",
+   "10147": "Piornal: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10184": "El Torno: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10196": "Valdastillas: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10054": "Casas del Castañar: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10154": "Rebollar: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10036": "Cabrero: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10025": "Barrado: eh la mi mujel (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
   }
  },
  "probable": {

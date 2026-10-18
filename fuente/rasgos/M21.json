@@ -1,0 +1,88 @@
+{
+ "codigo": "M21",
+ "tipo": "regional",
+ "_tipo": "regional: rasgo con área (fases completas). general: rasgo del español hablado, sin blancos ni fase del noroeste. distincion: el blanco es «se ha registrado lo contrario»",
+ "titulo": [
+  "Unus pocus de,",
+  "una poca de"
+ ],
+ "cabecera": "Unus pocus de, una poca de",
+ "_titulo": "El de la página M21 de los apuntes del alumnado (10-MAPAS, «Título y subtítulo»)",
+ "ejemplos": [],
+ "_ejemplos": "La palabra entra en medio: el reel va sin ejemplos. La cabecera de la web lleva una poca agua → una poca de agua y unaʰ cuantaʰ niñaʰ → unaʰ cuantaʰ de niñaʰ",
+ "oleadas": [
+  {
+   "rotulo": "1956-1979",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
+   "terminos": {
+    "10041": "Velo Nieto 1956, p. 108: unos cuantos de costales, otras pocas de nueces, 200 de cántaros",
+    "10051": "Velo Nieto 1956, p. 108: unos cuantos de costales, otras pocas de nueces, 200 de cántaros",
+    "10108": "Velo Nieto 1956, p. 108: unos cuantos de costales, otras pocas de nueces, 200 de cántaros",
+    "10135": "Velo Nieto 1956, p. 108: unos cuantos de costales, otras pocas de nueces, 200 de cántaros",
+    "10146": "Velo Nieto 1956, p. 108: unos cuantos de costales, otras pocas de nueces, 200 de cántaros",
+    "10127": "Cummins, § 33: únuʰpókuθe tróθu 'unos pocos de trozos'",
+    "10053": "Cummins, § 33: una pokína de koséĉa 'una poquina de cosecha'",
+    "10067": "Cummins, § 33: únaʰkwántaθe níña 'unas cuantas de niñas', en C 6, de dieciocho años, la informante más joven de la encuesta",
+    "37234": "Iglesias Ovejero 2010, p. 52: un poco de, unos pocos de «también se comprueba en El Rebollar»",
+    "37221": "Iglesias Ovejero 2010, p. 52: un poco de, unos pocos de «también se comprueba en El Rebollar»",
+    "37245": "Iglesias Ovejero 2010, p. 52: un poco de, unos pocos de «también se comprueba en El Rebollar»",
+    "37269": "Iglesias Ovejero 2010, p. 52: un poco de, unos pocos de «también se comprueba en El Rebollar»",
+    "37371": "Iglesias Ovejero 2010, p. 52: un poco de, unos pocos de «también se comprueba en El Rebollar»"
+   }
+  }
+ ],
+ "_oleadas": "Sin oleada de 1912: Krüger no preguntaba gramática. Sin oleada de 1992-2011: González Salgado no lo pregunta, y Paniagua 2002 (Ahigal) y Alcón 2002 (Guijo de Galisteo), fuente C, no suben solos",
+ "probable": {
+  "comarcas": [
+   "gata",
+   "hurdes",
+   "trasierra",
+   "alagon",
+   "ambroz",
+   "tajosalor",
+   "monfrague",
+   "sanpedro",
+   "jerte",
+   "miajadas",
+   "vera",
+   "montanchez",
+   "villuercas",
+   "aranuelo",
+   "lacara",
+   "olivenza",
+   "suroeste",
+   "vegasaltas",
+   "campinasur",
+   "tentudia",
+   "serena",
+   "siberia",
+   "barros",
+   "zafra",
+   "ciudades"
+  ],
+  "terminos": [],
+  "excluir": []
+ },
+ "_probable": "Entera Extremadura en fuerte en el recuadro de RM21, por el «de norte a sur» de Montero Curiel 2006, pp. 30 y 49",
+ "fuera": {
+  "rotulo": {
+   "k": "Y fuera del área",
+   "h": "De norte a sur",
+   "s": "Mérida, Arroyo de San Serván, Higuera de Vargas, Madroñera y la sierra del Jerte"
+  },
+  "terminos": {
+   "06083": "Mérida: unos pocos de, unos cuantos de (vía Montero Curiel 2006, pp. 30 y 49)",
+   "06012": "Arroyo de San Serván: unos pocos de, unos cuantos de (vía Montero Curiel 2006, pp. 30 y 49)",
+   "06066": "Higuera de Vargas: unos pocos de, unos cuantos de (vía Montero Curiel 2006, pp. 30 y 49)",
+   "10113": "Madroñera: unos pocos de, unos cuantos de (vía Montero Curiel 2006, pp. 30 y 49)",
+   "10147": "Piornal: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10184": "El Torno: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10196": "Valdastillas: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10054": "Casas del Castañar: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10154": "Rebollar: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10036": "Cabrero: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)",
+   "10025": "Barrado: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
+  }
+ },
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller"
+}

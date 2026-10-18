@@ -79,7 +79,7 @@
     "10045": "Cañaveral: Montero Curiel 2006, p. 42, sin fecha de recogida",
     "10099": "Holguera: Montero Curiel 2006, p. 42, sin fecha de recogida",
     "10155": "Riolobos: Montero Curiel 2006, p. 42, sin fecha de recogida",
-    "10152": "aspira y repone la -s en pausa, Montero Curiel 2006, p. 42"
+    "10152": "Pozuelo de Zarzón: aspira y repone la -s en pausa, Montero Curiel 2006, p. 42"
    }
   }
  ],
@@ -90,13 +90,13 @@
    "s": "De la sierra del Jerte a Trujillo"
   },
   "terminos": {
-   "10147": "Piornal: Flores del Manzano 1992, p. 129",
-   "10183": "Tornavacas: Flores del Manzano 1992, p. 129",
+   "10147": "Piornal: -s de final de sílaba aspirada; en final absoluta, pérdida o aspiración ligera (Flores del Manzano 1992, p. 129)",
+   "10183": "Tornavacas: -s de final de sílaba aspirada; en final absoluta, pérdida o aspiración ligera (Flores del Manzano 1992, p. 129)",
    "10195": "Trujillo: aspira y pierde siempre, Montero Curiel 2006, p. 42",
-   "10219": "Zorita: Montero Curiel 2006, p. 42",
-   "10092": "Herguijuela: Montero Curiel 2006, p. 42",
-   "10186": "Torrecillas de la Tiesa: Montero Curiel 2006, p. 42",
-   "10113": "Madroñera: Montero Curiel 2006, p. 42"
+   "10219": "Zorita: aspira y repone la -s en final absoluto (Montero Curiel 2006, p. 42)",
+   "10092": "Herguijuela: aspira y repone la -s en final absoluto (Montero Curiel 2006, p. 42)",
+   "10186": "Torrecillas de la Tiesa: aspira y repone la -s en final absoluto (Montero Curiel 2006, p. 42)",
+   "10113": "Madroñera: aspira y repone la -s en final absoluto (Montero Curiel 2006, p. 42)"
   }
  },
  "probable": {

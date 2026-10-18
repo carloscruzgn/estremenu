@@ -82,7 +82,7 @@
   {
    "codigo": "C18",
    "titulo": "Laʰ fotaʰ, lacié, lojatus: la s que endurece lo que viene detrás",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -160,7 +160,7 @@
   {
    "codigo": "M21",
    "titulo": "Unus pocus de, una poca de",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -172,7 +172,7 @@
   {
    "codigo": "M24",
    "titulo": "Asina, entavía, aluegu, dendi, mu",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   },
   {
@@ -190,7 +190,7 @@
   {
    "codigo": "P01",
    "titulo": "El tonillo",
-   "mapa": false,
+   "mapa": true,
    "pagina": true
   }
  ],

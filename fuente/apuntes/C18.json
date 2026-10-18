@@ -21,5 +21,25 @@
  "estado": "Todavía se oye",
  "origenes": [
   "Del sur"
+ ],
+ "ejemplos": [
+  {
+   "base": "e",
+   "antes": "s b",
+   "despues": "f",
+   "cola": "uena"
+  },
+  {
+   "base": "mucha",
+   "antes": "s v",
+   "despues": "f",
+   "cola": "eces"
+  },
+  {
+   "base": "La Pe",
+   "antes": "sg",
+   "despues": "j",
+   "cola": "a"
+  }
  ]
 }
