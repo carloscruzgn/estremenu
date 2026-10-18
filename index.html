@@ -138,6 +138,8 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 /* Cabecera de la portada: el mapa se acerca de la Península a Extremadura y al noroeste, y se queda en claro detrás del título */
 .heroe { position: relative; overflow: hidden; min-height: clamp(400px, 66vh, 700px); display: flex; flex-direction: column; justify-content: center; padding-block: 48px 40px; isolation: isolate }
 .heroe > .envoltura { position: relative; z-index: 1; width: 100% }
+/* En el teléfono la cabecera no ocupa media pantalla: se queda en la altura que pide el título, con el mapa alrededor */
+@media (max-width: 640px) { .heroe { min-height: clamp(300px, 46svh, 400px); padding-block: 28px 12px } }
 .mapa-portada { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; pointer-events: none;
   -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent), radial-gradient(ellipse 75% 80% at 50% 48%, #000 55%, transparent 100%); -webkit-mask-composite: source-in;
   mask-image: linear-gradient(to bottom, #000 84%, transparent), radial-gradient(ellipse 75% 80% at 50% 48%, #000 55%, transparent 100%); mask-composite: intersect }
@@ -488,7 +490,7 @@ span.fila .tit { color: var(--texto-2) }
     </div>
   </div>
   <div class="envoltura">
-    <p class="lema">Vamos a aprender cómo se habló y se habla en el noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, y en El Rebollar, ya en Salamanca.</p>
+    <p class="lema">Vamos a aprender cómo se habló y se habla en el noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, un habla que sigue por Salamanca arriba en El Rebollar.</p>
     <section class="carrusel" id="carrusel" aria-roledescription="carrusel" aria-label="El taller">
       <div class="pestanas" role="tablist"><button type="button" role="tab" id="pt-taller" aria-controls="dp-taller" aria-selected="true" data-i="0">El taller</button><button type="button" role="tab" id="pt-zona" aria-controls="dp-zona" aria-selected="false" data-i="1">La zona</button><button type="button" role="tab" id="pt-trabajo" aria-controls="dp-trabajo" aria-selected="false" data-i="2">Cómo trabaja</button><button type="button" role="tab" id="pt-web" aria-controls="dp-web" aria-selected="false" data-i="3">Esta web</button></div>
       <div class="ventana"><div class="pista" id="pista">
