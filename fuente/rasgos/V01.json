@@ -45,7 +45,7 @@
   },
   {
    "rotulo": "1956-1979",
-   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, 1976-1981, vía González Salgado 2024 y Alonso Pascua 2023",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, 1976-1981, vía González Salgado 2024 y Alonso Pascua 2023; Iglesias Ovejero 2010, hacia 1976",
    "terminos": {
     "10041": "Velo Nieto 1956, p. 76: la o y la e finales «se cierran corrientemente»",
     "10051": "Velo Nieto 1956, p. 76: la o y la e finales «se cierran corrientemente»",
@@ -68,27 +68,26 @@
     "10084": "Gata: ALEP, finales de los setenta: cierre en grado menor (vía González Salgado 2024, p. 137)",
     "10144": "La Pesga: ALEP, finales de los setenta: cierre en grado menor (vía González Salgado 2024, p. 137)",
     "10216": "Zarza de Granadilla: ALEP, finales de los setenta: cierre en grado menor (vía González Salgado 2024, p. 137)",
-    "37221": "Navasfrías: cierre en el ALEP, 1976-1981 (vía Alonso Pascua 2023, anexo, pp. 33-34)"
+    "37221": "Navasfrías: cierre en el ALEP, 1976-1981 (vía Alonso Pascua 2023, anexo, pp. 33-34). Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
+    "37234": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
+    "37245": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
+    "37269": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
+    "37371": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin"
    }
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "Flores del Manzano 1992; González Salgado 2003 y 2007 (encuestas de 1995-1997); Paniagua 2002; Alcón 2002; Iglesias Ovejero 2010",
+   "fuentes": "Flores del Manzano 1992; González Salgado 2003 y 2007 (encuestas de 1995-1997); Paniagua 2002; Alcón 2002; Portaje 2011",
    "terminos": {
     "10072": "Eljas: cierre casi sistemático, en grado máximo (González Salgado 2003, p. 594)",
     "10089": "Guijo de Galisteo: cierre casi sistemático, en grado máximo (González Salgado 2003, p. 594). Alcón 2002, p. 221: liebri, lumbri, rollu, zapatu, «llegando casi a la exageración»",
     "10050": "Casar de Palomero: frecuencia muy alta (González Salgado 2003, p. 594)",
     "10006": "Ahigal: frecuencia muy alta, en grado intermedio (González Salgado 2003, p. 594). Paniagua 2002, p. 77: lo normal, un cierre medio; en los jóvenes casi no se da; intacto en cucu, tosi",
-    "10150": "Portaje: casos relativamente frecuentes, en grado intermedio (González Salgado 2003, p. 594)",
+    "10150": "Portaje: casos relativamente frecuentes, en grado intermedio (González Salgado 2003, p. 594). Portaje 2011, introducción, p. 24: el cierre de las vocales finales, entre los rasgos que «suelen seguirse mucho todavía»; «Vocablos», pp. 27-29: aciduelu, ahobi, azabuchi, butri",
     "10061": "Ceclavín: casos relativamente frecuentes (González Salgado 2003, p. 594)",
     "10082": "Garrovillas: casos relativamente frecuentes (González Salgado 2003, p. 594)",
     "10053": "Casas de Don Gómez: esporádico, casi siempre en palabras fijas (González Salgado 2007, p. 44)",
-    "10034": "Cabezabellosa: con los pueblos serranos del Jerte, el límite oriental del cierre (Flores del Manzano 1992, p. 128)",
-    "37234": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
-    "37221": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
-    "37245": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
-    "37269": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin",
-    "37371": "Iglesias Ovejero 2010, p. 44: general, también ante -s y -n, burrus, trajun, pecis, quierin"
+    "10034": "Cabezabellosa: con los pueblos serranos del Jerte, el límite oriental del cierre (Flores del Manzano 1992, p. 128)"
    }
   }
  ],

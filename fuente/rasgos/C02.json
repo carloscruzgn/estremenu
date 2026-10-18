@@ -38,7 +38,7 @@
   },
   {
    "rotulo": "1956-1979",
-   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
    "terminos": {
     "10041": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
     "10051": "Velo Nieto 1956, p. 75: la j «como j castellana, relajada»",
@@ -57,12 +57,17 @@
     "10143": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10150": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10189": "Cummins, § 12: «en toda la región, en todas las edades»",
-    "10207": "Cummins, § 12: «en toda la región, en todas las edades»"
+    "10207": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "37234": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37221": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37245": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37269": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
+    "37371": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»"
    }
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Alcón 2002; Iglesias Ovejero 2010",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Alcón 2002",
    "terminos": {
     "10072": "González Salgado 2003, pp. 597-598: aspirada general",
     "10089": "González Salgado 2003, pp. 597-598: aspirada general; Alcón 2002: muhé, navaha, trabaho",
@@ -72,12 +77,7 @@
     "10061": "González Salgado 2003, pp. 597-598: aspirada general",
     "10082": "González Salgado 2003, pp. 597-598: aspirada general; con sonidos intermedios hacia la velar (González Salgado 2003)",
     "10053": "González Salgado 2003, pp. 597-598: aspirada general",
-    "10175": "González Salgado 2003, pp. 597-598: aspirada general",
-    "37234": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
-    "37221": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
-    "37245": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
-    "37269": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»",
-    "37371": "Iglesias Ovejero 2010, p. 45: la jota como [h], «como sucede regularmente en las hablas extremeñas»"
+    "10175": "González Salgado 2003, pp. 597-598: aspirada general"
    }
   }
  ],

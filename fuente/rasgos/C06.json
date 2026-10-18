@@ -45,7 +45,7 @@
   },
   {
    "rotulo": "1956-1979",
-   "fuentes": "Velo Nieto 1956; Cummins 1967-1972",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; Iglesias Ovejero 2010, hacia 1976",
    "terminos": {
     "10041": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
     "10051": "Velo Nieto 1956, pp. 87 y 107: decil, trael, lleval, cabel, ayel, antiel",
@@ -64,21 +64,21 @@
     "10143": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
     "10150": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
     "10189": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
-    "10207": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante"
-   }
-  },
-  {
-   "rotulo": "1992-2011",
-   "fuentes": "Paniagua 2002; Alcón 2002; Ortigo 2002; Iglesias Ovejero 2010; Portaje 2011",
-   "terminos": {
+    "10207": "Cummins, § 9c: en final, «mucha más vitalidad» que ante consonante",
     "37234": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
     "37221": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
     "37245": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
     "37269": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
-    "37371": "Iglesias Ovejero 2010, p. 48: fumaol, matal",
+    "37371": "Iglesias Ovejero 2010, p. 48: fumaol, matal"
+   }
+  },
+  {
+   "rotulo": "1992-2011",
+   "fuentes": "Paniagua 2002; Alcón 2002; Ortigo 2002; Portaje 2011",
+   "terminos": {
     "10006": "Paniagua 2002: aballal, jadel, trael, calol, «en hablantes de todas las edades»",
     "10089": "Alcón 2002 y Ortigo 2002: sabel, bailal, tenel, mejol, mujel",
-    "10150": "Portaje 2011: abril, cerral"
+    "10150": "Portaje 2011, «Vocablos», p. 27: acordal, afechal, agural; p. 42: tiradol"
    }
   }
  ],

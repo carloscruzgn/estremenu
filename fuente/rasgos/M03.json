@@ -53,10 +53,11 @@
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "González Salgado 2003 (encuestas de 1995-1997), mapa 418; Alcón 2002",
+   "fuentes": "González Salgado 2003 (encuestas de 1995-1997), mapa 418; Alcón 2002; Portaje 2011",
    "terminos": {
     "10006": "Ahigal, punto Cc 102: -ino (González Salgado, mapa 418). Paniagua 2002: -inu, -ina el frecuente",
-    "10089": "Alcón 2002: chiquininu, tapaerina, meloninu, perina"
+    "10089": "Alcón 2002: chiquininu, tapaerina, meloninu, perina",
+    "10150": "Portaje 2011, «Vocablos», p. 37: maluquinu; p. 36: jocinu; motes, pp. 86-87: Machinu, Manina, Periquina, Pininu"
    }
   }
  ],

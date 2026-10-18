@@ -24,7 +24,7 @@
  "oleadas": [
   {
    "rotulo": "1956-1979",
-   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía González Salgado 2024",
+   "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía González Salgado 2024; Iglesias Ovejero 2010, hacia 1976",
    "terminos": {
     "10041": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
     "10051": "Velo Nieto 1956, pp. 84-85: matancia, alabancia, quiciás, ericio, palicia",
@@ -41,18 +41,18 @@
     "10089": "Cummins, § 7: alabancia",
     "10053": "Cummins, § 7: mamia",
     "10128": "ALEP: blasfemiar",
-    "10216": "ALEP: blasfemiar"
+    "10216": "ALEP: blasfemiar",
+    "37234": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, «en probable regresión»; p. 39: matancia, en la lista de correcciones del maestro de Robleda",
+    "37221": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, «en probable regresión»; p. 39: matancia, en la lista de correcciones del maestro de Robleda",
+    "37245": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, «en probable regresión»; p. 39: matancia, en la lista de correcciones del maestro de Robleda",
+    "37269": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, «en probable regresión»; p. 39: matancia, en la lista de correcciones del maestro de Robleda",
+    "37371": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, «en probable regresión»; p. 39: matancia, en la lista de correcciones del maestro de Robleda"
    }
   },
   {
    "rotulo": "1992-2011",
-   "fuentes": "Paniagua 2002; Alcón 2002; Iglesias Ovejero 2010",
+   "fuentes": "Paniagua 2002; Alcón 2002",
    "terminos": {
-    "37234": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
-    "37221": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
-    "37245": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
-    "37269": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
-    "37371": "Iglesias Ovejero 2010, p. 44: alabancia, andanciu, matancia, «en probable regresión»",
     "10006": "Paniagua 2002, p. 77: grancia, jeringoncia, panarria, urnia, borniu, esturniu",
     "10089": "Alcón 2002, p. 221: alabancia, armación, morrial"
    }
