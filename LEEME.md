@@ -14,6 +14,8 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `portada.json`: el mapa de la portada —España y Portugal, Extremadura, el área del taller y los términos—, en kilómetros y simplificado, para la animación del título.
   - `signos.json`: los signos de Cummins, de la hoja GEN-06, para el desplegable de la transcripción.
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
+  - `diccionario.json`: el diccionario, de `fuente/diccionario.mjs` (ver «Poner al día el diccionario»): cada entrada con su tarjeta ya compuesta como en el diccionario impreso, las formas para buscar, las fuentes, las abreviaturas y las palabras del taller.
+  - `claves.json`: las claves del formulario del diccionario, solo en resumen SHA-256, copia de `fuente/claves.json`.
 - **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`, en `autores/` el retrato o la portada de cada página de autor, y en `fuentes/` la Charis SIL recortada a los signos de la fonética, con su licencia OFL.
 - **fuente/** — lo que se escribe a mano para cada rasgo y el programa que prepara los datos:
   - `rasgos/<código>.json`: el mismo fichero del rasgo que usa el generador de reels (reel-rasgo.zip). Un rasgo nuevo sirve para el reel y para la web. V01 vino del generador; C06, V07, C01, C02 y C03, y en una segunda tanda C08, C09, C11, C16, C20, C27, M03, M04, M11, M14, M23 y M27, se escribieron aquí el 18/10/2026, y el generador los toma de aquí cuando se haga su reel. Al lado, la hoja de criterios de cada tanda (`criterios_…md`), con las decisiones dudosas y su alternativa.
@@ -24,6 +26,8 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `signos-cummins.json`: los signos de Cummins, con el texto de GEN-06.
   - `autores.json`: las páginas «Sobre el autor» de los textos: una por autor o fuente (Gabriel y Galán; Cummins, con un apartado por informante), con los textos que la enlazan, sacadas de la sección 1 de la guía de clase de cada texto. Bloques `h`, `p`, `cita`, `informante` y `fuentes`; el `*título*` va en cursiva. `corto` y `resumen`, para la tarjeta de cada texto, bajo la fecha de lectura. Para la foto o la portada, `imagen` con `src`, `ancho`, `alto`, `alt` y `pie`, y la imagen en `img/autores/`. Un texto nuevo de un autor que ya tiene página se añade a sus `textos` y, si es de Cummins, con su `informante`.
   - `comarcas.json`: las comarcas REDEX y el área del taller, la del generador de reels.
+  - `diccionario.mjs`: prepara `datos/diccionario.json` desde el espejo de la hoja DICCIONARIO-NOROESTE. La entrada es la del impreso desde el 18/10/2026, sin Observaciones ni nada marcado como dudoso. Siglas y referencias, de la pestaña FUENTES del espejo; si no la trae, de `diccionario-siglas.json`, y las que falten se forman por regla y se avisan. Abreviaturas, de `diccionario-abreviaturas.json`.
+  - `claves.json`: las claves del formulario, en resumen SHA-256 con su sal. Las claves en claro no están en el repositorio: las tiene Carlos.
 
 ## Añadir un texto
 
@@ -35,6 +39,14 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
 1. Copiar su fichero de rasgo a `fuente/rasgos/` y su página de los apuntes a `fuente/apuntes/`.
 2. Marcar en `fuente/catalogo.json` `"mapa": true` y `"pagina": true`.
 3. En `fuente/`: `npm install` la primera vez, y después `node construir.mjs`.
+
+## Poner al día el diccionario
+
+1. Traer al contenedor la carpeta DICCIONARIO-NOROESTE-espejo (Claude/Fichas/04-DICCIONARIO) y mirar en _ESPEJO.txt que sea posterior a la última modificación de la hoja.
+2. En `fuente/`: `node diccionario.mjs <carpeta del espejo>`. Lee los avisos: siglas formadas por regla, lemas sin testimonios.
+3. Publicar como siempre. La web no lee la hoja: se pone al día cuando se vuelve a correr.
+
+El formulario «Envía una palabra» manda a Formspree (formulario mqpejala, cuenta ccruzg04@educarex.es), que lo reenvía por correo. La clave se comprueba en la página contra `datos/claves.json`; Formspree no la comprueba. En el artifact de claude.ai el envío no sale, porque su página no deja conectar con otros sitios: se prueba en estremenu.pages.dev.
 
 ## Colores
 
