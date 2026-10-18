@@ -538,7 +538,7 @@ span.fila .tit { color: var(--texto-2) }
 .cabeza .cod { font-weight: 900; color: var(--naranja); font-size: 14px; letter-spacing: .08em; margin-top: 18px }
 .cabeza h1 { font-weight: 900; font-size: clamp(28px, 3.2vw, 38px); line-height: 1.05; letter-spacing: -.02em; margin-top: 6px }
 .ejemplos { height: 64px; position: relative; margin-top: 18px; font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -.02em }
-.ejemplo { position: absolute; left: 0; top: 0; opacity: 0; transition: opacity .35s }
+.ejemplo { position: absolute; left: 0; top: 0; opacity: 0; transition: opacity .35s; white-space: nowrap }
 .ejemplo.ve { opacity: 1 }
 .ejemplo .cambio .viejo { white-space: nowrap; text-align: left }
 .lienzo canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab }
@@ -1332,7 +1332,19 @@ function pintarCabeza(codigo, R, pagina) {
     v.style.width = (sinMov ? w1 : w0) + 'em'; void v.offsetWidth;
     if (!sinMov) { v.style.transition = 'width .45s cubic-bezier(.4,0,.2,1)'; c._t = setTimeout(() => { v.style.width = w1 + 'em'; }, 800); }
   };
+  // Un ejemplo largo no cabe en un teléfono estrecho (unaʰ cuantaʰ de niñaʰ en 320 px): se achica la letra hasta que quepa, contando la palabra que entra
+  const encaja = () => {
+    const W = $('r-ejemplos').clientWidth;
+    document.querySelectorAll('.ejemplo').forEach(el => {
+      el.style.fontSize = '';
+      const v = el.querySelector('.cambio .viejo'), n = el.querySelector('.cambio .nuevo');
+      if (v) v.style.width = '';
+      const w = el.scrollWidth + Math.max(0, (n ? n.getBoundingClientRect().width : 0) - (v ? v.getBoundingClientRect().width : 0));
+      if (W && w > W) el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) * W / w * 0.97) + 'px';
+    });
+  };
   const muestra = () => {
+    encaja();
     document.querySelectorAll('.ejemplo').forEach((el, j) => el.classList.toggle('ve', j === i));
     const c = document.querySelector('#ej' + i + ' .cambio');
     if (c) { ajustaHueco(c); c.classList.remove('anima', 'fijo'); void c.offsetWidth; c.classList.add(sinMov ? 'fijo' : 'anima'); c.style.setProperty('--d', 0); }

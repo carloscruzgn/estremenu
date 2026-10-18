@@ -29,7 +29,7 @@
     "10041": "Caminomorisco, por Cambroncino: h- predominante; jaze, jwegu",
     "10061": "Ceclavín: h- predominante; jigu, jumu",
     "10218": "Zarza la Mayor: h- predominante; jigu",
-    "10082": "Garrovillas: h- predominante; jyerru en habla enfática",
+    "10082": "Garrovillas: h- predominante; jyerru en habla enfática. Marcos de Sande 1947, pp. 98-99 (C): jigu, jacha, jiguera, jadena, janega",
     "10050": "Casar de Palomero: h- rara; jambre en «tengo hambre»",
     "10187": "Torre de Don Miguel: h- rara; jaba",
     "10088": "Guijo de Coria: jadel"
@@ -39,15 +39,15 @@
    "rotulo": "1956-1979",
    "fuentes": "Velo Nieto 1956; Cummins 1967-1972; ALEP, finales de los setenta, vía Alonso Pascua 2023; Iglesias Ovejero 2010, hacia 1976",
    "terminos": {
-    "10041": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
-    "10051": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
+    "10041": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca». En Caminomorisco, falar, con f-, a un solo anciano (p. 117)",
+    "10051": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca». En La Huetre, huendu en la abuela y los de su edad, fuendo en los tíos y siendo en quien tiene estudios (Martín 2023, pp. 63-78 y 220, fuente C)",
     "10108": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
     "10135": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
     "10146": "Velo Nieto 1956, pp. 91-92: «lo raro, encontrar casos donde la aspiración no se produzca»",
     "10040": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
     "10053": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
     "10059": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
-    "10067": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
+    "10067": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas. C 1: aspira en jorca; azi, echu, sin aspiración (p. 168)",
     "10088": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
     "10089": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
     "10101": "Cummins, § 8a: en viejos y medianos, en formas anquilosadas",
@@ -144,7 +144,10 @@
  "extension": {
   "probable": "El ALPI lo da en casi toda Extremadura (vía Montero Curiel 2006, p. 14).",
   "comarcas": {
-   "rebollar": ""
+   "rebollar": "",
+   "ambroz": "Aspiración en las tres comarcas de Gredos, más intensa en la sierra (Flores del Manzano 1992, p. 128).",
+   "jerte": "Aspiración en las tres comarcas de Gredos, más intensa en la sierra (Flores del Manzano 1992, p. 128).",
+   "vera": "Aspiración en las tres comarcas de Gredos, más intensa en la sierra (Flores del Manzano 1992, p. 128)."
   }
  },
  "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"

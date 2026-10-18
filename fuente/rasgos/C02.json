@@ -48,7 +48,7 @@
     "10040": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10053": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10059": "Cummins, § 12: «en toda la región, en todas las edades»",
-    "10067": "Cummins, § 12: «en toda la región, en todas las edades»",
+    "10067": "Cummins, § 12: «en toda la región, en todas las edades». C 1: todas las jotas en [h]; la única [x] sale de s + g, en majrandi (p. 168)",
     "10088": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10089": "Cummins, § 12: «en toda la región, en todas las edades»",
     "10101": "Cummins, § 12: «en toda la región, en todas las edades»",
@@ -69,7 +69,6 @@
    "rotulo": "1992-2011",
    "fuentes": "González Salgado 2003 (encuestas de 1995-1997); Alcón 2002",
    "terminos": {
-    "10072": "González Salgado 2003, pp. 597-598: aspirada general",
     "10089": "González Salgado 2003, pp. 597-598: aspirada general; Alcón 2002: muhé, navaha, trabaho",
     "10050": "González Salgado 2003, pp. 597-598: aspirada general; con sonidos intermedios hacia la velar (González Salgado 2003)",
     "10006": "González Salgado 2003, pp. 597-598: aspirada general",
@@ -122,12 +121,14 @@
   ],
   "terminos": [],
   "excluir": [
-   "06028"
+   "06028",
+   "10072"
   ]
  },
  "_probable": "Fuerte en el recuadro de RC02: toda Extremadura, por Montero Curiel 2006, p. 44, y González Salgado 2003, pp. 597-598",
  "nunca": {
-  "06028": "Campanario: la única localidad extremeña con jota velar, González Salgado 2003, pp. 597-598"
+  "06028": "Campanario: la única localidad extremeña con jota velar, González Salgado 2003, pp. 597-598",
+  "10072": "Eljas: velar, junto a la palatal antigua (González Salgado 2003, p. 598, n. 17)"
  },
  "llamada": {
   "termino": "06028",

@@ -33,7 +33,7 @@
     "10127": "Montehermoso: «prácticamente siempre» (Krüger 1914, § 140, p. 115); jambri, mujeri, nochi, arbu (el informante vivía en Guijo de Galisteo)",
     "10061": "Ceclavín: «prácticamente siempre» (Krüger 1914, § 140, p. 115); jambri, dizi, nochi",
     "10218": "Zarza la Mayor: «prácticamente siempre» (Krüger 1914, § 140, p. 115); nochi",
-    "10082": "Garrovillas: «prácticamente siempre» (Krüger 1914, § 140, p. 115); jambri, nochi",
+    "10082": "Garrovillas: «prácticamente siempre» (Krüger 1914, § 140, p. 115); jambri, nochi. Marcos de Sande 1947, p. 98 (C): las finales o y e «las convierten en u e i», malu, verdi",
     "10216": "Granadilla: -u más que -o e -i más que -e (Krüger 1914, p. 116); nochi, dyerun. Zarza de Granadilla, con -e, -o casi sin excepción",
     "10041": "Caminomorisco, por Cambroncino: prefiere -u, con -e e -i mezcladas (Krüger 1914, p. 116); jambri, nochi",
     "10211": "Villanueva de la Sierra: -i, -u en más casos que -e, -o (Krüger 1914, p. 116); jambri, dizi, binun",
@@ -95,7 +95,7 @@
   "rotulo": {
    "k": "Y fuera del área",
    "h": "También allí",
-   "s": "Alcántara, la sierra del Jerte y El Sahugo"
+   "s": "Alcántara, la sierra del Jerte y Los Agadones"
   },
   "terminos": {
    "10008": "Alcántara: «prácticamente siempre» (Krüger 1914, § 140, p. 115)",
@@ -106,7 +106,9 @@
    "10054": "Casas del Castañar: Flores del Manzano 1992, p. 128: el cierre es «característica del habla serrana del Valle del Jerte»",
    "10154": "Rebollar: Flores del Manzano 1992, p. 128: el cierre es «característica del habla serrana del Valle del Jerte»",
    "10036": "Cabrero: Flores del Manzano 1992, p. 128: el cierre es «característica del habla serrana del Valle del Jerte»",
-   "10025": "Barrado: Flores del Manzano 1992, p. 128: el cierre es «característica del habla serrana del Valle del Jerte»"
+   "10025": "Barrado: Flores del Manzano 1992, p. 128: el cierre es «característica del habla serrana del Valle del Jerte»",
+   "37002": "Agallas: cierre (COSER, sin fecha, vía Alonso Pascua 2023)",
+   "37306": "Serradilla del Arroyo: cierre (COSER, sin fecha, vía Alonso Pascua 2023)"
   },
   "_nota": "Los serranos del Jerte, por Flores del Manzano 1992, p. 128. Madroñera no entra: ni la ficha V01 ni su cola traen cierre allí"
  },
@@ -167,8 +169,8 @@
    {
     "texto": "La Vera",
     "comarca": "vera",
-    "dx": 1.0,
-    "dy": -1.4,
+    "dx": 1.8,
+    "dy": -6.0,
     "clase": "small"
    },
    {
@@ -183,7 +185,8 @@
  "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · ALEP · Flores del Manzano 1992 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller",
  "extension": {
   "comarcas": {
-   "tajosalor": "El ALPI lo recogió en la comarca (vía Montero Curiel 2006, p. 27)."
+   "tajosalor": "El ALPI lo recogió en la comarca (vía Montero Curiel 2006, p. 27).",
+   "rebollar": "Cierre general en sus cinco pueblos (Iglesias Ovejero 2010, p. 44); en El Payo, también en el COSER (sin fecha, vía Alonso Pascua 2023)."
   }
  },
  "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"

@@ -36,7 +36,7 @@
     "10084": "Gata: grupo C, con pocos ejemplos",
     "10127": "Montehermoso: grupo C; dojombri (el informante vivía en Guijo de Galisteo)",
     "10218": "Zarza la Mayor: grupo C",
-    "10082": "Garrovillas: grupo C",
+    "10082": "Garrovillas: grupo C. Marcos de Sande 1947, pp. 98-99 (C): otruh, ehte",
     "10211": "Villanueva de la Sierra: maehtro, ehcurril, Bierhenke 1932, vía González Salgado 2007; Krüger la daba conservada"
    }
   },
@@ -52,7 +52,7 @@
     "10040": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
     "10053": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
     "10059": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
-    "10067": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
+    "10067": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s». C 1: aspiración ante consonante; ante pausa, resto de aspiración en [atráʰ] y [lo kéʰ] (p. 168)",
     "10088": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
     "10089": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
     "10101": "Cummins, §§ 13a-13g: «casi no se encuentran ya casos de la conservación de la s»",
@@ -72,14 +72,14 @@
     "10050": "Casar de Palomero: general",
     "10006": "Ahigal: general; González Salgado 2003; Paniagua 2002, p. 78",
     "10150": "Portaje: general",
-    "10061": "Ceclavín: general; aspira y repone la -s en pausa, Montero Curiel 2006, p. 42",
+    "10061": "Ceclavín: general",
     "10082": "Garrovillas: general",
     "10053": "Casas de Don Gómez: general",
     "10175": "Serradilla: general",
     "10045": "Cañaveral: Montero Curiel 2006, p. 42, sin fecha de recogida",
     "10099": "Holguera: Montero Curiel 2006, p. 42, sin fecha de recogida",
     "10155": "Riolobos: Montero Curiel 2006, p. 42, sin fecha de recogida",
-    "10152": "Pozuelo de Zarzón: aspira y repone la -s en pausa, Montero Curiel 2006, p. 42"
+    "10152": "Pozuelo de Zarzón: aspira, Montero Curiel 2006, p. 42"
    }
   }
  ],
@@ -152,7 +152,7 @@
  "extension": {
   "probable": "En toda Extremadura (González Salgado 2003, pp. 598-602; Montero Curiel 2006, pp. 41-42).",
   "comarcas": {
-   "rebollar": "Esporádica, como en doháreas, por influjo del sur (Iglesias Ovejero 2010, p. 49)."
+   "rebollar": "Esporádica, como en doháreas, por influjo del sur (Iglesias Ovejero 2010, p. 49). El plural lleva -s: burrus, jorcas (p. 52)."
   }
  },
  "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
