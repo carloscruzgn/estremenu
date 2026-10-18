@@ -10,6 +10,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
   - `rasgos.json`: la lista de los treinta y un rasgos de los apuntes del alumnado, con cuáles tienen mapa.
   - `rasgos/<código>.json`: la página del rasgo en los apuntes y, si tiene mapa, el fichero del rasgo del generador de reels y la clase de cada término.
   - `textos.json`: los textos leídos en el taller.
+  - `portada.json`: el mapa de la portada —España y Portugal, Extremadura, el área del taller y los términos—, en kilómetros y simplificado, para la animación del título.
   - `signos.json`: los signos de Cummins, de la hoja GEN-06, para el desplegable de la transcripción.
   - `apuntes.json`: los apartados de los apuntes del alumnado, de «Antes de empezar» al 7, con el sitio de cada mapa.
 - **img/** — el logo del centro, todo en blanco para la banda naranja de arriba; en `mapas/` los mapas de los apuntes en WebP de 1600 px, sacados de los PNG de la carpeta Mapas de Drive, en `textos/` las ilustraciones de los textos, `TEX-NN-<qué>.webp`, y en `fuentes/` la Charis SIL recortada a los signos de la fonética, con su licencia OFL.
