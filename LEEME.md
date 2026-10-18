@@ -36,3 +36,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabaj
 ## Colores
 
 Los del cuerpo del reel: fondo #132e0d, área #85be6d, contacto #3d6a33, recogido #ff914d, en algunos pueblos #b84c1e, probable #ffc4a0. En las fechas, lo recogido antes de la fecha elegida va en #a95f33.
+
+## Vista en el navegador
+
+Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `mkdir _site && cp -r index.html datos img _headers _site/`; directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. `_headers` manda a los buscadores no indexarla (`X-Robots-Tag: noindex, nofollow`); se quita al abrirla.
