@@ -1046,5 +1046,92 @@
    "pie": "Una de las zancaburras que fotografió Cummins (lám. 24, p. 254). El hombre baja el cubo tirando de la vara; al soltarla, la piedra del otro extremo lo sube lleno."
   }
  ],
- "_fuente": "Texto marcado de la guía de clase (TEX-03, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
+ "_fuente": "Texto marcado de la guía de clase (TEX-03, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app",
+ "detalle": {
+  "_fuente": "Guía de clase del texto, secciones de los rasgos destacados y de los demás rasgos, resumida a mano el 18/10/2026: sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
+  "resumen": "Lo que hace C 1 con cada uno, y los demás rasgos de la conversación",
+  "entradilla": "C 1, el pastor de Coria que habla en «La zancaburra», tiene en la boca tres haches de origen distinto: la de una f latina, la de la jota y la de la s. Para el oído son el mismo soplo, y son los tres rasgos destacados del texto. Lo general de cada uno, con su mapa, está en su página.",
+  "rasgos": [
+   {
+    "codigo": "C01",
+    "parrafos": [
+     "Una sola palabra, que sale tres veces: *jorca*, de *furca*, el palo en horquilla sobre el que bascula la zancaburra. *Ombri* no la lleva nunca, porque *hombre* no tenía f en latín.",
+     "Hay dos palabras que la llevaban en el habla de la comarca y en su boca no: *azi* ‘hace’ y *echu* ‘hecho’. Otros informantes de Coria le dieron a Cummins *jadel*, *jechu* o *jiguera*. C 1 la guarda en el nombre de una pieza del campo, que se dice siempre igual, y la pierde en un verbo de todos los días.",
+     "En 1912, en Pinofranqueado, un campesino le dijo a Krüger *juba* por *uva*. Krüger pensaba que quizá el hombre sabía que su jota era de pueblo y la puso donde no tocaba."
+    ],
+    "pregunta": "¿La horca de aventar y la de la zancaburra se llamaban igual? ¿Quién dice *jorca* pero *azel*, como C 1?"
+   },
+   {
+    "codigo": "C02",
+    "parrafos": [
+     "Todas las jotas de C 1 son un soplo de garganta: *jiral* {[hirál]}, *pabaju*, *ojeʰtu*, *cujel*, *mejol*. La jota de Madrid, la que rasca, solo le sale una vez, en *majrandi* {[maxrándi]} ‘más grande’, y ahí no hay jota: es la s de *más* fundida con la g de *grande*.",
+     "En la transcripción de Cummins, la {[h]} de *jiral* es la misma letra que la de *jorca* y la de *eʰ otra*, {[ehótra]}: tres orígenes y un solo sonido. Cummins pensaba que eso ayuda a que la aspiración de *jorca* no se pierda. La jota, que está viva, sostiene a la que se va.",
+     "Krüger notó en 1912 que la misma persona rasca más la jota cuando se enfada y la suaviza cuando habla tranquila."
+    ],
+    "pregunta": "¿Conocéis a alguien de aquí que diga la jota de Madrid? ¿La rascan los nietos?"
+   },
+   {
+    "codigo": "C03",
+    "parrafos": [
+     "Es el rasgo que más se ve en el texto, porque está en casi cada línea. Delante de consonante, la s es un soplo: *eʰtá*, *viʰtu*, *miʰma*, *torviʰca*, y entre palabras, *maʰ luegu*, *na maʰ tieni*.",
+     "Delante de vocal, depende: soplo débil en *pueʰ el agua*, soplo fuerte en *eʰ otra* y la s entera en *mas echu*. Al final de frase suele perderse, pero a C 1 le queda un resto de soplo en *atráʰ* y *lo queʰ*. Delante de otra s desaparece: *pue se le notaba*.",
+     "La z y la x hacen lo mismo que la s: *veʰ* ‘vez’, *aproʰsimadamenti*. Entre vocales, en cambio, la s no se toca: *pesu*, *cosa*, *usa*.",
+     "Krüger lo vio cambiar en la misma boca: en Villa del Campo, en 1912, un hombre decía *espeju* cuando hablaba despacio y *eʰpeju* en la conversación."
+    ],
+    "pregunta": "En *ojeʰtu* ‘objeto’ hay un soplo antes de la t que no viene de ninguna s. ¿De dónde puede salir?"
+   }
+  ],
+  "otros": [
+   {
+    "codigo": "V01",
+    "texto": "Casi todo: *palu*, *charcu*, *pozu*, *tomillu*, *poni*, *ombri*, *lumbri*, y el pronombre, *se li poni*. Pero *se le notaba*, sin cerrar."
+   },
+   {
+    "codigo": "C06",
+    "texto": "*sacal*, *jiral*, *subil*, *señol*, *mejol*. Con el pronombre detrás, dos soluciones en el mismo hombre: *vaziala* y *comelu*, con la r perdida, y *enzendel·la*, con la l doble."
+   },
+   {
+    "codigo": "C05",
+    "titulo": "La r y la l al final de sílaba",
+    "texto": "*cuerga* ‘cuelga’, y al revés, en grupo, *clu* ‘cruz’."
+   },
+   {
+    "codigo": "C11",
+    "texto": "*llama*, *allí*, *tomillu*, con una ll distinta de la y. Esa y, en *ya*, Cummins la oye rehilada, {[ža]}, como en Argentina. ¿Se oye todavía?"
+   },
+   {
+    "codigo": "C17",
+    "titulo": "La d y la z del final",
+    "texto": "*verdá*, *virtú*, *clu*."
+   },
+   {
+    "codigo": "C07",
+    "texto": "*ganau*. Débil, pero entera, en *modu* y *mediu*."
+   },
+   {
+    "codigo": "C18",
+    "texto": "*majrandi* ‘más grande’."
+   },
+   {
+    "codigo": "M20",
+    "titulo": "El de que se cae",
+    "texto": "*el tomillu el señol* ‘el tomillo del señor’."
+   },
+   {
+    "codigo": "M23",
+    "texto": "*velaquí eʰti largu*, *velaí*, *velaquí lai majrandi*."
+   },
+   {
+    "codigo": "M25",
+    "titulo": "Pa- delante del adverbio",
+    "texto": "*parriba*, *pabaju*."
+   },
+   {
+    "codigo": null,
+    "titulo": "Lo que no sale",
+    "texto": "La d antigua (C09): C 1 dice *azi* y *dizin*, con la z de hoy."
+   }
+  ],
+  "fuentes": "Datos de Cummins 1974 y Krüger 1914."
+ }
 }

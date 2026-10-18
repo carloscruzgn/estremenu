@@ -503,6 +503,36 @@ span.fila .tit { color: var(--texto-2) }
 .tarjeta-autor img { width: 56px; height: 72px; object-fit: cover; object-position: center top; border-radius: 5px; display: block }
 .tarjeta-autor b { display: block; font-weight: 800; font-size: 16px; line-height: 1.3 }
 .tarjeta-autor .sub { display: block; font-size: 14px; color: var(--texto-3); margin-top: 3px }
+/* Tarjeta del panel de rasgos destacados a «Los rasgos en detalle» del texto */
+.panel .tarjeta-detalle { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; margin-top: 18px; padding: 12px 14px 12px 12px; border-radius: 10px; background: var(--fondo-2); border: 1px solid var(--linea); text-decoration: none; color: var(--texto) }
+.panel .tarjeta-detalle:hover, .panel .tarjeta-detalle:focus-visible { background: var(--fondo-3) }
+.tarjeta-detalle:hover b { color: var(--naranja) }
+.tarjeta-detalle .sws { display: grid; gap: 3px }
+.tarjeta-detalle .sws i { display: block; width: 22px; height: 7px; border-radius: 2px; background: var(--c) }
+.tarjeta-detalle b { display: block; font-weight: 800; font-size: 15px; line-height: 1.3 }
+.tarjeta-detalle .sub { display: block; font-size: 13px; line-height: 1.4; color: var(--texto-3); margin-top: 3px }
+.tarjeta-detalle .ir, .tarjeta-autor .ir { color: var(--naranja); font-weight: 800 }
+/* Los rasgos en detalle de un texto: un apartado por rasgo destacado y otro con los demás */
+.detalle .det-rasgo { border-top: 3px solid var(--c); padding-top: 4px; margin-top: 38px }
+.detalle .det-rasgo h3 { margin: 14px 0 14px; color: var(--texto) }
+.detalle .det-rasgo h3 a { color: inherit; text-decoration: none }
+.detalle .det-rasgo h3 a:hover { color: var(--c) }
+.detalle h3 .cod { color: var(--c); margin-right: 10px }
+.detalle .ipa { font-family: 'Charis fonetica', 'Charis SIL', 'Gentium Plus', 'Noto Serif', serif; font-size: 1.08em; font-style: normal }
+.detalle a.cod-en { color: var(--naranja); font-weight: 700; text-decoration: none }
+.detalle a.cod-en:hover { text-decoration: underline }
+.detalle .det-preg { background: var(--fondo-2); border-radius: 8px; padding: 12px 16px; font-size: 17px; color: var(--texto) }
+.detalle .det-preg span { display: block; font-weight: 800; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--verde); margin-bottom: 4px }
+.detalle .al-rasgo { display: inline-block; font-weight: 800; font-size: 14px; color: var(--c); text-decoration: none }
+.detalle .al-rasgo:hover { text-decoration: underline }
+.detalle .det-otros-tit { margin-top: 46px; padding-top: 18px; border-top: 3px solid var(--linea); color: var(--texto) }
+.detalle ul.det-otros { list-style: none; padding: 0 }
+.detalle ul.det-otros li { display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: 12px; padding: 12px 0; margin: 0; border-bottom: 1px solid var(--linea); font-size: 17px; line-height: 1.6 }
+.detalle ul.det-otros .cod { font-weight: 900; font-size: 14px; color: var(--texto-3); padding-top: .2em; font-variant-numeric: tabular-nums }
+.detalle ul.det-otros a.cod { color: var(--naranja); text-decoration: none }
+.detalle ul.det-otros .tit { display: block; font-weight: 800; color: var(--texto) }
+.detalle ul.det-otros a.tit { text-decoration: none }
+.detalle ul.det-otros a.tit:hover { color: var(--naranja) }
 .tarjeta-autor .ir { font-weight: 900; font-size: 20px; color: var(--naranja) }
 .apartado .boton { display: inline-block; margin: 8px 0 20px; padding: 12px 18px; border-radius: 6px; background: var(--naranja); color: var(--fondo); font-weight: 800; text-decoration: none }
 .pasos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--linea); max-width: 100% !important }
@@ -678,6 +708,12 @@ span.fila .tit { color: var(--texto-2) }
 <section id="v-autor" class="vista" hidden>
   <div class="envoltura">
     <article class="apartado" id="autor"></article>
+  </div>
+</section>
+
+<section id="v-detalle" class="vista" hidden>
+  <div class="envoltura">
+    <article class="apartado detalle" id="detalle"></article>
   </div>
 </section>
 
@@ -886,15 +922,18 @@ async function ir() {
   const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
   // #autor-cummins, o #autor-cummins-gc1 para ir a un informante
   const autor = AU && h.startsWith('autor-') && AU.autores.find(x => h === 'autor-' + x.id || h.startsWith('autor-' + x.id + '-'));
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : autor ? 'autor' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #TEX-02-rasgos: los rasgos del texto en detalle
+  const detalle = TX && h.endsWith('-rasgos') && TX.find(t => h === t.codigo + '-rasgos' && t.detalle);
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor') && a.dataset.sec === 'textos'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
   if (apartado) pintarApartado(apartado);
   if (texto) pintarTexto(texto);
+  if (detalle) pintarDetalle(detalle);
   if (autor) pintarAutor(autor, h.slice(('autor-' + autor.id).length + 1));
   if (rasgo) await abrirRasgo(rasgo);
   if (sec === 'encuestas') await abrirEncuestas();
@@ -1080,7 +1119,7 @@ function pintarTexto(t) {
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
-    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}</aside>
+    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}${t.detalle ? `<a class="tarjeta-detalle" href="#${t.codigo}-rasgos"><span class="sws" aria-hidden="true">${t.rasgos.map(c => `<i style="--c:${col[c]}"></i>`).join('')}</span><span><b>Consulta en detalle los rasgos que aparecen</b><span class="sub">${esc(t.detalle.resumen)}</span></span><span class="ir" aria-hidden="true">→</span></a>` : ''}</aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
@@ -1096,6 +1135,32 @@ function pintarTexto(t) {
     a.addEventListener('pointerenter', () => foco(a.dataset.foco)); a.addEventListener('pointerleave', () => foco(null));
     a.addEventListener('focus', () => foco(a.dataset.foco)); a.addEventListener('blur', () => foco(null));
   });
+}
+
+// Los rasgos de un texto en detalle (#TEX-NN-rasgos): sale del campo detalle de fuente/textos/TEX-NN.json, resumen a mano de la guía de clase.
+// *palabra* en cursiva, {[fonética]} en la letra de la fonética, y los códigos de rasgo con página, enlazados.
+function pintarDetalle(t) {
+  const conPag = c => CAT && CAT.rasgos.some(r => r.codigo === c && (r.mapa || r.pagina));
+  const corto = c => tituloR(c).split(':')[0];
+  const fmt = s => esc(s).replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/\{([^}]+)\}/g, '<span class="ipa">$1</span>')
+    .replace(/\b([VCMP]\d{2})\b/g, (m, c) => conPag(c) ? `<a class="cod-en" href="#${c}">${c}</a>` : m);
+  const d = t.detalle;
+  const rasgos = d.rasgos.map((r, k) => `<section class="det-rasgo" style="--c:${COLORES_R[k]}">
+      <h3><a href="#${r.codigo}"><span class="cod">${r.codigo}</span>${esc(corto(r.codigo))}</a></h3>
+      ${r.parrafos.map(p => `<p>${fmt(p)}</p>`).join('')}
+      ${r.pregunta ? `<p class="det-preg"><span>Para hablar en clase</span>${fmt(r.pregunta)}</p>` : ''}
+      <a class="al-rasgo" href="#${r.codigo}">Qué es, de dónde viene y su mapa, en la página de ${r.codigo} →</a></section>`).join('');
+  const otros = d.otros.map(o => {
+    const pag = o.codigo && conPag(o.codigo), tit = o.titulo || corto(o.codigo);
+    return `<li>${pag ? `<a class="cod" href="#${o.codigo}">${o.codigo}</a>` : `<span class="cod">${o.codigo || ''}</span>`}<div>${pag ? `<a class="tit" href="#${o.codigo}">${esc(tit)}</a>` : `<span class="tit">${esc(tit)}</span>`}${fmt(o.texto)}</div></li>`;
+  }).join('');
+  $('detalle').innerHTML = `<a class="volver" href="#${t.codigo}">← «${esc(t.titulo)}»</a>
+    <div class="antetitulo">Los rasgos en detalle</div>
+    <h2>Los rasgos de «${esc(t.titulo)}»</h2><p class="entradilla-autor">${fmt(d.entradilla)}</p>
+    ${rasgos}
+    <h3 class="det-otros-tit">Otros rasgos</h3><ul class="det-otros">${otros}</ul>
+    <p class="fuentes">${fmt(d.fuentes)} Las referencias completas, en la <a href="#apuntes-8">bibliografía</a>.</p>
+    <nav class="pasos" aria-label="Volver al texto"><a href="#${t.codigo}"><span>Volver al texto</span><b>«${esc(t.titulo)}»</b></a></nav>`;
 }
 
 // Los signos de Cummins (GEN-06), en el desplegable de la transcripción

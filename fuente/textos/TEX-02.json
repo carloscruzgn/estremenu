@@ -960,5 +960,95 @@
    }
   ]
  },
- "_fuente": "Texto marcado de la guía de clase (TEX-02, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
+ "_fuente": "Texto marcado de la guía de clase (TEX-02, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app",
+ "detalle": {
+  "_fuente": "Guía de clase del texto, secciones de los rasgos destacados y de los demás rasgos, resumida a mano el 18/10/2026: sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
+  "resumen": "Lo que hace GC 1 con cada uno, y los demás rasgos de la conversación",
+  "entradilla": "Lo que hace GC 1, el labriego de Guijo de Coria que habla en «La matanza», con sus tres rasgos destacados, y los demás que se oyen en la conversación. Lo general de cada rasgo, con su mapa, está en su página.",
+  "rasgos": [
+   {
+    "codigo": "V01",
+    "parrafos": [
+     "GC 1 cierra casi todo: *tamañu*, *terrenu*, *cuchillu*, *tozinu*, *fuegu*, *sequitu*; *clasi*, *disiembri*, *entonzi*, *vali*. También delante de -n y de -s: *cojin*, *tienin*, *llamamuʰ*, *matamuʰ*.",
+     "Lo que no cierra tiene su orden. Las palabras pequeñas sin acento que se apoyan en la siguiente van siempre con e y o: *se matan*, *le penetra*, *lo conserva*. Si el pronombre va pegado detrás del verbo, en cambio, cierra: *matalsi*, *echali*. Solo se le escapan dos verbos, *mueren* y *quede*.",
+     "Fíjate en los plurales: *otraʰ clasi*, *laʰ azeituna*, *unuʰ manoju jranditu*. La última vocal es la misma en singular y en plural, y lo que dice que son varios es la s aspirada de la primera palabra.",
+     "Krüger puso Guijo de Coria en 1912 entre los pueblos que cerraban «prácticamente siempre». GC 1 tenía entonces entre trece y dieciocho años, y sesenta años después lo seguía haciendo."
+    ],
+    "pregunta": "¿Se dice en casa *se li poni* o *se le pone*? ¿Y *laʰ azeituna*, con el plural solo en la primera palabra?"
+   },
+   {
+    "codigo": "C06",
+    "parrafos": [
+     "GC 1 dice *por* cinco veces, y de cuatro maneras. Delante de consonante, en *por cuandu* y *por disiembri*, con un sonido a medio camino entre la l y la r, que Cummins escribe {[poṙ]}. Delante de vocal, en *por entonzi*, con la r entera. En la pausa, *pol*. Y delante de la l del artículo, sin nada: *po la garganta*.",
+     "Krüger distinguió tres grados: la r, la l y la pérdida. GC 1 los tiene todos, y uno más, en una sola conversación.",
+     "Con el pronombre detrás, la r se pierde y queda una l simple: *echali* ‘echarle’. Es la misma solución que Krüger anotó en el pueblo en 1912, *jadelu* ‘hacerlo’."
+    ],
+    "pregunta": "¿Decís *pol* o *por*? Con el pronombre, ¿*echali*, *echalli* o *echal·li*?"
+   },
+   {
+    "codigo": "V07",
+    "parrafos": [
+     "*matanzia* y *choriziu*. Las dos se las anotó Cummins a GC 1, y una tercera, *quiciá*, también: de las catorce palabras con la i que se cuela que reunió en la comarca, tres son suyas.",
+     "*matancia* es de las palabras que la escuela perseguía. En Robleda, ya en Salamanca, el maestro llevaba una lista de lo que había que corregir: *burru*, *mairi*, *idil*, *jadel*, *lambel*… y *matancia*.",
+     "Y la i seguía haciendo palabras nuevas: los emigrantes de El Rebollar trajeron de Francia *vacancias*, del francés *vacances*."
+    ],
+    "pregunta": "¿Cuál decís: *matanza* o *matancia*? ¿*quizá* o *quiciá*?"
+   }
+  ],
+  "otros": [
+   {
+    "codigo": "C13",
+    "titulo": "Seseo y ceceo",
+    "texto": "Con s, *seban* ‘ceban’, *disiembri* y *chasina*; con z, *azeituna*, *entonzi*, *tozinu*. En la comarca el seseo son casos sueltos, y GC 1 es quien más da: de los catorce que reúne Cummins, seis son suyos."
+   },
+   {
+    "codigo": "C05",
+    "titulo": "La r y la l al final de sílaba",
+    "texto": "*cuelpu* ‘cuerpo’. Y el sonido a medio camino entre la r y la l de *por*, en *marca*, *engordan* o *conservan*, sale también en *cuelgan*: al final de sílaba, GC 1 no separa la r de la l."
+   },
+   {
+    "codigo": "C03",
+    "texto": "*eʰtu*, *pueʰ*, *meʰcla*, *diʰpueʰ*, *eʰquisita*. Delante de vocal, un soplo fuerte: *laʰ azeituna*. Al final, a veces nada: *paí*, *ve*."
+   },
+   {
+    "codigo": "C18",
+    "texto": "*majrandi* ‘más grande’ y *jranditu*, con la s y la g fundidas en una j; *própiuz del*, con la s y la d en una z."
+   },
+   {
+    "codigo": "C02",
+    "texto": "*cojin*, *manoju*, *cojan*."
+   },
+   {
+    "codigo": "C07",
+    "texto": "*veníu*, *criáu*, *preparáu*, *tendíuʰ*, *to*. Se queda, suave, en *imbutidu* y *quede*."
+   },
+   {
+    "codigo": "C11",
+    "texto": "*llama*, *cuchillu*, con una ll distinta de la y de *ya* y *mayori*."
+   },
+   {
+    "codigo": "C20",
+    "texto": "*e pelu* ‘de pelo’."
+   },
+   {
+    "codigo": "C23",
+    "titulo": "La n del final, en la garganta",
+    "texto": "*son*, *mueren*, *conservan*, *tienin*: {[soŋ]}, {[mwéreŋ]}."
+   },
+   {
+    "codigo": "M03",
+    "texto": "*jranditu*, *camita*, *sequitu*: en -itu, no en -inu."
+   },
+   {
+    "codigo": "M24",
+    "texto": "*andi* ‘donde’, *mui* y *mu* ‘muy’, *luu diʰpueʰ*."
+   },
+   {
+    "codigo": null,
+    "titulo": "Lo que no sale",
+    "texto": "GC 1 dice *azi* ‘hace’ y *fuegu*, sin la jota de *jacha* (C01). En el mismo pueblo, en 1912, Krüger anotó *jadel*, con jota, y *adeiti* ‘aceite’, con la d antigua (C09)."
+   }
+  ],
+  "fuentes": "Datos de Cummins 1974, Krüger 1914 e Iglesias Ovejero 2010."
+ }
 }

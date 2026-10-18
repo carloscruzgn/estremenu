@@ -997,5 +997,75 @@
    "glosa": "huelo"
   }
  ],
- "_fuente": "Texto marcado de la guía de clase (TEX-01, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app"
+ "_fuente": "Texto marcado de la guía de clase (TEX-01, guia-clase-pdf.zip, 06/10/2026); fecha de lectura, de la pestaña Sesiones de la app",
+ "detalle": {
+  "_fuente": "Guía de clase del texto, secciones de los rasgos destacados y de los demás rasgos, resumida a mano el 18/10/2026: sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
+  "resumen": "Lo que hace Gabriel y Galán con cada uno, y los demás rasgos del poema",
+  "entradilla": "Lo que hace Gabriel y Galán en «El embargo» con sus dos rasgos destacados, y los demás que asoman en el poema. Lo general de cada rasgo, con su mapa, está en su página.",
+  "rasgos": [
+   {
+    "codigo": "V01",
+    "parrafos": [
+     "Veinticinco palabras del poema cierran la vocal del final, pero no a partes iguales: veintidós con -i y solo tres con -u. Con -i, *pasi*, *alanti*, *esi*, *jocis*, *ondi*, *nochi*, *delanti*, *güelin*… Con -u, *todu*, dos veces, y *menus*, las tres en los versos 41 y 42.",
+     "La -u escasea por la rima. Los versos pares riman en é-o del primero al último: *ésos*, *mieo*, *muerto*, *dinero*… hasta *güelo*. Con *muertu* o *dineru* la rima se habría roto, y por eso la -o se queda en todos los finales de verso.",
+     "La rima no lo explica todo. Dentro del verso la -o también se queda casi siempre, en *avíos*, *sacho*, *vivo* o *jinco*, y los participios van sin cerrar: *gastao*, *osao*, *cuidiao*. Krüger encontró en 1912 que quien cierra la -e cierra también la -o, casi siempre a la vez, y el poema, con mucha -i y casi ninguna -u, no responde a lo que él oyó. Lo de los participios llama más la atención: hacia 1970, tres informantes jóvenes de Cummins, que ya casi no cerraban, conservaban precisamente ese cierre, -au."
+    ],
+    "pregunta": "¿Quién dice todavía *nochi*, *genti* o *libru*? ¿Y *cansau*, aunque ya no diga *libru*?"
+   },
+   {
+    "codigo": "C06",
+    "parrafos": [
+     "En el poema no queda ni una r al final de palabra: *señol*, *antiyel*, *embargal*, *vel*, *suol*. Diez veces con -l.",
+     "Cuando detrás va un pronombre, la r se pierde y deja una l, *afligila*, *ganalo*, *tocali*, o se hace ll: *vendello* ‘venderlo’, en el verso 12. Esa ll, como la de *calle*, es la más rara de las tres soluciones que se conocen con el pronombre. Krüger la oyó en 1912 en Villa del Campo, *juzgallu*, y en Guijo de Galisteo, *jadellu*. Para Ahigal, al lado del Guijo, citaba de Menéndez Pidal justo *vendello*, pero él allí solo oyó la l simple. Hacia 1970 Cummins se la oyó a un solo hombre, de ochenta y cinco años, en Montehermoso. González Salgado la da hoy por desconocida."
+    ],
+    "pregunta": "Con el pronombre detrás, ¿cómo se dice: *vendelu*, *vendel·lu* o *vendellu*?"
+   }
+  ],
+  "otros": [
+   {
+    "codigo": "C01",
+    "texto": "*jocis*, *jediendo*, *jerramientas*, *jinco*. Las cuatro tenían f en latín. La edición de 1909 escribe *gediendo*."
+   },
+   {
+    "codigo": "C07",
+    "texto": "*mieo*, *gastao*, *comías*, *quea*, *clavás*, *osao*, *suol*, *tos*, *ca*. También cae la r: *pa*, *quio*, *tuviá*."
+   },
+   {
+    "codigo": "C19",
+    "texto": "*güenos*, *güelin*, *güelo*."
+   },
+   {
+    "codigo": "C20",
+    "texto": "*alanti*, *ondi*."
+   },
+   {
+    "codigo": "C27",
+    "texto": "*dambos* ‘ambos’."
+   },
+   {
+    "codigo": "V07",
+    "texto": "*cuidiao*, *cuidiaíto*."
+   },
+   {
+    "codigo": "M08",
+    "texto": "*sos tumbo* ‘os echo abajo’ y *lleváisoslo* ‘lleváoslo’."
+   },
+   {
+    "codigo": "C17",
+    "titulo": "La d y la z del final",
+    "texto": "*usté*, *jues*, *ves*."
+   },
+   {
+    "codigo": "V02",
+    "titulo": "Vocales que cambian",
+    "texto": "*mesmo*, *nenguno*."
+   },
+   {
+    "codigo": "M18",
+    "titulo": "Formas cortadas",
+    "texto": "*tuviá* ‘tuviera’, *cualisquiá* ‘cualquiera’."
+   }
+  ],
+  "fuentes": "Datos de Krüger 1914, Cummins 1974, Paredes García 2002, sobre la rima, y González Salgado 2007."
+ }
 }

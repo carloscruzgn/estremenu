@@ -24,7 +24,7 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Se da al alumnado 
   - `apuntes/apartados.json`: el texto de los apartados de los apuntes del alumnado, por párrafos, con los arranques en negrita y los mapas.
   - `apuntes/bibliografia.json`: el apartado 8, Bibliografía, que construir.mjs pone detrás de los del alumnado. Lo genera `python3 bibliografia.py` desde `bibliografia_apuntes-propios-7.md`, copia literal del § 7 de los apuntes propios: entra solo la referencia completa, sin los comentarios de Claude, y lo demás va a `bibliografia_pendientes.md` con lo que le falta. Cuando el § 7 cambie, se vuelve a copiar entero a ese .md y se corre el script.
   - `catalogo.json`: los títulos de las páginas de rasgo de los apuntes y qué rasgos tienen mapa y página.
-  - `textos/TEX-NN.json`: cada texto leído en el taller, con la fecha de la pestaña Sesiones de la app, sus rasgos destacados, las palabras marcadas con el código de su rasgo y el glosario de la guía, que la web no muestra. Salen del texto marcado de la guía de clase (guia-clase-pdf.zip).
+  - `textos/TEX-NN.json`: cada texto leído en el taller, con la fecha de la pestaña Sesiones de la app, sus rasgos destacados, las palabras marcadas con el código de su rasgo y el glosario de la guía, que la web no muestra. Salen del texto marcado de la guía de clase (guia-clase-pdf.zip). El campo `detalle` es la página «Los rasgos en detalle» del texto (`#TEX-NN-rasgos`), a la que lleva la tarjeta del pie de los rasgos destacados: `resumen` para la tarjeta, `entradilla`, un apartado por rasgo destacado (`parrafos` y `pregunta`, en el orden de `rasgos`), `otros` (con `titulo` solo si el rasgo no tiene página; `codigo` null para lo que no sale) y `fuentes`. Es un resumen a mano de las secciones de rasgos de la guía de clase, sin lo que ya cuenta la página de cada rasgo. En el texto, `*palabra*` va en cursiva, `{[fonética]}` en la letra de la fonética, y los códigos de rasgo con página se enlazan solos.
   - `signos-cummins.json`: los signos de Cummins, con el texto de GEN-06.
   - `autores.json`: las páginas «Sobre el autor» de los textos: una por autor o fuente (Gabriel y Galán; Cummins, con un apartado por informante), con los textos que la enlazan, sacadas de la sección 1 de la guía de clase de cada texto. Bloques `h`, `p`, `cita`, `informante` y `fuentes`; el `*título*` va en cursiva. `corto` y `resumen`, para la tarjeta de cada texto, bajo la fecha de lectura. Para la foto o la portada, `imagen` con `src`, `ancho`, `alto`, `alt` y `pie`, y la imagen en `img/autores/`. Un texto nuevo de un autor que ya tiene página se añade a sus `textos` y, si es de Cummins, con su `informante`.
   - `comarcas.json`: las comarcas REDEX y el área del taller, la del generador de reels.
@@ -34,7 +34,8 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Se da al alumnado 
 ## Añadir un texto
 
 1. Escribir `fuente/textos/TEX-NN.json` como los que hay: `bloques` de tipo `verso`, `linea`, `pregunta` o `corte`, y en cada línea `tokens`, con `{"t": …}` para el texto corrido y `{"w": palabra, "r": [códigos]}` para las palabras marcadas. Si es de Cummins, `fonetica` con `informante`, `pagina` y `bloques` de tipo `pregunta` o `fon`, copiados de la hoja TEX del aula; sale el conmutador a la transcripción. Si lleva ilustraciones, `imagenes` con `src`, `ancho`, `alto`, `alt` y `pie`, y las imágenes en `img/textos/`.
-2. En `fuente/`: `node construir.mjs`.
+2. Escribir su `detalle`, sobre la guía de clase, como los que hay.
+3. En `fuente/`: `node construir.mjs`.
 
 ## Añadir un rasgo
 
