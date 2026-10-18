@@ -157,3 +157,65 @@ for (const f of munis) {
 for (const [c, z] of Object.entries(ENC.zonas_corrige || {})) if (c !== '_') enc.zonas[c] = z;
 fs.writeFileSync(path.join(destino, 'encuestas.json'), JSON.stringify(enc));
 console.log('encuestas.json:', Object.keys(enc.kruger).length, 'términos de Krüger,', Object.keys(enc.cummins).length, 'de Cummins,', Object.keys(enc.gs).length, 'de González Salgado;', enc.coinciden.length, 'con dos o tres;', enc.isoglosas.length, 'rayas');
+
+// ---------- el mapa de la portada ----------
+// España y Portugal, Extremadura y el área del taller, para la animación del título: se acerca de la Península a Extremadura
+// y de Extremadura al noroeste, y se queda en claro detrás de las letras. Trazos en coordenadas de pantalla (y hacia abajo),
+// en kilómetros, simplificados para que el fichero pese poco.
+{
+  const km = c => { const q = proj(c); return [q[0] * 10, q[1] * 10]; };
+  // Douglas-Peucker sobre una línea ya proyectada; tol en km
+  const simplifica = (pts, tol) => {
+    if (pts.length < 3) return pts;
+    const keep = new Uint8Array(pts.length); keep[0] = keep[pts.length - 1] = 1;
+    const pila = [[0, pts.length - 1]];
+    while (pila.length) {
+      const [a, b] = pila.pop(); const [ax, ay] = pts[a], [bx, by] = pts[b];
+      const dx = bx - ax, dy = by - ay, L = Math.hypot(dx, dy);
+      let max = 0, idx = -1;
+      // en un anillo cerrado los dos extremos coinciden: se mide la distancia al punto
+      for (let i = a + 1; i < b; i++) { const d = L < 1e-6 ? Math.hypot(pts[i][0] - ax, pts[i][1] - ay) : Math.abs(dy * pts[i][0] - dx * pts[i][1] + bx * ay - by * ax) / L; if (d > max) { max = d; idx = i; } }
+      if (max > tol && idx > 0) { keep[idx] = 1; pila.push([a, idx], [idx, b]); }
+    }
+    return pts.filter((_, i) => keep[i]);
+  };
+  const r1 = v => Math.round(v * 10) / 10;
+  const linea = (coords, tol, cerrar) => { const p = simplifica(coords.map(km), tol); if (p.length < 2) return ''; return 'M' + p.map(([x, y]) => r1(x) + ' ' + r1(y)).join('L') + (cerrar ? 'Z' : ''); };
+  const trazo = (geom, tol) => {
+    if (!geom) return '';
+    const t = geom.type, c = geom.coordinates;
+    if (t === 'LineString') return linea(c, tol);
+    if (t === 'MultiLineString') return c.map(l => linea(l, tol)).join('');
+    if (t === 'Polygon') return c.map(r => linea(r, tol, true)).join('');
+    if (t === 'MultiPolygon') return c.flatMap(p => p.map(r => linea(r, tol, true))).join('');
+    return '';
+  };
+  const fuera = new Set(['35', '38', '51', '52']);   // Canarias, Ceuta y Melilla no caben en el encuadre
+  const pv = es.objects.provinces.geometries.filter(g => !fuera.has(g.id));
+  const peninsula = { type: 'GeometryCollection', geometries: pv };
+  const ccaa = es.objects.autonomous_regions.geometries.filter(g => !['05', '18', '19', '20'].includes(g.id));
+  const munisEx = es.objects.municipalities.geometries.filter(g => /^(06|10)/.test(g.id) || salamanca.has(g.id));
+  const deNucleo = es.objects.municipalities.geometries.filter(g => core.has(g.id));
+  const deContacto = es.objects.municipalities.geometries.filter(g => contact.has(g.id));
+  const encuadre = feats => { let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity; for (const f of feats) { const [[a, b], [c, d]] = pathGen.bounds(f); x0 = Math.min(x0, a); y0 = Math.min(y0, b); x1 = Math.max(x1, c); y1 = Math.max(y1, d); } return [r1(x0 * 10), r1(y0 * 10), r1((x1 - x0) * 10), r1((y1 - y0) * 10)]; };
+  const fPen = topo.feature(es, peninsula).features.filter(f => !['07'].includes(f.id));   // el encuadre de España, sin las Baleares
+  const fExt = topo.feature(es, { type: 'GeometryCollection', geometries: pv.filter(g => ['06', '10'].includes(g.id)) }).features;
+  const fNuc = topo.feature(es, { type: 'GeometryCollection', geometries: deNucleo }).features;
+  const coria = es.objects.municipalities.geometries.find(g => g.id === '10067');
+  const P = {
+    _: 'Lo escribe construir.mjs. Kilómetros en la proyección del reel, con la y hacia abajo.',
+    portugal: trazo(portugal.geometry, 1.2),
+    espana: trazo(topo.merge(es, pv.filter(g => g.id !== '54')), 1.2),
+    ccaa: trazo(topo.mesh(es, { type: 'GeometryCollection', geometries: ccaa }, (a, b) => a !== b), 1.2),
+    // solo las rayas de provincia que tocan a Cáceres, Badajoz o Salamanca, que son las que se ven al acercarse
+    provincias: trazo(topo.mesh(es, peninsula, (a, b) => a !== b && ['06', '10', '37'].some(c => c === a.id || c === b.id)), 0.5),
+    extremadura: trazo(topo.merge(es, pv.filter(g => ['06', '10'].includes(g.id))), 0.4),
+    nucleo: trazo(topo.merge(es, deNucleo), 0.15),
+    contacto: trazo(topo.merge(es, deContacto), 0.15),
+    terminos: trazo(topo.mesh(es, { type: 'GeometryCollection', geometries: munisEx }, (a, b) => a !== b), 0.25),
+    coria: (() => { const q = pathGen.centroid(topo.feature(es, coria)); return [r1(q[0] * 10), r1(q[1] * 10)]; })(),
+    vistas: { espana: encuadre(fPen), extremadura: encuadre(fExt), area: encuadre(fNuc) },
+  };
+  fs.writeFileSync(path.join(destino, 'portada.json'), JSON.stringify(P));
+  console.log('portada.json:', Math.round(JSON.stringify(P).length / 1024), 'KB');
+}

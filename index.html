@@ -134,7 +134,28 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 }
 
 /* ---------- portada ---------- */
-.portada { padding-block: clamp(40px, 9vw, 104px) 56px }
+.portada { padding-block: 0 56px }
+/* Cabecera de la portada: el mapa se acerca de la Península a Extremadura y al noroeste, y se queda en claro detrás del título */
+.heroe { position: relative; overflow: hidden; min-height: clamp(400px, 66vh, 700px); display: flex; flex-direction: column; justify-content: center; padding-block: 48px 40px; isolation: isolate }
+.heroe > .envoltura { position: relative; z-index: 1; width: 100% }
+.mapa-portada { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent), radial-gradient(ellipse 75% 80% at 50% 48%, #000 55%, transparent 100%); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, #000 84%, transparent), radial-gradient(ellipse 75% 80% at 50% 48%, #000 55%, transparent 100%); mask-composite: intersect }
+.mapa-portada path { vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round }
+.mapa-portada .capa { transition: opacity .9s ease }
+.mapa-portada .todo { transition: opacity 1.1s ease }
+.mapa-portada.claro .todo { opacity: .3 }
+.mapa-portada .pt { fill: var(--naranja) }
+.mapa-portada .onda { fill: none; stroke: var(--naranja); transform-box: fill-box; transform-origin: center }
+.mapa-portada .onda.va { animation: onda 1.6s ease-out 2 }
+@keyframes onda { from { transform: scale(1); opacity: .9 } to { transform: scale(6); opacity: 0 } }
+.mapa-portada text { font: 800 1px var(--f); fill: var(--texto); letter-spacing: .02em }
+.heroe .rotulo-portada { position: absolute; z-index: 1; left: 16px; right: 16px; bottom: 22px; font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); transition: opacity .5s ease; text-align: center; text-shadow: 0 0 10px var(--fondo); pointer-events: none }
+.heroe .saltar { position: absolute; z-index: 2; right: max(16px, env(safe-area-inset-right, 0px)); top: 14px; background: rgba(19, 46, 13, .6); border: 1px solid var(--linea); border-radius: 999px; padding: 6px 14px; font-weight: 800; font-size: 12px; letter-spacing: .08em; color: var(--texto-2); cursor: pointer; transition: opacity .4s ease }
+.heroe .saltar:hover { color: var(--texto) }
+.heroe .entra { transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.3,1) }
+.heroe.espera .entra { opacity: 0; transform: translateY(14px) }
+.heroe h1 { text-shadow: 0 2px 24px rgba(19, 46, 13, .55) }
 .portada h1 { font-weight: 900; line-height: .95; letter-spacing: -.035em; margin-top: 18px }
 .portada h1 .l1 { display: block; font-size: clamp(34px, 6.4vw, 76px) }
 .portada h1 .l2 { display: block; font-size: clamp(44px, 13vw, 172px); color: var(--texto); white-space: nowrap }
@@ -152,7 +173,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 @keyframes cae { 0% { opacity: 1; transform: none } 100% { opacity: 0; transform: translateY(.45em) } }
 @keyframes entra { 0% { opacity: 0; transform: translateY(-.55em) } 100% { opacity: 1; transform: none } }
 @keyframes subraya { 0% { transform: scaleX(0) } 100% { transform: scaleX(1) } }
-.portada .lema { max-width: 58ch; font-size: clamp(17px, 2vw, 20px); color: var(--texto-2); margin: 28px 0 0 }
+.portada .lema { max-width: 58ch; font-size: clamp(17px, 2vw, 20px); color: var(--texto-2); margin: 8px 0 0 }
 /* Carrusel de la portada: tres diapositivas con pestañas; cada una tiene sitio para una foto (figure.foto), que se enseña cuando lleva imagen */
 .carrusel { margin-top: 40px; background: var(--fondo-2); border-radius: 10px; overflow: hidden }
 .pestanas { display: flex; gap: 0; border-bottom: 1px solid var(--linea) }
@@ -459,9 +480,16 @@ span.fila .tit { color: var(--texto-2) }
 <main id="vistas">
 
 <section id="v-inicio" class="vista portada" hidden>
+  <div class="heroe espera" id="heroe">
+    <svg class="mapa-portada" id="mapa-portada" aria-hidden="true" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="rotulo-portada" id="rotulo-portada" aria-hidden="true"></div>
+    <button type="button" class="saltar" id="saltar-portada" hidden>Saltar</button>
+    <div class="envoltura">
+    <div class="antetitulo entra">CEPA Coria · Curso 2026-2027</div>
+    <h1 aria-label="Taller de estremeñu" class="entra"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
+    </div>
+  </div>
   <div class="envoltura">
-    <div class="antetitulo">CEPA Coria · Curso 2026-2027</div>
-    <h1 aria-label="Taller de estremeñu"><span class="l1" aria-hidden="true">Taller de</span><span class="l2" id="titulo-portada" aria-hidden="true">e<span class="cambio"><span class="viejo">x</span><span class="nuevo">s</span><i class="subr"></i></span>tremeñ<span class="cambio"><span class="viejo">o</span><span class="nuevo">u</span><i class="subr"></i></span></span></h1>
     <p class="lema">El habla del noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla, el valle del Alagón y la Tierra de Coria, que sigue por Salamanca arriba en El Rebollar.</p>
     <section class="carrusel" id="carrusel" aria-roledescription="carrusel" aria-label="El taller">
       <div class="pestanas" role="tablist"><button type="button" role="tab" id="pt-taller" aria-controls="dp-taller" aria-selected="true" data-i="0">El taller</button><button type="button" role="tab" id="pt-zona" aria-controls="dp-zona" aria-selected="false" data-i="1">La zona</button><button type="button" role="tab" id="pt-trabajo" aria-controls="dp-trabajo" aria-selected="false" data-i="2">Cómo trabaja</button><button type="button" role="tab" id="pt-web" aria-controls="dp-web" aria-selected="false" data-i="3">Esta web</button></div>
@@ -642,7 +670,7 @@ async function ir() {
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
-  if (sec === 'inicio') animarPortada();
+  if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
   if (apartado) pintarApartado(apartado);
   if (texto) pintarTexto(texto);
@@ -782,6 +810,94 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor'
   ir(0);
 })();
 
+// El mapa de la portada (datos/portada.json, de construir.mjs). La Península, Extremadura y el noroeste; después el mapa
+// se queda en claro y entran el título y el cambio de letras. Se salta tocando la cabecera, con el botón o con una tecla.
+// Sin movimiento, el mapa sale ya en su sitio y en claro.
+async function animarMapaPortada() {
+  const h = $('heroe'), svg = $('mapa-portada'), rot = $('rotulo-portada'), bs = $('saltar-portada');
+  if (h.dataset.hecho) return; h.dataset.hecho = 1;
+  let P;
+  try { P = await json('datos/portada.json'); } catch (e) { h.classList.remove('espera'); animarPortada(); return; }
+  const ns = 'http://www.w3.org/2000/svg';
+  const el = (tag, at, padre) => { const e = document.createElementNS(ns, tag); for (const k in at) e.setAttribute(k, at[k]); (padre || svg).appendChild(e); return e; };
+  const todo = el('g', { class: 'todo' });
+  const capa = (n, op) => { const g = el('g', { class: 'capa', style: 'opacity:' + op }, todo); g.dataset.n = n; return g; };
+  const base = capa('base', 1), ext = capa('ext', 0), prov = capa('prov', 0), area = capa('area', 0), term = capa('term', 0), coria = capa('coria', 0);
+  el('path', { d: P.portugal, fill: '#17350f', stroke: 'rgba(238,244,233,.22)', 'stroke-width': 1 }, base);
+  el('path', { d: P.espana, fill: '#21461a', stroke: 'rgba(238,244,233,.45)', 'stroke-width': 1.2 }, base);
+  el('path', { d: P.ccaa, fill: 'none', stroke: 'rgba(238,244,233,.18)', 'stroke-width': .8 }, base);
+  el('path', { d: P.extremadura, fill: '#2f5c25', stroke: 'var(--verde)', 'stroke-width': 1.6 }, ext);
+  el('path', { d: P.provincias, fill: 'none', stroke: 'rgba(238,244,233,.3)', 'stroke-width': 1 }, prov);
+  el('path', { d: P.contacto, fill: 'var(--contacto)', stroke: 'none' }, area);
+  el('path', { d: P.nucleo, fill: 'var(--verde)', stroke: 'none' }, area);
+  el('path', { d: P.terminos, fill: 'none', stroke: 'rgba(19,46,13,.45)', 'stroke-width': .6 }, term);
+  el('path', { d: P.nucleo, fill: 'none', stroke: 'rgba(238,244,233,.75)', 'stroke-width': 1.4 }, term);
+  const [cx, cy] = P.coria;
+  const onda = el('circle', { class: 'onda', cx, cy, r: 1, 'stroke-width': .3 }, coria);
+  el('circle', { class: 'pt', cx, cy, r: 1 }, coria);
+  const tx = el('text', { x: cx + 1.8, y: cy + .35 }, coria); tx.textContent = 'Coria';
+
+  // Encuadres con la proporción de la cabecera, para que cada vista entre entera; la del área deja sitio alrededor
+  const caja = (v, holgura) => {
+    const r = h.getBoundingClientRect(), asp = r.width / Math.max(r.height, 1);
+    let [x, y, w, hh] = v; const mx = w * holgura, my = hh * holgura; x -= mx; y -= my; w += 2 * mx; hh += 2 * my;
+    if (w / hh < asp) { const n = hh * asp; x -= (n - w) / 2; w = n; } else { const n = w / asp; y -= (n - hh) / 2; hh = n; }
+    return { cx: x + w / 2, cy: y + hh / 2, w };
+  };
+  const V = () => ({ espana: caja(P.vistas.espana, .04), extremadura: caja(P.vistas.extremadura, .12), area: caja(P.vistas.area, .35) });
+  const asp = () => { const r = h.getBoundingClientRect(); return r.width / Math.max(r.height, 1); };
+  const pon = c => { const w = c.w, hh = w / asp(); svg.setAttribute('viewBox', `${c.cx - w / 2} ${c.cy - hh / 2} ${w} ${hh}`); };
+  // La escala de Coria y su rótulo sigue al zoom: el punto mide siempre unos 7 px
+  const escalaCoria = c => { const k = c.w / Math.max(h.getBoundingClientRect().width, 1); coria.setAttribute('transform', `translate(${cx} ${cy}) scale(${k * 4}) translate(${-cx} ${-cy})`); tx.style.fontSize = '3px'; };
+  const op = (g, v) => g.style.opacity = v;
+  let final = false, vista = null;
+  const acabar = () => {
+    if (final) return; final = true;
+    vista = 'area'; const c = V().area; pon(c); escalaCoria(c);
+    [ext, prov, area, term, coria].forEach(g => op(g, 1));
+    svg.classList.add('claro'); rot.style.opacity = 0; bs.hidden = true;
+    h.classList.remove('espera'); animarPortada();
+  };
+  addEventListener('resize', () => { if (vista) { const c = V()[vista]; pon(c); escalaCoria(c); } });
+  if (sinMov) { acabar(); return; }
+
+  h.classList.add('espera'); svg.style.opacity = 0; svg.style.transition = 'opacity .7s ease';
+  vista = 'espana'; { const c = V().espana; pon(c); escalaCoria(c); }
+  requestAnimationFrame(() => svg.style.opacity = 1);
+  bs.hidden = false;
+  const salta = () => { svg.style.opacity = 1; acabar(); };
+  bs.addEventListener('click', salta);
+  h.addEventListener('click', e => { if (!final) salta(); });
+  addEventListener('keydown', function k(e) { if (!final && e.key !== 'Tab') salta(); if (final) removeEventListener('keydown', k); });
+
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  const rotula = async t => { rot.style.opacity = 0; await espera(250); if (final) return; rot.textContent = t; rot.style.opacity = 1; };
+  // Viaje de una vista a otra: el centro se mueve en línea y el ancho cambia en escala logarítmica, para que el acercamiento sea parejo
+  const viaja = (de, a, ms) => new Promise(res => {
+    const A = V()[de], B = V()[a], t0 = performance.now();
+    const paso = now => {
+      if (final) return res();
+      let t = Math.min(1, (now - t0) / ms); t = t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      const c = { cx: A.cx + (B.cx - A.cx) * t, cy: A.cy + (B.cy - A.cy) * t, w: Math.exp(Math.log(A.w) + (Math.log(B.w) - Math.log(A.w)) * t) };
+      pon(c); escalaCoria(c);
+      if (t < 1) requestAnimationFrame(paso); else { vista = a; res(); }
+    };
+    requestAnimationFrame(paso);
+  });
+  rotula('La península ibérica');
+  await espera(1100); if (final) return;
+  rotula('Extremadura'); op(ext, 1);
+  await viaja('espana', 'extremadura', 1500); if (final) return;
+  op(prov, 1);
+  await espera(500); if (final) return;
+  rotula('El noroeste de Cáceres y El Rebollar');
+  setTimeout(() => { if (!final) { op(area, 1); op(term, 1); } }, 500);
+  await viaja('extremadura', 'area', 1600); if (final) return;
+  op(coria, 1); onda.classList.add('va');
+  await espera(1300); if (final) return;
+  acabar();
+}
+
 // La portada: extremeño → estremeñu. Primero la x por la s, después la o por la u.
 async function animarPortada() {
   const t = $('titulo-portada');
@@ -801,6 +917,8 @@ async function animarPortada() {
     c.querySelector('.subr').style.animationDelay = (d + 0.95) + 's';
     c.classList.add('anima');
     setTimeout(() => { viejo(c).style.width = anchos[i][1] + 'em'; }, (d + 0.3) * 1000);
+    // Acabado el cambio, las letras se quedan fijas: al volver a la portada no se repite, como el mapa
+    setTimeout(() => { c.classList.remove('anima'); c.classList.add('fijo'); }, (d + 1.6) * 1000);
   });
 }
 
