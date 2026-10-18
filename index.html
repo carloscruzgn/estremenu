@@ -324,6 +324,8 @@ span.fila .tit { color: var(--texto-2) }
 .dic-dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 0 }
 .dic-dl dt { font-weight: 800; color: var(--texto); white-space: nowrap }
 .dic-dl dd { margin: 0; color: var(--texto-2) }
+/* En el teléfono, las fuentes con la sigla arriba y la referencia debajo, algo sangrada (Carlos, 19/10/2026) */
+@media (max-width: 700px) { #dic-fuentes { display: block } #dic-fuentes dt { white-space: normal; margin-top: 12px } #dic-fuentes dt:first-child { margin-top: 0 } #dic-fuentes dd { padding-left: 14px; margin-top: 2px } }
 .dic-cifras { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px }
 .dic-cifras div { flex: 1 1 0; min-width: 92px; max-width: 170px; padding: 12px 16px; border-radius: 10px; background: var(--fondo) }
 .dic-cifras b { display: block; font-size: 34px; font-weight: 900; line-height: 1; color: var(--naranja) }
