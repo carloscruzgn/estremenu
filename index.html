@@ -469,6 +469,7 @@ span.fila .tit { color: var(--texto-2) }
 .apartado ul.refs { list-style: none; padding-left: 0 }
 .apartado ul.refs li { font-size: 16px; line-height: 1.55; padding-left: 1.6em; text-indent: -1.6em; margin-bottom: 10px }
 .apartado ul.refs b { font-weight: 800 }
+.apartado ul.refs .mismo { letter-spacing: -.08em }
 .apartado figure { margin: 30px 0 34px }
 .apartado figure button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 8px; overflow: hidden }
 .apartado figure img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 1131 }
@@ -1093,12 +1094,16 @@ function pintarApartado(a) {
   const k = AP.apartados.indexOf(a), ant = AP.apartados[k - 1], sig = AP.apartados[k + 1];
   // Referencia bibliográfica: **negrita** para un segundo autor dentro de la entrada, *cursiva* para los títulos
   const ref = s => esc(s.replace(/\\([\[\]])/g, '$1')).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>');
+  // El autor que repite el de la entrada anterior va con raya; en una obra en colaboración, solo el primero: ——— y OTRO, A. (Carlos, 18/10/2026)
+  const primero = a => a.split(/,? y (?=[A-ZÁÉÍÓÚÑ]{2})/)[0];
+  const autorRef = (a, ant) => !ant || primero(a) !== primero(ant) ? `<b>${esc(a)}</b>`
+    : a === ant ? '<span class="mismo">———</span>' : `<span class="mismo">———</span> y <b>${esc(a.slice(primero(a).length).replace(/^,? y /, ''))}</b>`;
   const txt = b => (b.arranque ? `<b>${esc(b.arranque)}</b> ` : '') + esc(b.texto);
   const bloques = a.bloques.map(b =>
     b.t === 'p' ? `<p>${txt(b)}</p>`
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
     : b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
-    : b.t === 'refs' ? `<ul class="refs">${b.items.map(x => `<li><b>${esc(x.autor)}</b> (${esc(x.anio)}). ${ref(x.resto)}</li>`).join('')}</ul>`
+    : b.t === 'refs' ? `<ul class="refs">${b.items.map((x, i) => `<li>${autorRef(x.autor, i ? b.items[i - 1].autor : '')} (${esc(x.anio)}). ${ref(x.resto)}</li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';

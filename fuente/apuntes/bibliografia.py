@@ -1,6 +1,8 @@
 # Bibliografía de la web (apartado 8 de «El contenido del taller»), sacada del § 7 de los apuntes propios.
 # Formato (Carlos, 18/10/2026): AUTOR (año). Resto. Por orden alfabético de apellidos y, dentro de cada autor, por año;
 # si un autor repite año, con letras (1999a, 1999b), contadas en las dos listas juntas. Las entradas con varias obras se parten.
+# En la web (index.html, autorRef), el autor que repite el de la entrada anterior va con raya, ———, y en una obra en
+# colaboración que empieza por el mismo autor, ——— y OTRO, A.
 # Entra solo la referencia completa: la que tiene una marca ++, le falta el nombre de pila, el año, la publicación,
 # las páginas de un artículo o el lugar o la editorial de un libro, se queda en bibliografia_pendientes.md.
 # Se quitan los comentarios de Claude (ubicación, fuente, interés, «— vía…») y las claves del tipo (Ariza 1993b).
