@@ -91,5 +91,12 @@
   "10205": "Valverde del Fresno: lamel (Fink 1929, vía cita)",
   "10072": "Eljas: lamel (Fink 1929, vía cita)"
  },
- "fuentes_cierre": "Datos: Fink 1929 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Fink 1929 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller",
+ "extension": {
+  "probable": "Lamber, lombo, lomba, «de la frontera salmantina a la de Huelva» (González Salgado 2003, p. 607).",
+  "comarcas": {
+   "rebollar": "Casos esporádicos (Iglesias Ovejero 2010, p. 47)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

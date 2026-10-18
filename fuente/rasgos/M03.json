@@ -109,5 +109,10 @@
   ],
   "_nota": "Badajoz en débil en el recuadro de RM03: allí gana -ito (Montero Curiel 2006, p. 60)"
  },
- "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "En la provincia de Cáceres (Montero Curiel 2006, pp. 28 y 60).",
+  "algunos": "En Badajoz gana -ito (Montero Curiel 2006, p. 60)."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

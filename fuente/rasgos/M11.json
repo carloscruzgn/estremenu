@@ -118,5 +118,11 @@
   "10164": "San Martín de Trevejo: el pasado en -orin (Montero Curiel 2006, pp. 19-23)",
   "10205": "Valverde del Fresno: chegaran (Montero Curiel 2006, pp. 19-23)"
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2007, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2007, y otras fuentes del taller",
+ "extension": {
+  "terminos": {
+   "10006": "Ahigal: Paniagua 2002 lo da casi sistemático en los adultos."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

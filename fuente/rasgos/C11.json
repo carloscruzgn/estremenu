@@ -181,5 +181,13 @@
    }
   ]
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller",
+ "extension": {
+  "probable": "La provincia de Cáceres distingue, con algunos pueblos que no (González Salgado 2003, pp. 602-603).",
+  "terminos": {
+   "10037": "Cáceres: con la provincia, que distingue (González Salgado 2003, pp. 602-603).",
+   "10148": "Plasencia: con la provincia, que distingue (González Salgado 2003, pp. 602-603)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

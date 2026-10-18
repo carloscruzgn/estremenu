@@ -579,6 +579,9 @@ span.fila .tit { color: var(--texto-2) }
 .info li .cuad { width: 12px; height: 12px; margin-top: 4px }
 .info li b { font-weight: 800 }
 .info li span.nota { color: var(--texto-2) }
+.info h3.sec, .info details.sec summary { font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-3); margin: 16px 0 0 }
+.info details.sec summary { cursor: pointer }
+.info details.sec summary::marker { color: var(--naranja) }
 .texto { margin-top: 30px }
 .texto .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
 .texto h3 { font-weight: 800; font-size: 16px; margin-top: 18px; color: var(--naranja) }
@@ -808,7 +811,7 @@ span.fila .tit { color: var(--texto-2) }
       </div>
       <div class="estados">
         <ol id="lista-estados"></ol>
-        <p class="ayuda">Arrastra para girar el mapa y pellizca o usa la rueda para acercarte. Toca un pueblo para ver sus datos.</p>
+        <p class="ayuda">Arrastra para girar el mapa y pellizca o usa la rueda para acercarte. Toca un pueblo para ver sus datos y, en la extensión probable, una comarca.</p>
       </div>
       <div class="info" id="info" aria-live="polite"><p class="vacio">Toca un pueblo del mapa.</p></div>
       <div class="texto" id="r-texto"></div>
@@ -1096,14 +1099,14 @@ function pintarApartado(a) {
   const ref = s => esc(s.replace(/\\([\[\]])/g, '$1')).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>');
   // El autor que repite el de la entrada anterior va con raya; en una obra en colaboración, solo el primero: ——— y OTRO, A. (Carlos, 18/10/2026)
   const primero = a => a.split(/,? y (?=[A-ZÁÉÍÓÚÑ]{2})/)[0];
-  const autorRef = (a, ant) => !ant || primero(a) !== primero(ant) ? `<b>${esc(a)}</b>`
-    : a === ant ? '<span class="mismo">———</span>' : `<span class="mismo">———</span> y <b>${esc(a.slice(primero(a).length).replace(/^,? y /, ''))}</b>`;
+  const autorRef = (a, ant) => !ant || primero(a) !== primero(ant) ? esc(a)
+    : a === ant ? '<span class="mismo">———</span>' : `<span class="mismo">———</span> y ${esc(a.slice(primero(a).length).replace(/^,? y /, ''))}`;
   const txt = b => (b.arranque ? `<b>${esc(b.arranque)}</b> ` : '') + esc(b.texto);
   const bloques = a.bloques.map(b =>
     b.t === 'p' ? `<p>${txt(b)}</p>`
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
     : b.t === 'h' ? `<h3>${esc(b.texto)}</h3>`
-    : b.t === 'refs' ? `<ul class="refs">${b.items.map((x, i) => `<li>${autorRef(x.autor, i ? b.items[i - 1].autor : '')} (${esc(x.anio)}). ${ref(x.resto)}</li>`).join('')}</ul>`
+    : b.t === 'refs' ? `<ul class="refs">${b.items.map((x, i) => `<li><b>${autorRef(x.autor, i ? b.items[i - 1].autor : '')} (${esc(x.anio)})</b>. ${ref(x.resto)}</li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
@@ -1442,7 +1445,7 @@ async function crearMapa(baseP) {
   const C = {
     bg: col('#132e0d'), spainLow: col('#183612'), portugal: col('#10280b'), base: col('#1e3f16'),
     core: col('#85be6d'), contact: col('#3d6a33'), neg: col('#0a1a07'), extBase: col('#2f5a25'),
-    reg: col('#ff914d'), antes: col('#a95f33'), prob: col('#ffc4a0'), part: col('#b84c1e'), never: col('#0c0c0c'),
+    reg: col('#ff914d'), antes: col('#a95f33'), prob: col('#b8652f'), part: col('#70401f'), never: col('#0c0c0c'),
   };
   const HB = 0.12, HCORE = 0.2, HREG = 0.85, HANTES = 0.6, HPROB = 0.5, HPART = 0.3, HNEG = 0.035;
 
@@ -1584,7 +1587,10 @@ async function crearMapa(baseP) {
   controls.addEventListener('change', () => { ponerCam(camera.position, controls.target); pedir(); });
 
   // ---------- estado del rasgo ----------
-  let RS = null, CL = {}, ESTADOS = [], actual = 0, sel = null;
+  let RS = null, CL = {}, ESTADOS = [], actual = 0, sel = null, selCom = null;
+  // En la extensión probable se toca la comarca, no el pueblo (Carlos, 18/10/2026). Las ciudades sin comarca van solas
+  const unidadDe = d => !d.comarca || d.comarca === 'ciudades' ? 'T:' + d.code : d.comarca;
+  const enProb = () => MODO === 'rasgo' && ESTADOS[actual] && ESTADOS[actual].id === 'prob';
   // Modo «encuestas»: los estados llevan su propia capa de términos (capa), y pueden enseñar las rayas de González Salgado 2001 (iso)
   let MODO = 'rasgo', EN = null, isoO = 0;
   const isoLines = [];
@@ -1653,6 +1659,7 @@ async function crearMapa(baseP) {
   function irA(i, inmediato) {
     actual = clamp(i, 0, ESTADOS.length - 1) | 0;
     const E = ESTADOS[actual];
+    if (enProb()) { if (sel) { selCom = unidadDe(sel.userData.d); sel = null; } } else selCom = null;
     const desde = munis.map(m => ({ h: m.userData.h, c: m.userData.c.clone() }));
     const hasta = munis.map(m => objetivo(m, E));
     const p0 = camera.position.clone(), t0 = controls.target.clone();
@@ -1686,9 +1693,10 @@ async function crearMapa(baseP) {
     for (const m of munis) {
       m.scale.z = Math.max(m.userData.h, 0.0001);
       m.material.color.copy(m.userData.c);
-      const s = m === sel ? 0.35 : 0;
+      const enU = selCom && unidadDe(m.userData.d) === selCom;
+      const s = m === sel ? 0.35 : enU ? 0.2 : 0;
       m.material.emissive.setRGB(s, s, s);
-      m.userData.lines.material.opacity = m === sel ? 0.95 : 0.22;
+      m.userData.lines.material.opacity = m === sel || enU ? 0.95 : 0.22;
     }
     areaLine.material.opacity = areaLine.userData.o; areaLine.position.z = HCORE + 0.01;
     extLine.material.opacity = extLine.userData.o; extLine.position.z = HB + 0.01;
@@ -1737,7 +1745,7 @@ async function crearMapa(baseP) {
     if (E.id === 'area') f = [filaL('#85be6d', 'Área del taller'), filaL('#3d6a33', 'Área de contacto')];
     else if (E.ola) f = [filaL('#ff914d', 'Recogido en estos años'), ...(E.ola > 1 ? [filaL('#a95f33', 'Recogido antes')] : [])];
     else if (E.id === 'fuera') f = [filaL('#ff914d', L.reg)];
-    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('part')) f.push(filaL('#b84c1e', L.part)); if (hay('prob')) f.push(filaL('#ffc4a0', L.prob)); if (hay('never') || Object.values(CL).some(x => x.neg)) f.push(filaL('#0c0c0c', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
+    else if (E.id === 'prob') { f = [filaL('#ff914d', L.reg)]; if (hay('prob')) f.push(filaL('#b8652f', L.prob)); if (hay('part')) f.push(filaL('#70401f', L.part)); if (hay('never') || Object.values(CL).some(x => x.neg)) f.push(filaL('#0c0c0c', L.neg, true)); f.push(filaL('#2f5a25', L.sin, true)); }
     $('leyenda').innerHTML = f.join('');
   }
   function pintarBotones() {
@@ -1768,7 +1776,10 @@ async function crearMapa(baseP) {
   renderer.domElement.addEventListener('pointerdown', e => { abajo = [e.clientX, e.clientY]; });
   renderer.domElement.addEventListener('pointerup', e => {
     if (!abajo || Math.hypot(e.clientX - abajo[0], e.clientY - abajo[1]) > 6) return;
-    const m = pueblo(e); sel = m && m !== sel ? m : null; pintarInfo(); pedir();
+    const m = pueblo(e);
+    if (enProb()) { const u = m ? unidadDe(m.userData.d) : null; selCom = u && u !== selCom ? u : null; sel = null; }
+    else { sel = m && m !== sel ? m : null; selCom = null; }
+    pintarInfo(); pedir();
   });
   const globo = $('globo');
   if (matchMedia('(hover: hover)').matches) {
@@ -1777,14 +1788,15 @@ async function crearMapa(baseP) {
       if (e.buttons || performance.now() - ultimo < 50) return; ultimo = performance.now();
       const m = pueblo(e), r = lienzo.getBoundingClientRect();
       if (!m) { globo.style.opacity = 0; return; }
-      globo.textContent = m.userData.d.name; globo.style.left = (e.clientX - r.left) + 'px'; globo.style.top = (e.clientY - r.top) + 'px'; globo.style.opacity = 1;
+      globo.textContent = enProb() ? nombreUnidad(unidadDe(m.userData.d)) : m.userData.d.name; globo.style.left = (e.clientX - r.left) + 'px'; globo.style.top = (e.clientY - r.top) + 'px'; globo.style.opacity = 1;
     });
     renderer.domElement.addEventListener('pointerleave', () => { globo.style.opacity = 0; });
   }
   const AREA = { core: 'Área del taller', contact: 'Área de contacto', none: 'Fuera del área del taller' };
   function pintarInfo() {
     const box = $('info');
-    if (!sel) { box.innerHTML = '<p class="vacio">Toca un pueblo del mapa.</p>'; return; }
+    if (selCom && RS) { box.innerHTML = infoComarca(selCom); return; }
+    if (!sel) { box.innerHTML = `<p class="vacio">${enProb() ? 'Toca una comarca del mapa.' : 'Toca un pueblo del mapa.'}</p>`; return; }
     if (MODO === 'encuestas') { box.innerHTML = infoEncuestas(sel.userData.d); return; }
     const d = sel.userData.d, x = CL[d.code] || { cls: 'base', again: [], neg: false };
     const com = d.comarca && base.comarcas[d.comarca] ? base.comarcas[d.comarca].nombre : (d.code.startsWith('06') ? 'Provincia de Badajoz' : d.code.startsWith('37') ? 'Salamanca' : '');
@@ -1794,11 +1806,70 @@ async function crearMapa(baseP) {
     if (RS.fuera && RS.fuera.terminos && RS.fuera.terminos[d.code] && !filas.length) filas.push(li('#ff914d', 'Recogido', RS.fuera.terminos[d.code]));
     const enContra = RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido';
     if (x.cls === 'never' && RS.nunca) filas.push(li('#0c0c0c', enContra, RS.nunca[d.code], true));
-    if (x.cls === 'prob' && !x.neg) filas.push(li('#ffc4a0', 'Probable', 'sin dato del pueblo, por los de su comarca'));
-    if (x.cls === 'part' && !x.neg) filas.push(li('#b84c1e', 'En algunos pueblos de la comarca', ''));
+    if (x.cls === 'prob' && !x.neg) filas.push(li('#b8652f', 'Probable', 'sin dato del pueblo, por los de su comarca'));
+    if (x.cls === 'part' && !x.neg) filas.push(li('#70401f', 'En algunos pueblos de la comarca', ''));
     if (x.neg) filas.push(li('#0c0c0c', enContra, RS.noroeste && RS.noroeste.en_contra && RS.noroeste.en_contra.fuente, true));
     if (!filas.length) filas.push(li('#2f5a25', 'Sin datos para este rasgo', '', true));
     box.innerHTML = `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
+  }
+
+  const nombreUnidad = u => u.startsWith('T:') ? byCode[u.slice(2)].userData.d.name : base.comarcas[u].nombre;
+  const yy = l => l.length < 2 ? l.join('') : l.slice(0, -1).join(', ') + ' y ' + l[l.length - 1];
+  // Ficha de una comarca en la extensión probable: su tono, lo que lo sostiene, lo recogido en sus pueblos y lo que va en contra
+  function infoComarca(u) {
+    const X = RS.extension || {}, P = RS.probable || {}, A = RS.algunos || {}, NW = (RS.noroeste && RS.noroeste.en_contra) || {};
+    const suelto = u.startsWith('T:');
+    const codes = (suelto ? [u.slice(2)] : base.comarcas[u].terminos).filter(c => byCode[c]);
+    const ds = codes.map(c => byCode[c].userData.d);
+    const prov = [...new Set(codes.map(c => c.startsWith('37') ? 'Salamanca' : c.startsWith('06') ? 'Badajoz' : 'Cáceres'))];
+    const area = ds.some(d => d.area === 'core') ? 'Área del taller' : ds.some(d => d.area === 'contact') ? 'Área de contacto' : 'Fuera del área del taller';
+    const sinNombre = (n, nom) => { const m = /^([^:]{4,}):\s*/.exec(n); return m && nom.startsWith(m[1]) ? n.slice(m[0].length) : n; };   // «Garrovillas: …» en Garrovillas de Alconétar
+    const li = (color, b, nota, ol) => `<li><span class="cuad${ol ? ' ol' : ''}" style="background:${color};${ol ? 'outline:1px solid rgba(255,255,255,.5)' : ''}"></span><span>${b ? `<b>${esc(b)}</b>` : ''}${b && nota ? ' · ' : ''}${nota ? '<span class="nota">' + esc(nota) + '</span>' : ''}</span></li>`;
+    // Lo recogido, agrupando los pueblos con la misma nota
+    const grupos = new Map(); let nRec = 0;
+    for (const d of ds) {
+      const notas = [];
+      (RS.oleadas || []).forEach(o => { const n = o.terminos && o.terminos[d.code]; if (n) notas.push(o.rotulo + ': ' + sinNombre(n, d.name)); });
+      const f = RS.fuera && RS.fuera.terminos && RS.fuera.terminos[d.code];
+      if (f && !notas.length) notas.push(sinNombre(f, d.name));
+      if (!notas.length) continue;
+      nRec++;
+      const k = notas.join(' · ');
+      grupos.set(k, [...(grupos.get(k) || []), d.name]);
+    }
+    const x = c => CL[c] || { cls: 'base', neg: false };
+    const enContra = RS.tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido';
+    let tono = suelto ? (x(codes[0]).neg ? 'neg' : ['prob', 'part'].includes(x(codes[0]).cls) ? x(codes[0]).cls : null)
+      : (P.comarcas || []).includes(u) ? 'prob' : (A.comarcas || []).includes(u) ? 'part' : (NW.comarcas || []).includes(u) ? 'neg' : null;
+    const propio = suelto ? (X.terminos || {})[codes[0]] : (X.comarcas || {})[u];
+    const general = tono === 'prob' ? X.probable : tono === 'part' ? X.algunos : null;
+    const porDefecto = tono === 'prob' ? (nRec ? 'Se da por probable en toda la comarca por lo recogido en sus pueblos.' : 'Se da por probable por lo recogido en las comarcas de alrededor.')
+      : tono === 'part' ? (nRec ? 'Recogido en algunos de sus pueblos: no se da por probable en todos.' : 'Por lo recogido cerca, puede oírse en algunos de sus pueblos.')
+      : tono === 'neg' ? NW.fuente : '';
+    const texto = suelto ? (propio ? sinNombre(propio, ds[0].name) : general || porDefecto) : propio ? propio : propio === '' ? porDefecto : general || porDefecto;
+    const T = { prob: ['#b8652f', suelto ? 'Probable' : 'Probable en toda la comarca'], part: ['#70401f', 'En algunos pueblos de la comarca'], neg: ['#0c0c0c', enContra] };
+    let h = '';
+    if (tono) h += `<ul>${li(T[tono][0], T[tono][1], texto, tono === 'neg')}</ul>`;
+    if (nRec) {
+      const filas = [...grupos].map(([k, nombres]) => li('#ff914d', yy(nombres), k)).join('');
+      const tit = suelto ? 'Recogido' : `Recogido en ${nRec === 1 ? 'un pueblo' : nRec + ' pueblos'}`;
+      h += grupos.size > 6 ? `<details class="sec"><summary>${tit}</summary><ul>${filas}</ul></details>` : `<h3 class="sec">${tit}</h3><ul>${filas}</ul>`;
+    }
+    // Pueblos con tono propio y pueblos que quedan fuera de lo probable
+    if (!suelto) {
+      const aparte = codes.filter(c => (P.terminos || []).includes(c) && !x(c).neg && x(c).cls === 'prob' && tono !== 'prob');
+      if (aparte.length) h += `<h3 class="sec">Probable en el pueblo</h3><ul>${aparte.map(c => li('#b8652f', byCode[c].userData.d.name, (X.terminos || {})[c] ? sinNombre(X.terminos[c], byCode[c].userData.d.name) : 'por los pueblos de alrededor')).join('')}</ul>`;
+      const fueraP = codes.filter(c => (P.excluir || []).includes(c) && x(c).cls === 'base' && (X.terminos || {})[c]);
+      if (fueraP.length) h += `<h3 class="sec">Fuera de lo probable</h3><ul>${fueraP.map(c => li('#2f5a25', byCode[c].userData.d.name, sinNombre(X.terminos[c], byCode[c].userData.d.name), true)).join('')}</ul>`;
+    }
+    const nunca = codes.filter(c => x(c).cls === 'never');
+    const neg = tono === 'neg' ? [] : codes.filter(c => x(c).neg && x(c).cls !== 'never');
+    if (nunca.length || neg.length) {
+      h += `<h3 class="sec">${enContra}</h3><ul>${nunca.map(c => li('#0c0c0c', byCode[c].userData.d.name, sinNombre((RS.nunca || {})[c] || '', byCode[c].userData.d.name), true)).join('')}`
+        + (neg.length ? li('#0c0c0c', yy(neg.map(c => byCode[c].userData.d.name)), suelto ? '' : NW.fuente, true) : '') + '</ul>';
+    }
+    if (!h) h = `<ul>${li('#2f5a25', 'Sin datos para este rasgo', '', true)}</ul>`;
+    return `<h2>${esc(nombreUnidad(u))}</h2><div class="donde">${esc([suelto ? 'Ciudad' : 'Comarca', yy(prov), area].join(' · '))}</div>${h}`;
   }
 
   function infoEncuestas(d) {
@@ -1841,7 +1912,7 @@ async function crearMapa(baseP) {
   return {
     cargarRasgo(datos) {
       MODO = 'rasgo'; EN = null;
-      RS = datos.rasgo; CL = datos.clases; sel = null;
+      RS = datos.rasgo; CL = datos.clases; sel = null; selCom = null;
       wideBB = bbox(base.munis.filter(d => d.area === 'core' || (CL[d.code] && CL[d.code].cls === 'out')).map(d => d.rings));
       // La extensión probable se encuadra con todo lo que pinta: en un rasgo de toda Extremadura, la región entera
       probBB = bbox(base.munis.filter(d => d.area === 'core' || /^(06|10)/.test(d.code) || (CL[d.code] && ['out', 'prob', 'part', 'never'].includes(CL[d.code].cls))).map(d => d.rings));
@@ -1860,7 +1931,7 @@ async function crearMapa(baseP) {
       irA(0);
     },
     cargarEncuestas(F) {
-      MODO = 'encuestas'; EN = F; RS = null; CL = {}; sel = null;
+      MODO = 'encuestas'; EN = F; RS = null; CL = {}; sel = null; selCom = null;
       if (!isoLines.length) crearIsoglosas(F.isoglosas);
       const red = new Set(Object.keys(F.nombres));
       redBB = bbox(base.munis.filter(d => d.area === 'core' || red.has(d.code)).map(d => d.rings));

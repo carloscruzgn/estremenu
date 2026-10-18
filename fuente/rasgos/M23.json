@@ -75,5 +75,13 @@
   ],
   "_nota": "Débil en el recuadro de RM23. El Rebollar, que RM23 tenía en débil, va sin tono: no hay fuente leída"
  },
- "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974, y otras fuentes del taller",
+ "extension": {
+  "terminos": {
+   "10006": "Ahigal: viluquí, viluhí (Paniagua 2002).",
+   "10082": "Garrovillas de Alconétar: velay (Marcos de Sande 1947).",
+   "10172": "Santibáñez el Bajo: pos velaí, en el sainete de Vicente Corrales, 1901."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

@@ -158,5 +158,14 @@
    }
   ]
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · ALEP · González Salgado 2009, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · ALEP · González Salgado 2009, y otras fuentes del taller",
+ "extension": {
+  "terminos": {
+   "10050": "Casar de Palomero: nadie lo encuestó para este rasgo, y lo rodean pueblos que lo tienen."
+  },
+  "comarcas": {
+   "rebollar": "El imperativo en -ái, «no muy frecuente», y sin -oren (Iglesias Ovejero 2010, p. 54)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

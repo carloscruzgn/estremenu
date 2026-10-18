@@ -84,5 +84,9 @@
    "10025": "Barrado: lah mah de lah cerezah (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
   }
  },
- "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller",
+ "extension": {
+  "probable": "De norte a sur de Extremadura (Montero Curiel 2006, pp. 30 y 49)."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

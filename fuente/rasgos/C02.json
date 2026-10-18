@@ -133,5 +133,12 @@
   "termino": "06028",
   "texto": "En <b>Campanario</b> la jota rasca, como en Castilla"
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller",
+ "extension": {
+  "probable": "En toda Extremadura (Montero Curiel 2006, p. 44; González Salgado 2003, pp. 597-598).",
+  "comarcas": {
+   "rebollar": ""
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

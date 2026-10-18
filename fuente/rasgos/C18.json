@@ -99,5 +99,13 @@
   ]
  },
  "_probable": "Las 24 comarcas, como en C03: el rasgo es consecuencia de la aspiración de la -s, general en Extremadura (Montero Curiel 2006, pp. 41-43). Fuera Eljas y Cedillo, que no aspiran la -s (González Salgado 2003, C03)",
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 y 2007 · Montero Curiel 2006, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 y 2007 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "Sale de la aspiración de la -s, general en Extremadura (Montero Curiel 2006, pp. 41-43).",
+  "terminos": {
+   "10072": "Eljas: no aspira la -s (González Salgado 2003).",
+   "10062": "Cedillo: no aspira la -s (González Salgado 2003)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

@@ -133,5 +133,9 @@
    "10025": "Barrado: hogaño, ansina, abate y albati «casi», ondi, entavía, contrimás (Flores del Manzano 1992, p. 131, para la sierra del Jerte)"
   }
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · Montero Curiel 2006 · Flores del Manzano 1992, y otras fuentes del taller",
+ "extension": {
+  "probable": "En toda Extremadura (Montero Curiel 2006, pp. 53-54). Krüger, § 316, lo da limitado en lo esencial a Extremadura."
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

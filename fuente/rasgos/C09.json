@@ -107,5 +107,17 @@
  "nunca": {
   "10216": "Zarza de Granadilla y Granadilla: azeite, sin [đ] en ninguna voz (Krüger 1914, § 358)"
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · Iglesias Ovejero 2010 · González Salgado 2003, y otras fuentes del taller",
+ "extension": {
+  "terminos": {
+   "10072": "Eljas: la fala se deja aparte, porque sus sonoras son las del portugués.",
+   "10164": "San Martín de Trevejo: la fala se deja aparte, porque sus sonoras son las del portugués.",
+   "10205": "Valverde del Fresno: la fala se deja aparte, porque sus sonoras son las del portugués."
+  },
+  "comarcas": {
+   "miajadas": "Espinosa 1935 recogió sonoras en la comarca (vía Montero Curiel 2006).",
+   "bejar": "Espinosa 1935 recogió sonoras en la comarca (vía Montero Curiel 2006)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

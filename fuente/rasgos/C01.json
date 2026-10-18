@@ -141,5 +141,12 @@
   "termino": "10072",
   "texto": "En la <b>fala</b> se dice con f: <i>figueira</i>, <i>ferru</i>"
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Iglesias Ovejero 2010, y otras fuentes del taller",
+ "extension": {
+  "probable": "El ALPI lo da en casi toda Extremadura (vía Montero Curiel 2006, p. 14).",
+  "comarcas": {
+   "rebollar": ""
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }

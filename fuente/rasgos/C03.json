@@ -148,5 +148,12 @@
   "termino": "10072",
   "texto": "En <b>Eljas</b> la s no se aspira"
  },
- "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller"
+ "fuentes_cierre": "Datos: Krüger 1914 · Velo Nieto 1956 · Cummins 1974 · González Salgado 2003 · Montero Curiel 2006, y otras fuentes del taller",
+ "extension": {
+  "probable": "En toda Extremadura (González Salgado 2003, pp. 598-602; Montero Curiel 2006, pp. 41-42).",
+  "comarcas": {
+   "rebollar": "Esporádica, como en doháreas, por influjo del sur (Iglesias Ovejero 2010, p. 49)."
+  }
+ },
+ "_extension": "Lo que dice la ficha de cada comarca en la extensión probable: probable y algunos, el texto para las comarcas con ese tono; comarcas, el de una comarca concreta («» para el texto por defecto); terminos, el de un pueblo con tono propio o fuera de lo probable. Solo dato de fuente, con autor y página (Carlos, 18/10/2026)"
 }
