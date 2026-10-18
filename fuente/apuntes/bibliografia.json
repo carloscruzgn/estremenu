@@ -6,7 +6,7 @@
  "bloques": [
   {
    "t": "p",
-   "texto": "Las obras con las que se ha preparado el taller. La primera lista recoge las que se han consultado de primera mano. La segunda, las que se citan a través de otras o están por consultar. Las referencias que aún tienen algún dato por completar se añadirán cuando lo tengan."
+   "texto": "Las obras con las que se ha preparado el taller. La primera lista recoge las que se han consultado de primera mano. La segunda, las que se citan a través de otras o están por consultar."
   },
   {
    "t": "h",
@@ -21,34 +21,29 @@
      "resto": "«El habla en Guijo de Galisteo y pueblos cercanos», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla, pp. 220-224."
     },
     {
-     "autor": "ARIZA, Manuel",
+     "autor": "ARIZA VIGUERA, Manuel",
      "anio": "1980",
      "resto": "«Apuntes de geografía lingüística extremeña», *AEF* 3, pp. 21-29."
     },
     {
-     "autor": "ARIZA, Manuel",
+     "autor": "ARIZA VIGUERA, Manuel",
      "anio": "1985",
      "resto": "«Dos estudios de historia lingüística de Extremadura (I. Documentos y fueros de los siglos XIII y XIV. II. Las Ordenanzas del Concejo de Valencia de Alcántara)», *Anuario de Estudios Filológicos* VIII, pp. 7-18."
     },
     {
-     "autor": "ARIZA, Manuel",
-     "anio": "1993",
-     "resto": "«Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, pp. 149-161."
-    },
-    {
-     "autor": "ARIZA, Manuel",
-     "anio": "1995",
-     "resto": "«Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, pp. 77-88."
-    },
-    {
-     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio",
-     "anio": "1992a",
-     "resto": "«/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, pp. 173-176."
+     "autor": "ARIZA VIGUERA, Manuel",
+     "anio": "1993a",
+     "resto": "«Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* 16, pp. 7-22."
     },
     {
      "autor": "ARIZA VIGUERA, Manuel",
-     "anio": "1993",
-     "resto": "«Comentario de “Textos extremeños”», *Anuario de Estudios Filológicos* 16, pp. 7-22."
+     "anio": "1993b",
+     "resto": "«Notas sobre el léxico extremeño», *Philologia Hispalensis* 8, pp. 149-161."
+    },
+    {
+     "autor": "ARIZA VIGUERA, Manuel",
+     "anio": "1995",
+     "resto": "«Leonesismos y occidentalismos en las lenguas y dialectos de España», *Philologia Hispalensis* 10, pp. 77-88."
     },
     {
      "autor": "ARIZA VIGUERA, Manuel",
@@ -59,6 +54,11 @@
      "autor": "ARIZA VIGUERA, Manuel",
      "anio": "2007",
      "resto": "«Sobre la lengua de Luis Chamizo», *Anuario de Estudios Filológicos* XXX, pp. 9-18."
+    },
+    {
+     "autor": "ARIZA VIGUERA, Manuel, y SALVADOR PLANS, Antonio",
+     "anio": "1992a",
+     "resto": "«/b/ oclusiva y /b/ fricativa en Serradilla, Cáceres», *Anuario de Letras* XXX, pp. 173-176."
     },
     {
      "autor": "BARROSO GUTIÉRREZ, Félix",
@@ -225,12 +225,12 @@
      "resto": "*Requilorios*, Cáceres, Institución Cultural El Brocense."
     },
     {
-     "autor": "ALVAR, M.",
+     "autor": "ALVAR, Manuel",
      "anio": "1960",
      "resto": "«Los dialectalismos en la poesía española del siglo XX», *RFE* 43, pp. 57-79."
     },
     {
-     "autor": "ALVAR, M.",
+     "autor": "ALVAR, Manuel",
      "anio": "1965",
      "resto": "*Poesía española dialectal*, Madrid."
     },
@@ -240,17 +240,17 @@
      "resto": "«Ramón Menéndez Pidal y José María Gabriel y Galán (cinco cartas inéditas de Don Ramón sobre el Romancero)», *Homenaje Universitario a Dámaso Alonso*, Madrid, Gredos, pp. 161-170."
     },
     {
-     "autor": "ARIZA, M.",
+     "autor": "ARIZA VIGUERA, Manuel",
      "anio": "1994a",
      "resto": "*Comentarios de textos dialectales*, Madrid, Arco/Libros."
     },
     {
-     "autor": "ARIZA, M.",
+     "autor": "ARIZA VIGUERA, Manuel",
      "anio": "1994b",
      "resto": "*Sobre fonética histórica del español*, Madrid, Arco/Libros."
     },
     {
-     "autor": "ARIZA, Manuel, y SALVADOR PLANS, Antonio",
+     "autor": "ARIZA VIGUERA, Manuel, y SALVADOR PLANS, Antonio",
      "anio": "1992b",
      "resto": "«Sobre la conservación de sonoras en la provincia de Cáceres», *ZRPh* 108, pp. 276-292."
     },
@@ -300,7 +300,7 @@
      "resto": "«La investigación científica en el habla de Extremadura», *AEF* XXXVII, pp. 5-20."
     },
     {
-     "autor": "FLORES DEL MANZANO, F.",
+     "autor": "FLORES DEL MANZANO, Fernando",
      "anio": "1985",
      "resto": "«Vocabulario doméstico de la alta Extremadura», *REE* XLI, pp. 325-351."
     },
@@ -340,7 +340,7 @@
      "resto": "*Demosofía extremeña. La musa religiosa popular*, Cáceres."
     },
     {
-     "autor": "GONZÁLEZ SALGADO, J. A.",
+     "autor": "GONZÁLEZ SALGADO, José Antonio",
      "anio": "2003a",
      "resto": "«El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, pp. 137-140."
     },
@@ -355,7 +355,7 @@
      "resto": "«Pervivencia actual de la *ll* en el suroeste de España», *RFE* LIX, pp. 119-143."
     },
     {
-     "autor": "HOYOS PIÑAS, J. M.",
+     "autor": "HOYOS PIÑAS, Juan Martín",
      "anio": "2004",
      "resto": "«Nuevas notas sobre morfosintaxis extremeñas», *Interlingüística* 15 (2), pp. 737-742."
     },
@@ -420,32 +420,32 @@
      "resto": "«Ortografía y grafías en los escritores extremeños», *Actas del VIII Congreso de Estudios Extremeños*, pp. 2046-2058."
     },
     {
-     "autor": "SALVADOR PLANS, A.",
+     "autor": "SALVADOR PLANS, Antonio",
      "anio": "1981",
      "resto": "«¿Tres pueblos de habla extremeña en Andalucía?», *AEF* IV, pp. 221-231."
     },
     {
-     "autor": "SALVADOR PLANS, A.",
+     "autor": "SALVADOR PLANS, Antonio",
      "anio": "1999",
      "resto": "«Lengua, casticismo e intrahistoria en Luis Chamizo», *Analecta Malacitana*, anejo XXIV, pp. 255-268."
     },
     {
-     "autor": "SALVADOR PLANS, A.",
+     "autor": "SALVADOR PLANS, Antonio",
      "anio": "2003",
      "resto": "«Notas sobre la diversidad dialectal de Extremadura», en *Homenaje al Profesor Estanislao Ramón Trives*, Murcia, Universidad, pp. 719-743."
     },
     {
-     "autor": "SALVADOR PLANS, A.",
+     "autor": "SALVADOR PLANS, Antonio",
      "anio": "2005a",
      "resto": "«El habla popular en la prosa de José María Gabriel y Galán», *Salamanca. Revista de Estudios* 52, pp. 315-340."
     },
     {
-     "autor": "SALVADOR PLANS, A.",
+     "autor": "SALVADOR PLANS, Antonio",
      "anio": "2006",
      "resto": "«El habla popular en los escritores extremeños finiseculares», en A. Salvador Plans y Á. Valverde (coords.), *Gabriel y Galán, época y obra*, Mérida, Editora Regional de Extremadura, pp. 249-279."
     },
     {
-     "autor": "SANDE BUSTAMANTE, M. de",
+     "autor": "SANDE BUSTAMANTE, María de las Mercedes de",
      "anio": "1986",
      "resto": "*El léxico y la toponimia de las tierras de Alcántara (Cáceres)*, Salamanca."
     },
