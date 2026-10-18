@@ -375,9 +375,13 @@ span.fila .tit { color: var(--texto-2) }
 .apartado .informante .al-texto { display: inline-block; margin: 0 0 14px; font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
 .apartado .informante .al-texto:hover { text-decoration: underline }
 .apartado .fuentes { clear: both; font-size: 14px; color: var(--texto-3); border-top: 1px solid var(--linea); padding-top: 14px; margin-top: 30px }
-.texto-pag .sobre { display: inline-block; margin: 14px 0 0 18px; font-weight: 800; font-size: 14px; color: var(--naranja); text-decoration: none }
-.texto-pag .sobre:hover { text-decoration: underline }
-@media (max-width: 560px) { .texto-pag .sobre { display: block; margin: 10px 0 0 } }
+.tarjeta-autor { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 16px; align-items: center; margin-top: 18px; max-width: 620px; padding: 10px 18px 10px 10px; border-radius: 10px; background: var(--fondo-2); border: 1px solid var(--linea); text-decoration: none }
+.tarjeta-autor:hover { background: var(--fondo-3) }
+.tarjeta-autor:hover b { color: var(--naranja) }
+.tarjeta-autor img { width: 56px; height: 72px; object-fit: cover; object-position: center top; border-radius: 5px; display: block }
+.tarjeta-autor b { display: block; font-weight: 800; font-size: 16px; line-height: 1.3 }
+.tarjeta-autor .sub { display: block; font-size: 14px; color: var(--texto-3); margin-top: 3px }
+.tarjeta-autor .ir { font-weight: 900; font-size: 20px; color: var(--naranja) }
 .apartado .boton { display: inline-block; margin: 8px 0 20px; padding: 12px 18px; border-radius: 6px; background: var(--naranja); color: var(--fondo); font-weight: 800; text-decoration: none }
 .pasos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--linea); max-width: 100% !important }
 .pasos a { text-decoration: none; padding: 12px 14px; border-radius: 6px; background: var(--fondo-2); display: grid; gap: 2px; min-width: 0 }
@@ -748,7 +752,7 @@ function pintarTexto(t) {
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
-      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>${(() => { const a = AU && AU.autores.find(x => x.textos.includes(t.codigo)); if (!a) return ''; const inf = a.bloques.find(b => b.t === 'informante' && b.texto === t.codigo); return `<a class="sobre" href="#autor-${a.id}${inf ? '-' + inf.id : ''}">${esc(a.enlace)} →</a>`; })()}</div>
+      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>${tarjetaAutor(t)}</div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
@@ -799,6 +803,14 @@ function pintarApartado(a) {
     <div class="antetitulo">${a.n ? 'El contenido del taller · apartado ' + a.n : 'El contenido del taller'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
+}
+// Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
+function tarjetaAutor(t) {
+  const a = AU && AU.autores.find(x => x.textos.includes(t.codigo));
+  if (!a) return '';
+  const inf = a.bloques.find(b => b.t === 'informante' && b.texto === t.codigo);
+  const sub = inf ? `${a.resumen}: ${inf.codigo}, de ${inf.pueblo}` : a.resumen;
+  return `<a class="tarjeta-autor" href="#autor-${a.id}${inf ? '-' + inf.id : ''}">${a.imagen ? `<img src="${a.imagen.src}" alt="" width="${a.imagen.ancho}" height="${a.imagen.alto}" loading="lazy">` : ''}<span><b>Aprende más sobre ${esc(a.corto)} y «${esc(t.titulo)}»</b><span class="sub">${esc(sub)}</span></span><span class="ir" aria-hidden="true">→</span></a>`;
 }
 // Página de un autor o de una fuente: bloques como los de un apartado, con las fichas de los informantes y un enlace a su texto
 function pintarAutor(a, sub) {

@@ -6,8 +6,9 @@
       "antetitulo": "El autor de «El embargo»",
       "titulo": "José María Gabriel y Galán",
       "entradilla": "Un poeta de Frades de la Sierra que escribió con el habla del Guijo de Granadilla.",
-      "enlace": "Gabriel y Galán y «El embargo»",
-      "imagen": null,
+      "corto": "Gabriel y Galán",
+      "resumen": "Su vida, el habla del Guijo y el poema",
+      "imagen": { "src": "img/autores/gabriel-y-galan.webp", "ancho": 600, "alto": 850, "alt": "Retrato de José María Gabriel y Galán", "pie": "José María Gabriel y Galán. Fotografía de dominio público." },
       "textos": ["TEX-01"],
       "bloques": [
         { "t": "h", "texto": "Su vida" },
@@ -35,8 +36,9 @@
       "antetitulo": "El autor de las conversaciones",
       "titulo": "John G. Cummins y su libro",
       "entradilla": "*El habla de Coria y sus cercanías*, de 1974, de donde salen las conversaciones que leemos en el taller. Es la única monografía de la comarca.",
-      "enlace": "Cummins, su libro y quien habla",
-      "imagen": null,
+      "corto": "Cummins",
+      "resumen": "Su libro, cómo grabó y quién habla",
+      "imagen": { "src": "img/autores/cummins-portada.webp", "ancho": 345, "alto": 480, "alt": "Portada de El habla de Coria y sus cercanías, de John G. Cummins", "pie": "La portada del libro: Tamesis Books, Londres, 1974." },
       "textos": ["TEX-02", "TEX-03"],
       "bloques": [
         { "t": "h", "texto": "El libro" },
