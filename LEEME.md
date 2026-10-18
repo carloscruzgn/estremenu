@@ -1,6 +1,6 @@
 # Taller de estremeñu · web
 
-Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabajo, sin difundir: el repositorio es privado y la web se ve en https://estremenu.pages.dev (ver «Vista en el navegador»). Lo vigente —qué lleva, de dónde se copia cada parte y qué queda— está en la ficha 12-WEB del proyecto del taller. La web es copia: lo que se corrige, se corrige en la fuente y se vuelve a copiar.
+Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Se da al alumnado del taller desde el lunes 19/10/2026, sin otra difusión: el repositorio es privado y la web se ve en https://estremenu.pages.dev (ver «Vista en el navegador»). Lo vigente —qué lleva, de dónde se copia cada parte y qué queda— está en la ficha 12-WEB del proyecto del taller. La web es copia: lo que se corrige, se corrige en la fuente y se vuelve a copiar.
 
 ## Partes
 
@@ -54,4 +54,4 @@ Los del cuerpo del reel: fondo #132e0d, área #85be6d, contacto #3d6a33, recogid
 
 ## Vista en el navegador
 
-Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img y _headers; directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. `_headers` manda a los buscadores no indexarla (`X-Robots-Tag: noindex, nofollow`); se quita al abrirla.
+Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img y _headers; directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. publicar.sh pone además en el pie la fecha de la publicación, en hora de Madrid, sobre la que lleva index.html (`<time data-fecha>`), que es la que se ve en el artifact. `_headers` manda a los buscadores no indexarla (`X-Robots-Tag: noindex, nofollow`); se quita al abrirla.
