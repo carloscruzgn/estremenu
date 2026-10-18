@@ -210,5 +210,6 @@ const salida = {
   fuentes, abreviaturas, taller: { nuevas, confirma }
 };
 fs.writeFileSync(path.resolve(aqui, '../datos/diccionario.json'), JSON.stringify(salida));
+fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-cifras.json'), JSON.stringify({ fecha: salida.fecha, lemas: salida.lemas }));
 console.log('diccionario.json:', entradas.length, 'lemas;', nuevas.length, 'nuevas y', confirma.length, 'confirmadas por el taller;', fuentes.length, 'fuentes');
 for (const a of new Set(avisos)) console.log('  aviso:', a);

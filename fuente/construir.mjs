@@ -111,12 +111,20 @@ const AU = leer('autores.json');
 for (const a of AU.autores) for (const c of a.textos) if (!TX.some(t => t.codigo === c)) { console.error('autores.json:', a.id, 'nombra un texto que no está:', c); process.exit(1); }
 fs.writeFileSync(path.join(destino, 'autores.json'), JSON.stringify(AU));
 console.log('autores.json:', AU.autores.length, 'páginas de autor');
+// Las cifras del diccionario para la tarjeta de la portada, sin cargar el diccionario entero
+const DICC = path.join(destino, 'diccionario.json');
+if (fs.existsSync(DICC)) { const D = JSON.parse(fs.readFileSync(DICC)); fs.writeFileSync(path.join(destino, 'diccionario-cifras.json'), JSON.stringify({ fecha: D.fecha, lemas: D.lemas })); }
 // Los signos de Cummins, para la transcripción de sus conversaciones
 fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-cummins.json')));
 // Las claves del formulario del diccionario, solo en resumen SHA-256 (las claves en claro no están en el repositorio)
 fs.writeFileSync(path.join(destino, 'claves.json'), JSON.stringify(leer('claves.json')));
 // Los apartados de los apuntes del alumnado, para la sección «El contenido del taller»
 const AP = leer('apuntes/apartados.json');
+// «Antes de empezar» no lleva página: su texto es la entradilla de «El contenido del taller» (Carlos, 19/10/2026)
+const antes = AP.apartados.find(a => a.id === 'antes');
+if (!antes) { console.error('apartados.json: falta «Antes de empezar», que da la entradilla'); process.exit(1); }
+AP.entradilla = antes.bloques.filter(b => b.t === 'p').map(b => b.texto).join(' ');
+AP.apartados = AP.apartados.filter(a => a !== antes);
 // y al final, la bibliografía, del § 7 de los apuntes propios (fuente/apuntes/bibliografia.py)
 AP.apartados.push(leer('apuntes/bibliografia.json'));
 fs.writeFileSync(path.join(destino, 'apuntes.json'), JSON.stringify(AP));
