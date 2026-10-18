@@ -805,7 +805,7 @@ span.fila .tit { color: var(--texto-2) }
         </fieldset>
         <div class="campo"><label for="f-frase">Una frase en que se diga <span class="opc">(si quieres)</span></label><textarea id="f-frase" name="frase" rows="2"></textarea></div>
         <input type="text" name="_gotcha" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <p class="dic-datos">Lo que envías con este formulario llega por correo al profesor del taller, Carlos Cruz González (<a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a>), a través de Formspree, un servicio de formularios con servidores en Estados Unidos que guarda una copia durante 30 días. Sirve solo para estudiar las palabras del taller y, si se decide, para incluirlas en el diccionario de vocablos del noroeste. Tu nombre no se publica nunca sin tu autorización expresa: junto a la palabra sale solo el pueblo. Los datos no se usan para nada más ni se ceden a nadie. Si quieres que se borre lo que has enviado, escribe a ese correo o díselo al profesor en clase.</p>
+        <p class="dic-datos">Lo que envías con este formulario llega por correo al profesor del taller, Carlos Cruz González (<a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a>), a través de Formspree, un servicio de formularios con servidores en Estados Unidos que guarda una copia durante 30 días. Sirve solo para estudiar las palabras del taller y, si se decide, para incluirlas en el diccionario de vocablos del noroeste. Tu nombre no se publica nunca sin tu autorización expresa: junto a la palabra salen solo el pueblo y tu código de informante. Los datos no se usan para nada más ni se ceden a nadie. Si quieres que se borre lo que has enviado, escribe a ese correo o díselo al profesor en clase.</p>
         <button type="submit" class="enviar" id="f-enviar">Enviar la palabra</button>
         <p class="estado-envio" id="f-estado" role="status" hidden></p>
       </form>
@@ -964,7 +964,7 @@ function pintarTaller() {
   const { nuevas, confirma } = DIC.taller;
   const pueblos = new Set([...nuevas, ...confirma].flatMap(x => x.lugar.split(', ')).filter(Boolean));
   $('dic-cifras').innerHTML = [[nuevas.length, nuevas.length === 1 ? 'palabra nueva' : 'palabras nuevas'], [confirma.length, confirma.length === 1 ? 'confirmada' : 'confirmadas'], [pueblos.size, pueblos.size === 1 ? 'pueblo' : 'pueblos']].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
-  const item = x => `<li><button type="button" data-id="${x.id}">${esc(x.lema)}</button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc(x.lugar)}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
+  const item = x => `<li><button type="button" data-id="${x.id}">${esc(x.lema)}</button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc([x.lugar, x.inf].filter(Boolean).join(' · '))}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
   $('dic-nuevas').innerHTML = nuevas.length ? nuevas.map(item).join('') : '<li class="vacio">Todavía no ha entrado ninguna.</li>';
   $('dic-confirma').innerHTML = confirma.length ? confirma.map(item).join('') : '<li class="vacio">Todavía no ha entrado ninguna.</li>';
 }

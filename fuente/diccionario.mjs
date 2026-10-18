@@ -183,7 +183,7 @@ for (const e of entradas) {
   if (!inf.length) continue;
   const resto = e.ts.filter(t => !/^Informante\b/.test(t.fuente));
   const glosa = limpia((acepDe.get(e.id) || []).find(a => a['acepción'] === inf[0]['acepción'])?.glosa || '');
-  const base = { id: e.id, lema: e.lema, glosa, lugar: [...new Set(inf.map(t => localidadDe(t) || comarcaDe(t)).filter(Boolean))].join(', '), orden: inf.map(t => t.id).sort().pop() };
+  const base = { id: e.id, lema: e.lema, glosa, lugar: [...new Set(inf.map(t => localidadDe(t) || comarcaDe(t)).filter(Boolean))].join(', '), inf: [...new Set(inf.map(t => sigla(t.fuente)))].join(', '), orden: inf.map(t => t.id).sort().pop() };
   if (!resto.length) nuevas.push(base);
   else {
     const prim = resto.slice().sort((x, y) => anio(x['fecha del dato']) - anio(y['fecha del dato']))[0];
