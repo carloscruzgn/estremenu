@@ -96,6 +96,12 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .encuestas-breve li b { color: var(--naranja); font-weight: 900; font-variant-numeric: tabular-nums }
 .encuestas-breve li strong { color: var(--texto); font-weight: 800 }
 .encuestas-breve h3 { margin: 22px 0 0; font-weight: 800; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--texto-3) }
+.otros-estudios { margin-top: 18px; border-top: 1px solid var(--linea) }
+.otros-estudios summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding-top: 14px; font-weight: 800; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--texto-3) }
+.otros-estudios summary::-webkit-details-marker { display: none }
+.otros-estudios summary::before { content: ''; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .2s; flex: none }
+.otros-estudios[open] summary::before { transform: rotate(45deg) }
+.otros-estudios summary:hover, .otros-estudios summary:focus-visible { color: var(--texto-2) }
 .encuestas-breve ul.otros { margin-top: 10px; gap: 8px }
 .encuestas-breve ul.otros li { font-size: 14px; color: var(--texto-2) }
 .encuestas-breve ul.otros li b { color: var(--texto-3); font-weight: 800 }
@@ -679,14 +685,16 @@ span.fila .tit { color: var(--texto-2) }
         <li><b>1967-1972</b><span><strong>John Cummins</strong>, un profesor inglés que habló con 42 personas de Coria y de doce pueblos de alrededor y grabó sus conversaciones.</span></li>
         <li><b>1995-1997</b><span><strong>José Antonio González Salgado</strong>, un profesor extremeño que preguntó en 58 pueblos de toda Extremadura, nueve de ellos en el área del taller o en su borde.</span></li>
       </ul>
-      <h3>Otros estudios</h3>
+      <div class="enlaces"><a href="#encuestas">Las tres encuestas, en detalle →</a></div>
+      <details class="otros-estudios">
+      <summary>Otros estudios</summary>
       <ul class="otros">
         <li><b>1956</b><span><strong>Juan José Velo Nieto</strong>, «El habla de las Hurdes»: la monografía de Las Hurdes, recogida en 41 de sus 42 alquerías, a medio camino entre Krüger y González Salgado.</span></li>
         <li><b>1980</b><span><strong>Antonio Viudas Camarasa</strong>, <i>Diccionario extremeño</i>: reúne las palabras publicadas hasta entonces, con el pueblo de cada una, pero sin la fecha en que se recogieron.</span></li>
         <li><b>2006</b><span><strong>Pilar Montero Curiel</strong>, <i>El extremeño</i>: el resumen de lo estudiado en toda Extremadura. No trae encuestas propias.</span></li>
         <li><b>2010</b><span><strong>Ángel Iglesias Ovejero</strong>, natural de Robleda: el habla de El Rebollar, ya en Salamanca, comparada con las de Extremadura.</span></li>
       </ul>
-      <div class="enlaces"><a href="#encuestas">Las tres encuestas, en detalle →</a></div>
+      </details>
     </section>
     <div class="grupos" id="lista-rasgos"></div>
   </div>
