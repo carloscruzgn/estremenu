@@ -136,5 +136,24 @@ enc.coinciden = enRed.filter(c => redes.filter(r => r[c]).length > 1);
 enc.isoglosas = ISO.features.map(f => ({ linea: f.properties.linea, principal: ['vertical', 'horizontal'].includes(f.properties.linea), pts: f.geometry.coordinates.map(xy) }));
 enc.desplazar = Object.fromEntries(Object.entries(ENC.desplazar || {}).filter(([k]) => k !== '_'));
 enc.letras = ENC.letras.map(l => { const [x, y] = xy([l.lon, l.lat]); return { t: l.t, x, y }; });
+// Áreas de González Salgado 2001 por términos: cada término extremeño va al área donde cae un punto de su interior
+// (el centroide de su superficie), como en COMARCAS-Y-MUNICIPIOS.md, sección 7. Las rayas se prolongan por sus extremos.
+const raya = l => enc.isoglosas.find(r => r.linea === l).pts;
+const enX = (pts, x) => { const q = [...pts].sort((a, b) => a[0] - b[0]); if (x <= q[0][0]) return q[0][1]; if (x >= q[q.length - 1][0]) return q[q.length - 1][1]; for (let i = 0; i < q.length - 1; i++) if (x <= q[i + 1][0]) { const t = (x - q[i][0]) / (q[i + 1][0] - q[i][0]); return q[i][1] + t * (q[i + 1][1] - q[i][1]); } };
+const enY = (pts, y) => { const q = [...pts].sort((a, b) => a[1] - b[1]); if (y <= q[0][1]) return q[0][0]; if (y >= q[q.length - 1][1]) return q[q.length - 1][0]; for (let i = 0; i < q.length - 1; i++) if (y <= q[i + 1][1]) { const t = (y - q[i][1]) / (q[i + 1][1] - q[i][1]); return q[i][0] + t * (q[i + 1][0] - q[i][0]); } };
+const RV = raya('vertical'), RH = raya('horizontal'), RD = raya('D'), RE = raya('E'), RF = raya('F');
+const yE = RE.map(p => p[1]), yEmin = Math.min(...yE), yEmax = Math.max(...yE);
+enc.zonas = {};
+for (const f of munis) {
+  if (!(f.id.startsWith('06') || f.id.startsWith('10'))) continue;
+  const q = pathGen.centroid(f), x = q[0], y = -q[1];
+  const oeste = x < enY(RV, y), norte = y > enX(RH, x);
+  let z = oeste ? 'C' : norte ? 'A' : 'B';
+  if (y > enX(RD, x)) z += '+D';
+  if (!oeste && y >= yEmin && y <= yEmax && x > enY(RE, y)) z += '+E';
+  if (y < enX(RF, x)) z += '+F';
+  enc.zonas[f.id] = z;
+}
+for (const [c, z] of Object.entries(ENC.zonas_corrige || {})) if (c !== '_') enc.zonas[c] = z;
 fs.writeFileSync(path.join(destino, 'encuestas.json'), JSON.stringify(enc));
 console.log('encuestas.json:', Object.keys(enc.kruger).length, 'términos de Krüger,', Object.keys(enc.cummins).length, 'de Cummins,', Object.keys(enc.gs).length, 'de González Salgado;', enc.coinciden.length, 'con dos o tres;', enc.isoglosas.length, 'rayas');

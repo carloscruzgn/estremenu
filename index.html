@@ -99,6 +99,34 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .etiq.letra { font-weight: 900; font-size: 24px; color: rgba(255, 255, 255, .9) }
 .leyenda .cuad.linea { height: 3px }
 .leyenda .cuad.trazos { height: 0; border-top: 3px dashed; background: none !important }
+/* Las tres encuestas, en detalle: el mapa fijo a la izquierda y el texto por apartados a la derecha */
+.enc-pag { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr); column-gap: 40px; padding-block: 24px 56px }
+.enc-mapa { position: sticky; top: calc(var(--alto-cab, 64px) + env(safe-area-inset-top, 0px) + 16px); height: calc(100vh - var(--alto-cab, 64px) - 40px); min-height: 520px; display: flex; flex-direction: column; gap: 12px; align-self: start }
+.enc-mapa .lienzo { position: relative; flex: 1 1 auto; min-height: 0; border-radius: 10px; overflow: hidden; background: var(--fondo); border: 1px solid var(--linea) }
+.enc-mapa .info { margin-top: 0; flex: none }
+.enc-mapa .mandos { display: none }
+.enc-texto { min-width: 0 }
+.enc-texto .paso { padding-block: 34px 120px; border-top: 1px solid var(--linea); min-height: 70vh }
+.enc-texto .paso.intro { border-top: 0; padding-top: 8px; min-height: 0; padding-bottom: 60px }
+.enc-texto .paso:last-child { min-height: 85vh }
+.enc-texto h1 { font-weight: 900; font-size: clamp(32px, 4vw, 46px); line-height: 1.04; letter-spacing: -.02em; margin-top: 10px }
+.enc-texto .volver { display: inline-block; margin-bottom: 18px }
+.enc-texto h2 { font-weight: 900; font-size: clamp(26px, 2.6vw, 32px); line-height: 1.08; letter-spacing: -.01em; margin-top: 6px; color: var(--naranja) }
+.enc-texto p { font-size: 17px; line-height: 1.7; color: rgba(238, 244, 233, .88); margin: 14px 0 0; max-width: 62ch }
+.enc-texto p.entradilla { font-size: 18px; color: var(--texto-2) }
+.enc-texto p.guia { font-size: 14px; color: var(--texto-3); border-left: 3px solid var(--verde); padding-left: 12px }
+.enc-texto p.nota { font-size: 14px; color: var(--texto-3) }
+.enc-texto .escenas { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 12px; max-width: 62ch }
+.enc-texto .escenas li { background: var(--fondo-2); border-radius: 8px; padding: 12px 16px; font-size: 15.5px; line-height: 1.6; color: var(--texto-2) }
+@media (max-width: 920px) {
+  .enc-pag { grid-template-columns: minmax(0, 1fr); padding-top: 0 }
+  .enc-mapa { top: calc(var(--alto-cab, 92px) + env(safe-area-inset-top, 0px)); height: 46svh; min-height: 300px; z-index: 5; background: var(--fondo); padding-block: 10px 8px; margin-inline: -4px }
+  .enc-mapa .rotulo .h { font-size: 20px } .enc-mapa .rotulo .anio { font-size: 34px } .enc-mapa .rotulo .s { display: none }
+  .enc-mapa .info { position: absolute; left: 8px; right: 8px; bottom: 14px; z-index: 6; max-height: 45%; overflow: auto; box-shadow: 0 4px 20px rgba(0, 0, 0, .4) }
+  .enc-mapa .info:has(.vacio) { display: none }
+  .enc-texto .paso { min-height: 60vh; padding-bottom: 80px }
+  .enc-texto .paso.intro { padding-top: 18px }
+}
 
 /* ---------- portada ---------- */
 .portada { padding-block: clamp(40px, 9vw, 104px) 56px }
@@ -471,8 +499,8 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">El contenido del taller · apartado 7</div>
     <h2 class="titulo-vista">Los rasgos, uno a uno</h2>
-    <p class="entradilla">Los que han estudiado el habla del noroeste desde 1912 han descrito muchos más rasgos de los que caben en un curso. Los apuntes del profesor los reúnen en un catálogo con número propio: V para las vocales, C para las consonantes, M para la gramática y P para la entonación. Cada rasgo conserva siempre su número, y un número no se vuelve a usar.</p>
-    <p class="entradilla">El taller trabaja una selección de treinta y uno, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en gris y sin página. Cada uno de los treinta y uno tiene la suya, con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y, cuando está hecho, su mapa por pueblos y por fechas.</p>
+    <p class="entradilla">Los que han estudiado el habla del noroeste desde 1912 han descrito muchos más rasgos de los que caben en un curso. Los apuntes del profesor los reúnen en un catálogo con número propio: V para las vocales, C para las consonantes, M para la gramática y P para la entonación.</p>
+    <p class="entradilla">El taller trabaja una selección de treinta y un rasgos, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en gris y sin página. Cada rasgo tiene su descripción con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
     <section class="encuestas-breve" aria-labelledby="eb-tit">
       <h2 id="eb-tit">De dónde salen los datos</h2>
       <p>Casi todo lo que cuentan las páginas de los rasgos sale de tres encuestas, hechas en tres momentos. Son las tres fechas que lleva cada rasgo.</p>
@@ -481,7 +509,7 @@ span.fila .tit { color: var(--texto-2) }
         <li><b>1967-1972</b><span><strong>John Cummins</strong>, un profesor inglés que habló con 42 personas de Coria y de doce pueblos de alrededor y grabó sus conversaciones.</span></li>
         <li><b>1995-1997</b><span><strong>José Antonio González Salgado</strong>, un profesor extremeño que preguntó en 58 pueblos de toda Extremadura, nueve de ellos en el área del taller o en su borde.</span></li>
       </ul>
-      <div class="enlaces"><a href="#encuestas">Las tres encuestas, en el mapa →</a><a href="#apuntes-4">Su historia, en el apartado 4 →</a></div>
+      <div class="enlaces"><a href="#encuestas">Las tres encuestas, en detalle →</a></div>
     </section>
     <div class="grupos" id="lista-rasgos"></div>
   </div>
@@ -553,6 +581,15 @@ span.fila .tit { color: var(--texto-2) }
   </div>
 </section>
 
+<section id="v-encuestas" class="vista enc" hidden style="padding-block:0">
+  <div class="envoltura">
+    <div class="enc-pag">
+      <div class="enc-mapa" id="enc-mapa"></div>
+      <div class="enc-texto" id="enc-texto"></div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="pie"><div class="envoltura">
@@ -588,18 +625,17 @@ async function ir() {
   const rasgo = CAT && CAT.rasgos.find(r => r.codigo === h && (r.mapa || r.pagina));
   const texto = TX && TX.find(t => t.codigo === h);
   const apartado = AP && h.startsWith('apuntes-') && AP.apartados.find(x => 'apuntes-' + x.id === h);
-  const encuestas = h === 'encuestas';
-  const sec = rasgo || encuestas ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario'].includes(h) ? h : 'inicio';
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || (sec === 'rasgo' && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'texto' && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   if (sec === 'inicio') animarPortada();
-  if (mapa) mapa.pausar(sec !== 'rasgo');
+  if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
   if (apartado) pintarApartado(apartado);
   if (texto) pintarTexto(texto);
   if (rasgo) await abrirRasgo(rasgo);
-  if (encuestas) await abrirEncuestas();
+  if (sec === 'encuestas') await abrirEncuestas();
 }
 
 // ================= los textos del taller =================
@@ -688,7 +724,7 @@ function pintarApartado(a) {
     : b.t === 'lista' ? `<ul>${b.items.map(x => `<li>${txt(x)}</li>`).join('')}</ul>`
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption><b>${b.codigo}</b>${esc(b.titulo)}. Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
-  const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en el mapa</a>' : '';
+  const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
     <div class="antetitulo">${a.n ? 'El contenido del taller · apartado ' + a.n : 'El contenido del taller'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
@@ -794,6 +830,7 @@ function pintarCabeza(codigo, R, pagina) {
 }
 
 async function abrirRasgo(r) {
+  moverMapa('rasgo');
   const datos = await json('datos/rasgos/' + r.codigo + '.json');
   pintarCabeza(r.codigo, datos.rasgo, datos.pagina);
   document.querySelector('.rasgo').classList.toggle('sin-mapa', !datos.rasgo);
@@ -805,33 +842,90 @@ async function abrirRasgo(r) {
 }
 
 // ================= las tres encuestas =================
-let ENCUESTAS = null;
+// Página propia: el mapa de los rasgos, fijo a un lado (arriba en el móvil), cambia de estado según el apartado que se lee
+let ENCUESTAS = null, pasoActual = null;
+// El lienzo del mapa y la caja de datos del pueblo son únicos: se mudan entre la página del rasgo y la de las encuestas
+function moverMapa(dest) {
+  const lz = $('lienzo'), inf = $('info');
+  if (dest === 'enc') { if (lz.parentNode.id !== 'enc-mapa') $('enc-mapa').append(lz, inf); return; }
+  const r = document.querySelector('.rasgo');
+  if (lz.parentNode !== r) { r.insertBefore(lz, r.querySelector('.estados')); r.insertBefore(inf, $('r-texto')); }
+}
+const TEXTO_ENCUESTAS = `
+  <section class="paso intro" data-estado="kruger">
+    <a class="volver" href="#rasgos">← Los rasgos</a>
+    <div class="antetitulo">De dónde salen los datos</div>
+    <h1>Las tres encuestas, en detalle</h1>
+    <p class="entradilla">Tres personas vinieron a estos pueblos a sentarse con la gente y apuntar cómo hablaba. Lo hicieron en tres momentos, con más de ochenta años entre la primera visita y la última, y gracias a ellas podemos comparar cómo se hablaba en tiempos de nuestros bisabuelos, en tiempos de nuestros padres y hace treinta años. Son las tres fechas que lleva cada rasgo. La cuarta la ponemos en el taller.</p>
+    <p class="guia">El mapa cambia con cada apartado al bajar por la página. Toca un pueblo para ver qué encuestas pasaron por él.</p>
+  </section>
+  <section class="paso" data-estado="kruger">
+    <div class="antetitulo">Primavera de 1912</div>
+    <h2>Fritz Krüger</h2>
+    <p>Un joven alemán, estudiante de lenguas, que recorrió una treintena de pueblos del norte de Cáceres y otros tantos de Zamora preguntando cómo se decía esto y aquello. Buscaba a propósito a la gente más vieja de cada pueblo, porque quería oír el habla de antes de que la escuela y los periódicos la cambiaran, y ya entonces escribió que en muchos sitios estaba a punto de desaparecer.</p>
+    <p>En el área del taller tiene veintidós puntos con número y dos sin él, Guijo de Coria y Abadía, con una persona o dos en cada uno. A Coria no vino. A ocho pueblos no llegó, y en el mapa van en claro: preguntó a alguien de allí que vivía o estaba en otro sitio. Lo que sabe de Montehermoso se lo contó una mujer de allí que vivía en Guijo de Galisteo.</p>
+    <p>Apuntó algo que vamos a ver muchas veces: cuando la gente empezaba a hablar con él, un señor forastero y con estudios, le daba primero las formas finas, con -e y con -o, y solo cuando se confiaba salían las de verdad. Escribió su libro en alemán, en 1914, con un alfabeto lleno de signos para apuntar cada sonido. No se tradujo al español hasta 2006.</p>
+    <p class="nota">Cambroncino y El Castillo, que son alquerías, van en el término de su municipio, y Granadilla, en el de Zarza de Granadilla.</p>
+  </section>
+  <section class="paso" data-estado="cummins">
+    <div class="antetitulo">1967, 1969 y 1972</div>
+    <h2>John Cummins</h2>
+    <p>Un profesor inglés que pasó tres temporadas en Coria y en doce pueblos de alrededor. Habló con 42 personas de todas las edades, desde un hombre de 85 años de Montehermoso que todavía vestía el traje de siempre hasta un chiquillo de doce, y de cada una apuntó la edad, el oficio, si sabía leer y si había salido del pueblo. Llevaba un magnetófono, y muchas grabaciones las hizo a escondidas, para que la gente no se cortara.</p>
+    <p>En el mapa, la altura de cada pueblo es el número de personas con que habló: quince en Montehermoso, nueve en Coria y una sola en ocho de los trece. Villa del Campo va en claro porque su informante se encuestó fuera del pueblo.</p>
+    <p>Su libro, <i>El habla de Coria y sus cercanías</i>, de 1974, trae cincuenta páginas de cómo suenan las palabras, otras tantas de nombres de las cosas del campo —el arado pieza por pieza, el telar, el horno, la matanza—, con dibujos y fotografías, y veintiuna conversaciones copiadas letra por letra. Las leemos en clase: son vecinos nuestros hablando de sus cosas hace sesenta años.</p>
+    <ul class="escenas">
+      <li>Un mozo de Portaje de 29 años que aspiraba la h —<i>jarina</i>, <i>jigu</i>— y sabía que no debía: «que está mejor dicho arina que no harina». Y lo seguía diciendo con jota.</li>
+      <li>Un chico de doce años de Montehermoso que cerraba todas las vocales finales sin cortarse, porque no iba a la escuela.</li>
+      <li>Una madre y una hija de Coria: la madre decía <i>castillu</i> y <i>gallina</i> con la ll de siempre, y la hija, de dieciocho años y preparando oposiciones, <i>castiyu</i> y <i>gayina</i>.</li>
+    </ul>
+  </section>
+  <section class="paso" data-estado="gs">
+    <div class="antetitulo">1995-1997</div>
+    <h2>José Antonio González Salgado</h2>
+    <p>Un profesor extremeño que recorrió 58 pueblos de toda la región con un cuestionario de más de quinientas preguntas, casi todas del campo: cómo se llama el sitio donde se guarda el grano, cómo se dice barbechar, qué nombre tiene la cría del cerdo. Preguntaba a personas de entre sesenta y ochenta años.</p>
+    <p>Del área del taller y de su borde pasó por Casar de Palomero, Ahigal, Guijo de Galisteo, Casas de Don Gómez, Portaje, Ceclavín, Garrovillas, Serradilla y Eljas, ya en la fala. A Coria tampoco vino. Con todo aquello dibujó mapas de Extremadura palabra por palabra.</p>
+  </section>
+  <section class="paso" data-estado="juntas">
+    <div class="antetitulo">Dónde se pueden comparar fechas</div>
+    <h2>Las tres juntas</h2>
+    <p>Las tres coinciden en un solo pueblo, Guijo de Galisteo. En Villa del Campo, Montehermoso, Torrejoncillo y Guijo de Coria hay dos fotos, la de 1912 y la de Cummins. En Casar de Palomero, Ahigal, Ceclavín y Garrovillas, la de 1912 y la de los años noventa. En Portaje y Casas de Don Gómez, la de Cummins y la de los noventa.</p>
+    <p>En las páginas de los rasgos, cuando decimos «en 1912 se decía» o «hacia 1970 todavía», hablamos de estas tres visitas. Y cuando un rasgo no sale en una de las fechas, muchas veces es porque a ese pueblo no fueron o porque no lo preguntaron.</p>
+  </section>
+  <section class="paso" data-estado="terminos">
+    <div class="antetitulo">González Salgado 2001</div>
+    <h2>Las áreas de las palabras</h2>
+    <p>Con sus datos, González Salgado dibujó en 2001 un mapa de las áreas del vocabulario de Extremadura. Dos rayas principales la parten en cuatro: una separa la Alta Extremadura de la Baja, y otra separa el oeste, más cercano al portugués, del centro y el este. Esa raya pasa por Coria. Quedan tres áreas grandes, A, la Alta Extremadura; B, la Baja; y C, el oeste; y tres pequeñas: D, la de Las Hurdes, Plasencia y Coria; E, a lo largo de la raya de Castilla; y F, el sur de Badajoz.</p>
+    <p>Aquí van pintadas por términos, para ver qué pueblos toca cada área: cada término va al área en la que cae un punto de su interior, y los que quedan dentro de D, E o F van más oscuros y más altos. Los que una raya corta podrían ir a un lado o al otro.</p>
+  </section>
+  <section class="paso" data-estado="areas">
+    <div class="antetitulo">González Salgado 2001</div>
+    <h2>Las áreas, como las dibujó</h2>
+    <p>Y así las dibujó: un esquema a mano, solo de palabras y sobre sus 58 puntos. Sus rayas no siguen los términos municipales, y por eso aquí van trazadas encima del mapa, sin pintar pueblos. Que una raya cruce un término solo quiere decir que el autor la trazó por allí.</p>
+    <p>El área D no es el área del taller: Ceclavín, Zarza la Mayor, Acehúche, Pescueza, Holguera, Serradilla y Garrovillas quedan fuera de ella.</p>
+  </section>`;
 async function abrirEncuestas() {
   ENCUESTAS ||= await json('datos/encuestas.json');
-  clearInterval(ejemploTimer); ejemploTimer = null; ++cabezaN;
-  $('r-cod').textContent = 'De dónde salen los datos';
-  $('r-tit').textContent = 'Las tres encuestas';
-  $('r-ejemplos').hidden = true; $('r-ejemplos').innerHTML = '';
-  $('r-texto').innerHTML = `<div class="ante">Las tres encuestas</div>
-    <h3>Fritz Krüger, 1912</h3>
-    <p>Estuvo en la primavera de 1912 y publicó su libro en 1914, en alemán. En el área del taller tiene veintidós puntos con número y dos sin él, Guijo de Coria y Abadía, con una persona o dos en cada uno, casi siempre de las más viejas. A ocho de esos pueblos no llegó: preguntó a alguien de allí que vivía o estaba en otro sitio, y en el mapa van en color claro. A Coria no fue.</p>
-    <p>Cambroncino y El Castillo, que son alquerías, van en el término de su municipio, y Granadilla, en el de Zarza de Granadilla.</p>
-    <h3>John Cummins, 1967-1972</h3>
-    <p>Tres campañas, en 1967, 1969 y 1972, y un libro en 1974, <i>El habla de Coria y sus cercanías</i>. Coria y doce pueblos de alrededor, con 42 personas de todas las edades. En el mapa, la altura de cada pueblo es el número de personas con que habló: quince en Montehermoso, nueve en Coria y una sola en ocho de los trece. Villa del Campo, en claro, se encuestó fuera del pueblo.</p>
-    <h3>José Antonio González Salgado, 1995-1997</h3>
-    <p>Recorrió 58 pueblos de toda Extremadura con un cuestionario de más de quinientas preguntas, a personas de entre sesenta y ochenta años. Del área del taller y de su borde, nueve: Casar de Palomero, Eljas, Ahigal, Guijo de Galisteo, Casas de Don Gómez, Portaje, Ceclavín, Garrovillas y Serradilla. Tampoco fue a Coria.</p>
-    <h3>Las tres juntas</h3>
-    <p>Solo coinciden en Guijo de Galisteo. En otros diez pueblos hay dos fechas: Villa del Campo, Montehermoso, Torrejoncillo y Guijo de Coria tienen la de 1912 y la de Cummins; Casar de Palomero, Ahigal, Ceclavín y Garrovillas, la de 1912 y la de los años noventa; Portaje y Casas de Don Gómez, la de Cummins y la de los noventa. Cuando un rasgo no sale en una de las fechas, muchas veces es porque a ese pueblo no fueron o porque no lo preguntaron.</p>
-    <h3>Las áreas de las palabras</h3>
-    <p>En 2001, González Salgado dibujó con sus datos un mapa de las áreas del vocabulario de Extremadura. Dos rayas principales la parten en cuatro: una separa la Alta Extremadura de la Baja, y otra separa el oeste, más cercano al portugués, del centro y el este. Esa raya pasa por Coria. Quedan así tres áreas grandes, A, la Alta Extremadura; B, la Baja; y C, el oeste; y tres pequeñas: D, la de Las Hurdes, Plasencia y Coria; E, a lo largo de la raya de Castilla; y F, el sur de Badajoz.</p>
-    <p>Es un esquema a mano, solo de palabras y sobre 58 puntos. Sus rayas no siguen los términos municipales, y por eso van dibujadas encima del mapa en lugar de pintar pueblos. El área D no es el área del taller.</p>
-    <p class="en-textos"><a href="#apuntes-4">La historia de cada encuesta, en el apartado 4 del contenido</a></p>`;
-  document.querySelector('.rasgo').classList.remove('sin-mapa');
+  const tx = $('enc-texto');
+  if (!tx.dataset.listo) { tx.innerHTML = TEXTO_ENCUESTAS; tx.dataset.listo = '1'; }
+  document.documentElement.style.setProperty('--alto-cab', document.querySelector('.cab').offsetHeight + 'px');
+  moverMapa('enc');
   const base = await (BASE ||= json('datos/base.json'));
   if (!mapa) mapa = await (cargandoMapa ||= crearMapa(base));
   mapa.cargarEncuestas(ENCUESTAS);
   mapa.pausar(false);
+  pasoActual = 'kruger'; seguirPasos();
 }
+// El apartado que manda es el último cuya cabecera ha pasado una línea a media pantalla (más abajo en el móvil, bajo el mapa)
+function seguirPasos() {
+  if ($('v-encuestas').hidden || !mapa || !mapa.estado) return;
+  const linea = innerHeight * (matchMedia('(max-width: 920px)').matches ? 0.72 : 0.45);
+  let id = 'kruger';
+  for (const p of document.querySelectorAll('#enc-texto .paso')) if (p.getBoundingClientRect().top < linea) id = p.dataset.estado;
+  if (id !== pasoActual) { pasoActual = id; mapa.estado(id); }
+}
+let pidePaso = false;
+addEventListener('scroll', () => { if (!pidePaso) { pidePaso = true; requestAnimationFrame(() => { pidePaso = false; seguirPasos(); }); } }, { passive: true });
+addEventListener('resize', () => { if (!$('v-encuestas').hidden) document.documentElement.style.setProperty('--alto-cab', document.querySelector('.cab').offsetHeight + 'px'); });
 
 // ================= el mapa =================
 async function crearMapa(baseP) {
@@ -1133,7 +1227,7 @@ async function crearMapa(baseP) {
   }
   const filaL = (color, texto, ol) => `<div class="fila-l"><span class="cuad${ol ? ' ol' : ''}" style="background:${color}"></span>${esc(texto)}</div>`;
   function pintarLeyenda(E) {
-    if (E.leyenda) { $('leyenda').innerHTML = E.leyenda.map(f => `<div class="fila-l"><span class="cuad${f.tipo ? ' ' + f.tipo : ''}" style="background:${f.c};color:${f.c}"></span>${esc(f.t)}</div>`).join(''); return; }
+    if (E.leyenda) { $('leyenda').innerHTML = E.leyenda.map(f => `<div class="fila-l"><span class="cuad${f.tipo ? ' ' + f.tipo : ''}" style="background:${f.c};color:${f.c.startsWith('#') ? f.c : 'transparent'}"></span>${esc(f.t)}</div>`).join(''); return; }
     const tipo = RS.tipo || 'regional', hay = c => Object.values(CL).some(x => x.cls === c);
     const L = Object.assign({ reg: 'Recogido en el pueblo', prob: 'Probable', part: 'En algunos pueblos de la comarca', neg: tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido', sin: 'Sin datos' }, RS.leyenda || {});
     let f = [];
@@ -1223,13 +1317,17 @@ async function crearMapa(baseP) {
       const n = [F.kruger, F.cummins, F.gs].filter(r => r[c]).length;
       J[c] = n === 3 ? { h: 1.15, c: C.reg } : n === 2 ? { h: 0.7, c: C.part } : { h: 0.38, c: C.prob };
     }
+    // Los términos que caen en D, E o F, en el tono oscuro de su área grande y más altos
+    const Z = {}, ZC = { A: col('#85be6d'), B: col('#ffc4a0'), C: col('#ff914d') }, ZO = { A: col('#3f7a2e'), B: col('#d9895a'), C: col('#b8501a') };
+    for (const [c, z] of Object.entries(F.zonas || {})) Z[c] = z.length > 1 ? { h: 0.6, c: ZO[z[0]] } : { h: 0.14, c: ZC[z[0]] };
     const enPueblo = [{ c: '#ff914d', t: 'Encuestado en el pueblo' }, { c: '#ffc4a0', t: 'Encuestado a distancia' }];
     return [
       { id: 'kruger', nombre: 'Krüger, 1912', k: 'Primavera de 1912', h: 'Fritz Krüger', s: 'En claro, donde no llegó: preguntó a alguien del pueblo que estaba en otro sitio', cam: 'red', capa: K, leyenda: enPueblo },
       { id: 'cummins', nombre: 'Cummins, 1967-1972', k: '1967, 1969 y 1972', h: 'John Cummins', s: 'Coria y doce pueblos. La altura es el número de personas con que habló, de una a quince', cam: 'red', capa: CU, leyenda: enPueblo },
       { id: 'gs', nombre: 'González Salgado, 1995-1997', k: '1995-1997', h: 'José Antonio González Salgado', s: 'Nueve de sus 58 pueblos están en el área del taller o en su borde', cam: 'red', capa: G, leyenda: [{ c: '#ff914d', t: 'Encuestado' }] },
       { id: 'juntas', nombre: 'Las tres juntas', k: 'Dónde se pueden comparar fechas', h: 'Las tres, solo en Guijo de Galisteo', s: 'En otros diez pueblos hay dos fechas', cam: 'red', capa: J, leyenda: [{ c: '#ff914d', t: 'Las tres encuestas' }, { c: '#b84c1e', t: 'Dos encuestas' }, { c: '#ffc4a0', t: 'Una encuesta' }] },
-      { id: 'areas', nombre: 'Las áreas de las palabras', k: 'González Salgado 2001', h: 'Las áreas de las palabras', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
+      { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. Más oscuro y más alto, si está dentro de D, E o F', cam: 'ext', capa: Z, ext: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#85be6d', t: 'A, la Alta Extremadura' }, { c: '#ffc4a0', t: 'B, la Baja' }, { c: '#ff914d', t: 'C, el oeste' }, { c: 'linear-gradient(90deg,#3f7a2e 33%,#d9895a 33% 66%,#b8501a 66%)', t: 'Más oscuro y más alto: dentro de D, E o F' }] },
+      { id: 'areas', nombre: 'Áreas, como las dibujó', k: 'González Salgado 2001', h: 'Las áreas, como las dibujó', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
     ];
   }
 
@@ -1269,11 +1367,12 @@ async function crearMapa(baseP) {
       etiqueta('Portugal', extBB.cx - extBB.w * 0.56, extBB.cy - extBB.h * 0.1, 0.1, 'grande');
       etiqueta('Salamanca', extBB.cx + extBB.w * 0.1, extBB.cy + extBB.h * 0.62, 0.2, 'grande');
       for (const c of F.coinciden) { const pz = byCode[c].userData.d.c, dd = (F.desplazar || {})[c] || [0, 0]; etiqueta(esc(F.nombres[c]), pz[0] + dd[0], pz[1] + dd[1], HREG, 'peq', ['juntas'], c); }
-      for (const L of F.letras) etiqueta(L.t, L.x, L.y, 0.25, 'letra', ['areas']);
+      for (const L of F.letras) etiqueta(L.t, L.x, L.y, 0.62, 'letra', ['terminos', 'areas']);
       ESTADOS = estadosEncuestas(F);
       const { p, t } = posDe(shots.red); controls.target.copy(t); ponerCam(p, t);
       irA(0);
     },
+    estado(id) { const i = ESTADOS.findIndex(E => E.id === id); if (i >= 0 && i !== actual) irA(i); },
     pausar(p) { pausado = p; if (!p) { medir(); pedir(); } },
   };
 }
