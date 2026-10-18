@@ -818,7 +818,7 @@ span.fila .tit { color: var(--texto-2) }
       <div class="dic-cifras" id="dic-cifras"></div>
       <div class="dic-col">
         <div><h4>Palabras nuevas</h4><p class="nota">No las traía ninguna de las obras del diccionario.</p><ul class="dic-aport" id="dic-nuevas"></ul></div>
-        <div><h4>Palabras que el taller confirma</h4><p class="nota">Ya estaban documentadas; aquí, la fecha más antigua y dónde.</p><ul class="dic-aport" id="dic-confirma"></ul></div>
+        <div><h4>Palabras que el taller confirma</h4><p class="nota">Ya estaban documentadas. En el taller se confirma su vigencia, se matiza la glosa o se añaden nuevas localizaciones a la palabra.</p><ul class="dic-aport" id="dic-confirma"></ul></div>
       </div>
     </section>
 
@@ -842,6 +842,7 @@ span.fila .tit { color: var(--texto-2) }
           <label class="op"><input type="radio" name="quien" value="Otras personas"> Otras personas</label>
         </fieldset>
         <div class="campo"><label for="f-frase">Una frase en que se diga <span class="opc">(si quieres)</span></label><textarea id="f-frase" name="frase" rows="2"></textarea></div>
+        <div class="campo"><label for="f-comentario">Algo más que quieras comentar sobre la palabra <span class="opc">(si quieres)</span></label><textarea id="f-comentario" name="comentario" rows="3"></textarea></div>
         <input type="text" name="_gotcha" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="dic-datos">Lo que envías con este formulario llega por correo al profesor del taller, Carlos Cruz González (<a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a>), a través de Formspree, un servicio de formularios con servidores en Estados Unidos que guarda una copia durante 30 días. Sirve solo para estudiar las palabras del taller y, si se decide, para incluirlas en el diccionario de vocablos del noroeste. Tu nombre no se publica nunca sin tu autorización expresa: junto a la palabra salen solo el pueblo y tu código de informante. Los datos no se usan para nada más ni se ceden a nadie. Si quieres que se borre lo que has enviado, escribe a ese correo o díselo al profesor en clase.</p>
         <button type="submit" class="enviar" id="f-enviar">Enviar la palabra</button>
@@ -1058,7 +1059,7 @@ $('dic-form').addEventListener('submit', async ev => {
   const datos = {
     clave: c.slice(0, 3) + ' ' + c.slice(3, 5) + ' ' + c.slice(5), alumno,
     palabra: fm.palabra.value.trim(), significa: fm.significa.value.trim(), donde: fm.donde.value.trim(),
-    uso: fm.uso.value, quien: fm.quien.value, frase: fm.frase.value.trim(),
+    uso: fm.uso.value, quien: fm.quien.value, frase: fm.frase.value.trim(), comentario: fm.comentario.value.trim(),
     ya_en_diccionario: yaEnDic.join('; ') || 'no', _gotcha: fm._gotcha.value,
     _subject: `Palabra del taller: ${fm.palabra.value.trim()} (${alumno})`
   };
@@ -1067,7 +1068,7 @@ $('dic-form').addEventListener('submit', async ev => {
     const r = await fetch(FORMSPREE, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(datos) });
     if (!r.ok) throw new Error(r.status);
     est.className = 'estado-envio ok'; est.textContent = `Enviada «${datos.palabra}». Gracias: la veremos en clase.`;
-    for (const n of ['palabra', 'significa', 'donde', 'frase']) fm[n].value = '';
+    for (const n of ['palabra', 'significa', 'donde', 'frase', 'comentario']) fm[n].value = '';
     for (const r of fm.querySelectorAll('input[type=radio]')) r.checked = false;
     $('f-ya').hidden = true; yaEnDic = [];
   } catch (e) {
