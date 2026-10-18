@@ -1,6 +1,6 @@
 # Taller de estremeñu · web
 
-Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabajo, sin difundir: el repositorio es privado y la web no está publicada. Lo vigente —qué lleva, de dónde se copia cada parte y qué queda— está en la ficha 12-WEB del proyecto del taller. La web es copia: lo que se corrige, se corrige en la fuente y se vuelve a copiar.
+Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Versión de trabajo, sin difundir: el repositorio es privado y la web se ve en https://estremenu.pages.dev (ver «Vista en el navegador»). Lo vigente —qué lleva, de dónde se copia cada parte y qué queda— está en la ficha 12-WEB del proyecto del taller. La web es copia: lo que se corrige, se corrige en la fuente y se vuelve a copiar.
 
 ## Partes
 
