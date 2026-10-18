@@ -102,6 +102,8 @@ fs.writeFileSync(path.join(destino, 'rasgos.json'), JSON.stringify(CAT));
 // Los textos leídos en el taller, con las palabras de sus rasgos destacados marcadas
 const TX = fs.readdirSync(path.join(aqui, 'textos')).filter(f => /^TEX-\d+\.json$/.test(f)).sort().map(f => leer(path.join('textos', f)));
 for (const t of TX) for (const c of t.rasgos) if (!CAT.rasgos.some(r => r.codigo === c)) console.warn(t.codigo, 'destaca un rasgo que no está en el catálogo:', c);
+// Un texto sin «leido» sale como «Pendiente de leer»: no puede haber más de uno a la vez (Carlos, 18/10/2026)
+if (TX.filter(t => !t.leido).length > 1) { console.error('Hay más de un texto pendiente de leer:', TX.filter(t => !t.leido).map(t => t.codigo).join(', ')); process.exit(1); }
 fs.writeFileSync(path.join(destino, 'textos.json'), JSON.stringify(TX));
 console.log('textos.json:', TX.length, 'textos');
 // Las páginas «Sobre el autor» de los textos: cada texto que nombran tiene que existir

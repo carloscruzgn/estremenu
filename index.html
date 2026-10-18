@@ -767,7 +767,7 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <div class="antetitulo">Lo que hemos leído en clase</div>
     <h2 class="titulo-vista">Los textos del taller</h2>
-    <p class="entradilla">Cada texto con la fecha en que lo leímos. Las palabras que tienen alguno de sus rasgos destacados van marcadas y llevan a la página del rasgo.</p>
+    <p class="entradilla">Cada texto con la fecha en que lo leímos, y al final el que está por leer. Las palabras que tienen alguno de sus rasgos destacados van marcadas y llevan a la página del rasgo.</p>
     <ol class="textos" id="lista-textos"></ol>
   </div>
 </section>
@@ -1079,9 +1079,11 @@ const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', '
 const fecha = f => { const [a, m, d] = f.split('-').map(Number); return `${d} de ${MESES[m - 1]} de ${a}`; };
 const COLORES_R = ['#ff914d', '#85be6d', '#ffc4a0'];   // un color por rasgo destacado, en el orden del texto
 const tituloR = c => (CAT && CAT.rasgos.find(r => r.codigo === c) || {}).titulo || c;
+// Un texto sin fecha de lectura está pendiente de leer: va al final de la lista y, cuando se lee, se le pone la fecha y se queda donde está (Carlos, 18/10/2026)
+const pendiente = t => !t.leido;
 function pintarListaTextos() {
-  const orden = [...TX].sort((a, b) => a.leido.localeCompare(b.leido));
-  $('lista-textos').innerHTML = orden.map(t => `<li><a href="#${t.codigo}"><span class="fecha">Leído el<br>${fecha(t.leido)}</span><span><h3>${esc(t.titulo)}</h3><span class="de">${esc(t.autor)}</span>
+  const orden = [...TX].sort((a, b) => (pendiente(a) - pendiente(b)) || (a.leido || '').localeCompare(b.leido || ''));
+  $('lista-textos').innerHTML = orden.map(t => `<li><a href="#${t.codigo}"><span class="fecha">${pendiente(t) ? 'Pendiente<br>de leer' : `Leído el<br>${fecha(t.leido)}`}</span><span><h3>${esc(t.titulo)}</h3><span class="de">${esc(t.autor)}</span>
     <span class="chips">${t.rasgos.map((c, k) => `<span class="chip" style="--c:${COLORES_R[k]}">${c}</span>`).join('')}</span></span></a></li>`).join('');
   const n = TX.length, nombres = ['Ningún texto', 'Un texto', 'Dos textos', 'Tres textos', 'Cuatro textos', 'Cinco textos'];
   $('estado-textos').textContent = nombres[n] || n + ' textos';
@@ -1114,7 +1116,7 @@ function pintarTexto(t) {
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
-      <span class="leido">Leído en el taller el ${fecha(t.leido)}</span>${tarjetaAutor(t)}</div>
+      <span class="leido">${pendiente(t) ? 'Pendiente de leer en el taller' : `Leído en el taller el ${fecha(t.leido)}`}</span>${tarjetaAutor(t)}</div>
     <div class="cuerpo${sinMov ? '' : ' anima'}" id="cuerpo-texto">${cuerpo}</div>
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
@@ -1424,7 +1426,7 @@ function pintarCabeza(codigo, R, pagina) {
     <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
     ${R ? '' : '<p class="nota-mapa" style="color:var(--texto-3);font-size:14px;margin-top:18px">El mapa interactivo de este rasgo está en preparación.</p>'}`;
   const en = TX ? TX.filter(t => t.rasgos.includes(codigo)) : [];
-  if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>`).join(' · ')}</p></div>`);
+  if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>${pendiente(t) ? ' (pendiente de leer)' : ''}`).join(' · ')}</p></div>`);
 }
 
 async function abrirRasgo(r) {
