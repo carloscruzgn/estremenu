@@ -76,8 +76,15 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pie .licencia { display: flex; gap: 12px; align-items: center }
 .pie .licencia img { display: block; width: 88px; height: auto; flex: none }
 @media (max-width: 520px) { .pie .licencia { flex-direction: column; align-items: flex-start; gap: 8px } }
-/* Lista de rasgos: lo que no entra en el taller, al final de cada grupo, en gris y sin enlace */
-.grupo li.sep { border-bottom: 0; padding: 18px 4px 6px; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3) }
+/* Lista de rasgos: lo que no entra en el taller, al final de cada grupo, en gris y sin enlace, */
+/* en un desplegable cerrado */
+.no-entran summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 16px 4px 12px; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3) }
+.no-entran summary::-webkit-details-marker { display: none }
+.no-entran summary::before { content: ''; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .2s; flex: none }
+.no-entran[open] summary::before { transform: rotate(45deg) }
+.no-entran summary:hover, .no-entran summary:focus-visible { color: var(--texto-2) }
+.no-entran .cuantos { font-variant-numeric: tabular-nums; border: 1px solid var(--linea); border-radius: 4px; padding: 1px 6px; letter-spacing: 0 }
+.no-entran ol { border-top: 1px solid var(--linea) }
 .grupo li.fuera .fila { background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(238, 244, 233, .025) 7px 14px); padding-block: 10px }
 .grupo li.fuera .tit, .grupo li.fuera .cod { color: var(--texto-3); font-weight: 600; font-size: 15px }
 /* Lista de rasgos: de dónde salen los datos */
@@ -663,7 +670,7 @@ span.fila .tit { color: var(--texto-2) }
     <div class="antetitulo">El contenido del taller · apartado 7</div>
     <h2 class="titulo-vista">Los rasgos, uno a uno</h2>
     <p class="entradilla">Los que han estudiado el habla del noroeste desde 1912 han descrito muchos más rasgos de los que caben en un curso. Los apuntes del profesor los reúnen en un catálogo con número propio: V para las vocales, C para las consonantes, M para la gramática y P para la entonación.</p>
-    <p class="entradilla">El taller trabaja una selección de treinta y un rasgos, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en gris y sin página. Cada rasgo tiene su descripción con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
+    <p class="entradilla">El taller trabaja una selección de treinta y un rasgos, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en un desplegable y sin página. Cada rasgo tiene su descripción con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
     <section class="encuestas-breve" aria-labelledby="eb-tit">
       <h2 id="eb-tit">De dónde salen los datos</h2>
       <p>Casi todo lo que cuentan las páginas de los rasgos sale de tres encuestas, hechas en tres momentos. Son las tres fechas que lleva cada rasgo.</p>
@@ -832,7 +839,7 @@ function pintarLista() {
   $('lista-rasgos').innerHTML = Object.entries(CAT.grupos).map(([g, nombre]) => !por[g] ? '' : `
     <section class="grupo"><h2>${esc(nombre)}</h2><ol>${por[g].map(r => r.mapa || r.pagina
       ? `<li><a class="fila" href="#${r.codigo}"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span>${r.mapa ? '<span class="marca-mapa">Mapa</span>' : '<span></span>'}</a></li>`
-      : `<li><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="pendiente">En preparación</span></span></li>`).join('')}${(fuera[g] || []).length ? '<li class="sep">No entran en el taller</li>' + fuera[g].map(r => `<li class="fuera"><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span></span></span></li>`).join('') : ''}</ol></section>`).join('');
+      : `<li><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span class="pendiente">En preparación</span></span></li>`).join('')}</ol>${(fuera[g] || []).length ? `<details class="no-entran"><summary>No entran en el taller <span class="cuantos">${fuera[g].length}</span></summary><ol>${fuera[g].map(r => `<li class="fuera"><span class="fila"><span class="cod">${r.codigo}</span><span class="tit">${esc(r.titulo)}</span><span></span></span></li>`).join('')}</ol></details>` : ''}</section>`).join('');
   const n = CAT.rasgos.filter(r => r.mapa).length;
   $('estado-rasgos').textContent = n === 1 ? '1 con mapa interactivo' : n + ' con mapa interactivo';
 }
