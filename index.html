@@ -1266,7 +1266,7 @@ function pintarTaller() {
   $('dic-cifras').innerHTML = [[nuevas.length, nuevas.length === 1 ? 'palabra nueva' : 'palabras nuevas'], [confirma.length, confirma.length === 1 ? 'confirmada' : 'confirmadas'], [pueblos.size, pueblos.size === 1 ? 'pueblo' : 'pueblos']].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
   TRAMOS = tramosTaller(todas);
   const deTramo = {}; TRAMOS.forEach((t, k) => t.letras.forEach(l => { deTramo[l] = k; }));
-  $('dic-abc').innerHTML = (todas.length ? `<button type="button" class="ult" data-tramo="-1">Las diez últimas</button>` : '') +
+  $('dic-abc').innerHTML = (todas.length ? `<button type="button" class="ult" data-tramo="-1">Últimas diez entradas</button>` : '') +
     ABC.map(l => deTramo[l] === undefined ? `<button type="button" disabled aria-label="${l.toUpperCase()}, sin palabras">${l.toUpperCase()}</button>` : `<button type="button" data-tramo="${deTramo[l]}">${l.toUpperCase()}</button>`).join('');
   verTramoTaller(null);
 }
