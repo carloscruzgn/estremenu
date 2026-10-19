@@ -1420,9 +1420,12 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('visor'
 // El mapa de la portada (datos/portada.json, de construir.mjs). La Península, Extremadura y el noroeste, sin rótulos: habla solo el mapa (Carlos, 18/10/2026); después el mapa
 // se queda en claro y entran el título y el cambio de letras. Se salta tocando la cabecera, con el botón o con una tecla.
 // Sin movimiento, el mapa sale ya en su sitio y en claro.
+// Con la portada oculta la cabecera mide cero: no se encuadra entonces, y al volver se encuadra de nuevo (Carlos, 19/10/2026, en el iPhone y el iPad)
+let reencuadraPortada = null;
 async function animarMapaPortada() {
   const h = $('heroe'), svg = $('mapa-portada'), bs = $('saltar-portada');
-  if (h.dataset.hecho) return; h.dataset.hecho = 1;
+  if (h.dataset.hecho) { if (reencuadraPortada) reencuadraPortada(); return; }
+  h.dataset.hecho = 1;
   let P;
   try { P = await json('datos/portada.json'); } catch (e) { h.classList.remove('espera'); animarPortada(); return; }
   const ns = 'http://www.w3.org/2000/svg';
@@ -1453,9 +1456,10 @@ async function animarMapaPortada() {
   };
   const V = () => ({ espana: caja(P.vistas.espana, .04), extremadura: caja(P.vistas.extremadura, .12), area: caja(P.vistas.area, .35) });
   const asp = () => { const r = h.getBoundingClientRect(); return r.width / Math.max(r.height, 1); };
-  const pon = c => { const w = c.w, hh = w / asp(); svg.setAttribute('viewBox', `${c.cx - w / 2} ${c.cy - hh / 2} ${w} ${hh}`); };
+  const visible = c => h.offsetWidth > 0 && h.offsetHeight > 0 && [c.cx, c.cy, c.w].every(Number.isFinite);
+  const pon = c => { if (!visible(c)) return; const w = c.w, hh = w / asp(); svg.setAttribute('viewBox', `${c.cx - w / 2} ${c.cy - hh / 2} ${w} ${hh}`); };
   // La escala de Coria y su rótulo sigue al zoom: el punto mide siempre unos 7 px
-  const escalaCoria = c => { const k = c.w / Math.max(h.getBoundingClientRect().width, 1); coria.setAttribute('transform', `translate(${cx} ${cy}) scale(${k * 4}) translate(${-cx} ${-cy})`); tx.style.fontSize = '3px'; };
+  const escalaCoria = c => { if (!visible(c)) return; const k = c.w / Math.max(h.getBoundingClientRect().width, 1); coria.setAttribute('transform', `translate(${cx} ${cy}) scale(${k * 4}) translate(${-cx} ${-cy})`); tx.style.fontSize = '3px'; };
   const op = (g, v) => g.style.opacity = v;
   let final = false, vista = null;
   const acabar = () => {
@@ -1465,7 +1469,8 @@ async function animarMapaPortada() {
     svg.classList.add('claro'); bs.hidden = true;
     h.classList.remove('espera'); animarPortada();
   };
-  addEventListener('resize', () => { if (vista) { const c = V()[vista]; pon(c); escalaCoria(c); } });
+  reencuadraPortada = () => { if (vista) { const c = V()[vista]; pon(c); escalaCoria(c); } };
+  addEventListener('resize', reencuadraPortada);
   if (sinMov) { acabar(); return; }
 
   h.classList.add('espera'); svg.style.opacity = 0; svg.style.transition = 'opacity .7s ease';
@@ -1508,6 +1513,8 @@ async function animarPortada() {
   if (t.dataset.hecho) return; t.dataset.hecho = 1;
   // Se mide con la letra ya cargada y en em, para que el hueco crezca o mengüe con el título al cambiar el ancho de la ventana
   try { await document.fonts.ready; } catch (e) {}
+  // Si se ha salido de la portada antes de acabar, las letras miden cero: se espera a que vuelva a verse
+  while (!t.offsetWidth) await new Promise(r => setTimeout(r, 250));
   const cambios = [...t.querySelectorAll('.cambio')];
   const em = parseFloat(getComputedStyle(t).fontSize);
   const anchos = cambios.map(c => [c.querySelector('.viejo').getBoundingClientRect().width / em, c.querySelector('.nuevo').getBoundingClientRect().width / em]);
