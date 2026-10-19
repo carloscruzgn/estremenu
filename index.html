@@ -78,6 +78,7 @@ button { font: inherit; color: inherit }
 /* En el móvil, el menú va tras las tres rayas, arriba a la derecha (Carlos, 19/10/2026) */
 .menu-boton { display: none }
 .menu .menu-enviar { display: none }
+.menu-grupo { display: contents }
 @media (max-width: 640px) {
   .cab .envoltura { gap: 12px; min-height: 58px }
   .marca span { font-size: 14px }
@@ -91,10 +92,14 @@ button { font: inherit; color: inherit }
   .menu { display: none; position: absolute; right: max(8px, env(safe-area-inset-right, 0px)); top: calc(100% - 4px); min-width: 210px; flex-direction: column; gap: 0; margin: 0; padding: 6px 0; background: var(--banda); border-radius: 12px; box-shadow: 0 12px 28px rgba(0, 0, 0, .45); overflow: hidden }
   .cab.abierto .menu { display: flex }
   .menu a { font-size: 19px; padding: 12px 22px; text-align: right; border-radius: 0; color: var(--banda-texto) }
-  .menu a + a { border-top: 2px solid rgba(255, 255, 255, .5) }
+  .menu > * + * { border-top: 2px solid rgba(255, 255, 255, .5) }
   .menu a[aria-current="page"] { box-shadow: inset -5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
-  /* Directo al formulario, pequeño y dentro de Diccionario, en verde claro con letra blanca (Carlos, 19/10/2026) */
-  .menu .menu-enviar { display: block; align-self: flex-end; margin: 4px 16px 8px 0; padding: 7px 14px; border: 0; border-radius: 999px; background: #4f8a40; color: #fff; font-size: 15px }
+  /* Directo al formulario, pequeño y dentro de Diccionario, en el naranja oscuro del centro (Carlos, 19/10/2026).
+     Diccionario y la entrada van en un mismo bloque, que se resalta entero con su raya cuando se está en el diccionario */
+  .menu-grupo { display: flex; flex-direction: column }
+  .menu-grupo:has(a[aria-current="page"]) { background: rgba(255, 255, 255, .16); box-shadow: inset -5px 0 0 var(--banda-texto) }
+  .menu-grupo a[aria-current="page"] { background: none; box-shadow: none }
+  .menu .menu-enviar { display: block; align-self: flex-end; margin: 2px 16px 10px 0; padding: 7px 14px; border: 0; border-radius: 6px; background: var(--naranja-osc); color: #fff; font-size: 15px }
   .menu .menu-enviar::before { content: "+ "; font-weight: 900 }
 }
 
@@ -726,8 +731,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#apuntes" data-sec="apuntes">Contenido</a>
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
       <a href="#textos" data-sec="textos">Textos</a>
-      <a href="#diccionario" data-sec="diccionario">Diccionario</a>
-      <a href="#enviar" class="menu-enviar" id="menu-enviar">Envía una palabra</a>
+      <div class="menu-grupo"><a href="#diccionario" data-sec="diccionario">Diccionario</a><a href="#enviar" class="menu-enviar" id="menu-enviar">Envía una palabra</a></div>
     </nav>
   </div>
 </header>
