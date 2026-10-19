@@ -77,6 +77,7 @@ button { font: inherit; color: inherit }
 .cab :focus-visible { outline-color: var(--banda-texto) }
 /* En el móvil, el menú va tras las tres rayas, arriba a la derecha (Carlos, 19/10/2026) */
 .menu-boton { display: none }
+.menu .menu-enviar { display: none }
 @media (max-width: 640px) {
   .cab .envoltura { gap: 12px; min-height: 58px }
   .marca span { font-size: 14px }
@@ -92,6 +93,9 @@ button { font: inherit; color: inherit }
   .menu a { font-size: 19px; padding: 12px 22px; text-align: right; border-radius: 0; color: var(--banda-texto) }
   .menu a + a { border-top: 1px solid rgba(255, 255, 255, .22) }
   .menu a[aria-current="page"] { box-shadow: inset -5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
+  /* Directo al formulario del diccionario, en verde para que se distinga de las secciones (Carlos, 19/10/2026) */
+  .menu .menu-enviar { display: block; margin: 8px 8px 2px; padding: 12px 14px; border: 0; border-radius: 8px; background: var(--fondo); color: var(--naranja) }
+  .menu .menu-enviar::before { content: "+ "; font-weight: 900 }
 }
 
 /* Tamaño de la letra, solo en el móvil: «A+» abre las tres A; amplía solo los bloques de lectura (Carlos, 19/10/2026) */
@@ -723,6 +727,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
       <a href="#textos" data-sec="textos">Textos</a>
       <a href="#diccionario" data-sec="diccionario">Diccionario</a>
+      <a href="#enviar" class="menu-enviar" id="menu-enviar">Envía una palabra</a>
     </nav>
   </div>
 </header>
@@ -997,7 +1002,9 @@ async function ir() {
   const autor = AU && h.startsWith('autor-') && AU.autores.find(x => h === 'autor-' + x.id || h.startsWith('autor-' + x.id + '-'));
   // #TEX-02-rasgos: los rasgos del texto en detalle
   const detalle = TX && h.endsWith('-rasgos') && TX.find(t => h === t.codigo + '-rasgos' && t.detalle);
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #enviar: el diccionario, abierto en «Envía una palabra» (Carlos, 19/10/2026)
+  const enviar = h === 'enviar';
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : enviar ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
   document.body.dataset.sec = sec;
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
@@ -1010,6 +1017,7 @@ async function ir() {
     : texto ? '«' + texto.titulo + '»'
     : detalle ? 'Los rasgos de «' + detalle.titulo + '»'
     : autor ? limpio(autor.titulo)
+    : enviar ? 'Envía una palabra'
     : { apuntes: 'El contenido del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
@@ -1021,6 +1029,15 @@ async function ir() {
   if (rasgo) await abrirRasgo(rasgo);
   if (sec === 'encuestas') await abrirEncuestas();
   if (sec === 'diccionario') await abrirDiccionario();
+  if (enviar) alFormulario();
+}
+
+// Al formulario: se baja hasta él y, si la clave ya está puesta, el cursor va a la palabra
+function alFormulario() {
+  const b = document.querySelector('.dic-envio');
+  scrollTo(0, b.getBoundingClientRect().top + scrollY - document.querySelector('.cab').offsetHeight - 32);
+  const f = $('f-clave').value.trim() ? $('f-palabra') : $('f-clave');
+  try { f.focus({ preventScroll: true }); } catch (e) {}
 }
 
 // ================= menú del móvil y tamaño de la letra =================
@@ -1030,6 +1047,7 @@ async function ir() {
   const cierra = () => { cab.classList.remove('abierto'); mb.setAttribute('aria-expanded', 'false'); };
   mb.addEventListener('click', e => { e.stopPropagation(); const a = !cab.classList.contains('abierto'); cab.classList.toggle('abierto', a); mb.setAttribute('aria-expanded', a); });
   $('menu').addEventListener('click', cierra);
+  $('menu-enviar').addEventListener('click', e => { if (location.hash === '#enviar') { e.preventDefault(); alFormulario(); } });
   document.addEventListener('click', e => { if (!cab.contains(e.target)) cierra(); });
   addEventListener('hashchange', cierra);
   addEventListener('keydown', e => { if (e.key === 'Escape') cierra(); });
@@ -1130,6 +1148,10 @@ for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya'
 // La clave se comprueba en la página contra datos/claves.json (SHA-256 de la sal más la clave normalizada):
 // frena el uso casual, no a quien sepa saltárselo. Formspree no la comprueba.
 let CLAVES = null, yaEnDic = [];
+// En el móvil, la clave del primer envío bueno se recuerda en ese teléfono y se pone sola (Carlos, 19/10/2026).
+// En el ordenador no, porque puede ser compartido, como los del aula.
+const esMovil = () => matchMedia('(max-width: 640px)').matches;
+try { const k = localStorage.getItem('clave'); if (k && esMovil()) $('f-clave').value = k; } catch (e) {}
 const normClave = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]/g, '');
 async function sha256(s) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); }
 async function claveValida(c) {
@@ -1171,6 +1193,7 @@ $('dic-form').addEventListener('submit', async ev => {
   try {
     const r = await fetch(FORMSPREE, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(datos) });
     if (!r.ok) throw new Error(r.status);
+    try { if (esMovil()) localStorage.setItem('clave', datos.clave); } catch (e) {}
     est.className = 'estado-envio ok'; est.textContent = `Enviada «${datos.palabra}». Gracias: la veremos en clase.`;
     for (const n of ['palabra', 'significa', 'donde', 'frase', 'comentario']) fm[n].value = '';
     for (const r of fm.querySelectorAll('input[type=radio]')) r.checked = false;
