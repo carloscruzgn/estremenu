@@ -126,6 +126,21 @@ const acepDe = new Map(), testDe = new Map();
 for (const a of ACEP) (acepDe.get(a.lema_id) || acepDe.set(a.lema_id, []).get(a.lema_id)).push(a);
 for (const t of TEST) (testDe.get(t.lema_id) || testDe.set(t.lema_id, []).get(t.lema_id)).push(t);
 
+// Véase: «changal (L01012) · …»; el lema se toma de LEMAS por su identificador, que manda sobre el texto
+const lemaPorId = new Map(LEMAS.map(L => [L.lema_id, limpia(L.lema)]));
+function veaseDe(L) {
+  const out = [];
+  for (const parte of String(L['véase'] || '').split('·').map(x => x.trim()).filter(Boolean)) {
+    const id = (parte.match(/\bL\d{5}\b/) || [])[0];
+    const lema = id ? lemaPorId.get(id) : limpia(parte.replace(/\(.*\)/, ''));
+    if (!lema) { avisos.push('Véase a un lema que no existe: ' + L.lema_id + ' → ' + parte); continue; }
+    if (!out.includes(lema)) out.push(lema);
+  }
+  return out;
+}
+// La dirección de una palabra, como enlaceVoz de index.html
+const enlace = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20').replace(/#/g, '%23');
+
 const entradas = [];
 for (const L of LEMAS) {
   const lema = limpia(L.lema);
@@ -169,12 +184,16 @@ for (const L of LEMAS) {
     const vs = [...otras.values()].map(g => {
       const cuenta = {}; for (const t of g) cuenta[t.forma] = (cuenta[t.forma] || 0) + 1;
       const forma = Object.entries(cuenta).sort((a, b) => b[1] - a[1])[0][0];
-      const sig = [...new Set(g.map(t => { usadas.add(t.fuente); const gi = glosaInf(t, glosaAc); return esc(sigla(t.fuente)) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : ''); }))];
+      // Con varias acepciones, cada sigla lleva la suya, como en Fuentes (19/10/2026)
+      const sig = [...new Set(g.map(t => { usadas.add(t.fuente); const gi = glosaInf(t, glosaAc); return esc(sigla(t.fuente) + (varias ? ', ac. ' + t['acepción'] : '')) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : ''); }))];
       const lg = lugares(g);
       return { forma, txt: `<i>${esc(limpia(forma))}</i> (${[esc(lg.join(', ')), sig.join(', ')].filter(Boolean).join('; ')})` };
     }).sort((a, b) => colEs.compare(a.forma, b.forma));
     h += `<p class="e-lin"><span class="e-et">Variantes:</span> ${vs.map(v => v.txt).join('; ')}.</p>`;
   }
+  // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
+  const vease = veaseDe(L);
+  if (vease.length) h += `<p class="e-lin"><span class="e-et">Véase:</span> ${vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', ')}.</p>`;
 
   const formas = [...new Set([lema, ...ts.map(t => t.forma)].map(norm).filter(Boolean))];
   const glosas = norm(as.map(a => limpia(a.glosa)).join(' '));
