@@ -60,6 +60,12 @@ function clave(f) {
     .replace(/(r|l)(se|si)$/, 'RSE').replace(/(o|u)s$/, 'US').replace(/(e|i)s$/, 'IS')
     .replace(/(o|u)$/, 'U').replace(/(e|i)$/, 'I').replace(/(r|l)$/, 'R')).join(' ');
 }
+// Glosa del informante del taller cuando dice algo que su acepción no dice (Carlos, 19/10/2026): sale tras su sigla
+const glosaInf = (t, glosaAc) => {
+  if (!/^Informante\b/.test(t.fuente)) return '';
+  const g = limpia(t['glosa de la fuente']).replace(/\.$/, '');
+  return g && norm(g) !== norm(glosaAc[t['acepción']] || '') ? g : '';
+};
 const anio = s => { const m = String(s || '').match(/\b(1[89]\d\d|20\d\d)\b/); return m ? +m[1] : 9999; };
 
 // ---------- siglas ----------
@@ -130,6 +136,7 @@ for (const L of LEMAS) {
   const kLema = clave(lema);
   const propios = ts.filter(t => clave(t.forma) === kLema);
   const varias = as.length > 1;
+  const glosaAc = Object.fromEntries(as.map(a => [a['acepción'], limpia(a.glosa)]));
 
   const lug = lugares(propios.length ? propios : ts);
   const etimo = !dudoso(L.marcas, 'étimo') && limpia(L['étimo']) ? limpia(L['étimo']).replace(/^\[|\]$/g, '') : '';
@@ -150,10 +157,11 @@ for (const L of LEMAS) {
       const s = sigla(t.fuente); usadas.add(t.fuente);
       const inf = /^Informante\b/.test(t.fuente);
       const p = inf ? '' : pagina(t);
-      const txt = s + (p ? ', ' + p : '') + (varias ? ', ac. ' + t['acepción'] : '');
+      const gi = glosaInf(t, glosaAc);
+      const txt = esc(s + (p ? ', ' + p : '') + (varias ? ', ac. ' + t['acepción'] : '')) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : '');
       if (!vistos.has(txt)) { vistos.add(txt); partes.push(txt); }
     }
-    h += `<p class="e-lin"><span class="e-et">Fuentes:</span> ${esc(partes.join('; '))}.</p>`;
+    h += `<p class="e-lin"><span class="e-et">Fuentes:</span> ${partes.join('; ')}.</p>`;
   }
   const otras = new Map();
   for (const t of ts) { const k = clave(t.forma); if (k !== kLema && t.forma) (otras.get(k) || otras.set(k, []).get(k)).push(t); }
@@ -161,9 +169,9 @@ for (const L of LEMAS) {
     const vs = [...otras.values()].map(g => {
       const cuenta = {}; for (const t of g) cuenta[t.forma] = (cuenta[t.forma] || 0) + 1;
       const forma = Object.entries(cuenta).sort((a, b) => b[1] - a[1])[0][0];
-      const sig = [...new Set(g.map(t => { usadas.add(t.fuente); return sigla(t.fuente); }))];
+      const sig = [...new Set(g.map(t => { usadas.add(t.fuente); const gi = glosaInf(t, glosaAc); return esc(sigla(t.fuente)) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : ''); }))];
       const lg = lugares(g);
-      return { forma, txt: `<i>${esc(limpia(forma))}</i> (${esc([lg.join(', '), sig.join(', ')].filter(Boolean).join('; '))})` };
+      return { forma, txt: `<i>${esc(limpia(forma))}</i> (${[esc(lg.join(', ')), sig.join(', ')].filter(Boolean).join('; ')})` };
     }).sort((a, b) => colEs.compare(a.forma, b.forma));
     h += `<p class="e-lin"><span class="e-et">Variantes:</span> ${vs.map(v => v.txt).join('; ')}.</p>`;
   }
@@ -183,7 +191,8 @@ for (const e of entradas) {
   const inf = e.ts.filter(t => /^Informante\b/.test(t.fuente));
   if (!inf.length) continue;
   const resto = e.ts.filter(t => !/^Informante\b/.test(t.fuente));
-  const glosa = limpia((acepDe.get(e.id) || []).find(a => a['acepción'] === inf[0]['acepción'])?.glosa || '');
+  // La glosa que dio el informante; si no la dio, la de su acepción (Carlos, 19/10/2026)
+  const glosa = limpia(inf[0]['glosa de la fuente']) || limpia((acepDe.get(e.id) || []).find(a => a['acepción'] === inf[0]['acepción'])?.glosa || '');
   const base = { id: e.id, lema: e.lema, glosa, lugar: [...new Set(inf.map(t => localidadDe(t) || comarcaDe(t)).filter(Boolean))].join(', '), inf: [...new Set(inf.map(t => sigla(t.fuente)))].join(', '), orden: inf.map(t => t.id).sort().pop() };
   if (!resto.length) nuevas.push(base);
   else {
