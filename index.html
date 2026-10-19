@@ -389,15 +389,11 @@ span.fila .tit { color: var(--texto-2) }
 .dic-cab.cab-ap .dc-sub { font-family: var(--f); font-style: normal; font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--texto-2) }
 @media (max-width: 640px) { .dic-cab.cab-ap { min-height: 140px } .apartado .dic-cab.cab-ap h2, .dic-cab.cab-ap h2 { font-size: clamp(22px, 6.6vw, 28px); margin: 6px 0 8px } .dic-cab.cab-ap .dc-sub { font-size: 12px } }
 @media (prefers-reduced-motion: reduce) { .dic-cab.entra .dc-marca, .dic-cab.entra .dc-nu .n, .dic-cab.entra .dc-nu .u, .dic-cab.entra .dc-nu .u::after, .dic-cab.entra .dc-ante, .dic-cab.entra h2, .dic-cab.entra .dc-sub { animation: none } }
-.dic-bloque { position: relative; margin-top: 48px; padding: 30px 28px 28px; border-radius: 14px; max-width: 900px }
+.dic-bloque { position: relative; margin-top: 32px; padding: 30px 28px 28px; border-radius: 14px; max-width: 900px }
 .dic-bloque h3 { margin: 0; font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.01em; line-height: 1.1 }
-.dic-num { position: absolute; top: -18px; left: 24px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 17px; color: var(--fondo) }
 .dic-consulta { background: var(--fondo-2); border: 1px solid var(--linea) }
-.dic-consulta .dic-num { background: var(--naranja) }
 .dic-taller { background: linear-gradient(var(--fondo-3), var(--fondo-2)); border: 1px solid var(--linea) }
-.dic-taller .dic-num { background: var(--verde) }
 .dic-envio { border: 2px solid var(--naranja) }
-.dic-envio .dic-num { background: var(--probable) }
 .dic-intro { color: var(--texto-2); max-width: 62ch; margin: 10px 0 0; font-size: 16px; line-height: 1.6 }
 .dic-busca { margin-top: 20px }
 .dic-busca label { display: block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde); margin-bottom: 8px }
@@ -933,7 +929,6 @@ span.fila .tit { color: var(--texto-2) }
     <p class="entradilla">Es una obra en curso, que se completa en el taller. Por eso, debajo están las palabras que han aportado los alumnos y un formulario para enviar las que se vayan recogiendo.</p>
 
     <section class="dic-bloque dic-consulta" aria-labelledby="dic-t1">
-      <div class="dic-num">1</div>
       <h3 id="dic-t1">Buscar una palabra</h3>
       <div class="dic-busca">
         <label for="busca-voz">Escribe una palabra</label>
@@ -958,7 +953,6 @@ span.fila .tit { color: var(--texto-2) }
     </section>
 
     <section class="dic-bloque dic-taller" aria-labelledby="dic-t2">
-      <div class="dic-num">2</div>
       <h3 id="dic-t2">Las palabras del taller</h3>
       <p class="dic-intro">Lo que aportan quienes vienen al taller. Unas palabras no estaban en ninguna de las obras; otras sí, y el taller confirma que se siguen diciendo hoy.</p>
       <div class="dic-cifras" id="dic-cifras"></div>
@@ -969,7 +963,6 @@ span.fila .tit { color: var(--texto-2) }
     </section>
 
     <section class="dic-bloque dic-envio" aria-labelledby="dic-t3">
-      <div class="dic-num">3</div>
       <h3 id="dic-t3">Envía una palabra</h3>
       <p class="dic-intro">Si vienes al taller, con la clave que se da en clase puedes aportar palabras al diccionario. Escribe la palabra como la dices; si ya está en el diccionario, te saltará un aviso cuando la teclees. Aunque esté, envíala de todas formas: sirve saber dónde se sigue diciendo.</p>
       <form id="dic-form" novalidate>
