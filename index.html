@@ -87,10 +87,11 @@ button { font: inherit; color: inherit }
   .cab.abierto .menu-boton i:nth-child(1) { transform: translateY(8px) rotate(45deg) }
   .cab.abierto .menu-boton i:nth-child(2) { opacity: 0 }
   .cab.abierto .menu-boton i:nth-child(3) { transform: translateY(-8px) rotate(-45deg) }
-  .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; margin: 0; padding: 4px 0 12px; background: var(--banda); box-shadow: 0 14px 24px rgba(0, 0, 0, .35); overflow: visible }
+  .menu { display: none; position: absolute; right: max(8px, env(safe-area-inset-right, 0px)); top: calc(100% - 4px); min-width: 210px; flex-direction: column; gap: 0; margin: 0; padding: 6px 0; background: var(--banda); border-radius: 12px; box-shadow: 0 12px 28px rgba(0, 0, 0, .45); overflow: hidden }
   .cab.abierto .menu { display: flex }
-  .menu a { font-size: 19px; padding: 13px max(20px, env(safe-area-inset-left, 0px)); border-radius: 0; color: var(--banda-texto); border-top: 1px solid rgba(255, 255, 255, .22) }
-  .menu a[aria-current="page"] { box-shadow: inset 5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
+  .menu a { font-size: 19px; padding: 12px 22px; text-align: right; border-radius: 0; color: var(--banda-texto) }
+  .menu a + a { border-top: 1px solid rgba(255, 255, 255, .22) }
+  .menu a[aria-current="page"] { box-shadow: inset -5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
 }
 
 /* Tamaño de la letra, solo en el móvil: «A+» abre las tres A; amplía solo los bloques de lectura (Carlos, 19/10/2026) */
