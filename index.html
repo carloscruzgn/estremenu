@@ -133,6 +133,17 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pie p:last-child { margin-bottom: 0 }
 .pie .autor { color: var(--texto-2) }
 .pie .licencia { display: flex; gap: 12px; align-items: center }
+.pie .autor { display: flex; gap: 14px; align-items: center }
+.pie .autor .nu { font-size: 24px; flex: none }
+/* La marca «ñu», como el icono: la ñ en blanco y la u naranja subrayada (Carlos, 19/10/2026).
+   Sale en el pie, al final de cada lectura, en la carga del mapa y al enviar una palabra; en ningún sitio más */
+.nu { display: inline-block; font-family: var(--f); font-weight: 900; font-style: normal; line-height: 1; letter-spacing: -.035em; white-space: nowrap; color: var(--texto); text-indent: 0 }
+.nu .u { position: relative; color: var(--naranja) }
+.nu .u::after { content: ""; position: absolute; left: .02em; right: -.08em; bottom: -.04em; height: .11em; background: var(--naranja) }
+.fin-lectura { font-size: .82em; margin-left: .5em }
+p.fin-bloque { margin: 6px 0 0 }
+p.fin-bloque .nu { font-size: 17px }
+p.fin-bloque.centro { text-align: center }
 .pie .licencia img { display: block; width: 88px; height: auto; flex: none }
 @media (max-width: 520px) { .pie .licencia { flex-direction: column; align-items: flex-start; gap: 8px } }
 /* Lista de rasgos: lo que no entra en el taller, al final de cada grupo, en gris y sin enlace, */
@@ -423,6 +434,8 @@ span.fila .tit { color: var(--texto-2) }
 #dic-form .enviar:disabled { opacity: .6; cursor: progress }
 #dic-form .estado-envio { margin: 0; padding: 14px 16px; border-radius: 8px; font-size: 17px; font-weight: 700; line-height: 1.5 }
 #dic-form .estado-envio.ok { background: rgba(133,190,109,.18); color: var(--texto) }
+#dic-form .estado-envio.ok:not([hidden]) { display: flex; gap: 14px; align-items: center }
+#dic-form .estado-envio .nu { font-size: 26px; flex: none }
 #dic-form .estado-envio.mal { background: rgba(255,145,77,.16); color: #ffcfb3 }
 
 /* ---------- apuntes, mapas, diccionario ---------- */
@@ -686,6 +699,11 @@ span.fila .tit { color: var(--texto-2) }
 .etiq.llamada b { color: var(--verde); font-weight: 900 }
 .globo { position: absolute; pointer-events: none; background: var(--negro); color: #fff; font-weight: 700; font-size: 13px; padding: 4px 8px; border-radius: 4px; transform: translate(12px, -130%); white-space: nowrap; opacity: 0; transition: opacity .15s }
 .carga { position: absolute; inset: 0; display: grid; place-items: center; color: var(--texto-3); font-weight: 700; font-size: 14px }
+.carga > div { display: flex; flex-direction: column; align-items: center; gap: 16px }
+.carga .nu { font-size: 44px; opacity: .85 }
+.carga .nu .u::after { transform-origin: left center; animation: nu-raya 1.4s cubic-bezier(.4,0,.2,1) infinite }
+@keyframes nu-raya { 0% { transform: scaleX(0); opacity: 1 } 55%, 80% { transform: scaleX(1); opacity: 1 } 100% { transform: scaleX(1); opacity: 0 } }
+@media (prefers-reduced-motion: reduce) { .carga .nu .u::after { animation: none } }
 .estados ol { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--linea) }
 .estados li { border-bottom: 1px solid var(--linea) }
 .estados button { width: 100%; text-align: left; background: none; border: 0; padding: 11px 6px; cursor: pointer; display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: center; font-weight: 700; font-size: 15px; color: var(--texto-2) }
@@ -952,7 +970,7 @@ span.fila .tit { color: var(--texto-2) }
         <div class="ejemplos" id="r-ejemplos" aria-hidden="true"></div>
       </div>
       <div class="lienzo" id="lienzo">
-        <div class="carga" id="carga">Cargando el mapa…</div>
+        <div class="carga" id="carga"><div><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span><span>Cargando el mapa…</span></div></div>
         <div class="rotulo" id="rotulo"><div class="k"></div><div class="h"></div><div class="anio"></div><div class="s"></div></div>
         <div class="leyenda" id="leyenda"></div>
         <div class="mandos"><button id="ant" aria-label="Estado anterior">‹</button><button id="sig" aria-label="Estado siguiente">›</button></div>
@@ -980,7 +998,7 @@ span.fila .tit { color: var(--texto-2) }
 </main>
 
 <footer class="pie"><div class="envoltura">
-<p class="autor">Taller de estremeñu del CEPA Coria · Curso 2026-2027. Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
+<p class="autor"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span><span>Taller de estremeñu del CEPA Coria · Curso 2026-2027. Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></span></p>
 <p class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><span>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</span></p>
 <p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
 </div></footer>
@@ -993,6 +1011,18 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let AU = null;
+const NU = '<span class="nu" aria-hidden="true">ñ<span class="u">u</span></span>';
+// Signo de fin de lectura: el «ñu» al final del último párrafo, o en su propia línea si la lectura acaba en lista, mapa o galería.
+// Se salta lo que no es lectura: la navegación, los botones, las fuentes y los datos del rasgo
+function cierraLectura(cont) {
+  let el = cont && cont.lastElementChild;
+  while (el && el.matches('nav.pasos, a.boton, p.fuentes, .datos, .en-textos, .nota-mapa, .corte')) el = el.previousElementSibling;
+  if (!el) return;
+  if (el.matches('.verso')) el = el.querySelector('.vt');
+  if (el.matches('.fin-acto')) el.insertAdjacentHTML('afterend', `<p class="fin-bloque centro">${NU}</p>`);
+  else if (el.matches('p, .vt')) el.insertAdjacentHTML('beforeend', `<span class="fin-lectura">${NU}</span>`);
+  else el.insertAdjacentHTML('afterend', `<p class="fin-bloque">${NU}</p>`);
+}
 let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = null;
 
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
@@ -1240,7 +1270,7 @@ $('dic-form').addEventListener('submit', async ev => {
     const r = await fetch(FORMSPREE, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(datos) });
     if (!r.ok) throw new Error(r.status);
     try { if (esMovil()) localStorage.setItem('clave', datos.clave); } catch (e) {}
-    est.className = 'estado-envio ok'; est.textContent = `Enviada «${datos.palabra}». Gracias: la veremos en clase.`;
+    est.className = 'estado-envio ok'; est.innerHTML = `${NU}<span>Enviada «${esc(datos.palabra)}». Gracias: la veremos en clase.</span>`;
     for (const n of ['palabra', 'significa', 'donde', 'frase', 'comentario']) fm[n].value = '';
     for (const r of fm.querySelectorAll('input[type=radio]')) r.checked = false;
     $('f-ya').hidden = true; yaEnDic = [];
@@ -1307,6 +1337,7 @@ function pintarTexto(t) {
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
     <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Toca un rasgo para dejar subrayadas solo sus palabras, y tócalo otra vez para volver a verlas todas. La flecha y cada palabra marcada llevan a la página del rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}${t.detalle ? `<a class="tarjeta-detalle" href="#${t.codigo}-rasgos"><span class="sws" aria-hidden="true">${t.rasgos.map(c => `<i style="--c:${col[c]}"></i>`).join('')}</span><span><b>Consulta en detalle los rasgos que aparecen</b><span class="sub">${esc(t.detalle.resumen)}</span></span><span class="ir" aria-hidden="true">→</span></a>` : ''}</aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
+  cierraLectura($('cuerpo-texto'));
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
   tp.querySelectorAll('[data-modo]').forEach(b => b.addEventListener('click', () => {
@@ -1359,6 +1390,7 @@ function pintarDetalle(t) {
     <h3 class="det-otros-tit">Otros rasgos</h3><ul class="det-otros">${otros}</ul>
     <p class="fuentes">${fmt(d.fuentes)} Las referencias completas, en la <a href="#apuntes-8">bibliografía</a>.</p>
     <nav class="pasos" aria-label="Volver al texto"><a href="#${t.codigo}"><span>Volver al texto</span><b>«${esc(t.titulo)}»</b></a></nav>`;
+  cierraLectura($('detalle'));
 }
 
 // Los signos de Cummins (GEN-06), en el desplegable de la transcripción
@@ -1402,6 +1434,7 @@ function pintarApartado(a) {
     <div class="antetitulo">${a.n ? 'El contenido · apartado ' + a.n : 'El contenido'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
+  cierraLectura($('apartado'));
 }
 // Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
 function tarjetaAutor(t) {
@@ -1427,6 +1460,7 @@ function pintarAutor(a, sub) {
     <div class="antetitulo">${esc(a.antetitulo)}</div>
     <h2>${esc(a.titulo)}</h2><p class="entradilla-autor">${esc(a.entradilla)}</p>${fig}${bloques}
     <nav class="pasos" aria-label="Sus textos en el taller">${a.textos.map(c => `<a href="#${c}"><span>Leer en el taller</span><b>«${esc(tit(c))}»</b></a>`).join('')}</nav>`;
+  cierraLectura($('autor'));
   if (sub) { const el = document.getElementById('inf-' + sub); if (el) requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); }
 }
 // Visor de mapas a pantalla completa: el mapa a lo ancho, con desplazamiento si no cabe
@@ -1631,6 +1665,7 @@ function pintarCabeza(codigo, R, pagina) {
     <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
     ${R ? '' : '<p class="nota-mapa" style="color:var(--texto-3);font-size:14px;margin-top:18px">El mapa interactivo de este rasgo está en preparación.</p>'}`;
   const en = TX ? TX.filter(t => t.rasgos.includes(codigo)) : [];
+  if (pagina) cierraLectura($('r-texto'));
   if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>${pendiente(t) ? ' (pendiente de leer)' : ''}`).join(' · ')}</p></div>`);
 }
 
