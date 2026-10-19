@@ -371,9 +371,10 @@ span.fila .tit { color: var(--texto-2) }
 .dic-ficha .pie-ficha { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid #e2ded6; font-family: var(--f); font-size: 13px }
 .dic-ficha .pie-ficha button { font: inherit; font-weight: 800; color: #b84c1e; background: none; border: 0; padding: 4px 0; cursor: pointer }
 .dic-ficha .pie-ficha button:disabled { color: #bbb; cursor: default }
-.dic-ficha .pie-ficha { flex-wrap: wrap }
 .dic-ficha .pie-ficha button[data-id] { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 48% }
-.dic-ficha .pie-ficha .comparte { order: 3; flex-basis: 100%; margin-top: 6px; padding-top: 10px; border-top: 1px solid #e2ded6; color: #555; font-weight: 700 }
+/* Compartir, fuera de la ficha y como botón de la web, en el naranja oscuro del centro (Carlos, 19/10/2026) */
+.dic-comparte { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 16px; border: 0; border-radius: 6px; background: var(--naranja-osc); color: #fff; font: 800 15px var(--f); cursor: pointer }
+.dic-comparte[hidden] { display: none }
 @media (max-width: 600px) { .dic-bloque { padding: 26px 16px 20px } .dic-ficha { padding: 20px 18px 16px; font-size: 18px } }
 .desp { margin-top: 18px; border: 1px solid var(--linea); border-radius: 10px; background: var(--fondo) }
 .desp + .desp { margin-top: 10px }
@@ -883,6 +884,7 @@ span.fila .tit { color: var(--texto-2) }
       <p class="dic-cuenta" id="dic-cuenta" aria-live="polite"></p>
       <ul class="dic-lista" id="dic-lista"></ul>
       <article class="dic-ficha" id="dic-ficha" hidden aria-live="polite"></article>
+      <button type="button" class="dic-comparte" id="dic-comparte" hidden><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span>Compartir esta palabra</span></button>
       <details class="desp">
         <summary>Las fuentes</summary>
         <div class="dentro"><p class="intro">Cada voz lleva la sigla de la obra que la da, con la página. La fecha es la del dato: cuándo se recogió, o cuándo se publicó si no consta.</p><dl class="dic-dl" id="dic-fuentes"></dl></div>
@@ -1054,7 +1056,7 @@ function abrirVoz(v) {
   $('busca-voz').value = e ? e[1] : v;
   buscarDic();
   if (e) verEntrada(e[0], true);
-  else { $('dic-ficha').hidden = true; fichaActual = -1; }
+  else { $('dic-ficha').hidden = true; $('dic-comparte').hidden = true; fichaActual = -1; }
 }
 
 // Al formulario: se baja hasta él y, si la clave ya está puesta, el cursor va a la palabra
@@ -1143,10 +1145,11 @@ function verEntrada(id, desplazar = true) {
   fichaActual = i;
   const e = DIC.e[i], ant = DIC.e[i - 1], sig = DIC.e[i + 1];
   const f = $('dic-ficha');
-  f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" class="comparte" data-voz="${esc(e[1])}">Compartir</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
+  f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
   // La dirección de la palabra queda en la barra, sin añadir un paso al historial
   try { history.replaceState(null, '', enlaceVoz(e[1])); document.title = '«' + e[1] + '» · Diccionario · Taller de estremeñu'; } catch (er) {}
   f.hidden = false;
+  const cp = $('dic-comparte'); cp.dataset.voz = e[1]; cp.hidden = false;
   for (const b of document.querySelectorAll('#dic-lista button')) { if (b.dataset.id === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }
   if (desplazar) f.scrollIntoView({ behavior: sinMov ? 'auto' : 'smooth', block: 'center' });
 }
@@ -1168,12 +1171,12 @@ for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListene
   buscarDic(); $('busca-voz').focus();
 });
 // Compartir una palabra: el menú de compartir del móvil o, si no lo hay, el enlace copiado
-$('dic-ficha').addEventListener('click', async ev => {
-  const b = ev.target.closest('.comparte'); if (!b) return;
+$('dic-comparte').addEventListener('click', async ev => {
+  const b = ev.currentTarget, t = b.querySelector('span');
   const url = 'https://estremenu.pages.dev/' + enlaceVoz(b.dataset.voz);
   try {
     if (navigator.share) await navigator.share({ title: b.dataset.voz + ' · Diccionario del Taller de estremeñu', url });
-    else { await navigator.clipboard.writeText(url); b.textContent = 'Enlace copiado'; setTimeout(() => { b.textContent = 'Compartir'; }, 2200); }
+    else { await navigator.clipboard.writeText(url); t.textContent = 'Enlace copiado'; setTimeout(() => { t.textContent = 'Compartir esta palabra'; }, 2200); }
   } catch (er) {}
 });
 for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya']) $(id).addEventListener('click', ev => {
