@@ -830,7 +830,7 @@ span.fila .tit { color: var(--texto-2) }
     </section>
     <blockquote>Lo que ellos apuntaron en un cuaderno tú lo has oído en la cocina de tu madre. Por eso en este taller los que más saben no están en los libros: están sentados en el aula.</blockquote>
     <nav class="secciones" aria-label="Secciones del taller">
-      <a href="#apuntes"><h2>El contenido del taller</h2><p>Los apuntes de los alumnos del taller, para seguir las clases y leer con calma: de dónde estamos a cómo se escribe lo que se habla.</p><span class="estado" id="estado-apuntes">Nueve apartados</span></a>
+      <a href="#apuntes"><h2>Los contenidos del taller</h2><p>Los apuntes de los alumnos del taller, para seguir las clases y leer con calma: de dónde estamos a cómo se escribe lo que se habla.</p><span class="estado" id="estado-apuntes">Nueve apartados</span></a>
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes, las que aporta el taller y el formulario para enviar las tuyas.</p><span class="estado" id="estado-diccionario">4409 voces</span></a>
@@ -840,7 +840,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-apuntes" class="vista" hidden>
   <div class="envoltura">
-    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">Dónde, quiénes y cómo</div><h2>Contenido</h2><p class="dc-sub">Apuntes del taller</p></div></header>
+    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">Los apuntes que usamos</div><h2>Los contenidos del taller</h2></div></header>
     <p class="entradilla" id="entradilla-apuntes"></p>
     <ol class="indice" id="indice-apuntes"></ol>
   </div>
@@ -1039,7 +1039,7 @@ span.fila .tit { color: var(--texto-2) }
 <p class="titulo-pie">Taller de estremeñu del CEPA Coria · <span style="white-space:nowrap">Curso 2026-2027</span></p>
 <p class="autor">Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
 <p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
-<div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«Contenido» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
+<div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«Los contenidos del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
 
 <div class="tam-letra" id="tam-letra"><div class="tam-opciones" id="tam-opciones" role="group" aria-label="Tamaño de la letra" hidden><span>Letra</span><button type="button" data-k="1" aria-pressed="true" style="font-size:14px" aria-label="Normal">A</button><button type="button" data-k="1.15" aria-pressed="false" style="font-size:17px" aria-label="Grande">A</button><button type="button" data-k="1.3" aria-pressed="false" style="font-size:20px" aria-label="Muy grande">A</button></div><button type="button" class="tam-abre" id="tam-abre" aria-expanded="false" aria-controls="tam-opciones" aria-label="Tamaño de la letra">A+</button></div>
 <script type="importmap">{"imports":{"three":"./lib/three/build/three.module.js","three/addons/":"./lib/three/examples/jsm/"}}</script>
@@ -1099,7 +1099,7 @@ async function ir() {
     : autor ? limpio(autor.titulo)
     : enviar ? 'Envía una palabra'
     : voz !== null ? '«' + voz + '» · Diccionario'
-    : { apuntes: 'Contenido', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
+    : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
@@ -1463,7 +1463,7 @@ function pintarApartado(a) {
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption>${esc(b.titulo + (b.fecha ? ', ' + b.fecha : '')).replace(/([^.])$/, '$1.')} Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
-  $('apartado').innerHTML = `<a class="volver" href="#apuntes">← Contenido</a>
+  $('apartado').innerHTML = `<a class="volver" href="#apuntes">← Los contenidos del taller</a>
     ${cabAp(a.n, a.titulo)}${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
 }
