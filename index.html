@@ -383,7 +383,8 @@ span.fila .tit { color: var(--texto-2) }
 @keyframes dc-titulo { from { letter-spacing: .28em; opacity: 0 } to { letter-spacing: .005em; opacity: 1 } }
 @keyframes dc-arriba { from { transform: translateY(10px); opacity: 0 } to { transform: none; opacity: 1 } }
 /* Los apartados del contenido llevan la misma cabecera, con el título en Montserrat (Carlos, 19/10/2026) */
-.dic-cab.cab-ap { margin: 4px 0 30px; min-height: 200px }
+.dic-cab.cab-ap { margin: 8px 0 30px; min-height: 200px }
+#cab-apartado .dic-cab { margin-bottom: 18px }
 .dic-cab.cab-ap .dc-nu { font-size: clamp(56px, 8vw, 104px) }
 .apartado .dic-cab.cab-ap h2, .dic-cab.cab-ap h2 { font-family: var(--f); font-weight: 900; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.08; letter-spacing: -.02em; margin: 10px 0 12px }
 .dic-cab.cab-ap .dc-sub { font-family: var(--f); font-style: normal; font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--texto-2) }
@@ -844,6 +845,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-apartado" class="vista" hidden>
   <div class="envoltura">
+    <div id="cab-apartado"></div>
     <article class="apartado" id="apartado"></article>
   </div>
 </section>
@@ -1456,8 +1458,10 @@ function pintarApartado(a) {
     : b.t === 'mapa' ? `<figure><button type="button" data-ampliar="img/mapas/${b.codigo}.webp" aria-label="Ampliar el mapa ${esc(b.titulo)}"><img src="img/mapas/${b.codigo}.webp" alt="Mapa: ${esc(b.titulo)}" loading="lazy" width="1600" height="1131"></button><figcaption>${esc(b.titulo + (b.fecha ? ', ' + b.fecha : '')).replace(/([^.])$/, '$1.')} Toca el mapa para verlo en grande.</figcaption></figure>`
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
+  // La tarjeta, a lo ancho como las de las demás secciones, y la vuelta debajo, para que todas caigan a la misma altura (Carlos, 19/10/2026)
+  $('cab-apartado').innerHTML = cabAp(a.n, a.titulo);
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← Los contenidos del taller</a>
-    ${cabAp(a.n, a.titulo)}${bloques}${extra}
+    ${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
 }
 // Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
