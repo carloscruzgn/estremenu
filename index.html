@@ -55,7 +55,9 @@ body { margin: 0 }
 img { max-width: 100% }
 [hidden] { display: none !important }
 html { scroll-padding-top: calc(var(--cab) + 12px) }
-body { background: var(--fondo); color: var(--texto); font: 500 16px/1.6 var(--f); -webkit-font-smoothing: antialiased }
+/* Lo que asoma al tirar de la página (como app en el iPhone, el fondo de html): naranja cerca del principio, verde cerca del final; la página la tapa body (Carlos, 19/10/2026) */
+html { background: var(--banda) } html.abajo { background: var(--fondo) }
+body { min-height: 100vh; background: var(--fondo); color: var(--texto); font: 500 16px/1.6 var(--f); -webkit-font-smoothing: antialiased }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--banda) }
 a { color: inherit }
 button { font: inherit; color: inherit }
@@ -64,8 +66,6 @@ button { font: inherit; color: inherit }
 
 /* ---------- cabecera, como la del reel: logo, raya y nombre ---------- */
 .cab { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--banda); color: var(--banda-texto) }
-/* La banda se prolonga hacia arriba, fuera de la vista: al tirar de la página hacia abajo (sobre todo con la web abierta como app en el iPhone) asoma naranja y no el verde del fondo (Carlos, 19/10/2026) */
-.cab::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 100vh; background: var(--banda); pointer-events: none }
 .cab .envoltura { display: flex; align-items: center; gap: 20px; min-height: var(--cab) }
 .marca { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: none }
 .marca img { height: 34px; width: auto; display: block }
@@ -1045,6 +1045,16 @@ function alFormulario() {
   scrollTo(0, b.getBoundingClientRect().top + scrollY - document.querySelector('.cab').offsetHeight - 32);
   const f = $('f-clave').value.trim() ? $('f-palabra') : $('f-clave');
   try { f.focus({ preventScroll: true }); } catch (e) {}
+}
+
+// ================= fondo de lo que asoma al tirar =================
+{
+  const raiz = document.documentElement;
+  const fondo = () => raiz.classList.toggle('abajo', scrollY > (raiz.scrollHeight - innerHeight) / 2);
+  addEventListener('scroll', fondo, { passive: true });
+  addEventListener('resize', fondo);
+  addEventListener('hashchange', () => requestAnimationFrame(fondo));
+  fondo();
 }
 
 // ================= menú del móvil y tamaño de la letra =================
