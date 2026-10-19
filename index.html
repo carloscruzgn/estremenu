@@ -99,7 +99,8 @@ button { font: inherit; color: inherit }
   .menu-grupo { display: flex; flex-direction: column }
   .menu-grupo:has(a[aria-current="page"]) { background: rgba(255, 255, 255, .16); box-shadow: inset -5px 0 0 var(--banda-texto) }
   .menu-grupo a[aria-current="page"] { background: none; box-shadow: none }
-  .menu .menu-enviar { display: block; align-self: flex-end; margin: 2px 16px 10px 0; padding: 7px 14px; border: 0; border-radius: 6px; background: var(--naranja-osc); color: #fff; font-size: 15px }
+  .menu-grupo a[data-sec="diccionario"] { padding-bottom: 4px }
+  .menu .menu-enviar { display: block; align-self: flex-end; margin: 0 16px 10px 0; padding: 7px 14px; border: 0; border-radius: 6px; background: var(--naranja-osc); color: #fff; font-size: 15px }
   .menu .menu-enviar::before { content: "+ "; font-weight: 900 }
 }
 
