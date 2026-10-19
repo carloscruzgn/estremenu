@@ -1179,7 +1179,8 @@ for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListene
 // Compartir una palabra: el menú de compartir del móvil o, si no lo hay, el enlace copiado
 $('dic-comparte').addEventListener('click', async ev => {
   const b = ev.currentTarget, t = b.querySelector('span');
-  const url = 'https://estremenu.pages.dev/' + enlaceVoz(b.dataset.voz);
+  // Dirección propia de la palabra, con su vista previa (fuente/voz-paginas.mjs); manda a #voz/<palabra>
+  const url = 'https://estremenu.pages.dev/voz/' + encodeURIComponent(b.dataset.voz.normalize('NFC').replace(/\//g, '-'));
   try {
     if (navigator.share) await navigator.share({ title: b.dataset.voz + ' · Diccionario del Taller de estremeñu', url });
     else { await navigator.clipboard.writeText(url); t.textContent = 'Enlace copiado'; setTimeout(() => { t.textContent = 'Compartir esta palabra'; }, 2200); }

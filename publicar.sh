@@ -4,5 +4,7 @@ set -e
 rm -rf _site
 mkdir _site
 cp -r index.html manifest.webmanifest datos img lib _headers _site/
+# Una página por palabra del diccionario, para la vista previa al compartirla.
+node fuente/voz-paginas.mjs _site
 # Fecha de la última publicación en el pie, en hora de Madrid.
 sed -i "s|<time data-fecha>[^<]*</time>|<time data-fecha>$(TZ=Europe/Madrid date +%d/%m/%Y)</time>|" _site/index.html
