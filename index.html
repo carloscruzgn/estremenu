@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Taller de estremeñu</title>
+<!-- Icono: «ñu» (Carlos, 19/10/2026), de fuente/iconos.py. En la pantalla de inicio del iPhone y el iPad, apple-touch-icon y el nombre corto -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/icono-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="img/icono-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icono-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Estremeñu">
 <meta name="description" content="Vamos a aprender cómo se habló y se habla en el noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla y el valle del Alagón, con Coria, un habla que sigue por Salamanca arriba en El Rebollar.">
 <!-- Vista previa al compartir (Open Graph): img/og.jpg, de fuente/og.py -->
 <meta property="og:type" content="website">
@@ -965,6 +971,15 @@ async function ir() {
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
+  // Título de la pestaña: la página y, detrás, el nombre de la web (Carlos, 19/10/2026). En los rasgos, el código y la descripción, sin los ejemplos.
+  const limpio = s => String(s).replace(/\*/g, '');
+  const pagina = rasgo ? rasgo.codigo + ' · ' + limpio(rasgo.titulo).split(':')[0]
+    : apartado ? limpio(apartado.titulo)
+    : texto ? '«' + texto.titulo + '»'
+    : detalle ? 'Los rasgos de «' + detalle.titulo + '»'
+    : autor ? limpio(autor.titulo)
+    : { apuntes: 'El contenido del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
+  document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas');
   if (apartado) pintarApartado(apartado);
