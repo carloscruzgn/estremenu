@@ -508,13 +508,18 @@ span.fila .tit { color: var(--texto-2) }
 .cuerpo a.m:hover, .cuerpo a.m:focus-visible { background-size: 100% 100%; color: var(--fondo) }
 .cuerpo.anima a.m { animation: brota .6s calc(var(--i) * 45ms + 300ms) backwards cubic-bezier(.2, .8, .3, 1) }
 @keyframes brota { 0% { background-size: 0 3px; color: inherit } 55% { background-size: 100% 100%; color: var(--fondo) } 100% { background-size: 100% 3px } }
-.cuerpo.foco a.m { opacity: .35 }
-.cuerpo.foco a.m.on { opacity: 1; background-size: 100% 100%; color: var(--fondo) }
+.cuerpo.foco a.m { background-size: 0 3px }
+.cuerpo.foco a.m.on { background-image: linear-gradient(var(--cs), var(--cs)); background-size: 100% 3px }
 .panel .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
 .panel ul { list-style: none; margin: 0; padding: 0 }
 .panel li { border-bottom: 1px solid var(--linea) }
 .panel a { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 12px; padding: 12px 4px; text-decoration: none; align-items: start }
 .panel a:hover, .panel a:focus-visible { background: var(--fondo-2) }
+.panel li:has(.rasgo-sel) { display: flex; align-items: stretch }
+.panel .rasgo-sel { flex: 1; min-width: 0; display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 12px; padding: 12px 4px; text-align: left; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; align-items: start }
+.panel .rasgo-sel:hover { background: var(--fondo-2) }
+.panel .rasgo-sel[aria-pressed="true"] { background: var(--fondo-3); box-shadow: inset 4px 0 0 var(--c) }
+.panel a.ir-rasgo { display: grid; grid-template-columns: none; place-items: center; gap: 0; padding: 0 12px; color: var(--c); font-weight: 900; font-size: 20px }
 .panel .sw { width: 14px; height: 14px; border-radius: 3px; background: var(--c); margin-top: 3px }
 .panel .cod { font-weight: 900; font-size: 13px; color: var(--c) }
 .panel .tt { display: block; font-weight: 700; font-size: 15px; line-height: 1.35 }
@@ -1288,7 +1293,8 @@ function pintarTexto(t) {
     }
     cierra();
   }
-  const panel = t.rasgos.map(c => `<li><a href="#${c}" data-foco="${c}" style="--c:${col[c]}"><span class="sw"></span><span><span class="cod">${c}</span><span class="tt">${esc(tituloR(c))}</span><span class="cu">${cuenta[c]} ${cuenta[c] === 1 ? 'palabra' : 'palabras'} en el texto</span></span></a></li>`).join('');
+  // Cada rasgo: el botón lo selecciona (y lo quita al tocarlo otra vez) y la flecha lleva a su página (Carlos, 19/10/2026)
+  const panel = t.rasgos.map(c => `<li style="--c:${col[c]}"><button type="button" class="rasgo-sel" data-foco="${c}" aria-pressed="false"><span class="sw"></span><span><span class="cod">${c}</span><span class="tt">${esc(tituloR(c))}</span><span class="cu">${cuenta[c]} ${cuenta[c] === 1 ? 'palabra' : 'palabras'} en el texto</span></span></button><a class="ir-rasgo" href="#${c}" aria-label="Página del rasgo ${c}" title="Página del rasgo">→</a></li>`).join('');
   $('texto-pag').innerHTML = `<div class="tcab"><a class="volver" href="#textos">← Los textos del taller</a>
       <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : t.tipo === 'teatro' ? 'Teatro' : 'Conversación grabada'}</div>
       <h2>${esc(t.titulo)}</h2>
@@ -1298,7 +1304,7 @@ function pintarTexto(t) {
     ${t.fonetica ? `<div class="fon" id="fon-texto"><details class="signos" id="signos"><summary>Los signos de Cummins</summary><div class="dentro">Cargando…</div></details>${t.fonetica.bloques.map(b => b.tipo === 'pregunta'
       ? `<div class="fila p"><span class="quien">Cummins</span><span class="preg">${esc(b.texto)}</span></div>`
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
-    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Pasa por un rasgo para ver sus palabras en el texto. Cada palabra marcada lleva a la página de su rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}${t.detalle ? `<a class="tarjeta-detalle" href="#${t.codigo}-rasgos"><span class="sws" aria-hidden="true">${t.rasgos.map(c => `<i style="--c:${col[c]}"></i>`).join('')}</span><span><b>Consulta en detalle los rasgos que aparecen</b><span class="sub">${esc(t.detalle.resumen)}</span></span><span class="ir" aria-hidden="true">→</span></a>` : ''}</aside>
+    <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Toca un rasgo para dejar subrayadas solo sus palabras, y tócalo otra vez para volver a verlas todas. La flecha y cada palabra marcada llevan a la página del rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}${t.detalle ? `<a class="tarjeta-detalle" href="#${t.codigo}-rasgos"><span class="sws" aria-hidden="true">${t.rasgos.map(c => `<i style="--c:${col[c]}"></i>`).join('')}</span><span><b>Consulta en detalle los rasgos que aparecen</b><span class="sub">${esc(t.detalle.resumen)}</span></span><span class="ir" aria-hidden="true">→</span></a>` : ''}</aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
@@ -1309,10 +1315,22 @@ function pintarTexto(t) {
     if (fon) pintarSignos();
   }));
   const cu = $('cuerpo-texto');
-  const foco = c => { cu.classList.toggle('foco', !!c); cu.querySelectorAll('a.m').forEach(a => a.classList.toggle('on', !!c && a.dataset.r.split(' ').includes(c))); };
-  $('texto-pag').querySelectorAll('[data-foco]').forEach(a => {
-    a.addEventListener('pointerenter', () => foco(a.dataset.foco)); a.addEventListener('pointerleave', () => foco(null));
-    a.addEventListener('focus', () => foco(a.dataset.foco)); a.addEventListener('blur', () => foco(null));
+  // Un rasgo seleccionado deja subrayadas solo sus palabras, en su color; las demás quedan como texto normal, sin apagarse
+  let sel = null;
+  const foco = c => {
+    cu.classList.toggle('foco', !!c);
+    if (c) cu.style.setProperty('--cs', col[c]);
+    cu.querySelectorAll('a.m').forEach(a => a.classList.toggle('on', !!c && a.dataset.r.split(' ').includes(c)));
+  };
+  const conRaton = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  $('texto-pag').querySelectorAll('[data-foco]').forEach(b => {
+    b.addEventListener('click', () => {
+      sel = sel === b.dataset.foco ? null : b.dataset.foco;
+      $('texto-pag').querySelectorAll('[data-foco]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.foco === sel)));
+      foco(sel);
+    });
+    // Con ratón, pasar por encima enseña el rasgo mientras no haya otro seleccionado
+    if (conRaton) { b.addEventListener('pointerenter', () => { if (!sel) foco(b.dataset.foco); }); b.addEventListener('pointerleave', () => foco(sel)); }
   });
 }
 
