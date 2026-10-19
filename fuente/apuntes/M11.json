@@ -22,19 +22,58 @@
  "origenes": [],
  "ejemplos": [
   {
-   "base": "dij",
-   "antes": "eron",
-   "despues": "un"
+   "partes": [
+    "dij",
+    {
+     "antes": "eron",
+     "despues": "un",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "vin",
-   "antes": "ieron",
-   "despues": "un"
+   "partes": [
+    "vin",
+    {
+     "antes": "ieron",
+     "despues": "un",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "estuv",
-   "antes": "ieron",
-   "despues": "un"
+   "partes": [
+    "tr",
+    {
+     "antes": "a",
+     "despues": "u"
+    },
+    "j",
+    {
+     "antes": "eron",
+     "despues": "un",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "h",
+     "despues": "j"
+    },
+    "i",
+    {
+     "antes": "c",
+     "despues": "z"
+    },
+    {
+     "antes": "ieron",
+     "despues": "un",
+     "rasgo": true
+    }
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

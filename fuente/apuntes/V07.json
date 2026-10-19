@@ -22,22 +22,82 @@
  "origenes": [
   "Leonés"
  ],
- "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo",
  "ejemplos": [
   {
-   "base": "matan",
-   "antes": "za",
-   "despues": "cia"
+   "partes": [
+    "matan",
+    {
+     "antes": "z",
+     "despues": "c"
+    },
+    {
+     "antes": "",
+     "despues": "i",
+     "rasgo": true
+    },
+    "a"
+   ]
   },
   {
-   "base": "alaban",
-   "antes": "za",
-   "despues": "cia"
+   "partes": [
+    "alaban",
+    {
+     "antes": "z",
+     "despues": "c"
+    },
+    {
+     "antes": "",
+     "despues": "i",
+     "rasgo": true
+    },
+    "a"
+   ]
   },
   {
-   "base": "gran",
-   "antes": "za",
-   "despues": "cia"
+   "partes": [
+    "gran",
+    {
+     "antes": "z",
+     "despues": "c"
+    },
+    {
+     "antes": "",
+     "despues": "i",
+     "rasgo": true
+    },
+    "a"
+   ]
+  },
+  {
+   "partes": [
+    "qui",
+    {
+     "antes": "z",
+     "despues": "c"
+    },
+    {
+     "antes": "",
+     "despues": "i",
+     "rasgo": true
+    },
+    "á"
+   ]
+  },
+  {
+   "partes": [
+    "holga",
+    {
+     "antes": "z",
+     "despues": "c"
+    },
+    {
+     "antes": "",
+     "despues": "i",
+     "rasgo": true
+    },
+    "án"
+   ]
   }
  ]
 }

@@ -24,16 +24,95 @@
  ],
  "ejemplos": [
   {
-   "base": "una poca ",
-   "antes": "",
-   "despues": "de",
-   "cola": " agua"
+   "partes": [
+    "un",
+    {
+     "antes": "",
+     "despues": "a",
+     "rasgo": true
+    },
+    " poc",
+    {
+     "antes": "o",
+     "despues": "a",
+     "rasgo": true
+    },
+    " de agua"
+   ]
   },
   {
-   "base": "unaʰ cuantaʰ ",
-   "antes": "",
-   "despues": "de",
-   "cola": " niñaʰ"
+   "partes": [
+    "una",
+    {
+     "antes": "s",
+     "despues": "ʰ"
+    },
+    " cuanta",
+    {
+     "antes": "s",
+     "despues": "ʰ"
+    },
+    " ",
+    {
+     "antes": "",
+     "despues": "de ",
+     "rasgo": true
+    },
+    "niña",
+    {
+     "antes": "s",
+     "despues": "ʰ"
+    }
+   ]
+  },
+  {
+   "partes": [
+    "un",
+    {
+     "antes": "o",
+     "despues": "u"
+    },
+    "s poc",
+    {
+     "antes": "o",
+     "despues": "u"
+    },
+    "s ",
+    {
+     "antes": "",
+     "despues": "de ",
+     "rasgo": true
+    },
+    "troz",
+    {
+     "antes": "o",
+     "despues": "u"
+    },
+    "s"
+   ]
+  },
+  {
+   "partes": [
+    "dam",
+    {
+     "antes": "e",
+     "despues": "i"
+    },
+    " un",
+    {
+     "antes": "",
+     "despues": "a",
+     "rasgo": true
+    },
+    " poc",
+    {
+     "antes": "o",
+     "despues": "a",
+     "rasgo": true
+    },
+    " de agua"
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

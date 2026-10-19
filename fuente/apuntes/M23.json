@@ -21,5 +21,36 @@
  "estado": "Todavía se oye",
  "origenes": [
   "Castellano viejo"
- ]
+ ],
+ "ejemplos": [
+  {
+   "partes": [
+    {
+     "antes": "ahí lo tienes",
+     "despues": "velaí",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "aquí está",
+     "despues": "velaquí",
+     "rasgo": true
+    },
+    " el ",
+    {
+     "antes": "h",
+     "despues": ""
+    },
+    "ombr",
+    {
+     "antes": "e",
+     "despues": "i"
+    }
+   ]
+  }
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes (lombu y velaquí el ombri, suyos); la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

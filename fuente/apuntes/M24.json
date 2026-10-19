@@ -22,19 +22,48 @@
  "origenes": [],
  "ejemplos": [
   {
-   "base": "as",
-   "antes": "í",
-   "despues": "ina"
+   "partes": [
+    "as",
+    {
+     "antes": "í",
+     "despues": "ina",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "de",
-   "antes": "sde",
-   "despues": "ndi"
+   "partes": [
+    {
+     "antes": "toda",
+     "despues": "enta",
+     "rasgo": true
+    },
+    "vía"
+   ]
   },
   {
-   "base": "mu",
-   "antes": "y",
-   "despues": ""
+   "partes": [
+    {
+     "antes": "este año",
+     "despues": "hogañu",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "do",
+     "despues": "a",
+     "rasgo": true
+    },
+    "nd",
+    {
+     "antes": "e",
+     "despues": "i"
+    }
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

@@ -24,19 +24,45 @@
  ],
  "ejemplos": [
   {
-   "base": "choz",
-   "antes": "a",
-   "despues": "u"
+   "partes": [
+    "choz",
+    {
+     "antes": "a",
+     "despues": "u",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "cuest",
-   "antes": "a",
-   "despues": "u"
+   "partes": [
+    "cuest",
+    {
+     "antes": "a",
+     "despues": "u",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "sierr",
-   "antes": "a",
-   "despues": "u"
+   "partes": [
+    "sierr",
+    {
+     "antes": "a",
+     "despues": "u",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    "botij",
+    {
+     "antes": "o",
+     "despues": "a",
+     "rasgo": true
+    }
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

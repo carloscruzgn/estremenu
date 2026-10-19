@@ -22,16 +22,49 @@
  "origenes": [],
  "ejemplos": [
   {
-   "base": "",
-   "antes": "el",
-   "despues": "la",
-   "cola": " calor"
+   "partes": [
+    {
+     "antes": "el",
+     "despues": "la",
+     "rasgo": true
+    },
+    " calor"
+   ]
   },
   {
-   "base": "me ",
-   "antes": "dejé",
-   "despues": "queé",
-   "cola": ""
+   "partes": [
+    "me ",
+    {
+     "antes": "dejé",
+     "despues": "queé",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "tiré",
+     "despues": "caí",
+     "rasgo": true
+    },
+    " el cald",
+    {
+     "antes": "o",
+     "despues": "u"
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "",
+     "despues": "me ",
+     "rasgo": true
+    },
+    "soñé contigo"
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

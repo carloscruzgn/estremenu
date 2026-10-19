@@ -24,16 +24,49 @@
  ],
  "ejemplos": [
   {
-   "base": "",
-   "antes": "",
-   "despues": "tíu",
-   "cola": " Manuel"
+   "partes": [
+    {
+     "antes": "",
+     "despues": "tíu ",
+     "rasgo": true
+    },
+    "Manuel"
+   ]
   },
   {
-   "base": "",
-   "antes": "",
-   "despues": "tía",
-   "cola": " Martina"
+   "partes": [
+    {
+     "antes": "",
+     "despues": "tía ",
+     "rasgo": true
+    },
+    "Martina"
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "",
+     "despues": "tíu ",
+     "rasgo": true
+    },
+    "Gregori",
+    {
+     "antes": "o",
+     "despues": "u"
+    }
+   ]
+  },
+  {
+   "partes": [
+    {
+     "antes": "",
+     "despues": "tía ",
+     "rasgo": true
+    },
+    "Anastasia"
+   ]
   }
- ]
+ ],
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo"
 }

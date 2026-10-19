@@ -710,6 +710,7 @@ span.fila .tit { color: var(--texto-2) }
 .ejemplo { position: absolute; left: 0; top: 0; opacity: 0; transition: opacity .35s; white-space: nowrap }
 .ejemplo.ve { opacity: 1 }
 .ejemplo .cambio .viejo { white-space: nowrap; text-align: left }
+.ejemplo .cambio.otro .nuevo { color: inherit }
 .lienzo canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab }
 .lienzo canvas:active { cursor: grabbing }
 .rotulo { position: absolute; left: 22px; top: 18px; right: 22px; pointer-events: none; transition: opacity .35s, transform .35s }
@@ -1653,7 +1654,13 @@ function pintarCabeza(codigo, R, pagina) {
   $('r-tit').textContent = CAT.rasgos.find(r => r.codigo === codigo).titulo;
   const ej = (pagina && pagina.ejemplos) || (R && R.ejemplos) || [];
   $('r-ejemplos').hidden = !ej.length;
-  $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${esc(e.base)}<span class="cambio"><span class="viejo">${esc(e.antes)}</span><span class="nuevo">${esc(e.despues)}</span><i class="subr"></i></span>${esc(e.cola || '')}</div>`).join('');
+  // Un ejemplo es una lista de partes: texto fijo o un cambio {antes, despues}; la palabra pasa entera del castellano a la nuestra
+  // y solo el cambio del rasgo (rasgo: true) va en naranja y subrayado (Carlos, 19/10/2026). El formato viejo, {base, antes, despues, cola}, es un solo cambio del rasgo.
+  // Los espacios van duros: al final de un cambio el navegador los come.
+  const duro = t => esc(t || '').replace(/ /g, '\u00a0');
+  const partes = e => e.partes || [e.base || '', { antes: e.antes, despues: e.despues, rasgo: true }, e.cola || ''];
+  $('r-ejemplos').innerHTML = ej.map((e, i) => `<div class="ejemplo" id="ej${i}">${partes(e).map(p => typeof p === 'string' ? duro(p)
+    : `<span class="cambio${p.rasgo ? '' : ' otro'}"><span class="viejo">${duro(p.antes)}</span><span class="nuevo">${duro(p.despues)}</span>${p.rasgo ? '<i class="subr"></i>' : ''}</span>`).join('')}</div>`).join('');
   clearInterval(ejemploTimer); ejemploTimer = null;
   const miCabeza = ++cabezaN;   // si se abre otro rasgo antes de cargar la letra, esta cabecera no arranca
   let i = 0;
@@ -1670,21 +1677,20 @@ function pintarCabeza(codigo, R, pagina) {
     const W = $('r-ejemplos').clientWidth;
     document.querySelectorAll('.ejemplo').forEach(el => {
       el.style.fontSize = '';
-      const v = el.querySelector('.cambio .viejo'), n = el.querySelector('.cambio .nuevo');
-      if (v) v.style.width = '';
-      const w = el.scrollWidth + Math.max(0, (n ? n.getBoundingClientRect().width : 0) - (v ? v.getBoundingClientRect().width : 0));
+      let crece = 0;
+      el.querySelectorAll('.cambio').forEach(c => { const v = c.querySelector('.viejo'), n = c.querySelector('.nuevo'); v.style.width = ''; crece += n.getBoundingClientRect().width - v.getBoundingClientRect().width; });
+      const w = el.scrollWidth + Math.max(0, crece);
       if (W && w > W) el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) * W / w * 0.97) + 'px';
     });
   };
   const muestra = () => {
     encaja();
     document.querySelectorAll('.ejemplo').forEach((el, j) => el.classList.toggle('ve', j === i));
-    const c = document.querySelector('#ej' + i + ' .cambio');
-    if (c) { ajustaHueco(c); c.classList.remove('anima', 'fijo'); void c.offsetWidth; c.classList.add(sinMov ? 'fijo' : 'anima'); c.style.setProperty('--d', 0); }
+    document.querySelectorAll('#ej' + i + ' .cambio').forEach(c => { ajustaHueco(c); c.classList.remove('anima', 'fijo'); void c.offsetWidth; c.classList.add(sinMov ? 'fijo' : 'anima'); c.style.setProperty('--d', 0); });
     i = (i + 1) % ej.length;
   };
   // en los ejemplos el cambio va más rápido que en la portada
-  for (const el of document.querySelectorAll('.ejemplo .cambio')) { el.querySelector('.viejo').style.animationDelay = '.5s'; el.querySelector('.nuevo').style.animationDelay = '.85s'; el.querySelector('.subr').style.animationDelay = '1.4s'; }
+  for (const el of document.querySelectorAll('.ejemplo .cambio')) { el.querySelector('.viejo').style.animationDelay = '.5s'; el.querySelector('.nuevo').style.animationDelay = '.85s'; const sr = el.querySelector('.subr'); if (sr) sr.style.animationDelay = '1.4s'; }
   // Se mide con la letra ya cargada
   if (ej.length) document.fonts.ready.then(() => { if (cabezaN !== miCabeza) return; muestra(); if (ej.length > 1 && !sinMov) ejemploTimer = setInterval(muestra, 3200); });
   $('r-texto').innerHTML = !pagina ? '' : `<div class="ante">En los apuntes</div>

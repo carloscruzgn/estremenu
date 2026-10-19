@@ -22,17 +22,49 @@
  "origenes": [
   "Del sur"
  ],
- "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo",
  "ejemplos": [
   {
-   "base": "niño",
-   "antes": "s",
-   "despues": "ʰ"
+   "partes": [
+    "niño",
+    {
+     "antes": "s",
+     "despues": "ʰ",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "cabrilla",
-   "antes": "s",
-   "despues": "ʰ"
+   "partes": [
+    "cabrilla",
+    {
+     "antes": "s",
+     "despues": "ʰ",
+     "rasgo": true
+    }
+   ]
+  },
+  {
+   "partes": [
+    "e",
+    {
+     "antes": "s",
+     "despues": "ʰ",
+     "rasgo": true
+    },
+    "cuela"
+   ]
+  },
+  {
+   "partes": [
+    "de",
+    {
+     "antes": "s",
+     "despues": "ʰ",
+     "rasgo": true
+    },
+    "de"
+   ]
   }
  ]
 }

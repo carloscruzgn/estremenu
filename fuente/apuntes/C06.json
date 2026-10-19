@@ -20,27 +20,47 @@
  ],
  "estado": "Se va perdiendo",
  "origenes": [],
- "_ejemplos": "Ejemplos de la cabecera de la web, sacados de la página de los apuntes; el reel lleva los suyos en su fichero de rasgo",
+ "_ejemplos": "Ejemplos de la cabecera de la web, elegidos por Carlos el 19/10/2026 de la página de los apuntes; la palabra pasa entera del castellano a la nuestra y solo se subraya el cambio del rasgo. El reel lleva los suyos en su fichero de rasgo",
  "ejemplos": [
   {
-   "base": "come",
-   "antes": "r",
-   "despues": "l"
+   "partes": [
+    "come",
+    {
+     "antes": "r",
+     "despues": "l",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "muje",
-   "antes": "r",
-   "despues": "l"
+   "partes": [
+    "muje",
+    {
+     "antes": "r",
+     "despues": "l",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "canta",
-   "antes": "r",
-   "despues": "l"
+   "partes": [
+    "mejo",
+    {
+     "antes": "r",
+     "despues": "l",
+     "rasgo": true
+    }
+   ]
   },
   {
-   "base": "seño",
-   "antes": "r",
-   "despues": "l"
+   "partes": [
+    "aye",
+    {
+     "antes": "r",
+     "despues": "l",
+     "rasgo": true
+    }
+   ]
   }
  ]
 }
