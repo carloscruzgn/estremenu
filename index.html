@@ -346,7 +346,39 @@ span.fila .tit { color: var(--texto-2) }
 @font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(img/fuentes/eb-garamond-greek-ext-400-italic.woff2) format('woff2'); unicode-range: U+1F00-1FFF }
 @font-face { font-family: 'IM Fell English SC'; font-style: normal; font-weight: 400; font-display: swap; src: url(img/fuentes/im-fell-english-sc-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD }
 /* ---------- diccionario: consulta, palabras del taller y envío ---------- */
-#v-diccionario .dic-fecha { margin: 14px 0 0; font-size: 13px; font-weight: 700; color: var(--texto-3) }
+/* Cabecera del diccionario, como la imagen de compartir una palabra: el «ñu» sobre naranja y «Diccionario» en la letra de los lemas (Carlos, 19/10/2026, la A de cuatro).
+   El antetítulo lleva las voces y la fecha del espejo; la entrada pone cada pieza en su sitio, una vez por carga */
+.dic-cab { display: grid; grid-template-columns: minmax(120px, 34%) 1fr; border-radius: 10px; overflow: hidden; margin: 8px 0 30px; min-height: 250px }
+.dc-marca { display: grid; place-items: center; background: var(--naranja) }
+.dc-nu { font-family: var(--f); font-weight: 900; font-size: clamp(64px, 11vw, 132px); line-height: 1; letter-spacing: -.035em; color: #fff }
+.dc-nu > span { display: inline-block }
+.dc-nu .u { position: relative; color: var(--fondo) }
+.dc-nu .u::after { content: ""; position: absolute; left: .02em; right: -.08em; bottom: -.04em; height: .1em; background: currentColor }
+.dc-txt { display: flex; flex-direction: column; justify-content: center; padding: 30px clamp(20px, 5vw, 56px); background: var(--fondo-2); color: var(--texto) }
+.dc-ante { font-weight: 700; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--naranja); min-height: 1.3em }
+.dc-ante .corto { display: none }
+.dic-cab h2 { font-family: 'IM Fell English SC', 'EB Garamond', serif; font-weight: 400; font-size: clamp(44px, 7.5vw, 86px); line-height: 1; letter-spacing: .005em; margin: 12px 0 14px }
+.dc-sub { font-family: 'EB Garamond', Garamond, serif; font-style: italic; font-size: clamp(19px, 2.4vw, 27px); margin: 0; line-height: 1.25; color: #f6eedf }
+@media (max-width: 640px) {
+  .dic-cab { grid-template-columns: 30% 1fr; min-height: 160px; border-radius: 8px } .dc-txt { padding: 20px 16px }
+  .dc-ante { font-size: 10px; letter-spacing: .14em } .dc-ante .largo { display: none } .dc-ante .corto { display: inline }
+  .dic-cab h2 { font-size: clamp(30px, 9vw, 40px); margin: 8px 0 10px } .dc-sub { font-size: 17px }
+}
+.dic-cab.entra .dc-marca { animation: dc-abre .5s cubic-bezier(.3,.7,.2,1) both }
+.dic-cab.entra .dc-nu .n { animation: dc-cae .5s .3s cubic-bezier(.3,1.4,.5,1) both }
+.dic-cab.entra .dc-nu .u { animation: dc-sube .5s .45s cubic-bezier(.3,1.4,.5,1) both }
+.dic-cab.entra .dc-nu .u::after { transform-origin: left center; animation: dc-raya .35s .95s ease-out both }
+.dic-cab.entra .dc-ante { animation: dc-izq .45s .6s ease-out both }
+.dic-cab.entra h2 { animation: dc-titulo .6s .75s cubic-bezier(.2,.7,.2,1) both }
+.dic-cab.entra .dc-sub { animation: dc-arriba .45s 1.1s ease-out both }
+@keyframes dc-abre { from { clip-path: inset(0 100% 0 0) } to { clip-path: inset(0 0 0 0) } }
+@keyframes dc-cae { from { transform: translateY(-.7em); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes dc-sube { from { transform: translateY(.6em); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes dc-raya { from { transform: scaleX(0) } to { transform: none } }
+@keyframes dc-izq { from { transform: translateX(-16px); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes dc-titulo { from { letter-spacing: .28em; opacity: 0 } to { letter-spacing: .005em; opacity: 1 } }
+@keyframes dc-arriba { from { transform: translateY(10px); opacity: 0 } to { transform: none; opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .dic-cab.entra .dc-marca, .dic-cab.entra .dc-nu .n, .dic-cab.entra .dc-nu .u, .dic-cab.entra .dc-nu .u::after, .dic-cab.entra .dc-ante, .dic-cab.entra h2, .dic-cab.entra .dc-sub { animation: none } }
 .dic-bloque { position: relative; margin-top: 48px; padding: 30px 28px 28px; border-radius: 14px; max-width: 900px }
 .dic-bloque h3 { margin: 0; font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.01em; line-height: 1.1 }
 .dic-num { position: absolute; top: -18px; left: 24px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 17px; color: var(--fondo) }
@@ -886,11 +918,12 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-diccionario" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">Diccionario del noroeste</div>
-    <h2 class="titulo-vista">Diccionario</h2>
+    <header class="dic-cab entra" id="dic-cab">
+      <div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div>
+      <div class="dc-txt"><div class="dc-ante" id="dic-fecha"></div><h2>Diccionario</h2><p class="dc-sub">Las palabras del noroeste de Cáceres</p></div>
+    </header>
     <p class="entradilla">Este diccionario reúne, a partir de diversas fuentes, las voces documentadas en el noroeste de Cáceres, la zona del taller. En lo posible, se indican el pueblo o la comarca donde se han recogido, la obra que las da, sus variantes y su étimo. El étimo se toma, por lo general, del <i>Diccionario de la lengua española</i>, cuando la voz está en él o se aprecia su parentesco con una palabra castellana que recoge.</p>
     <p class="entradilla">Es una obra en curso, que se completa en el taller. Por eso, debajo están las palabras que han aportado los alumnos y un formulario para enviar las que se vayan recogiendo.</p>
-    <p class="dic-fecha" id="dic-fecha"></p>
 
     <section class="dic-bloque dic-consulta" aria-labelledby="dic-t1">
       <div class="dic-num">1</div>
@@ -1009,6 +1042,8 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let AU = null;
+// La cabecera del diccionario entra una vez por carga: al acabar el subtítulo se quita la animación
+document.querySelector('#dic-cab .dc-sub').addEventListener('animationend', () => $('dic-cab').classList.remove('entra'), { once: true });
 const NU = '<span class="nu" aria-hidden="true">ñ<span class="u">u</span></span>';
 // Signo de fin de lectura: el «ñu» al final del último párrafo, o en su propia línea si la lectura acaba en lista, mapa o galería.
 // Se salta lo que no es lectura: la navegación, los botones, las fuentes y los datos del rasgo
@@ -1144,7 +1179,9 @@ async function abrirDiccionario() {
   DIC.idx = Object.fromEntries(DIC.e.map((e, i) => [e[0], i]));
   const n = DIC.lemas.toLocaleString('es-ES');
   // La fecha del espejo de la hoja: «hoja» no le dice nada a quien lee (Carlos, 19/10/2026)
-  $('dic-fecha').textContent = `Diccionario actualizado el ${DIC.fecha ? fecha(DIC.fecha) : '—'} · ${n} ${DIC.lemas === 1 ? 'voz' : 'voces'}${DIC.muestra ? ' · muestra de prueba con las primeras entradas de la A' : ''}`;
+  // En el antetítulo de la cabecera: las voces y la fecha del espejo, en el móvil con la fecha corta (Carlos, 19/10/2026)
+  const fCorta = DIC.fecha ? DIC.fecha.split('-').reverse().join('/') : '—';
+  $('dic-fecha').innerHTML = `${n} ${DIC.lemas === 1 ? 'voz' : 'voces'} · <span class="largo">${DIC.fecha ? fecha(DIC.fecha) : '—'}</span><span class="corto">${fCorta}</span>`;
   $('dic-fuentes').innerHTML = DIC.fuentes.map(f => `<dt>${esc(f.sigla)}</dt><dd>${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</dd>`).join('');
   $('dic-abrev').innerHTML = DIC.abreviaturas.map(a => `<dt>${esc(a.a)}</dt><dd>${esc(a.v)}</dd>`).join('');
   pintarTaller();
