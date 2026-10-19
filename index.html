@@ -91,10 +91,10 @@ button { font: inherit; color: inherit }
   .menu { display: none; position: absolute; right: max(8px, env(safe-area-inset-right, 0px)); top: calc(100% - 4px); min-width: 210px; flex-direction: column; gap: 0; margin: 0; padding: 6px 0; background: var(--banda); border-radius: 12px; box-shadow: 0 12px 28px rgba(0, 0, 0, .45); overflow: hidden }
   .cab.abierto .menu { display: flex }
   .menu a { font-size: 19px; padding: 12px 22px; text-align: right; border-radius: 0; color: var(--banda-texto) }
-  .menu a + a { border-top: 1px solid rgba(255, 255, 255, .22) }
+  .menu a + a { border-top: 2px solid rgba(255, 255, 255, .5) }
   .menu a[aria-current="page"] { box-shadow: inset -5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
-  /* Directo al formulario del diccionario, en verde para que se distinga de las secciones (Carlos, 19/10/2026) */
-  .menu .menu-enviar { display: block; margin: 8px 8px 2px; padding: 12px 14px; border: 0; border-radius: 8px; background: var(--fondo); color: var(--naranja) }
+  /* Directo al formulario, pequeño y dentro de Diccionario, en verde claro con letra blanca (Carlos, 19/10/2026) */
+  .menu .menu-enviar { display: block; align-self: flex-end; margin: 4px 16px 8px 0; padding: 7px 14px; border: 0; border-radius: 999px; background: #4f8a40; color: #fff; font-size: 15px }
   .menu .menu-enviar::before { content: "+ "; font-weight: 900 }
 }
 
