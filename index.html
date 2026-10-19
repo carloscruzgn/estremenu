@@ -136,14 +136,11 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pie .autor { display: flex; gap: 14px; align-items: center }
 .pie .autor .nu { font-size: 24px; flex: none }
 /* La marca «ñu», como el icono: la ñ en blanco y la u naranja subrayada (Carlos, 19/10/2026).
-   Sale en el pie, al final de cada lectura, en la carga del mapa y al enviar una palabra; en ningún sitio más */
+   Sale en el pie, en la carga del mapa, al enviar una palabra y en la cabecera del diccionario; al final de cada lectura se quitó porque quedaba junto al del pie (Carlos, 19/10/2026) */
 .nu { display: inline-block; font-family: var(--f); font-weight: 900; font-style: normal; line-height: 1; letter-spacing: -.035em; white-space: nowrap; color: var(--texto); text-indent: 0 }
 .nu .u { position: relative; color: var(--naranja) }
 .nu .u::after { content: ""; position: absolute; left: .02em; right: -.08em; bottom: -.04em; height: .11em; background: var(--naranja) }
-.fin-lectura { font-size: .82em; margin-left: .5em }
-p.fin-bloque { margin: 6px 0 0 }
-p.fin-bloque .nu { font-size: 17px }
-p.fin-bloque.centro { text-align: center }
+
 .pie .licencia img { display: block; width: 88px; height: auto; flex: none }
 @media (max-width: 520px) { .pie .licencia { flex-direction: column; align-items: flex-start; gap: 8px } }
 /* Lista de rasgos: lo que no entra en el taller, al final de cada grupo, en gris y sin enlace, */
@@ -1045,17 +1042,6 @@ let AU = null;
 // La cabecera del diccionario entra una vez por carga: al acabar el subtítulo se quita la animación
 document.querySelector('#dic-cab .dc-sub').addEventListener('animationend', () => $('dic-cab').classList.remove('entra'), { once: true });
 const NU = '<span class="nu" aria-hidden="true">ñ<span class="u">u</span></span>';
-// Signo de fin de lectura: el «ñu» al final del último párrafo, o en su propia línea si la lectura acaba en lista, mapa o galería.
-// Se salta lo que no es lectura: la navegación, los botones, las fuentes y los datos del rasgo
-function cierraLectura(cont) {
-  let el = cont && cont.lastElementChild;
-  while (el && el.matches('nav.pasos, a.boton, p.fuentes, .datos, .en-textos, .nota-mapa, .corte')) el = el.previousElementSibling;
-  if (!el) return;
-  if (el.matches('.verso')) el = el.querySelector('.vt');
-  if (el.matches('.fin-acto')) el.insertAdjacentHTML('afterend', `<p class="fin-bloque centro">${NU}</p>`);
-  else if (el.matches('p, .vt')) el.insertAdjacentHTML('beforeend', `<span class="fin-lectura">${NU}</span>`);
-  else el.insertAdjacentHTML('afterend', `<p class="fin-bloque">${NU}</p>`);
-}
 let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = null;
 
 async function json(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ': ' + r.status); return r.json(); }
@@ -1373,7 +1359,6 @@ function pintarTexto(t) {
       : `<div class="fila"><span class="quien">${esc(t.fonetica.informante)}</span><span class="fonet">[${esc(b.texto).replace(/\(([^)]+)\)/g, '<span class="aside">($1)</span>')}]</span></div>`).join('')}<p class="pie">John G. Cummins, <i>El habla de Coria y sus cercanías</i>, 1974, p. ${t.fonetica.pagina}.</p></div>` : ''}
     <aside class="panel"><div class="ante">Rasgos destacados</div><ul>${panel}</ul><p class="nota">Toca un rasgo para dejar subrayadas solo sus palabras, y tócalo otra vez para volver a verlas todas. La flecha y cada palabra marcada llevan a la página del rasgo.</p>${t.fonetica ? `<div class="modo" role="group" aria-label="Versión del texto"><button type="button" data-modo="lectura" aria-pressed="true">Lectura</button><button type="button" data-modo="fon" aria-pressed="false">Transcripción de Cummins</button></div>` : ''}${t.detalle ? `<a class="tarjeta-detalle" href="#${t.codigo}-rasgos"><span class="sws" aria-hidden="true">${t.rasgos.map(c => `<i style="--c:${col[c]}"></i>`).join('')}</span><span><b>Consulta en detalle los rasgos que aparecen</b><span class="sub">${esc(t.detalle.resumen)}</span></span><span class="ir" aria-hidden="true">→</span></a>` : ''}</aside>
     ${(t.imagenes || []).length ? `<div class="ilus">${t.imagenes.map(m => `<figure><button type="button" data-ampliar="${m.src}" aria-label="Ampliar: ${esc(m.alt)}"><img src="${m.src}" alt="${esc(m.alt)}" loading="lazy" width="${m.ancho}" height="${m.alto}"></button><figcaption>${esc(m.pie)} Toca la imagen para verla en grande.</figcaption></figure>`).join('')}</div>` : ''}`;
-  cierraLectura($('cuerpo-texto'));
   const tp = $('texto-pag');
   tp.classList.remove('modo-fon');
   tp.querySelectorAll('[data-modo]').forEach(b => b.addEventListener('click', () => {
@@ -1426,7 +1411,6 @@ function pintarDetalle(t) {
     <h3 class="det-otros-tit">Otros rasgos</h3><ul class="det-otros">${otros}</ul>
     <p class="fuentes">${fmt(d.fuentes)} Las referencias completas, en la <a href="#apuntes-8">bibliografía</a>.</p>
     <nav class="pasos" aria-label="Volver al texto"><a href="#${t.codigo}"><span>Volver al texto</span><b>«${esc(t.titulo)}»</b></a></nav>`;
-  cierraLectura($('detalle'));
 }
 
 // Los signos de Cummins (GEN-06), en el desplegable de la transcripción
@@ -1470,7 +1454,6 @@ function pintarApartado(a) {
     <div class="antetitulo">${a.n ? 'El contenido · apartado ' + a.n : 'El contenido'}</div>
     <h2>${esc(a.titulo)}</h2>${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
-  cierraLectura($('apartado'));
 }
 // Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
 function tarjetaAutor(t) {
@@ -1496,7 +1479,6 @@ function pintarAutor(a, sub) {
     <div class="antetitulo">${esc(a.antetitulo)}</div>
     <h2>${esc(a.titulo)}</h2><p class="entradilla-autor">${esc(a.entradilla)}</p>${fig}${bloques}
     <nav class="pasos" aria-label="Sus textos en el taller">${a.textos.map(c => `<a href="#${c}"><span>Leer en el taller</span><b>«${esc(tit(c))}»</b></a>`).join('')}</nav>`;
-  cierraLectura($('autor'));
   if (sub) { const el = document.getElementById('inf-' + sub); if (el) requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); }
 }
 // Visor de mapas a pantalla completa: el mapa a lo ancho, con desplazamiento si no cabe
@@ -1701,7 +1683,6 @@ function pintarCabeza(codigo, R, pagina) {
     <div class="datos">${(pagina.origenes || []).map(o => `<span>${esc(o)}</span>`).join('')}${pagina.estado ? `<span>${esc(pagina.estado)}</span>` : ''}</div>
     ${R ? '' : '<p class="nota-mapa" style="color:var(--texto-3);font-size:14px;margin-top:18px">El mapa interactivo de este rasgo está en preparación.</p>'}`;
   const en = TX ? TX.filter(t => t.rasgos.includes(codigo)) : [];
-  if (pagina) cierraLectura($('r-texto'));
   if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>${pendiente(t) ? ' (pendiente de leer)' : ''}`).join(' · ')}</p></div>`);
 }
 
