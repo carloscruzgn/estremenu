@@ -127,9 +127,9 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .titulo-vista { font-weight: 900; font-size: clamp(32px, 5vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin-top: 10px }
 .entradilla { color: var(--texto-2); max-width: 62ch; margin: 16px 0 0; font-size: 17px }
 .pendiente { display: inline-block; font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3); border: 1px solid var(--linea); padding: 3px 8px; border-radius: 4px }
-.pie { border-top: 1px solid var(--linea); color: var(--texto-3); font-size: 13px }
+.pie { color: var(--texto-3); font-size: 13px }
 /* Pie en tarjeta, como las cabeceras: los textos y la licencia a la izquierda, el «ñu» sobre naranja a la derecha, a toda la altura (Carlos, 19/10/2026) */
-.pie .envoltura { padding-block: 34px 30px }
+.pie .envoltura { padding-block: 8px 30px }
 .pie .tarjeta-pie { display: grid; grid-template-columns: minmax(0, 1fr) clamp(150px, 22%, 260px); border-radius: 10px; overflow: hidden; background: var(--fondo-2) }
 .pie .txt-pie { padding: 26px clamp(20px, 4vw, 40px) 22px }
 .pie p { margin: 0; max-width: 70ch }
@@ -137,7 +137,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pie .autor { margin-top: 6px; color: var(--texto-2); font-size: 14px }
 .pie .licencia { display: flex; gap: 14px; align-items: center; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--linea); font-size: 12px }
 .pie .licencia img { width: 84px; height: auto; display: block; flex: none }
-.pie .version { margin-top: 12px; font-size: 12px }
+.pie .version { margin-top: 6px; font-size: 12px }
 .pie .marca-pie { background: var(--naranja); display: grid; place-items: center }
 .pie .marca-pie .nu { font-size: clamp(48px, 6vw, 76px); color: #fff }
 .pie .marca-pie .nu .u { color: var(--fondo) }
@@ -1039,8 +1039,8 @@ span.fila .tit { color: var(--texto-2) }
 <footer class="pie"><div class="envoltura"><div class="tarjeta-pie"><div class="txt-pie">
 <p class="titulo-pie">Taller de estremeñu del CEPA Coria · <span style="white-space:nowrap">Curso 2026-2027</span></p>
 <p class="autor">Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
-<div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div>
-<p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
+<p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
+<div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«El contenido del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
 
 <div class="tam-letra" id="tam-letra"><div class="tam-opciones" id="tam-opciones" role="group" aria-label="Tamaño de la letra" hidden><span>Letra</span><button type="button" data-k="1" aria-pressed="true" style="font-size:14px" aria-label="Normal">A</button><button type="button" data-k="1.15" aria-pressed="false" style="font-size:17px" aria-label="Grande">A</button><button type="button" data-k="1.3" aria-pressed="false" style="font-size:20px" aria-label="Muy grande">A</button></div><button type="button" class="tam-abre" id="tam-abre" aria-expanded="false" aria-controls="tam-opciones" aria-label="Tamaño de la letra">A+</button></div>
 <script type="importmap">{"imports":{"three":"./lib/three/build/three.module.js","three/addons/":"./lib/three/examples/jsm/"}}</script>
