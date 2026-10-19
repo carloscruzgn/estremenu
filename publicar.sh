@@ -3,6 +3,6 @@
 set -e
 rm -rf _site
 mkdir _site
-cp -r index.html datos img lib _headers _site/
+cp -r index.html manifest.webmanifest datos img lib _headers _site/
 # Fecha de la última publicación en el pie, en hora de Madrid.
 sed -i "s|<time data-fecha>[^<]*</time>|<time data-fecha>$(TZ=Europe/Madrid date +%d/%m/%Y)</time>|" _site/index.html

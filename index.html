@@ -10,6 +10,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="img/icono-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Estremeñu">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="Vamos a aprender cómo se habló y se habla en el noroeste de Cáceres: la Sierra de Gata, Las Hurdes, las tierras de Granadilla y el valle del Alagón, con Coria, un habla que sigue por Salamanca arriba en El Rebollar.">
 <!-- Vista previa al compartir (Open Graph): img/og.jpg, de fuente/og.py -->
 <meta property="og:type" content="website">
@@ -74,11 +75,38 @@ button { font: inherit; color: inherit }
 .menu a:hover { color: var(--banda-texto); background: rgba(255,255,255,.16) }
 .menu a[aria-current="page"] { color: var(--banda-texto); box-shadow: inset 0 -3px 0 var(--banda-texto); border-radius: 0; background: none }
 .cab :focus-visible { outline-color: var(--banda-texto) }
+/* En el móvil, el menú va tras las tres rayas, arriba a la derecha (Carlos, 19/10/2026) */
+.menu-boton { display: none }
 @media (max-width: 640px) {
-  .cab .envoltura { flex-wrap: wrap; gap: 0; padding-block: 8px 0 }
+  .cab .envoltura { gap: 12px; min-height: 58px }
   .marca span { font-size: 14px }
-  .menu { width: 100%; margin: 6px 0 0; margin-left: -12px }
-  .menu a { padding: 8px 9px; font-size: 13px }
+  .menu-boton { display: grid; place-items: center; margin-left: auto; margin-right: -8px; width: 46px; height: 46px; padding: 0; background: none; border: 0; border-radius: 8px; color: var(--banda-texto); cursor: pointer }
+  .menu-boton i { display: block; width: 24px; height: 3px; border-radius: 2px; background: currentColor; transition: transform .25s ease, opacity .2s ease }
+  .menu-boton i + i { margin-top: 5px }
+  .menu-boton span { display: grid }
+  .cab.abierto .menu-boton i:nth-child(1) { transform: translateY(8px) rotate(45deg) }
+  .cab.abierto .menu-boton i:nth-child(2) { opacity: 0 }
+  .cab.abierto .menu-boton i:nth-child(3) { transform: translateY(-8px) rotate(-45deg) }
+  .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; margin: 0; padding: 4px 0 12px; background: var(--banda); box-shadow: 0 14px 24px rgba(0, 0, 0, .35); overflow: visible }
+  .cab.abierto .menu { display: flex }
+  .menu a { font-size: 19px; padding: 13px max(20px, env(safe-area-inset-left, 0px)); border-radius: 0; color: var(--banda-texto); border-top: 1px solid rgba(255, 255, 255, .22) }
+  .menu a[aria-current="page"] { box-shadow: inset 5px 0 0 var(--banda-texto); background: rgba(255, 255, 255, .16) }
+}
+
+/* Tamaño de la letra, solo en el móvil: «A+» abre las tres A; amplía solo los bloques de lectura (Carlos, 19/10/2026) */
+.tam-letra { display: none }
+@media (max-width: 640px) {
+  :root { --lectura: 1 }
+  #apartado, #autor, #detalle, #texto-pag, #r-texto, #info, .dic-bloque, #v-apuntes .envoltura, #lista-rasgos { zoom: var(--lectura) }
+  .tam-letra { display: flex; position: fixed; z-index: 30; right: max(12px, env(safe-area-inset-right, 0px)); bottom: max(14px, env(safe-area-inset-bottom, 0px)); align-items: center; gap: 2px; padding: 4px; border-radius: 999px; background: rgba(26, 59, 19, .95); border: 1px solid var(--linea); box-shadow: 0 4px 16px rgba(0, 0, 0, .4) }
+  body[data-sec="inicio"] .tam-letra { display: none }
+  .tam-letra button { font-family: var(--f); font-weight: 900; color: var(--texto); background: none; border: 0; border-radius: 999px; height: 40px; min-width: 40px; cursor: pointer; line-height: 1 }
+  .tam-letra .tam-abre { font-size: 15px; padding: 0 10px }
+  .tam-letra.abierto .tam-abre { color: var(--texto-3) }
+  .tam-opciones { display: flex; align-items: center; gap: 2px }
+  .tam-opciones[hidden] { display: none }
+  .tam-opciones span { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--texto-2); margin: 0 4px 0 6px }
+  .tam-opciones button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 }
 
 /* ---------- vistas ---------- */
@@ -688,7 +716,8 @@ span.fila .tit { color: var(--texto-2) }
 <header class="cab">
   <div class="envoltura">
     <a class="marca" href="#inicio"><img src="img/logo-todo-blanco.png" alt="CEPA Coria"><i class="raya"></i><span>Taller de estremeñu</span></a>
-    <nav class="menu" aria-label="Secciones">
+    <button type="button" class="menu-boton" id="menu-boton" aria-label="Menú" aria-expanded="false" aria-controls="menu"><span><i></i><i></i><i></i></span></button>
+    <nav class="menu" id="menu" aria-label="Secciones">
       <a href="#apuntes" data-sec="apuntes">Contenido</a>
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
       <a href="#textos" data-sec="textos">Textos</a>
@@ -934,6 +963,7 @@ span.fila .tit { color: var(--texto-2) }
 <p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
 </div></footer>
 
+<div class="tam-letra" id="tam-letra"><div class="tam-opciones" id="tam-opciones" role="group" aria-label="Tamaño de la letra" hidden><span>Letra</span><button type="button" data-k="1" aria-pressed="true" style="font-size:14px" aria-label="Normal">A</button><button type="button" data-k="1.15" aria-pressed="false" style="font-size:17px" aria-label="Grande">A</button><button type="button" data-k="1.3" aria-pressed="false" style="font-size:20px" aria-label="Muy grande">A</button></div><button type="button" class="tam-abre" id="tam-abre" aria-expanded="false" aria-controls="tam-opciones" aria-label="Tamaño de la letra">A+</button></div>
 <script type="importmap">{"imports":{"three":"./lib/three/build/three.module.js","three/addons/":"./lib/three/examples/jsm/"}}</script>
 <script type="module">
 // ================= navegación =================
@@ -968,6 +998,7 @@ async function ir() {
   const detalle = TX && h.endsWith('-rasgos') && TX.find(t => h === t.codigo + '-rasgos' && t.detalle);
   const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
+  document.body.dataset.sec = sec;
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
@@ -989,6 +1020,30 @@ async function ir() {
   if (rasgo) await abrirRasgo(rasgo);
   if (sec === 'encuestas') await abrirEncuestas();
   if (sec === 'diccionario') await abrirDiccionario();
+}
+
+// ================= menú del móvil y tamaño de la letra =================
+// Las tres rayas abren el menú; se cierra al elegir, al tocar fuera o con Esc
+{
+  const cab = document.querySelector('.cab'), mb = $('menu-boton');
+  const cierra = () => { cab.classList.remove('abierto'); mb.setAttribute('aria-expanded', 'false'); };
+  mb.addEventListener('click', e => { e.stopPropagation(); const a = !cab.classList.contains('abierto'); cab.classList.toggle('abierto', a); mb.setAttribute('aria-expanded', a); });
+  $('menu').addEventListener('click', cierra);
+  document.addEventListener('click', e => { if (!cab.contains(e.target)) cierra(); });
+  addEventListener('hashchange', cierra);
+  addEventListener('keydown', e => { if (e.key === 'Escape') cierra(); });
+}
+// «A+» abre las tres A; al elegir se cierra. El tamaño se recuerda en el navegador, si deja guardarlo.
+{
+  const caja = $('tam-letra'), abre = $('tam-abre'), ops = $('tam-opciones'), bs = [...ops.querySelectorAll('button')];
+  const muestra = a => { ops.hidden = !a; caja.classList.toggle('abierto', a); abre.setAttribute('aria-expanded', a); };
+  const pon = k => { document.documentElement.style.setProperty('--lectura', k); bs.forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k)); };
+  abre.addEventListener('click', e => { e.stopPropagation(); muestra(ops.hidden); });
+  bs.forEach(b => b.addEventListener('click', e => { e.stopPropagation(); pon(b.dataset.k); try { localStorage.setItem('letra', b.dataset.k); } catch (er) {} muestra(false); }));
+  document.addEventListener('click', e => { if (!caja.contains(e.target)) muestra(false); });
+  let k = '1'; try { k = localStorage.getItem('letra') || '1'; } catch (er) {}
+  if (!bs.some(b => b.dataset.k === k)) k = '1';
+  pon(k);
 }
 
 // ================= el diccionario =================
