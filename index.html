@@ -371,6 +371,9 @@ span.fila .tit { color: var(--texto-2) }
 .dic-ficha .pie-ficha { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid #e2ded6; font-family: var(--f); font-size: 13px }
 .dic-ficha .pie-ficha button { font: inherit; font-weight: 800; color: #b84c1e; background: none; border: 0; padding: 4px 0; cursor: pointer }
 .dic-ficha .pie-ficha button:disabled { color: #bbb; cursor: default }
+.dic-ficha .pie-ficha { flex-wrap: wrap }
+.dic-ficha .pie-ficha button[data-id] { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 48% }
+.dic-ficha .pie-ficha .comparte { order: 3; flex-basis: 100%; margin-top: 6px; padding-top: 10px; border-top: 1px solid #e2ded6; color: #555; font-weight: 700 }
 @media (max-width: 600px) { .dic-bloque { padding: 26px 16px 20px } .dic-ficha { padding: 20px 18px 16px; font-size: 18px } }
 .desp { margin-top: 18px; border: 1px solid var(--linea); border-radius: 10px; background: var(--fondo) }
 .desp + .desp { margin-top: 10px }
@@ -1009,7 +1012,9 @@ async function ir() {
   const detalle = TX && h.endsWith('-rasgos') && TX.find(t => h === t.codigo + '-rasgos' && t.detalle);
   // #enviar: el diccionario, abierto en «Envía una palabra» (Carlos, 19/10/2026)
   const enviar = h === 'enviar';
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : enviar ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #voz/zancaburra: el diccionario, abierto en esa palabra (Carlos, 19/10/2026)
+  const voz = h.startsWith('voz/') ? h.slice(4) : null;
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : enviar || voz !== null ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
   document.body.dataset.sec = sec;
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
@@ -1023,6 +1028,7 @@ async function ir() {
     : detalle ? 'Los rasgos de «' + detalle.titulo + '»'
     : autor ? limpio(autor.titulo)
     : enviar ? 'Envía una palabra'
+    : voz !== null ? '«' + voz + '» · Diccionario'
     : { apuntes: 'El contenido del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
@@ -1035,6 +1041,20 @@ async function ir() {
   if (sec === 'encuestas') await abrirEncuestas();
   if (sec === 'diccionario') await abrirDiccionario();
   if (enviar) alFormulario();
+  if (voz !== null && DIC) abrirVoz(voz);
+}
+
+// La dirección de una palabra, legible: solo se cifran el espacio, el % y la #
+const enlaceVoz = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20').replace(/#/g, '%23');
+// Abre una palabra por su lema, como si se hubiera buscado; si no está, la deja escrita en el buscador
+function abrirVoz(v) {
+  const q = normDic(v), e = DIC.e.find(x => normDic(x[1]) === q);
+  modoDic = 'voz';
+  for (const o of document.querySelectorAll('.dic-modo button')) o.setAttribute('aria-pressed', String(o.dataset.modo === 'voz'));
+  $('busca-voz').value = e ? e[1] : v;
+  buscarDic();
+  if (e) verEntrada(e[0], true);
+  else { $('dic-ficha').hidden = true; fichaActual = -1; }
 }
 
 // Al formulario: se baja hasta él y, si la clave ya está puesta, el cursor va a la palabra
@@ -1123,7 +1143,9 @@ function verEntrada(id, desplazar = true) {
   fichaActual = i;
   const e = DIC.e[i], ant = DIC.e[i - 1], sig = DIC.e[i + 1];
   const f = $('dic-ficha');
-  f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
+  f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" class="comparte" data-voz="${esc(e[1])}">Compartir</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
+  // La dirección de la palabra queda en la barra, sin añadir un paso al historial
+  try { history.replaceState(null, '', enlaceVoz(e[1])); document.title = '«' + e[1] + '» · Diccionario · Taller de estremeñu'; } catch (er) {}
   f.hidden = false;
   for (const b of document.querySelectorAll('#dic-lista button')) { if (b.dataset.id === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }
   if (desplazar) f.scrollIntoView({ behavior: sinMov ? 'auto' : 'smooth', block: 'center' });
@@ -1144,6 +1166,15 @@ for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListene
   for (const o of document.querySelectorAll('.dic-modo button')) o.setAttribute('aria-pressed', String(o === b));
   $('busca-voz').placeholder = modoDic === 'glosa' ? 'despertar, escarabajo, columpio…' : 'acordal, zancaburra, jedel…';
   buscarDic(); $('busca-voz').focus();
+});
+// Compartir una palabra: el menú de compartir del móvil o, si no lo hay, el enlace copiado
+$('dic-ficha').addEventListener('click', async ev => {
+  const b = ev.target.closest('.comparte'); if (!b) return;
+  const url = 'https://estremenu.pages.dev/' + enlaceVoz(b.dataset.voz);
+  try {
+    if (navigator.share) await navigator.share({ title: b.dataset.voz + ' · Diccionario del Taller de estremeñu', url });
+    else { await navigator.clipboard.writeText(url); b.textContent = 'Enlace copiado'; setTimeout(() => { b.textContent = 'Compartir'; }, 2200); }
+  } catch (er) {}
 });
 for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya']) $(id).addEventListener('click', ev => {
   const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha' && id !== 'dic-lista');
