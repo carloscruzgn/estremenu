@@ -375,6 +375,12 @@ span.fila .tit { color: var(--texto-2) }
 @keyframes dc-izq { from { transform: translateX(-16px); opacity: 0 } to { transform: none; opacity: 1 } }
 @keyframes dc-titulo { from { letter-spacing: .28em; opacity: 0 } to { letter-spacing: .005em; opacity: 1 } }
 @keyframes dc-arriba { from { transform: translateY(10px); opacity: 0 } to { transform: none; opacity: 1 } }
+/* Los apartados del contenido llevan la misma cabecera, con el título en Montserrat (Carlos, 19/10/2026) */
+.dic-cab.cab-ap { margin: 4px 0 30px; min-height: 200px }
+.dic-cab.cab-ap .dc-nu { font-size: clamp(56px, 8vw, 104px) }
+.apartado .dic-cab.cab-ap h2, .dic-cab.cab-ap h2 { font-family: var(--f); font-weight: 900; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.08; letter-spacing: -.02em; margin: 10px 0 12px }
+.dic-cab.cab-ap .dc-sub { font-family: var(--f); font-style: normal; font-weight: 700; font-size: 15px; letter-spacing: .02em; color: var(--texto-2) }
+@media (max-width: 640px) { .dic-cab.cab-ap { min-height: 140px } .apartado .dic-cab.cab-ap h2, .dic-cab.cab-ap h2 { font-size: clamp(22px, 6.6vw, 28px); margin: 6px 0 8px } .dic-cab.cab-ap .dc-sub { font-size: 12px } }
 @media (prefers-reduced-motion: reduce) { .dic-cab.entra .dc-marca, .dic-cab.entra .dc-nu .n, .dic-cab.entra .dc-nu .u, .dic-cab.entra .dc-nu .u::after, .dic-cab.entra .dc-ante, .dic-cab.entra h2, .dic-cab.entra .dc-sub { animation: none } }
 .dic-bloque { position: relative; margin-top: 48px; padding: 30px 28px 28px; border-radius: 14px; max-width: 900px }
 .dic-bloque h3 { margin: 0; font-weight: 900; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -.01em; line-height: 1.1 }
@@ -856,8 +862,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-rasgos" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">El contenido · apartado 7</div>
-    <h2 class="titulo-vista">Los rasgos, uno a uno</h2>
+    <div id="cab-rasgos"></div>
     <p class="entradilla">Los que han estudiado el habla del noroeste desde 1912 han descrito muchos más rasgos de los que caben en un curso. Los apuntes del profesor los reúnen en un catálogo con número propio: V para las vocales, C para las consonantes, M para la gramática y P para la entonación.</p>
     <p class="entradilla">El taller trabaja una selección de treinta y un rasgos, elegidos por el interés que tienen aquí. Por eso la lista salta, por ejemplo, de V01 a V05: los que no entran van al final de cada grupo, en un desplegable y sin página. Cada rasgo tiene su descripción con lo que es, de dónde viene, lo que encontraron los que vinieron a escucharnos y cómo está hoy, y su mapa por pueblos y por fechas.</p>
     <section class="encuestas-breve" aria-labelledby="eb-tit">
@@ -900,8 +905,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-textos" class="vista" hidden>
   <div class="envoltura">
-    <div class="antetitulo">Lo que hemos leído en clase</div>
-    <h2 class="titulo-vista">Los textos del taller</h2>
+    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">Lo que hemos leído en clase</div><h2>Los textos del taller</h2></div></header>
     <p class="entradilla">Cada texto con la fecha en que lo leímos, y al final el que está por leer. Las palabras que tienen alguno de sus rasgos destacados van marcadas y llevan a la página del rasgo.</p>
     <ol class="textos" id="lista-textos"></ol>
   </div>
@@ -1041,6 +1045,9 @@ const sinMov = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let AU = null;
 // La cabecera del diccionario entra una vez por carga: al acabar el subtítulo se quita la animación
 document.querySelector('#dic-cab .dc-sub').addEventListener('animationend', () => $('dic-cab').classList.remove('entra'), { once: true });
+// Cabecera de un apartado del contenido, como la del diccionario: el «ñu», «Apartado N» en naranja y «Apuntes del taller» (Carlos, 19/10/2026)
+const cabAp = (n, titulo) => `<header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">${n ? 'Apartado ' + n : 'El contenido'}</div><h2>${esc(titulo)}</h2><p class="dc-sub">Apuntes del taller</p></div></header>`;
+document.getElementById('cab-rasgos').outerHTML = cabAp(7, 'Los rasgos, uno a uno');
 const NU = '<span class="nu" aria-hidden="true">ñ<span class="u">u</span></span>';
 let CAT = null, AP = null, TX = null, mapa = null, cargandoMapa = null, BASE = null;
 
@@ -1451,8 +1458,7 @@ function pintarApartado(a) {
     : '').join('');
   const extra = a.id === '7' ? '<a class="boton" href="#rasgos">Ver los treinta y un rasgos</a>' : a.id === '4' ? '<a class="boton" href="#encuestas">Las tres encuestas, en detalle</a>' : '';
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← El contenido del taller</a>
-    <div class="antetitulo">${a.n ? 'El contenido · apartado ' + a.n : 'El contenido'}</div>
-    <h2>${esc(a.titulo)}</h2>${bloques}${extra}
+    ${cabAp(a.n, a.titulo)}${bloques}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
 }
 // Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
