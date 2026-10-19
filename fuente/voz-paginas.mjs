@@ -3,7 +3,8 @@
 // sin una dirección real por palabra, toda dirección enseña la vista previa de la portada.
 // Uso, desde publicar.sh: node fuente/voz-paginas.mjs _site   → _site/voz/<palabra>.html
 // Cloudflare sirve voz/<palabra>.html en /voz/<palabra>. La página lleva el título y la descripción de la
-// palabra y manda en el acto a /#voz/<palabra>, la ficha de siempre.
+// palabra y manda en el acto a /#voz/<palabra>, la ficha de siempre. La imagen, img/og-diccionario.jpg, la misma
+// para todas, la hace fuente/og-diccionario.py.
 import fs from 'fs';
 import path from 'path';
 
@@ -47,11 +48,11 @@ for (const e of DIC.e) {
 <meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${esc(url)}">
-<meta property="og:image" content="${BASE}/img/og.jpg">
+<meta property="og:image" content="${BASE}/img/og-diccionario.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Taller de estremeñu, CEPA Coria, curso 2026-2027, sobre el mapa del noroeste de Cáceres">
+<meta property="og:image:alt" content="Diccionario del Taller de estremeñu, CEPA Coria">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/icono-32.png">
 <meta http-equiv="refresh" content="0; url=${esc(destino)}">
