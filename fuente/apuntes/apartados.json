@@ -24,7 +24,7 @@
     {
      "t": "mapa",
      "codigo": "01",
-     "titulo": "Área del taller con ríos"
+     "titulo": "Área del taller de estremeñu"
     },
     {
      "texto": "Coria va a salir más veces que ningún otro sitio, y no porque sea el centro del mundo: es el único punto de toda la comarca que tiene un libro entero dedicado a cómo se habla. Los pueblos de alrededor entran con él, y muchas cosas que se dicen de Coria valen igual para Calzadilla, Casillas, Portaje o Montehermoso.",
@@ -65,7 +65,7 @@
     {
      "t": "mapa",
      "codigo": "H01",
-     "titulo": "Primer avance cristiano"
+     "titulo": "Primer avance cristiano en el siglo XII"
     },
     {
      "texto": "Luego los reinos se juntaron, en 1230, y el que mandaba era Castilla. Desde entonces el castellano fue la lengua de los papeles, de los reyes, de la Iglesia y, cuando la hubo, de la escuela. El habla de la gente siguió siendo la que era, pero sin nadie que la escribiera. Ochocientos años de hablar de una manera y escribir de otra. Al sur del Tajo la repoblación fue más tardía y vino gente de todas partes, y por eso allí lo leonés se nota mucho menos. Aquí arriba, en cambio, cada invierno bajaban de León y de Salamanca los pastores con los rebaños a las dehesas de Coria y de Alcántara, y volvían a traer sus palabras. Eso duró siglos.",
@@ -74,7 +74,8 @@
     {
      "t": "mapa",
      "codigo": "H04",
-     "titulo": "Lenguas romances hacia 1300"
+     "titulo": "Lenguas romances",
+     "fecha": "hacia 1300"
     },
     {
      "texto": "Lo que ha pasado en los últimos setenta años lo has visto tú: las carreteras, los pantanos de Borbollón y de Gabriel y Galán con el regadío y los colonos venidos de Andalucía, la emigración que se llevó a los jóvenes, la escuela para todos, la radio y la televisión. Cada una de esas cosas trajo castellano y se llevó un poco de lo antiguo.",

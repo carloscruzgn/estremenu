@@ -1,5 +1,5 @@
 {
-  "_fuente": "Los quince mapas históricos (H01-H15) de la carpeta Mapas de Drive, por orden de las fechas que enseñan; títulos y fechas, de 10-MAPAS y de la cabecera de cada mapa. La entradilla es de Carlos, con un retoque de Claude, el 19/10/2026. Los mapas van en galería, sin código y en pequeño, y se amplían al tocarlos (Carlos, 19/10/2026). construir.mjs lo pone detrás de la bibliografía.",
+  "_fuente": "Los quince mapas históricos (H01-H15) de la carpeta Mapas de Drive, por orden de las fechas que enseñan; títulos y fechas, de la cabecera de cada mapa (Carlos, 19/10/2026). La entradilla es de Carlos, con un retoque de Claude, el 19/10/2026. Los mapas van en galería, sin código y en pequeño, y se amplían al tocarlos (Carlos, 19/10/2026). construir.mjs lo pone detrás de la bibliografía.",
   "id": "9",
   "n": "9",
   "titulo": "Anexo: mapas históricos",
@@ -23,11 +23,12 @@
         },
         {
           "codigo": "H07",
-          "titulo": "Hispania hacia el 197 a. C."
+          "titulo": "Roma llega a Hispania",
+          "fecha": "hacia el 197 a. C."
         },
         {
           "codigo": "H08",
-          "titulo": "El Imperio romano con Trajano",
+          "titulo": "El Imperio romano en su mayor extensión",
           "fecha": "hacia el 117 d. C."
         },
         {
@@ -47,17 +48,17 @@
         },
         {
           "codigo": "H02",
-          "titulo": "Lenguas romances hacia 950"
+          "titulo": "Lenguas romances",
+          "fecha": "hacia 950"
         },
         {
           "codigo": "H12",
-          "titulo": "Las Extremaduras",
+          "titulo": "Extremadura: la Estremaúra",
           "fecha": "siglos X a XIII"
         },
         {
           "codigo": "H01",
-          "titulo": "Primer avance cristiano",
-          "fecha": "siglo XII"
+          "titulo": "Primer avance cristiano en el siglo XII"
         },
         {
           "codigo": "H13",
@@ -66,7 +67,8 @@
         },
         {
           "codigo": "H03",
-          "titulo": "Lenguas romances hacia 1212"
+          "titulo": "Lenguas romances",
+          "fecha": "hacia 1212"
         },
         {
           "codigo": "H14",
@@ -75,7 +77,8 @@
         },
         {
           "codigo": "H04",
-          "titulo": "Lenguas romances hacia 1300"
+          "titulo": "Lenguas romances",
+          "fecha": "hacia 1300"
         },
         {
           "codigo": "H15",
