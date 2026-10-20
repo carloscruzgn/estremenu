@@ -88,6 +88,9 @@ const usadas = new Set();
 
 // ---------- lugares (04-VOCABULARIO, «Lugares») ----------
 const SIN = 'Sin localizar';
+// La fala, contraste: sus testimonios van en «En la fala» y no cuentan para lugares ni variantes (Carlos, 20/10/2026)
+const FALA = 'Val de Xálima';
+const esFala = t => t.comarca === FALA;
 function comarcaDe(t) { return t.comarca === 'Tierra de Coria (Cummins)' ? 'Valle del Alagón' : t.comarca; }
 function localidadDe(t) {
   const l = (t.localidad || '').trim();
@@ -145,9 +148,10 @@ const entradas = [];
 for (const L of LEMAS) {
   const lema = limpia(L.lema);
   if (!lema) continue;
-  const ts = testDe.get(L.lema_id) || [];
+  const todos = testDe.get(L.lema_id) || [];
+  const ts = todos.filter(t => !esFala(t)), fala = todos.filter(esFala);
   const as = (acepDe.get(L.lema_id) || []).slice().sort((x, y) => +x['acepción'] - +y['acepción']);
-  if (!ts.length || !as.length) { avisos.push('Sin testimonios o sin acepciones: ' + L.lema_id + ' ' + lema); continue; }
+  if (!ts.length || !as.length) { avisos.push('Sin testimonios del área o sin acepciones: ' + L.lema_id + ' ' + lema); continue; }
   const kLema = clave(lema);
   const propios = ts.filter(t => clave(t.forma) === kLema);
   const varias = as.length > 1;
@@ -191,13 +195,25 @@ for (const L of LEMAS) {
     }).sort((a, b) => colEs.compare(a.forma, b.forma));
     h += `<p class="e-lin"><span class="e-et">Variantes:</span> ${vs.map(v => v.txt).join('; ')}.</p>`;
   }
+  // En la fala: formas de contraste, con su glosa, su pueblo y su fuente (Carlos, 20/10/2026)
+  if (fala.length) {
+    const porForma = new Map();
+    for (const t of fala) (porForma.get(t.forma) || porForma.set(t.forma, []).get(t.forma)).push(t);
+    const fp = [...porForma.entries()].sort((a, b) => colEs.compare(a[0], b[0])).map(([forma, g]) => {
+      const gl = limpia(g[0]['glosa de la fuente']).replace(/\.$/, '');
+      const locs = [...new Set(g.map(t => localidadDe(t)).filter(Boolean))].sort(colEs.compare);
+      const fu = [...new Set(g.map(t => { usadas.add(t.fuente); const p = pagina(t); return sigla(t.fuente) + (p ? ', ' + p : ''); }))];
+      return `<i>${esc(limpia(forma))}</i>${gl ? ` ‘${esc(gl)}’` : ''} (${[esc(locs.join(', ')), esc(fu.join('; '))].filter(Boolean).join('; ')})`;
+    });
+    h += `<p class="e-lin"><span class="e-et">En la fala:</span> ${fp.join('; ')}.</p>`;
+  }
   // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
   const vease = veaseDe(L);
   if (vease.length) h += `<p class="e-lin"><span class="e-et">Véase:</span> ${vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', ')}.</p>`;
 
-  const formas = [...new Set([lema, ...ts.map(t => t.forma)].map(norm).filter(Boolean))];
+  const formas = [...new Set([lema, ...todos.map(t => t.forma)].map(norm).filter(Boolean))];
   const glosas = norm(as.map(a => limpia(a.glosa)).join(' '));
-  entradas.push({ id: L.lema_id, lema, h, f: formas, k: [...new Set(formas.map(clave))], g: glosas, g1: limpia(as[0].glosa), ts });
+  entradas.push({ id: L.lema_id, lema, h, f: formas, k: [...new Set(formas.map(clave))], g: glosas, g1: limpia(as[0].glosa), ts: todos });
 }
 
 // Orden por el texto del lema (04-VOCABULARIO, «Orden»)
