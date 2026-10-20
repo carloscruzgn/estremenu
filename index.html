@@ -1838,7 +1838,7 @@ const TEXTO_ENCUESTAS = `
     <div class="antetitulo">González Salgado 2001</div>
     <h2>Las áreas de las palabras</h2>
     <p>Con sus datos, González Salgado dibujó en 2001 un mapa de las áreas del vocabulario de Extremadura. Dos rayas principales la parten en cuatro: una separa la Alta Extremadura de la Baja, y otra separa el oeste, más cercano al portugués, del centro y el este. Esa raya pasa por Coria. Quedan tres áreas grandes, A, la Alta Extremadura; B, la Baja; y C, el oeste; y tres pequeñas: D, la de Las Hurdes, Plasencia y Coria; E, a lo largo de la raya de Castilla; y F, el sur de Badajoz.</p>
-    <p>Aquí van pintadas por términos, para ver qué pueblos toca cada área: cada término va al área en la que cae un punto de su interior, y los que quedan dentro de D, E o F van más oscuros y más altos. Los que una raya corta podrían ir a un lado o al otro.</p>
+    <p>Aquí van pintadas por términos, para ver qué pueblos toca cada área: cada término va al área en la que cae un punto de su interior, y los que quedan dentro de D, E o F van con el color de esa área pequeña y más altos. Los que una raya corta podrían ir a un lado o al otro.</p>
   </section>
   <section class="paso" data-estado="areas">
     <div class="antetitulo">González Salgado 2001</div>
@@ -2338,15 +2338,15 @@ async function crearMapa(baseP) {
       J[c] = n === 3 ? { h: 1.15, c: C.reg } : n === 2 ? { h: 0.7, c: DOS } : { h: 0.38, c: CLARO };
     }
     // Los términos que caen en D, E o F, en el tono oscuro de su área grande y más altos
-    const Z = {}, ZC = { A: col('#85be6d'), B: col('#ffc4a0'), C: col('#ff914d') }, ZO = { A: col('#3f7a2e'), B: col('#d9895a'), C: col('#b8501a') };
-    for (const [c, z] of Object.entries(F.zonas || {})) Z[c] = z.length > 1 ? { h: 0.6, c: ZO[z[0]] } : { h: 0.14, c: ZC[z[0]] };
+    const Z = {}, ZC = { A: col('#85be6d'), B: col('#ffc4a0'), C: col('#ff914d'), D: col('#b84c1e'), E: col('#2f6b2a'), F: col('#8c5a7a') };
+    for (const [c, z] of Object.entries(F.zonas || {})) { const p = z.split('+'); Z[c] = p.length > 1 ? { h: 0.6, c: ZC[p[1]] } : { h: 0.14, c: ZC[p[0]] }; }
     const enPueblo = [{ c: '#ff914d', t: 'Encuestado en el pueblo' }, { c: '#ffc4a0', t: 'Encuestado a distancia' }];
     return [
       { id: 'kruger', nombre: 'Krüger, 1912', k: 'Primavera de 1912', h: 'Fritz Krüger', s: 'En claro, donde no llegó: preguntó a alguien del pueblo que estaba en otro sitio', cam: 'red', capa: K, leyenda: enPueblo },
       { id: 'cummins', nombre: 'Cummins, 1967-1972', k: '1967, 1969 y 1972', h: 'John Cummins', s: 'Coria y doce pueblos. La altura es el número de personas con que habló, de una a quince', cam: 'red', capa: CU, leyenda: enPueblo },
       { id: 'gs', nombre: 'González Salgado, 1995-1997', k: '1995-1997', h: 'José Antonio González Salgado', s: 'Nueve de sus 58 pueblos están en el área del taller o en su borde', cam: 'red', capa: G, leyenda: [{ c: '#ff914d', t: 'Encuestado' }] },
       { id: 'juntas', nombre: 'Las tres juntas', k: 'Dónde se pueden comparar fechas', h: 'Las tres, solo en Guijo de Galisteo', s: 'En otros diez pueblos hay dos fechas', cam: 'red', capa: J, leyenda: [{ c: '#ff914d', t: 'Las tres encuestas' }, { c: '#b84c1e', t: 'Dos encuestas' }, { c: '#ffc4a0', t: 'Una encuesta' }] },
-      { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. Más oscuro y más alto, si está dentro de D, E o F', cam: 'ext', capa: Z, ext: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#85be6d', t: 'A, la Alta Extremadura' }, { c: '#ffc4a0', t: 'B, la Baja' }, { c: '#ff914d', t: 'C, el oeste' }, { c: 'linear-gradient(90deg,#3f7a2e 33%,#d9895a 33% 66%,#b8501a 66%)', t: 'Más oscuro y más alto: dentro de D, E o F' }] },
+      { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. Las tres pequeñas, con su color y más altas', cam: 'ext', capa: Z, ext: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#85be6d', t: 'A, la Alta Extremadura' }, { c: '#ffc4a0', t: 'B, la Baja' }, { c: '#ff914d', t: 'C, el oeste' }, { c: '#b84c1e', t: 'D, Las Hurdes, Plasencia y Coria' }, { c: '#2f6b2a', t: 'E, junto a la raya de Castilla' }, { c: '#8c5a7a', t: 'F, el sur de Badajoz' }] },
       { id: 'areas', nombre: 'Áreas, como las dibujó', k: 'González Salgado 2001', h: 'Las áreas, como las dibujó', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
     ];
   }
