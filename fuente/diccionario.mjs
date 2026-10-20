@@ -1,8 +1,8 @@
 // Prepara el diccionario de la web desde el espejo de la hoja DICCIONARIO-NOROESTE.
 // Uso: node diccionario.mjs <carpeta del espejo>   → ../datos/diccionario.json
 // La entrada sigue la del diccionario impreso desde el 18/10/2026 (04-VOCABULARIO, «Entrada»), sin la línea
-// de Observaciones y sin nada de lo marcado como dudoso: ni las marcas ++ ni los étimos con ++dudoso: étimo++
-// ni las categorías con ++cat++ (Carlos, 18/10/2026).
+// de Observaciones y sin las marcas ++ ni las categorías con ++cat++ (Carlos, 18/10/2026). Los étimos con
+// ++dudoso: étimo++ salen desde el 20/10/2026, sin la marca, que se queda para el PDF de corrección (Carlos).
 // Siglas y referencias: de la pestaña FUENTES (versión 2 de la hoja). Si el espejo no la trae, de
 // diccionario-siglas.json, y las que falten se forman con la regla de 05-DECISIONES (04/10/2026) y se avisan.
 import fs from 'fs';
@@ -154,7 +154,7 @@ for (const L of LEMAS) {
   const glosaAc = Object.fromEntries(as.map(a => [a['acepción'], limpia(a.glosa)]));
 
   const lug = lugares(propios.length ? propios : ts);
-  const etimo = !dudoso(L.marcas, 'étimo') && limpia(L['étimo']) ? limpia(L['étimo']).replace(/^\[|\]$/g, '') : '';
+  const etimo = limpia(L['étimo']) ? limpia(L['étimo']).replace(/^\[|\]$/g, '') : '';
   const catDe = a => (a.marcas || '').includes('++cat++') ? '' : limpia(a['categoría']);
 
   let h = `<p class="e-cab"><span class="e-lema">${esc(lema)}</span>`;
