@@ -22,17 +22,27 @@ const hashVoz = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20')
 
 const dir = path.join(salida, 'voz');
 fs.mkdirSync(dir, { recursive: true });
-const vistos = new Set();
-let n = 0;
+// Los homónimos (dos lemas con la misma forma, como pielga, 20/10/2026) comparten página: la descripción
+// lleva los dos, y la ficha abre el primero con los dos en la lista del buscador. Dos lemas distintos que
+// dieran el mismo nombre de fichero (por la barra) sí paran la publicación.
+const grupos = new Map();
 for (const e of DIC.e) {
-  const lema = e[1], cab = (e[2].match(/<p class="e-cab">([\s\S]*?)<\/p>/) || [, ''])[1];
-  const nombre = nombreVoz(lema);
-  if (vistos.has(nombre)) { console.error('Nombre repetido: ' + nombre); process.exit(1); }
-  vistos.add(nombre);
+  const nombre = nombreVoz(e[1]);
+  if (!grupos.has(nombre)) grupos.set(nombre, []);
+  const g = grupos.get(nombre);
+  if (g.length && g[0][1].normalize('NFC') !== e[1].normalize('NFC')) { console.error('Nombre repetido: ' + nombre); process.exit(1); }
+  g.push(e);
+}
+let n = 0;
+for (const [nombre, g] of grupos) {
+  const lema = g[0][1];
   // Las comarcas: el primer paréntesis de la cabecera; los significados: lo que va en negrita
-  const comarcas = (texto(cab.replace(/<span class="e-lema">[\s\S]*?<\/span>/, '')).match(/\(([^)]*)\)/) || [, ''])[1];
-  const glosa = [...cab.matchAll(/<b>([\s\S]*?)<\/b>/g)].map(m => texto(m[1])).join(' ');
-  const desc = glosa + (comarcas ? ` (${comarcas})` : '');
+  const desc = g.map(e => {
+    const cab = (e[2].match(/<p class="e-cab">([\s\S]*?)<\/p>/) || [, ''])[1];
+    const comarcas = (texto(cab.replace(/<span class="e-lema">[\s\S]*?<\/span>/, '')).match(/\(([^)]*)\)/) || [, ''])[1];
+    const glosa = [...cab.matchAll(/<b>([\s\S]*?)<\/b>/g)].map(m => texto(m[1])).join(' ');
+    return glosa + (comarcas ? ` (${comarcas})` : '');
+  }).join(' · ');
   const titulo = `${lema} · Diccionario del Taller de estremeñu`;
   const url = BASE + '/voz/' + encodeURIComponent(nombre), destino = '/' + hashVoz(lema);
   const html = `<!doctype html>
