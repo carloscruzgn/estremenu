@@ -193,6 +193,8 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .etiq.letra { font-weight: 900; font-size: 24px; color: rgba(255, 255, 255, .9) }
 .leyenda .cuad.linea { height: 3px }
 .leyenda .cuad.trazos { height: 0; border-top: 3px dashed; background: none !important }
+.leyenda .cuad.alto { box-shadow: 3px 4px 0 0 #2f5a25; transform: translate(-1px, -2px) }
+.leyenda .cuad.bajo { box-shadow: 1px 1px 0 0 #2f5a25 }
 /* Las tres encuestas, en detalle: el mapa fijo a la izquierda y el texto por apartados a la derecha */
 .enc-pag { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr); column-gap: 40px; padding-block: 24px 56px }
 .enc-mapa { position: sticky; top: calc(var(--alto-cab, 64px) + env(safe-area-inset-top, 0px) + 16px); height: calc(100vh - var(--alto-cab, 64px) - 40px); min-height: 520px; display: flex; flex-direction: column; gap: 12px; align-self: start }
@@ -791,9 +793,13 @@ span.fila .tit { color: var(--texto-2) }
   .rotulo { left: 16px; top: 14px; right: 16px }
   .rotulo .s { font-size: 13px }
   .leyenda { left: 10px; bottom: 10px; font-size: 12px; padding: 8px 10px }
-  .leyenda.doble { font-size: 11px; gap: 4px; padding: 7px 9px; max-width: calc(100% - 20px) }
+  .leyenda.doble { font-size: 11px; gap: 5px; padding: 7px 9px; max-width: calc(100% - 20px); pointer-events: auto }
   .leyenda.doble .cuad { width: 15px; height: 15px }
-  .enc-mapa:has(.leyenda.doble) { height: 68svh }
+  .leyenda .cab-l { display: none; font-size: 12px; cursor: pointer; user-select: none; -webkit-user-select: none }
+  .leyenda .cab-l::after { content: ' ▾'; opacity: .8 }
+  .leyenda.doble .cab-l { display: block }
+  .leyenda.doble.plegada .cab-l::after { content: ' ▸' }
+  .leyenda.doble.plegada .fila-l { display: none }
   .rotulo .anio { font-size: 46px }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1841,7 +1847,7 @@ const TEXTO_ENCUESTAS = `
     <div class="antetitulo">González Salgado 2001</div>
     <h2>Las áreas de las palabras</h2>
     <p>Con sus datos, González Salgado dibujó en 2001 un mapa de las áreas del vocabulario de Extremadura. Dos rayas principales la parten en cuatro: una separa la Alta Extremadura de la Baja, y otra separa el oeste, más cercano al portugués, del centro y el este. Esa raya pasa por Coria. Quedan tres áreas grandes, A, la Alta Extremadura; B, la Baja; y C, el oeste; y tres pequeñas: D, la de Las Hurdes, Plasencia y Coria; E, a lo largo de la raya de Castilla; y F, el sur de Badajoz.</p>
-    <p>Aquí van pintadas por términos, para ver qué pueblos toca cada área: cada término va al área en la que cae un punto de su interior. La raya de arriba parte el mapa en alturas, con la Alta Extremadura más alta; la de abajo lo parte en colores, con el oeste, C, en naranja. Las tres áreas pequeñas van en trama, cada una con la suya, y donde dos coinciden, como en La Vera, que está en D y en E, las tramas se suman. El Rebollar no está en el mapa de 2001: queda fuera. Los que una raya corta, un poco más oscuros, podrían ir a un lado o al otro.</p>
+    <p>Aquí van pintadas por términos, para ver qué pueblos toca cada área: cada término va al área en la que cae un punto de su interior. La raya de arriba parte el mapa en alturas: la Alta Extremadura va en alto, y A, además, en verde claro; la Baja va en bajo, y B en verde oscuro. La de abajo lo parte en colores, con el oeste, C, en naranja. Las tres áreas pequeñas van en trama, cada una con la suya, y donde dos coinciden, como en La Vera, que está en D y en E, las tramas se suman. El Rebollar no está en el mapa de 2001: queda fuera. Las localidades atravesadas por un límite van más oscuras: podrían ir a un lado o al otro.</p>
   </section>
   <section class="paso" data-estado="areas">
     <div class="antetitulo">González Salgado 2001</div>
@@ -1942,7 +1948,7 @@ async function crearMapa(baseP) {
     return TRAMAS[k] = t;
   }
   const tramaCss = (angs, fondo) => `${angs.map(a => `repeating-linear-gradient(${a}deg, rgba(20,12,4,.62) 0 2px, transparent 2px 7px)`).join(',')}, ${fondo}`;
-  const TRAMA_CSS = { D: tramaCss([45], '#85be6d'), E: tramaCss([-45], '#85be6d'), F: tramaCss([0], '#85be6d'), DE: tramaCss([45, -45], '#85be6d') };
+  const TRAMA_CSS = { D: tramaCss([45], '#9ccf86'), E: tramaCss([-45], '#9ccf86'), F: tramaCss([0], '#6fa65a'), DE: tramaCss([45, -45], '#9ccf86') };
   function block(rings, color, edgeOp) {
     let geo;
     try { geo = new THREE.ExtrudeGeometry(shapesFrom(rings), { depth: 1, bevelEnabled: false }); }
@@ -2031,10 +2037,8 @@ async function crearMapa(baseP) {
   // En la página de las encuestas el rótulo ocupa más del lienzo: el mapa empieza por debajo de él, para que no se escondan pueblos ni letras
   function shotDe(E) {
     if (MODO !== 'encuestas') return shots[E.cam];
-    const lr = lienzo.getBoundingClientRect(), rb = $('rotulo').getBoundingClientRect().bottom - lr.top;
-    // Con una leyenda larga (las áreas de 2001) el mapa se encuadra por encima de ella, no debajo
-    const ly = $('leyenda'), lt = movil && ly.classList.contains('doble') && ly.offsetHeight ? ly.getBoundingClientRect().top - lr.top - 10 : null;
-    return shotPara(E.cam, Math.min(H * 0.5, Math.max(H * (movil ? 0.3 : 0.24), rb + 44)), lt != null ? Math.max(H * 0.5, Math.min(lt, H * 0.88)) : null);
+    const rb = $('rotulo').getBoundingClientRect().bottom - lienzo.getBoundingClientRect().top;
+    return shotPara(E.cam, Math.min(H * 0.5, Math.max(H * (movil ? 0.3 : 0.24), rb + 44)));
   }
   function medir() {
     W = lienzo.clientWidth; H = lienzo.clientHeight;
@@ -2205,9 +2209,12 @@ async function crearMapa(baseP) {
     }, sinMov ? 0 : 220);
   }
   const filaL = (color, texto, ol) => `<div class="fila-l"><span class="cuad${ol ? ' ol' : ''}" style="background:${color}"></span>${esc(texto)}</div>`;
+  $('leyenda').addEventListener('click', e => { if (e.target.closest('.cab-l')) $('leyenda').classList.toggle('plegada'); });
   function pintarLeyenda(E) {
-    $('leyenda').classList.toggle('doble', !!(E.leyenda && E.leyenda.length > 4));
-    if (E.leyenda) { $('leyenda').innerHTML = E.leyenda.map(f => `<div class="fila-l"><span class="cuad${f.tipo ? ' ' + f.tipo : ''}" style="background:${f.c};color:${f.c.startsWith('#') ? f.c : 'transparent'}"></span><span class="t">${esc(f.t)}</span></div>`).join(''); return; }
+    // Una leyenda larga (las áreas de 2001) va plegada en el móvil y se abre al tocarla, como la ficha de un pueblo
+    const doble = !!(E.leyenda && E.leyenda.length > 4), ly = $('leyenda');
+    ly.classList.toggle('doble', doble); ly.classList.toggle('plegada', doble && movil);
+    if (E.leyenda) { ly.innerHTML = (doble ? '<div class="cab-l">Leyenda</div>' : '') + E.leyenda.map(f => `<div class="fila-l"><span class="cuad${f.tipo ? ' ' + f.tipo : ''}" style="background:${f.c};color:${f.c.startsWith('#') ? f.c : 'transparent'}"></span><span class="t">${esc(f.t)}</span></div>`).join(''); return; }
     const tipo = RS.tipo || 'regional', hay = c => Object.values(CL).some(x => x.cls === c);
     const L = Object.assign({ reg: 'Recogido en el pueblo', prob: 'Probable', part: 'En algunos pueblos de la comarca', neg: tipo === 'distincion' ? 'Se ha registrado lo contrario' : 'Se ha buscado y no se ha recogido', sin: 'Sin datos' }, RS.leyenda || {});
     let f = [];
@@ -2366,20 +2373,20 @@ async function crearMapa(baseP) {
     // la vertical, en colores, C en naranja y el resto en verde. D, E y F van en trama, y las tramas se suman donde coinciden.
     const Z = {}, NORTE = new Set(F.norte || []);
     const CORT = new Set(F.cortados || []);
-    for (const [c, z] of Object.entries(F.zonas || {})) { const p = z.split('+'), k = p[0] === 'C' ? col('#ff914d') : col('#85be6d'); if (CORT.has(c)) k.multiplyScalar(0.8); Z[c] = { h: NORTE.has(c) ? 0.5 : 0.14, c: k, trama: p.slice(1).join('') || null }; }
+    for (const [c, z] of Object.entries(F.zonas || {})) { const p = z.split('+'), alto = NORTE.has(c), k = col(p[0] === 'C' ? (alto ? '#ffa86f' : '#ff914d') : (alto ? '#9ccf86' : '#6fa65a')); if (CORT.has(c)) k.multiplyScalar(0.8); Z[c] = { h: alto ? 0.75 : 0.14, c: k, trama: p.slice(1).join('') || null }; }
     const enPueblo = [{ c: '#ff914d', t: 'Encuestado en el pueblo' }, { c: '#ffc4a0', t: 'Encuestado a distancia' }];
     return [
       { id: 'kruger', nombre: 'Krüger, 1912', k: 'Primavera de 1912', h: 'Fritz Krüger', s: 'En claro, donde no llegó: preguntó a alguien del pueblo que estaba en otro sitio', cam: 'red', capa: K, leyenda: enPueblo },
       { id: 'cummins', nombre: 'Cummins, 1967-1972', k: '1967, 1969 y 1972', h: 'John Cummins', s: 'Coria y doce pueblos. La altura es el número de personas con que habló, de una a quince', cam: 'red', capa: CU, leyenda: enPueblo },
       { id: 'gs', nombre: 'González Salgado, 1995-1997', k: '1995-1997', h: 'José Antonio González Salgado', s: 'Nueve de sus 58 pueblos están en el área del taller o en su borde', cam: 'red', capa: G, leyenda: [{ c: '#ff914d', t: 'Encuestado' }] },
       { id: 'juntas', nombre: 'Las tres juntas', k: 'Dónde se pueden comparar fechas', h: 'Las tres, solo en Guijo de Galisteo', s: 'En otros diez pueblos hay dos fechas', cam: 'red', capa: J, leyenda: [{ c: '#ff914d', t: 'Las tres encuestas' }, { c: '#b84c1e', t: 'Dos encuestas' }, { c: '#ffc4a0', t: 'Una encuesta' }] },
-      { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. La altura, por la raya de arriba; el color, por la de abajo; D, E y F, en trama', cam: 'ext', capa: Z, ext: true, lineaArea: 0, lineaExt: 0.9, leyenda: [{ c: '#85be6d', k: 'A·B', t: 'A y B, el centro y el este' }, { c: '#ff914d', k: 'C', t: 'C, el oeste' }, { c: 'linear-gradient(180deg,#a8d593 50%,#5f8f4d 50%)', k: '↑ Alta', t: 'Más alto: la Alta Extremadura, A y el norte de C' }, { c: TRAMA_CSS.D, k: 'D', t: 'D, Las Hurdes, Plasencia y Coria' }, { c: TRAMA_CSS.E, k: 'E', t: 'E, junto a la raya de Castilla' }, { c: TRAMA_CSS.F, k: 'F', t: 'F, el sur de Badajoz' }, { c: TRAMA_CSS.DE, k: 'D+E', t: 'Donde se cruzan, las tramas se suman' }, { c: 'linear-gradient(90deg,#6a984f 50%,#cc7440 50%)', k: '±', t: 'Un poco más oscuro: lo corta una raya' }] },
+      { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. En alto, la Alta Extremadura; en naranja, el oeste; D, E y F, en trama', cam: 'ext', capa: Z, ext: true, lineaArea: 0, lineaExt: 0.9, leyenda: [{ c: 'linear-gradient(135deg,#9ccf86 50%,#ffa86f 50%)', t: 'A, en alto y en claro: la Alta Extremadura', tipo: 'alto' }, { c: 'linear-gradient(135deg,#6fa65a 50%,#ff914d 50%)', t: 'B, en bajo y en oscuro: la Baja', tipo: 'bajo' }, { c: '#ff914d', t: 'C, el oeste, en naranja' }, { c: TRAMA_CSS.D, t: 'D, Las Hurdes, Plasencia y Coria' }, { c: TRAMA_CSS.E, t: 'E, junto a la raya de Castilla' }, { c: TRAMA_CSS.F, t: 'F, el sur de Badajoz' }, { c: 'linear-gradient(90deg,#5b8a4a 50%,#cc7440 50%)', t: 'Más oscuro: localidad atravesada por un límite' }] },
       { id: 'areas', nombre: 'Áreas, como las dibujó', k: 'González Salgado 2001', h: 'Las áreas, como las dibujó', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
     ];
   }
 
   // ---------- tamaño ----------
-  new ResizeObserver(() => { medir(); encuadres(); if (!anim && ESTADOS.length) { const { p, t } = posDe(shotDe(ESTADOS[actual])); controls.target.copy(t); ponerCam(p, t); controls.update(); } pedir(); }).observe(lienzo);
+  new ResizeObserver(() => { medir(); encuadres(); if (ESTADOS.length) { const { p, t } = posDe(shotDe(ESTADOS[actual])); if (anim) { anim.cam.p1.copy(p); anim.cam.t1.copy(t); } else { controls.target.copy(t); ponerCam(p, t); controls.update(); } } pedir(); }).observe(lienzo);
   medir();
 
   return {
