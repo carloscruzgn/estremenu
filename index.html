@@ -1948,7 +1948,7 @@ async function crearMapa(baseP) {
     return TRAMAS[k] = t;
   }
   const tramaCss = (angs, fondo) => `${angs.map(a => `repeating-linear-gradient(${a}deg, rgba(20,12,4,.62) 0 2px, transparent 2px 7px)`).join(',')}, ${fondo}`;
-  const TRAMA_CSS = { D: tramaCss([45], 'linear-gradient(135deg,#9ccf86 50%,#ffa86f 50%)'), E: tramaCss([-45], '#9ccf86'), F: tramaCss([0], '#6fa65a'), DE: tramaCss([45, -45], '#9ccf86') };
+  const TRAMA_CSS = { D: tramaCss([45], 'linear-gradient(135deg,#9ccf86 50%,#ffa86f 50%)'), E: tramaCss([-45], 'linear-gradient(135deg,#9ccf86 50%,#6fa65a 50%)'), F: tramaCss([0], 'linear-gradient(135deg,#6fa65a 50%,#ff914d 50%)'), DE: tramaCss([45, -45], '#9ccf86') };
   function block(rings, color, edgeOp) {
     let geo;
     try { geo = new THREE.ExtrudeGeometry(shapesFrom(rings), { depth: 1, bevelEnabled: false }); }
