@@ -167,6 +167,15 @@ const enY = (pts, y) => { const q = [...pts].sort((a, b) => a[1] - b[1]); if (y 
 const RV = raya('vertical'), RH = raya('horizontal'), RD = raya('D'), RE = raya('E'), RF = raya('F');
 const yE = RE.map(p => p[1]), yEmin = Math.min(...yE), yEmax = Math.max(...yE);
 enc.zonas = {};
+enc.norte = [];   // términos al norte de la raya horizontal (la Alta Extremadura), también los de C
+enc.cortados = []; // términos que corta alguna de las cinco rayas: quedan a los dos lados
+const RAYAS = [RV, RH, RD, RE, RF];
+const seCruzan = (a, b, c, d) => { const o = (p, q, r) => Math.sign((q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])); return o(a, b, c) !== o(a, b, d) && o(c, d, a) !== o(c, d, b); };
+const anillos = f => (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates).flat().map(r => r.map(xy));
+function cruza(f, raya) {
+  for (const r of anillos(f)) for (let i = 0; i < r.length - 1; i++) for (let j = 0; j < raya.length - 1; j++) if (seCruzan(r[i], r[i + 1], raya[j], raya[j + 1])) return true;
+  return false;
+}
 for (const f of munis) {
   if (!(f.id.startsWith('06') || f.id.startsWith('10'))) continue;
   const q = pathGen.centroid(f), x = q[0], y = -q[1];
@@ -176,8 +185,10 @@ for (const f of munis) {
   if (!oeste && y >= yEmin && y <= yEmax && x > enY(RE, y)) z += '+E';
   if (y < enX(RF, x)) z += '+F';
   enc.zonas[f.id] = z;
+  if (norte) enc.norte.push(f.id);
+  if (RAYAS.some(r => cruza(f, r))) enc.cortados.push(f.id);
 }
-for (const [c, z] of Object.entries(ENC.zonas_corrige || {})) if (c !== '_') enc.zonas[c] = z;
+for (const [c, z] of Object.entries(ENC.zonas_corrige || {})) if (c !== '_') { enc.zonas[c] = z; if (z[0] === 'A' && !enc.norte.includes(c)) enc.norte.push(c); if (z[0] === 'B') enc.norte = enc.norte.filter(k => k !== c); }
 fs.writeFileSync(path.join(destino, 'encuestas.json'), JSON.stringify(enc));
 console.log('encuestas.json:', Object.keys(enc.kruger).length, 'términos de Krüger,', Object.keys(enc.cummins).length, 'de Cummins,', Object.keys(enc.gs).length, 'de González Salgado;', enc.coinciden.length, 'con dos o tres;', enc.isoglosas.length, 'rayas');
 
