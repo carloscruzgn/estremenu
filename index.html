@@ -446,9 +446,20 @@ span.fila .tit { color: var(--texto-2) }
 .dic-cifras div { flex: 1 1 0; min-width: 92px; max-width: 170px; padding: 12px 16px; border-radius: 10px; background: var(--fondo) }
 .dic-cifras b { display: block; font-size: 34px; font-weight: 900; line-height: 1; color: var(--naranja) }
 .dic-cifras span { font-size: 13px; font-weight: 700; color: var(--texto-2) }
-.dic-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 24px }
-.dic-col h4 { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
-.dic-col .nota { margin: 4px 0 10px; font-size: 14px; color: var(--texto-3) }
+/* Nuevas y confirmadas, mezcladas en tres columnas: el naranja para las nuevas, el naranja claro para las confirmadas (Carlos, 20/10/2026) */
+.dic-ley { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 6px 24px; margin-top: 24px }
+.dic-ley p { margin: 0; font-size: 14px; color: var(--texto-3) }
+.dic-ley b { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase }
+.dic-ley .nueva b { color: var(--naranja) }
+.dic-ley .confirma b { color: var(--probable) }
+.dic-filtro { display: inline-flex; margin: 16px 0 12px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
+.dic-filtro button { font: inherit; font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 8px 15px; cursor: pointer }
+.dic-filtro button[aria-pressed="true"] { background: var(--naranja); color: #fff }
+#dic-taller-lista { columns: 3 230px; column-gap: 28px }
+#dic-taller-lista li { break-inside: avoid }
+#dic-taller-lista li.vacio { column-span: all }
+.dic-aport li.confirma button { color: var(--probable) }
+.solo-lector { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
 /* Abecedario de las palabras del taller: las diez últimas por defecto, y por tramos que se ajustan al número de palabras (Carlos, 20/10/2026) */
 .dic-abc { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 22px }
 .dic-abc button { font: inherit; font-weight: 800; font-size: 15px; min-width: 32px; height: 34px; padding: 0 6px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--naranja); cursor: pointer }
@@ -977,14 +988,18 @@ span.fila .tit { color: var(--texto-2) }
 
     <section class="dic-bloque dic-taller" aria-labelledby="dic-t2">
       <h3 id="dic-t2">Las palabras del taller</h3>
-      <p class="dic-intro">Lo que aportan quienes vienen al taller. Unas palabras no estaban en ninguna de las obras; otras sí, y el taller confirma que se siguen diciendo hoy.</p>
+      <p class="dic-intro">Lo que aportan quienes vienen al taller. Unas palabras no estaban en ninguna de las obras; otras sí, y el taller confirma que se oyen o se oyeron.</p>
       <div class="dic-cifras" id="dic-cifras"></div>
       <div class="dic-abc" id="dic-abc" role="group" aria-label="Las palabras del taller por letras"></div>
       <p class="dic-tramo" id="dic-tramo" aria-live="polite"></p>
-      <div class="dic-col">
-        <div><h4>Palabras nuevas</h4><p class="nota">No las traía ninguna de las obras del diccionario.</p><ul class="dic-aport" id="dic-nuevas"></ul></div>
-        <div><h4>Palabras confirmadas</h4><p class="nota">Ya estaban documentadas. En el taller se confirma su vigencia, se matiza la glosa o se añaden nuevas localizaciones a la palabra.</p><ul class="dic-aport" id="dic-confirma"></ul></div>
+      <div class="dic-ley">
+        <p class="nueva"><b>Nuevas.</b> No las traía ninguna de las obras del diccionario.</p>
+        <p class="confirma"><b>Confirmadas.</b> Ya estaban documentadas. El taller confirma que se oyen o se oyeron, y a veces matiza la glosa o añade lugares.</p>
       </div>
+      <div class="dic-filtro" id="dic-filtro" role="group" aria-label="Qué palabras del taller se ven">
+        <button type="button" data-ver="todas" aria-pressed="true">Todas</button><button type="button" data-ver="nuevas" aria-pressed="false">Nuevas</button><button type="button" data-ver="confirma" aria-pressed="false">Confirmadas</button>
+      </div>
+      <ul class="dic-aport" id="dic-taller-lista"></ul>
     </section>
 
     <section class="dic-bloque dic-envio" aria-labelledby="dic-t3">
@@ -1280,10 +1295,11 @@ function pintarTaller() {
   verTramoTaller(null);
 }
 
+let verTaller = 'todas'; // todas, nuevas o confirma: el conmutador oculta unas u otras
 function verTramoTaller(k) {
   tramoTaller = k;
   const { nuevas, confirma } = DIC.taller;
-  const todas = [...nuevas, ...confirma];
+  const todas = [...(verTaller === 'confirma' ? [] : nuevas.map(x => ({ ...x, tipo: 'nueva' }))), ...(verTaller === 'nuevas' ? [] : confirma.map(x => ({ ...x, tipo: 'confirma' })))];
   for (const b of document.querySelectorAll('#dic-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(k === null ? b.dataset.tramo === '-1' : b.dataset.tramo === String(k)));
   let filtra, orden, estado, vacio;
   if (k === null) {
@@ -1298,11 +1314,17 @@ function verTramoTaller(k) {
     vacio = 'Ninguna con estas letras.';
   }
   $('dic-tramo').textContent = estado; $('dic-tramo').hidden = !estado;
-  const item = x => `<li><button type="button" data-id="${x.id}">${esc(x.lema)}</button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc([x.lugar, x.inf].filter(Boolean).join(' · '))}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
+  const item = x => `<li class="${x.tipo}"><button type="button" data-id="${x.id}">${esc(x.lema)}<span class="solo-lector"> (${x.tipo === 'nueva' ? 'nueva' : 'confirmada'})</span></button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc([x.lugar, x.inf].filter(Boolean).join(' · '))}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
   const pinta = l => { const v = l.filter(filtra).sort(orden); return v.length ? v.map(item).join('') : `<li class="vacio">${vacio}</li>`; };
-  $('dic-nuevas').innerHTML = pinta(nuevas);
-  $('dic-confirma').innerHTML = pinta(confirma);
+  $('dic-taller-lista').innerHTML = pinta(todas);
 }
+
+$('dic-filtro').addEventListener('click', ev => {
+  const b = ev.target.closest('button[data-ver]'); if (!b) return;
+  verTaller = b.dataset.ver;
+  for (const o of $('dic-filtro').querySelectorAll('button')) o.setAttribute('aria-pressed', String(o === b));
+  verTramoTaller(tramoTaller);
+});
 
 $('dic-abc').addEventListener('click', ev => {
   const b = ev.target.closest('button[data-tramo]'); if (!b) return;
@@ -1327,7 +1349,7 @@ $('dic-comparte').addEventListener('click', async ev => {
     else { await navigator.clipboard.writeText(url); t.textContent = 'Enlace copiado'; setTimeout(() => { t.textContent = 'Compartir esta palabra'; }, 2200); }
   } catch (er) {}
 });
-for (const id of ['dic-lista', 'dic-ficha', 'dic-nuevas', 'dic-confirma', 'f-ya']) $(id).addEventListener('click', ev => {
+for (const id of ['dic-lista', 'dic-ficha', 'dic-taller-lista', 'f-ya']) $(id).addEventListener('click', ev => {
   const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha' && id !== 'dic-lista');
 });
 
