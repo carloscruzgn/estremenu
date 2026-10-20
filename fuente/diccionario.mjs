@@ -160,14 +160,17 @@ for (const L of LEMAS) {
   const lug = lugares(propios.length ? propios : ts);
   const etimo = limpia(L['étimo']) ? limpia(L['étimo']).replace(/^\[|\]$/g, '') : '';
   const catDe = a => (a.marcas || '').includes('++cat++') ? '' : limpia(a['categoría']);
+  // Marcas de uso de la acepción, como en el DLE («U. t. en pl.»), tras la glosa y en redonda; las marcas ++ no salen (Carlos, 20/10/2026)
+  const usoDe = a => limpia(a.marcas);
+  const conUso = a => usoDe(a) ? ` ${esc(punto(usoDe(a)))}` : '';
 
   let h = `<p class="e-cab"><span class="e-lema">${esc(lema)}</span>`;
   if (!varias && catDe(as[0])) h += `. <i>${esc(catDe(as[0]))}</i>`;
   if (lug.length) h += ` (${esc(lug.join(', '))})`;
   if (etimo) h += ` [<i>${esc(etimo)}</i>]`;
   h += '.';
-  if (!varias) h += ` <b>${esc(punto(mayus(limpia(as[0].glosa))))}</b>`;
-  else for (const a of as) h += ` <b>${esc(a['acepción'])}.</b> ${catDe(a) ? `<i>${esc(catDe(a))}</i> ` : ''}<b>${esc(punto(mayus(limpia(a.glosa))))}</b>`;
+  if (!varias) h += ` <b>${esc(punto(mayus(limpia(as[0].glosa))))}</b>${conUso(as[0])}`;
+  else for (const a of as) h += ` <b>${esc(a['acepción'])}.</b> ${catDe(a) ? `<i>${esc(catDe(a))}</i> ` : ''}<b>${esc(punto(mayus(limpia(a.glosa))))}</b>${conUso(a)}`;
   h += '</p>';
 
   if (propios.length) {
@@ -243,7 +246,7 @@ const fuentes = [...usadas].filter(f => !/^Informante\b/.test(f)).map(f => ({ si
   .filter((v, i, a) => a.findIndex(x => x.sigla === v.sigla) === i).sort((a, b) => colEs.compare(a.sigla, b.sigla));
 if ([...usadas].some(f => /^Informante\b/.test(f))) fuentes.push({ sigla: 'INF [A00]', ref: 'Informante del taller, con su código, curso 2026-2027.' });
 const CATS = JSON.parse(fs.readFileSync(path.join(aqui, 'diccionario-abreviaturas.json')));
-const tokens = new Set(); for (const a of ACEP) for (const p of limpia(a['categoría']).split(/\s+/)) tokens.add(p);
+const tokens = new Set(); for (const a of ACEP) { for (const p of limpia(a['categoría']).split(/\s+/)) tokens.add(p); const u = limpia(a.marcas); for (const k of ['U. t.', 'U. m.']) if (u.includes(k)) tokens.add(k); if (/\bpl\./.test(u)) tokens.add('pl.'); }
 const hayInf = [...usadas].some(f => /^Informante\b/.test(f));
 const abreviaturas = Object.entries(CATS.entradas).filter(([k]) => (k.startsWith('·') && (hayInf || !k.includes('INF'))) || tokens.has(k)).map(([k, v]) => ({ a: k.replace(/^·/, ''), v }));
 
