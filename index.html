@@ -2329,12 +2329,13 @@ async function crearMapa(baseP) {
   }
   function estadosEncuestas(F) {
     const K = {}, CU = {}, G = {}, J = {};
-    for (const [c, v] of Object.entries(F.kruger)) K[c] = v.distancia ? { h: HPROB, c: C.prob } : { h: HREG, c: C.reg };
-    for (const [c, v] of Object.entries(F.cummins)) CU[c] = { h: 0.3 + v.informantes * 0.09, c: v.distancia ? C.prob : C.reg };
+    const CLARO = col('#ffc4a0'), DOS = col('#b84c1e'); // los de la leyenda
+    for (const [c, v] of Object.entries(F.kruger)) K[c] = v.distancia ? { h: HPROB, c: CLARO } : { h: HREG, c: C.reg };
+    for (const [c, v] of Object.entries(F.cummins)) CU[c] = { h: 0.3 + v.informantes * 0.09, c: v.distancia ? CLARO : C.reg };
     for (const c of Object.keys(F.gs)) G[c] = { h: HREG, c: C.reg };
     for (const c of Object.keys(F.nombres)) {
       const n = [F.kruger, F.cummins, F.gs].filter(r => r[c]).length;
-      J[c] = n === 3 ? { h: 1.15, c: C.reg } : n === 2 ? { h: 0.7, c: C.part } : { h: 0.38, c: C.prob };
+      J[c] = n === 3 ? { h: 1.15, c: C.reg } : n === 2 ? { h: 0.7, c: DOS } : { h: 0.38, c: CLARO };
     }
     // Los términos que caen en D, E o F, en el tono oscuro de su área grande y más altos
     const Z = {}, ZC = { A: col('#85be6d'), B: col('#ffc4a0'), C: col('#ff914d') }, ZO = { A: col('#3f7a2e'), B: col('#d9895a'), C: col('#b8501a') };
