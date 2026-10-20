@@ -2354,6 +2354,21 @@ async function crearMapa(baseP) {
     const com = d.comarca && base.comarcas[d.comarca] ? base.comarcas[d.comarca].nombre : (d.code.startsWith('06') ? 'Provincia de Badajoz' : d.code.startsWith('37') ? 'Salamanca' : '');
     const li = (color, b, nota, ol) => `<li><span class="cuad${ol ? ' ol' : ''}" style="background:${color};${ol ? 'outline:1px solid rgba(255,255,255,.5)' : ''}"></span><span><b>${esc(b)}</b>${nota ? ' · <span class="nota">' + esc(nota) + '</span>' : ''}</span></li>`;
     const filas = [], k = EN.kruger[d.code], cu = EN.cummins[d.code], gs = EN.gs[d.code];
+    const E = ESTADOS[actual];
+    if (E && (E.id === 'terminos' || E.id === 'areas')) {
+      // En los mapas de áreas, la ficha dice en qué áreas de 2001 cae el término, no qué encuestas pasaron por él
+      const z = EN.zonas[d.code];
+      if (!z) filas.push(li('#2f5a25', 'Fuera del mapa de 2001', d.code.startsWith('37') ? 'Salamanca no entra en sus áreas' : '', true));
+      else {
+        const norte = (EN.norte || []).includes(d.code), p = z.split('+');
+        const G = { A: ['A, la Alta Extremadura', '#9ccf86'], B: ['B, la Baja', '#6fa65a'], C: ['C, el oeste', norte ? '#ffa86f' : '#ff914d'] }[p[0]];
+        filas.push(li(G[1], G[0], p[0] === 'C' ? (norte ? 'al norte de la raya: en alto' : 'al sur de la raya: en bajo') : (norte ? 'en alto' : 'en bajo')));
+        const P = { D: 'D, Las Hurdes, Plasencia y Coria', E: 'E, junto a la raya de Castilla', F: 'F, el sur de Badajoz' };
+        for (const q of p.slice(1)) filas.push(li(TRAMA_CSS[q], P[q], 'también'));
+        if ((EN.cortados || []).includes(d.code)) filas.push(li('linear-gradient(90deg,#5b8a4a 50%,#cc7440 50%)', 'Lo atraviesa un límite', 'podría ir a un lado o al otro'));
+      }
+      return `<h2>${esc(d.name)}</h2><div class="donde">${esc([com, AREA[d.area]].filter(Boolean).join(' · '))}</div><ul>${filas.join('')}</ul>`;
+    }
     if (k) filas.push(li(k.distancia ? '#ffc4a0' : '#ff914d', 'Krüger, 1912', k.texto));
     if (cu) filas.push(li(cu.distancia ? '#ffc4a0' : '#ff914d', 'Cummins, 1967-1972', cu.informantes + (cu.informantes === 1 ? ' persona' : ' personas') + (cu.distancia ? ', encuestada fuera del pueblo' : '')));
     if (gs) filas.push(li('#ff914d', 'González Salgado, 1995-1997', 'punto de su encuesta'));
