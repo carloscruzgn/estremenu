@@ -1948,7 +1948,7 @@ async function crearMapa(baseP) {
     return TRAMAS[k] = t;
   }
   const tramaCss = (angs, fondo) => `${angs.map(a => `repeating-linear-gradient(${a}deg, rgba(20,12,4,.62) 0 2px, transparent 2px 7px)`).join(',')}, ${fondo}`;
-  const TRAMA_CSS = { D: tramaCss([45], '#9ccf86'), E: tramaCss([-45], '#9ccf86'), F: tramaCss([0], '#6fa65a'), DE: tramaCss([45, -45], '#9ccf86') };
+  const TRAMA_CSS = { D: tramaCss([45], 'linear-gradient(135deg,#9ccf86 50%,#ffa86f 50%)'), E: tramaCss([-45], '#9ccf86'), F: tramaCss([0], '#6fa65a'), DE: tramaCss([45, -45], '#9ccf86') };
   function block(rings, color, edgeOp) {
     let geo;
     try { geo = new THREE.ExtrudeGeometry(shapesFrom(rings), { depth: 1, bevelEnabled: false }); }
@@ -2099,6 +2099,8 @@ async function crearMapa(baseP) {
     if (d.area === 'contact') c.copy(C.contact);
     if (E.capa) {
       if (E.ext && d.area === 'none' && !sal) c.copy(C.extBase);
+      // En los mapas de toda Extremadura, El Rebollar va como el resto de Salamanca (Carlos, 20/10/2026)
+      if (E.ext && sal) { h = HB; c.copy(C.spainLow); }
       const v = E.capa[d.code];
       if (v) { h = v.h; c.copy(v.c); }
       return { h, c, em, trama: v && v.trama || null };
@@ -2381,7 +2383,7 @@ async function crearMapa(baseP) {
       { id: 'gs', nombre: 'González Salgado, 1995-1997', k: '1995-1997', h: 'José Antonio González Salgado', s: 'Nueve de sus 58 pueblos están en el área del taller o en su borde', cam: 'red', capa: G, leyenda: [{ c: '#ff914d', t: 'Encuestado' }] },
       { id: 'juntas', nombre: 'Las tres juntas', k: 'Dónde se pueden comparar fechas', h: 'Las tres, solo en Guijo de Galisteo', s: 'En otros diez pueblos hay dos fechas', cam: 'red', capa: J, leyenda: [{ c: '#ff914d', t: 'Las tres encuestas' }, { c: '#b84c1e', t: 'Dos encuestas' }, { c: '#ffc4a0', t: 'Una encuesta' }] },
       { id: 'terminos', nombre: 'Áreas, por términos', k: 'González Salgado 2001', h: 'Las áreas, por términos', s: 'Cada término, en el área donde cae un punto de su interior. En alto, la Alta Extremadura; en naranja, el oeste; D, E y F, en trama', cam: 'ext', capa: Z, ext: true, lineaArea: 0, lineaExt: 0.9, leyenda: [{ c: 'linear-gradient(135deg,#9ccf86 50%,#ffa86f 50%)', t: 'A, en alto y en claro: la Alta Extremadura', tipo: 'alto' }, { c: 'linear-gradient(135deg,#6fa65a 50%,#ff914d 50%)', t: 'B, en bajo y en oscuro: la Baja', tipo: 'bajo' }, { c: '#ff914d', t: 'C, el oeste, en naranja' }, { c: TRAMA_CSS.D, t: 'D, Las Hurdes, Plasencia y Coria' }, { c: TRAMA_CSS.E, t: 'E, junto a la raya de Castilla' }, { c: TRAMA_CSS.F, t: 'F, el sur de Badajoz' }, { c: 'linear-gradient(90deg,#5b8a4a 50%,#cc7440 50%)', t: 'Más oscuro: localidad atravesada por un límite' }] },
-      { id: 'areas', nombre: 'Áreas, como las dibujó', k: 'González Salgado 2001', h: 'Las áreas, como las dibujó', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0.5, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
+      { id: 'areas', nombre: 'Áreas, como las dibujó', k: 'González Salgado 2001', h: 'Las áreas, como las dibujó', s: 'Un esquema a mano, solo del vocabulario. Sus rayas no siguen los términos municipales', cam: 'ext', capa: G, ext: true, iso: true, lineaArea: 0, lineaExt: 0.9, leyenda: [{ c: '#ff914d', t: 'Sus puntos del noroeste' }, { c: '#ffffff', t: 'Las dos rayas principales', tipo: 'linea' }, { c: '#ffc4a0', t: 'Límites de D, E y F', tipo: 'trazos' }] },
     ];
   }
 
