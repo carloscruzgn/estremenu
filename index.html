@@ -468,6 +468,56 @@ span.fila .tit { color: var(--texto-2) }
 .dic-abc .ult { padding: 0 12px; font-size: 14px; color: var(--verde) }
 .dic-abc .ult[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
 .dic-tramo { margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--texto-2) }
+/* Las palabras por lugares y por fuentes, en página aparte con enlace discreto bajo el buscador (Carlos, 21/10/2026) */
+.dic-indices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 14px 0 0; font-size: 14px }
+.dic-indices a { font-weight: 800; color: var(--naranja); text-decoration: none }
+.dic-indices a::after { content: ' →' }
+.dic-indices a:hover { text-decoration: underline }
+.dix { max-width: 900px; padding-bottom: 24px; zoom: var(--lectura) }
+.dix .volver { display: inline-block; margin-bottom: 18px }
+.dix .entradilla { margin-top: 0 }
+.ix-grupos { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 14px }
+.ix-grupo { background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 12px; padding: 18px 20px }
+.ix-grupo > a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-decoration: none; color: var(--texto) }
+.ix-grupo > a b { font-weight: 900; font-size: 20px }
+.ix-grupo > a:hover b { color: var(--naranja) }
+.ix-n { font-weight: 800; font-size: 13px; color: var(--naranja); white-space: nowrap; font-variant-numeric: tabular-nums }
+.ix-grupo .nota { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--texto-2) }
+.ix-pueblos { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
+.dix > .ix-pueblos { margin: 10px 0 18px }
+.ix-pueblos a { display: inline-block; font-size: 14px; font-weight: 700; color: var(--texto); text-decoration: none; background: var(--fondo); border: 1px solid var(--linea); border-radius: 999px; padding: 5px 12px }
+.ix-pueblos a:hover, .ix-pueblos a[aria-current] { border-color: var(--naranja); color: var(--naranja) }
+.ix-pueblos a .ix-n { margin-left: 4px; font-size: 12px; color: var(--texto-3) }
+.ix-explica { background: var(--fondo-2); border-left: 3px solid var(--naranja); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 18px }
+.ix-dato { margin: 0 0 6px; font-size: 15px; color: var(--texto-2) }
+.ix-dato a { color: var(--naranja); font-weight: 700; text-decoration: none }
+.ix-voces { list-style: none; margin: 16px 0 0; padding: 0; columns: 2 300px; column-gap: 32px }
+.ix-voces li { break-inside: avoid; padding: 5px 0; font-size: 16px; line-height: 1.4 }
+.ix-voces a { font-weight: 800; color: var(--texto); text-decoration: none }
+.ix-voces a:hover { color: var(--naranja) }
+.ix-voces .var { font-weight: 500; color: var(--texto-2) }
+.ix-voces .gl { color: var(--texto-3); font-size: 14px; margin-left: 6px }
+.ix-voces .dd { display: block; font-size: 12px; font-weight: 700; color: var(--probable) }
+.ix-voces li.vacio { column-span: all; color: var(--texto-3) }
+.ix-fuentes { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--linea) }
+.ix-fuentes a { display: grid; grid-template-columns: 7.5em minmax(0, 1fr) auto; gap: 4px 16px; padding: 12px 6px; border-bottom: 1px solid var(--linea); text-decoration: none; color: var(--texto-2); font-size: 14px; line-height: 1.5 }
+.ix-fuentes a:hover { background: var(--fondo-2) }
+.ix-fuentes a b { font-weight: 900; color: var(--texto) }
+.ix-fuentes a:hover b { color: var(--naranja) }
+.ix-fuentes .taller b { color: var(--naranja) }
+@media (max-width: 600px) { .ix-fuentes a { grid-template-columns: minmax(0, 1fr) auto } .ix-fuentes a .ref { grid-column: 1 / -1; grid-row: 2 } }
+.ix-ref { font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 14px }
+/* Por informante, en construcción: la descripción de cada uno, «Por autorizar» hasta tener su permiso (Carlos, 21/10/2026) */
+.dic-inf { margin: 4px 0 14px }
+.dic-inf-tit { margin: 0 0 8px; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.en-obra { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; background: var(--naranja-osc); color: #fff; font-size: 11px; letter-spacing: .08em; vertical-align: 1px }
+.dic-inf-bot { display: flex; flex-wrap: wrap; gap: 5px }
+.dic-inf-bot button { font: inherit; font-weight: 800; font-size: 14px; height: 32px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--texto-2); cursor: pointer }
+.dic-inf-bot button[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
+.dic-inf-ficha { margin-top: 12px; padding: 12px 16px; border-radius: 10px; background: var(--fondo); font-size: 15px; line-height: 1.55; color: var(--texto-2) }
+.dic-inf-ficha b { color: var(--texto) }
+.dic-inf-ficha p { margin: 4px 0 0 }
+.dic-inf-ficha .por { color: var(--texto-3); font-style: italic }
 @media (max-width: 640px) { .dic-abc { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px } .dic-abc button { min-width: 0; padding: 0 } .dic-abc .ult { grid-column: 1 / -1 } }
 .dic-aport { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea) }
 .dic-aport li { padding: 10px 2px; border-bottom: 1px solid var(--linea) }
@@ -972,6 +1022,7 @@ span.fila .tit { color: var(--texto-2) }
           <button type="button" data-modo="glosa" aria-pressed="false">En el significado</button>
         </div>
       </div>
+      <p class="dic-indices"><a href="#lugares">Las palabras por lugares</a><a href="#fuentes">Las palabras por fuentes</a></p>
       <p class="dic-cuenta" id="dic-cuenta" aria-live="polite"></p>
       <ul class="dic-lista" id="dic-lista"></ul>
       <article class="dic-ficha" id="dic-ficha" hidden aria-live="polite"></article>
@@ -998,6 +1049,11 @@ span.fila .tit { color: var(--texto-2) }
       </div>
       <div class="dic-filtro" id="dic-filtro" role="group" aria-label="Qué palabras del taller se ven">
         <button type="button" data-ver="todas" aria-pressed="true">Todas</button><button type="button" data-ver="nuevas" aria-pressed="false">Nuevas</button><button type="button" data-ver="confirma" aria-pressed="false">Confirmadas</button>
+      </div>
+      <div class="dic-inf" id="dic-inf" hidden>
+        <p class="dic-inf-tit">Por informante <span class="en-obra">En construcción</span></p>
+        <div class="dic-inf-bot" id="dic-inf-bot" role="group" aria-label="Las palabras de cada informante"></div>
+        <div class="dic-inf-ficha" id="dic-inf-ficha" hidden aria-live="polite"></div>
       </div>
       <ul class="dic-aport" id="dic-taller-lista"></ul>
     </section>
@@ -1028,6 +1084,13 @@ span.fila .tit { color: var(--texto-2) }
         <p class="estado-envio" id="f-estado" role="status" hidden></p>
       </form>
     </section>
+  </div>
+</section>
+
+<section id="v-indice" class="vista" hidden>
+  <div class="envoltura">
+    <div id="cab-indice"></div>
+    <div class="dix" id="indice"></div>
   </div>
 </section>
 
@@ -1117,10 +1180,14 @@ async function ir() {
   const enviar = h === 'enviar';
   // #voz/zancaburra: el diccionario, abierto en esa palabra (Carlos, 19/10/2026)
   const voz = h.startsWith('voz/') ? h.slice(4) : null;
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : enviar || voz !== null ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #lugares, #lugar/Coria, #fuentes, #fuente/CUM 1974: las palabras por lugares y por fuentes (Carlos, 21/10/2026)
+  const indice = h === 'lugares' || h === 'fuentes' || h.startsWith('lugar/') || h.startsWith('fuente/');
+  // #palabras-del-taller: el diccionario, abierto en «Las palabras del taller»
+  const alTallerH = h === 'palabras-del-taller';
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : indice ? 'indice' : enviar || alTallerH || voz !== null ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
   document.body.dataset.sec = sec;
-  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
+  for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'indice' && a.dataset.sec === 'diccionario') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
   window.scrollTo(0, 0);
   // Título de la pestaña: la página y, detrás, el nombre de la web (Carlos, 19/10/2026). En los rasgos, el código y la descripción, sin los ejemplos.
@@ -1131,6 +1198,8 @@ async function ir() {
     : detalle ? 'Los rasgos de «' + detalle.titulo + '»'
     : autor ? limpio(autor.titulo)
     : enviar ? 'Envía una palabra'
+    : indice ? tituloIndice(h)
+    : alTallerH ? 'Las palabras del taller · Diccionario'
     : voz !== null ? '«' + voz + '» · Diccionario'
     : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
@@ -1144,6 +1213,8 @@ async function ir() {
   if (sec === 'encuestas') await abrirEncuestas();
   if (sec === 'diccionario') await abrirDiccionario();
   if (enviar) alFormulario();
+  if (alTallerH) alTaller();
+  if (indice) await abrirIndice(h);
   if (voz !== null && DIC) abrirVoz(voz);
 }
 
@@ -1166,6 +1237,104 @@ function alFormulario() {
   scrollTo(0, b.getBoundingClientRect().top + scrollY - document.querySelector('.cab').offsetHeight - 32);
   const f = $('f-clave').value.trim() ? $('f-palabra') : $('f-clave');
   try { f.focus({ preventScroll: true }); } catch (e) {}
+}
+
+// A «Las palabras del taller», como al formulario
+function alTaller() {
+  const b = document.querySelector('.dic-taller');
+  scrollTo(0, b.getBoundingClientRect().top + scrollY - document.querySelector('.cab').offsetHeight - 32);
+}
+
+// ================= las palabras por lugares y por fuentes =================
+// datos/diccionario-indices.json lo escribe fuente/diccionario.mjs. Cada voz: [lema_id, forma si no es la del lema,
+// siglas (por lugares) o lugares (por fuentes)]. Lema y glosa salen de datos/diccionario.json.
+let DIX = null;
+const CERCANIAS = 'Coria y sus cercanías';
+const enlaceIx = (tipo, nombre) => '#' + tipo + '/' + nombre.replace(/%/g, '%25').replace(/ /g, '%20').replace(/#/g, '%23');
+const nVoces = n => n.toLocaleString('es-ES') + (n === 1 ? ' voz' : ' voces');
+function buscaLugar(nombre) {
+  for (const g of DIX.lugares) {
+    if (g.nombre === nombre && g.tipo !== 'otros') return { g, p: null };
+    const p = g.pueblos.find(x => x.nombre === nombre); if (p) return { g, p };
+  }
+  return null;
+}
+function tituloIndice(h) {
+  if (h === 'lugares') return 'Las palabras por lugares';
+  if (h === 'fuentes') return 'Las palabras por fuentes';
+  return (h.startsWith('lugar/') ? 'Documentadas en ' : '') + h.slice(h.indexOf('/') + 1);
+}
+const cabIx = titulo => `<header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">Diccionario</div><h2>${esc(titulo)}</h2><p class="dc-sub">Las palabras del noroeste de Cáceres</p></div></header>`;
+const EXPLICA_CERCANIAS = 'Cummins recogió las voces de su libro en Coria y en pueblos de su entorno, del Valle del Alagón y de Sierra de Gata, como Moraleja, y casi nunca dice en cuál oyó cada una. Por eso van aquí juntas, y no en Coria ni en una comarca. Las que él sitúa en un pueblo salen en ese pueblo.';
+
+async function abrirIndice(h) {
+  await abrirDiccionario();
+  if (!DIX) {
+    try { DIX = await json('datos/diccionario-indices.json'); }
+    catch (e) { $('cab-indice').innerHTML = cabIx('Diccionario'); $('indice').innerHTML = '<a class="volver" href="#diccionario">← El diccionario</a><p class="ix-dato">No se ha podido cargar la lista.</p>'; return; }
+  }
+  const caja = $('indice');
+  if (h === 'lugares') {
+    $('cab-indice').innerHTML = cabIx('Las palabras por lugares');
+    caja.innerHTML = `<a class="volver" href="#diccionario">← El diccionario</a>
+      <p class="entradilla">Las voces del diccionario según dónde se documentaron. Cada comarca reúne las de sus pueblos y las que las fuentes dan para la comarca entera, sin decir el pueblo. Que una voz esté documentada en un pueblo no quiere decir que se diga en todo él: muchas vienen de una sola persona.</p>
+      <ul class="ix-grupos">${DIX.lugares.map(g => `<li class="ix-grupo">${g.tipo === 'otros' ? `<b>${esc(g.nombre)}</b>` : `<a href="${enlaceIx('lugar', g.nombre)}"><b>${esc(g.nombre)}</b><span class="ix-n">${nVoces(g.voces.length)}</span></a>`}${g.tipo === 'cercanias' ? `<p class="nota">${esc(EXPLICA_CERCANIAS)}</p>` : ''}${g.pueblos.length ? `<ul class="ix-pueblos">${g.pueblos.map(p => `<li><a href="${enlaceIx('lugar', p.nombre)}">${esc(p.nombre)}<span class="ix-n">${p.voces.length}</span></a></li>`).join('')}</ul>` : ''}</li>`).join('')}</ul>`;
+    return;
+  }
+  if (h === 'fuentes') {
+    $('cab-indice').innerHTML = cabIx('Las palabras por fuentes');
+    const ref = r => esc(r).replace(/\*([^*]+)\*/g, '<i>$1</i>');
+    caja.innerHTML = `<a class="volver" href="#diccionario">← El diccionario</a>
+      <p class="entradilla">Las voces del diccionario según la obra que las da, con el lugar donde se recogieron.</p>
+      <ul class="ix-fuentes">${DIX.fuentes.map(f => `<li><a href="${enlaceIx('fuente', f.sigla)}"><b>${esc(f.sigla)}</b><span class="ref">${ref(f.ref)}</span><span class="ix-n">${nVoces(f.voces.length)}</span></a></li>`).join('')}${DIX.informantes ? `<li class="taller"><a href="#palabras-del-taller"><b>INF [A00]</b><span class="ref">Informantes del taller: sus palabras están en «Las palabras del taller».</span><span class="ix-n">${DIX.informantes} ${DIX.informantes === 1 ? 'informante' : 'informantes'}</span></a></li>` : ''}</ul>`;
+    return;
+  }
+  const nombre = h.slice(h.indexOf('/') + 1);
+  if (h.startsWith('lugar/')) {
+    const r = buscaLugar(nombre);
+    if (!r) { $('cab-indice').innerHTML = cabIx('Por lugares'); caja.innerHTML = `<a class="volver" href="#lugares">← Por lugares</a><p class="ix-dato">No hay voces documentadas en «${esc(nombre)}».</p>`; return; }
+    const { g, p } = r, voces = p ? p.voces : g.voces;
+    $('cab-indice').innerHTML = cabIx('Documentadas en ' + nombre);
+    const arriba = p ? `<p class="ix-dato">${g.tipo === 'otros' ? 'Sin comarca' : `En la comarca de <a href="${enlaceIx('lugar', g.nombre)}">${esc(g.nombre)}</a>`}.</p>`
+      : g.tipo === 'cercanias' ? `<p class="ix-explica">${esc(EXPLICA_CERCANIAS)}</p>`
+      : g.pueblos.length ? `<p class="ix-dato">Con las que se dan para la comarca sin decir el pueblo. Por pueblos:</p><ul class="ix-pueblos">${g.pueblos.map(x => `<li><a href="${enlaceIx('lugar', x.nombre)}">${esc(x.nombre)}<span class="ix-n">${x.voces.length}</span></a></li>`).join('')}</ul>` : '';
+    caja.innerHTML = `<a class="volver" href="#lugares">← Por lugares</a>${arriba}${listaIx(voces, 'siglas')}`;
+  } else {
+    const f = DIX.fuentes.find(x => x.sigla === nombre);
+    if (!f) { $('cab-indice').innerHTML = cabIx('Por fuentes'); caja.innerHTML = `<a class="volver" href="#fuentes">← Por fuentes</a><p class="ix-dato">No hay ninguna obra con la sigla «${esc(nombre)}».</p>`; return; }
+    $('cab-indice').innerHTML = cabIx(f.sigla);
+    caja.innerHTML = `<a class="volver" href="#fuentes">← Por fuentes</a><p class="ix-ref">${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</p>${listaIx(f.voces, 'lugares')}`;
+  }
+  ponLetrasIx(caja);
+}
+
+// La letra elegida en cada página se recuerda al volver de una palabra
+const letraIx = {};
+// La lista de voces con su abecedario: con muchas, una letra cada vez; con pocas, todas
+function listaIx(voces, dato) {
+  const items = voces.map(([id, forma, d]) => {
+    const e = DIC.e[DIC.idx[id]]; if (!e) return null;
+    const vista = forma || e[1];
+    return { letra: letraDe(vista), html: `<li><a href="${enlaceVoz(e[1])}">${forma ? `<i>${esc(forma)}</i>` : esc(e[1])}</a>${forma ? ` <span class="var">→ ${esc(e[1])}</span>` : ''}<span class="gl">${esc(corta(e[6]))}</span>${d.length ? `<span class="dd">${esc(d.join(', '))}</span>` : dato === 'lugares' ? '<span class="dd">Sin localizar</span>' : ''}</li>` };
+  }).filter(Boolean);
+  listaIx.items = items;
+  const hay = new Set(items.map(x => x.letra));
+  const muchas = items.length > 150;
+  const prim = ABC.find(l => hay.has(l));
+  return `<p class="ix-dato">${nVoces(items.length)}${muchas ? '. Elige una letra.' : '.'}</p>
+    <div class="dic-abc" id="ix-abc" role="group" aria-label="Por letras">${muchas ? '' : '<button type="button" class="ult" data-l="" aria-pressed="true">Todas</button>'}${ABC.map(l => hay.has(l) ? `<button type="button" data-l="${l}" aria-pressed="${muchas && l === prim}">${l.toUpperCase()}</button>` : `<button type="button" disabled aria-label="${l.toUpperCase()}, sin voces">${l.toUpperCase()}</button>`).join('')}</div>
+    <ul class="ix-voces" id="ix-voces" data-l="${muchas ? prim : ''}"></ul>`;
+}
+function ponLetrasIx(caja) {
+  const ul = caja.querySelector('#ix-voces'); if (!ul) return;
+  const pinta = l => {
+    const v = listaIx.items.filter(x => !l || x.letra === l);
+    ul.innerHTML = v.length ? v.map(x => x.html).join('') : '<li class="vacio">Ninguna.</li>';
+    for (const b of caja.querySelectorAll('#ix-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(b.dataset.l === l));
+  };
+  const h = location.hash;
+  pinta(letraIx[h] !== undefined ? letraIx[h] : ul.dataset.l);
+  caja.querySelector('#ix-abc').addEventListener('click', ev => { const b = ev.target.closest('button[data-l]'); if (b) { letraIx[h] = b.dataset.l; pinta(b.dataset.l); } });
 }
 
 // ================= menú del móvil y tamaño de la letra =================
@@ -1218,7 +1387,27 @@ async function abrirDiccionario() {
   $('dic-abrev').innerHTML = DIC.abreviaturas.map(a => `<dt>${esc(a.a)}</dt><dd>${esc(a.v)}</dd>`).join('');
   pintarTaller();
   buscarDic();
+  cargarInformantes();
 }
+
+// Por informante, en construcción (Carlos, 21/10/2026): datos/informantes.json, de fuente/diccionario.mjs, con la
+// descripción de fuente/informantes.json; vacía, «Por autorizar», hasta tener el permiso de cada uno
+let INF = null, infSel = null;
+async function cargarInformantes() {
+  try { INF = await json('datos/informantes.json'); } catch (e) { return; }
+  if (!INF.informantes.length) return;
+  $('dic-inf-bot').innerHTML = INF.informantes.map(x => `<button type="button" data-inf="${esc(x.inf)}" aria-pressed="false">${esc(x.inf.replace(/^INF \[|\]$/g, ''))}</button>`).join('');
+  $('dic-inf').hidden = false;
+}
+$('dic-inf-bot').addEventListener('click', ev => {
+  const b = ev.target.closest('button[data-inf]'); if (!b) return;
+  infSel = infSel === b.dataset.inf ? null : b.dataset.inf;
+  for (const o of $('dic-inf-bot').querySelectorAll('button')) o.setAttribute('aria-pressed', String(o.dataset.inf === infSel));
+  const x = infSel && INF.informantes.find(i => i.inf === infSel), f = $('dic-inf-ficha');
+  f.hidden = !x;
+  if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Por autorizar.')}</p>`;
+  verTramoTaller(tramoTaller);
+});
 
 function buscarDic() {
   if (!DIC) return;
@@ -1299,10 +1488,16 @@ let verTaller = 'todas'; // todas, nuevas o confirma: el conmutador oculta unas 
 function verTramoTaller(k) {
   tramoTaller = k;
   const { nuevas, confirma } = DIC.taller;
-  const todas = [...(verTaller === 'confirma' ? [] : nuevas.map(x => ({ ...x, tipo: 'nueva' }))), ...(verTaller === 'nuevas' ? [] : confirma.map(x => ({ ...x, tipo: 'confirma' })))];
-  for (const b of document.querySelectorAll('#dic-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(k === null ? b.dataset.tramo === '-1' : b.dataset.tramo === String(k)));
+  const todas = [...(verTaller === 'confirma' ? [] : nuevas.map(x => ({ ...x, tipo: 'nueva' }))), ...(verTaller === 'nuevas' ? [] : confirma.map(x => ({ ...x, tipo: 'confirma' })))]
+    .filter(x => !infSel || x.inf.split(', ').includes(infSel));
+  for (const b of document.querySelectorAll('#dic-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(k === null ? !infSel && b.dataset.tramo === '-1' : b.dataset.tramo === String(k)));
   let filtra, orden, estado, vacio;
-  if (k === null) {
+  if (k === null && infSel) {
+    // Con un informante elegido, todas las suyas, de la más reciente a la más antigua
+    filtra = () => true; orden = (a, b) => a.orden < b.orden ? 1 : -1;
+    estado = todas.length ? `Las palabras de ${infSel}, de la más reciente a la más antigua.` : '';
+    vacio = 'Ninguna de este informante con lo elegido.';
+  } else if (k === null) {
     const ultimas = new Set([...todas].sort((a, b) => a.orden < b.orden ? 1 : -1).slice(0, 10).map(x => x.id));
     filtra = x => ultimas.has(x.id); orden = (a, b) => a.orden < b.orden ? 1 : -1;
     estado = todas.length ? 'Se muestran las diez últimas entradas, de la más reciente a la más antigua.' : '';

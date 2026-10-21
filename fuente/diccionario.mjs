@@ -241,6 +241,63 @@ for (const e of entradas) {
 }
 for (const l of [nuevas, confirma]) l.sort((a, b) => a.orden < b.orden ? 1 : -1);
 
+// ---------- las palabras por lugares y por fuentes (Carlos, 21/10/2026) ----------
+// Página aparte, con su propio fichero, datos/diccionario-indices.json, para no cargar el buscador.
+// Por lugares: cada comarca con todos sus testimonios —también los que no dicen pueblo— y cada pueblo con los suyos.
+// «Tierra de Coria (Cummins)» va aparte, como «Coria y sus cercanías»: no encaja en una comarca, porque Cummins
+// recogió también en Moraleja, de Sierra de Gata. La localidad sin comarca va en «Otros lugares». Fuera la fala
+// y lo sin localizar, que solo sale por fuentes. Cada voz: [lema_id, forma si no es la del lema, siglas o lugares].
+const CERCANIAS = 'Coria y sus cercanías';
+const entPorId = new Map(entradas.map(e => [e.id, e]));
+const grupoDe = t => t.comarca === 'Tierra de Coria (Cummins)' ? CERCANIAS : t.comarca || 'Otros lugares';
+const ordenSiglas = ts => [...new Set(ts.slice().sort((x, y) => anio(x['fecha del dato']) - anio(y['fecha del dato'])).map(t => sigla(t.fuente)))];
+function vocesDe(ts, dato) {
+  const g = new Map();
+  for (const t of ts) {
+    const e = entPorId.get(t.lema_id); if (!e) continue;
+    const forma = clave(t.forma) === clave(e.lema) ? '' : limpia(t.forma);
+    const k = t.lema_id + '|' + clave(forma);
+    if (!g.has(k)) g.set(k, { id: t.lema_id, lema: e.lema, forma, ts: [] });
+    g.get(k).ts.push(t);
+  }
+  return [...g.values()].sort((a, b) => colEs.compare(a.forma || a.lema, b.forma || b.lema)).map(v => [v.id, v.forma, dato(v.ts)]);
+}
+const todosTs = entradas.flatMap(e => e.ts.filter(t => !esFala(t)).map(t => ({ ...t, lema_id: e.id })));
+const localizados = todosTs.filter(t => !(t.localidad === SIN || t.comarca === SIN || (!t.comarca && !t.localidad)));
+const porGrupo = new Map();
+for (const t of localizados) {
+  const c = grupoDe(t), l = localidadDe(t);
+  if (!porGrupo.has(c)) porGrupo.set(c, { ts: [], pueblos: new Map() });
+  const G = porGrupo.get(c); G.ts.push(t);
+  if (l && c !== CERCANIAS) (G.pueblos.get(l) || G.pueblos.set(l, []).get(l)).push(t);
+}
+const vocesLugar = ts => vocesDe(ts, ordenSiglas);
+const lugaresIdx = [...porGrupo.entries()].sort((a, b) => a[0] === 'Otros lugares' ? 1 : b[0] === 'Otros lugares' ? -1 : colEs.compare(a[0], b[0])).map(([c, G]) => ({
+  nombre: c, tipo: c === CERCANIAS ? 'cercanias' : c === 'Otros lugares' ? 'otros' : 'comarca',
+  voces: c === 'Otros lugares' ? [] : vocesLugar(G.ts),
+  pueblos: [...G.pueblos.entries()].sort((a, b) => colEs.compare(a[0], b[0])).map(([l, ts]) => ({ nombre: l, voces: vocesLugar(ts) }))
+}));
+// Por fuentes: cada obra con sus voces y, en cada voz, los lugares como en la ficha. Los informantes del taller
+// no se listan aquí: llevan a «Las palabras del taller», que ya las reúne.
+const porFuente = new Map();
+for (const t of todosTs) if (!/^Informante\b/.test(t.fuente)) (porFuente.get(t.fuente) || porFuente.set(t.fuente, []).get(t.fuente)).push(t);
+const fuentesIdx = [...porFuente.entries()].map(([f, ts]) => ({ sigla: sigla(f), ref: SIG.get(f)?.ref || f, voces: vocesDe(ts, g => lugares(g)) }))
+  .sort((a, b) => colEs.compare(a.sigla, b.sigla));
+const informantesIdx = [...new Set(todosTs.filter(t => /^Informante\b/.test(t.fuente)).map(t => sigla(t.fuente)))].length;
+// Los informantes del taller, para el filtro de «Las palabras del taller»: código, pueblos de sus testimonios y
+// descripción, de informantes.json; vacía sale «Por autorizar» hasta tener su permiso (Carlos, 21/10/2026)
+const INFD = fs.existsSync(path.join(aqui, 'informantes.json')) ? JSON.parse(fs.readFileSync(path.join(aqui, 'informantes.json'))) : {};
+const infPor = new Map();
+for (const t of todosTs) if (/^Informante\b/.test(t.fuente)) {
+  const c = t.fuente.replace(/^Informante\s*/, '');
+  if (!infPor.has(c)) infPor.set(c, new Set());
+  const l = localidadDe(t) || comarcaDe(t); if (l) infPor.get(c).add(l);
+}
+const informantes = [...infPor.entries()].sort((a, b) => a[0] < b[0] ? -1 : 1).map(([c, ls]) => ({ inf: 'INF [' + c + ']', lugares: [...ls].sort(colEs.compare), descripcion: (INFD[c] && INFD[c].descripcion) || '' }));
+fs.writeFileSync(path.resolve(aqui, '../datos/informantes.json'), JSON.stringify({ informantes }));
+fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-indices.json'), JSON.stringify({ fecha: fechaEspejo, lugares: lugaresIdx, fuentes: fuentesIdx, informantes: informantesIdx }));
+console.log('diccionario-indices.json:', lugaresIdx.length, 'grupos de lugares,', lugaresIdx.reduce((n, c) => n + c.pueblos.length, 0), 'pueblos,', fuentesIdx.length, 'fuentes');
+
 // ---------- fuentes y abreviaturas de lo publicado ----------
 const fuentes = [...usadas].filter(f => !/^Informante\b/.test(f)).map(f => ({ sigla: sigla(f), ref: SIG.get(f)?.ref || f }))
   .filter((v, i, a) => a.findIndex(x => x.sigla === v.sigla) === i).sort((a, b) => colEs.compare(a.sigla, b.sigla));
