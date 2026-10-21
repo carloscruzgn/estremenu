@@ -243,7 +243,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .mapa-portada .onda.va { animation: onda 1.6s ease-out 2 }
 @keyframes onda { from { transform: scale(1); opacity: .9 } to { transform: scale(6); opacity: 0 } }
 .mapa-portada text { font: 800 1px var(--f); fill: var(--texto); letter-spacing: .02em }
-.heroe .saltar { position: absolute; z-index: 2; right: max(16px, env(safe-area-inset-right, 0px)); top: 14px; background: rgba(19, 46, 13, .6); border: 1px solid var(--linea); border-radius: 999px; padding: 6px 14px; font-weight: 800; font-size: 12px; letter-spacing: .08em; color: var(--texto-2); cursor: pointer; transition: opacity .4s ease }
+.heroe .saltar { position: absolute; z-index: 2; right: max(16px, env(safe-area-inset-right, 0px)); top: 14px; background: rgba(19, 46, 13, .6); border: 1px solid var(--linea); border-radius: 7px; padding: 6px 14px; font-weight: 800; font-size: 12px; letter-spacing: .08em; color: var(--texto-2); cursor: pointer; transition: opacity .4s ease }
 .heroe .saltar:hover { color: var(--texto) }
 .heroe .entra { transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.3,1) }
 .heroe.espera .entra { opacity: 0; transform: translateY(14px) }
@@ -276,7 +276,7 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .pestanas button[aria-selected="true"]::after { transform: scaleX(1) }
 .carrusel.auto .pestanas button[aria-selected="true"]::after { animation: avance 12s linear both }
 .carrusel.auto.pausa .pestanas button[aria-selected="true"]::after, .carrusel.auto.parado .pestanas button[aria-selected="true"]::after { animation-play-state: paused }
-.flechas .pausa-btn { width: auto; border-radius: 999px; padding: 0 14px; font-size: 13px; font-weight: 800; margin-right: auto; display: inline-flex; align-items: center; gap: 6px }
+.flechas .pausa-btn { width: auto; border-radius: 7px; padding: 0 14px; font-size: 13px; font-weight: 800; margin-right: auto; display: inline-flex; align-items: center; gap: 6px }
 .flechas .pausa-btn span { font-size: 10px; letter-spacing: -1px }
 .carrusel:not(.auto) .pausa-btn { display: none }
 @keyframes avance { from { transform: scaleX(0) } to { transform: scaleX(1) } }
@@ -402,12 +402,12 @@ span.fila .tit { color: var(--texto-2) }
 .dic-busca label { display: block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde); margin-bottom: 8px }
 .dic-busca input { width: 100%; font: 700 21px var(--f); color: var(--texto); background: var(--fondo); border: 1px solid var(--linea); border-radius: 8px; padding: 14px 16px }
 .dic-busca input:focus { border-color: var(--naranja); outline: none; box-shadow: 0 0 0 3px rgba(255,145,77,.3) }
-.dic-modo { display: inline-flex; margin-top: 12px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
-.dic-modo button { font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 8px 15px; cursor: pointer }
+.dic-modo { display: inline-flex; margin-top: 12px; border: 1px solid var(--linea); border-radius: 9px; padding: 3px; gap: 2px }
+.dic-modo button { font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 6px; padding: 8px 15px; cursor: pointer }
 .dic-modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 .dic-cuenta { margin: 14px 0 0; font-size: 14px; color: var(--texto-3) }
 .dic-lista { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px }
-.dic-lista button { font-size: 16px; font-weight: 700; background: var(--fondo); border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; cursor: pointer; color: var(--texto) }
+.dic-lista button { font-size: 16px; font-weight: 700; background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 7px 14px; cursor: pointer; color: var(--texto) }
 .dic-lista button:hover { border-color: var(--naranja); color: var(--naranja) }
 .dic-lista button[aria-current="true"] { background: var(--naranja); border-color: var(--naranja); color: #fff }
 .dic-lista .gl { font-weight: 500; color: var(--texto-3); font-size: 14px; margin-left: 6px }
@@ -452,8 +452,8 @@ span.fila .tit { color: var(--texto-2) }
 .dic-ley b { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase }
 .dic-ley .nueva b { color: var(--naranja) }
 .dic-ley .confirma b { color: var(--probable) }
-.dic-filtro { display: inline-flex; margin: 16px 0 12px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
-.dic-filtro button { font: inherit; font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 8px 15px; cursor: pointer }
+.dic-filtro { display: inline-flex; margin: 16px 0 0; border: 1px solid var(--linea); border-radius: 9px; padding: 3px; gap: 2px }
+.dic-filtro button { font: inherit; font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 6px; padding: 8px 15px; cursor: pointer }
 .dic-filtro button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 #dic-taller-lista { columns: 3 230px; column-gap: 28px }
 #dic-taller-lista li { break-inside: avoid }
@@ -466,6 +466,20 @@ span.fila .tit { color: var(--texto-2) }
 .dic-abc button:disabled { color: var(--texto-3); opacity: .45; cursor: default; background: transparent; border-color: transparent }
 .dic-abc button[aria-pressed="true"] { background: var(--naranja); border-color: var(--naranja); color: var(--fondo) }
 .dic-abc .ult { padding: 0 12px; font-size: 14px; color: var(--verde) }
+/* Las tres bandas de las palabras del taller: en fila en el iPad y el ordenador, una debajo de otra en el móvil (Carlos, 22/10/2026) */
+.dic-bandas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 18px }
+.dic-bandas .banda { font: inherit; font-weight: 800; font-size: 15px; height: 48px; white-space: nowrap; overflow: hidden; padding: 0 12px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--verde); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center }
+.dic-bandas .banda[hidden] { display: none }
+.dic-bandas .banda[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
+.dic-bandas .banda .sel { white-space: nowrap }
+.dic-bandas .banda .en-obra { margin-left: 4px; font-size: 10px; padding: 2px 6px }
+.dic-bandas .chev { display: grid; place-items: center; width: 26px; height: 26px; margin-left: auto; flex: none; transition: transform .25s }
+.dic-bandas .chev svg { width: 18px; height: 18px; fill: currentColor }
+.dic-bandas .banda[aria-expanded="true"] .chev { transform: rotate(180deg) }
+.dic-bandas .banda.plega { justify-content: flex-start; text-align: left }
+.dic-panel { margin-top: 10px; padding: 12px; border-radius: 7px; background: rgba(0, 0, 0, .14); border: 1px solid var(--linea) }
+.dic-panel[hidden] { display: none }
+.dic-abc.dic-panel { margin-top: 10px }
 .dic-abc .ult[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
 .dic-tramo { margin: 12px 0 0; font-size: 14px; font-weight: 700; color: var(--texto-2) }
 /* El mapa de «Las palabras por lugares» (Carlos, 22/10/2026): comarcas graduadas, al tocar una sus localidades levantadas, y Coria y sus cercanías en recuadro */
@@ -481,7 +495,7 @@ span.fila .tit { color: var(--texto-2) }
 .recuadro svg { width: 100%; height: auto; display: block }
 .recuadro b { font-weight: 900; font-size: 14px; line-height: 1.15 }
 .recuadro span { font-weight: 800; font-size: 12px; color: var(--naranja) }
-.lug-volver { position: absolute; right: 10px; bottom: 6px; z-index: 2; align-items: center; gap: 6px; height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--naranja); color: var(--fondo); font: inherit; font-weight: 800; font-size: 14px; cursor: pointer }
+.lug-volver { position: absolute; right: 10px; bottom: 6px; z-index: 2; align-items: center; gap: 6px; height: 36px; padding: 0 14px; border-radius: 7px; border: 0; background: var(--naranja); color: var(--fondo); font: inherit; font-weight: 800; font-size: 14px; cursor: pointer }
 .leyenda .fila-l.ancha { grid-column: 1 / -1 }
 .lug-volver .corto { display: none }
 @media (max-width: 420px) { .lug-volver .largo { display: none } .lug-volver .corto { display: inline } }
@@ -493,12 +507,12 @@ span.fila .tit { color: var(--texto-2) }
 .leyenda .aviso-l { font-weight: 600; font-size: 12.5px; color: var(--texto-3) }
 .info .lug-n { margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: var(--texto-2) }
 .info .lug-n b { color: var(--naranja); font-weight: 900 }
-.info .lug-ir { display: inline-block; margin-top: 14px; font-weight: 800; font-size: 14px; color: var(--fondo); background: var(--naranja); border-radius: 999px; padding: 8px 16px; text-decoration: none }
-.info .lug-pills { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
+.info .lug-ir { display: inline-block; margin-top: 14px; font-weight: 800; font-size: 14px; color: var(--fondo); background: var(--naranja); border-radius: 7px; padding: 8px 16px; text-decoration: none }
+.info .lug-pills { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 6px }
 .info .lug-pills li { display: block }
-.info .lug-pills button { font: inherit; font-size: 13.5px; font-weight: 700; color: var(--texto); background: var(--fondo); border: 1px solid var(--linea); border-radius: 999px; padding: 5px 11px; cursor: pointer }
+.info .lug-pills button { font: inherit; font-size: 13.5px; font-weight: 700; color: var(--texto); background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 6px 11px; min-height: 40px; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; cursor: pointer }
 .info .lug-pills button:hover { border-color: var(--naranja); color: var(--naranja) }
-.info .lug-pills button span { margin-left: 4px; font-size: 12px; color: var(--texto-3) }
+.info .lug-pills button span { font-size: 12.5px; color: var(--naranja); flex: none }
 .info .lug-atras { appearance: none; border: 0; background: none; padding: 0; margin: 0 0 8px; font: inherit; font-weight: 700; font-size: 13px; color: var(--texto-2); cursor: pointer }
 .info .lug-atras:hover { color: var(--naranja) }
 .info .lug-cerca { margin: 12px 0 0; font-size: 14px; line-height: 1.55; color: var(--texto-2) }
@@ -545,11 +559,11 @@ span.fila .tit { color: var(--texto-2) }
 .ix-grupo > a:hover b { color: var(--naranja) }
 .ix-n { font-weight: 800; font-size: 13px; color: var(--naranja); white-space: nowrap; font-variant-numeric: tabular-nums }
 .ix-grupo .nota { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--texto-2) }
-.ix-pueblos { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
+.ix-pueblos { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 6px }
 .dix > .ix-pueblos { margin: 10px 0 18px }
-.ix-pueblos a { display: inline-block; font-size: 14px; font-weight: 700; color: var(--texto); text-decoration: none; background: var(--fondo); border: 1px solid var(--linea); border-radius: 999px; padding: 5px 12px }
+.ix-pueblos a { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 40px; font-size: 14px; font-weight: 700; color: var(--texto); text-decoration: none; background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 6px 12px }
 .ix-pueblos a:hover, .ix-pueblos a[aria-current] { border-color: var(--naranja); color: var(--naranja) }
-.ix-pueblos a .ix-n { margin-left: 4px; font-size: 12px; color: var(--texto-3) }
+.ix-pueblos a .ix-n { font-size: 13px; color: var(--naranja) }
 .ix-explica { background: var(--fondo-2); border-left: 3px solid var(--naranja); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 18px }
 .ix-dato { margin: 0 0 6px; font-size: 15px; color: var(--texto-2) }
 .ix-dato a { color: var(--naranja); font-weight: 700; text-decoration: none }
@@ -573,8 +587,9 @@ span.fila .tit { color: var(--texto-2) }
 @media (max-width: 600px) { .ix-fuentes a { grid-template-columns: minmax(0, 1fr) auto } .ix-fuentes a .ref { grid-column: 1 / -1; grid-row: 2 } }
 .ix-ref { font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 14px }
 /* Por informante, en construcción: la descripción de cada uno, «Por autorizar» hasta tener su permiso (Carlos, 21/10/2026) */
-.dic-inf { margin: 4px 0 14px }
-.dic-inf-tit { margin: 0 0 8px; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
+.dic-inf { margin: 10px 0 0 }
+.dic-inf-tit .en-obra { margin-left: 0 }
+.dic-inf-tit { margin: 0 0 10px; line-height: 1; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
 .en-obra { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; background: var(--naranja-osc); color: #fff; font-size: 11px; letter-spacing: .08em; vertical-align: 1px }
 .dic-inf-bot { display: flex; flex-wrap: wrap; gap: 5px }
 .dic-inf-bot button { font: inherit; font-weight: 800; font-size: 14px; height: 32px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--texto-2); cursor: pointer }
@@ -583,7 +598,7 @@ span.fila .tit { color: var(--texto-2) }
 .dic-inf-ficha b { color: var(--texto) }
 .dic-inf-ficha p { margin: 4px 0 0 }
 .dic-inf-ficha .por { color: var(--texto-3); font-style: italic }
-@media (max-width: 640px) { .dic-abc { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px } .dic-abc button { min-width: 0; padding: 0 } .dic-abc .ult { grid-column: 1 / -1 } }
+@media (max-width: 640px) { .dic-abc { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px } .dic-abc[hidden] { display: none } .dic-abc button { min-width: 0; padding: 0 } .dic-abc .ult { grid-column: 1 / -1 } .dic-bandas { grid-template-columns: minmax(0, 1fr) } }
 .dic-aport { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--linea) }
 .dic-aport li { padding: 10px 2px; border-bottom: 1px solid var(--linea) }
 .dic-aport button { font: inherit; font-weight: 800; font-size: 18px; color: var(--naranja); background: none; border: 0; padding: 0; cursor: pointer; text-align: left }
@@ -663,8 +678,8 @@ span.fila .tit { color: var(--texto-2) }
 .cuerpo .turno .quien { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--texto-3); margin-right: 4px }
 .cuerpo .fin-acto { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--texto-3); text-align: center }
 @font-face { font-family: 'Charis fonetica'; src: url(img/fuentes/charis-fonetica.woff2) format('woff2'); font-display: swap }
-.modo { display: inline-flex; margin-top: 20px; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; gap: 2px }
-.modo button { font: inherit; font-size: 13px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer }
+.modo { display: inline-flex; margin-top: 20px; border: 1px solid var(--linea); border-radius: 9px; padding: 3px; gap: 2px }
+.modo button { font: inherit; font-size: 13px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 6px; padding: 7px 14px; cursor: pointer }
 .modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 .texto-pag .fon { grid-area: cuerpo; min-width: 0; margin-top: 30px; display: none }
 .texto-pag.modo-fon .fon { display: block }
@@ -921,7 +936,7 @@ span.fila .tit { color: var(--texto-2) }
   .ejemplos { font-size: 38px; height: 52px }
   .estados ol { display: flex; gap: 8px; overflow-x: auto; border: 0; margin-top: 14px; padding-bottom: 6px; scrollbar-width: thin }
   .estados li { border: 0; flex: none }
-  .estados button { grid-template-columns: auto; padding: 8px 14px; border-radius: 999px; background: var(--fondo-2); border: 1px solid var(--linea); font-size: 14px; white-space: nowrap }
+  .estados button { grid-template-columns: auto; padding: 8px 14px; border-radius: 7px; background: var(--fondo-2); border: 1px solid var(--linea); font-size: 14px; white-space: nowrap }
   .estados button .bola { display: none }
   .estados button[aria-pressed="true"] { background: var(--naranja); color: var(--fondo); border-color: var(--naranja) }
   .rotulo { left: 16px; top: 14px; right: 16px }
@@ -1108,8 +1123,6 @@ span.fila .tit { color: var(--texto-2) }
       <h3 id="dic-t2">Las palabras del taller</h3>
       <p class="dic-intro">Lo que aportan quienes vienen al taller. Unas palabras no estaban en ninguna de las obras; otras sí, y el taller confirma que se oyen o se oyeron.</p>
       <div class="dic-cifras" id="dic-cifras"></div>
-      <div class="dic-abc" id="dic-abc" role="group" aria-label="Las palabras del taller por letras"></div>
-      <p class="dic-tramo" id="dic-tramo" aria-live="polite"></p>
       <div class="dic-ley">
         <p class="nueva"><b>Nuevas.</b> No las traía ninguna de las obras del diccionario.</p>
         <p class="confirma"><b>Confirmadas.</b> Ya estaban documentadas. El taller confirma que se oyen o se oyeron, y a veces matiza la glosa o añade lugares.</p>
@@ -1117,11 +1130,19 @@ span.fila .tit { color: var(--texto-2) }
       <div class="dic-filtro" id="dic-filtro" role="group" aria-label="Qué palabras del taller se ven">
         <button type="button" data-ver="todas" aria-pressed="true">Todas</button><button type="button" data-ver="nuevas" aria-pressed="false">Nuevas</button><button type="button" data-ver="confirma" aria-pressed="false">Confirmadas</button>
       </div>
-      <div class="dic-inf" id="dic-inf" hidden>
-        <p class="dic-inf-tit">Por informante <span class="en-obra">En construcción</span></p>
+      <!-- Tres bandas que llevan a lo mismo, la lista de abajo: las diez últimas, por letra y por informante, estas dos desplegables (Carlos, 22/10/2026) -->
+      <div class="dic-bandas" id="dic-bandas" role="group" aria-label="Cómo ver las palabras del taller">
+        <button type="button" class="banda" data-modo="ult" aria-pressed="true">Últimas diez entradas</button>
+        <button type="button" class="banda plega" data-modo="abc" aria-pressed="false" aria-expanded="false" aria-controls="dic-abc"><span class="t">Por letra</span><span class="sel"></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-8 10z"/></svg></span></button>
+        <button type="button" class="banda plega" data-modo="inf" aria-pressed="false" aria-expanded="false" aria-controls="dic-inf" hidden><span class="t">Por informante</span><span class="sel"></span><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-8 10z"/></svg></span></button>
+      </div>
+      <div class="dic-abc dic-panel" id="dic-abc" role="group" aria-label="Las palabras del taller por letras" hidden></div>
+      <div class="dic-inf dic-panel" id="dic-inf" hidden>
+        <p class="dic-inf-tit"><span class="en-obra">En construcción</span></p>
         <div class="dic-inf-bot" id="dic-inf-bot" role="group" aria-label="Las palabras de cada informante"></div>
         <div class="dic-inf-ficha" id="dic-inf-ficha" hidden aria-live="polite"></div>
       </div>
+      <p class="dic-tramo" id="dic-tramo" aria-live="polite"></p>
       <ul class="dic-aport" id="dic-taller-lista"></ul>
     </section>
 
@@ -1569,16 +1590,19 @@ async function cargarInformantes() {
   try { INF = await json('datos/informantes.json'); } catch (e) { return; }
   if (!INF.informantes.length) return;
   $('dic-inf-bot').innerHTML = INF.informantes.map(x => `<button type="button" data-inf="${esc(x.inf)}" aria-pressed="false">${esc(x.inf.replace(/^INF \[|\]$/g, ''))}</button>`).join('');
-  $('dic-inf').hidden = false;
+  document.querySelector('.banda[data-modo="inf"]').hidden = false;
 }
-$('dic-inf-bot').addEventListener('click', ev => {
-  const b = ev.target.closest('button[data-inf]'); if (!b) return;
-  infSel = infSel === b.dataset.inf ? null : b.dataset.inf;
+function ponInformante(inf) {
+  infSel = inf;
   for (const o of $('dic-inf-bot').querySelectorAll('button')) o.setAttribute('aria-pressed', String(o.dataset.inf === infSel));
   const x = infSel && INF.informantes.find(i => i.inf === infSel), f = $('dic-inf-ficha');
   f.hidden = !x;
   if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Por autorizar.')}</p>`;
-  verTramoTaller(tramoTaller);
+}
+$('dic-inf-bot').addEventListener('click', ev => {
+  const b = ev.target.closest('button[data-inf]'); if (!b) return;
+  ponInformante(infSel === b.dataset.inf ? null : b.dataset.inf);
+  verTramoTaller(null);
 });
 
 function buscarDic() {
@@ -1651,8 +1675,7 @@ function pintarTaller() {
   $('dic-cifras').innerHTML = [[nuevas.length, nuevas.length === 1 ? 'palabra nueva' : 'palabras nuevas'], [confirma.length, confirma.length === 1 ? 'confirmada' : 'confirmadas'], [pueblos.size, pueblos.size === 1 ? 'pueblo' : 'pueblos']].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
   TRAMOS = tramosTaller(todas);
   const deTramo = {}; TRAMOS.forEach((t, k) => t.letras.forEach(l => { deTramo[l] = k; }));
-  $('dic-abc').innerHTML = (todas.length ? `<button type="button" class="ult" data-tramo="-1">Últimas diez entradas</button>` : '') +
-    ABC.map(l => deTramo[l] === undefined ? `<button type="button" disabled aria-label="${l.toUpperCase()}, sin palabras">${l.toUpperCase()}</button>` : `<button type="button" data-tramo="${deTramo[l]}">${l.toUpperCase()}</button>`).join('');
+  $('dic-abc').innerHTML = ABC.map(l => deTramo[l] === undefined ? `<button type="button" disabled aria-label="${l.toUpperCase()}, sin palabras">${l.toUpperCase()}</button>` : `<button type="button" data-tramo="${deTramo[l]}">${l.toUpperCase()}</button>`).join('');
   verTramoTaller(null);
 }
 
@@ -1662,7 +1685,8 @@ function verTramoTaller(k) {
   const { nuevas, confirma } = DIC.taller;
   const todas = [...(verTaller === 'confirma' ? [] : nuevas.map(x => ({ ...x, tipo: 'nueva' }))), ...(verTaller === 'nuevas' ? [] : confirma.map(x => ({ ...x, tipo: 'confirma' })))]
     .filter(x => !infSel || x.inf.split(', ').includes(infSel));
-  for (const b of document.querySelectorAll('#dic-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(k === null ? !infSel && b.dataset.tramo === '-1' : b.dataset.tramo === String(k)));
+  for (const b of document.querySelectorAll('#dic-abc button:not(:disabled)')) b.setAttribute('aria-pressed', String(b.dataset.tramo === String(k)));
+  pintarBandas();
   let filtra, orden, estado, vacio;
   if (k === null && infSel) {
     // Con un informante elegido, todas las suyas, de la más reciente a la más antigua
@@ -1696,7 +1720,28 @@ $('dic-filtro').addEventListener('click', ev => {
 $('dic-abc').addEventListener('click', ev => {
   const b = ev.target.closest('button[data-tramo]'); if (!b) return;
   const k = Number(b.dataset.tramo);
-  verTramoTaller(k < 0 || k === tramoTaller ? null : k);
+  if (infSel) ponInformante(null);
+  verTramoTaller(k === tramoTaller ? null : k);
+});
+// Las bandas: «Últimas diez entradas» vuelve a las últimas; «Por letra» y «Por informante» abren o cierran su panel.
+// Una letra y un informante no se combinan: elegir uno quita el otro.
+let panelTaller = null;
+function pintarBandas() {
+  const modo = infSel ? 'inf' : tramoTaller !== null ? 'abc' : 'ult';
+  for (const b of document.querySelectorAll('#dic-bandas .banda')) {
+    b.setAttribute('aria-pressed', String(b.dataset.modo === modo));
+    if (b.classList.contains('plega')) b.setAttribute('aria-expanded', String(panelTaller === b.dataset.modo));
+  }
+  const t = tramoTaller !== null && TRAMOS[tramoTaller], ls = t ? t.letras.map(l => l.toUpperCase()) : [];
+  document.querySelector('.banda[data-modo="abc"] .sel').textContent = t ? ' · ' + (ls.length > 2 ? ls[0] + '-' + ls[ls.length - 1] : ls.join(', ')) : '';
+  document.querySelector('.banda[data-modo="inf"] .sel').textContent = infSel ? ' · ' + infSel.replace(/^INF \[|\]$/g, '') : '';
+  $('dic-abc').hidden = panelTaller !== 'abc'; $('dic-inf').hidden = panelTaller !== 'inf';
+}
+$('dic-bandas').addEventListener('click', ev => {
+  const b = ev.target.closest('.banda'); if (!b) return;
+  if (b.dataset.modo === 'ult') { panelTaller = null; if (infSel) ponInformante(null); verTramoTaller(null); return; }
+  panelTaller = panelTaller === b.dataset.modo ? null : b.dataset.modo;
+  pintarBandas();
 });
 
 $('busca-voz').addEventListener('input', buscarDic);
