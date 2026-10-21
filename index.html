@@ -2925,7 +2925,7 @@ async function crearMapa(baseP) {
     if (E.id === 'cerc') {
       const c = LG.cerc, nombres = c.terminos.map(k => byCode[k].userData.d.name);
       return `<h2>${esc(c.nombre)}</h2><div class="donde">Las voces de Cummins sin pueblo</div><p class="lug-cerca">${esc(EXPLICA_CERCANIAS)}</p>
-        <p class="lug-n"><b>${nVoces(c.n)}</b>. Los trece pueblos de su encuesta: ${esc(yy(nombres))}.</p>
+        <p class="lug-n"><b>${nVoces(c.n)}</b>. Los trece pueblos de su encuesta: ${esc(yy(nombres))}.${c.terminos.includes('10129') ? '' : ' Morcillo, que no fue encuestado, deja su hueco.'}</p>
         <a class="lug-ir" href="${enlaceIx('lugar', c.nombre)}">Ver las ${nVoces(c.n)} →</a>`;
     }
     if (E.unidad) {
