@@ -512,7 +512,7 @@ span.fila .tit { color: var(--texto-2) }
 .info .lug-pills li { display: block }
 .info .lug-pills button { font: inherit; font-size: 13.5px; font-weight: 700; color: var(--texto); background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 6px 11px; min-height: 40px; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; cursor: pointer }
 .info .lug-pills button:hover { border-color: var(--naranja); color: var(--naranja) }
-.info .lug-pills button span { font-size: 12.5px; color: var(--naranja); flex: none }
+.info .lug-pills button > span:last-child { font-size: 12.5px; color: var(--naranja); flex: none }
 .info .lug-atras { appearance: none; border: 0; background: none; padding: 0; margin: 0 0 8px; font: inherit; font-weight: 700; font-size: 13px; color: var(--texto-2); cursor: pointer }
 .info .lug-atras:hover { color: var(--naranja) }
 .info .lug-cerca { margin: 12px 0 0; font-size: 14px; line-height: 1.55; color: var(--texto-2) }
@@ -563,7 +563,10 @@ span.fila .tit { color: var(--texto-2) }
 .dix > .ix-pueblos { margin: 10px 0 18px }
 .ix-pueblos a { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 40px; font-size: 14px; font-weight: 700; color: var(--texto); text-decoration: none; background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 6px 12px }
 .ix-pueblos a:hover, .ix-pueblos a[aria-current] { border-color: var(--naranja); color: var(--naranja) }
-.ix-pueblos a .ix-n { font-size: 13px; color: var(--naranja) }
+.ix-pueblos a .ix-n { font-size: 13px; color: var(--naranja); flex: none }
+.ix-pueblos .nom, .info .lug-pills .nom { min-width: 0 }
+.ix-pueblos .nom.larga, .info .lug-pills .nom.larga { font-size: 12px; letter-spacing: -.01em }
+@media (max-width: 640px) { .ix-pueblos a, .info .lug-pills button { padding: 6px 10px; gap: 6px } }
 .ix-explica { background: var(--fondo-2); border-left: 3px solid var(--naranja); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 18px }
 .ix-dato { margin: 0 0 6px; font-size: 15px; color: var(--texto-2) }
 .ix-dato a { color: var(--naranja); font-weight: 700; text-decoration: none }
@@ -1410,11 +1413,25 @@ async function prepLugares() {
   }
   return LUG = { unidades, cerc, fuera };
 }
+// El nombre de una tesela de pueblo; una palabra de más de diez letras va algo más pequeña, para que no toque el número (Carlos, 22/10/2026)
+// El nombre de una tesela de pueblo. Si una palabra larga no cabe y empuja el número contra el borde, como Montehermoso
+// en el iPhone, esa tesela va con la letra algo más pequeña (Carlos, 22/10/2026). Se mide al pintar y al cambiar el ancho.
+const nomTesela = n => `<span class="nom">${esc(n)}</span>`;
+function ajustaTeselas(raiz) {
+  for (const t of (raiz || document).querySelectorAll('.ix-pueblos a, .info .lug-pills button')) {
+    const n = t.querySelector('.nom'); if (!n || !t.offsetParent) continue;
+    n.classList.remove('larga');
+    if (t.scrollWidth > t.clientWidth + 1 || n.scrollWidth > n.clientWidth + 1) n.classList.add('larga');
+  }
+}
+addEventListener('resize', () => { clearTimeout(ajustaTeselas.t); ajustaTeselas.t = setTimeout(() => ajustaTeselas(), 150); });
+document.addEventListener('toggle', ev => { if (ev.target.classList && ev.target.classList.contains('ix-lista')) ajustaTeselas(ev.target); }, true);
 // La lista de lugares, plegada bajo el mapa, en una sola tarjeta (Carlos, 22/10/2026)
 function listaLugares(LG) {
-  const pills = ls => ls.length ? `<ul class="ix-pueblos">${ls.map(p => `<li><a href="${enlaceIx('lugar', p.nombre)}">${esc(p.nombre)}<span class="ix-n">${p.n}</span></a></li>`).join('')}</ul>` : '';
+  const pills = ls => ls.length ? `<ul class="ix-pueblos">${ls.map(p => `<li><a href="${enlaceIx('lugar', p.nombre)}">${nomTesela(p.nombre)}<span class="ix-n">${p.n}</span></a></li>`).join('')}</ul>` : '';
+  // Garrovillas, sola en el mapa, va en la lista bajo su comarca (Carlos, 22/10/2026)
   const com = u => u.suelto
-    ? `<div class="ix-com"><a href="${enlaceIx('lugar', u.nombre)}"><b>${esc(u.nombre)} <i>(${esc(u.sub)})</i></b><span class="ix-n">${nVoces(u.n)}</span></a></div>`
+    ? `<div class="ix-com"><a href="${enlaceIx('lugar', u.sub)}"><b>${esc(u.sub)}</b><span class="ix-n">${nVoces(u.n)}</span></a>${pills(u.locs)}</div>`
     : `<div class="ix-com"><a href="${enlaceIx('lugar', u.nombre)}"><b>${esc(u.nombre)}</b><span class="ix-n">${nVoces(u.n)}</span></a>${pills(u.locs)}</div>`;
   const grupo = (t, us) => us.length ? `<h3 class="ix-sub">${t}</h3>${us.map(com).join('')}` : '';
   const otros = DIX.lugares.filter(g => g.tipo === 'comarca' && !LG.unidades.some(u => u.nombre === g.nombre || u.sub === g.nombre));
@@ -1441,7 +1458,7 @@ async function abrirIndice(h) {
     caja.innerHTML = `<a class="volver" href="#diccionario">← El diccionario</a>
       <p class="entradilla">Las voces del diccionario según dónde se documentaron. Cada comarca reúne las de sus pueblos y las que las fuentes dan para la comarca entera, sin decir el pueblo. Que una voz esté documentada en un pueblo no quiere decir que se diga en todo él: muchas vienen de una sola persona.</p>`;
     const LG = await prepLugares();
-    $('indice-lista').innerHTML = listaLugares(LG);
+    $('indice-lista').innerHTML = listaLugares(LG); ajustaTeselas($('indice-lista'));
     if (!$('lug-lado').querySelector('.guia-l')) $('lug-lado').insertAdjacentHTML('beforeend', '<p class="guia-l">Arrastra para girar el mapa y pellizca o usa la rueda para acercarte. Toca una comarca para levantar sus pueblos, y un pueblo para ver sus voces.</p>');
     moverMapa('lug');
     const base = await (BASE ||= json('datos/base.json'));
@@ -1468,8 +1485,8 @@ async function abrirIndice(h) {
     const cabeza = `<header class="cabeza lug-cabeza"><a class="volver" href="#lugares">← Por lugares</a><div class="cod">${p ? 'Documentadas en' : g.tipo === 'cercanias' ? 'Documentadas por Cummins, sin pueblo' : 'Documentadas en la comarca'}</div><h1>${esc(nombre)}</h1></header>`;
     const arriba = p ? `<p class="ix-dato">${g.tipo === 'otros' ? 'Sin comarca' : `En la comarca de <a href="${enlaceIx('lugar', g.nombre)}">${esc(g.nombre)}</a>`}.</p>`
       : g.tipo === 'cercanias' ? `<p class="ix-explica">${esc(EXPLICA_CERCANIAS)}</p>`
-      : g.pueblos.length ? `<p class="ix-dato">Con las que se dan para la comarca sin decir el pueblo. Por pueblos:</p><ul class="ix-pueblos">${g.pueblos.map(x => `<li><a href="${enlaceIx('lugar', x.nombre)}">${esc(x.nombre)}<span class="ix-n">${x.voces.length}</span></a></li>`).join('')}</ul>` : '';
-    caja.innerHTML = `${cabeza}${arriba}${listaIx(voces, 'siglas')}`;
+      : g.pueblos.length ? `<p class="ix-dato">Con las que se dan para la comarca sin decir el pueblo. Por pueblos:</p><ul class="ix-pueblos">${g.pueblos.map(x => `<li><a href="${enlaceIx('lugar', x.nombre)}">${nomTesela(x.nombre)}<span class="ix-n">${x.voces.length}</span></a></li>`).join('')}</ul>` : '';
+    caja.innerHTML = `${cabeza}${arriba}${listaIx(voces, 'siglas')}`; ajustaTeselas(caja);
   } else {
     const f = DIX.fuentes.find(x => x.sigla === nombre);
     if (!f) { $('cab-indice').innerHTML = cabIx('Por fuentes'); caja.innerHTML = `<a class="volver" href="#fuentes">← Por fuentes</a><p class="ix-dato">No hay ninguna obra con la sigla «${esc(nombre)}».</p>`; return; }
@@ -2738,7 +2755,7 @@ async function crearMapa(baseP) {
   const AREA = { core: 'Área del taller', contact: 'Área de contacto', none: 'Fuera del área del taller' };
   function pintarInfo() {
     const box = $('info');
-    if (MODO === 'lugares') { box.innerHTML = infoLugares(); return; }
+    if (MODO === 'lugares') { box.innerHTML = infoLugares(); ajustaTeselas(box); return; }
     if (selCom && RS) { box.innerHTML = infoComarca(selCom); return; }
     if (!sel) { box.innerHTML = `<p class="vacio">${enProb() ? 'Toca una comarca del mapa.' : 'Toca un pueblo del mapa.'}</p>`; return; }
     if (MODO === 'encuestas') { box.innerHTML = infoEncuestas(sel.userData.d); return; }
@@ -3002,7 +3019,7 @@ async function crearMapa(baseP) {
       const u = E.unidad, ts = [...u.conDatos].sort((a, b) => b.n - a.n || a.nombre.localeCompare(b.nombre, 'es'));
       return `<button type="button" class="lug-atras" data-lug="todas">← Todas las comarcas</button><h2>${esc(u.nombre)}</h2><div class="donde">${esc([u.sub ? 'Comarca de ' + u.sub : 'Comarca', AREA_L[u.area]].join(' · '))}</div>
         <p class="lug-n"><b>${nVoces(u.n)}</b>${u.solo ? `; ${u.solo === u.n ? 'todas' : u.solo.toLocaleString('es-ES')} documentadas para la comarca entera, sin decir el pueblo` : ''}.</p>
-        ${ts.length > 1 ? `<ul class="lug-pills">${ts.map(t => `<li><button type="button" data-lug="t" data-v="${esc(t.termino)}">${esc(t.nombre)}${t.partes.length > 1 ? ' y alquerías' : ''}<span>${t.n}</span></button></li>`).join('')}</ul>` : ''}
+        ${ts.length > 1 ? `<ul class="lug-pills">${ts.map(t => `<li><button type="button" data-lug="t" data-v="${esc(t.termino)}">${nomTesela(t.nombre + (t.partes.length > 1 ? ' y alquerías' : ''))}<span>${t.n}</span></button></li>`).join('')}</ul>` : ''}
         <a class="lug-ir" href="${enlaceIx('lugar', u.nombre)}">Ver las ${nVoces(u.n)} →</a>`;
     }
     return `<p class="vacio">Toca una comarca del mapa para levantar sus pueblos, o el recuadro de ${esc(LG.cerc ? LG.cerc.nombre : '')}.</p>`;
