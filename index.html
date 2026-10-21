@@ -578,9 +578,10 @@ span.fila .tit { color: var(--texto-2) }
 .ix-voces .gl { color: var(--texto-3); font-size: 14px; margin-left: 6px }
 .ix-voces .dd { display: block; font-size: 12px; font-weight: 700; color: var(--probable) }
 .ix-voces li.vacio { column-span: all; color: var(--texto-3) }
-.ix-voces .ix-ficha { margin: 10px 0 8px; padding: 18px 20px 14px; font-size: 18px; font-weight: 400 }
-.ix-voces .ix-ficha .pie-ficha a { font-weight: 800; color: #b84c1e; text-decoration: none }
+.ix-ficha.dic-ficha { margin: 10px 0 8px; padding: 18px 20px 14px; font-size: 18px; font-weight: 400; text-align: left }
+.ix-ficha .pie-ficha a { font-weight: 800; color: #b84c1e; text-decoration: none }
 .ix-voces .ix-ficha a.e-vease { font-weight: inherit }
+.dic-aport li .ix-ficha .pie-ficha .ix-cerrar { font-size: 13px; color: #b84c1e }
 .ix-fuentes { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--linea) }
 .ix-fuentes a { display: grid; grid-template-columns: 7.5em minmax(0, 1fr) auto; gap: 4px 16px; padding: 12px 6px; border-bottom: 1px solid var(--linea); text-decoration: none; color: var(--texto-2); font-size: 14px; line-height: 1.5 }
 .ix-fuentes a:hover { background: var(--fondo-2) }
@@ -1523,27 +1524,30 @@ function ponLetrasIx(caja) {
   const h = location.hash;
   pinta(letraIx[h] !== undefined ? letraIx[h] : ul.dataset.l);
   caja.querySelector('#ix-abc').addEventListener('click', ev => { const b = ev.target.closest('button[data-l]'); if (b) { letraIx[h] = b.dataset.l; pinta(b.dataset.l); } });
-  // Al tocar una voz, su entrada se abre ahí mismo, bajo la voz, sin ir al diccionario (Carlos, 22/10/2026);
-  // el «véase» de la entrada abre la otra en el mismo sitio, y «En el diccionario» lleva a la ficha de siempre
-  ul.addEventListener('click', ev => {
-    if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return;
-    const cierra = ev.target.closest('.ix-cerrar');
-    if (cierra) { cierra.closest('.ix-ficha').remove(); return; }
-    const vease = ev.target.closest('.ix-ficha a.e-vease');
-    if (vease) {
-      const q = normDic(decodeURIComponent(vease.getAttribute('href').replace(/^#voz\//, ''))), e = DIC.e.find(x => normDic(x[1]) === q);
-      if (e) { ev.preventDefault(); const f = vease.closest('.ix-ficha'); f.innerHTML = fichaIx(e); f.scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' }); }
-      return;
-    }
-    const a = ev.target.closest('a[data-id]'); if (!a) return;
-    ev.preventDefault();
-    const li = a.closest('li'), abierta = li.querySelector('.ix-ficha');
-    for (const f of ul.querySelectorAll('.ix-ficha')) f.remove();
-    if (abierta) return;
-    const e = DIC.e[DIC.idx[a.dataset.id]]; if (!e) return;
-    li.insertAdjacentHTML('beforeend', `<article class="dic-ficha ix-ficha" aria-live="polite">${fichaIx(e)}</article>`);
-    li.querySelector('.ix-ficha').scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' });
-  });
+  ul.addEventListener('click', ev => fichaEnLista(ul, ev, 'a[data-id]'));
+}
+// Al tocar una voz de una lista —lugares, fuentes y las palabras del taller—, su entrada se abre ahí mismo, bajo la voz,
+// sin ir al buscador (Carlos, 22/10/2026); el «véase» de la entrada abre la otra en el mismo sitio, y «En el diccionario»
+// lleva a la ficha de siempre
+function fichaEnLista(ul, ev, sel) {
+  if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return;
+  const cierra = ev.target.closest('.ix-cerrar');
+  if (cierra) { cierra.closest('.ix-ficha').remove(); return; }
+  const vease = ev.target.closest('.ix-ficha a.e-vease');
+  if (vease) {
+    const q = normDic(decodeURIComponent(vease.getAttribute('href').replace(/^#voz\//, ''))), e = DIC.e.find(x => normDic(x[1]) === q);
+    if (e) { ev.preventDefault(); const f = vease.closest('.ix-ficha'); f.innerHTML = fichaIx(e); f.scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' }); }
+    return;
+  }
+  if (ev.target.closest('.ix-ficha')) return;
+  const a = ev.target.closest(sel); if (!a || !a.dataset.id) return;
+  ev.preventDefault();
+  const li = a.closest('li'), abierta = li.querySelector('.ix-ficha');
+  for (const f of ul.querySelectorAll('.ix-ficha')) f.remove();
+  if (abierta) return;
+  const e = DIC.e[DIC.idx[a.dataset.id]]; if (!e) return;
+  li.insertAdjacentHTML('beforeend', `<article class="dic-ficha ix-ficha" aria-live="polite">${fichaIx(e)}</article>`);
+  li.querySelector('.ix-ficha').scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' });
 }
 const fichaIx = e => e[2] + `<div class="pie-ficha"><a href="${enlaceVoz(e[1])}">En el diccionario →</a><button type="button" class="ix-cerrar">Cerrar ✕</button></div>`;
 
@@ -1778,7 +1782,8 @@ $('dic-comparte').addEventListener('click', async ev => {
     else { await navigator.clipboard.writeText(url); t.textContent = 'Enlace copiado'; setTimeout(() => { t.textContent = 'Compartir esta palabra'; }, 2200); }
   } catch (er) {}
 });
-for (const id of ['dic-lista', 'dic-ficha', 'dic-taller-lista', 'f-ya']) $(id).addEventListener('click', ev => {
+$('dic-taller-lista').addEventListener('click', ev => fichaEnLista($('dic-taller-lista'), ev, 'button[data-id]'));
+for (const id of ['dic-lista', 'dic-ficha', 'f-ya']) $(id).addEventListener('click', ev => {
   const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha' && id !== 'dic-lista');
 });
 
