@@ -859,7 +859,8 @@ span.fila .tit { color: var(--texto-2) }
 .leyenda .filas { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 9px 22px; padding: 14px 16px 6px; max-height: 46vh; overflow-y: auto }
 .leyenda.plegada .filas { display: none }
 .leyenda .cab-l { appearance: none; border: 0; background: none; color: var(--texto); font: inherit; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 16px; cursor: pointer; text-align: left; width: 100% }
-.leyenda .cab-l .flecha { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--fondo-3, #2a5420); color: var(--naranja); font-size: 14px; letter-spacing: 0; transition: transform .25s }
+.leyenda .cab-l .flecha { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--fondo-3, #2a5420); color: var(--naranja); transition: transform .25s }
+.leyenda .cab-l .flecha svg { width: 22px; height: 22px; display: block; fill: currentColor }
 .leyenda.plegada .cab-l .flecha { transform: rotate(180deg) }
 .leyenda .cab-l:hover .flecha { background: var(--naranja); color: var(--fondo) }
 .leyenda .fila-l { display: flex; align-items: center; gap: 10px; line-height: 1.3 }
@@ -1346,6 +1347,17 @@ async function prepLugares() {
   const porNombre = Object.fromEntries(B.munis.map(m => [m.name, m])), porCodigo = Object.fromEntries(B.munis.map(m => [m.code, m]));
   const alq = Object.fromEntries(L.alquerias.map(a => [a.nombre, a]));
   const claveCom = Object.fromEntries(Object.entries(B.comarcas).map(([k, v]) => [v.nombre, k]));
+  // Cada término con voces, con lo de su municipio y lo de sus alquerías: se levanta entero (Carlos, 22/10/2026)
+  const terminosDe = (ls, g) => {
+    const T = new Map();
+    for (const l of ls) { if (!T.has(l.termino)) T.set(l.termino, []); T.get(l.termino).push(l); }
+    return [...T].map(([code, partes]) => {
+      partes.sort((a, b) => (a.municipio ? 1 : 0) - (b.municipio ? 1 : 0) || b.n - a.n);
+      const cab = partes.find(x => !x.municipio), vs = partes.flatMap(x => x.voces);
+      const ids = new Set(vs.map(v => v[0]));
+      return { termino: code, nombre: cab ? cab.nombre : porCodigo[code].name, n: ids.size, partes, fuentes: cuenta(vs), comarca: g.nombre, area: porCodigo[code].area, cerca: L.cercanias.includes(code) };
+    });
+  };
   const cuenta = voces => { const c = new Map(); for (const v of voces) for (const s of v[2]) c.set(s, (c.get(s) || 0) + 1); return [...c].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)); };
   const unidades = [], fuera = [];
   let cerc = null;
@@ -1356,18 +1368,17 @@ async function prepLugares() {
     const locs = g.pueblos.map(p => {
       const a = alq[p.nombre], m = a ? porCodigo[a.termino] : porNombre[p.nombre] || porCodigo[L.alias[p.nombre]];
       if (!m) return null;
-      const pm = L.municipios && L.municipios[p.nombre];
-      return { nombre: p.nombre, n: p.voces.length, termino: m.code, area: m.area, x: a ? a.x : pm ? pm.x : m.c[0], y: a ? a.y : pm ? pm.y : m.c[1], municipio: a ? a.municipio : null, comarca: g.nombre, fuentes: cuenta(p.voces), cerca: L.cercanias.includes(m.code) };
+      return { nombre: p.nombre, n: p.voces.length, voces: p.voces, termino: m.code, area: m.area, municipio: a ? a.municipio : null, comarca: g.nombre, fuentes: cuenta(p.voces), cerca: L.cercanias.includes(m.code) };
     });
     const sin = g.pueblos.filter((p, i) => !locs[i]).map(p => p.nombre);
     if (sin.length) console.warn('Sin sitio en el mapa:', sin.join(', '));
     const ls = locs.filter(Boolean);
     const areas = terms.map(c => porCodigo[c].area), area = areas.filter(a => a === 'core').length * 2 > areas.length ? 'core' : areas.filter(a => a === 'contact').length * 2 > areas.length ? 'contact' : 'none';
     const conPueblo = new Set(g.pueblos.flatMap(p => p.voces.map(v => v[0])));
-    if (area !== 'none') unidades.push({ id: ck, nombre: g.nombre, area, n: g.voces.length, terminos: terms, locs: ls, solo: new Set(g.voces.map(v => v[0]).filter(id => !conPueblo.has(id))).size, fuentes: cuenta(g.voces) });
+    if (area !== 'none') unidades.push({ id: ck, nombre: g.nombre, area, n: g.voces.length, terminos: terms, locs: ls, conDatos: terminosDe(ls, g), solo: new Set(g.voces.map(v => v[0]).filter(id => !conPueblo.has(id))).size, fuentes: cuenta(g.voces) });
     else {
       // Una comarca de fuera cuyo pueblo es término suelto del área: el término es la unidad, con la comarca entre paréntesis
-      for (const l of ls) if (l.area !== 'none') unidades.push({ id: 'T:' + l.termino, nombre: l.nombre, sub: g.nombre, area: l.area, n: l.n, terminos: [l.termino], locs: [l], solo: 0, fuentes: l.fuentes, suelto: true });
+      for (const l of ls) if (l.area !== 'none') unidades.push({ id: 'T:' + l.termino, nombre: l.nombre, sub: g.nombre, area: l.area, n: l.n, terminos: [l.termino], locs: [l], conDatos: terminosDe([l], g), solo: 0, fuentes: l.fuentes, suelto: true });
       fuera.push(...ls.filter(l => l.area === 'none'));
     }
   }
@@ -1405,7 +1416,7 @@ async function abrirIndice(h) {
       <p class="entradilla">Las voces del diccionario según dónde se documentaron. Cada comarca reúne las de sus pueblos y las que las fuentes dan para la comarca entera, sin decir el pueblo. Que una voz esté documentada en un pueblo no quiere decir que se diga en todo él: muchas vienen de una sola persona.</p>`;
     const LG = await prepLugares();
     $('indice-lista').innerHTML = listaLugares(LG);
-    if (!$('lug-lado').querySelector('.guia-l')) $('lug-lado').insertAdjacentHTML('beforeend', '<p class="guia-l">Arrastra para girar el mapa y pellizca o usa la rueda para acercarte. Toca una comarca para levantar sus localidades, y una localidad para ver sus voces.</p>');
+    if (!$('lug-lado').querySelector('.guia-l')) $('lug-lado').insertAdjacentHTML('beforeend', '<p class="guia-l">Arrastra para girar el mapa y pellizca o usa la rueda para acercarte. Toca una comarca para levantar sus pueblos, y un pueblo para ver sus voces.</p>');
     moverMapa('lug');
     const base = await (BASE ||= json('datos/base.json'));
     if (!mapa) mapa = await (cargandoMapa ||= crearMapa(base));
@@ -2490,7 +2501,6 @@ async function crearMapa(baseP) {
     if (enProb()) { if (sel) { selCom = unidadDe(sel.userData.d); sel = null; } } else selCom = null;
     const desde = munis.map(m => ({ h: m.userData.h, c: m.userData.c.clone() }));
     const hasta = munis.map(m => objetivo(m, E));
-    const colDesde = cols.map(c => c.userData.h), colHasta = cols.map(c => (E.colAlt && E.colAlt.get(c)) || 0);
     const p0 = camera.position.clone(), t0 = controls.target.clone();
     pintarRotulo(E); pintarLeyenda(E);
     if (lienzo.clientWidth !== W || lienzo.clientHeight !== H) medir();
@@ -2498,7 +2508,7 @@ async function crearMapa(baseP) {
     camera.position.copy(p0); camera.lookAt(t0); camera.updateMatrixWorld();
     const cam = { p0, t0, p1: p, t1: t };
     const ol = { a0: areaLine.userData.o, a1: E.lineaArea != null ? E.lineaArea : (E.id === 'prob' ? 0.5 : 0.95), e0: extLine.userData.o, e1: E.lineaExt != null ? E.lineaExt : (E.id === 'prob' ? 0.9 : 0), i0: isoO, i1: E.iso ? 1 : 0 };
-    anim = { t0: performance.now(), dur: (inmediato || sinMov) ? 1 : 1700, desde, hasta, cam, ol, colDesde, colHasta };
+    anim = { t0: performance.now(), dur: (inmediato || sinMov) ? 1 : 1700, desde, hasta, cam, ol };
     if (MODO === 'lugares') lugTrasEstado(E);
     controls.enabled = false;
     pintarRotulo(E); pintarLeyenda(E); pintarBotones(); pintarInfo();
@@ -2515,10 +2525,6 @@ async function crearMapa(baseP) {
       m.userData.h = lerp(a.h, b.h, f); m.userData.c.copy(a.c).lerp(b.c, clamp(fin ? 1 : ease(r * 1.4)));
       if (fin || r > 0.5) m.userData.trama = b.trama || null;
     });
-    cols.forEach((c, i) => {
-      const a = anim.colDesde[i], b = anim.colHasta[i], r = clamp((T - 0.25 - c.userData.k * 0.3) / 0.5);
-      c.userData.h = lerp(a, b, fin ? 1 : (b > a ? back(r) : ease(clamp(T / 0.5))));
-    });
     const tc = fin ? 1 : ease(clamp(T / 0.8));
     ponerCam(new THREE.Vector3().lerpVectors(anim.cam.p0, anim.cam.p1, tc), controls.target.lerpVectors(anim.cam.t0, anim.cam.t1, tc));
     areaLine.userData.o = lerp(anim.ol.a0, anim.ol.a1, tc); extLine.userData.o = lerp(anim.ol.e0, anim.ol.e1, tc); isoO = lerp(anim.ol.i0, anim.ol.i1, tc);
@@ -2531,13 +2537,9 @@ async function crearMapa(baseP) {
       m.material.color.copy(m.userData.c);
       const map = tramaTex(m.userData.trama); if (m.material.map !== map) { m.material.map = map; m.material.needsUpdate = true; }
       const enU = selCom && unidadDe(m.userData.d) === selCom;
-      const s = m === sel ? 0.35 : enU ? 0.2 : 0;
+      const s = m === sel ? (MODO === 'lugares' ? 0.14 : 0.35) : enU ? 0.2 : 0;
       m.material.emissive.setRGB(s, s, s);
       m.userData.lines.material.opacity = m === sel || enU ? 0.95 : 0.22;
-    }
-    for (const c of cols) {
-      c.scale.z = Math.max(c.userData.h, 0.0001); c.visible = c.userData.h > 0.003;
-      const s2 = c.userData.loc === lugSel ? 0.45 : 0; c.material.emissive.setRGB(s2, s2, s2);
     }
     areaLine.material.opacity = areaLine.userData.o; areaLine.position.z = HCORE + 0.01;
     extLine.material.opacity = extLine.userData.o; extLine.position.z = HB + 0.01;
@@ -2553,7 +2555,6 @@ async function crearMapa(baseP) {
     const conPrio = [];
     for (const l of etiquetas) {
       if (l.codigo) l.v.z = byCode[l.codigo].userData.h + 0.01;
-      if (l.col) l.v.z = l.col.userData.h + 0.04;
       const [x, y, z] = proj(l.v);
       const ok = (!l.cuando || l.cuando.includes(id)) && z < 1 && x > -40 && x < W + 40 && y > 0 && y < H - 54 && !tapa(x, y);
       l.e.style.left = x + 'px'; l.e.style.top = y + 'px'; l.e.style.opacity = ok ? 1 : 0;
@@ -2599,7 +2600,7 @@ async function crearMapa(baseP) {
   $('leyenda').addEventListener('click', e => { if (!e.target.closest('.cab-l')) return; leyAbierta = !leyAbierta; ponLeyenda(); });
   function ponLeyenda() { const ly = $('leyenda'); ly.classList.toggle('plegada', !leyAbierta); const b = ly.querySelector('.cab-l'); if (b) b.setAttribute('aria-expanded', leyAbierta); }
   function escribirLeyenda(filas) {
-    $('leyenda').innerHTML = filas ? `<div class="filas">${filas}</div><button type="button" class="cab-l" aria-expanded="true"><span class="flecha" aria-hidden="true">▾</span>Leyenda</button>` : '';
+    $('leyenda').innerHTML = filas ? `<div class="filas">${filas}</div><button type="button" class="cab-l" aria-expanded="true"><span class="flecha" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16l-8 10z"/></svg></span>Leyenda</button>` : '';
     ponLeyenda();
   }
   function pintarLeyenda(E) {
@@ -2795,37 +2796,25 @@ async function crearMapa(baseP) {
 
   // ---------- las palabras por lugares (Carlos, 22/10/2026) ----------
   // Primer nivel: las comarcas del área del taller y de contacto, graduadas por voces, cada área con su rampa.
-  // Al tocar una, se acerca y sus localidades suben en columnas por tramos, con la misma escala en todas.
+  // Al tocar una, se acerca y sus términos municipales con voces se levantan enteros, por tramos y con la misma escala
+  // en todas; cada término suma lo de su municipio y lo de sus alquerías, y la ficha los da por separado.
   // Coria y sus cercanías, en un recuadro: al tocarlo se iluminan los trece términos de Cummins.
-  const cols = [];
-  let LG = null, lugSel = null, unidadDeT = {}, recuadro = null, lugVolver = null;
-  const ALT_LOC = [0.45, 0.9, 1.4, 2.0];
+  let LG = null, lugSel = null, unidadDeT = {}, datoDeT = {}, recuadro = null, lugVolver = null;
+  const ALT_T = [0.32, 0.55, 0.85, 1.2];
   const colorUnidad = u => (u.area === 'contact' ? RAMPA_C : RAMPA_N)[tramo(u.n, TRAMOS_COM)];
   const bbDe = codes => bbox(codes.filter(c => byCode[c]).map(c => byCode[c].userData.d.rings));
-  const geoCol = new THREE.CylinderGeometry(0.058, 0.058, 1, 18); geoCol.rotateX(Math.PI / 2); geoCol.translate(0, 0, 0.5);
-  function salirLugares() {
-    lienzo.classList.remove('modo-lug'); globo.style.opacity = 0;
-    for (const c of cols) { c.userData.h = 0; c.visible = false; }
-    lugSel = null;
-  }
-  function filasLeyendaLug(conCols) {
+  function salirLugares() { lienzo.classList.remove('modo-lug'); globo.style.opacity = 0; lugSel = null; }
+  function filasLeyendaLug(conT) {
     const rampa = (t, R) => `<div class="fila-l rampa"><span class="t">${t}</span><span class="escala">${R.map((c, i) => `<span><i style="background:${c}"></i>${etTramos(TRAMOS_COM)[i]}</span>`).join('')}</span></div>`;
     return rampa('Voces de cada comarca, en el área del taller', RAMPA_N) + rampa('En el área de contacto', RAMPA_C)
-      + (conCols ? `<div class="fila-l rampa ancha"><span class="t">Voces de cada localidad: la altura de su columna</span><span class="escala">${ALT_LOC.map((a, i) => `<span><i class="col" style="height:${Math.round(6 + a * 9)}px;background:${RAMPA_N[i]}"></i>${etTramos(TRAMOS_LOC)[i]}</span>`).join('')}</span></div>` : '')
+      + (conT ? `<div class="fila-l rampa ancha"><span class="t">Voces de cada término municipal, con sus alquerías: la altura y el color</span><span class="escala">${ALT_T.map((a, i) => `<span><i class="col" style="height:${Math.round(5 + a * 14)}px;background:${RAMPA_N[i]}"></i>${etTramos(TRAMOS_LOC)[i]}</span>`).join('')}<span><i style="background:#9ccf86"></i>Sin voces</span></span></div>` : '')
       + `<div class="fila-l ancha"><span class="aviso-l">El color y la altura dicen cuánto se ha recogido, no cuánto se habla.</span></div>`;
   }
   function cargarLugares(G) {
     LG = G; MODO = 'lugares'; EN = null; RS = null; CL = {}; sel = null; selCom = null; lugSel = null; globo.style.opacity = 0;
     lienzo.classList.add('modo-lug');
-    unidadDeT = {};
-    for (const u of LG.unidades) for (const c of u.terminos) unidadDeT[c] = u;
-    // Columnas: una por localidad con voces, en su punto
-    if (!cols.length) for (const u of LG.unidades) for (const l of u.locs) {
-      const m = new THREE.Mesh(geoCol, new THREE.MeshStandardMaterial({ color: col(RAMPA_N[tramo(l.n, TRAMOS_LOC)]), roughness: 0.6, metalness: 0, emissive: 0x000000 }));
-      m.position.set(l.x, l.y, 0); m.castShadow = true; m.scale.z = 0.0001; m.visible = false;
-      m.userData = { loc: l, u, h: 0, k: hash(l.nombre) };
-      scene.add(m); cols.push(m);
-    }
+    unidadDeT = {}; datoDeT = {};
+    for (const u of LG.unidades) { for (const c of u.terminos) unidadDeT[c] = u; for (const t of u.conDatos) datoDeT[t.termino] = t; }
     // El recuadro de Coria y sus cercanías: los trece términos de Cummins, dibujados en plano
     if (!recuadro) {
       recuadro = document.createElement('button'); recuadro.type = 'button'; recuadro.className = 'recuadro';
@@ -2837,7 +2826,8 @@ async function crearMapa(baseP) {
       recuadro.setAttribute('aria-pressed', 'false');
       recuadro.addEventListener('click', () => { const i = ESTADOS.findIndex(E => E.id === 'cerc'); irA(actual === i ? 0 : i); });
       lienzo.appendChild(recuadro);
-      lugVolver = document.createElement('button'); lugVolver.type = 'button'; lugVolver.className = 'lug-volver'; lugVolver.innerHTML = '<span class="largo">← Todas las comarcas</span><span class="corto">← Comarcas</span>';
+      lugVolver = document.createElement('button'); lugVolver.type = 'button'; lugVolver.className = 'lug-volver';
+      lugVolver.innerHTML = '<span class="largo">← Todas las comarcas</span><span class="corto">← Comarcas</span>';
       lugVolver.addEventListener('click', () => irA(0));
       lienzo.appendChild(lugVolver);
       $('info').addEventListener('click', e => {
@@ -2847,94 +2837,86 @@ async function crearMapa(baseP) {
         if (t === 'u') irA(ESTADOS.findIndex(E => E.id === 'u:' + v));
         else if (t === 'cerc') irA(ESTADOS.findIndex(E => E.id === 'cerc'));
         else if (t === 'todas') irA(0);
-        else if (t === 'l') { const c = cols.find(c => c.userData.loc.nombre === v && ESTADOS[actual].unidad === c.userData.u); if (c) { lugSel = c.userData.loc; pintarInfo(); pedir(); } }
+        else if (t === 't' && datoDeT[v]) { lugSel = datoDeT[v]; sel = byCode[v]; pintarInfo(); pedir(); }
       });
     }
     // Estados: las comarcas, cada unidad y el recuadro
     const todosT = [...LG.unidades.flatMap(u => u.terminos), ...(LG.cerc ? LG.cerc.terminos : [])];
+    const apagado = v => col(colorUnidad(v)).lerp(C.base, 0.78);
     const capa1 = {};
     for (const u of LG.unidades) for (const c of u.terminos) capa1[c] = { h: HCORE, c: col(colorUnidad(u)) };
-    const ESTS = [{ id: 'comarcas', nombre: 'Comarcas', k: 'Por comarcas', h: '', s: 'Toca una comarca para levantar sus localidades', capa: capa1, bb: bbDe(todosT), lineaArea: 0.95, lineaExt: 0, leyendaHtml: filasLeyendaLug(false) }];
+    const ESTS = [{ id: 'comarcas', nombre: 'Comarcas', k: 'Por comarcas', h: '', s: 'Toca una comarca para levantar sus pueblos', capa: capa1, bb: bbDe(todosT), lineaArea: 0.95, lineaExt: 0, leyendaHtml: filasLeyendaLug(false) }];
     for (const u of LG.unidades) {
       const capa = {};
-      for (const v of LG.unidades) for (const c of v.terminos) capa[c] = v === u ? { h: HCORE, c: col('#9ccf86') } : { h: HB, c: col(colorUnidad(v)).lerp(C.base, 0.78) };
-      const colAlt = new Map(cols.filter(c => c.userData.u === u).map(c => [c, ALT_LOC[tramo(c.userData.loc.n, TRAMOS_LOC)]]));
+      for (const v of LG.unidades) for (const c of v.terminos) capa[c] = v === u ? { h: HCORE, c: col('#9ccf86') } : { h: HB, c: apagado(v) };
+      for (const t of u.conDatos) { const i = tramo(t.n, TRAMOS_LOC); capa[t.termino] = { h: ALT_T[i], c: col(RAMPA_N[i]) }; }
       const bbU = bbDe(u.terminos);
       const pad = Math.max(bbU.w, bbU.h) < 3 ? 1.2 : 1;   // una unidad pequeña, con aire alrededor
-      ESTS.push({ id: 'u:' + u.id, unidad: u, nombre: u.nombre, k: u.area === 'contact' ? 'Área de contacto' : 'Área del taller', h: u.nombre, s: [u.sub, nVoces(u.n), u.locs.length > 1 ? u.locs.length + ' localidades con voces' : ''].filter(Boolean).join(' · '), capa, colAlt, bb: { ...bbU, w: Math.max(bbU.w, 3.2) * pad, h: Math.max(bbU.h, 3.2) * pad }, el: 52, lineaArea: 0.5, lineaExt: 0, leyendaHtml: filasLeyendaLug(true) });
+      ESTS.push({ id: 'u:' + u.id, unidad: u, nombre: u.nombre, k: u.area === 'contact' ? 'Área de contacto' : 'Área del taller', h: u.nombre, s: [u.sub, nVoces(u.n), u.conDatos.length > 1 ? u.conDatos.length + ' términos con voces' : ''].filter(Boolean).join(' · '), capa, bb: { ...bbU, w: Math.max(bbU.w, 3.2) * pad, h: Math.max(bbU.h, 3.2) * pad }, el: 52, lineaArea: 0.5, lineaExt: 0, leyendaHtml: filasLeyendaLug(true) });
     }
     if (LG.cerc) {
       const capa = {}, set = new Set(LG.cerc.terminos);
-      for (const v of LG.unidades) for (const c of v.terminos) if (!set.has(c)) capa[c] = { h: HB, c: col(colorUnidad(v)).lerp(C.base, 0.78) };
+      for (const v of LG.unidades) for (const c of v.terminos) if (!set.has(c)) capa[c] = { h: HB, c: apagado(v) };
       for (const c of LG.cerc.terminos) capa[c] = { h: 0.42, c: col(RAMPA_N[tramo(LG.cerc.n, TRAMOS_COM)]) };
       const bbC = bbDe(LG.cerc.terminos);
       ESTS.push({ id: 'cerc', nombre: LG.cerc.nombre, k: 'Cummins, 1967-1972', h: LG.cerc.nombre, s: nVoces(LG.cerc.n) + ' sin pueblo', capa, bb: { ...bbC, w: bbC.w * 1.15, h: bbC.h * 1.15 }, el: 54, lineaArea: 0.5, lineaExt: 0, leyendaHtml: filasLeyendaLug(false) });
     }
     ESTADOS = ESTS;
-    // Etiquetas: el nombre de cada comarca en el primer nivel y el de cada localidad sobre su columna
+    // Etiquetas: el nombre de cada comarca en el primer nivel y el de cada término con voces sobre su bloque
     for (const l of etiquetas.splice(0)) l.e.remove();
     for (const u of LG.unidades) {
       const [x, y] = u.suelto ? byCode[u.terminos[0]].userData.d.c : cen(u.terminos);
-      const e = etiqueta(esc(u.nombre), x, y, HCORE + 0.02, 'peq', ['comarcas']); etiquetas[etiquetas.length - 1].prio = u.n + 1e6;
+      etiqueta(esc(u.nombre), x, y, HCORE + 0.02, 'peq', ['comarcas']); etiquetas[etiquetas.length - 1].prio = u.n + 1e6;
     }
-    for (const c of cols) {
-      const l = c.userData.loc;
-      etiqueta(esc(l.nombre), l.x, l.y, 0.1, 'peq', ['u:' + c.userData.u.id]);
-      Object.assign(etiquetas[etiquetas.length - 1], { col: c, prio: l.n });
+    for (const u of LG.unidades) for (const t of u.conDatos) {
+      const [x, y] = byCode[t.termino].userData.d.c;
+      etiqueta(esc(t.nombre), x, y, 0.1, 'peq', ['u:' + u.id], t.termino); etiquetas[etiquetas.length - 1].prio = t.n;
     }
     medir();
     const { p, t } = posDe(shotDe(ESTADOS[0])); controls.target.copy(t); ponerCam(p, t);
     irA(0);
   }
   function lugTrasEstado(E) {
-    lugSel = E.unidad && E.unidad.suelto ? E.unidad.locs[0] : null;
+    const suelto = E.unidad && E.unidad.suelto ? E.unidad.conDatos[0] : null;
+    lugSel = suelto; sel = suelto ? byCode[suelto.termino] : null;
     if (recuadro) recuadro.setAttribute('aria-pressed', E.id === 'cerc');
     if (lugVolver) lugVolver.classList.toggle('ver', E.id !== 'comarcas');
   }
-  // Tocar en el mapa: en el primer nivel, una comarca; con una abierta, la columna más cercana al dedo, su término,
-  // otra comarca, o fuera, que vuelve a las comarcas
-  function colCerca(ev, px) {
-    const r = renderer.domElement.getBoundingClientRect(), X = ev.clientX - r.left, Y = ev.clientY - r.top;
-    let mejor = null, dm = px;
-    for (const c of cols) {
-      if (!c.visible || c.userData.h < 0.05) continue;
-      const [x0, y0] = proj(new THREE.Vector3(c.position.x, c.position.y, 0)), [x1, y1] = proj(new THREE.Vector3(c.position.x, c.position.y, c.userData.h));
-      const vx = x1 - x0, vy = y1 - y0, L2 = vx * vx + vy * vy || 1, t = clamp(((X - x0) * vx + (Y - y0) * vy) / L2);
-      const d = Math.hypot(X - (x0 + t * vx), Y - (y0 + t * vy));
-      if (d < dm) { dm = d; mejor = c; }
-    }
-    return mejor;
-  }
+  // Tocar en el mapa: en el primer nivel, una comarca; con una abierta, un término suyo con voces, otra comarca,
+  // o fuera, que vuelve a las comarcas
   function lugTocar(ev) {
-    const E = ESTADOS[actual], cerca = colCerca(ev, movil ? 26 : 18);
-    if (cerca) { lugSel = cerca.userData.loc; pintarInfo(); pedir(); return; }
-    const m = pueblo(ev), code = m && m.userData.d.code, u = code && unidadDeT[code];
+    const E = ESTADOS[actual], m = pueblo(ev), code = m && m.userData.d.code, u = code && unidadDeT[code];
     const enCerc = LG.cerc && code && LG.cerc.terminos.includes(code);
     if (E.id === 'cerc' && enCerc) return;
     if (!u) { if (E.id !== 'comarcas') irA(0); return; }
     if (E.unidad === u) {
-      const l = u.locs.find(l => l.termino === code && !l.municipio);
-      lugSel = l && l !== lugSel ? l : null; pintarInfo(); pedir(); return;
+      const t = datoDeT[code];
+      if (u.suelto) return;
+      lugSel = t && t !== lugSel ? t : null; sel = lugSel ? m : null; pintarInfo(); pedir(); return;
     }
     irA(ESTADOS.findIndex(x => x.unidad === u));
   }
   function lugGlobo(ev, m) {
-    const c = colCerca(ev, 14); if (c) return c.userData.loc.nombre + ' · ' + nVoces(c.userData.loc.n);
-    const u = m && unidadDeT[m.userData.d.code]; if (!u) return '';
+    const code = m && m.userData.d.code, u = code && unidadDeT[code]; if (!u) return '';
     const E = ESTADOS[actual];
-    return E.unidad === u ? m.userData.d.name : u.nombre + ' · ' + nVoces(u.n);
+    if (E.unidad !== u) return u.nombre + ' · ' + nVoces(u.n);
+    const t = datoDeT[code];
+    return t ? t.nombre + ' · ' + nVoces(t.n) : m.userData.d.name + ' · sin voces';
   }
   const AREA_L = { core: 'Área del taller', contact: 'Área de contacto' };
   const fuentesLi = F => F.slice(0, 8).map(([s, n]) => `<li><span class="cuad" style="background:#ff914d"></span><span><b>${esc(s)}</b> · <span class="nota">${nVoces(n)}</span></span></li>`).join('') + (F.length > 8 ? `<li><span></span><span class="nota">y ${F.length - 8} fuentes más</span></li>` : '');
   function infoLugares() {
     const E = ESTADOS[actual]; if (!E) return '';
     if (lugSel) {
-      const l = lugSel, u = E.unidad;
-      const donde = [l.municipio ? 'Alquería de ' + l.municipio : null, l.comarca, AREA_L[l.area]].filter(Boolean).join(' · ');
-      return `${u && !u.suelto ? `<button type="button" class="lug-atras" data-lug="u" data-v="${esc(u.id)}">← ${esc(u.nombre)}</button>` : '<button type="button" class="lug-atras" data-lug="todas">← Todas las comarcas</button>'}<h2>${esc(l.nombre)}</h2><div class="donde">${esc(donde)}</div>
-        <p class="lug-n"><b>${nVoces(l.n)}</b> documentadas aquí, de ${l.fuentes.length === 1 ? 'una fuente' : l.fuentes.length + ' fuentes'}:</p><ul>${fuentesLi(l.fuentes)}</ul>
-        ${l.cerca && LG.cerc ? `<p class="lug-cerca">Está en la encuesta de Cummins: muchas de sus voces sin pueblo pueden ser de aquí. Mira también <button type="button" data-lug="cerc">${esc(LG.cerc.nombre)}</button>.</p>` : ''}
-        <a class="lug-ir" href="${enlaceIx('lugar', l.nombre)}">Ver sus ${nVoces(l.n)} →</a>`;
+      // Un término: el municipio y sus alquerías, cada uno con sus voces y su enlace; las fuentes, de todo el término
+      const t = lugSel, u = E.unidad, varias = t.partes.length > 1;
+      const atras = u && !u.suelto ? `<button type="button" class="lug-atras" data-lug="u" data-v="${esc(u.id)}">← ${esc(u.nombre)}</button>` : '<button type="button" class="lug-atras" data-lug="todas">← Todas las comarcas</button>';
+      const partes = t.partes.map(x => `<li><span class="cuad" style="background:${RAMPA_N[tramo(x.n, TRAMOS_LOC)]}"></span><span><a href="${enlaceIx('lugar', x.nombre)}"><b>${esc(x.nombre)}</b></a>${x.municipio ? ' · <span class="nota">alquería</span>' : ''} · <span class="nota">${nVoces(x.n)}</span></span></li>`).join('');
+      return `${atras}<h2>${esc(t.nombre)}</h2><div class="donde">${esc(['Término municipal', t.comarca, AREA_L[t.area]].filter(Boolean).join(' · '))}</div>
+        <p class="lug-n"><b>${nVoces(t.n)}</b> documentadas en el término${varias ? ', entre el pueblo y sus alquerías' : ''}:</p><ul>${partes}</ul>
+        <h3 class="sec">Fuentes</h3><ul>${fuentesLi(t.fuentes)}</ul>
+        ${t.cerca && LG.cerc ? `<p class="lug-cerca">Está en la encuesta de Cummins: muchas de sus voces sin pueblo pueden ser de aquí. Mira también <button type="button" data-lug="cerc">${esc(LG.cerc.nombre)}</button>.</p>` : ''}
+        ${varias ? '' : `<a class="lug-ir" href="${enlaceIx('lugar', t.partes[0].nombre)}">Ver sus ${nVoces(t.partes[0].n)} →</a>`}`;
     }
     if (E.id === 'cerc') {
       const c = LG.cerc, nombres = c.terminos.map(k => byCode[k].userData.d.name);
@@ -2943,13 +2925,13 @@ async function crearMapa(baseP) {
         <a class="lug-ir" href="${enlaceIx('lugar', c.nombre)}">Ver las ${nVoces(c.n)} →</a>`;
     }
     if (E.unidad) {
-      const u = E.unidad, ls = [...u.locs].sort((a, b) => b.n - a.n || a.nombre.localeCompare(b.nombre, 'es'));
+      const u = E.unidad, ts = [...u.conDatos].sort((a, b) => b.n - a.n || a.nombre.localeCompare(b.nombre, 'es'));
       return `<button type="button" class="lug-atras" data-lug="todas">← Todas las comarcas</button><h2>${esc(u.nombre)}</h2><div class="donde">${esc([u.sub ? 'Comarca de ' + u.sub : 'Comarca', AREA_L[u.area]].join(' · '))}</div>
         <p class="lug-n"><b>${nVoces(u.n)}</b>${u.solo ? `; ${u.solo === u.n ? 'todas' : u.solo.toLocaleString('es-ES')} documentadas para la comarca entera, sin decir el pueblo` : ''}.</p>
-        ${ls.length > 1 ? `<ul class="lug-pills">${ls.map(l => `<li><button type="button" data-lug="l" data-v="${esc(l.nombre)}">${esc(l.nombre)}<span>${l.n}</span></button></li>`).join('')}</ul>` : ''}
+        ${ts.length > 1 ? `<ul class="lug-pills">${ts.map(t => `<li><button type="button" data-lug="t" data-v="${esc(t.termino)}">${esc(t.nombre)}${t.partes.length > 1 ? ' y alquerías' : ''}<span>${t.n}</span></button></li>`).join('')}</ul>` : ''}
         <a class="lug-ir" href="${enlaceIx('lugar', u.nombre)}">Ver las ${nVoces(u.n)} →</a>`;
     }
-    return `<p class="vacio">Toca una comarca del mapa para levantar sus localidades, o el recuadro de ${esc(LG.cerc ? LG.cerc.nombre : '')}.</p>`;
+    return `<p class="vacio">Toca una comarca del mapa para levantar sus pueblos, o el recuadro de ${esc(LG.cerc ? LG.cerc.nombre : '')}.</p>`;
   }
 
   // ---------- tamaño ----------

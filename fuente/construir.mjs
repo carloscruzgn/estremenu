@@ -193,21 +193,15 @@ fs.writeFileSync(path.join(destino, 'encuestas.json'), JSON.stringify(enc));
 console.log('encuestas.json:', Object.keys(enc.kruger).length, 'términos de Krüger,', Object.keys(enc.cummins).length, 'de Cummins,', Object.keys(enc.gs).length, 'de González Salgado;', enc.coinciden.length, 'con dos o tres;', enc.isoglosas.length, 'rayas');
 
 // ---------- las localidades del mapa de «Las palabras por lugares» (Carlos, 22/10/2026) ----------
-// Las que no son cabeza de municipio, con su punto proyectado; cada una tiene que caer dentro del término de su municipio.
+// Las que no son cabeza de municipio, con el término de su municipio, al que suman sus voces; su punto tiene que caer dentro de él.
 // Y los trece términos de Cummins, para el recuadro de «Coria y sus cercanías».
 const LOC = leer('localidades.json');
 const featDe = Object.fromEntries(munis.map(f => [f.id, f]));
-const loc = { alias: Object.fromEntries(Object.entries(LOC.alias).filter(([k]) => k !== '_')), alquerias: [], municipios: {}, cercanias: ENC.cummins.map(p => p.termino) };
-for (const [n, m] of Object.entries(LOC.municipios)) {
-  if (n === '_') continue;
-  if (!geoContains(featDe[m.termino], [m.lon, m.lat])) { console.error('localidades.json:', n, 'no cae en su término'); process.exit(1); }
-  const [x, y] = xy([m.lon, m.lat]); loc.municipios[n] = { termino: m.termino, x, y };
-}
+const loc = { alias: Object.fromEntries(Object.entries(LOC.alias).filter(([k]) => k !== '_')), alquerias: [], cercanias: ENC.cummins.map(p => p.termino) };
 for (const a of LOC.alquerias) {
   if (!featDe[a.termino]) { console.error('localidades.json: término desconocido', a.termino, a.nombre); process.exit(1); }
   if (!geoContains(featDe[a.termino], [a.lon, a.lat])) { console.error('localidades.json:', a.nombre, 'no cae en el término de', a.municipio); process.exit(1); }
-  const [x, y] = xy([a.lon, a.lat]);
-  loc.alquerias.push({ nombre: a.nombre, municipio: a.municipio, termino: a.termino, x, y });
+  loc.alquerias.push({ nombre: a.nombre, municipio: a.municipio, termino: a.termino });
 }
 for (const c of Object.values(loc.alias)) if (!todos.has(c)) { console.error('localidades.json: alias a un término que no está en el mapa:', c); process.exit(1); }
 fs.writeFileSync(path.join(destino, 'localidades.json'), JSON.stringify(loc));
