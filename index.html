@@ -545,10 +545,17 @@ span.fila .tit { color: var(--texto-2) }
   .lienzo.modo-lug .rotulo .h { font-size: 24px }
 }
 /* Las palabras por lugares y por fuentes, en página aparte con enlace discreto bajo el buscador (Carlos, 21/10/2026) */
-.dic-indices { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 14px 0 0; font-size: 14px }
-.dic-indices a { font-weight: 800; color: var(--naranja); text-decoration: none }
-.dic-indices a::after { content: ' →' }
-.dic-indices a:hover { text-decoration: underline }
+.dic-indices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 22px 0 0 }
+.ix-tarjeta { display: grid; grid-template-columns: 132px minmax(0, 1fr); align-items: center; gap: 14px; padding: 12px 14px; background: var(--fondo); border: 1px solid var(--linea); border-radius: 10px; color: var(--texto); text-decoration: none }
+.ix-tarjeta:hover { border-color: var(--naranja) }
+.ix-tarjeta .fig { display: block; height: 88px }
+.ix-tarjeta .fig svg { width: 100%; height: 100%; display: block }
+.ix-tarjeta .txt b { display: block; font-weight: 900; font-size: 16px; line-height: 1.2 }
+.ix-tarjeta .txt b::after { content: ' →'; color: var(--naranja) }
+.ix-tarjeta .txt span { display: block; margin-top: 4px; font-size: 13px; font-weight: 700; color: var(--texto-3) }
+.estante { display: flex !important; align-items: flex-end; gap: 3px; border-bottom: 3px solid #6b4a2e; padding: 0 2px }
+.estante i { flex: 1; min-width: 0; border-radius: 2px 2px 0 0; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; overflow: hidden; font-style: normal; font-weight: 800; font-size: 8.5px; letter-spacing: .03em; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; color: #1b1b1b }
+@media (max-width: 560px) { .dic-indices { grid-template-columns: minmax(0, 1fr) } .ix-tarjeta { grid-template-columns: 120px minmax(0, 1fr) } }
 .dix { max-width: 900px; padding-bottom: 24px; zoom: var(--lectura) }
 .dix .volver { display: inline-block; margin-bottom: 18px }
 .dix .entradilla { margin-top: 0 }
@@ -1108,11 +1115,15 @@ span.fila .tit { color: var(--texto-2) }
           <button type="button" data-modo="glosa" aria-pressed="false">En el significado</button>
         </div>
       </div>
-      <p class="dic-indices"><a href="#lugares">Las palabras por lugares</a><a href="#fuentes">Las palabras por fuentes</a></p>
       <p class="dic-cuenta" id="dic-cuenta" aria-live="polite"></p>
       <ul class="dic-lista" id="dic-lista"></ul>
       <article class="dic-ficha" id="dic-ficha" hidden aria-live="polite"></article>
       <button type="button" class="dic-comparte" id="dic-comparte" hidden><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span>Compartir esta palabra</span></button>
+      <!-- Las palabras por lugares y por fuentes, en dos tarjetas: un minimapa y una estantería con las obras (Carlos, 22/10/2026) -->
+      <div class="dic-indices" id="dic-indices">
+        <a class="ix-tarjeta" href="#lugares"><span class="fig" id="dic-minimapa" aria-hidden="true"></span><span class="txt"><b>Las palabras por lugares</b><span id="dic-n-lugares"></span></span></a>
+        <a class="ix-tarjeta" href="#fuentes"><span class="fig estante" id="dic-estante" aria-hidden="true"></span><span class="txt"><b>Las palabras por fuentes</b><span id="dic-n-fuentes"></span></span></a>
+      </div>
       <details class="desp">
         <summary>Las fuentes</summary>
         <div class="dentro"><p class="intro">Cada voz lleva la sigla de la obra que la da, con la página. La fecha es la del dato: cuándo se recogió, o cuándo se publicó si no consta.</p><dl class="dic-dl" id="dic-fuentes"></dl></div>
@@ -1587,6 +1598,19 @@ const claveDic = f => normDic(String(f || '').replace(/\([^)]*\)/g, '')).split('
   .replace(/(o|u)$/, 'U').replace(/(e|i)$/, 'I').replace(/(r|l)$/, 'R')).join(' ');
 const corta = (s, n = 42) => s.length > n ? s.slice(0, n - 1).replace(/[\s,;]+\S*$/, '') + '…' : s;
 
+// Las dos tarjetas de bajo el buscador: el minimapa, con las comarcas en los colores por tramos del mapa de lugares,
+// y la estantería, con las obras de más voces, cada lomo con su sigla y su altura (Carlos, 22/10/2026)
+async function pintarTarjetasDic() {
+  let C, M;
+  try { [C, M] = await Promise.all([json('datos/diccionario-cifras.json'), json('datos/minimapa.json')]); } catch (e) { return; }
+  if (!C.comarcas) return;
+  const col = c => (c.area === 'contact' ? RAMPA_C : RAMPA_N)[tramo(C.comarcas[c.nombre] || 0, TRAMOS_COM)];
+  $('dic-minimapa').innerHTML = `<svg viewBox="-2 -2 ${M.ancho + 4} ${M.alto + 4}" preserveAspectRatio="xMidYMid meet">${M.comarcas.map(c => `<path d="${c.d}" fill="${C.comarcas[c.nombre] ? col(c) : '#2f5a25'}" stroke="#132e0d" stroke-width="1.4" stroke-linejoin="round"/>`).join('')}</svg>`;
+  $('dic-n-lugares').textContent = `${C.nComarcas} comarcas · ${C.nPueblos} pueblos`;
+  const max = Math.max(...C.fuentes.map(f => f[1])), tonos = ['#ff914d', '#85be6d', '#f6eedf', '#e8793a', '#cfab3e', '#9ccf86', '#ffab73', '#dcbf5c', '#b8d9a6'];
+  $('dic-estante').innerHTML = C.fuentes.map(([s, n], i) => `<i style="height:${Math.round(34 + 66 * n / max)}%;background:${tonos[i % tonos.length]}">${esc(s.replace(/ \d{4}$/, ''))}</i>`).join('');
+  $('dic-n-fuentes').textContent = `${C.nFuentes} obras`;
+}
 async function abrirDiccionario() {
   if (DIC) return;
   try { DIC = await json('datos/diccionario.json'); }
@@ -1600,6 +1624,7 @@ async function abrirDiccionario() {
   $('dic-fuentes').innerHTML = DIC.fuentes.map(f => `<dt>${esc(f.sigla)}</dt><dd>${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</dd>`).join('');
   $('dic-abrev').innerHTML = DIC.abreviaturas.map(a => `<dt>${esc(a.a)}</dt><dd>${esc(a.v)}</dd>`).join('');
   pintarTaller();
+  pintarTarjetasDic();
   buscarDic();
   cargarInformantes();
 }
@@ -1726,7 +1751,10 @@ function verTramoTaller(k) {
     vacio = 'Ninguna con estas letras.';
   }
   $('dic-tramo').textContent = estado; $('dic-tramo').hidden = !estado;
-  const item = x => `<li class="${x.tipo}"><button type="button" data-id="${x.id}">${esc(x.lema)}<span class="solo-lector"> (${x.tipo === 'nueva' ? 'nueva' : 'confirmada'})</span></button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc([x.lugar, x.inf].filter(Boolean).join(' · '))}${x.antes ? ` · antes, ${esc(x.antes.sigla)}${x.antes.lugar ? ', ' + esc(x.antes.lugar) : ''}` : ''}</span></li>`;
+  // Debajo, solo la localidad y el código del informante; con un informante elegido, solo sus localidades (Carlos, 22/10/2026)
+  const deInf = infSel && INF ? (INF.informantes.find(i => i.inf === infSel) || { lugares: [] }).lugares : null;
+  const donde = x => { const ls = x.lugar ? x.lugar.split(', ') : []; return deInf ? (ls.filter(l => deInf.includes(l)).join(', ') || ls.join(', ')) : [x.lugar, x.inf].filter(Boolean).join(' · '); };
+  const item = x => `<li class="${x.tipo}"><button type="button" data-id="${x.id}">${esc(x.lema)}<span class="solo-lector"> (${x.tipo === 'nueva' ? 'nueva' : 'confirmada'})</span></button> <span class="gl">«${esc(x.glosa)}»</span><span class="dd">${esc(donde(x))}</span></li>`;
   const pinta = l => { const v = l.filter(filtra).sort(orden); return v.length ? v.map(item).join('') : `<li class="vacio">${vacio}</li>`; };
   $('dic-taller-lista').innerHTML = pinta(todas);
 }

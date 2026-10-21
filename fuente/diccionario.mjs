@@ -7,6 +7,7 @@
 // diccionario-siglas.json, y las que falten se forman con la regla de 05-DECISIONES (04/10/2026) y se avisan.
 import fs from 'fs';
 import path from 'path';
+import { cifrasDiccionario } from './cifras-diccionario.mjs';
 
 const aqui = path.dirname(new URL(import.meta.url).pathname);
 const carpeta = process.argv[2];
@@ -325,6 +326,6 @@ const salida = {
   fuentes, abreviaturas, taller: { nuevas, confirma }
 };
 fs.writeFileSync(path.resolve(aqui, '../datos/diccionario.json'), JSON.stringify(salida));
-fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-cifras.json'), JSON.stringify({ fecha: salida.fecha, lemas: salida.lemas }));
+fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-cifras.json'), JSON.stringify(cifrasDiccionario(salida.fecha, salida.lemas, { lugares: lugaresIdx, fuentes: fuentesIdx })));
 console.log('diccionario.json:', entradas.length, 'lemas;', nuevas.length, 'nuevas y', confirma.length, 'confirmadas por el taller;', fuentes.length, 'fuentes');
 for (const a of new Set(avisos)) console.log('  aviso:', a);

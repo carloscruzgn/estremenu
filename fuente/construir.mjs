@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import * as topo from 'topojson-client';
 import { geoConicConformal, geoPath, geoContains } from 'd3-geo';
+import { cifrasDiccionario } from './cifras-diccionario.mjs';
 
 const aqui = path.dirname(new URL(import.meta.url).pathname);
 const destino = path.resolve(aqui, '../datos');
@@ -113,7 +114,8 @@ fs.writeFileSync(path.join(destino, 'autores.json'), JSON.stringify(AU));
 console.log('autores.json:', AU.autores.length, 'páginas de autor');
 // Las cifras del diccionario para la tarjeta de la portada, sin cargar el diccionario entero
 const DICC = path.join(destino, 'diccionario.json');
-if (fs.existsSync(DICC)) { const D = JSON.parse(fs.readFileSync(DICC)); fs.writeFileSync(path.join(destino, 'diccionario-cifras.json'), JSON.stringify({ fecha: D.fecha, lemas: D.lemas })); }
+const DIX = path.join(destino, 'diccionario-indices.json');
+if (fs.existsSync(DICC)) { const D = JSON.parse(fs.readFileSync(DICC)); fs.writeFileSync(path.join(destino, 'diccionario-cifras.json'), JSON.stringify(cifrasDiccionario(D.fecha, D.lemas, fs.existsSync(DIX) ? JSON.parse(fs.readFileSync(DIX)) : null))); }
 // Los signos de Cummins, para la transcripción de sus conversaciones
 fs.writeFileSync(path.join(destino, 'signos.json'), JSON.stringify(leer('signos-cummins.json')));
 // Las claves del formulario del diccionario, solo en resumen SHA-256 (las claves en claro no están en el repositorio)
@@ -205,6 +207,27 @@ for (const a of LOC.alquerias) {
 }
 for (const c of Object.values(loc.alias)) if (!todos.has(c)) { console.error('localidades.json: alias a un término que no está en el mapa:', c); process.exit(1); }
 fs.writeFileSync(path.join(destino, 'localidades.json'), JSON.stringify(loc));
+// El minimapa de la tarjeta «Las palabras por lugares» (Carlos, 22/10/2026): las comarcas del área del taller y de contacto,
+// y los términos sueltos de contacto (Garrovillas) con el nombre de su comarca, en trazos SVG simplificados, para colorearlos
+// en la página con las voces de diccionario-cifras.json.
+{
+  const geomsDe = codes => es.objects.municipalities.geometries.filter(g => codes.includes(g.id));
+  const pts = [];
+  const partes = [
+    ...area.nucleo.map(k => ({ nombre: COM[k].nombre, area: 'core', g: topo.merge(es, geomsDe(comarca(k))) })),
+    ...area.contacto.map(k => ({ nombre: COM[k].nombre, area: 'contact', g: topo.merge(es, geomsDe(comarca(k))) })),
+    ...area.contacto_terminos.split(' ').map(c => ({ nombre: COM[comarcaDe[c]].nombre, area: 'contact', g: topo.merge(es, geomsDe([c])) })),
+  ];
+  const anillos = g => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates).flatMap(p => p);
+  for (const p of partes) for (const r of anillos(p.g)) for (const c of r) pts.push(proj(c));
+  const x0 = Math.min(...pts.map(q => q[0])), x1 = Math.max(...pts.map(q => q[0])), y0 = Math.min(...pts.map(q => q[1])), y1 = Math.max(...pts.map(q => q[1]));
+  const k = 200 / Math.max(x1 - x0, y1 - y0), W = Math.round((x1 - x0) * k), H = Math.round((y1 - y0) * k);
+  const dp = (q, tol) => { if (q.length < 4) return q; const keep = new Uint8Array(q.length); keep[0] = keep[q.length - 1] = 1; const st = [[0, q.length - 1]]; while (st.length) { const [a, b] = st.pop(); const [ax, ay] = q[a], [bx, by] = q[b]; const dx = bx - ax, dy = by - ay, L = Math.hypot(dx, dy); let m = 0, ix = -1; for (let i = a + 1; i < b; i++) { const d = L < 1e-6 ? Math.hypot(q[i][0] - ax, q[i][1] - ay) : Math.abs(dy * q[i][0] - dx * q[i][1] + bx * ay - by * ax) / L; if (d > m) { m = d; ix = i; } } if (m > tol && ix > 0) { keep[ix] = 1; st.push([a, ix], [ix, b]); } } return q.filter((_, i) => keep[i]); };
+  const d = g => anillos(g).map(r => { const q = dp(r.map(c => { const p = proj(c); return [(p[0] - x0) * k, (p[1] - y0) * k]; }), 0.6); return q.length < 3 ? '' : 'M' + q.map(([x, y]) => x.toFixed(1) + ' ' + y.toFixed(1)).join('L') + 'Z'; }).join('');
+  const mini = { ancho: W, alto: H, comarcas: partes.map(p => ({ nombre: p.nombre, area: p.area, d: d(p.g) })) };
+  fs.writeFileSync(path.join(destino, 'minimapa.json'), JSON.stringify(mini));
+  console.log('minimapa.json:', mini.comarcas.length, 'piezas,', Math.round(JSON.stringify(mini).length / 1024), 'KB');
+}
 console.log('localidades.json:', loc.alquerias.length, 'localidades que no son municipio,', Object.keys(loc.alias).length, 'alias,', loc.cercanias.length, 'términos de Cummins');
 
 // ---------- el mapa de la portada ----------
