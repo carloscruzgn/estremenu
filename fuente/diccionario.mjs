@@ -302,6 +302,9 @@ console.log('diccionario-indices.json:', lugaresIdx.length, 'grupos de lugares,'
 const fuentes = [...usadas].filter(f => !/^Informante\b/.test(f)).map(f => ({ sigla: sigla(f), ref: SIG.get(f)?.ref || f }))
   .filter((v, i, a) => a.findIndex(x => x.sigla === v.sigla) === i).sort((a, b) => colEs.compare(a.sigla, b.sigla));
 if ([...usadas].some(f => /^Informante\b/.test(f))) fuentes.push({ sigla: 'INF [A00]', ref: 'Informante del taller, con su código, curso 2026-2027.' });
+// Obras sin testimonios que se agradecen, en cabeza de la lista: el Tesoro de González Salgado no es fuente,
+// pero se nombra con su nota (Carlos, 21/10/2026).
+for (const f of ['González Salgado 2026'].reverse()) { const r = FUENTES && FUENTES.find(x => x.fuente === f); if (r) fuentes.unshift({ sigla: r.sigla, ref: [r.referencia || f, r.notas].filter(Boolean).join(' ') }); }
 const CATS = JSON.parse(fs.readFileSync(path.join(aqui, 'diccionario-abreviaturas.json')));
 const tokens = new Set(); for (const a of ACEP) { for (const p of limpia(a['categoría']).split(/\s+/)) tokens.add(p); const u = limpia(a.marcas); for (const k of ['U. t.', 'U. m.']) if (u.includes(k)) tokens.add(k); if (/\bpl\./.test(u)) tokens.add('pl.'); }
 const hayInf = [...usadas].some(f => /^Informante\b/.test(f));
