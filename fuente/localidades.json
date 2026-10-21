@@ -1,0 +1,27 @@
+{
+  "_fuente": "Localidades del diccionario que no son cabeza de municipio, para el mapa de «Las palabras por lugares» (Carlos, 22/10/2026). Cada una con su municipio, su término y sus coordenadas, con la fuente consultada el 22/10/2026. Los municipios van en el centro de su término, de base.json, salvo los de «municipios». construir.mjs las proyecta en datos/localidades.json.",
+  "alias": {
+    "_": "Nombre del diccionario → término de base.json, cuando no coinciden",
+    "Garrovillas": "10082"
+  },
+  "municipios": {
+    "_": "Cabezas de municipio que no van en el centro de su término, porque tienen alquerías cerca en el mapa. Solo coordenadas que caen dentro del término: las de Nuñomoral y Ladrillar en en.wikipedia.org caen fuera, y van en el centro; la de Casar de Palomero en en.wikipedia.org cae fuera, y va la de hispanopedia.",
+    "Casares de las Hurdes": { "termino": "10051", "lat": 40.44028, "lon": -6.28833, "fuente": "en.wikipedia.org/wiki/Casares_de_las_Hurdes" },
+    "Pinofranqueado": { "termino": "10146", "lat": 40.30389, "lon": -6.33139, "fuente": "en.wikipedia.org/wiki/Pinofranqueado" },
+    "Caminomorisco": { "termino": "10041", "lat": 40.317, "lon": -6.283, "fuente": "en.wikipedia.org/wiki/Caminomorisco" },
+    "Casar de Palomero": { "termino": "10050", "lat": 40.294967, "lon": -6.256610, "fuente": "es.hispanopedia.com/wiki/Casar_de_Palomero" }
+  },
+  "alquerias": [
+    { "nombre": "Aceitunilla", "municipio": "Nuñomoral", "termino": "10135", "lat": 40.43583, "lon": -6.24278, "fuente": "en.wikipedia.org/wiki/Aceitunilla" },
+    { "nombre": "Aldehuela", "municipio": "Pinofranqueado", "termino": "10146", "lat": 40.38250, "lon": -6.38889, "fuente": "en.wikipedia.org/wiki/Aldehuela,_Pinofranqueado" },
+    { "nombre": "Azabal", "municipio": "Casar de Palomero", "termino": "10050", "lat": 40.2973, "lon": -6.2995, "fuente": "bamwor.com, de GeoNames; el municipio, es.wikipedia.org/wiki/Azabal" },
+    { "nombre": "Cambroncino", "municipio": "Caminomorisco", "termino": "10041", "lat": 40.34333, "lon": -6.23306, "fuente": "en.wikipedia.org/wiki/Cambroncino" },
+    { "nombre": "El Gasco", "municipio": "Nuñomoral", "termino": "10135", "lat": 40.39833, "lon": -6.31694, "fuente": "en.wikipedia.org/wiki/El_Gasco" },
+    { "nombre": "Fragosa", "municipio": "Nuñomoral", "termino": "10135", "lat": 40.39722, "lon": -6.30056, "fuente": "en.wikipedia.org/wiki/La_Fragosa (40°23′50″N 6°18′2″W)" },
+    { "nombre": "Horcajo", "municipio": "Pinofranqueado", "termino": "10146", "lat": 40.36306, "lon": -6.36028, "fuente": "en.wikipedia.org/wiki/Horcajo" },
+    { "nombre": "La Huetre", "municipio": "Casares de las Hurdes", "termino": "10051", "lat": 40.44333, "lon": -6.30472, "fuente": "en.wikipedia.org/wiki/Huetre,_Casares_de_las_Hurdes" },
+    { "nombre": "Ovejuela", "municipio": "Pinofranqueado", "termino": "10146", "lat": 40.31167, "lon": -6.43889, "fuente": "en.wikipedia.org/wiki/Ovejuela" },
+    { "nombre": "Vegas de Coria", "municipio": "Nuñomoral", "termino": "10135", "lat": 40.38611, "lon": -6.18306, "fuente": "en.wikipedia.org/wiki/Vegas_de_Coria" },
+    { "nombre": "Trevejo", "municipio": "Villamiel", "termino": "10210", "lat": 40.173431, "lon": -6.779044, "fuente": "es.hispanopedia.com/wiki/Trevejo" }
+  ]
+}

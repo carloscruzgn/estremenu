@@ -296,6 +296,14 @@ for (const t of todosTs) if (/^Informante\b/.test(t.fuente)) {
 const informantes = [...infPor.entries()].sort((a, b) => a[0] < b[0] ? -1 : 1).map(([c, ls]) => ({ inf: 'INF [' + c + ']', lugares: [...ls].sort(colEs.compare), descripcion: (INFD[c] && INFD[c].descripcion) || '' }));
 fs.writeFileSync(path.resolve(aqui, '../datos/informantes.json'), JSON.stringify({ informantes }));
 fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-indices.json'), JSON.stringify({ fecha: fechaEspejo, lugares: lugaresIdx, fuentes: fuentesIdx, informantes: informantesIdx }));
+// Cada pueblo tiene que poder ponerse en el mapa de «Las palabras por lugares»: si no es un municipio de base.json, va en
+// localidades.json, con su término y sus coordenadas, y se vuelve a correr construir.mjs. Si falta, sale en la lista y no en el mapa.
+{
+  const B = JSON.parse(fs.readFileSync(path.resolve(aqui, '../datos/base.json'))), L = JSON.parse(fs.readFileSync(path.resolve(aqui, '../datos/localidades.json')));
+  const hay = new Set([...B.munis.map(m => m.name), ...Object.keys(L.alias), ...L.alquerias.map(a => a.nombre)]);
+  const sinSitio = lugaresIdx.flatMap(g => g.pueblos.map(p => p.nombre)).filter(n => !hay.has(n));
+  if (sinSitio.length) console.warn('AVISO: pueblos sin sitio en el mapa de lugares (añadir a fuente/localidades.json):', sinSitio.join(', '));
+}
 console.log('diccionario-indices.json:', lugaresIdx.length, 'grupos de lugares,', lugaresIdx.reduce((n, c) => n + c.pueblos.length, 0), 'pueblos,', fuentesIdx.length, 'fuentes');
 
 // ---------- fuentes y abreviaturas de lo publicado ----------
