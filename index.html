@@ -506,6 +506,8 @@ span.fila .tit { color: var(--texto-2) }
 .lug-lado .guia-l { margin: 14px 0 0; font-size: 13px; line-height: 1.5; color: var(--texto-3) }
 /* La lista, plegada bajo el mapa, en una sola tarjeta, con Coria y sus cercanías aparte (Carlos, 22/10/2026) */
 .ix-lista { margin: 22px 0 0 }
+.lug-cabeza { margin-bottom: 18px }
+.lug-cabeza .cod { text-transform: uppercase; font-size: 13px }
 .ix-lista > summary { cursor: pointer; font-weight: 800; font-size: 16px; color: var(--texto); padding: 12px 0 }
 .ix-lista > summary::marker { color: var(--naranja) }
 .ix-unica { background: var(--fondo-2); border: 1px solid var(--linea); border-radius: 12px; padding: 18px 20px; margin-top: 6px }
@@ -1437,16 +1439,18 @@ async function abrirIndice(h) {
     const r = buscaLugar(nombre);
     if (!r) { $('cab-indice').innerHTML = cabIx('Por lugares'); caja.innerHTML = `<a class="volver" href="#lugares">← Por lugares</a><p class="ix-dato">No hay voces documentadas en «${esc(nombre)}».</p>`; return; }
     const { g, p } = r, voces = p ? p.voces : g.voces;
-    $('cab-indice').innerHTML = cabIx('Documentadas en ' + nombre);
+    // Sin la cabecera grande: una cabeza como la de la página de un rasgo (Carlos, 22/10/2026)
+    $('cab-indice').innerHTML = '';
+    const cabeza = `<header class="cabeza lug-cabeza"><a class="volver" href="#lugares">← Por lugares</a><div class="cod">${p ? 'Documentadas en' : g.tipo === 'cercanias' ? 'Documentadas por Cummins, sin pueblo' : 'Documentadas en la comarca'}</div><h1>${esc(nombre)}</h1></header>`;
     const arriba = p ? `<p class="ix-dato">${g.tipo === 'otros' ? 'Sin comarca' : `En la comarca de <a href="${enlaceIx('lugar', g.nombre)}">${esc(g.nombre)}</a>`}.</p>`
       : g.tipo === 'cercanias' ? `<p class="ix-explica">${esc(EXPLICA_CERCANIAS)}</p>`
       : g.pueblos.length ? `<p class="ix-dato">Con las que se dan para la comarca sin decir el pueblo. Por pueblos:</p><ul class="ix-pueblos">${g.pueblos.map(x => `<li><a href="${enlaceIx('lugar', x.nombre)}">${esc(x.nombre)}<span class="ix-n">${x.voces.length}</span></a></li>`).join('')}</ul>` : '';
-    caja.innerHTML = `<a class="volver" href="#lugares">← Por lugares</a>${arriba}${listaIx(voces, 'siglas')}`;
+    caja.innerHTML = `${cabeza}${arriba}${listaIx(voces, 'siglas')}`;
   } else {
     const f = DIX.fuentes.find(x => x.sigla === nombre);
     if (!f) { $('cab-indice').innerHTML = cabIx('Por fuentes'); caja.innerHTML = `<a class="volver" href="#fuentes">← Por fuentes</a><p class="ix-dato">No hay ninguna obra con la sigla «${esc(nombre)}».</p>`; return; }
-    $('cab-indice').innerHTML = cabIx(f.sigla);
-    caja.innerHTML = `<a class="volver" href="#fuentes">← Por fuentes</a><p class="ix-ref">${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</p>${listaIx(f.voces, 'lugares')}`;
+    $('cab-indice').innerHTML = '';
+    caja.innerHTML = `<header class="cabeza lug-cabeza"><a class="volver" href="#fuentes">← Por fuentes</a><div class="cod">Documentadas en la fuente</div><h1>${esc(f.sigla)}</h1></header><p class="ix-ref">${esc(f.ref).replace(/\*([^*]+)\*/g, '<i>$1</i>')}</p>${listaIx(f.voces, 'lugares')}`;
   }
   ponLetrasIx(caja);
 }
