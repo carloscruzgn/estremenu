@@ -94,7 +94,9 @@ const SIN = 'Sin localizar';
 // La fala, contraste: sus testimonios van en «En la fala» y no cuentan para lugares ni variantes (Carlos, 20/10/2026)
 const FALA = 'Val de Xálima';
 const esFala = t => t.comarca === FALA;
-function comarcaDe(t) { return t.comarca === 'Tierra de Coria (Cummins)' ? 'Valle del Alagón' : t.comarca; }
+// Lo de Cummins sin pueblo, «Coria y sus cercanías», como en «Por lugares»: Cummins recogió también en Moraleja,
+// de Sierra de Gata, y no encaja en el Valle del Alagón (Carlos, 22/10/2026)
+function comarcaDe(t) { return t.comarca === 'Tierra de Coria (Cummins)' ? 'Coria y sus cercanías' : t.comarca; }
 function localidadDe(t) {
   const l = (t.localidad || '').trim();
   if (!l || l === SIN || l === t.comarca || l === 'Hurdes' || l === 'Tierra de Coria (Cummins)') return '';
