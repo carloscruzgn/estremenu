@@ -65,7 +65,9 @@ function clave(f) {
 const glosaInf = (t, glosaAc) => {
   if (!/^Informante\b/.test(t.fuente)) return '';
   const g = limpia(t['glosa de la fuente']).replace(/\.$/, '');
-  return g && norm(g) !== norm(glosaAc[t['acepción']] || '') ? g : '';
+  // Sin el artículo inicial: la glosa de la acepción va sin él (Carlos, 22/10/2026)
+  const sinArt = x => norm(x).replace(/^(el|la|los|las|un|una) /, '');
+  return g && sinArt(g) !== sinArt(glosaAc[t['acepción']] || '') ? g : '';
 };
 const anio = s => { const m = String(s || '').match(/\b(1[89]\d\d|20\d\d)\b/); return m ? +m[1] : 9999; };
 
