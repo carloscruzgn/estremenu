@@ -1693,28 +1693,17 @@ function verEntrada(id, desplazar = true) {
 }
 
 // Las palabras del taller (Carlos, 20/10/2026): sin letra elegida, las diez últimas que han entrado;
-// con el abecedario, las de un tramo. Los tramos se ajustan solos al número de palabras: unas 12 por tramo
-// cuando haya muchas, menos mientras haya pocas, y la letra que llega sola a ese número va sola.
+// con el abecedario, las de una letra, aunque tenga una sola palabra (Carlos, 22/10/2026; antes, tramos de varias letras).
 const ABC = 'abcdefghijklmnñopqrstuvwxyz'.split('');
 const letraDe = lema => {
   const l = lema.toLowerCase().replace(/^[^a-zñáéíóúüàèìòù]+/, '').charAt(0);
-  return l === 'ñ' ? 'ñ' : l.normalize('NFD').replace(/[̀-ͯ]/g, '');
+  return l === 'ñ' ? 'ñ' : l.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 };
 let tramoTaller = null, TRAMOS = [];
 
 function tramosTaller(todas) {
   const cuenta = {}; for (const x of todas) { const l = letraDe(x.lema); cuenta[l] = (cuenta[l] || 0) + 1; }
-  const meta = Math.min(12, Math.max(3, Math.round(todas.length / 4)));
-  const tramos = []; let cur = null;
-  for (const l of ABC) {
-    if (!cuenta[l]) continue;
-    if (!cur) { cur = { letras: [], n: 0 }; tramos.push(cur); }
-    cur.letras.push(l); cur.n += cuenta[l];
-    if (cur.n >= meta) cur = null;
-  }
-  // Un resto pequeño al final se une al tramo anterior
-  if (tramos.length > 1 && tramos[tramos.length - 1].n < meta / 2) { const r = tramos.pop(), a = tramos[tramos.length - 1]; a.letras.push(...r.letras); a.n += r.n; }
-  return tramos;
+  return ABC.filter(l => cuenta[l]).map(l => ({ letras: [l], n: cuenta[l] }));
 }
 
 function pintarTaller() {
