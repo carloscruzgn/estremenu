@@ -1,1 +1,4 @@
-# Cabeceras de Cloudflare Pages. Sin ninguna por ahora: desde el 18/10/2026 los buscadores pueden indexar la web (Carlos).
+# Cabeceras de Cloudflare Pages. Desde el 18/10/2026 los buscadores pueden indexar la web (Carlos).
+# instagram/ solo aloja los ficheros que toma Metricool: fuera de los buscadores.
+/instagram/*
+  X-Robots-Tag: noindex
