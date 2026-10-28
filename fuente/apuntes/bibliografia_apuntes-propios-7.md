@@ -80,6 +80,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **GARCÍA, Mina (2002).** «Gratitud a nuestros mayores», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 331-333.
 
+**GONZÁLEZ FERRERO, Juan Carlos (2006).** «Estudio preliminar», en Fritz Krüger, *Estudio fonético-histórico de los dialectos españoles occidentales*, Zamora, Instituto de Estudios Zamoranos «Florián de Ocampo» y Diputación de Zamora, 2006, pp. I-CXVIII.
+
 **GONZÁLEZ SALGADO, José Antonio (2001).** «Fuentes del vocabulario y áreas léxicas de Extremadura», en Alexandre Veiga, Miguel González Pereira y Montserrat Souto Gómez (eds.), *De lenguas y lenguajes*, A Coruña, Toxosoutos, 2001, pp. 125-139.
 
 **——— (2002b).** «La estructura del léxico extremeño», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 278-299.
@@ -110,7 +112,9 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **KOPONEN, Emilia (2015).** «Diferencias en la aspiración y pérdida de la /s/ implosiva entre el norte y el sur del extremeño», *Estudios Interlingüísticos* 3, pp. 47-65.
 
-**KRÜGER, Fritz (1914).** *Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo.
+**KRÜGER, Fritz (1914).** *Studien zur Lautgeschichte westspanischer Mundarten*, Hamburgo, Lucas Gräfe & Sillem (7. Beiheft zum Jahrbuch der Hamburgischen Wissenschaftlichen Anstalten, XXXI, 1913).
+
+**——— (2006).** *Estudio fonético-histórico de los dialectos españoles occidentales*, trad. de M.ª Teresa Sánchez Nieto y María González Martínez, ed. y estudio preliminar de Juan Carlos González Ferrero, Zamora, Instituto de Estudios Zamoranos «Florián de Ocampo» y Diputación de Zamora.
 
 **LÓPEZ FERNÁNDEZ, Manuel (2019).** «De Granadilla a Montemolín. La Orden de Santiago y la Vía de la Plata en tierras de Extremadura (siglos XII-XIII)», *Revista de Estudios Extremeños* LXXV-2, pp. 319-347.
 
