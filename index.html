@@ -1646,7 +1646,7 @@ function ponInformante(inf) {
   for (const o of $('dic-inf-bot').querySelectorAll('button')) o.setAttribute('aria-pressed', String(o.dataset.inf === infSel));
   const x = infSel && INF.informantes.find(i => i.inf === infSel), f = $('dic-inf-ficha');
   f.hidden = !x;
-  if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Por autorizar.')}</p>`;
+  if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length && !x.sin_pueblos ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Por autorizar.')}</p>`;
 }
 $('dic-inf-bot').addEventListener('click', ev => {
   const b = ev.target.closest('button[data-inf]'); if (!b) return;

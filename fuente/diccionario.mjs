@@ -298,7 +298,7 @@ for (const t of todosTs) if (/^Informante\b/.test(t.fuente)) {
   if (!infPor.has(c)) infPor.set(c, new Set());
   const l = localidadDe(t) || comarcaDe(t); if (l) infPor.get(c).add(l);
 }
-const informantes = [...infPor.entries()].sort((a, b) => a[0] < b[0] ? -1 : 1).map(([c, ls]) => ({ inf: 'INF [' + c + ']', lugares: [...ls].sort(colEs.compare), descripcion: (INFD[c] && INFD[c].descripcion) || '' }));
+const informantes = [...infPor.entries()].sort((a, b) => a[0] < b[0] ? -1 : 1).map(([c, ls]) => ({ inf: 'INF [' + c + ']', lugares: [...ls].sort(colEs.compare), descripcion: (INFD[c] && INFD[c].descripcion) || '', ...(INFD[c] && INFD[c].sin_pueblos ? { sin_pueblos: true } : {}) }));
 fs.writeFileSync(path.resolve(aqui, '../datos/informantes.json'), JSON.stringify({ informantes }));
 fs.writeFileSync(path.resolve(aqui, '../datos/diccionario-indices.json'), JSON.stringify({ fecha: fechaEspejo, lugares: lugaresIdx, fuentes: fuentesIdx, informantes: informantesIdx }));
 // Cada pueblo tiene que poder ponerse en el mapa de «Las palabras por lugares»: si no es un municipio de base.json, va en

@@ -1,7 +1,8 @@
 {
- "_nota": "Descripción de cada informante del taller para la web, al estilo de los informantes de Cummins. Vacía, la web dice «Por autorizar». Solo se rellena con el permiso por escrito del informante (Carlos, 21/10/2026).",
+ "_nota": "Descripción de cada informante del taller para la web, al estilo de los informantes de Cummins. Vacía, la web dice «Por autorizar». Solo se rellena con el permiso por escrito del informante (Carlos, 21/10/2026). «sin_pueblos»: la tarjeta del informante no lista los pueblos de sus testimonios, que siguen saliendo bajo cada palabra; para A00, que no es hablante de ningún pueblo sino que traslada lo que oye a otros (Carlos, 28/10/2026).",
  "A00": {
-  "descripcion": "El profesor del taller. Menos de 50 años. Hijo de emigrantes portajeros, creció y se formó en Cádiz, y volvió como docente de Secundaria. Sus palabras salen de lo que pregunta y comprueba con hablantes de la zona del taller."
+  "descripcion": "El profesor del taller. Menos de 50 años. Hijo de emigrantes portajeros, creció y se formó en Cádiz, y volvió como docente de Secundaria. Sus palabras salen de lo que pregunta y comprueba con hablantes de la zona del taller.",
+  "sin_pueblos": true
  },
  "A01": {
   "descripcion": ""
