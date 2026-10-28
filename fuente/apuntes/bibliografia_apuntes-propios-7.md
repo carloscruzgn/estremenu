@@ -54,9 +54,15 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **CUMMINS, John G. (1974).** *El habla de Coria y sus cercanías*, Londres, Tamesis Books.
 
+**DIAGO HERNANDO, Máximo (2004).** «El desarrollo de la trashumancia y los orígenes medievales de la cuadrilla mesteña soriana», *Hispania* LXIV-3, n.º 218, pp. 1045-1078.
+
 **DÍAZ LUCIO, Julián (2002).** «Motes en Cadalso», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 243-245.
 
 **DÍEZ ELCUAZ, José Ignacio (2013).** «La comarca salmantina de El Rebollar», *Salamanca. Revista de Estudios* 58, pp. 197-221.
+
+**ESTEPA GARCÍA, Juan José (2021).** «La Mesta y Extremadura. Visión de un pasado mesteño», *Revista de Estudios Extremeños* LXXVII-3, pp. 1305-1320.
+
+**——— (2022).** «La trashumancia en Extremadura. Valores de su pasado y de su presente», *Revista de Estudios Extremeños* LXXVIII, pp. 315-335.
 
 **FERNÁNDEZ DE MOLINA ORTÉS, Elena (2015).** «El habla en Extremadura. Investigaciones sobre la morfosintaxis y el léxico regional», *Anuario de Estudios Filológicos* XXXVIII, pp. 57-72.
 
@@ -94,6 +100,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **——— (2025).** *Repertorio bibliográfico de las hablas extremeñas*, versión reducida, actualizada el 4 de diciembre de 2025, en línea, geolectos.com.
 
+**HERNÁNDEZ PANIAGUA, Miguel (2023).** «La influencia de la trashumancia en el dialectalismo leonés de la provincia de Salamanca», *Estudios Humanísticos. Filología* 45, pp. 217-233.
+
 **HERRERO INGELMO, José Luis (2006).** «El leonés en Salamanca cien años después», texto de agosto de 2006; publicado en José R. Morala (ed.), *Ramón Menéndez Pidal y el dialecto leonés (1906-2006)*, Instituto Castellano y Leonés de la Lengua, 2007, pp. 207-235 ++libro, lugar y páginas, de la web del autor: comprobar++.
 
 **HOYOS PIÑAS, Juan Martín (2003).** «La diversidad de hablas en el ámbito lingüístico extremeño», *Interlingüística* 14, pp. 587-592.
@@ -111,6 +119,10 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **MARTÍN, Aníbal (2023).** *Yo hablo, ellas cantorin. Las aventuras de un extremeño por los caminos de la diversidad lingüística*, Pie de Página.
 
 **MARTÍNEZ TERRÓN, Luis (2002).** «El “habla popular” en las letras extremeñas», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 308-315.
+
+**MELÓN JIMÉNEZ, Miguel Ángel (1987).** «De los Cameros a Extremadura. Historia y comportamientos de los ganaderos riojanos en tierras de Cáceres (1720-1800)», *Cuadernos de Investigación Histórica Brocar* 12, pp. 141-158.
+
+**MINISTERIO PARA LA TRANSICIÓN ECOLÓGICA Y EL RETO DEMOGRÁFICO (s. f.).** «Las vías pecuarias de Extremadura», ficha de vías pecuarias, ++dirección y fecha de consulta++; y *Cuadernos de la trashumancia. Montaña de León*, ++año y editor++.
 
 **MONTERO CURIEL, Pilar (1991).** «Fonética extremeña en el *Atlas Lingüístico de la Península Ibérica*», *Anuario de Estudios Filológicos* XIV, pp. 317-334.
 
@@ -214,6 +226,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **DOMÍNGUEZ MORCILLO, Ángel (1989).** «Notas sobre las hablas populares extremeñas», en Javier Marcos Arévalo (coord.), *Antropología cultural de Extremadura*, Mérida, Editora Regional de Extremadura, 1989, p. 853 — vía González Salgado 2007a.
 
+**DOMÍNGUEZ ORTIZ, Antonio (1976).** *Sociedad y Estado en el siglo XVIII español*, Barcelona, p. 212 — vía Melón Jiménez 1987.
+
 **ESCOBAR PRIETO, Eugenio (1906).** «Galisteo. Monografía histórica», *Revista de Extremadura* VIII, ++páginas++ — vía López Fernández 2019.
 
 **ESPINOSA, Aurelio M. (hijo) (1935).** *Arcaísmos dialectales. La conservación de ‘s’ y ‘z’ sonoras en Cáceres y Salamanca*, Madrid, Centro de Estudios Históricos (Anejos de la *Revista de Filología Española*, XIX) — vía Viudas 1976 y 1980, vía Cummins 1974, vía Montero Curiel 2006a y vía González Salgado 2007a.
@@ -241,6 +255,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **GABRIEL Y GALÁN ACEVEDO, J. (2004).** *José María Gabriel y Galán. Su vida. Su obra. Su tiempo*, Mérida, Editora Regional de Extremadura — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
 **——— (2005).** José María Gabriel y Galán, *Obras completas*, ed. de J. M.ª y J. Gabriel y Galán Acevedo, Mérida, Junta de Extremadura — vía Salvador Plans 2005a y Nieto Caballero 2016.
+
+**GARCÍA MARTÍN, ++nombre de pila++ (1991).** ++título y publicación++ — vía MITECO, *Cuadernos de la trashumancia. Montaña de León*.
 
 **GARCÍA MATOS, Manuel (1982).** *Cancionero popular de la provincia de Cáceres*, CSIC, 2 volúmenes — vía Flores del Manzano 1999.
 
@@ -305,6 +321,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **——— y SALVADOR PLANS, Antonio (2003).** «El habla de Campanario», ++publicación y páginas++ — vía Montero Curiel 2006a.
 
 **NARBONA, Antonio, CANO, Rafael, y MORILLO, Ramón (1998).** *El español hablado en Andalucía*, Barcelona, Ariel, p. 175 — vía González Salgado 2007a.
+
+**NEBRIJA, Antonio de (1493).** ++título: Estepa García 2021 no lo da++ — vía Estepa García 2021.
 
 **PATO, Enrique (2004).** «Los perfectos fuertes analógicos en español», en línea, web del COSER ++año de la versión en línea, y si es el mismo trabajo que el de las actas de APLEx 2004 (Cáceres, 2016)++ — vía González Salgado 2007a, que la consultó el 29/11/2006.
 
