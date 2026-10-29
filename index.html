@@ -472,7 +472,6 @@ span.fila .tit { color: var(--texto-2) }
 .dic-bandas .banda[hidden] { display: none }
 .dic-bandas .banda[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
 .dic-bandas .banda .sel { white-space: nowrap }
-.dic-bandas .banda .en-obra { margin-left: 4px; font-size: 10px; padding: 2px 6px }
 .dic-bandas .chev { display: grid; place-items: center; width: 26px; height: 26px; margin-left: auto; flex: none; font-size: 22px; font-weight: 700; line-height: 1 }
 .dic-bandas .chev::before { content: '+' }
 .dic-bandas .banda[aria-expanded="true"] .chev::before { content: '−' }
@@ -598,11 +597,8 @@ span.fila .tit { color: var(--texto-2) }
 .ix-fuentes .taller b { color: var(--naranja) }
 @media (max-width: 600px) { .ix-fuentes a { grid-template-columns: minmax(0, 1fr) auto } .ix-fuentes a .ref { grid-column: 1 / -1; grid-row: 2 } }
 .ix-ref { font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 14px }
-/* Por informante, en construcción: la descripción de cada uno, «Por autorizar» hasta tener su permiso (Carlos, 21/10/2026) */
+/* Por informante: la descripción de cada uno, «Por autorizar» si no la tiene (Carlos, 21/10/2026); sin «En construcción» desde el 29/10/2026 */
 .dic-inf { margin: 10px 0 0 }
-.dic-inf-tit .en-obra { margin-left: 0 }
-.dic-inf-tit { margin: 0 0 10px; line-height: 1; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--verde) }
-.en-obra { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; background: var(--naranja-osc); color: #fff; font-size: 11px; letter-spacing: .08em; vertical-align: 1px }
 .dic-inf-bot { display: flex; flex-wrap: wrap; gap: 5px }
 .dic-inf-bot button { font: inherit; font-weight: 800; font-size: 14px; height: 32px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--texto-2); cursor: pointer }
 .dic-inf-bot button[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--fondo) }
@@ -1156,7 +1152,6 @@ span.fila .tit { color: var(--texto-2) }
       </div>
       <div class="dic-abc dic-panel" id="dic-abc" role="group" aria-label="Las palabras del taller por letras" hidden></div>
       <div class="dic-inf dic-panel" id="dic-inf" hidden>
-        <p class="dic-inf-tit"><span class="en-obra">En construcción</span></p>
         <div class="dic-inf-bot" id="dic-inf-bot" role="group" aria-label="Las palabras de cada informante"></div>
         <div class="dic-inf-ficha" id="dic-inf-ficha" hidden aria-live="polite"></div>
       </div>
@@ -1632,7 +1627,7 @@ async function abrirDiccionario() {
   cargarInformantes();
 }
 
-// Por informante, en construcción (Carlos, 21/10/2026): datos/informantes.json, de fuente/diccionario.mjs, con la
+// Por informante (Carlos, 21/10/2026; sin «En construcción» desde el 29/10/2026): datos/informantes.json, de fuente/diccionario.mjs, con la
 // descripción de fuente/informantes.json; vacía, «Por autorizar», hasta tener el permiso de cada uno
 let INF = null, infSel = null;
 async function cargarInformantes() {
