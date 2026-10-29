@@ -52,6 +52,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **CASILLAS ANTÚNEZ, Francisco José (2008).** «Historia y toponimia de la tierra de Coria», *Alcántara* 68, pp. 21-44.
 
+**CAYETANO ROSADO, Moisés (2007).** «Cuantificación de la emigración extremeña desde la posguerra a los comienzos del siglo XXI (1940-2005)», *Revista de Estudios Extremeños* LXIII-3, pp. 1261-1274.
+
 **CUMMINS, John G. (1974).** *El habla de Coria y sus cercanías*, Londres, Tamesis Books.
 
 **DIAGO HERNANDO, Máximo (2004).** «El desarrollo de la trashumancia y los orígenes medievales de la cuadrilla mesteña soriana», *Hispania* LXIV-3, n.º 218, pp. 1045-1078.
@@ -134,6 +136,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **——— (2014).** «Las hablas extremeñas en la literatura regional y su presencia en la *Revista de Estudios Extremeños* (1927-2012)», *Revista de Estudios Extremeños* LXX-1, pp. 625-658.
 
+**MUÑOZ CORTÉS, Manuel (1959).** «Cuestiones del lenguaje: Español correcto y español vulgar», *Revista de Educación* XXXII, 90, primera quincena de enero de 1959, pp. 165-169. Reproduce tres capítulos de la primera parte de *El español vulgar (descripción de sus fenómenos y métodos de corrección)*, Sección de Publicaciones de la Secretaría General Técnica del Ministerio de Educación Nacional, colección «Biblioteca de la Revista de Educación», ++lugar y año++.
+
 **NIETO CABALLERO, Guadalupe (2016).** «Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *Revista de Estudios Extremeños* LXXII-2, pp. 851-868.
 
 **ORTIGO, ++nombre completo; puede ser seudónimo++ (2002).** «Carta desde el escaño a un amigo emigrante», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 236-242.
@@ -154,6 +158,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **TRABAJOS DE ESTUDIANTES DE ESO Y BACHILLERATO (s. f.).** *Trabajos de estudiantes de ESO y Bachillerato en relación con el dialecto extremeño y las variedades lingüísticas de Extremadura*, recopilación de seis trabajos, ++sin datos de edición++.
 
+**VALIENTE MARTÍN, Ana Belén (2024).** *El habla de Las Hurdes (altas) en la sincronía actual. Casares de Las Hurdes, Ladrillar y Nuñomoral*, tesis doctoral, Universidad de Extremadura, dir. Antonio Salvador Plans.
+
 **VALLE MOREA, Nicolás (2002).** «La ortografía del extremeño. Un análisis retrospectivo», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 262-277.
 
 **VELO NIETO, Juan José (1956).** «El habla de las Hurdes», *Revista de Estudios Extremeños* XII (1-4), pp. 59-207.
@@ -165,6 +171,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **——— (1980).** *Diccionario extremeño*, Cáceres, Universidad de Extremadura (Anejos del *Anuario de Estudios Filológicos*); ed. facsímil, Cáceres, Periódico Extremadura y Diputación de Cáceres, 2013.
 
 **——— (1992).** «Fonética extremeña en el siglo XIX», en Manuel Ariza y otros (eds.), *Actas del II Congreso Internacional de Historia de la Lengua Española*, Madrid, Pabellón de España, 1992, t. II, pp. 291-299.
+
+**VILANOVA RIBAS, Mercedes, y MORENO JULIÁ, Xavier (1992).** *Atlas de la evolución del analfabetismo en España de 1887 a 1981*, Madrid, Ministerio de Educación y Ciencia, Centro de Publicaciones y CIDE.
 
 ## **7.2. Bibliografía secundaria**
 
@@ -288,7 +296,9 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **LAPESA, Rafael (1981).** *Historia de la lengua española*, 9.ª ed., Madrid, Gredos — vía resumen de memoria, sin cotejar.
 
-**LLORENTE MALDONADO DE GUEVARA, Antonio (1971).** *Toponimia e historia*, Granada, Universidad de Granada ++1969 en el repositorio de la Universidad de Granada++ — vía Casillas Antúnez 2008.
+**LLORENTE MALDONADO DE GUEVARA, Antonio (1946).** ++título y datos de edición del estudio de la Ribera salmantina++ — vía Alonso Pascua 2023, p. 17, n. 2.
+
+**——— (1971).** *Toponimia e historia*, Granada, Universidad de Granada ++1969 en el repositorio de la Universidad de Granada++ — vía Casillas Antúnez 2008.
 
 **LOPE BLANCH, Juan M. (1976).** Reseña de Cummins 1974, *Nueva Revista de Filología Hispánica* XXV, pp. 393-394 — vía la investigación en línea de la primera versión de estos apuntes.
 
@@ -367,8 +377,6 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **SEGURA COVARSÍ, E. (1954).** «Extremeñas. El dialecto», *Alcántara* X, 81-83, pp. 3-11 — vía Salvador Plans 2005a y Nieto Caballero 2016.
 
 **TRINIDAD MARTÍN, Manuel (ed.) (2016).** *Congreso Internacional APLEx 2004: Patrimonio Lingüístico Extremeño. Actas*, Cáceres, Biblioteca Virtual Extremeña — en la carpeta; leídos Barroso Gutiérrez 2016 e Iglesias Ovejero, pp. 339-354.
-
-**VALIENTE MARTÍN, Ana Belén (2024).** *El habla de las Hurdes (Altas) en la sincronía actual: Casares de las Hurdes, Ladrillar y Nuñomoral*, tesis doctoral, Universidad de Extremadura, dir. Antonio Salvador Plans — vía la investigación en línea de la primera versión de estos apuntes; autora y fecha, de la búsqueda del 18/10/2026.
 
 **VIUDAS CAMARASA, Antonio, ARIZA VIGUERA, Manuel, y SALVADOR PLANS, Antonio (1987).** *El habla en Extremadura*, Mérida, Editora Regional de Extremadura — vía Salvador Plans 1998a, vía Paniagua Montero 2002, vía Fernández de Molina 2015 y vía Montero Curiel 2006a.
 
