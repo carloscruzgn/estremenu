@@ -136,7 +136,7 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **——— (2014).** «Las hablas extremeñas en la literatura regional y su presencia en la *Revista de Estudios Extremeños* (1927-2012)», *Revista de Estudios Extremeños* LXX-1, pp. 625-658.
 
-**MUÑOZ CORTÉS, Manuel (1959).** «Cuestiones del lenguaje: Español correcto y español vulgar», *Revista de Educación* XXXII, 90, primera quincena de enero de 1959, pp. 165-169. Reproduce tres capítulos de la primera parte de *El español vulgar (descripción de sus fenómenos y métodos de corrección)*, Sección de Publicaciones de la Secretaría General Técnica del Ministerio de Educación Nacional, colección «Biblioteca de la Revista de Educación», ++lugar y año++.
+**MUÑOZ CORTÉS, Manuel (1959).** «Cuestiones del lenguaje: Español correcto y español vulgar», *Revista de Educación* XXXII, 90, primera quincena de enero de 1959, pp. 165-169. Reproduce tres capítulos de la primera parte de *El español vulgar (descripción de sus fenómenos y métodos de corrección)*, Sección de Publicaciones de la Secretaría General Técnica del Ministerio de Educación Nacional, colección «Biblioteca de la Revista de Educación», Madrid, 1958.
 
 **NIETO CABALLERO, Guadalupe (2016).** «Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *Revista de Estudios Extremeños* LXXII-2, pp. 851-868.
 
@@ -296,7 +296,7 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **LAPESA, Rafael (1981).** *Historia de la lengua española*, 9.ª ed., Madrid, Gredos — vía resumen de memoria, sin cotejar.
 
-**LLORENTE MALDONADO DE GUEVARA, Antonio (1946).** ++título y datos de edición del estudio de la Ribera salmantina++ — vía Alonso Pascua 2023, p. 17, n. 2.
+**LLORENTE MALDONADO DE GUEVARA, Antonio (1946).** *Estudio sobre el habla de La Ribera (comarca salmantina ribereña del Duero)*, Salamanca, CSIC — vía Alonso Pascua 2023, p. 17, n. 2.
 
 **——— (1971).** *Toponimia e historia*, Granada, Universidad de Granada ++1969 en el repositorio de la Universidad de Granada++ — vía Casillas Antúnez 2008.
 
