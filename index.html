@@ -597,7 +597,7 @@ span.fila .tit { color: var(--texto-2) }
 .ix-fuentes .taller b { color: var(--naranja) }
 @media (max-width: 600px) { .ix-fuentes a { grid-template-columns: minmax(0, 1fr) auto } .ix-fuentes a .ref { grid-column: 1 / -1; grid-row: 2 } }
 .ix-ref { font-size: 15px; line-height: 1.6; color: var(--texto-2); margin: 0 0 14px }
-/* Por informante: la descripción de cada uno, «Por autorizar» si no la tiene (Carlos, 21/10/2026); sin «En construcción» desde el 29/10/2026 */
+/* Por informante: la descripción de cada uno, «Descripción pendiente» si no la tiene, y antes «Por autorizar» (Carlos, 21/10/2026 y 29/10/2026); sin «En construcción» desde el 29/10/2026 */
 .dic-inf { margin: 10px 0 0 }
 .dic-inf-bot { display: flex; flex-wrap: wrap; gap: 5px }
 .dic-inf-bot button { font: inherit; font-weight: 800; font-size: 14px; height: 32px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--linea); background: var(--fondo); color: var(--texto-2); cursor: pointer }
@@ -1628,7 +1628,7 @@ async function abrirDiccionario() {
 }
 
 // Por informante (Carlos, 21/10/2026; sin «En construcción» desde el 29/10/2026): datos/informantes.json, de fuente/diccionario.mjs, con la
-// descripción de fuente/informantes.json; vacía, «Por autorizar», hasta tener el permiso de cada uno
+// descripción de fuente/informantes.json; vacía, «Descripción pendiente.» (Carlos, 29/10/2026; antes, «Por autorizar.»)
 let INF = null, infSel = null;
 async function cargarInformantes() {
   try { INF = await json('datos/informantes.json'); } catch (e) { return; }
@@ -1641,7 +1641,7 @@ function ponInformante(inf) {
   for (const o of $('dic-inf-bot').querySelectorAll('button')) o.setAttribute('aria-pressed', String(o.dataset.inf === infSel));
   const x = infSel && INF.informantes.find(i => i.inf === infSel), f = $('dic-inf-ficha');
   f.hidden = !x;
-  if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length && !x.sin_pueblos ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Por autorizar.')}</p>`;
+  if (x) f.innerHTML = `<b>${esc(x.inf)}</b>${x.lugares.length && !x.sin_pueblos ? ' · ' + esc(x.lugares.join(', ')) : ''}<p${x.descripcion ? '' : ' class="por"'}>${esc(x.descripcion || 'Descripción pendiente.')}</p>`;
 }
 $('dic-inf-bot').addEventListener('click', ev => {
   const b = ev.target.closest('button[data-inf]'); if (!b) return;

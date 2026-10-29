@@ -290,7 +290,7 @@ const fuentesIdx = [...porFuente.entries()].map(([f, ts]) => ({ sigla: sigla(f),
   .sort((a, b) => colEs.compare(a.sigla, b.sigla));
 const informantesIdx = [...new Set(todosTs.filter(t => /^Informante\b/.test(t.fuente)).map(t => sigla(t.fuente)))].length;
 // Los informantes del taller, para el filtro de «Las palabras del taller»: código, pueblos de sus testimonios y
-// descripción, de informantes.json; vacía sale «Por autorizar» hasta tener su permiso (Carlos, 21/10/2026)
+// descripción, de informantes.json; vacía sale «Descripción pendiente.» (Carlos, 29/10/2026; antes, «Por autorizar.»)
 const INFD = fs.existsSync(path.join(aqui, 'informantes.json')) ? JSON.parse(fs.readFileSync(path.join(aqui, 'informantes.json'))) : {};
 const infPor = new Map();
 for (const t of todosTs) if (/^Informante\b/.test(t.fuente)) {
