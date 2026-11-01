@@ -972,10 +972,18 @@ span.fila .tit { color: var(--texto-2) }
 @media (max-width: 640px) { .vid-cuenta { display: flex; width: 100% } .vc-txt b { font-size: 17px; overflow-wrap: anywhere } }
 .ig-pie { white-space: nowrap }
 .ig-pie .ig { width: 1.05em; height: 1.05em; vertical-align: -.17em; margin-right: .3em }
-.vid-serie { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--linea) }
+/* Cada serie, en un desplegable cerrado, con + y − como los demás de la web (Carlos, 01/11/2026) */
+.vid-series { margin-top: 40px; border-top: 1px solid var(--linea) }
+.vid-serie { border-bottom: 1px solid var(--linea) }
+.vid-serie > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 20px 4px }
+.vid-serie > summary::-webkit-details-marker { display: none }
+.vid-serie > summary::before { content: '+'; display: inline-block; width: 1em; text-align: center; font-size: 26px; font-weight: 700; line-height: 1; flex: none; color: var(--naranja) }
+.vid-serie[open] > summary::before { content: '−' }
+.vid-serie > summary:hover h2, .vid-serie > summary:focus-visible h2 { color: var(--naranja) }
 .vid-serie h2 { font-weight: 900; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -.01em; line-height: 1.15 }
-.vid-ent { color: var(--texto-2); max-width: 62ch; margin: 10px 0 0; font-size: 16px }
-.vid-lista { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 26px 20px; max-width: 980px }
+.vid-serie .cuantos { margin-left: auto; flex: none; font-weight: 800; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-3) }
+.vid-serie[open] .vid-lista { margin-bottom: 30px }
+.vid-lista { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 26px 20px; max-width: 980px }
 .vid-lista li { display: grid; gap: 4px; align-content: start }
 .vid-portada { position: relative; display: block; padding: 0; border: 0; border-radius: 9px; overflow: hidden; background: var(--fondo-2); cursor: pointer; aspect-ratio: 9 / 16; margin-bottom: 8px }
 .vid-portada img { display: block; width: 100%; height: 100%; object-fit: cover }
@@ -1156,7 +1164,7 @@ span.fila .tit { color: var(--texto-2) }
   <div class="envoltura">
     <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">En Instagram</div><h2>Promoción visual</h2><p class="dc-sub">@taller_de_estremenu</p></div></header>
     <div id="vid-entradilla"></div>
-    <div id="vid-series"></div>
+    <div class="vid-series" id="vid-series"></div>
   </div>
 </section>
 
@@ -3173,8 +3181,8 @@ const todosVideos = () => VD ? VD.series.flatMap(s => s.videos.map((v, k) => ({ 
 function pintarVideos() {
   const cuenta = 'https://www.instagram.com/' + VD.cuenta + '/';
   $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener" aria-label="Abrir @${esc(VD.cuenta)} en Instagram"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span class="vc-txt"><span class="vc-red">Instagram</span><b>@${esc(VD.cuenta)}</b></span><span class="vc-ir" aria-hidden="true">↗</span></a>`;
-  $('vid-series').innerHTML = VD.series.map(s => `<section class="vid-serie" aria-labelledby="vs-${s.id}"><h2 id="vs-${s.id}">${esc(s.titulo)}</h2><p class="vid-ent">${esc(s.entradilla)}</p>
-    <ol class="vid-lista">${s.videos.map((v, k) => `<li><button type="button" class="vid-portada" data-video="${esc(v.id)}" aria-label="Ver el vídeo «${esc(v.titulo)}», de ${esc(v.duracion)} minutos"><img src="${v.portada}" alt="" loading="lazy" width="540" height="960"><span class="vid-play" aria-hidden="true"></span><span class="vid-dur" aria-hidden="true">${esc(v.duracion)}</span></button>${s.videos.length > 1 ? `<span class="vid-n">${k + 1} de ${s.videos.length}</span>` : ''}<b class="vid-tit">${esc(v.titulo)}</b><span class="vid-sub">${esc(v.sub)}</span><span class="vid-pie">Publicado el ${fecha(v.publicado)} · <a href="${v.instagram}" target="_blank" rel="noopener">En Instagram ↗</a></span></li>`).join('')}</ol></section>`).join('');
+  $('vid-series').innerHTML = VD.series.map(s => `<details class="vid-serie" id="vs-${s.id}"><summary><h2>${esc(s.titulo)}</h2><span class="cuantos">${s.videos.length === 1 ? '1 vídeo' : s.videos.length + ' vídeos'}</span></summary>
+    <ol class="vid-lista">${s.videos.map((v, k) => `<li><button type="button" class="vid-portada" data-video="${esc(v.id)}" aria-label="Ver el vídeo «${esc(v.titulo)}», de ${esc(v.duracion)} minutos"><img src="${v.portada}" alt="" loading="lazy" width="540" height="960"><span class="vid-play" aria-hidden="true"></span><span class="vid-dur" aria-hidden="true">${esc(v.duracion)}</span></button>${s.videos.length > 1 ? `<span class="vid-n">${k + 1} de ${s.videos.length}</span>` : ''}<b class="vid-tit">${esc(v.titulo)}</b><span class="vid-sub">${esc(v.sub)}</span><span class="vid-pie">Publicado el ${fecha(v.publicado)} · <a href="${v.instagram}" target="_blank" rel="noopener">En Instagram ↗</a></span></li>`).join('')}</ol></details>`).join('');
   const vs = todosVideos(), nombres = ['Ningún vídeo', 'Un vídeo', 'Dos vídeos', 'Tres vídeos', 'Cuatro vídeos', 'Cinco vídeos', 'Seis vídeos', 'Siete vídeos', 'Ocho vídeos', 'Nueve vídeos', 'Diez vídeos'];
   $('estado-videos').textContent = nombres[vs.length] || vs.length + ' vídeos';
   // En la tarjeta de la portada, las portadas de los cuatro últimos publicados
@@ -3189,6 +3197,7 @@ function tarjetasVideo(pagina) {
 function abrirVideo(id) {
   const v = todosVideos().find(x => x.id === id);
   if (!v) return;
+  $('vs-' + v.serie.id).open = true;   // la serie del vídeo, abierta debajo
   const el = $('vv-video');
   el.poster = v.portada; el.src = v.fichero;
   $('vv-tit').textContent = v.titulo; $('vv-ig').href = v.instagram;

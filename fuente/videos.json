@@ -9,7 +9,6 @@
     {
       "id": "herencia-leonesa",
       "titulo": "La herencia leonesa en nuestras hablas",
-      "entradilla": "De dónde viene lo leonés del habla del noroeste de Cáceres y qué ha sido de ello, en orden: la repoblación medieval, los rebaños de la Mesta y el siglo XX.",
       "videos": [
         { "id": "reino-de-leon", "titulo": "El reino de León en la zona del taller", "sub": "El noroeste de Cáceres, del siglo X al XIII", "fichero": "video/reel-H-reino-de-leon.mp4", "portada": "img/videos/reel-H-reino-de-leon.webp", "duracion": "2:38", "publicado": "2026-10-28", "instagram": "https://www.instagram.com/reel/DfB4kapolXW/", "en": ["apuntes-2"] },
         { "id": "canadas-mesta", "titulo": "Las cañadas de la Mesta", "sub": "Casi seis siglos de ida y vuelta, del XIII al XIX", "fichero": "video/reel-canadas-mesta.mp4", "portada": "img/videos/reel-canadas-mesta.webp", "duracion": "2:25", "publicado": "2026-10-29", "instagram": "https://www.instagram.com/reel/DfEosOBoyvJ/", "en": ["apuntes-2"] },
@@ -19,7 +18,6 @@
     {
       "id": "rasgos",
       "titulo": "Los rasgos del estremeñu",
-      "entradilla": "Un rasgo del habla en cada vídeo: cómo es y dónde se ha recogido.",
       "videos": [
         { "id": "V01", "titulo": "Las vocales del final se cierran", "sub": "Con versos de «El embargo», de José María Gabriel y Galán", "fichero": "video/reel-V01-embargo.mp4", "portada": "img/videos/reel-V01-embargo.webp", "duracion": "1:33", "publicado": "2026-10-26", "instagram": "https://www.instagram.com/reel/De9RmYrIpcD/", "en": ["V01"] }
       ]
