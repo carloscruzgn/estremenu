@@ -96,6 +96,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **——— (2007b).** «La sufijación diminutiva en la toponimia extremeña», en F. Hermoso Ruiz (coord.), *VIII Congreso de Estudios Extremeños. Libro de actas*, Badajoz, Diputación de Badajoz, 2007, pp. 1969-1982.
 
+**——— (2009a).** «Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, pp. 51-70.
+
 **——— (2009b).** «Diez problemas de dialectología extremeña», *Revista de Estudios Extremeños* LXV-1, pp. 347-378.
 
 **——— (2014).** «La dialectología en la *Revista de Estudios Extremeños* (1927-2013)», *Revista de Estudios Extremeños* LXX-2, pp. 1153-1194.
@@ -140,6 +142,8 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **NIETO CABALLERO, Guadalupe (2016).** «Dialectalismos fonéticos en los escritores extremeños finiseculares: el ejemplo de *Extremeñas*, de Gabriel y Galán», *Revista de Estudios Extremeños* LXXII-2, pp. 851-868.
 
+**NÚÑEZ-MÉNDEZ, Eva (2016).** «A Diachronic Approach to the Old Spanish Sibilant Merger and its Impact on Trans-Atlantic Spanish (Part I)», *Revista de Estudios Hispánicos* (Universidad de Puerto Rico) 3 (2), pp. 59-98.
+
 **ORTIGO, ++nombre completo; puede ser seudónimo++ (2002).** «Carta desde el escaño a un amigo emigrante», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 236-242.
 
 **OSCEC y UNIVERSIDAD POPULAR DE CÁCERES (2025).** *Manual del curso de lengua extremeña*, s. l., OSCEC y Universidad Popular de Cáceres.
@@ -156,7 +160,11 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **SANDE BUSTAMANTE, María de las Mercedes de (2002).** «Lengua y habla como signos de identidad propia, sociocultural e histórica», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, pp. 300-305.
 
+**TORREBLANCA, Máximo (1983).** «Las sibilantes sonoras del Oeste de España: ¿arcaísmos o innovaciones fonéticas?», *Revista de Filología Románica* 1, pp. 61-108.
+
 **TRABAJOS DE ESTUDIANTES DE ESO Y BACHILLERATO (s. f.).** *Trabajos de estudiantes de ESO y Bachillerato en relación con el dialecto extremeño y las variedades lingüísticas de Extremadura*, recopilación de seis trabajos, ++sin datos de edición++.
+
+**VALEŠ, Miroslav (2022).** «El sistema de las sibilantes en A Fala», *Revista de Filología Románica* 39, pp. 65-73.
 
 **VALIENTE MARTÍN, Ana Belén (2024).** *El habla de Las Hurdes (altas) en la sincronía actual. Casares de Las Hurdes, Ladrillar y Nuñomoral*, tesis doctoral, Universidad de Extremadura, dir. Antonio Salvador Plans.
 
@@ -242,7 +250,7 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 
 **ESCOBAR PRIETO, Eugenio (1906).** «Galisteo. Monografía histórica», *Revista de Extremadura* VIII, ++páginas++ — vía López Fernández 2019.
 
-**ESPINOSA, Aurelio M. (hijo) (1935).** *Arcaísmos dialectales. La conservación de ‘s’ y ‘z’ sonoras en Cáceres y Salamanca*, Madrid, Centro de Estudios Históricos (Anejos de la *Revista de Filología Española*, XIX) — vía Viudas 1976 y 1980, vía Cummins 1974, vía Montero Curiel 2006a y vía González Salgado 2007a.
+**ESPINOSA, Aurelio M. (hijo) (1935).** *Arcaísmos dialectales. La conservación de ‘s’ y ‘z’ sonoras en Cáceres y Salamanca*, Madrid, Centro de Estudios Históricos (Anejos de la *Revista de Filología Española*, XIX) — vía Viudas 1976 y 1980, vía Cummins 1974, vía Montero Curiel 2006a, vía González Salgado 2007a y vía González Salgado 2009a.
 
 **——— y RODRÍGUEZ-CASTELLANO, Lorenzo (1936).** «La aspiración de la *h* en el sur y oeste de España», *Revista de Filología Española* XXIII, pp. 225-254 y 337-378 — vía González Salgado 2007a.
 
@@ -283,8 +291,6 @@ Dos listas, por orden alfabético de autores y, dentro de cada autor, por año, 
 **——— (2002a).** «El extremeño oral y escrito en variedad dialectal», en *I Congreso sobre el extremeño o habla extremeña*, Calzadilla (Cáceres), 2002, documento inédito — vía Fernández de Molina 2015.
 
 **——— (2003c).** «El horno de carbón: una industria popular casi desaparecida en Extremadura», *Revista de Folklore* 268, pp. 137-140 — vía Fernández de Molina 2015.
-
-**——— (2009a).** «Las hablas de Jálama en el conjunto de la dialectología extremeña», *Revista de Filología Románica* 26, pp. 51-70 — vía la investigación en línea de la primera versión de estos apuntes.
 
 **——— (2012).** Apuntes de metodología del *Tesoro léxico de las hablas extremeñas*, ++sin referencia++ — vía Fernández de Molina 2015, que lo cita en nota sin entrada en su bibliografía.
 
