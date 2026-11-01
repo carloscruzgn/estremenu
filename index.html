@@ -960,9 +960,18 @@ span.fila .tit { color: var(--texto-2) }
   .cambio.anima .viejo { opacity: 0 } .cambio.anima .nuevo { opacity: 1 } .cambio.anima .subr { transform: scaleX(1) }
 }
 
-/* Los vídeos del taller (#videos): los reels largos y didácticos, por series, que se ven en la web y llevan a su publicación en Instagram (Carlos, 01/11/2026) */
-.vid-cuenta { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 12px 18px; border-radius: 7px; background: var(--naranja-osc); color: #fff; font-weight: 800; font-size: 15px; text-decoration: none }
-.vid-cuenta:hover { background: #c95a2a }
+/* «Promoción visual» (#videos): los reels largos y didácticos, por series, que se ven en la web y llevan a su publicación en Instagram (Carlos, 01/11/2026) */
+/* El botón a la cuenta, con los colores de Instagram y su glifo, que Meta deja usar para enlazar a una cuenta (Carlos, 01/11/2026) */
+.vid-cuenta { display: inline-flex; align-items: center; gap: 14px; margin-top: 24px; padding: 12px 20px 12px 16px; border-radius: 12px; color: #fff; text-decoration: none; background: linear-gradient(45deg, #feda75 0%, #fa7e1e 22%, #d62976 50%, #962fbf 75%, #4f5bd5 100%); box-shadow: 0 6px 20px rgba(214, 41, 118, .28); transition: transform .15s ease, box-shadow .15s ease }
+.vid-cuenta:hover, .vid-cuenta:focus-visible { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(214, 41, 118, .42) }
+.vid-cuenta .ig { width: 34px; height: 34px; flex: none }
+.vc-txt { display: grid; line-height: 1.15 }
+.vc-red { font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .92 }
+.vc-txt b { font-weight: 900; font-size: 19px; letter-spacing: -.005em }
+.vc-ir { font-weight: 900; font-size: 18px; margin-left: 4px }
+@media (max-width: 640px) { .vid-cuenta { display: flex; width: 100% } .vc-txt b { font-size: 17px; overflow-wrap: anywhere } }
+.ig-pie { white-space: nowrap }
+.ig-pie .ig { width: 1.05em; height: 1.05em; vertical-align: -.17em; margin-right: .3em }
 .vid-serie { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--linea) }
 .vid-serie h2 { font-weight: 900; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -.01em; line-height: 1.15 }
 .vid-ent { color: var(--texto-2); max-width: 62ch; margin: 10px 0 0; font-size: 16px }
@@ -1051,7 +1060,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes, las que aporta el taller y el formulario para enviar las tuyas.</p><span class="estado" id="estado-diccionario">4409 voces</span></a>
-      <a href="#videos" class="sec-videos"><span class="txt"><h2>Los vídeos del taller</h2><p>Los vídeos que explican el habla y su historia, por series, y la cuenta del taller en Instagram.</p><span class="estado" id="estado-videos">En Instagram</span></span><span class="tiras" id="tiras-videos" aria-hidden="true"></span></a>
+      <a href="#videos" class="sec-videos"><span class="txt"><h2>Promoción visual</h2><p>Los vídeos que explican el habla y su historia, por series, y la cuenta del taller en Instagram.</p><span class="estado" id="estado-videos">En Instagram</span></span><span class="tiras" id="tiras-videos" aria-hidden="true"></span></a>
     </nav>
   </div>
 </section>
@@ -1145,7 +1154,7 @@ span.fila .tit { color: var(--texto-2) }
 
 <section id="v-videos" class="vista" hidden>
   <div class="envoltura">
-    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">En Instagram</div><h2>Los vídeos del taller</h2><p class="dc-sub">@taller_de_estremenu</p></div></header>
+    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">En Instagram</div><h2>Promoción visual</h2><p class="dc-sub">@taller_de_estremenu</p></div></header>
     <div id="vid-entradilla"></div>
     <div id="vid-series"></div>
   </div>
@@ -1293,7 +1302,7 @@ span.fila .tit { color: var(--texto-2) }
 <footer class="pie"><div class="envoltura"><div class="tarjeta-pie"><div class="txt-pie">
 <p class="titulo-pie">Taller de estremeñu del CEPA Coria · <span style="white-space:nowrap">Curso 2026-2027</span></p>
 <p class="autor">Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
-<p class="autor">En Instagram, <a href="https://www.instagram.com/taller_de_estremenu/" target="_blank" rel="noopener">@taller_de_estremenu</a> · <a href="#videos">Los vídeos del taller</a></p>
+<p class="autor"><a class="ig-pie" href="https://www.instagram.com/taller_de_estremenu/" target="_blank" rel="noopener"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg>@taller_de_estremenu</a> · <a href="#videos">Promoción visual</a></p>
 <p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
 <div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«Los contenidos del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
 
@@ -1365,7 +1374,7 @@ async function ir() {
     : indice ? tituloIndice(h)
     : alTallerH ? 'Las palabras del taller · Diccionario'
     : voz !== null ? '«' + voz + '» · Diccionario'
-    : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle', videos: 'Los vídeos del taller' }[sec];
+    : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle', videos: 'Promoción visual' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas' && h !== 'lugares');
@@ -3163,7 +3172,7 @@ let VD = null;
 const todosVideos = () => VD ? VD.series.flatMap(s => s.videos.map((v, k) => ({ ...v, serie: s, n: k + 1, de: s.videos.length }))) : [];
 function pintarVideos() {
   const cuenta = 'https://www.instagram.com/' + VD.cuenta + '/';
-  $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener">Abrir @${esc(VD.cuenta)} en Instagram <span aria-hidden="true">↗</span></a>`;
+  $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener" aria-label="Abrir @${esc(VD.cuenta)} en Instagram"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span class="vc-txt"><span class="vc-red">Instagram</span><b>@${esc(VD.cuenta)}</b></span><span class="vc-ir" aria-hidden="true">↗</span></a>`;
   $('vid-series').innerHTML = VD.series.map(s => `<section class="vid-serie" aria-labelledby="vs-${s.id}"><h2 id="vs-${s.id}">${esc(s.titulo)}</h2><p class="vid-ent">${esc(s.entradilla)}</p>
     <ol class="vid-lista">${s.videos.map((v, k) => `<li><button type="button" class="vid-portada" data-video="${esc(v.id)}" aria-label="Ver el vídeo «${esc(v.titulo)}», de ${esc(v.duracion)} minutos"><img src="${v.portada}" alt="" loading="lazy" width="540" height="960"><span class="vid-play" aria-hidden="true"></span><span class="vid-dur" aria-hidden="true">${esc(v.duracion)}</span></button>${s.videos.length > 1 ? `<span class="vid-n">${k + 1} de ${s.videos.length}</span>` : ''}<b class="vid-tit">${esc(v.titulo)}</b><span class="vid-sub">${esc(v.sub)}</span><span class="vid-pie">Publicado el ${fecha(v.publicado)} · <a href="${v.instagram}" target="_blank" rel="noopener">En Instagram ↗</a></span></li>`).join('')}</ol></section>`).join('');
   const vs = todosVideos(), nombres = ['Ningún vídeo', 'Un vídeo', 'Dos vídeos', 'Tres vídeos', 'Cuatro vídeos', 'Cinco vídeos', 'Seis vídeos', 'Siete vídeos', 'Ocho vídeos', 'Nueve vídeos', 'Diez vídeos'];

@@ -1,5 +1,5 @@
 {
-  "_nota": "Los vídeos del taller (#videos): solo los reels largos y didácticos, por series (Carlos, 01/11/2026). Cada vídeo, una copia para la web del reel publicado, a 720 × 1280, en video/, y su portada en WebP de 540 × 960 en img/videos/. Las series y los vídeos salen en el orden de este fichero. «en»: páginas de la web que llevan una tarjeta al vídeo (un código de rasgo o apuntes-N). Lo vigente, en 12-WEB y 14-INSTAGRAM.",
+  "_nota": "Promoción visual (#videos): solo los reels largos y didácticos, por series (Carlos, 01/11/2026). Cada vídeo, una copia para la web del reel publicado, a 720 × 1280, en video/, y su portada en WebP de 540 × 960 en img/videos/. Las series y los vídeos salen en el orden de este fichero. «en»: páginas de la web que llevan una tarjeta al vídeo (un código de rasgo o apuntes-N). Lo vigente, en 12-WEB y 14-INSTAGRAM.",
   "cuenta": "taller_de_estremenu",
   "entradilla": [
     "El taller tiene cuenta en Instagram, @taller_de_estremenu. Allí sale lo que se trabaja en clase en piezas cortas: palabras del diccionario, rasgos del habla, mapas y textos leídos en el taller, en carruseles y en vídeos, e historias para fechas señaladas.",
@@ -18,8 +18,8 @@
     },
     {
       "id": "rasgos",
-      "titulo": "Los rasgos, uno a uno",
-      "entradilla": "Un rasgo del habla en cada vídeo: cómo es, dónde se ha recogido y un texto del taller que lo lleva.",
+      "titulo": "Los rasgos del estremeñu",
+      "entradilla": "Un rasgo del habla en cada vídeo: cómo es y dónde se ha recogido.",
       "videos": [
         { "id": "V01", "titulo": "Las vocales del final se cierran", "sub": "Con versos de «El embargo», de José María Gabriel y Galán", "fichero": "video/reel-V01-embargo.mp4", "portada": "img/videos/reel-V01-embargo.webp", "duracion": "1:33", "publicado": "2026-10-26", "instagram": "https://www.instagram.com/reel/De9RmYrIpcD/", "en": ["V01"] }
       ]
