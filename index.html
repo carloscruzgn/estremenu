@@ -75,6 +75,9 @@ button { font: inherit; color: inherit }
 .menu a:hover { color: var(--banda-texto); background: rgba(255,255,255,.16) }
 .menu a[aria-current="page"] { color: var(--banda-texto); box-shadow: inset 0 -3px 0 var(--banda-texto); border-radius: 0; background: none }
 .cab :focus-visible { outline-color: var(--banda-texto) }
+/* Entre el móvil y el ordenador, con «Promoción visual» en el menú, el menú se aprieta y, si no cabe, el nombre del taller deja sitio al logo (01/11/2026) */
+@media (min-width: 641px) and (max-width: 940px) { .cab .envoltura { gap: 12px } .menu { gap: 0 } .menu a { padding: 8px 9px; font-size: 13.5px } }
+@media (min-width: 641px) and (max-width: 800px) { .marca .raya, .marca span { display: none } }
 /* En el móvil, el menú va tras las tres rayas, arriba a la derecha (Carlos, 19/10/2026) */
 .menu-boton { display: none }
 .menu .menu-enviar { display: none }
@@ -300,14 +303,14 @@ h1, h2, h3 { text-wrap: balance; margin: 0 }
 .portada blockquote { margin: 36px 0 0; padding-left: 18px; border-left: 3px solid var(--naranja); max-width: 56ch; font-weight: 700; font-size: 18px; line-height: 1.5 }
 .portada blockquote cite { display: block; font-style: normal; font-weight: 500; font-size: 13px; color: var(--texto-3); margin-top: 8px }
 .secciones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--linea); border: 1px solid var(--linea); margin-top: 56px }
-.secciones a { background: var(--fondo); padding: 26px 24px 28px; text-decoration: none; display: grid; gap: 8px; align-content: start; min-height: 170px }
-.secciones a:hover { background: var(--fondo-2) }
-.secciones a:hover h2 { color: var(--naranja) }
+.secciones > a, .secciones > .sec-videos { background: var(--fondo); padding: 26px 24px 28px; text-decoration: none; display: grid; gap: 8px; align-content: start; min-height: 170px }
+.secciones > a:hover, .secciones > .sec-videos:hover { background: var(--fondo-2) }
+.secciones > a:hover h2, .secciones > .sec-videos:hover h2 { color: var(--naranja) }
 .secciones h2 { font-weight: 900; font-size: 26px; letter-spacing: -.01em }
 .secciones p { margin: 0; color: var(--texto-2); max-width: 46ch }
 .secciones .estado { margin-top: 6px; font-weight: 800; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--naranja) }
 .secciones .estado.no { color: var(--texto-3) }
-@media (max-width: 640px) { .secciones { grid-template-columns: minmax(0, 1fr) } .secciones a { min-height: 0 } }
+@media (max-width: 640px) { .secciones { grid-template-columns: minmax(0, 1fr) } .secciones > a { min-height: 0 } }
 
 /* ---------- lista de rasgos ---------- */
 .grupos { display: grid; gap: 40px; margin-top: 40px }
@@ -969,7 +972,7 @@ span.fila .tit { color: var(--texto-2) }
 .vc-red { font-weight: 700; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; opacity: .92 }
 .vc-txt b { font-weight: 900; font-size: 19px; letter-spacing: -.005em }
 .vc-ir { font-weight: 900; font-size: 18px; margin-left: 4px }
-@media (max-width: 640px) { .vid-cuenta { display: flex; width: 100% } .vc-txt b { font-size: 17px; overflow-wrap: anywhere } }
+@media (max-width: 640px) { .vid-cuenta { display: flex; width: 100% } .vc-txt b { font-size: 17px } }
 .ig-pie { white-space: nowrap }
 .ig-pie .ig { width: 1.05em; height: 1.05em; vertical-align: -.17em; margin-right: .3em }
 /* Cada serie, en un desplegable cerrado, con + y − como los demás de la web (Carlos, 01/11/2026) */
@@ -1017,11 +1020,15 @@ span.fila .tit { color: var(--texto-2) }
 .tarjeta-video .sub { display: block; font-size: 14px; color: var(--texto-3); margin-top: 3px }
 .tarjeta-video .ir { color: var(--naranja); font-size: 18px }
 /* Portada: la tarjeta de los vídeos, a lo ancho, con las portadas en pequeño */
-.secciones a.sec-videos { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 28px; min-height: 0 }
+.secciones .sec-videos { position: relative; grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 28px; min-height: 0; cursor: pointer }
+/* Toda la tarjeta lleva a #videos (el enlace del título la cubre), y el botón de Instagram va encima, con su propio enlace (Carlos, 01/11/2026) */
+.sec-videos h2 a { color: inherit; text-decoration: none }
+.sec-videos h2 a::after { content: ""; position: absolute; inset: 0 }
+.sec-videos .vid-cuenta { position: relative; z-index: 1; justify-self: start; margin-top: 10px }
 .sec-videos .txt { display: grid; gap: 8px }
 .sec-videos .tiras { display: flex; gap: 8px }
 .sec-videos .tiras img { width: 66px; height: 117px; object-fit: cover; border-radius: 6px; display: block }
-@media (max-width: 640px) { .secciones a.sec-videos { grid-template-columns: minmax(0, 1fr); row-gap: 16px } .sec-videos .tiras img { width: calc((100% - 24px) / 4); height: auto; aspect-ratio: 9 / 16 } }
+@media (max-width: 640px) { .secciones .sec-videos { grid-template-columns: minmax(0, 1fr); row-gap: 16px } .sec-videos .vid-cuenta { justify-self: stretch } .sec-videos .vid-cuenta { gap: 12px; padding-right: 16px } .sec-videos .vc-txt b { font-size: 15.5px } .sec-videos .tiras img { width: calc((100% - 24px) / 4); height: auto; aspect-ratio: 9 / 16 } }
 </style>
 </head>
 <body>
@@ -1035,6 +1042,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#rasgos" data-sec="rasgos">Rasgos</a>
       <a href="#textos" data-sec="textos">Textos</a>
       <div class="menu-grupo"><a href="#diccionario" data-sec="diccionario">Diccionario</a><a href="#enviar" class="menu-enviar" id="menu-enviar">Envía una palabra</a></div>
+      <a href="#videos" data-sec="videos">Promoción visual</a>
     </nav>
   </div>
 </header>
@@ -1068,7 +1076,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#rasgos"><h2>Rasgos</h2><p>Cada rasgo del habla que trabajamos tiene aquí su página, con un mapa que enseña en qué pueblos se ha recogido y en qué años.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Aquí están los textos que hemos leído en clase, con el día en que los leímos y marcadas las palabras de cada rasgo.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Busca una palabra y verás en qué comarcas se dice, quién la recogió y qué variantes tiene. También puedes ver las que ha aportado el taller y enviar las tuyas.</p><span class="estado" id="estado-diccionario">4409 voces</span></a>
-      <a href="#videos" class="sec-videos"><span class="txt"><h2>Promoción visual</h2><p>Aquí puedes encontrar una serie de vídeos explicativos sobre el habla y la historia del estremeñu, así como la cuenta de Instagram que promociona el taller.</p><span class="estado" id="estado-videos">En Instagram</span></span><span class="tiras" id="tiras-videos" aria-hidden="true"></span></a>
+      <div class="sec-videos"><div class="txt"><h2><a href="#videos">Promoción visual</a></h2><p>Aquí puedes encontrar una serie de vídeos explicativos sobre el habla y la historia del estremeñu, procedentes de la cuenta de Instagram que promociona el taller.</p><span class="estado" id="estado-videos">En Instagram</span><a class="vid-cuenta" href="https://www.instagram.com/taller_de_estremenu/" target="_blank" rel="noopener" aria-label="Abrir @taller_de_estremenu en Instagram"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span class="vc-txt"><span class="vc-red">Instagram</span><b>@taller_de_<wbr>estremenu</b></span><span class="vc-ir" aria-hidden="true">↗</span></a></div><span class="tiras" id="tiras-videos" aria-hidden="true"></span></div>
     </nav>
   </div>
 </section>
@@ -3180,7 +3188,7 @@ let VD = null;
 const todosVideos = () => VD ? VD.series.flatMap(s => s.videos.map((v, k) => ({ ...v, serie: s, n: k + 1, de: s.videos.length }))) : [];
 function pintarVideos() {
   const cuenta = 'https://www.instagram.com/' + VD.cuenta + '/';
-  $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener" aria-label="Abrir @${esc(VD.cuenta)} en Instagram"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span class="vc-txt"><span class="vc-red">Instagram</span><b>@${esc(VD.cuenta)}</b></span><span class="vc-ir" aria-hidden="true">↗</span></a>`;
+  $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener" aria-label="Abrir @${esc(VD.cuenta)} en Instagram"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span class="vc-txt"><span class="vc-red">Instagram</span><b>@${esc(VD.cuenta).replace('_de_', '_de_<wbr>')}</b></span><span class="vc-ir" aria-hidden="true">↗</span></a>`;
   $('vid-series').innerHTML = VD.series.map(s => `<details class="vid-serie" id="vs-${s.id}"><summary><h2>${esc(s.titulo)}</h2><span class="cuantos">${s.videos.length === 1 ? '1 vídeo' : s.videos.length + ' vídeos'}</span></summary>
     <ol class="vid-lista">${s.videos.map((v, k) => `<li><button type="button" class="vid-portada" data-video="${esc(v.id)}" aria-label="Ver el vídeo «${esc(v.titulo)}», de ${esc(v.duracion)} minutos"><img src="${v.portada}" alt="" loading="lazy" width="540" height="960"><span class="vid-play" aria-hidden="true"></span><span class="vid-dur" aria-hidden="true">${esc(v.duracion)}</span></button>${s.videos.length > 1 ? `<span class="vid-n">${k + 1} de ${s.videos.length}</span>` : ''}<b class="vid-tit">${esc(v.titulo)}</b><span class="vid-sub">${esc(v.sub)}</span><span class="vid-pie">Publicado el ${fecha(v.publicado)} · <a href="${v.instagram}" target="_blank" rel="noopener">En Instagram ↗</a></span></li>`).join('')}</ol></details>`).join('');
   const vs = todosVideos(), nombres = ['Ningún vídeo', 'Un vídeo', 'Dos vídeos', 'Tres vídeos', 'Cuatro vídeos', 'Cinco vídeos', 'Seis vídeos', 'Siete vídeos', 'Ocho vídeos', 'Nueve vídeos', 'Diez vídeos'];
