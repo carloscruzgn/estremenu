@@ -75,4 +75,10 @@ Los del cuerpo del reel: fondo #132e0d, área #85be6d, contacto #3d6a33, recogid
 
 ## Vista en el navegador
 
-Cloudflare Pages, conectado a este repositorio, que sigue privado. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img, lib, _headers e instagram/ y hace con Node las páginas de las palabras (`_site/voz/`); directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. publicar.sh pone además en el pie la fecha de la publicación, en hora de Madrid, sobre la que lleva index.html (`<time data-fecha>`). `_headers` va sin cabeceras para la web desde el 18/10/2026: los buscadores pueden indexarla (Carlos). Desde el 25/10/2026 lleva `X-Robots-Tag: noindex` solo para /instagram/*. Hasta entonces llevaba `X-Robots-Tag: noindex, nofollow`, mientras las notas de los pueblos no estaban en limpio.
+Cloudflare Pages, conectado a este repositorio. Cada subida a `main` vuelve a publicar. Ajustes del proyecto: sin preset de framework; orden de construcción `sh publicar.sh`, que copia a `_site` index.html, datos, img, lib, _headers e instagram/ y hace con Node las páginas de las palabras (`_site/voz/`); directorio de salida `_site`. Así solo se sirve la web: `fuente/` y este LEEME no salen. publicar.sh pone además en el pie la fecha de la publicación, en hora de Madrid, sobre la que lleva index.html (`<time data-fecha>`). `_headers` va sin cabeceras para la web desde el 18/10/2026: los buscadores pueden indexarla (Carlos). Desde el 25/10/2026 lleva `X-Robots-Tag: noindex` solo para /instagram/*. Hasta entonces llevaba `X-Robots-Tag: noindex, nofollow`, mientras las notas de los pueblos no estaban en limpio.
+
+## Licencias
+
+El código del repositorio —HTML, CSS, JavaScript y scripts de construcción— se publica con licencia MIT (fichero LICENSE). La biblioteca three.js de lib/three conserva la suya.
+
+Los apuntes del taller y las páginas de rasgo se publican con licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0). Los textos de otros autores y las entradas del diccionario tomadas de obras publicadas conservan sus derechos. La licencia MIT no cubre ningún contenido ni dato.
