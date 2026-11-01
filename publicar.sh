@@ -4,6 +4,8 @@ set -e
 rm -rf _site
 mkdir _site
 cp -r index.html manifest.webmanifest datos img lib _headers _site/
+# Los vídeos del taller (#videos): copias para la web de los reels publicados.
+if [ -d video ]; then cp -r video _site/; fi
 # Ficheros para Instagram, que Metricool toma por enlace público (14-INSTAGRAM).
 if [ -d instagram ]; then cp -r instagram _site/; fi
 # Una página por palabra del diccionario, para la vista previa al compartirla.

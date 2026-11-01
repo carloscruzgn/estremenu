@@ -959,6 +959,52 @@ span.fila .tit { color: var(--texto-2) }
   .cambio.anima .viejo, .cambio.anima .nuevo, .cambio.anima .subr { animation: none }
   .cambio.anima .viejo { opacity: 0 } .cambio.anima .nuevo { opacity: 1 } .cambio.anima .subr { transform: scaleX(1) }
 }
+
+/* Los vídeos del taller (#videos): los reels largos y didácticos, por series, que se ven en la web y llevan a su publicación en Instagram (Carlos, 01/11/2026) */
+.vid-cuenta { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 12px 18px; border-radius: 7px; background: var(--naranja-osc); color: #fff; font-weight: 800; font-size: 15px; text-decoration: none }
+.vid-cuenta:hover { background: #c95a2a }
+.vid-serie { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--linea) }
+.vid-serie h2 { font-weight: 900; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -.01em; line-height: 1.15 }
+.vid-ent { color: var(--texto-2); max-width: 62ch; margin: 10px 0 0; font-size: 16px }
+.vid-lista { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 26px 20px; max-width: 980px }
+.vid-lista li { display: grid; gap: 4px; align-content: start }
+.vid-portada { position: relative; display: block; padding: 0; border: 0; border-radius: 9px; overflow: hidden; background: var(--fondo-2); cursor: pointer; aspect-ratio: 9 / 16; margin-bottom: 8px }
+.vid-portada img { display: block; width: 100%; height: 100%; object-fit: cover }
+.vid-portada:hover img, .vid-portada:focus-visible img { filter: brightness(1.12) }
+.vid-play { position: absolute; left: 50%; bottom: 14%; width: 56px; height: 56px; margin-left: -28px; border-radius: 50%; background: var(--naranja); box-shadow: 0 4px 18px rgba(0, 0, 0, .35) }
+.vid-play::after { content: ""; position: absolute; left: 22px; top: 17px; border-style: solid; border-width: 11px 0 11px 17px; border-color: transparent transparent transparent #fff }
+.vid-dur { position: absolute; right: 8px; bottom: 8px; padding: 3px 7px; border-radius: 5px; background: rgba(8, 18, 6, .78); color: #fff; font-weight: 800; font-size: 12px }
+.vid-n { font-weight: 800; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--naranja) }
+.vid-tit { font-weight: 800; font-size: 16px; line-height: 1.3 }
+.vid-sub { color: var(--texto-2); font-size: 14px; line-height: 1.4 }
+.vid-pie { color: var(--texto-3); font-size: 13px; line-height: 1.4; margin-top: 2px }
+.vid-pie a { color: var(--naranja); font-weight: 700; text-decoration: none; white-space: nowrap }
+@media (max-width: 640px) { .vid-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px } .vid-play { width: 46px; height: 46px; margin-left: -23px } .vid-play::after { left: 18px; top: 14px; border-width: 9px 0 9px 14px } .vid-tit { font-size: 15px } }
+/* El vídeo, en grande sobre la página, con su enlace a Instagram */
+.visor-video { position: fixed; inset: 0; z-index: 50; background: #081206; display: grid; place-items: center; padding: calc(60px + env(safe-area-inset-top, 0px)) 12px calc(12px + env(safe-area-inset-bottom, 0px)) }
+.visor-video[hidden] { display: none }
+.visor-video .cerrar { position: fixed; top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px)); z-index: 1; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--naranja); color: #fff; font-size: 26px; line-height: 1; cursor: pointer }
+.vv-caja { display: grid; gap: 10px; justify-items: center; max-height: 100% }
+.vv-caja video { display: block; height: min(calc(100dvh - 140px), 1280px); max-width: calc(100vw - 24px); aspect-ratio: 9 / 16; object-fit: contain; border-radius: 8px; background: #000 }
+.vv-pie { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; justify-content: center; text-align: center; font-size: 15px }
+.vv-pie b { font-weight: 800 }
+.vv-pie a { color: var(--naranja); font-weight: 700; text-decoration: none }
+/* Tarjeta a un vídeo desde la página de un rasgo o de un apartado */
+.en-video { margin-top: 26px; display: grid; gap: 10px }
+.apartado .en-video .ante { font-weight: 800; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--verde); padding-bottom: 8px; border-bottom: 1px solid var(--linea) }
+.tarjeta-video { display: grid; grid-template-columns: 45px minmax(0, 1fr) auto; gap: 14px; align-items: center; max-width: 620px; padding: 9px 18px 9px 9px; border-radius: 10px; background: var(--fondo-2); border: 1px solid var(--linea); text-decoration: none; color: var(--texto) }
+.tarjeta-video:hover { background: var(--fondo-3) }
+.tarjeta-video:hover b { color: var(--naranja) }
+.tarjeta-video img { width: 45px; height: 80px; object-fit: cover; border-radius: 5px; display: block }
+.tarjeta-video b { display: block; font-weight: 800; font-size: 16px; line-height: 1.3 }
+.tarjeta-video .sub { display: block; font-size: 14px; color: var(--texto-3); margin-top: 3px }
+.tarjeta-video .ir { color: var(--naranja); font-size: 18px }
+/* Portada: la tarjeta de los vídeos, a lo ancho, con las portadas en pequeño */
+.secciones a.sec-videos { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 28px; min-height: 0 }
+.sec-videos .txt { display: grid; gap: 8px }
+.sec-videos .tiras { display: flex; gap: 8px }
+.sec-videos .tiras img { width: 66px; height: 117px; object-fit: cover; border-radius: 6px; display: block }
+@media (max-width: 640px) { .secciones a.sec-videos { grid-template-columns: minmax(0, 1fr); row-gap: 16px } .sec-videos .tiras img { width: calc((100% - 24px) / 4); height: auto; aspect-ratio: 9 / 16 } }
 </style>
 </head>
 <body>
@@ -1005,6 +1051,7 @@ span.fila .tit { color: var(--texto-2) }
       <a href="#rasgos"><h2>Rasgos</h2><p>Treinta y un rasgos del habla del noroeste, cada uno con su página y su mapa por pueblos y por fechas.</p><span class="estado" id="estado-rasgos">1 con mapa interactivo</span></a>
       <a href="#textos"><h2>Los textos del taller</h2><p>Lo que hemos leído en clase, con la fecha en que se leyó y las palabras de sus rasgos marcadas.</p><span class="estado" id="estado-textos">Tres textos</span></a>
       <a href="#diccionario"><h2>Diccionario</h2><p>Las voces del noroeste con su comarca, su fuente y sus variantes, las que aporta el taller y el formulario para enviar las tuyas.</p><span class="estado" id="estado-diccionario">4409 voces</span></a>
+      <a href="#videos" class="sec-videos"><span class="txt"><h2>Los vídeos del taller</h2><p>Los vídeos que explican el habla y su historia, por series, y la cuenta del taller en Instagram.</p><span class="estado" id="estado-videos">En Instagram</span></span><span class="tiras" id="tiras-videos" aria-hidden="true"></span></a>
     </nav>
   </div>
 </section>
@@ -1036,6 +1083,7 @@ span.fila .tit { color: var(--texto-2) }
   </div>
 </section>
 
+<div class="visor-video" id="visor-video" hidden role="dialog" aria-modal="true" aria-labelledby="vv-tit"><button type="button" class="cerrar" id="vv-cerrar" aria-label="Cerrar">×</button><div class="vv-caja" id="vv-caja"><video id="vv-video" controls playsinline preload="metadata"></video><div class="vv-pie"><b id="vv-tit"></b><a id="vv-ig" href="#" target="_blank" rel="noopener">Verlo en Instagram ↗</a></div></div></div>
 <div class="visor" id="visor" hidden><button type="button" class="cerrar" id="visor-cerrar" aria-label="Cerrar">×</button><div class="caja" id="visor-caja"><img id="visor-img" alt=""></div></div>
 
 <section id="v-rasgos" class="vista" hidden>
@@ -1092,6 +1140,14 @@ span.fila .tit { color: var(--texto-2) }
 <section id="v-texto" class="vista" hidden>
   <div class="envoltura">
     <div class="texto-pag" id="texto-pag"></div>
+  </div>
+</section>
+
+<section id="v-videos" class="vista" hidden>
+  <div class="envoltura">
+    <header class="dic-cab cab-ap"><div class="dc-marca"><span class="dc-nu" aria-hidden="true"><span class="n">ñ</span><span class="u">u</span></span></div><div class="dc-txt"><div class="dc-ante">En Instagram</div><h2>Los vídeos del taller</h2><p class="dc-sub">@taller_de_estremenu</p></div></header>
+    <div id="vid-entradilla"></div>
+    <div id="vid-series"></div>
   </div>
 </section>
 
@@ -1237,6 +1293,7 @@ span.fila .tit { color: var(--texto-2) }
 <footer class="pie"><div class="envoltura"><div class="tarjeta-pie"><div class="txt-pie">
 <p class="titulo-pie">Taller de estremeñu del CEPA Coria · <span style="white-space:nowrap">Curso 2026-2027</span></p>
 <p class="autor">Web hecha y mantenida por Carlos Cruz González, profesor del taller · <a href="mailto:ccruzg04@educarex.es">ccruzg04@educarex.es</a></p>
+<p class="autor">En Instagram, <a href="https://www.instagram.com/taller_de_estremenu/" target="_blank" rel="noopener">@taller_de_estremenu</a> · <a href="#videos">Los vídeos del taller</a></p>
 <p class="version">Actualizada el <time data-fecha>18/10/2026</time>.</p>
 <div class="licencia"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank"><img src="img/licencia-by-nc-sa.svg" alt="Licencia Creative Commons BY-NC-SA 4.0" width="120" height="42"></a><p>Los apuntes del taller —«Los contenidos del taller» y las páginas de rasgo— se publican con licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)</a>. Los textos de otros autores conservan sus derechos.</p></div></div><div class="marca-pie"><span class="nu" aria-hidden="true">ñ<span class="u">u</span></span></div></div></div></footer>
 
@@ -1287,12 +1344,16 @@ async function ir() {
   const indice = h === 'lugares' || h === 'fuentes' || h.startsWith('lugar/') || h.startsWith('fuente/');
   // #palabras-del-taller: el diccionario, abierto en «Las palabras del taller»
   const alTallerH = h === 'palabras-del-taller';
-  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : indice ? 'indice' : enviar || alTallerH || voz !== null ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas'].includes(h) ? h : 'inicio';
+  // #videos, o #videos/V01 para abrir un vídeo (Carlos, 01/11/2026)
+  const video = h.startsWith('videos/') ? h.slice(7) : null;
+  if (video === null) cerrarVideo();
+  const sec = rasgo ? 'rasgo' : apartado ? 'apartado' : texto ? 'texto' : detalle ? 'detalle' : autor ? 'autor' : indice ? 'indice' : video !== null ? 'videos' : enviar || alTallerH || voz !== null ? 'diccionario' : ['inicio', 'apuntes', 'rasgos', 'textos', 'diccionario', 'encuestas', 'videos'].includes(h) ? h : 'inicio';
   for (const v of document.querySelectorAll('.vista')) v.hidden = v.id !== 'v-' + sec;
   document.body.dataset.sec = sec;
   for (const a of document.querySelectorAll('.menu a')) a.toggleAttribute('aria-current', a.dataset.sec === sec || ((sec === 'rasgo' || sec === 'encuestas') && a.dataset.sec === 'rasgos') || (sec === 'apartado' && a.dataset.sec === 'apuntes') || (sec === 'indice' && a.dataset.sec === 'diccionario') || ((sec === 'texto' || sec === 'autor' || sec === 'detalle') && a.dataset.sec === 'textos'));
   for (const a of document.querySelectorAll('.menu a')) if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page');
-  window.scrollTo(0, 0);
+  if (!(video !== null && document.body.dataset.prev === 'videos')) window.scrollTo(0, 0);
+  document.body.dataset.prev = sec;
   // Título de la pestaña: la página y, detrás, el nombre de la web (Carlos, 19/10/2026). En los rasgos, el código y la descripción, sin los ejemplos.
   const limpio = s => String(s).replace(/\*/g, '');
   const pagina = rasgo ? rasgo.codigo + ' · ' + limpio(rasgo.titulo).split(':')[0]
@@ -1304,7 +1365,7 @@ async function ir() {
     : indice ? tituloIndice(h)
     : alTallerH ? 'Las palabras del taller · Diccionario'
     : voz !== null ? '«' + voz + '» · Diccionario'
-    : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle' }[sec];
+    : { apuntes: 'Los contenidos del taller', rasgos: 'Los rasgos, uno a uno', textos: 'Los textos del taller', diccionario: 'Diccionario', encuestas: 'Las tres encuestas, en detalle', videos: 'Los vídeos del taller' }[sec];
   document.title = pagina ? pagina + ' · Taller de estremeñu' : 'Taller de estremeñu';
   if (sec === 'inicio') animarMapaPortada();
   if (mapa) mapa.pausar(sec !== 'rasgo' && sec !== 'encuestas' && h !== 'lugares');
@@ -1319,6 +1380,7 @@ async function ir() {
   if (alTallerH) alTaller();
   if (indice) await abrirIndice(h);
   if (voz !== null && DIC) abrirVoz(voz);
+  if (video !== null) abrirVideo(video);
 }
 
 // La dirección de una palabra, legible: solo se cifran el espacio, el % y la #
@@ -2013,7 +2075,7 @@ function pintarApartado(a) {
   // La tarjeta, a lo ancho como las de las demás secciones, y la vuelta debajo, para que todas caigan a la misma altura (Carlos, 19/10/2026)
   $('cab-apartado').innerHTML = cabAp(a.n, a.titulo);
   $('apartado').innerHTML = `<a class="volver" href="#apuntes">← Los contenidos del taller</a>
-    ${bloques}${extra}
+    ${bloques}${tarjetasVideo('apuntes-' + a.id)}${extra}
     <nav class="pasos" aria-label="Apartados">${ant ? `<a href="#apuntes-${ant.id}"><span>Anterior</span><b>${esc(nombreAp(ant))}</b></a>` : ''}${sig ? `<a class="sig" href="#apuntes-${sig.id}"><span>Siguiente</span><b>${esc(nombreAp(sig))}</b></a>` : ''}</nav>`;
 }
 // Tarjeta de un texto a la página de su autor, bajo la fecha de lectura: la imagen en pequeño y «Aprende más sobre…»
@@ -2250,6 +2312,7 @@ function pintarCabeza(codigo, R, pagina) {
     ${R ? '' : '<p class="nota-mapa" style="color:var(--texto-3);font-size:14px;margin-top:18px">El mapa interactivo de este rasgo está en preparación.</p>'}`;
   const en = TX ? TX.filter(t => t.rasgos.includes(codigo)) : [];
   if (en.length) $('r-texto').insertAdjacentHTML('beforeend', `<div class="en-textos"><div class="ante">En los textos del taller</div><p>${en.map(t => `<a href="#${t.codigo}">${esc(t.titulo)}</a>${pendiente(t) ? ' (pendiente de leer)' : ''}`).join(' · ')}</p></div>`);
+  $('r-texto').insertAdjacentHTML('beforeend', tarjetasVideo(codigo));
 }
 
 async function abrirRasgo(r) {
@@ -3093,6 +3156,49 @@ async function crearMapa(baseP) {
   };
 }
 
+
+// ================= los vídeos del taller =================
+// Los reels largos y didácticos, por series (fuente/videos.json): se ven en la web, en grande, y cada uno lleva a su publicación en Instagram (Carlos, 01/11/2026)
+let VD = null;
+const todosVideos = () => VD ? VD.series.flatMap(s => s.videos.map((v, k) => ({ ...v, serie: s, n: k + 1, de: s.videos.length }))) : [];
+function pintarVideos() {
+  const cuenta = 'https://www.instagram.com/' + VD.cuenta + '/';
+  $('vid-entradilla').innerHTML = VD.entradilla.map(p => `<p class="entradilla">${esc(p)}</p>`).join('') + `<a class="vid-cuenta" href="${cuenta}" target="_blank" rel="noopener">Abrir @${esc(VD.cuenta)} en Instagram <span aria-hidden="true">↗</span></a>`;
+  $('vid-series').innerHTML = VD.series.map(s => `<section class="vid-serie" aria-labelledby="vs-${s.id}"><h2 id="vs-${s.id}">${esc(s.titulo)}</h2><p class="vid-ent">${esc(s.entradilla)}</p>
+    <ol class="vid-lista">${s.videos.map((v, k) => `<li><button type="button" class="vid-portada" data-video="${esc(v.id)}" aria-label="Ver el vídeo «${esc(v.titulo)}», de ${esc(v.duracion)} minutos"><img src="${v.portada}" alt="" loading="lazy" width="540" height="960"><span class="vid-play" aria-hidden="true"></span><span class="vid-dur" aria-hidden="true">${esc(v.duracion)}</span></button>${s.videos.length > 1 ? `<span class="vid-n">${k + 1} de ${s.videos.length}</span>` : ''}<b class="vid-tit">${esc(v.titulo)}</b><span class="vid-sub">${esc(v.sub)}</span><span class="vid-pie">Publicado el ${fecha(v.publicado)} · <a href="${v.instagram}" target="_blank" rel="noopener">En Instagram ↗</a></span></li>`).join('')}</ol></section>`).join('');
+  const vs = todosVideos(), nombres = ['Ningún vídeo', 'Un vídeo', 'Dos vídeos', 'Tres vídeos', 'Cuatro vídeos', 'Cinco vídeos', 'Seis vídeos', 'Siete vídeos', 'Ocho vídeos', 'Nueve vídeos', 'Diez vídeos'];
+  $('estado-videos').textContent = nombres[vs.length] || vs.length + ' vídeos';
+  // En la tarjeta de la portada, las portadas de los cuatro últimos publicados
+  $('tiras-videos').innerHTML = [...vs].sort((a, b) => b.publicado.localeCompare(a.publicado)).slice(0, 4).map(v => `<img src="${v.portada}" alt="" loading="lazy" width="540" height="960">`).join('');
+}
+// Tarjeta a los vídeos de una página (un rasgo, o apuntes-N), según el campo «en» de cada vídeo
+function tarjetasVideo(pagina) {
+  const vs = todosVideos().filter(v => (v.en || []).includes(pagina));
+  if (!vs.length) return '';
+  return `<div class="en-video"><div class="ante">En vídeo</div>${vs.map(v => `<a class="tarjeta-video" href="#videos/${encodeURIComponent(v.id)}"><img src="${v.portada}" alt="" width="540" height="960" loading="lazy"><span><b>${esc(v.titulo)}</b><span class="sub">${esc(v.serie.titulo)}${v.de > 1 ? ', ' + v.n + ' de ' + v.de : ''} · ${esc(v.duracion)}</span></span><span class="ir" aria-hidden="true">▶</span></a>`).join('')}</div>`;
+}
+function abrirVideo(id) {
+  const v = todosVideos().find(x => x.id === id);
+  if (!v) return;
+  const el = $('vv-video');
+  el.poster = v.portada; el.src = v.fichero;
+  $('vv-tit').textContent = v.titulo; $('vv-ig').href = v.instagram;
+  $('visor-video').hidden = false; document.body.style.overflow = 'hidden';
+  $('vv-cerrar').focus();
+  el.play().catch(() => {});
+}
+function cerrarVideo() {
+  if ($('visor-video').hidden) return;
+  const el = $('vv-video');
+  el.pause(); el.removeAttribute('src'); el.load();
+  $('visor-video').hidden = true; document.body.style.overflow = '';
+  if (location.hash.startsWith('#videos/')) history.replaceState(null, '', '#videos');
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-video]'); if (b) abrirVideo(b.dataset.video); });
+$('vv-cerrar').addEventListener('click', cerrarVideo);
+$('visor-video').addEventListener('click', e => { if (e.target.id === 'visor-video' || e.target.id === 'vv-caja') cerrarVideo(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarVideo(); });
+
 // ================= arranque =================
 try {
   CAT = await json('datos/rasgos.json');
@@ -3103,6 +3209,7 @@ try {
   pintarListaTextos();
 } catch (e) { $('lista-textos').innerHTML = '<li>No se han podido cargar los textos.</li>'; }
 try { AU = await json('datos/autores.json'); } catch (e) { AU = null; }
+try { VD = await json('datos/videos.json'); pintarVideos(); } catch (e) { VD = null; $('vid-series').innerHTML = '<p class="entradilla">No se han podido cargar los vídeos.</p>'; }
 try {
   const DC = await json('datos/diccionario-cifras.json');
   $('estado-diccionario').textContent = DC.lemas.toLocaleString('es-ES') + (DC.lemas === 1 ? ' voz' : ' voces');

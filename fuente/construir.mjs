@@ -112,6 +112,24 @@ const AU = leer('autores.json');
 for (const a of AU.autores) for (const c of a.textos) if (!TX.some(t => t.codigo === c)) { console.error('autores.json:', a.id, 'nombra un texto que no está:', c); process.exit(1); }
 fs.writeFileSync(path.join(destino, 'autores.json'), JSON.stringify(AU));
 console.log('autores.json:', AU.autores.length, 'páginas de autor');
+// Los vídeos del taller (#videos), por series: cada vídeo y su portada tienen que estar, y por debajo del tope de Cloudflare Pages, 25 MiB por fichero
+const VD = leer('videos.json');
+delete VD._nota;
+{
+  const raiz = path.resolve(aqui, '..'), ids = new Set();
+  for (const s of VD.series) for (const v of s.videos) {
+    if (ids.has(v.id)) { console.error('videos.json: id repetido:', v.id); process.exit(1); }
+    ids.add(v.id);
+    for (const f of [v.fichero, v.portada]) {
+      const p = path.join(raiz, f);
+      if (!fs.existsSync(p)) { console.error('videos.json:', v.id, 'no encuentra', f); process.exit(1); }
+      if (fs.statSync(p).size > 25 * 1024 * 1024) { console.error('videos.json:', f, 'pasa de 25 MiB, el tope de Cloudflare Pages'); process.exit(1); }
+    }
+    for (const e of v.en || []) if (!/^apuntes-\d+$/.test(e) && !CAT.rasgos.some(r => r.codigo === e)) console.warn('videos.json:', v.id, 'enlaza desde una página que no está:', e);
+  }
+}
+fs.writeFileSync(path.join(destino, 'videos.json'), JSON.stringify(VD));
+console.log('videos.json:', VD.series.length, 'series,', VD.series.reduce((n, s) => n + s.videos.length, 0), 'vídeos');
 // Las cifras del diccionario para la tarjeta de la portada, sin cargar el diccionario entero
 const DICC = path.join(destino, 'diccionario.json');
 const DIX = path.join(destino, 'diccionario-indices.json');

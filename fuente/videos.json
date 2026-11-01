@@ -1,0 +1,28 @@
+{
+  "_nota": "Los vídeos del taller (#videos): solo los reels largos y didácticos, por series (Carlos, 01/11/2026). Cada vídeo, una copia para la web del reel publicado, a 720 × 1280, en video/, y su portada en WebP de 540 × 960 en img/videos/. Las series y los vídeos salen en el orden de este fichero. «en»: páginas de la web que llevan una tarjeta al vídeo (un código de rasgo o apuntes-N). Lo vigente, en 12-WEB y 14-INSTAGRAM.",
+  "cuenta": "taller_de_estremenu",
+  "entradilla": [
+    "El taller tiene cuenta en Instagram, @taller_de_estremenu. Allí sale lo que se trabaja en clase en piezas cortas: palabras del diccionario, rasgos del habla, mapas y textos leídos en el taller, en carruseles y en vídeos, e historias para fechas señaladas.",
+    "Aquí se reúnen los vídeos más largos, los que explican algo, ordenados por series. Se ven en la propia web, y cada uno lleva a su publicación en Instagram."
+  ],
+  "series": [
+    {
+      "id": "herencia-leonesa",
+      "titulo": "La herencia leonesa en nuestras hablas",
+      "entradilla": "De dónde viene lo leonés del habla del noroeste de Cáceres y qué ha sido de ello, en orden: la repoblación medieval, los rebaños de la Mesta y el siglo XX.",
+      "videos": [
+        { "id": "reino-de-leon", "titulo": "El reino de León en la zona del taller", "sub": "El noroeste de Cáceres, del siglo X al XIII", "fichero": "video/reel-H-reino-de-leon.mp4", "portada": "img/videos/reel-H-reino-de-leon.webp", "duracion": "2:38", "publicado": "2026-10-28", "instagram": "https://www.instagram.com/reel/DfB4kapolXW/", "en": ["apuntes-2"] },
+        { "id": "canadas-mesta", "titulo": "Las cañadas de la Mesta", "sub": "Casi seis siglos de ida y vuelta, del XIII al XIX", "fichero": "video/reel-canadas-mesta.mp4", "portada": "img/videos/reel-canadas-mesta.webp", "duracion": "2:25", "publicado": "2026-10-29", "instagram": "https://www.instagram.com/reel/DfEosOBoyvJ/", "en": ["apuntes-2"] },
+        { "id": "siglo-XX", "titulo": "Carreteras, maletas y escuela", "sub": "Un mundo nuevo", "fichero": "video/reel-siglo-XX.mp4", "portada": "img/videos/reel-siglo-XX.webp", "duracion": "2:44", "publicado": "2026-10-31", "instagram": "https://www.instagram.com/reel/DfJ10i7I_w3/", "en": ["apuntes-5"] }
+      ]
+    },
+    {
+      "id": "rasgos",
+      "titulo": "Los rasgos, uno a uno",
+      "entradilla": "Un rasgo del habla en cada vídeo: cómo es, dónde se ha recogido y un texto del taller que lo lleva.",
+      "videos": [
+        { "id": "V01", "titulo": "Las vocales del final se cierran", "sub": "Con versos de «El embargo», de José María Gabriel y Galán", "fichero": "video/reel-V01-embargo.mp4", "portada": "img/videos/reel-V01-embargo.webp", "duracion": "1:33", "publicado": "2026-10-26", "instagram": "https://www.instagram.com/reel/De9RmYrIpcD/", "en": ["V01"] }
+      ]
+    }
+  ]
+}
