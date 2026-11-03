@@ -3200,7 +3200,7 @@ function pintarVideos() {
 function tarjetasVideo(pagina) {
   const vs = todosVideos().filter(v => (v.en || []).includes(pagina));
   if (!vs.length) return '';
-  return `<div class="en-video"><div class="ante">En vídeo</div>${vs.map(v => `<a class="tarjeta-video" href="#videos/${encodeURIComponent(v.id)}"><img src="${v.portada}" alt="" width="540" height="960" loading="lazy"><span><b>${esc(v.titulo)}</b><span class="sub">${esc(v.serie.titulo)}${v.de > 1 ? ', ' + v.n + ' de ' + v.de : ''} · ${esc(v.duracion)}</span></span><span class="ir" aria-hidden="true">▶</span></a>`).join('')}</div>`;
+  return `<div class="en-video"><div class="ante">En vídeo</div>${vs.map(v => `<a class="tarjeta-video" href="#videos/${encodeURIComponent(v.id)}"><img src="${v.portada}" alt="" width="540" height="960" loading="lazy"><span><b>${esc(v.titulo)}</b><span class="sub">${esc(v.serie.titulo)} · ${esc(v.duracion)}</span></span><span class="ir" aria-hidden="true">▶</span></a>`).join('')}</div>`;
 }
 function abrirVideo(id) {
   const v = todosVideos().find(x => x.id === id);
