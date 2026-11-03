@@ -16,6 +16,13 @@
       ]
     },
     {
+      "id": "raices",
+      "titulo": "Las raíces de nuestras hablas",
+      "videos": [
+        { "id": "latin-cambiado", "titulo": "Latín cambiado", "sub": "Las palabras y sus caminos", "fichero": "video/reel-raices-1-latin-cambiado.mp4", "portada": "img/videos/reel-raices-1-latin-cambiado.webp", "duracion": "2:35", "publicado": "2026-11-03", "instagram": "https://www.instagram.com/reel/DfRQq40It3p/", "en": ["apuntes-2", "C01"] }
+      ]
+    },
+    {
       "id": "rasgos",
       "titulo": "Los rasgos del estremeñu",
       "videos": [
