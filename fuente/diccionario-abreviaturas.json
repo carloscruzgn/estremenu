@@ -3,7 +3,9 @@
   "entradas": {
     "adj.": "adjetivo", "adv.": "adverbio", "f.": "femenino", "interj.": "interjección", "loc.": "locución",
     "m.": "masculino", "pl.": "plural", "prnl.": "pronominal", "s.": "sustantivo", "sust.": "sustantiva",
-    "tr.": "transitivo", "intr.": "intransitivo", "v.": "verbo", "U. m.": "usado más", "U. t.": "usado también",
+    "tr.": "transitivo", "intr.": "intransitivo", "v.": "verbo",
+    "com.": "común", "conj.": "conjunción", "conjunt.": "conjuntiva", "fr.": "frase", "n.": "nombre; n. p., nombre propio",
+    "prep.": "preposición", "pron.": "pronombre", "verb.": "verbal", "U. m.": "usado más", "U. t.": "usado también",
     "·ac.": "acepción", "·p.": "página", "·INF [A06]": "informante del taller, con su código"
   }
 }

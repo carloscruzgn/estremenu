@@ -3,11 +3,12 @@
 // Sale del motor del generador de reels (reel-rasgo.zip, construir-datos.mjs): misma proyección, mismas clases.
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import * as topo from 'topojson-client';
 import { geoConicConformal, geoPath, geoContains } from 'd3-geo';
 import { cifrasDiccionario } from './cifras-diccionario.mjs';
 
-const aqui = path.dirname(new URL(import.meta.url).pathname);
+const aqui = path.dirname(fileURLToPath(import.meta.url));
 const destino = path.resolve(aqui, '../datos');
 const leer = f => JSON.parse(fs.readFileSync(path.join(aqui, f)));
 const COM = leer('comarcas.json');

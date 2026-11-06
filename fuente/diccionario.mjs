@@ -7,9 +7,10 @@
 // diccionario-siglas.json, y las que falten se forman con la regla de 05-DECISIONES (04/10/2026) y se avisan.
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { cifrasDiccionario } from './cifras-diccionario.mjs';
 
-const aqui = path.dirname(new URL(import.meta.url).pathname);
+const aqui = path.dirname(fileURLToPath(import.meta.url));
 const carpeta = process.argv[2];
 if (!carpeta) { console.error('Uso: node diccionario.mjs <carpeta del espejo>'); process.exit(1); }
 const avisos = [];

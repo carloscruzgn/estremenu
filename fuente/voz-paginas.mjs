@@ -7,8 +7,9 @@
 // para todas, la hace fuente/og-diccionario.py.
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const aqui = path.dirname(new URL(import.meta.url).pathname);
+const aqui = path.dirname(fileURLToPath(import.meta.url));
 const salida = process.argv[2];
 if (!salida) { console.error('Uso: node voz-paginas.mjs <carpeta de salida>'); process.exit(1); }
 const DIC = JSON.parse(fs.readFileSync(path.join(aqui, '..', 'datos', 'diccionario.json'), 'utf8'));

@@ -1,0 +1,1807 @@
+{
+ "codigo": "TEX-05",
+ "corpus": "VCJ-01",
+ "titulo": "Los acertijos del seranu",
+ "tipo": "teatro",
+ "autor": "Vicente Corrales Jiménez",
+ "fuente": "Acto IV y último de «El seranu de las comadris», sainete fechado en Santibáñez el Bajo en marzo de 1901, en la transcripción de Félix Barroso (2016).",
+ "grafia": "Con la grafía del autor y las erratas de la transcripción corregidas. Las acotaciones, en cursiva.",
+ "leido": null,
+ "rasgos": [
+  "M08",
+  "C19",
+  "C01"
+ ],
+ "bloques": [
+  {
+   "tipo": "acto",
+   "texto": "Acto cuarto"
+  },
+  {
+   "tipo": "acot",
+   "texto": "De nuevo, la cocina de Ciriaca. En derredor del fuego, unas hilando y otras haciendo dulces o desgranando habichuelos, se encuentran las siete mujeres: Ciriaca, Nemesia, Leandra, Colasa, Miliana, Simona y Gervasia."
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "¡Oh, qué rijosu está Basiliu «Verracu»! Allí lo he dejau comu un machu berriondu. ¡Si vieras Ciriaca, la de bobás que me ha dichu cuandu te estaba preparandu la olla...! Agora que Críspulu «Mandanga» se las ha tirau bien tirás. Cuasi que se lían los dos. Gracias que se ha metíu al cante Miteriu y tó ha acabau en jarana. Y allí están agora de cante y de palmeu."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Simona",
+   "tokens": [
+    {
+     "t": "¡Ni que lo digas, Gervasia! Mira, el otru día andaba yo enllenandu el mi cántaru de agua en el «Ruidioru», cuandu me veu aparecel al mi buen Basiliu «Verracu». Comu en esi momentu no había pallí naidi, va y "
+    },
+    {
+     "w": "me se",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " acerca y me dice ampié la oreja: —¿A que no aciertas esti acertajón?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Es un gustu de buen gustu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que tieni toa mujel:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que pol bujeru reondu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "metan carni sin cocel». Mira si será guarru el mu joíu."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Colasa",
+   "tokens": [
+    {
+     "t": "¡Corcíu, pos si esu es el anillu! Lo que pasa que dichu asín, paeci otra cosa. Es parecíu a esi otro que dici:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Reondu, reondu comu una peseta,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y les gusta a las mozas que se lo metan»"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Leandra",
+   "tokens": [
+    {
+     "t": "Puesta a dicil acertajonis, yo me sé una "
+    },
+    {
+     "w": "güeña",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "retajila",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": ", y cuasi tós son picantis, manque no son lo que aparentan. ¡A vel si sabéis esti!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Manque me veas asín,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con estus tristis calzonis,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tengu tres varas de picha"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y un celemín de cojonis»"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "t": "¡Uy, pol Dió, Leandra, que "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " saca a toas los coloris!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Leandra",
+   "tokens": [
+    {
+     "t": "¡Ni coloris ni coloras!, que no es lo que vosotras pensáis, que su respuesta verdadera es el aju, que los pellejus que tienin son calzonis, y la porreta es la picha, y lo que está embaju tierra, pues es lo otru: los cojonis. Y agora "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu el segundu:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Con el picu, pica,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con el culu, aprieta,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y con lo que le cuelga,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tapa las grietas» ¡A vel, a vel, quién es la espabilaína que lo sabi!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Miliana",
+   "tokens": [
+    {
+     "t": "Esu es el "
+    },
+    {
+     "w": "jilu",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " y la abuja: se apreta la abuja pol el culu, y con lo que cuelga, que es el "
+    },
+    {
+     "w": "jilu",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": ", se tapan los descosíus. Esti lo había yo sintíu a tía Ramona «La Ciguta», que lo contaba en las matanzas, igual que aquel otru que dici asín:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Doña Juana está tendida,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y don Juan la saca y meti,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y entri más le baila encima,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "más abierta que la tieni»"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Nemesia",
+   "tokens": [
+    {
+     "t": "Esi, sí que es un acertajón comu propiu de las matanzas, que si no estoy aquivocá, "
+    },
+    {
+     "w": "jadi",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " referencia a la artesa con el mondongu, que es doña Juana y va don Juan, que es el mondongueru, y meti y saca los brazus, "
+    },
+    {
+     "w": "moviéndusi",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " pacá y pallá amasandu y "
+    },
+    {
+     "w": "jendiendu",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " el mondongu. Tamién de las matanzas es unu que yo me sé, que da algu de vergüenza, el "
+    },
+    {
+     "w": "dicirlu",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": ", peru, "
+    },
+    {
+     "w": "güenu",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": ", ya que estamos metías en el fregau, ¡ahí os lo endilgu!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Bien me soba una mocita, hasta "
+    },
+    {
+     "w": "ponelmi",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " bien tiesu."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Bienvenía sea la moza que soba carni sin "
+    },
+    {
+     "w": "güeso",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": "». ¿Y no lo acertáis ninguna? ¡Con lo facilino que es! Pos esu es lo que le dici la carni del chorizu a la moza que la está embusandu, que la carni va entrandu blanda, y aluegu bien requitetiesa que se poni cuandu ya está formau el chorizu, ¿"
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " enteráis? ¡Juy, qué pamemas estáis "
+    },
+    {
+     "w": "jechas",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": "!..."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "¡A callal, que agora me toca a mí! Os voy a dicil tres acertajonis, y los tres son referíus a las plantas, a cosas de arbulau, y no "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu más. ¡Pallá van! ¡"
+    },
+    {
+     "w": "Cogerlus",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": ", que se escapan!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Fui a la "
+    },
+    {
+     "w": "güerta",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y vi a la mi "
+    },
+    {
+     "w": "agüela",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con la cuca abierta» ¡El primeru cayó! Allí va el segundu:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Encima de ella me subu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y ella bien se remenea;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "yo con el gustu me voy"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y ella con la lechi se quea». ¡Anda pahí, que amus con el terceru!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Fui a la plaza,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "compré una moza,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "le levanté la saya"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y le vi la cosa»"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Simona",
+   "tokens": [
+    {
+     "t": "Ay, prendita mía, que lo sé. El últimu es la lechuga, peru los otrus dos no los sé. ¿Los sabéis vusotras, comadris? ¡A vel tú Colasa, que estás mu callá, con las alicantinas que tú sabis...!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Colasa",
+   "tokens": [
+    {
+     "t": "Pos se me "
+    },
+    {
+     "w": "jadi",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " a mí que el segundu es la "
+    },
+    {
+     "w": "jiguera",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": ", que algunus se zampan los "
+    },
+    {
+     "w": "jigus",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " y quean allí la lechi en el pezón. ¿El otru, el otru...? ¡No lo sé! Me suena, peru no los sé."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "¡Pos qué va a sel sino la graná! La graná, que tieni el pelleju dura, comu las viejas, y está en el granau toa esperrancaná, igualinu que las viejas cuandu mean en metá de la calli."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Colasa",
+   "tokens": [
+    {
+     "t": "¡Silenciu! Agora, le toca a la comadri Ciriaca, que pa esu estamus en la su casa, y que relati ella to lo que sepa."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "t": "¡Uy, pol Dió, pol Dió... que se me subi la calol pal papú! Yo no entiendu de esu. Si queréis, "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu el responsu de San Antoniu Benditu, o la oración a Santa Bárbara pa que se arretiri las tormentas, o el Pairinuestro chiquininu... Pero, ¡pol Dió, no me obliguéis a dicil acertajonis, que me pongu toa rejilona!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Miliana",
+   "tokens": [
+    {
+     "t": "Anda pallá, no "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " vengas con emplastus, que cuando se está de broma, se está de broma, que unas vecis tocan chistis y otras tocan rezus, y agora estamus de chisti. ¡Y qué coñu, que yo no te sintí en la matanza de tía Jacinta «La Chicharrona» que "
+    },
+    {
+     "w": "jilvanabas",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " un pal de acertajonis que "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " estronchamus de risa toas las que estábamus allí! Sí, fue la vez de antañu, cuandu te añurgastis con una perrunilla y te metisti pal gargüera unus "
+    },
+    {
+     "w": "güenus",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": " tragus de aguardienti. ¡Venga, prenda, suelta esus acertajonis, que "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " riamus otru poquinu!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "t": "¡Ay, San Blas benditu, en qué apuras me metéis! Pol no sel menus, "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " los voy a dicil, manque me muera de vergüenza, y "
+    },
+    {
+     "w": "jadel",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " comu que no habéis oío na. Son acertajonis que los aprendí de muchacha, que se los oía muchas vecis a tía Ulpiana «La Lagartona», que comu estáis enterás, era mu echá palanti, que se revistía de cura en los carnavalis e iba cantandu el gori-gori en el intierru de la sardina. Dicil asín unu..., a vel si me acuerdu... ¡Ay, qué vergüenza!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Midi una cuarta corría,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "sin "
+    },
+    {
+     "w": "güesus",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": " ni coyunturas;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tos los hombris la tienin"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y tamién el señol cura»"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Nemesia",
+   "tokens": [
+    {
+     "t": "¡Anda, anda..., y esu que está siempri alreol del señol cura! ¡Anda con la comadri Ciriaca, que callau se lo tenía la mu joía! La que sepa la contestación, que la diga, y... ¡amos con el segundu, Ciriaca!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "w": "Güenu",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": ", al final "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu la contestación. Y agora "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu el segundu y ya no me pidáis más, que ya no "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " digu ni unu más, que no sabéis la vergüenza que estoy pasandu. Dici:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Arregaza el cubertón,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "no me mires recelosa,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que te la vengu a claval"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y traigu tiesa la cosa»."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Colasa",
+   "tokens": [
+    {
+     "t": "¡Olé y olé pol la comadri! ¡Qué bien plantaus los ha dejau! A vel agora, que "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " diga la contestación."
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(En ese momento llaman a la puerta. Es una hija de Gervasia, que viene a llamar a su madre)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Hija",
+   "tokens": [
+    {
+     "t": "¡Mairi, que dici pairi que vayáis a cenal, que ya está la mesa puesta y ya han dau las onci en el reló de la torri!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Simona",
+   "tokens": [
+    {
+     "t": "¡Virgin Santísima, las onci ya y yo que no le he dichu al mi maríu ondi iba!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Leandra",
+   "tokens": [
+    {
+     "t": "¡Ámonos, ámonos, que yo tengu que "
+    },
+    {
+     "w": "levantalmi",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " tempranu, que tengu que il a amasal pa la semana!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Miliana",
+   "tokens": [
+    {
+     "t": "¡Venga, venga, a levantal el culu, que "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " van a correl los campanillus pol andal a estas horas pol las callis!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Nemesia",
+   "tokens": [
+    {
+     "t": "¡Si es lo que yo digu: "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " ponemus a chascal de estu y de lo otru y "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " dan las tantas, los quirius y ni "
+    },
+    {
+     "w": "mos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " enteramus!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Gervasia",
+   "tokens": [
+    {
+     "t": "¡Ahí "
+    },
+    {
+     "w": "vos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " queáis, que dirá la genti de la matanza, que vaya con la matancera, que se va de jubileu y deja a los "
+    },
+    {
+     "w": "güespis",
+     "r": [
+      "C19"
+     ]
+    },
+    {
+     "t": " compuestus y sin apañu!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Colasa",
+   "tokens": [
+    {
+     "t": "¡Peru, cómu nos amus a il sin que nos dé la contestación de los acertajonis! ¡Venga Ciriaca la contestación!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "t": "¡Hala, hala, "
+    },
+    {
+     "w": "irvos",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " a dormil y a pensal con la almohá en la contestación, que bastante vergüenza me habéis "
+    },
+    {
+     "w": "jechu",
+     "r": [
+      "C01"
+     ]
+    },
+    {
+     "t": " pasal!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Se van levantando las mujeres y comienzan a desfilar hacia la calle, dando las buenas noches. Se queda sola Ciriaca, levanta los brazos y los ojos hacia arriba y exclama)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "t": "¡Ay Santu Cristu Benditu, "
+    },
+    {
+     "w": "perdónami",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " polque esta nochi hemus estrasvertíu algu la tinaja aquí, en la mi casa! Peru yo creu que no es más de cuidiau, que tó lo que se ha dichu ha síu sin malicia, na más pa pasal el ratu, comu cosa de seranu. Mañana sin falta, me voy a confesal y que me ponga el señol cura de penitencia lo que quiera, manque sean un cientu de pairis nuestrus, ducientas salvis y cuatrucientus creus. ¡Ay, Señol, Señol, qué tragus hay que pasal a vecis! Y otra nochi más solina, sin sabel si el mi maríu es vivu o muertu. Si al menus supiera que era ya difuntu, ya precuraría yo que viniera algún otru a "
+    },
+    {
+     "w": "arrimalsi",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": ", que el mi jergón anda faltu de calentanza, peru asín, sin sabel de fiju ná, me tengu que aguantal, aguantal y aguantal... hasta que Dió quiera. ¡Uy, Dió me perdoni, que "
+    },
+    {
+     "w": "me se",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " va el pensamientu pa otras caminus! ¡Seré perigalla! "
+    },
+    {
+     "aside": "(se santigua repetidamente)"
+    },
+    {
+     "t": " ¡A acostal! Me voy a acostal, me voy a "
+    },
+    {
+     "w": "rezarli",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " a las ánimas benditas y aluegu, a dormil. ¡Hala, hala, que mañana será otru día!"
+    }
+   ]
+  },
+  {
+   "tipo": "acot",
+   "texto": "(Se retira en dirección adonde se supone que estará el cuarto donde duerme. Desde allí se oyen estas letanías)"
+  },
+  {
+   "tipo": "turno",
+   "quien": "Ciriaca",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "«Páter nostri"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "a las ánimas benditas,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa que reposi mi alma,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "en el lechu bien tranquila.»"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "«Santa Mónica bendita,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "mairi de San Agustín"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "echalmi",
+     "r": [
+      "M08"
+     ]
+    },
+    {
+     "t": " la bendición,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "polque me voy a dormil»."
+    }
+   ]
+  },
+  {
+   "tipo": "fin",
+   "texto": "Fin · Cae el telón"
+  }
+ ],
+ "glosario": [
+  {
+   "n": 1,
+   "forma": "rijosu",
+   "glosa": "encelado"
+  },
+  {
+   "n": 2,
+   "forma": "berriondu",
+   "glosa": "en celo"
+  },
+  {
+   "n": 2,
+   "forma": "bobás",
+   "glosa": "bobadas"
+  },
+  {
+   "n": 4,
+   "forma": "Agora",
+   "glosa": "ahora"
+  },
+  {
+   "n": 5,
+   "forma": "tirás",
+   "glosa": "?"
+  },
+  {
+   "n": 5,
+   "forma": "Cuasi",
+   "glosa": "casi"
+  },
+  {
+   "n": 6,
+   "forma": "metíu al cante",
+   "glosa": "se ha puesto a cantar"
+  },
+  {
+   "n": 7,
+   "forma": "palmeu",
+   "glosa": "palmas"
+  },
+  {
+   "n": 9,
+   "forma": "enllenandu",
+   "glosa": "llenando"
+  },
+  {
+   "n": 10,
+   "forma": "veu",
+   "glosa": "veo"
+  },
+  {
+   "n": 11,
+   "forma": "pallí",
+   "glosa": "por allí"
+  },
+  {
+   "n": 11,
+   "forma": "me se",
+   "glosa": "se me"
+  },
+  {
+   "n": 12,
+   "forma": "ampié",
+   "glosa": "al pie de"
+  },
+  {
+   "n": 13,
+   "forma": "acertajón",
+   "glosa": "adivinanza"
+  },
+  {
+   "n": 16,
+   "forma": "bujeru",
+   "glosa": "agujero"
+  },
+  {
+   "n": 16,
+   "forma": "reondu",
+   "glosa": "redondo"
+  },
+  {
+   "n": 18,
+   "forma": "mu joíu",
+   "glosa": "muy jodido"
+  },
+  {
+   "n": 19,
+   "forma": "Corcíu",
+   "glosa": "interjección"
+  },
+  {
+   "n": 19,
+   "forma": "pos",
+   "glosa": "pues"
+  },
+  {
+   "n": 20,
+   "forma": "asín",
+   "glosa": "así"
+  },
+  {
+   "n": 20,
+   "forma": "paeci",
+   "glosa": "parece"
+  },
+  {
+   "n": 23,
+   "forma": "retajila",
+   "glosa": "retahíla"
+  },
+  {
+   "n": 24,
+   "forma": "manque",
+   "glosa": "aunque"
+  },
+  {
+   "n": 29,
+   "forma": "celemín",
+   "glosa": "medida de grano"
+  },
+  {
+   "n": 30,
+   "forma": "pol Dió",
+   "glosa": "por Dios"
+  },
+  {
+   "n": 30,
+   "forma": "mos",
+   "glosa": "nos"
+  },
+  {
+   "n": 33,
+   "forma": "pellejus",
+   "glosa": "pieles"
+  },
+  {
+   "n": 33,
+   "forma": "porreta",
+   "glosa": "las hojas"
+  },
+  {
+   "n": 34,
+   "forma": "embaju",
+   "glosa": "debajo"
+  },
+  {
+   "n": 35,
+   "forma": "vos",
+   "glosa": "os"
+  },
+  {
+   "n": 40,
+   "forma": "espabilaína",
+   "glosa": "espabilada"
+  },
+  {
+   "n": 41,
+   "forma": "abuja",
+   "glosa": "aguja"
+  },
+  {
+   "n": 41,
+   "forma": "apreta",
+   "glosa": "aprieta"
+  },
+  {
+   "n": 43,
+   "forma": "descosíus",
+   "glosa": "descosidos"
+  },
+  {
+   "n": 43,
+   "forma": "sintíu",
+   "glosa": "oído"
+  },
+  {
+   "n": 51,
+   "forma": "aquivocá",
+   "glosa": "equivocada"
+  },
+  {
+   "n": 51,
+   "forma": "jadi",
+   "glosa": "hace"
+  },
+  {
+   "n": 52,
+   "forma": "artesa",
+   "glosa": "cajón de amasar"
+  },
+  {
+   "n": 53,
+   "forma": "mondongueru",
+   "glosa": "?"
+  },
+  {
+   "n": 53,
+   "forma": "moviéndusi",
+   "glosa": "moviéndose"
+  },
+  {
+   "n": 54,
+   "forma": "pacá y pallá",
+   "glosa": "acá y allá"
+  },
+  {
+   "n": 54,
+   "forma": "jendiendu",
+   "glosa": "hendiendo"
+  },
+  {
+   "n": 57,
+   "forma": "metías en el fregau",
+   "glosa": "metidas en el lío"
+  },
+  {
+   "n": 58,
+   "forma": "ponelmi",
+   "glosa": "ponerme"
+  },
+  {
+   "n": 59,
+   "forma": "Bienvenía",
+   "glosa": "bienvenida"
+  },
+  {
+   "n": 59,
+   "forma": "güeso",
+   "glosa": "hueso"
+  },
+  {
+   "n": 60,
+   "forma": "facilino",
+   "glosa": "facilito"
+  },
+  {
+   "n": 62,
+   "forma": "embusandu",
+   "glosa": "embutiendo"
+  },
+  {
+   "n": 63,
+   "forma": "aluegu",
+   "glosa": "luego"
+  },
+  {
+   "n": 63,
+   "forma": "requitetiesa",
+   "glosa": "muy tiesa"
+  },
+  {
+   "n": 64,
+   "forma": "pamemas",
+   "glosa": "remilgadas"
+  },
+  {
+   "n": 65,
+   "forma": "jechas",
+   "glosa": "hechas"
+  },
+  {
+   "n": 67,
+   "forma": "referíus",
+   "glosa": "referidos"
+  },
+  {
+   "n": 68,
+   "forma": "arbulau",
+   "glosa": "arbolado"
+  },
+  {
+   "n": 69,
+   "forma": "Cogerlus",
+   "glosa": "cogedlos"
+  },
+  {
+   "n": 70,
+   "forma": "güerta",
+   "glosa": "huerta"
+  },
+  {
+   "n": 71,
+   "forma": "agüela",
+   "glosa": "abuela"
+  },
+  {
+   "n": 72,
+   "forma": "cuca",
+   "glosa": "?"
+  },
+  {
+   "n": 75,
+   "forma": "remenea",
+   "glosa": "menea"
+  },
+  {
+   "n": 77,
+   "forma": "quea",
+   "glosa": "queda"
+  },
+  {
+   "n": 78,
+   "forma": "pahí",
+   "glosa": "por ahí"
+  },
+  {
+   "n": 78,
+   "forma": "amus",
+   "glosa": "vamos"
+  },
+  {
+   "n": 83,
+   "forma": "prendita",
+   "glosa": "cariño"
+  },
+  {
+   "n": 86,
+   "forma": "alicantinas",
+   "glosa": "astucias, enredos"
+  },
+  {
+   "n": 87,
+   "forma": "se me jadi",
+   "glosa": "me parece"
+  },
+  {
+   "n": 87,
+   "forma": "jiguera",
+   "glosa": "higuera"
+  },
+  {
+   "n": 88,
+   "forma": "jigus",
+   "glosa": "higos"
+  },
+  {
+   "n": 88,
+   "forma": "quean",
+   "glosa": "quedan"
+  },
+  {
+   "n": 91,
+   "forma": "graná",
+   "glosa": "granada"
+  },
+  {
+   "n": 92,
+   "forma": "pelleju",
+   "glosa": "piel"
+  },
+  {
+   "n": 92,
+   "forma": "granau",
+   "glosa": "granado"
+  },
+  {
+   "n": 93,
+   "forma": "esperrancaná",
+   "glosa": "espatarrada"
+  },
+  {
+   "n": 94,
+   "forma": "metá",
+   "glosa": "mitad"
+  },
+  {
+   "n": 98,
+   "forma": "calol",
+   "glosa": "calor"
+  },
+  {
+   "n": 99,
+   "forma": "papú",
+   "glosa": "?"
+  },
+  {
+   "n": 100,
+   "forma": "responsu",
+   "glosa": "responso"
+  },
+  {
+   "n": 101,
+   "forma": "arretiri",
+   "glosa": "retiren"
+  },
+  {
+   "n": 102,
+   "forma": "Pairinuestro",
+   "glosa": "padrenuestro"
+  },
+  {
+   "n": 104,
+   "forma": "rejilona",
+   "glosa": "temblorosa"
+  },
+  {
+   "n": 105,
+   "forma": "emplastus",
+   "glosa": "componendas"
+  },
+  {
+   "n": 108,
+   "forma": "sintí",
+   "glosa": "oí"
+  },
+  {
+   "n": 109,
+   "forma": "jilvanabas",
+   "glosa": "hilvanabas"
+  },
+  {
+   "n": 109,
+   "forma": "un pal",
+   "glosa": "un par"
+  },
+  {
+   "n": 110,
+   "forma": "estronchamus",
+   "glosa": "desternillamos"
+  },
+  {
+   "n": 111,
+   "forma": "antañu",
+   "glosa": "el año pasado"
+  },
+  {
+   "n": 112,
+   "forma": "añurgastis",
+   "glosa": "atragantaste"
+  },
+  {
+   "n": 112,
+   "forma": "gargüera",
+   "glosa": "garganta"
+  },
+  {
+   "n": 113,
+   "forma": "prenda",
+   "glosa": "cariño"
+  },
+  {
+   "n": 115,
+   "forma": "apuras",
+   "glosa": "apuros"
+  },
+  {
+   "n": 117,
+   "forma": "oío na",
+   "glosa": "oído nada"
+  },
+  {
+   "n": 120,
+   "forma": "enterás",
+   "glosa": "enteradas"
+  },
+  {
+   "n": 120,
+   "forma": "echá palanti",
+   "glosa": "atrevida"
+  },
+  {
+   "n": 121,
+   "forma": "gori-gori",
+   "glosa": "canto de difuntos"
+  },
+  {
+   "n": 122,
+   "forma": "intierru",
+   "glosa": "entierro"
+  },
+  {
+   "n": 124,
+   "forma": "corría",
+   "glosa": "cumplida"
+  },
+  {
+   "n": 125,
+   "forma": "güesus",
+   "glosa": "huesos"
+  },
+  {
+   "n": 128,
+   "forma": "alreol",
+   "glosa": "alrededor"
+  },
+  {
+   "n": 131,
+   "forma": "amos",
+   "glosa": "vamos"
+  },
+  {
+   "n": 132,
+   "forma": "Güenu",
+   "glosa": "bueno"
+  },
+  {
+   "n": 136,
+   "forma": "Arregaza",
+   "glosa": "recoge"
+  },
+  {
+   "n": 136,
+   "forma": "cubertón",
+   "glosa": "cobertor"
+  },
+  {
+   "n": 140,
+   "forma": "plantaus",
+   "glosa": "plantados"
+  },
+  {
+   "n": 142,
+   "forma": "Mairi",
+   "glosa": "madre"
+  },
+  {
+   "n": 142,
+   "forma": "pairi",
+   "glosa": "padre"
+  },
+  {
+   "n": 143,
+   "forma": "reló",
+   "glosa": "reloj"
+  },
+  {
+   "n": 146,
+   "forma": "ondi",
+   "glosa": "adonde"
+  },
+  {
+   "n": 147,
+   "forma": "Ámonos",
+   "glosa": "vámonos"
+  },
+  {
+   "n": 148,
+   "forma": "amasal",
+   "glosa": "amasar"
+  },
+  {
+   "n": 150,
+   "forma": "correl los campanillus",
+   "glosa": "?"
+  },
+  {
+   "n": 151,
+   "forma": "chascal",
+   "glosa": "¿charlar?"
+  },
+  {
+   "n": 152,
+   "forma": "quirius",
+   "glosa": "?"
+  },
+  {
+   "n": 154,
+   "forma": "queáis",
+   "glosa": "quedáis"
+  },
+  {
+   "n": 155,
+   "forma": "matancera",
+   "glosa": "la de la matanza"
+  },
+  {
+   "n": 155,
+   "forma": "jubileu",
+   "glosa": "?"
+  },
+  {
+   "n": 156,
+   "forma": "güespis",
+   "glosa": "huéspedes"
+  },
+  {
+   "n": 156,
+   "forma": "apañu",
+   "glosa": "atender"
+  },
+  {
+   "n": 159,
+   "forma": "irvos",
+   "glosa": "idos"
+  },
+  {
+   "n": 159,
+   "forma": "almohá",
+   "glosa": "almohada"
+  },
+  {
+   "n": 160,
+   "forma": "jechu",
+   "glosa": "hecho"
+  },
+  {
+   "n": 163,
+   "forma": "estrasvertíu",
+   "glosa": "derramado"
+  },
+  {
+   "n": 164,
+   "forma": "no es más de cuidiau",
+   "glosa": "no es cosa grave"
+  },
+  {
+   "n": 166,
+   "forma": "seranu",
+   "glosa": "velada de invierno"
+  },
+  {
+   "n": 168,
+   "forma": "pairis nuestrus",
+   "glosa": "padrenuestros"
+  },
+  {
+   "n": 170,
+   "forma": "tragus",
+   "glosa": "tragos, apuros"
+  },
+  {
+   "n": 171,
+   "forma": "solina",
+   "glosa": "solita"
+  },
+  {
+   "n": 172,
+   "forma": "precuraría",
+   "glosa": "procuraría"
+  },
+  {
+   "n": 173,
+   "forma": "arrimalsi",
+   "glosa": "arrimarse"
+  },
+  {
+   "n": 173,
+   "forma": "jergón",
+   "glosa": "colchón"
+  },
+  {
+   "n": 174,
+   "forma": "calentanza",
+   "glosa": "calor"
+  },
+  {
+   "n": 174,
+   "forma": "de fiju",
+   "glosa": "con certeza"
+  },
+  {
+   "n": 177,
+   "forma": "perigalla",
+   "glosa": "?"
+  },
+  {
+   "n": 181,
+   "forma": "Páter nostri",
+   "glosa": "padrenuestro"
+  },
+  {
+   "n": 183,
+   "forma": "reposi",
+   "glosa": "repose"
+  },
+  {
+   "n": 187,
+   "forma": "echalmi",
+   "glosa": "echadme"
+  }
+ ],
+ "_fuente": "Texto de la hoja TEX-05 (vcj01_datos.py) con las marcas de la guía de clase (texto.py, 19/10/2026)",
+ "detalle": {
+  "_fuente": "Guía de clase de TEX-05, secciones de los rasgos destacados y de los demás rasgos, resumida a mano el 07/11/2026: sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
+  "resumen": "Lo que hace Corrales con cada uno, y los demás rasgos del acto cuarto",
+  "entradilla": "Vicente Corrales escribió el sainete en Santibáñez el Bajo en 1901, once años antes de la encuesta de Krüger. Lo que hace con sus tres rasgos destacados se puede comparar con lo que oyeron los que vinieron después en los pueblos de alrededor. Lo general de cada rasgo, con su mapa, está en su página.",
+  "rasgos": [
+   {
+    "codigo": "M08",
+    "parrafos": [
+     "*mos* por *nos*, nueve veces y en cuatro bocas: *mos saca*, *no mos vengas*, *mos estronchamus*, *mos riamus*, *mos diga*, *mos van*, *mos ponemus*, *mos dan* y *ni mos enteramus*. Colasa, la de *mos diga*, dice luego *cómu nos amus a il sin que nos dé*.",
+     "*vos* por *os*, nueve veces, y una pegada al verbo, *irvos a dormil*. Y dos *os*: *ahí os lo endilgu*, de Nemesia, que poco después dice *¿vos enteráis?*, y *Os voy a dicil*, de Gervasia, que enseguida dice *no vos digu más*. Para «os castigaré», Krüger oyó en 1912 *bu* en Guijo de Galisteo y El Castillo, y *bo* en Pinofranqueado: es el *vos* de Corrales, sin la s. Cummins no oyó *vos*: para *os* solo tiene *sos*.",
+     "*me se*, dos veces: *me se acerca*, de Simona, y *me se va el pensamientu*, de Ciriaca. La misma Ciriaca dice *se me subi la calol*, y Colasa, *se me jadi a mí*.",
+     "Detrás del verbo, *me*, *se*, *lo* y *le* cierran la vocal: *moviéndusi*, *dicirlu*, *ponelmi*, *Cogerlus*, *levantalmi*, *perdónami*, *arrimalsi*, *rezarli*, *echalmi*. Delante, nunca: *lo he dejau*, *se lo metan*, *la saca*, *le dici*, *te la vengu a claval*. Cummins oyó el cierre en los dos sitios, *lu háθin* y *se li díθi* en Coria. Corrales lo escribe solo detrás.",
+     "Krüger escribe que Extremadura elimina de forma radical la -r del infinitivo delante de l-: *serbille* ‘servirle’ en Zarza de Granadilla, con l palatal, y una l sola en Granadilla y Ahigal. Corrales escribe *dicirlu*, *Cogerlus* y *rezarli* con r, y *ponelmi*, *levantalmi*, *arrimalsi* y *echalmi* con l. Puede ser costumbre de escritura: delante de *lo* y *le* es donde ningún informante de Krüger dijo la r."
+    ],
+    "pregunta": "¿Quién dice *mos* y quién *nos*, y cambia según con quién se hable? ¿Alguien ha oído *vos* o *sus* por *os*? ¿Cómo decís *decirlo*: *dicilu*, *dicil·lu* o *dicirlu*?"
+   },
+   {
+    "codigo": "C19",
+    "parrafos": [
+     "Nueve, en cinco palabras: *güeña*, *güenu*, *güenus* y *Güenu*; *güerta*; *agüela*; *güeso*, en la adivinanza, y *güesus*; y *güespis*, ‘huéspedes’. La g sale donde el castellano tiene h, en *huerta*, *huesos* y *huéspedes*, y donde tiene b, en *bueno* y *abuela*. Sin g, solo *buen*: *al mi buen Basiliu* y *de buen gustu*, en la adivinanza. En el acto III, Corrales escribió *güen*.",
+     "Krüger encontró en 1912 una regla que le sorprendió: la g salía detrás de n, *un güevu*, *un güesu*, y suelto se decía *webu*, *wesu*. *Bueno* era *bweno*, con b, en toda el área, y *es buena* no le salió con g en ningún punto.",
+     "Corrales escribe, once años antes, *güenu* y *güeña* sin n delante, y *la güerta* y *los güespis*. O en Santibáñez la g iba más allá que en los pueblos de Krüger, o es la manera de escribir lo rústico. Krüger no fue a Santibáñez. En Guijo de Galisteo, que sí visitó, Alcón recoge en 2002 *güele* y *güelve* sin n delante, que en 1912 no estaban documentados allí."
+    ],
+    "pregunta": "¿Decís *güevu* también suelto o solo en *un güevu*? ¿*Güenu* o *buenu*, *agüela* o *abuela*, y quién? ¿Alguien dice *gómito* o *golel*?"
+   },
+   {
+    "codigo": "C01",
+    "parrafos": [
+     "Doce: *jilu* y *jadi*, dos veces cada una, *jadel*, *jechas*, *jechu*, *jendiendu*, *jiguera*, *jigus*, *jilvanabas*, y *retajila*, con la jota en medio. Ninguna h que no venga de f lleva jota, salvo la de *¡Juy!*: *había*, *hombris*, *horas*, *hasta*. En el acto II se le escapó *jabrá*. En el IV, ninguna.",
+     "*Hacer*, siempre con jota en Corrales, era en 1912 la palabra en que antes se perdía: en Ahigal, *azelu* ‘hacerlo’. Zarza de Granadilla estaba entre los seis pueblos con la jota probablemente en todas las palabras, y Granadilla y Ahigal, entre los que la alternaban con la vocal. *Jigu* salía con jota en los tres.",
+     "En Ahigal, en los años noventa, seguían con jota *hambre*, *hembra* e *hilo*, el *jilu* de Miliana. En 2002, un vecino escribía que allí los jóvenes «lo ven como algo que hay que evitar, aunque no siempre logran conseguirlo»."
+    ],
+    "pregunta": "¿Quién dice *jilu*, *jilvanal* o *jendel*? ¿Alguien dice *jigu* pero *azel*? ¿A quién le corrigieron la jota?"
+   }
+  ],
+  "otros": [
+   {
+    "codigo": "V01",
+    "texto": "En casi cada línea: *nochi*, *genti*, *calli*, *comadri*, *dici*, *tienin*, *chistis*, *rezus*. No siempre: *cuando* junto a *cuandu*, *estamos* junto a *estamus*, *Pero* junto a *peru*, y *güeso*, en la adivinanza, junto a *güesus*."
+   },
+   {
+    "codigo": "V02",
+    "titulo": "Vocales átonas que cambian",
+    "texto": "*aquivocá*, *arbulau*, *intierru*, *cubertón*, *Virgin*, *precuraría*."
+   },
+   {
+    "codigo": "V05",
+    "texto": "*arretiri*, *estrasvertíu*."
+   },
+   {
+    "codigo": "C06",
+    "texto": "*dicil*, *sel*, *calol*, *mujel*, *señol*, *pol*, *il*, *claval*, *cenal*, *aguantal*; *un pal de*."
+   },
+   {
+    "codigo": "C07",
+    "texto": "*dejau*, *metíu*, *sintíu*, *descosíus*, *plantaus*, *espabilaína*, *callá*, *graná*, *almohá*; *reondu*, *Bienvenía*, *quea*, *to*, *oío na*, *alreol*."
+   },
+   {
+    "codigo": "C08",
+    "texto": "*Mairi* y *pairi*, *Pairinuestro*, *mairi de San Agustín*."
+   },
+   {
+    "codigo": "C09",
+    "texto": "La de los actos I a III, aquí solo en *hacer*: *jadi*, *jadel*. Con c, *dici*, *dicil*, *vecis*, *onci*, *cocel*."
+   },
+   {
+    "codigo": "C20",
+    "texto": "*amus* y *amos* ‘vamos’, *Ámonos*."
+   },
+   {
+    "codigo": "M03",
+    "texto": "*espabilaína*, *facilino*, *igualinu*, *chiquininu*, *poquinu*, y *solina*, ‘solita’. En -ita, *prendita*, de cariño, y *mocita*, en la adivinanza."
+   },
+   {
+    "codigo": "M04",
+    "texto": "*el mi cántaru*, *al mi buen Basiliu*, *la mi agüela*, *la su casa*, *al mi maríu*, *la mi casa*, *el mi maríu*, *el mi jergón*. Sin artículo, *su respuesta* y *mi alma*, en la letanía."
+   },
+   {
+    "codigo": "M24",
+    "texto": "*agora*, *cuasi*, *asín*, *manque*, *pos*, *Tamién*, *aluegu*, *antañu*, *alreol*, *ondi*."
+   },
+   {
+    "codigo": "M25",
+    "titulo": "Pa- delante del adverbio",
+    "texto": "*pallí*, *pacá y pallá*, *Pallá van*, *pahí*, *Anda pallá*, *echá palanti*."
+   },
+   {
+    "codigo": null,
+    "titulo": "Otros",
+    "texto": "*naidi*; *veu* y *creu*; *Dió*; *apreta*, sin diptongo."
+   },
+   {
+    "codigo": null,
+    "titulo": "Lo que la letra no deja ver",
+    "texto": "La jota, la s del final de sílaba y la ll y la y van escritas como en castellano: el texto no dice cómo las pronunciaba Corrales."
+   }
+  ],
+  "fuentes": "Datos de Krüger 1914, Cummins 1974, González Salgado 2003, Paniagua 2002 y Alcón 2002."
+ }
+}

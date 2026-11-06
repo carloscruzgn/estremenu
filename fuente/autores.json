@@ -75,7 +75,8 @@
       "resumen": "El autor, el manuscrito y el seranu",
       "imagen": { "src": "img/autores/corrales-candil.webp", "ancho": 600, "alto": 800, "alt": "Dibujo a carboncillo de un candil de aceite encendido", "pie": "Un candil de aceite. Ilustración hecha para esta web." },
       "textos": [
-        "TEX-04"
+        "TEX-04",
+        "TEX-05"
       ],
       "bloques": [
         {
@@ -101,6 +102,14 @@
         {
           "t": "p",
           "texto": "Un seranu es la reunión de las noches de invierno junto a la lumbre, para charlar mientras se hila o se hacen otras labores. La obra tiene cuatro actos y pasa la noche de los Santos Inocentes. En el primero, unas comadres se juntan en la cocina de Ciriaca, que vive sola desde que el marido se fue a Buenos Aires, y una vecina llama a pedir pan. En el segundo, otras dos comadres van por la calle criticando a un matrimonio rico y agarrado. En el tercero, los hombres juegan a las cartas en casa de Quico, que ha hecho la matanza. Y en el cuarto, las comadres vuelven a la cocina de Ciriaca y se dicen acertijos de doble sentido, de los que se contaban en las matanzas."
+        },
+        {
+          "t": "h",
+          "texto": "Los acertijos"
+        },
+        {
+          "t": "p",
+          "texto": "El acto cuarto va aparte, como «Los acertijos del seranu». Barroso cuenta que en Tierras de Granadilla los llaman *acertajónih*. Son once, casi todos de doble sentido, y la gracia está en que la contestación es inocente: el anillo, el ajo, la aguja y el hilo, la artesa, la granada, la higuera, la lechuga. Los dos últimos los dice Ciriaca, que promete la contestación «al final» y no la da. Luego se queda sola, pide perdón, se acuerda del marido que se fue y se va a dormir rezando."
         },
         {
           "t": "h",
