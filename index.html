@@ -409,12 +409,17 @@ span.fila .tit { color: var(--texto-2) }
 .dic-modo button { font-size: 14px; font-weight: 700; color: var(--texto-2); background: none; border: 0; border-radius: 6px; padding: 8px 15px; cursor: pointer }
 .dic-modo button[aria-pressed="true"] { background: var(--naranja); color: #fff }
 .dic-cuenta { margin: 14px 0 0; font-size: 14px; color: var(--texto-3) }
-.dic-lista { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px }
-.dic-lista button { font-size: 16px; font-weight: 700; background: var(--fondo); border: 1px solid var(--linea); border-radius: 7px; padding: 7px 14px; cursor: pointer; color: var(--texto) }
-.dic-lista button:hover { border-color: var(--naranja); color: var(--naranja) }
-.dic-lista button[aria-current="true"] { background: var(--naranja); border-color: var(--naranja); color: #fff }
-.dic-lista .gl { font-weight: 500; color: var(--texto-3); font-size: 14px; margin-left: 6px }
-.dic-lista button[aria-current="true"] .gl { color: rgba(255,255,255,.85) }
+/* El desplegable del buscador: cuelga del cuadro y tapa lo de debajo mientras está abierto */
+.dic-caja { position: relative }
+.dic-lista { position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + 4px); list-style: none; margin: 0; padding: 4px; background: var(--fondo); border: 1px solid var(--naranja); border-radius: 8px; box-shadow: 0 14px 34px rgba(0,0,0,.5); max-height: min(360px, 52vh); overflow-y: auto; overscroll-behavior: contain }
+.dic-lista[hidden] { display: none }
+.dic-lista li { display: flex; align-items: baseline; gap: 10px; min-height: 44px; box-sizing: border-box; padding: 10px 12px; border-radius: 6px; cursor: pointer; color: var(--texto); font-size: 17px; font-weight: 700 }
+.dic-lista li .lm { flex: none }
+.dic-lista li .gl { flex: 1; min-width: 0; font-weight: 500; font-size: 14px; color: var(--texto-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.dic-lista li:hover, .dic-lista li[aria-selected="true"] { background: var(--fondo-3) }
+.dic-lista li[aria-current="true"] .lm { color: var(--naranja) }
+.dic-lista li.mas { min-height: 0; cursor: default; font-size: 13px; font-weight: 500; color: var(--texto-3); padding: 8px 12px 6px }
+.dic-lista li.mas:hover { background: none }
 /* La tarjeta de la entrada, como en el diccionario impreso: papel blanco, EB Garamond y el lema en IM Fell */
 .dic-ficha { margin-top: 22px; background: #f6eedf; color: #1b1b1b; border-radius: 6px; padding: 26px 30px 22px; box-shadow: 0 10px 30px rgba(0,0,0,.35); font-family: 'EB Garamond', Garamond, 'Times New Roman', serif; font-size: 20px; line-height: 1.5; color-scheme: light }
 .dic-ficha p { margin: 0; padding-left: 1.2em; text-indent: -1.2em }
@@ -1189,14 +1194,17 @@ span.fila .tit { color: var(--texto-2) }
       <h3 id="dic-t1">Buscar una palabra</h3>
       <div class="dic-busca">
         <label for="busca-voz">Escribe una palabra</label>
-        <input id="busca-voz" type="search" autocomplete="off" spellcheck="false" placeholder="acordal, zancaburra, jedel…">
+        <!-- Las palabras que casan salen en un desplegable bajo el cuadro, no en botones (Carlos, 08/11/2026) -->
+        <div class="dic-caja">
+          <input id="busca-voz" type="search" autocomplete="off" spellcheck="false" placeholder="acordal, zancaburra, jedel…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="dic-lista">
+          <ul class="dic-lista" id="dic-lista" role="listbox" aria-label="Palabras que casan" hidden></ul>
+        </div>
         <div class="dic-modo" role="group" aria-label="Dónde buscar">
           <button type="button" data-modo="voz" aria-pressed="true">En la palabra</button>
           <button type="button" data-modo="glosa" aria-pressed="false">En el significado</button>
         </div>
       </div>
       <p class="dic-cuenta" id="dic-cuenta" aria-live="polite"></p>
-      <ul class="dic-lista" id="dic-lista"></ul>
       <article class="dic-ficha" id="dic-ficha" hidden aria-live="polite"></article>
       <button type="button" class="dic-comparte" id="dic-comparte" hidden><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span>Compartir esta palabra</span></button>
       <!-- Las palabras por lugares y por fuentes, en dos tarjetas: un minimapa y una estantería con las obras (Carlos, 22/10/2026) -->
@@ -1736,10 +1744,32 @@ $('dic-inf-bot').addEventListener('click', ev => {
   verTramoTaller(null);
 });
 
-function buscarDic() {
+// El desplegable del buscador (Carlos, 08/11/2026): se abre al escribir, se recorre con las flechas,
+// Intro abre la marcada (o la primera) y Esc o un toque fuera lo cierran
+let dicSel = -1;
+function abreLista(si) {
+  const l = $('dic-lista'), c = $('busca-voz');
+  l.hidden = !si; c.setAttribute('aria-expanded', String(si));
+  if (!si) { dicSel = -1; c.removeAttribute('aria-activedescendant'); for (const o of l.querySelectorAll('[aria-selected="true"]')) o.setAttribute('aria-selected', 'false'); }
+}
+function marcaSel(ops) {
+  ops.forEach((o, k) => o.setAttribute('aria-selected', String(k === dicSel)));
+  const o = ops[dicSel];
+  if (o) { $('busca-voz').setAttribute('aria-activedescendant', o.id); o.scrollIntoView({ block: 'nearest' }); }
+}
+function eligeDic(id) {
+  const i = DIC.idx[id]; if (i === undefined) return;
+  abreLista(false);
+  $('busca-voz').value = DIC.e[i][1];
+  $('busca-voz').blur();   // en el móvil baja el teclado y deja ver la ficha
+  buscarDic(false);
+  verEntrada(id, true);
+}
+
+function buscarDic(abrir = false) {
   if (!DIC) return;
   const q = normDic($('busca-voz').value), lista = $('dic-lista');
-  if (!q) { lista.innerHTML = ''; $('dic-cuenta').textContent = `${DIC.lemas.toLocaleString('es-ES')} palabras en el diccionario. Escribe una para buscarla.`; return; }
+  if (!q) { lista.innerHTML = ''; abreLista(false); $('dic-cuenta').textContent = `${DIC.lemas.toLocaleString('es-ES')} palabras en el diccionario. Escribe una para buscarla.`; return; }
   let res;
   if (modoDic === 'glosa') {
     const re = new RegExp('(^| )' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
@@ -1755,7 +1785,10 @@ function buscarDic() {
   }
   const n = res.length;
   $('dic-cuenta').textContent = n ? (n === 1 ? 'Una palabra.' : `${n.toLocaleString('es-ES')} palabras${n > 60 ? '; se ven las 60 primeras' : ''}.`) : 'No está en el diccionario. Si la conoces, puedes enviarla con el formulario de abajo.';
-  lista.innerHTML = res.slice(0, 60).map(e => `<li><button type="button" data-id="${e[0]}"${DIC.idx[e[0]] === fichaActual ? ' aria-current="true"' : ''}>${esc(e[1])}<span class="gl">${esc(corta(e[6]))}</span></button></li>`).join('');
+  lista.innerHTML = res.slice(0, 60).map((e, k) => `<li role="option" id="dic-op-${k}" data-id="${e[0]}" aria-selected="false"${DIC.idx[e[0]] === fichaActual ? ' aria-current="true"' : ''}><span class="lm">${esc(e[1])}</span><span class="gl">${esc(e[6])}</span></li>`).join('')
+    + (n > 60 ? '<li class="mas" aria-hidden="true">Sigue escribiendo para ver las demás.</li>' : '');
+  dicSel = -1;
+  abreLista(abrir && n > 0);
   const exacta = res.find(e => normDic(e[1]) === q);
   if (exacta && DIC.idx[exacta[0]] !== fichaActual) verEntrada(exacta[0], false);
 }
@@ -1770,7 +1803,7 @@ function verEntrada(id, desplazar = true) {
   try { history.replaceState(null, '', enlaceVoz(e[1])); document.title = '«' + e[1] + '» · Diccionario · Taller de estremeñu'; } catch (er) {}
   f.hidden = false;
   const cp = $('dic-comparte'); cp.dataset.voz = e[1]; cp.hidden = false;
-  for (const b of document.querySelectorAll('#dic-lista button')) { if (b.dataset.id === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }
+  for (const b of document.querySelectorAll('#dic-lista [data-id]')) { if (b.dataset.id === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }
   if (desplazar) f.scrollIntoView({ behavior: sinMov ? 'auto' : 'smooth', block: 'center' });
 }
 
@@ -1867,12 +1900,29 @@ $('dic-bandas').addEventListener('click', ev => {
   pintarBandas();
 });
 
-$('busca-voz').addEventListener('input', buscarDic);
+$('busca-voz').addEventListener('input', () => buscarDic(true));
+$('busca-voz').addEventListener('focus', () => { if ($('busca-voz').value && $('dic-lista').querySelector('[role="option"]')) abreLista(true); });
+$('busca-voz').addEventListener('keydown', ev => {
+  const l = $('dic-lista'), ops = [...l.querySelectorAll('[role="option"]')];
+  if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+    if (!ops.length) return;
+    ev.preventDefault();
+    if (l.hidden) abreLista(true);
+    dicSel = ev.key === 'ArrowDown' ? Math.min(dicSel + 1, ops.length - 1) : Math.max(dicSel - 1, 0);
+    marcaSel(ops);
+  } else if (ev.key === 'Enter') {
+    if (!l.hidden && ops.length) { ev.preventDefault(); eligeDic(ops[dicSel >= 0 ? dicSel : 0].dataset.id); }
+  } else if (ev.key === 'Escape' && !l.hidden) { ev.preventDefault(); abreLista(false); }
+});
+// Que tocar una palabra no le quite el foco al cuadro antes de elegirla
+$('dic-lista').addEventListener('mousedown', ev => ev.preventDefault());
+$('dic-lista').addEventListener('click', ev => { const o = ev.target.closest('[data-id]'); if (o) eligeDic(o.dataset.id); });
+document.addEventListener('pointerdown', ev => { if (!$('dic-lista').hidden && !ev.target.closest('.dic-caja')) abreLista(false); });
 for (const b of document.querySelectorAll('.dic-modo button')) b.addEventListener('click', () => {
   modoDic = b.dataset.modo;
   for (const o of document.querySelectorAll('.dic-modo button')) o.setAttribute('aria-pressed', String(o === b));
   $('busca-voz').placeholder = modoDic === 'glosa' ? 'despertar, escarabajo, columpio…' : 'acordal, zancaburra, jedel…';
-  buscarDic(); $('busca-voz').focus();
+  buscarDic(true); $('busca-voz').focus();
 });
 // Compartir una palabra: el menú de compartir del móvil o, si no lo hay, el enlace copiado
 $('dic-comparte').addEventListener('click', async ev => {
@@ -1885,8 +1935,8 @@ $('dic-comparte').addEventListener('click', async ev => {
   } catch (er) {}
 });
 $('dic-taller-lista').addEventListener('click', ev => fichaEnLista($('dic-taller-lista'), ev, 'button[data-id]'));
-for (const id of ['dic-lista', 'dic-ficha', 'f-ya']) $(id).addEventListener('click', ev => {
-  const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha' && id !== 'dic-lista');
+for (const id of ['dic-ficha', 'f-ya']) $(id).addEventListener('click', ev => {
+  const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha');
 });
 
 // ---------- el formulario ----------
