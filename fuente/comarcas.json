@@ -32,8 +32,8 @@
   "bejar":       {"nombre": "Sierra de Béjar", "terminos": "37013 37046 37078 37080 37109 37112 37102 37133 37139 37161 37063 37071 37163 37168 37171 37201 37213 37212 37217 37244 37251 37259 37263 37282 37297 37312 37331 37332 37333 37334 37343 37341"},
   "_area_del_taller": {
     "nucleo": ["gata", "hurdes", "trasierra", "alagon", "rebollar"],
-    "contacto": ["ambroz", "monfrague"],
+    "contacto": ["ambroz", "monfrague", "agadones", "francia"],
     "contacto_terminos": "10082",
-    "_nota": "Pauta de 10-MAPAS: núcleo, área de contacto con Garrovillas como término suelto; Plasencia en el límite y fuera"
+    "_nota": "Pauta de 10-MAPAS: núcleo, área de contacto con Garrovillas como término suelto y, desde el 09/11/2026, Los Agadones y la Sierra de Francia; Plasencia en el límite y fuera"
   }
 }
