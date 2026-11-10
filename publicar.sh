@@ -8,6 +8,8 @@ cp -r index.html manifest.webmanifest datos img lib _headers _site/
 if [ -d video ]; then cp -r video _site/; fi
 # Ficheros para Instagram, que Metricool toma por enlace público (14-INSTAGRAM).
 if [ -d instagram ]; then cp -r instagram _site/; fi
+# Enlaces cortos de la bibliografía, /b/<clave>, que imprimen los impresos del taller.
+node fuente/enlaces-cortos.mjs _site
 # Una página por palabra del diccionario, para la vista previa al compartirla.
 node fuente/voz-paginas.mjs _site
 # Fecha de la última publicación en el pie, en hora de Madrid.
