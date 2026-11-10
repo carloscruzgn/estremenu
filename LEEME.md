@@ -67,6 +67,8 @@ Web del Taller de estremeñu del CEPA Coria, curso 2026-2027. Se da al alumnado 
 2. En `fuente/`: `node diccionario.mjs <carpeta del espejo>`. Lee los avisos: siglas formadas por regla, lemas sin testimonios.
 3. Publicar como siempre. La web no lee la hoja: se pone al día cuando se vuelve a correr.
 
+Si el diccionario impreso pasa a Typst (Carlos lo piensa, 10/11/2026): la web no cambia, pero las reglas de composición de una entrada están escritas aquí, en generar.py del PDF y en el Apps Script de la hoja. Lo propuesto: que este script saque además los datos de cada entrada sin maquetar y que Typst los componga, para tener las reglas en un solo sitio. Hay que recordárselo a Carlos cuando se toque cualquiera de esas reglas (estremenu-base, 04-VOCABULARIO, «EL DICCIONARIO IMPRESO»).
+
 La fala, como contraste (Carlos, 20/10/2026): los testimonios con comarca «Val de Xálima» no cuentan para los lugares ni las variantes de su lema; salen en una línea «En la fala:», tras Variantes y antes de Véase, con su glosa, su pueblo y su fuente, y su forma lleva a la entrada desde el buscador. Igual en generar.py del PDF y en el Apps Script de la hoja, versión 2.1.
 
 El formulario «Envía una palabra» manda a Formspree (formulario mqpejala, cuenta ccruzg04@educarex.es), que lo reenvía por correo. La clave se comprueba en la página contra `datos/claves.json`; Formspree no la comprueba. Se prueba en estremenu.pages.dev.
