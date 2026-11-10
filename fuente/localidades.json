@@ -54,6 +54,14 @@
       "fuente": "en.wikipedia.org/wiki/La_Fragosa (40°23′50″N 6°18′2″W)"
     },
     {
+      "nombre": "Granadilla",
+      "municipio": "Zarza de Granadilla",
+      "termino": "10216",
+      "lat": 40.26816,
+      "lon": -6.10643,
+      "fuente": "IGN, Granadilla (10216000201), datos/geo/ign-poblaciones-2026-11-05.csv de estremenu-base, 10/11/2026; despoblado"
+    },
+    {
       "nombre": "Horcajo",
       "municipio": "Pinofranqueado",
       "termino": "10146",
