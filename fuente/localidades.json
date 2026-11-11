@@ -22,6 +22,14 @@
       "fuente": "en.wikipedia.org/wiki/Aldehuela,_Pinofranqueado"
     },
     {
+      "nombre": "Asegur",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.4253,
+      "lon": -6.2744,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Asegur (10135000201), consultado el 05/11/2026"
+    },
+    {
       "nombre": "Azabal",
       "municipio": "Casar de Palomero",
       "termino": "10050",
@@ -36,6 +44,30 @@
       "lat": 40.34333,
       "lon": -6.23306,
       "fuente": "en.wikipedia.org/wiki/Cambroncino"
+    },
+    {
+      "nombre": "Carabusino",
+      "municipio": "Casares de las Hurdes",
+      "termino": "10051",
+      "lat": 40.4481,
+      "lon": -6.2856,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Carabusino (10051000101), consultado el 05/11/2026"
+    },
+    {
+      "nombre": "Casarrubia",
+      "municipio": "Casares de las Hurdes",
+      "termino": "10051",
+      "lat": 40.4412,
+      "lon": -6.2996,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Casarrubia (10051000201), consultado el 05/11/2026"
+    },
+    {
+      "nombre": "Cerezal",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.4042,
+      "lon": -6.2559,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Cerezal (10135000301), consultado el 05/11/2026"
     },
     {
       "nombre": "El Gasco",
@@ -70,12 +102,36 @@
       "fuente": "en.wikipedia.org/wiki/Horcajo"
     },
     {
+      "nombre": "La Fatela",
+      "municipio": "Perales del Puerto",
+      "termino": "10142",
+      "lat": 40.1844,
+      "lon": -6.6752,
+      "fuente": "casasrurales.net, La Fatela, Ctra. EX-109 km 60,3, 10896 Perales del Puerto (consulta 11/11/2026); el cruce del mapa de Fink 1929"
+    },
+    {
+      "nombre": "La Horcajada",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.4124,
+      "lon": -6.202,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Horcajada (10135000000), consultado el 05/11/2026"
+    },
+    {
       "nombre": "La Huetre",
       "municipio": "Casares de las Hurdes",
       "termino": "10051",
       "lat": 40.44333,
       "lon": -6.30472,
       "fuente": "en.wikipedia.org/wiki/Huetre,_Casares_de_las_Hurdes"
+    },
+    {
+      "nombre": "Las Mestas",
+      "municipio": "Ladrillar",
+      "termino": "10108",
+      "lat": 40.4258,
+      "lon": -6.146,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Las Mestas (10108000301), consultado el 05/11/2026"
     },
     {
       "nombre": "Ovejuela",
@@ -86,12 +142,12 @@
       "fuente": "en.wikipedia.org/wiki/Ovejuela"
     },
     {
-      "nombre": "Vegas de Coria",
-      "municipio": "Nuñomoral",
-      "termino": "10135",
-      "lat": 40.38611,
-      "lon": -6.18306,
-      "fuente": "en.wikipedia.org/wiki/Vegas_de_Coria"
+      "nombre": "Robledo",
+      "municipio": "Casares de las Hurdes",
+      "termino": "10051",
+      "lat": 40.4476,
+      "lon": -6.2921,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Robledo (10051000601), consultado el 05/11/2026"
     },
     {
       "nombre": "Trevejo",
@@ -102,12 +158,12 @@
       "fuente": "es.hispanopedia.com/wiki/Trevejo"
     },
     {
-      "nombre": "La Fatela",
-      "municipio": "Perales del Puerto",
-      "termino": "10142",
-      "lat": 40.1844,
-      "lon": -6.6752,
-      "fuente": "casasrurales.net, La Fatela, Ctra. EX-109 km 60,3, 10896 Perales del Puerto (consulta 11/11/2026); el cruce del mapa de Fink 1929"
+      "nombre": "Vegas de Coria",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.38611,
+      "lon": -6.18306,
+      "fuente": "en.wikipedia.org/wiki/Vegas_de_Coria"
     }
   ]
 }
