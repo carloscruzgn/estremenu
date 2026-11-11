@@ -100,6 +100,14 @@
       "lat": 40.173431,
       "lon": -6.779044,
       "fuente": "es.hispanopedia.com/wiki/Trevejo"
+    },
+    {
+      "nombre": "La Fatela",
+      "municipio": "Perales del Puerto",
+      "termino": "10142",
+      "lat": 40.1844,
+      "lon": -6.6752,
+      "fuente": "casasrurales.net, La Fatela, Ctra. EX-109 km 60,3, 10896 Perales del Puerto (consulta 11/11/2026); el cruce del mapa de Fink 1929"
     }
   ]
 }
