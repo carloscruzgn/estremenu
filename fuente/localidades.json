@@ -134,6 +134,14 @@
       "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Las Mestas (10108000301), consultado el 05/11/2026"
     },
     {
+      "nombre": "Martilandrán",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.3993,
+      "lon": -6.2953,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Martilandrán (10135000601), consultado el 05/11/2026"
+    },
+    {
       "nombre": "Ovejuela",
       "municipio": "Pinofranqueado",
       "termino": "10146",
@@ -148,6 +156,14 @@
       "lat": 40.4476,
       "lon": -6.2921,
       "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Robledo (10051000601), consultado el 05/11/2026"
+    },
+    {
+      "nombre": "Rubiaco",
+      "municipio": "Nuñomoral",
+      "termino": "10135",
+      "lat": 40.4039,
+      "lon": -6.2081,
+      "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Rubiaco (10135000801), consultado el 05/11/2026"
     },
     {
       "nombre": "Trevejo",
