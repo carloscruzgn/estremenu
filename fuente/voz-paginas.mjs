@@ -37,10 +37,14 @@ for (const e of DIC.e) {
 let n = 0;
 for (const [nombre, g] of grupos) {
   const lema = g[0][1];
-  // Las comarcas: el primer paréntesis de la cabecera; los significados: lo que va en negrita
+  // Las comarcas: el primer paréntesis de la cabecera, o los de todas las acepciones; los significados: lo que va en negrita
   const desc = g.map(e => {
     const cab = (e[2].match(/<p class="e-cab">([\s\S]*?)<\/p>/) || [, ''])[1];
-    const comarcas = (texto(cab.replace(/<span class="e-lema">[\s\S]*?<\/span>/, '')).match(/\(([^)]*)\)/) || [, ''])[1];
+    const sinLema = cab.replace(/<span class="e-lema">[\s\S]*?<\/span>/, '');
+    // Con varias acepciones, los lugares van tras el número de cada una (12/11/2026): se reúnen los de todas, sin repetir
+    const porAc = [...sinLema.matchAll(/<b>\d+\.<\/b> \(([\s\S]*?)\) /g)].map(m => texto(m[1]));
+    const comarcas = porAc.length ? [...new Set(porAc.flatMap(x => x.split(', ')))].sort(new Intl.Collator('es').compare).join(', ')
+      : (texto(sinLema).match(/\(([^)]*)\)/) || [, ''])[1];
     const glosa = [...cab.matchAll(/<b>([\s\S]*?)<\/b>/g)].map(m => texto(m[1])).join(' ');
     return glosa + (comarcas ? ` (${comarcas})` : '');
   }).join(' · ');
