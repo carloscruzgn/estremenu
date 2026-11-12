@@ -6,6 +6,6 @@
     "tr.": "transitivo", "intr.": "intransitivo", "v.": "verbo",
     "com.": "común", "conj.": "conjunción", "conjunt.": "conjuntiva", "fr.": "frase", "n.": "nombre; n. p., nombre propio",
     "prep.": "preposición", "pron.": "pronombre", "verb.": "verbal", "U. m.": "usado más", "U. t.": "usado también",
-    "·ac.": "acepción", "·p.": "página", "·INF [A06]": "informante del taller, con su código"
+    "·a., b., c.": "en Variantes, la letra de cada variante", "·2c": "en Fuentes, lo que da cada obra: el número de la acepción y la letra de la variante; sin letra, la forma del lema, y con una sola acepción, sin número", "·p.": "página", "·s. p.": "sin página", "·INF [A06]": "informante del taller, con su código"
   }
 }

@@ -1,5 +1,7 @@
 // Prepara el diccionario de la web desde el espejo de la hoja DICCIONARIO-NOROESTE.
 // Uso: node diccionario.mjs <carpeta del espejo>   → ../datos/diccionario.json
+//      node diccionario.mjs <carpeta del espejo> --entradas <fichero>   → los datos de cada entrada para el PDF, sin tocar datos/
+// Desde el 12/11/2026 las reglas de la entrada viven solo aquí, para la web y para el papel (ver «la entrada, como datos»).
 // La entrada sigue la del diccionario impreso desde el 18/10/2026 (04-VOCABULARIO, «Entrada»), sin la línea
 // de Observaciones y sin las marcas ++ ni las categorías con ++cat++ (Carlos, 18/10/2026). Los étimos con
 // ++dudoso: étimo++ salen desde el 20/10/2026, sin la marca, que se queda para el PDF de corrección (Carlos).
@@ -12,7 +14,7 @@ import { cifrasDiccionario } from './cifras-diccionario.mjs';
 
 const aqui = path.dirname(fileURLToPath(import.meta.url));
 const carpeta = process.argv[2];
-if (!carpeta) { console.error('Uso: node diccionario.mjs <carpeta del espejo>'); process.exit(1); }
+if (!carpeta) { console.error('Uso: node diccionario.mjs <carpeta del espejo> [--entradas <fichero>]'); process.exit(1); }
 const avisos = [];
 
 // ---------- lectura del espejo ----------
@@ -150,79 +152,192 @@ function veaseDe(L) {
 // La dirección de una palabra, como enlaceVoz de index.html
 const enlace = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20').replace(/#/g, '%23');
 
-const entradas = [];
-for (const L of LEMAS) {
+// ---------- la entrada, como datos ----------
+// Las reglas de la entrada viven solo aquí, para la web y para el papel (Carlos, 12/11/2026): componer() da los datos
+// de cada lema y htmlWeb() los maqueta para la web. El PDF (estremenu-base, herramientas/diccionario-pdf) los lee
+// de `--entradas <fichero>` y solo los maqueta, y lo mismo podría hacer Typst.
+// Variantes antes que Fuentes, cada variante con su letra; cada obra una sola vez, con sus páginas, y en cada página
+// las marcas de lo que da: número de la acepción y letra de la variante, «2c»; sin letra, la forma del lema; con una
+// sola acepción, sin número (Carlos, 12/11/2026, sobre la propuesta de datos/diccionario/trabajo/fuentes-en-la-entrada-2026-11-12).
+const LETRAS = 'abcdefghijklmnopqrstuvwxyz';
+const letraN = i => i < 26 ? LETRAS[i] : LETRAS[Math.floor(i / 26) - 1] + LETRAS[i % 26];
+// Formas que cuentan como la del lema: sin «, -a», con y sin lo que va entre paréntesis, y el femenino de «X, -a»
+function clavesLema(lema) {
+  const b = lema.replace(/,\s*-a\b.*$/, '').trim();
+  const fs_ = new Set([b, b.replace(/\s*\([^)]*\)/g, '').trim(), b.replace(/[()]/g, '')]);
+  if (/,\s*-a\b/.test(lema)) for (const f of [...fs_]) fs_.add(f.replace(/[ou]$/, 'a'));
+  return new Set([...fs_].filter(Boolean).map(clave));
+}
+// La voz de un testimonio. En una acepción que es locución, de un lema de una palabra, la forma de la fuente es la
+// locución entera (*jincal el porru*): cuenta como la forma del lema si alguna de sus palabras lo es, y si no, como
+// la variante que da otro testimonio en una palabra sola (*ajincal rodilla*, de *ajincal*). Así la locución no sale como
+// variante. Si ninguna palabra es la del lema ni la de una variante, es otra locución y va entera (*comer a barranco*).
+function vozDe(t, kL, lemaUna, acCat, sueltas) {
+  const f = limpia(t.forma);
+  if (!f || kL.has(clave(f))) return { k: null, forma: f };
+  if (lemaUna && /^loc\./.test(acCat[t['acepción']] || '') && /[\s,]/.test(f)) {
+    const pal = f.replace(/\([^)]*\)/g, ' ').split(/[\s,]+/).filter(Boolean);
+    if (pal.some(p => kL.has(clave(p)))) return { k: null, forma: f };
+    const p = pal.find(x => sueltas.has(clave(x)));
+    if (p) return { k: clave(p), forma: p };
+  }
+  return { k: clave(f), forma: f };
+}
+const marcasDe = s => String(s || '').match(/\+\+[^+]+\+\+/g) || [];
+const ordenT = (x, y) => anio(x['fecha del dato']) - anio(y['fecha del dato']) || (x.fuente < y.fuente ? -1 : x.fuente > y.fuente ? 1 : 0);
+const avisosPdf = [];
+
+function componer(L) {
   const lema = limpia(L.lema);
-  if (!lema) continue;
   const todos = testDe.get(L.lema_id) || [];
   const ts = todos.filter(t => !esFala(t)), fala = todos.filter(esFala);
   const as = (acepDe.get(L.lema_id) || []).slice().sort((x, y) => +x['acepción'] - +y['acepción']);
-  if (!ts.length || !as.length) { avisos.push('Sin testimonios del área o sin acepciones: ' + L.lema_id + ' ' + lema); continue; }
-  const kLema = clave(lema);
-  const propios = ts.filter(t => clave(t.forma) === kLema);
-  const varias = as.length > 1;
+  if (!lema || !as.length) return null;
+  const id = L.lema_id, varias = as.length > 1;
   const glosaAc = Object.fromEntries(as.map(a => [a['acepción'], limpia(a.glosa)]));
+  const acCat = Object.fromEntries(as.map(a => [a['acepción'], limpia(a['categoría'])]));
+  const kL = clavesLema(lema);
+  const lemaUna = !/\s/.test(lema.replace(/\([^)]*\)/g, '').replace(/,\s*-a\b.*$/, '').trim());
+  const sueltas = new Set(ts.map(t => limpia(t.forma)).filter(f => f && !/[\s,]/.test(f)).map(clave));
+  const voz = new Map(ts.map(t => [t, vozDe(t, kL, lemaUna, acCat, sueltas)]));
+  const propios = ts.filter(t => voz.get(t).k === null);
 
+  // Variantes, por orden alfabético, cada una con su letra y con la forma que más dan las fuentes
+  const grupos = new Map();
+  for (const t of ts) { const v = voz.get(t); if (v.k !== null) (grupos.get(v.k) || grupos.set(v.k, []).get(v.k)).push(t); }
+  const variantes = [...grupos.entries()].map(([k, g]) => {
+    const cuenta = new Map(); for (const t of g) { const f = voz.get(t).forma; cuenta.set(f, (cuenta.get(f) || 0) + 1); }
+    return { k, forma: [...cuenta.entries()].sort((a, b) => b[1] - a[1])[0][0], ts: g };
+  }).sort((a, b) => colEs.compare(a.forma, b.forma));
+  variantes.forEach((v, i) => { v.letra = letraN(i); v.lugares = lugares(v.ts); });
+  const letraDe = new Map(variantes.map(v => [v.k, v.letra]));
   const lug = lugares(propios.length ? propios : ts);
-  const etimo = limpia(L['étimo']) ? limpia(L['étimo']).replace(/^\[|\]$/g, '') : '';
-  const catDe = a => (a.marcas || '').includes('++cat++') ? '' : limpia(a['categoría']);
-  // Marcas de uso de la acepción, como en el DLE («U. t. en pl.»), tras la glosa y en redonda; las marcas ++ no salen (Carlos, 20/10/2026)
-  const usoDe = a => limpia(a.marcas);
-  const conUso = a => usoDe(a) ? ` ${esc(punto(usoDe(a)))}` : '';
 
-  let h = `<p class="e-cab"><span class="e-lema">${esc(lema)}</span>`;
-  if (!varias && catDe(as[0])) h += `. <i>${esc(catDe(as[0]))}</i>`;
-  if (lug.length) h += ` (${esc(lug.join(', '))})`;
-  if (etimo) h += ` [<i>${esc(etimo)}</i>]`;
-  h += '.';
-  if (!varias) h += ` <b>${esc(punto(mayus(limpia(as[0].glosa))))}</b>${conUso(as[0])}`;
-  else for (const a of as) h += ` <b>${esc(a['acepción'])}.</b> ${catDe(a) ? `<i>${esc(catDe(a))}</i> ` : ''}<b>${esc(punto(mayus(limpia(a.glosa))))}</b>${conUso(a)}`;
-  h += '</p>';
+  // Fuentes: cada obra una vez, por la fecha del dato; sus páginas, y en cada página las marcas de lo que da
+  const codigo = t => (varias ? t['acepción'] : '') + (voz.get(t).k === null ? '' : letraDe.get(voz.get(t).k));
+  const porSigla = new Map();
+  for (const t of ts.slice().sort(ordenT)) {
+    usadas.add(t.fuente);
+    const s = sigla(t.fuente), p = /^Informante\b/.test(t.fuente) ? '' : pagina(t);
+    const pags = porSigla.get(s) || porSigla.set(s, new Map()).get(s);
+    const m = pags.get(p) || pags.set(p, new Map()).get(p);
+    const c = codigo(t), gi = glosaInf(t, glosaAc), key = c + '|' + gi;
+    (m.get(key) || m.set(key, { c, gi, ts: [] }).get(key)).ts.push(t);
+  }
+  // Lo que da cada voz, para saber si sus lugares se reparten entre varias obras
+  const vozDeCod = c => c.replace(/^\d+/, '');
+  const siglasVoz = new Map();
+  for (const [s, pags] of porSigla) for (const m of pags.values()) for (const x of m.values()) {
+    const v = vozDeCod(x.c); (siglasVoz.get(v) || siglasVoz.set(v, new Set()).get(v)).add(s);
+  }
+  const lugVoz = v => v === '' ? lug : (variantes.find(x => x.letra === v) || {}).lugares || [];
+  const ordenCod = (a, b) => (parseInt(a.c) || 0) - (parseInt(b.c) || 0) || (a.c < b.c ? -1 : a.c > b.c ? 1 : 0);
+  const ordenPag = (a, b) => a[0] === '' ? 1 : b[0] === '' ? -1 : a[0].localeCompare(b[0], 'es', { numeric: true });
+  const fuentes = [...porSigla.entries()].map(([s, pags]) => ({
+    sigla: s,
+    paginas: [...pags.entries()].sort(ordenPag).map(([p, m]) => ({
+      p, marcas: [...m.values()].sort(ordenCod).map(x => {
+        const v = vozDeCod(x.c);
+        // ambiguo: la voz sale en más de un lugar y la dan varias obras, así que sus lugares no dicen de qué obra es cada uno
+        return { c: x.c, gi: x.gi, lugares: lugares(x.ts), ambiguo: lugVoz(v).length > 1 && (siglasVoz.get(v) || new Set()).size > 1 };
+      })
+    }))
+  }));
 
-  if (propios.length) {
-    const vistos = new Set(), partes = [];
-    for (const t of propios.slice().sort((x, y) => anio(x['fecha del dato']) - anio(y['fecha del dato']))) {
-      const s = sigla(t.fuente); usadas.add(t.fuente);
-      const inf = /^Informante\b/.test(t.fuente);
-      const p = inf ? '' : pagina(t);
-      const gi = glosaInf(t, glosaAc);
-      const txt = esc(s + (p ? ', ' + p : '') + (varias ? ', ac. ' + t['acepción'] : '')) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : '');
-      if (!vistos.has(txt)) { vistos.add(txt); partes.push(txt); }
-    }
-    h += `<p class="e-lin"><span class="e-et">Fuentes:</span> ${partes.join('; ')}.</p>`;
-  }
-  const otras = new Map();
-  for (const t of ts) { const k = clave(t.forma); if (k !== kLema && t.forma) (otras.get(k) || otras.set(k, []).get(k)).push(t); }
-  if (otras.size) {
-    const vs = [...otras.values()].map(g => {
-      const cuenta = {}; for (const t of g) cuenta[t.forma] = (cuenta[t.forma] || 0) + 1;
-      const forma = Object.entries(cuenta).sort((a, b) => b[1] - a[1])[0][0];
-      // Con varias acepciones, cada sigla lleva la suya, como en Fuentes (19/10/2026)
-      const sig = [...new Set(g.map(t => { usadas.add(t.fuente); const gi = glosaInf(t, glosaAc); return esc(sigla(t.fuente) + (varias ? ', ac. ' + t['acepción'] : '')) + (gi ? `, <span class="e-gi">‘${esc(gi)}’</span>` : ''); }))];
-      const lg = lugares(g);
-      return { forma, txt: `<i>${esc(limpia(forma))}</i> (${[esc(lg.join(', ')), sig.join(', ')].filter(Boolean).join('; ')})` };
-    }).sort((a, b) => colEs.compare(a.forma, b.forma));
-    h += `<p class="e-lin"><span class="e-et">Variantes:</span> ${vs.map(v => v.txt).join('; ')}.</p>`;
-  }
   // En la fala: formas de contraste, con su glosa, su pueblo y su fuente (Carlos, 20/10/2026)
-  if (fala.length) {
-    const porForma = new Map();
-    for (const t of fala) (porForma.get(t.forma) || porForma.set(t.forma, []).get(t.forma)).push(t);
-    const fp = [...porForma.entries()].sort((a, b) => colEs.compare(a[0], b[0])).map(([forma, g]) => {
-      const gl = limpia(g[0]['glosa de la fuente']).replace(/\.$/, '');
-      const locs = [...new Set(g.map(t => localidadDe(t)).filter(Boolean))].sort(colEs.compare);
-      const fu = [...new Set(g.map(t => { usadas.add(t.fuente); const p = pagina(t); return sigla(t.fuente) + (p ? ', ' + p : ''); }))];
-      return `<i>${esc(limpia(forma))}</i>${gl ? ` ‘${esc(gl)}’` : ''} (${[esc(locs.join(', ')), esc(fu.join('; '))].filter(Boolean).join('; ')})`;
-    });
-    h += `<p class="e-lin"><span class="e-et">En la fala:</span> ${fp.join('; ')}.</p>`;
-  }
-  // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
-  const vease = veaseDe(L);
-  if (vease.length) h += `<p class="e-lin"><span class="e-et">Véase:</span> ${vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', ')}.</p>`;
+  const porForma = new Map();
+  for (const t of fala) (porForma.get(t.forma) || porForma.set(t.forma, []).get(t.forma)).push(t);
+  const falaD = [...porForma.entries()].sort((a, b) => colEs.compare(a[0], b[0])).map(([forma, g]) => ({
+    forma: limpia(forma), glosa: limpia(g[0]['glosa de la fuente']).replace(/\.$/, ''),
+    lugares: [...new Set(g.map(t => localidadDe(t)).filter(Boolean))].sort(colEs.compare),
+    fuentes: [...new Set(g.slice().sort(ordenT).map(t => { usadas.add(t.fuente); const p = pagina(t); return sigla(t.fuente) + (p ? ', ' + p : ''); }))]
+  }));
 
-  const formas = [...new Set([lema, ...todos.map(t => t.forma)].map(norm).filter(Boolean))];
-  const glosas = norm(as.map(a => limpia(a.glosa)).join(' '));
-  entradas.push({ id: L.lema_id, lema, h, f: formas, k: [...new Set(formas.map(clave))], g: glosas, g1: limpia(as[0].glosa), ts: todos });
+  // Observaciones, solo para el PDF de corrección: las marcas ++ del lema, de las acepciones y de los testimonios
+  const obs = [...marcasDe(L.marcas), ...as.flatMap(a => marcasDe(a.marcas).map(m => m + (varias ? ' (ac. ' + a['acepción'] + ')' : ''))),
+    ...todos.flatMap(t => marcasDe(t.marcas).map(m => m + ' (' + t.id + ')'))];
+  if (limpia(L['¿variante de?'])) obs.push('¿variante de ' + limpia(L['¿variante de?']) + '?');
+
+  // Avisos del PDF
+  if (fala.length && !ts.length) avisosPdf.push('lema solo con testimonios de la fala: ' + lema + ' (' + id + ')');
+  if (!propios.length) avisosPdf.push('sin testimonio con la forma del lema: ' + lema + ' (' + id + ')');
+  const col = new Set(String(L.variantes || '').split('·').map(x => x.trim()).filter(Boolean).map(clave));
+  const ks = new Set(variantes.map(v => v.k));
+  if (col.size !== ks.size || [...col].some(k => !ks.has(k)))
+    avisosPdf.push('la columna variantes no coincide con las formas: ' + lema + ' (' + id + '): columna «' + (L.variantes || '') + '»; formas «' + variantes.map(v => v.forma).join(' · ') + '»');
+  const gl = as.map(a => norm(a.glosa));
+  if (new Set(gl).size !== gl.length) avisosPdf.push('dos acepciones con la misma glosa: ' + lema + ' (' + id + ')');
+
+  return {
+    id, lema, lugares: lug, etimo: limpia(L['étimo']).replace(/^\[|\]$/g, ''),
+    acepciones: as.map(a => ({ n: a['acepción'], cat: limpia(a['categoría']), catDudosa: (a.marcas || '').includes('++cat++'), glosa: limpia(a.glosa), uso: limpia(a.marcas) })),
+    variantes: variantes.map(v => ({ letra: v.letra, forma: limpia(v.forma), lugares: v.lugares })),
+    fuentes, fala: falaD, vease: veaseDe(L), obs,
+    _ts: todos, _sinArea: !ts.length
+  };
+}
+
+// Las marcas de una página: «1c, 2a», con la glosa del informante tras la suya. Con lugar, si se pide, cuando la voz
+// se reparte entre varias obras y varios lugares, tras el último de las marcas seguidas que lo comparten: «2, 3, 4 (El Rebollar), 5 (El Payo)»
+function marcasTxt(ms, conLugar, esc_, gi_) {
+  const lugarDe = m => conLugar && m.ambiguo && m.lugares.length ? m.lugares.join(', ') : '';
+  const vis = ms.filter(m => m.c || m.gi || lugarDe(m));
+  return vis.map((m, i) => {
+    const l = lugarDe(m), sigue = m.c && vis[i + 1] && lugarDe(vis[i + 1]) === l && !vis[i + 1].gi && !m.gi;
+    return [esc_(m.c), m.gi ? gi_(m.gi) : '', l && !sigue ? '(' + esc_(l) + ')' : ''].filter(Boolean).join(' ');
+  }).join(', ');
+}
+// Una obra en Fuentes: «VIU 1980 p. 119: 2c; p. 120: 1, 2», «DTO 2009: 2c», «INF [A06]: 1 ‘harto de comida’»
+const sepMarcas = mt => mt.startsWith('(') ? ' ' : ': ';
+function fuenteTxt(f, conLugar, esc_, gi_) {
+  const pags = f.paginas.map(pg => ({ p: pg.p, mt: marcasTxt(pg.marcas, conLugar, esc_, gi_) }));
+  if (pags.length === 1 && !pags[0].p) return esc_(f.sigla) + (pags[0].mt ? sepMarcas(pags[0].mt) + pags[0].mt : '');
+  return esc_(f.sigla) + ' ' + pags.map(({ p, mt }) => { const pp = p || (mt ? 's. p.' : ''); return pp && mt ? esc_(pp) + sepMarcas(mt) + mt : pp ? esc_(pp) : mt; }).filter(Boolean).join('; ');
+}
+
+function htmlWeb(E) {
+  const varias = E.acepciones.length > 1;
+  const cat = a => a.catDudosa ? '' : a.cat;
+  const conUso = a => a.uso ? ` ${esc(punto(a.uso))}` : '';
+  let h = `<p class="e-cab"><span class="e-lema">${esc(E.lema)}</span>`;
+  if (!varias && cat(E.acepciones[0])) h += `. <i>${esc(cat(E.acepciones[0]))}</i>`;
+  if (E.lugares.length) h += ` (${esc(E.lugares.join(', '))})`;
+  if (E.etimo) h += ` [<i>${esc(E.etimo)}</i>]`;
+  h += '.';
+  if (!varias) h += ` <b>${esc(punto(mayus(E.acepciones[0].glosa)))}</b>${conUso(E.acepciones[0])}`;
+  else for (const a of E.acepciones) h += ` <b>${esc(a.n)}.</b> ${cat(a) ? `<i>${esc(cat(a))}</i> ` : ''}<b>${esc(punto(mayus(a.glosa)))}</b>${conUso(a)}`;
+  h += '</p>';
+  const lin = (et, txt) => `<p class="e-lin"><span class="e-et">${et}:</span> ${txt}.</p>`;
+  if (E.variantes.length) h += lin(E.variantes.length > 1 ? 'Variantes' : 'Variante', E.variantes.map(v => `<b>${esc(v.letra)}.</b> <i>${esc(v.forma)}</i>${v.lugares.length ? ` (${esc(v.lugares.join(', '))})` : ''}`).join('; '));
+  const gi = g => `<span class="e-gi">‘${esc(g)}’</span>`;
+  if (E.fuentes.length) h += lin(E.fuentes.length > 1 ? 'Fuentes' : 'Fuente', E.fuentes.map(f => fuenteTxt(f, LUGAR_EN_FUENTES, esc, gi)).join(' · '));
+  if (E.fala.length) h += lin('En la fala', E.fala.map(x => `<i>${esc(x.forma)}</i>${x.glosa ? ` ‘${esc(x.glosa)}’` : ''} (${[esc(x.lugares.join(', ')), esc(x.fuentes.join('; '))].filter(Boolean).join('; ')})`).join('; '));
+  // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
+  if (E.vease.length) h += lin('Véase', E.vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', '));
+  return h;
+}
+// El lugar de cada obra en Fuentes, cuando la voz se reparte entre varias obras y varios lugares: a decisión de Carlos
+// (punto 4 de la propuesta del 12/11/2026). Apagado mientras no lo decida.
+const LUGAR_EN_FUENTES = process.env.LUGAR_EN_FUENTES === '1';
+
+const entradas = [], datosPdf = [];
+for (const L of LEMAS) {
+  const E = componer(L);
+  if (!E) { if (limpia(L.lema)) avisos.push('Sin testimonios del área o sin acepciones: ' + L.lema_id + ' ' + limpia(L.lema)); continue; }
+  const { _ts: todos, _sinArea, ...datos } = E;
+  datosPdf.push(datos);
+  if (_sinArea) { avisos.push('Sin testimonios del área o sin acepciones: ' + L.lema_id + ' ' + E.lema); continue; }
+  const formas = [...new Set([E.lema, ...todos.map(t => t.forma)].map(norm).filter(Boolean))];
+  const glosas = norm(E.acepciones.map(a => a.glosa).join(' '));
+  entradas.push({ id: E.id, lema: E.lema, h: htmlWeb(E), f: formas, k: [...new Set(formas.map(clave))], g: glosas, g1: E.acepciones[0].glosa, ts: todos });
+}
+// Para el PDF: los datos de cada entrada, sin maquetar, y sus avisos. No toca nada de datos/.
+const iEnt = process.argv.indexOf('--entradas');
+if (iEnt > 0) {
+  const destino = path.resolve(process.argv[iEnt + 1]);
+  fs.writeFileSync(destino, JSON.stringify({ fecha: fechaEspejo, entradas: datosPdf, avisos: avisosPdf }));
+  console.log('entradas para el PDF:', datosPdf.length, 'lemas,', avisosPdf.length, 'avisos →', destino);
+  process.exit(0);
 }
 
 // Orden por el texto del lema (04-VOCABULARIO, «Orden»)
