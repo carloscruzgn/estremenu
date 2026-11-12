@@ -156,7 +156,7 @@ const enlace = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20').
 // Las reglas de la entrada viven solo aquí, para la web y para el papel (Carlos, 12/11/2026): componer() da los datos
 // de cada lema y htmlWeb() los maqueta para la web. El PDF (estremenu-base, herramientas/diccionario-pdf) los lee
 // de `--entradas <fichero>` y solo los maqueta, y lo mismo podría hacer Typst.
-// Variantes antes que Fuentes, cada variante con su letra; cada obra una sola vez, con sus páginas, y en cada página
+// Variantes antes que Fuentes, cada variante con su letra; acepciones, variantes y obras separadas por « | » (Carlos, 12/11/2026); cada obra una sola vez, con sus páginas, y en cada página
 // las marcas de lo que da: número de la acepción y letra de la variante, «2c»; sin letra, la forma del lema; con una
 // sola acepción, sin número (Carlos, 12/11/2026, sobre la propuesta de datos/diccionario/trabajo/fuentes-en-la-entrada-2026-11-12).
 const LETRAS = 'abcdefghijklmnopqrstuvwxyz';
@@ -287,7 +287,7 @@ function marcasTxt(ms, conLugar, esc_, gi_) {
     return [esc_(m.c), m.gi ? gi_(m.gi) : '', l && !sigue ? '(' + esc_(l) + ')' : ''].filter(Boolean).join(' ');
   }).join(', ');
 }
-// Una obra en Fuentes: «VIU 1980 p. 119: 2c; p. 120: 1, 2», «DTO 2009: 2c», «INF [A06]: 1 ‘harto de comida’»
+// Una obra en Fuentes, entre barras (Carlos, 12/11/2026): «VIU 1980 p. 119: 2c; p. 120: 1, 2», «DTO 2009: 2c», «INF [A06]: 1 ‘harto de comida’»
 const sepMarcas = mt => mt.startsWith('(') ? ' ' : ': ';
 function fuenteTxt(f, conLugar, esc_, gi_) {
   const pags = f.paginas.map(pg => ({ p: pg.p, mt: marcasTxt(pg.marcas, conLugar, esc_, gi_) }));
@@ -305,12 +305,12 @@ function htmlWeb(E) {
   if (E.etimo) h += ` [<i>${esc(E.etimo)}</i>]`;
   h += '.';
   if (!varias) h += ` <b>${esc(punto(mayus(E.acepciones[0].glosa)))}</b>${conUso(E.acepciones[0])}`;
-  else for (const a of E.acepciones) h += ` <b>${esc(a.n)}.</b> ${cat(a) ? `<i>${esc(cat(a))}</i> ` : ''}<b>${esc(punto(mayus(a.glosa)))}</b>${conUso(a)}`;
+  else E.acepciones.forEach((a, i) => { h += `${i ? ' |' : ''} <b>${esc(a.n)}.</b> ${cat(a) ? `<i>${esc(cat(a))}</i> ` : ''}<b>${esc(punto(mayus(a.glosa)))}</b>${conUso(a)}`; });
   h += '</p>';
   const lin = (et, txt) => `<p class="e-lin"><span class="e-et">${et}:</span> ${txt}.</p>`;
-  if (E.variantes.length) h += lin(E.variantes.length > 1 ? 'Variantes' : 'Variante', E.variantes.map(v => `<b>${esc(v.letra)}.</b> <i>${esc(v.forma)}</i>${v.lugares.length ? ` (${esc(v.lugares.join(', '))})` : ''}`).join('; '));
+  if (E.variantes.length) h += lin(E.variantes.length > 1 ? 'Variantes' : 'Variante', E.variantes.map(v => `<b>${esc(v.letra)}.</b> <i>${esc(v.forma)}</i>${v.lugares.length ? ` (${esc(v.lugares.join(', '))})` : ''}`).join(' | '));
   const gi = g => `<span class="e-gi">‘${esc(g)}’</span>`;
-  if (E.fuentes.length) h += lin(E.fuentes.length > 1 ? 'Fuentes' : 'Fuente', E.fuentes.map(f => fuenteTxt(f, LUGAR_EN_FUENTES, esc, gi)).join(' · '));
+  if (E.fuentes.length) h += lin(E.fuentes.length > 1 ? 'Fuentes' : 'Fuente', E.fuentes.map(f => fuenteTxt(f, LUGAR_EN_FUENTES, esc, gi)).join(' | '));
   if (E.fala.length) h += lin('En la fala', E.fala.map(x => `<i>${esc(x.forma)}</i>${x.glosa ? ` ‘${esc(x.glosa)}’` : ''} (${[esc(x.lugares.join(', ')), esc(x.fuentes.join('; '))].filter(Boolean).join('; ')})`).join('; '));
   // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
   if (E.vease.length) h += lin('Véase', E.vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', '));
