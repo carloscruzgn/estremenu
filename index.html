@@ -428,6 +428,11 @@ span.fila .tit { color: var(--texto-2) }
 .dic-ficha .e-et { font-variant: small-caps; letter-spacing: .04em; color: #555 }
 .dic-ficha .e-vease { color: inherit; text-decoration: underline; text-decoration-color: #b84c1e; text-underline-offset: 2px }
 .dic-ficha .e-vease:hover { color: #b84c1e }
+/* Lo que se abre al tocarlo: la comarca, con sus pueblos, y la sigla, con su referencia y sus lugares (Carlos, 12/11/2026) */
+.dic-ficha .e-tip, .dic-ficha .e-sig { text-decoration: underline dotted; text-decoration-color: #b84c1e; text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: pointer; border-radius: 2px }
+.dic-ficha .e-tip:focus-visible, .dic-ficha .e-sig:focus-visible { outline: 2px solid #b84c1e; outline-offset: 1px }
+#dic-tip { position: absolute; z-index: 60; max-width: min(380px, calc(100vw - 32px)); background: #1b1b1b; color: #f6eedf; font-family: 'EB Garamond', Garamond, 'Times New Roman', serif; font-size: 16px; line-height: 1.35; padding: 9px 12px; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,.4); white-space: pre-line; pointer-events: none }
+#dic-tip[hidden] { display: none }
 .dic-ficha .pie-ficha { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 12px; border-top: 1px solid #d8c9ac; font-family: var(--f); font-size: 13px }
 .dic-ficha .pie-ficha button { font: inherit; font-weight: 800; color: #b84c1e; background: none; border: 0; padding: 4px 0; cursor: pointer }
 .dic-ficha .pie-ficha button:disabled { color: #bbb; cursor: default }
@@ -1640,7 +1645,7 @@ function fichaEnLista(ul, ev, sel) {
   const vease = ev.target.closest('.ix-ficha a.e-vease');
   if (vease) {
     const q = normDic(decodeURIComponent(vease.getAttribute('href').replace(/^#voz\//, ''))), e = DIC.e.find(x => normDic(x[1]) === q);
-    if (e) { ev.preventDefault(); const f = vease.closest('.ix-ficha'); f.innerHTML = fichaIx(e); f.scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' }); }
+    if (e) { ev.preventDefault(); const f = vease.closest('.ix-ficha'); f.innerHTML = fichaIx(e); prepTips(f); f.scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' }); }
     return;
   }
   if (ev.target.closest('.ix-ficha')) return;
@@ -1651,6 +1656,7 @@ function fichaEnLista(ul, ev, sel) {
   if (abierta) return;
   const e = DIC.e[DIC.idx[a.dataset.id]]; if (!e) return;
   li.insertAdjacentHTML('beforeend', `<article class="dic-ficha ix-ficha" aria-live="polite">${fichaIx(e)}</article>`);
+  prepTips(li);
   li.querySelector('.ix-ficha').scrollIntoView({ block: 'nearest', behavior: sinMov ? 'auto' : 'smooth' });
 }
 const fichaIx = e => e[2] + `<div class="pie-ficha"><a href="${enlaceVoz(e[1])}">En el diccionario →</a><button type="button" class="ix-cerrar">Cerrar ✕</button></div>`;
@@ -1798,8 +1804,10 @@ function verEntrada(id, desplazar = true) {
   fichaActual = i;
   const e = DIC.e[i], ant = DIC.e[i - 1], sig = DIC.e[i + 1];
   const f = $('dic-ficha');
+  if (typeof cierraTip === 'function') cierraTip();
   f.innerHTML = e[2] + `<div class="pie-ficha"><button type="button" data-id="${ant ? ant[0] : ''}"${ant ? '' : ' disabled'}>‹ ${ant ? esc(ant[1]) : ''}</button><button type="button" data-id="${sig ? sig[0] : ''}"${sig ? '' : ' disabled'}>${sig ? esc(sig[1]) : ''} ›</button></div>`;
   // La dirección de la palabra queda en la barra, sin añadir un paso al historial
+  prepTips(f);
   try { history.replaceState(null, '', enlaceVoz(e[1])); document.title = '«' + e[1] + '» · Diccionario · Taller de estremeñu'; } catch (er) {}
   f.hidden = false;
   const cp = $('dic-comparte'); cp.dataset.voz = e[1]; cp.hidden = false;
@@ -1938,6 +1946,42 @@ $('dic-taller-lista').addEventListener('click', ev => fichaEnLista($('dic-taller
 for (const id of ['dic-ficha', 'f-ya']) $(id).addEventListener('click', ev => {
   const b = ev.target.closest('button[data-id]'); if (b && b.dataset.id) verEntrada(b.dataset.id, id !== 'dic-ficha');
 });
+
+// ---------- la ventanita de la ficha (Carlos, 12/11/2026) ----------
+// La comarca subrayada de puntos enseña sus pueblos; la sigla, su referencia, de la lista de fuentes, y los lugares que
+// da en la palabra. Con el ratón se abre al pasar por encima; con el dedo, al tocar, y se cierra al tocar fuera.
+const tipBox = document.createElement('div'); tipBox.id = 'dic-tip'; tipBox.hidden = true; tipBox.setAttribute('role', 'tooltip');
+document.body.appendChild(tipBox);
+let tipDe = null, tactil = false;
+const prepTips = r => { for (const el of r.querySelectorAll('.dic-ficha [data-tip]')) { el.tabIndex = 0; el.setAttribute('role', 'button'); } };
+const refSigla = s => ((DIC && DIC.fuentes || []).find(f => f.sigla === s) || { ref: '' }).ref.replace(/\*/g, '');
+function abreTip(el) {
+  const t = [el.classList.contains('e-sig') ? refSigla(el.textContent) : '', el.dataset.tip].filter(Boolean).join('\n');
+  if (!t) return;
+  tipBox.textContent = t; tipBox.hidden = false; tipDe = el;
+  const r = el.getBoundingClientRect(), w = tipBox.offsetWidth, h = tipBox.offsetHeight, ancho = document.documentElement.clientWidth;
+  const x = Math.max(16, Math.min(r.left, ancho - w - 16));
+  const y = r.bottom + h + 12 > innerHeight && r.top > h + 12 ? r.top - h - 6 : r.bottom + 6;
+  tipBox.style.left = (x + scrollX) + 'px'; tipBox.style.top = (y + scrollY) + 'px';
+}
+function cierraTip() { tipBox.hidden = true; tipDe = null; }
+const tipDeEv = ev => ev.target.closest && ev.target.closest('.dic-ficha [data-tip]');
+document.addEventListener('pointerdown', ev => { tactil = ev.pointerType !== 'mouse'; });
+document.addEventListener('pointerover', ev => { if (ev.pointerType !== 'mouse') return; const el = tipDeEv(ev); if (el && el !== tipDe) abreTip(el); });
+document.addEventListener('pointerout', ev => { if (ev.pointerType !== 'mouse' || !tipDe) return; if (!tipDe.contains(ev.relatedTarget)) cierraTip(); });
+document.addEventListener('click', ev => {
+  const el = tipDeEv(ev);
+  if (!el) { if (tipDe) cierraTip(); return; }
+  if (tactil && tipDe === el) cierraTip(); else abreTip(el);
+});
+document.addEventListener('focusin', ev => { const el = tipDeEv(ev); if (el && !tactil) abreTip(el); });
+document.addEventListener('focusout', ev => { if (tipDe && ev.target === tipDe) cierraTip(); });
+document.addEventListener('keydown', ev => {
+  if (ev.key === 'Escape' && tipDe) { cierraTip(); return; }
+  const el = tipDeEv(ev); if (el && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); tipDe === el ? cierraTip() : abreTip(el); }
+});
+addEventListener('scroll', () => { if (tipDe && !tactil) cierraTip(); }, { passive: true });
+addEventListener('resize', () => { if (tipDe) cierraTip(); });
 
 // ---------- el formulario ----------
 // La clave se comprueba en la página contra datos/claves.json (SHA-256 de la sal más la clave normalizada):
