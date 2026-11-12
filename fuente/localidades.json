@@ -70,6 +70,14 @@
       "fuente": "IGN, Nomenclátor Geográfico de Municipios y Entidades de Población, Cerezal (10135000301), consultado el 05/11/2026"
     },
     {
+      "nombre": "El Arco",
+      "municipio": "Cañaveral",
+      "termino": "10045",
+      "lat": 39.7952,
+      "lon": -6.4132,
+      "fuente": "Espinosa 1935, p. xviii, situado por Carlos el 11/11/2026, en estremenu-base, datos/lugares.csv"
+    },
+    {
       "nombre": "El Gasco",
       "municipio": "Nuñomoral",
       "termino": "10135",
@@ -126,6 +134,14 @@
       "fuente": "en.wikipedia.org/wiki/Huetre,_Casares_de_las_Hurdes"
     },
     {
+      "nombre": "La Muela",
+      "municipio": "Pinofranqueado",
+      "termino": "10146",
+      "lat": 40.3136,
+      "lon": -6.3283,
+      "fuente": "IGN, Muela (10146000701), en estremenu-base, datos/lugares.csv"
+    },
+    {
       "nombre": "Las Mestas",
       "municipio": "Ladrillar",
       "termino": "10108",
@@ -180,6 +196,22 @@
       "lat": 40.38611,
       "lon": -6.18306,
       "fuente": "en.wikipedia.org/wiki/Vegas_de_Coria"
+    },
+    {
+      "nombre": "Vegas de Domingo Rey",
+      "municipio": "Agallas",
+      "termino": "37002",
+      "lat": 40.4426,
+      "lon": -6.3973,
+      "fuente": "IGN, Vegas de Domingo Rey (37002000201), en estremenu-base, datos/lugares.csv"
+    },
+    {
+      "nombre": "Villarreal de San Carlos",
+      "municipio": "Serradilla",
+      "termino": "10175",
+      "lat": 39.8471,
+      "lon": -6.0294,
+      "fuente": "IGN, Villarreal de San Carlos (10175000201), en estremenu-base, datos/lugares.csv"
     }
   ]
 }
