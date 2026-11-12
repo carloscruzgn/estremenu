@@ -119,6 +119,8 @@ function lugares(ts) {
     const [[c, v]] = [...com];
     if (v.sola || v.locs.size > 3) out.push(c); else out.push(...v.locs);
   } else for (const [c, v] of com) out.push(v.sola || v.locs.size >= 2 ? c : [...v.locs][0]);
+  // Coria, de Viudas, junto a lo de Cummins sin pueblo: basta «Coria y sus cercanías» (Carlos, 12/11/2026)
+  if (out.includes('Coria y sus cercanías')) { const i = out.indexOf('Coria'); if (i >= 0) out.splice(i, 1); }
   return out.sort(colEs.compare);
 }
 
@@ -224,23 +226,12 @@ function componer(L) {
     const c = codigo(t), gi = glosaInf(t, glosaAc), key = c + '|' + gi;
     (m.get(key) || m.set(key, { c, gi, ts: [] }).get(key)).ts.push(t);
   }
-  // Lo que da cada voz, para saber si sus lugares se reparten entre varias obras
-  const vozDeCod = c => c.replace(/^\d+/, '');
-  const siglasVoz = new Map();
-  for (const [s, pags] of porSigla) for (const m of pags.values()) for (const x of m.values()) {
-    const v = vozDeCod(x.c); (siglasVoz.get(v) || siglasVoz.set(v, new Set()).get(v)).add(s);
-  }
-  const lugVoz = v => v === '' ? lug : (variantes.find(x => x.letra === v) || {}).lugares || [];
   const ordenCod = (a, b) => (parseInt(a.c) || 0) - (parseInt(b.c) || 0) || (a.c < b.c ? -1 : a.c > b.c ? 1 : 0);
   const ordenPag = (a, b) => a[0] === '' ? 1 : b[0] === '' ? -1 : a[0].localeCompare(b[0], 'es', { numeric: true });
   const fuentes = [...porSigla.entries()].map(([s, pags]) => ({
     sigla: s,
     paginas: [...pags.entries()].sort(ordenPag).map(([p, m]) => ({
-      p, marcas: [...m.values()].sort(ordenCod).map(x => {
-        const v = vozDeCod(x.c);
-        // ambiguo: la voz sale en más de un lugar y la dan varias obras, así que sus lugares no dicen de qué obra es cada uno
-        return { c: x.c, gi: x.gi, lugares: lugares(x.ts), ambiguo: lugVoz(v).length > 1 && (siglasVoz.get(v) || new Set()).size > 1 };
-      })
+      p, marcas: [...m.values()].sort(ordenCod).map(x => ({ c: x.c, gi: x.gi, lugares: lugares(x.ts) }))
     }))
   }));
 
@@ -270,29 +261,22 @@ function componer(L) {
 
   return {
     id, lema, lugares: lug, etimo: limpia(L['étimo']).replace(/^\[|\]$/g, ''),
-    acepciones: as.map(a => ({ n: a['acepción'], cat: limpia(a['categoría']), catDudosa: (a.marcas || '').includes('++cat++'), glosa: limpia(a.glosa), uso: limpia(a.marcas) })),
+    acepciones: as.map(a => ({ n: a['acepción'], cat: limpia(a['categoría']), catDudosa: (a.marcas || '').includes('++cat++'), glosa: limpia(a.glosa), uso: limpia(a.marcas), lugares: lugares(ts.filter(t => t['acepción'] === a['acepción'])) })),
     variantes: variantes.map(v => ({ letra: v.letra, forma: limpia(v.forma), lugares: v.lugares })),
     fuentes, fala: falaD, vease: veaseDe(L), obs,
     _ts: todos, _sinArea: !ts.length
   };
 }
 
-// Las marcas de una página: «1c, 2a», con la glosa del informante tras la suya. Con lugar, si se pide, cuando la voz
-// se reparte entre varias obras y varios lugares, tras el último de las marcas seguidas que lo comparten: «2, 3, 4 (El Rebollar), 5 (El Payo)»
-function marcasTxt(ms, conLugar, esc_, gi_) {
-  const lugarDe = m => conLugar && m.ambiguo && m.lugares.length ? m.lugares.join(', ') : '';
-  const vis = ms.filter(m => m.c || m.gi || lugarDe(m));
-  return vis.map((m, i) => {
-    const l = lugarDe(m), sigue = m.c && vis[i + 1] && lugarDe(vis[i + 1]) === l && !vis[i + 1].gi && !m.gi;
-    return [esc_(m.c), m.gi ? gi_(m.gi) : '', l && !sigue ? '(' + esc_(l) + ')' : ''].filter(Boolean).join(' ');
-  }).join(', ');
+// Las marcas de una página: «1c, 2a», con la glosa del informante tras la suya
+function marcasTxt(ms, esc_, gi_) {
+  return ms.filter(m => m.c || m.gi).map(m => [esc_(m.c), m.gi ? gi_(m.gi) : ''].filter(Boolean).join(' ')).join(', ');
 }
 // Una obra en Fuentes, entre barras (Carlos, 12/11/2026): «VIU 1980 p. 119: 2c; p. 120: 1, 2», «DTO 2009: 2c», «INF [A06]: 1 ‘harto de comida’»
-const sepMarcas = mt => mt.startsWith('(') ? ' ' : ': ';
-function fuenteTxt(f, conLugar, esc_, gi_) {
-  const pags = f.paginas.map(pg => ({ p: pg.p, mt: marcasTxt(pg.marcas, conLugar, esc_, gi_) }));
-  if (pags.length === 1 && !pags[0].p) return esc_(f.sigla) + (pags[0].mt ? sepMarcas(pags[0].mt) + pags[0].mt : '');
-  return esc_(f.sigla) + ' ' + pags.map(({ p, mt }) => { const pp = p || (mt ? 's. p.' : ''); return pp && mt ? esc_(pp) + sepMarcas(mt) + mt : pp ? esc_(pp) : mt; }).filter(Boolean).join('; ');
+function fuenteTxt(f, esc_, gi_) {
+  const pags = f.paginas.map(pg => ({ p: pg.p, mt: marcasTxt(pg.marcas, esc_, gi_) }));
+  if (pags.length === 1 && !pags[0].p) return esc_(f.sigla) + (pags[0].mt ? ': ' + pags[0].mt : '');
+  return esc_(f.sigla) + ' ' + pags.map(({ p, mt }) => { const pp = p || (mt ? 's. p.' : ''); return pp && mt ? esc_(pp) + ': ' + mt : pp ? esc_(pp) : mt; }).filter(Boolean).join('; ');
 }
 
 function htmlWeb(E) {
@@ -301,24 +285,46 @@ function htmlWeb(E) {
   const conUso = a => a.uso ? ` ${esc(punto(a.uso))}` : '';
   let h = `<p class="e-cab"><span class="e-lema">${esc(E.lema)}</span>`;
   if (!varias && cat(E.acepciones[0])) h += `. <i>${esc(cat(E.acepciones[0]))}</i>`;
-  if (E.lugares.length) h += ` (${esc(E.lugares.join(', '))})`;
+  const lugAc = varias && LUGAR_EN_ACEPCION;
+  if (E.lugares.length && !lugAc) h += ` (${esc(E.lugares.join(', '))})`;
   if (E.etimo) h += ` [<i>${esc(E.etimo)}</i>]`;
   h += '.';
   if (!varias) h += ` <b>${esc(punto(mayus(E.acepciones[0].glosa)))}</b>${conUso(E.acepciones[0])}`;
-  else E.acepciones.forEach((a, i) => { h += `${i ? ' |' : ''} <b>${esc(a.n)}.</b> ${cat(a) ? `<i>${esc(cat(a))}</i> ` : ''}<b>${esc(punto(mayus(a.glosa)))}</b>${conUso(a)}`; });
+  else E.acepciones.forEach((a, i) => { h += `${i ? ' |' : ''} <b>${esc(a.n)}.</b> ${lugAc && a.lugares.length ? `(${esc(a.lugares.join(', '))}) ` : ''}${cat(a) ? `<i>${esc(cat(a))}</i> ` : ''}<b>${esc(punto(mayus(a.glosa)))}</b>${conUso(a)}`; });
   h += '</p>';
   const lin = (et, txt) => `<p class="e-lin"><span class="e-et">${et}:</span> ${txt}.</p>`;
   if (E.variantes.length) h += lin(E.variantes.length > 1 ? 'Variantes' : 'Variante', E.variantes.map(v => `<b>${esc(v.letra)}.</b> <i>${esc(v.forma)}</i>${v.lugares.length ? ` (${esc(v.lugares.join(', '))})` : ''}`).join(' | '));
   const gi = g => `<span class="e-gi">‘${esc(g)}’</span>`;
-  if (E.fuentes.length) h += lin(E.fuentes.length > 1 ? 'Fuentes' : 'Fuente', E.fuentes.map(f => fuenteTxt(f, LUGAR_EN_FUENTES, esc, gi)).join(' | '));
+  if (E.fuentes.length) h += lin(E.fuentes.length > 1 ? 'Fuentes' : 'Fuente', (INF_JUNTOS ? infJuntos(E.fuentes) : E.fuentes).map(f => f.inf ? infTxt(f, esc, gi) : fuenteTxt(f, esc, gi)).join(' | '));
   if (E.fala.length) h += lin('En la fala', E.fala.map(x => `<i>${esc(x.forma)}</i>${x.glosa ? ` ‘${esc(x.glosa)}’` : ''} (${[esc(x.lugares.join(', ')), esc(x.fuentes.join('; '))].filter(Boolean).join('; ')})`).join('; '));
   // Véase: lemas distintos que conviene leer juntos (04-VOCABULARIO), con enlace a su ficha (19/10/2026)
   if (E.vease.length) h += lin('Véase', E.vease.map(v => `<a class="e-vease" href="${esc(enlace(v))}"><i>${esc(v)}</i></a>`).join(', '));
   return h;
 }
-// El lugar de cada obra en Fuentes, cuando la voz se reparte entre varias obras y varios lugares: a decisión de Carlos
-// (punto 4 de la propuesta del 12/11/2026). Apagado mientras no lo decida.
-const LUGAR_EN_FUENTES = process.env.LUGAR_EN_FUENTES === '1';
+// En el papel desde el 12/11/2026 (Carlos); en la web, apagadas mientras no lo decida: los lugares de cada acepción tras
+// su número, cuando hay más de una, en vez de en la cabecera; y los informantes del taller en una sola entrada de Fuentes,
+// «INF [A03, A04; a: A02]». generar.py del PDF hace lo mismo (lug_ac e inf_txt).
+const LUGAR_EN_ACEPCION = process.env.LUGAR_EN_ACEPCION === '1';
+const INF_JUNTOS = process.env.INF_JUNTOS === '1';
+function infJuntos(fuentes) {
+  const inf = fuentes.filter(f => /^INF \[/.test(f.sigla));
+  if (inf.length < 2) return fuentes;
+  const marcas = inf.flatMap(f => f.paginas.flatMap(p => p.marcas.map(m => ({ ...m, cod: f.sigla.replace(/^INF \[|\]$/g, '') }))));
+  const i = fuentes.indexOf(inf[0]);
+  const resto = fuentes.filter(f => !inf.includes(f));
+  resto.splice(i, 0, { inf: true, marcas });
+  return resto;
+}
+// «INF [A03, A04, A05; a: A02, A09; 1b: A04 ‘chozo de trashumancia’]»: por marcas, con la glosa del informante aparte
+function infTxt(f, esc_, gi_) {
+  const ord = (a, b) => (parseInt(a) || 0) - (parseInt(b) || 0) || (a < b ? -1 : a > b ? 1 : 0);
+  const sin = new Map(), con = [];
+  for (const m of f.marcas) if (m.gi) con.push(m); else (sin.get(m.c) || sin.set(m.c, []).get(m.c)).push(m.cod);
+  const partes = [...sin.entries()].map(([c, cs]) => ({ c, t: (c ? esc_(c) + ': ' : '') + cs.map(esc_).join(', ') }))
+    .concat(con.map(m => ({ c: m.c, t: (m.c ? esc_(m.c) + ': ' : '') + esc_(m.cod) + ' ' + gi_(m.gi) })));
+  partes.sort((a, b) => a.c === b.c ? 0 : a.c === '' ? -1 : b.c === '' ? 1 : ord(a.c, b.c));
+  return 'INF [' + partes.map(p => p.t).join('; ') + ']';
+}
 
 const entradas = [], datosPdf = [];
 for (const L of LEMAS) {
