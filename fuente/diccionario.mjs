@@ -166,6 +166,8 @@ function veaseDe(L) {
 const enlace = lema => '#voz/' + lema.replace(/%/g, '%25').replace(/ /g, '%20').replace(/#/g, '%23');
 
 // ---------- la entrada, como datos ----------
+// La regla de las variantes (clave, clavesLema y vozDe) está copiada en el Apps Script de la hoja, variantes_, para su
+// columna «variantes» (versión 2.2): si cambia aquí, cambia allí.
 // Las reglas de la entrada viven solo aquí, para la web y para el papel (Carlos, 12/11/2026): componer() da los datos
 // de cada lema y htmlWeb() los maqueta para la web. El PDF (estremenu-base, herramientas/diccionario-pdf) los lee
 // de `--entradas <fichero>` y solo los maqueta, y lo mismo podría hacer Typst.
