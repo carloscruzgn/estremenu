@@ -1956,7 +1956,9 @@ let tipDe = null, tactil = false;
 const prepTips = r => { for (const el of r.querySelectorAll('.dic-ficha [data-tip]')) { el.tabIndex = 0; el.setAttribute('role', 'button'); } };
 const refSigla = s => ((DIC && DIC.fuentes || []).find(f => f.sigla === s) || { ref: '' }).ref.replace(/\*/g, '');
 function abreTip(el) {
-  const t = [el.classList.contains('e-sig') ? refSigla(el.textContent) : '', el.dataset.tip].filter(Boolean).join('\n');
+  // La sigla: sus lugares en la palabra entre paréntesis y, detrás, su referencia; INF no tiene referencia y va tal cual
+  const ref = el.classList.contains('e-sig') ? refSigla(el.textContent) : '';
+  const t = ref ? (el.dataset.tip ? '(' + el.dataset.tip + ') ' : '') + ref : el.dataset.tip;
   if (!t) return;
   tipBox.textContent = t; tipBox.hidden = false; tipDe = el;
   const r = el.getBoundingClientRect(), w = tipBox.offsetWidth, h = tipBox.offsetHeight, ancho = document.documentElement.clientWidth;

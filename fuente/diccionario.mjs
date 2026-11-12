@@ -106,7 +106,7 @@ function localidadDe(t) {
   return l;
 }
 // lugaresCon: la lista y, de cada comarca que está en lugar de dos pueblos o más, o de pueblos y testimonios sin pueblo,
-// lo que la web enseña al tocarla: «Caminomorisco, Pinofranqueado y sin pueblo» (Carlos, 12/11/2026)
+// lo que la web enseña al tocarla: «Caminomorisco, Pinofranqueado. Sin precisar el pueblo: VEL 1956.» (Carlos, 12/11/2026)
 function lugares(ts) { return lugaresCon(ts).lista; }
 function lugaresCon(ts) {
   const com = new Map(), sueltas = new Set();
@@ -114,8 +114,8 @@ function lugaresCon(ts) {
     if (t.localidad === SIN || t.comarca === SIN || (!t.comarca && !t.localidad)) continue;
     const c = comarcaDe(t), l = localidadDe(t);
     if (!c) { if (l) sueltas.add(l); continue; }
-    if (!com.has(c)) com.set(c, { locs: new Set(), sola: false });
-    if (l) com.get(c).locs.add(l); else com.get(c).sola = true;
+    if (!com.has(c)) com.set(c, { locs: new Set(), sola: false, sin: new Set() });
+    if (l) com.get(c).locs.add(l); else { com.get(c).sola = true; com.get(c).sin.add(sigla(t.fuente)); }
   }
   const out = [...sueltas];
   if (com.size === 1) {
@@ -129,7 +129,8 @@ function lugaresCon(ts) {
   for (const c of out) {
     const v = com.get(c); if (!v) continue;
     const ps = [...v.locs, ...(c === 'Coria y sus cercanías' && coria ? ['Coria'] : [])].sort(colEs.compare);
-    if (ps.length >= 2 || (ps.length && v.sola)) tips[c] = ps.join(', ') + (v.sola ? (ps.length ? ' y sin pueblo' : '') : '');
+    // Con testimonios sin pueblo, las obras que no lo precisan, por su sigla (Carlos, 12/11/2026): «Cilleros. Sin precisar el pueblo: IGL 1990.»
+    if (ps.length >= 2 || (ps.length && v.sola)) tips[c] = ps.join(', ') + '.' + (v.sola ? ' Sin precisar el pueblo: ' + [...v.sin].join(', ') + '.' : '');
   }
   return { lista: out.sort(colEs.compare), tips };
 }
@@ -295,8 +296,9 @@ function fuenteTxt(f, esc_, gi_, sig_ = f => esc_(f.sigla)) {
 const tip = (txt, contenido, cls = 'e-tip') => `<span class="${cls}" data-tip="${esc(contenido)}">${esc(txt)}</span>`;
 const lugTxt = (lista, tips) => lista.map(l => tips && tips[l] ? tip(l, tips[l]) : esc(l)).join(', ');
 // La sigla: su referencia la pone index.html desde la lista de fuentes de diccionario.json, por el texto de la sigla,
-// para no repetirla en cada entrada; aquí van solo los lugares que da en la palabra
-const sigTip = f => tip(f.sigla, f.lugaresObra.length ? 'En esta palabra: ' + f.lugaresObra.join(', ') + '.' : '', 'e-sig');
+// para no repetirla en cada entrada; aquí van solo los lugares que da en la palabra, que index.html pone delante entre
+// paréntesis: «(Garrovillas, Guijo de Granadilla) Viudas Camarasa, Antonio, …» (Carlos, 12/11/2026)
+const sigTip = f => tip(f.sigla, f.lugaresObra.join(', '), 'e-sig');
 function htmlWeb(E) {
   const varias = E.acepciones.length > 1;
   const cat = a => a.catDudosa ? '' : a.cat;
