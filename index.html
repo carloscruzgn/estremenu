@@ -2056,7 +2056,7 @@ function pintarListaTextos() {
   const orden = [...TX].sort((a, b) => (pendiente(a) - pendiente(b)) || (a.leido || '').localeCompare(b.leido || ''));
   $('lista-textos').innerHTML = orden.map(t => `<li><a href="#${t.codigo}"><span class="fecha">${pendiente(t) ? 'Pendiente <br>de leer' : `Leído el <br>${fecha(t.leido)}`}</span><span><h3>${esc(t.titulo)}</h3><span class="de">${esc(t.autor)}</span>
     <span class="chips">${t.rasgos.map((c, k) => `<span class="chip" style="--c:${COLORES_R[k]}">${c}</span>`).join('')}</span></span></a></li>`).join('');
-  const n = TX.length, nombres = ['Ningún texto', 'Un texto', 'Dos textos', 'Tres textos', 'Cuatro textos', 'Cinco textos'];
+  const n = TX.length, nombres = ['Ningún texto', 'Un texto', 'Dos textos', 'Tres textos', 'Cuatro textos', 'Cinco textos', 'Seis textos', 'Siete textos', 'Ocho textos', 'Nueve textos', 'Diez textos'];
   $('estado-textos').textContent = nombres[n] || n + ' textos';
 }
 function pintarTexto(t) {
@@ -2092,7 +2092,7 @@ function pintarTexto(t) {
   // Cada rasgo: el botón lo selecciona (y lo quita al tocarlo otra vez) y la flecha lleva a su página (Carlos, 19/10/2026)
   const panel = t.rasgos.map(c => `<li style="--c:${col[c]}"><button type="button" class="rasgo-sel" data-foco="${c}" aria-pressed="false"><span class="sw"></span><span><span class="cod">${c}</span><span class="tt">${esc(tituloR(c))}</span><span class="cu">${cuenta[c]} ${cuenta[c] === 1 ? 'palabra' : 'palabras'} en el texto</span></span></button><a class="ir-rasgo" href="#${c}" aria-label="Página del rasgo ${c}" title="Página del rasgo">→</a></li>`).join('');
   $('texto-pag').innerHTML = `<div class="tcab"><a class="volver" href="#textos">← Los textos del taller</a>
-      <div class="antetitulo" style="margin-top:18px">${t.tipo === 'poema' ? 'Poema' : t.tipo === 'teatro' ? 'Teatro' : 'Conversación grabada'}</div>
+      <div class="antetitulo" style="margin-top:18px">${t.etiqueta || (t.tipo === 'poema' ? 'Poema' : t.tipo === 'teatro' ? 'Teatro' : 'Conversación grabada')}</div>
       <h2>${esc(t.titulo)}</h2>
       <p class="meta"><b>${esc(t.autor)}</b>. ${esc(t.fuente)} ${esc(t.grafia)}</p>
       <span class="leido">${pendiente(t) ? 'Pendiente de leer en el taller' : `Leído en el taller el ${fecha(t.leido)}`}</span>${tarjetaAutor(t)}</div>

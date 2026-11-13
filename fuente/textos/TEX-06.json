@@ -1,0 +1,2686 @@
+{
+ "codigo": "TEX-06",
+ "corpus": "MAR-E44",
+ "titulo": "Charla de viejos",
+ "tipo": "teatro",
+ "etiqueta": "Poema en diálogo",
+ "autor": "Pedro Águila",
+ "fuente": "«Charla de viejos del habla antigua extremeña o sea propia del pueblo», poema publicado en El Radical, Cáceres, el 27 de septiembre de 1932.",
+ "grafia": "Con la grafía del periódico. Quién habla lo ha puesto el taller: el periódico solo marca el cambio con una raya.",
+ "leido": null,
+ "rasgos": [
+  "C08",
+  "C06",
+  "C09"
+ ],
+ "bloques": [
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Acacha, Rufinu;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Manuel, ¿andi vas?"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "w": "Sental",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " que jumemus"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "hacia la abrigá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y hablemus en tantu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "la tardi se vá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que nunca nos vemus."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¿Y qué tal sus vá?"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Diremus que bien"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "por no "
+    },
+    {
+     "w": "varial",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "En esi bolsicu (arrima p'acá)"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "está la petaca;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "cogéla, y "
+    },
+    {
+     "w": "jumal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¿Te dan pa tabacu?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que a mí no me dan;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "al verdi o a colas"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tenemus que "
+    },
+    {
+     "w": "andal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "A vecis, Rufinu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "según comu va,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me dan pa una caja"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de jigus allá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de sieti a ocho días"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me sueli "
+    },
+    {
+     "w": "dural",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "jumandu con cuenta,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu es natural;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "mi hija la probi,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se ve mú apretá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con tanta familia,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "la cosa anda mal."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pos yo estoy aburríu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y me voy a "
+    },
+    {
+     "w": "jartal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "en casa los nietus,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "su "
+    },
+    {
+     "w": "mairi",
+     "r": [
+      "C08"
+     ]
+    },
+    {
+     "t": " se vá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "el unu, se caga,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "el otru, pim, pam;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "si riñin, si lloran,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "quejal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " y "
+    },
+    {
+     "w": "empachal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "están toitu el día"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con esta toná;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "si unu le riñi,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "su "
+    },
+    {
+     "w": "pairi",
+     "r": [
+      "C08"
+     ]
+    },
+    {
+     "t": " se enfá."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¡Carachu, Rufinu!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pues esu está mal;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "por un torniscón"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se quierin igual;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y mañana u otru día"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se lo han de "
+    },
+    {
+     "w": "encontral",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa luegu ha "
+    },
+    {
+     "w": "e'sel",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " tardi"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "poelus "
+    },
+    {
+     "w": "domal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pues yo andu maletu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "jadi",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "t": " un mes ya,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con unos doloris"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que tengu aquí atrás"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y una "
+    },
+    {
+     "w": "pereda",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que no pueu "
+    },
+    {
+     "w": "andal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Será el rumatismu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "del tiempu que está."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "O será la vejez,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que los años se van."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¿Y el méicu, t'ha vistu?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que asina estás mal."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "El méicu, Domingu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me está un caporal..."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "el caldu o la purga"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me sueli "
+    },
+    {
+     "w": "mandal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y me "
+    },
+    {
+     "w": "idi",
+     "r": [
+      "C09"
+     ]
+    },
+    {
+     "t": " la nuera:"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "—tenga p'allá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y cuántu tormentu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "mos tieni que "
+    },
+    {
+     "w": "dal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y allí me lo poni"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y cogi y se vá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "sin gana ni juerza,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "como es natural,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de esa manera,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡cómu he "
+    },
+    {
+     "w": "arrecial",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pues tu hijo Manuel"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "paicía "
+    },
+    {
+     "w": "rigulal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Peru ella es un dumbin;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se porta mu mal,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "siempri con jocicu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "si me sientu a "
+    },
+    {
+     "w": "estorbal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de la lumbri arredín"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me tengu que "
+    },
+    {
+     "w": "echal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pejiguera u estorbu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me suelin "
+    },
+    {
+     "w": "llamal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y de estu mi hiju,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pus no sabi ná,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "porque hay que "
+    },
+    {
+     "w": "vivil",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "sufril",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " y "
+    },
+    {
+     "w": "aguantal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pos yo, compañeru,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "no pueu "
+    },
+    {
+     "w": "jablal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "mi hija y el yernu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "me miran igual."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¡De hijas a nueras!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡Pos no varia ná!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Lo que eris me duelis;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "es natural."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Toitu lo causa"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "el pocu jornal;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "haberis no hay; claru se está;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "bastanti desgracia"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "es "
+    },
+    {
+     "w": "llegal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " a esta edad;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "los yernus y nueras"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "tenel",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " que "
+    },
+    {
+     "w": "aguantal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "ellus y nusotrus"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa'l casu es igual."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "w": "Jablal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " de otra cosa,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "dejal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " esu ya;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "paeci mentira"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que había de "
+    },
+    {
+     "w": "llegal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Tenemus la vía"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "del tou cambiá"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con tantus inventus;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y hay que "
+    },
+    {
+     "w": "fijal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que estu no para;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de vez en vez más."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡Qué hombris más grandis!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡cómo podrán!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "ahora que vaga"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "sus voy a "
+    },
+    {
+     "w": "contal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ":"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Bajé el otro día"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa abaju a "
+    },
+    {
+     "w": "afeital",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y en la barbería"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "oí "
+    },
+    {
+     "w": "porfial",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Es que un telesforun"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con letriciá"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "por mediu de un jilu..."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "no soy pa "
+    },
+    {
+     "w": "explical",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "es un cajonitu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de maera cuadrá"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con unas argollas"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que empujan pa allá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se le poni el oíu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y espienza a "
+    },
+    {
+     "w": "jablal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu tú y comu yo,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "asín, natural,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "lo mesmu a Pikín"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu si es a "
+    },
+    {
+     "w": "Ultramal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¡Qué adelantu o milagru!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡qué barbariá!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Si la cosa no cambia"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con la Sociedá,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "entre adelantus e inventus"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡andi llegarán!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Bien claru vemus,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "no hay que "
+    },
+    {
+     "w": "dudal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "hoy lo más grandi"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "es la Sociedá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "dentru de unus añus,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡quién conocerá!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¿Cuándu hemus vistu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "venil",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " a "
+    },
+    {
+     "w": "jablal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "al pueblu un menistru"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tan natural?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡Vay que otras vecis"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "vinieran pa acá!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¿Te acuerdas, Domingu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de antis p'atrás?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡qué tiempus aquellus"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que no había de ná!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "estaba la España"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "del tou atrasá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡qué clisi más negra,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "qué perra y fatal,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con tanta miseria,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "la genti empeñá,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "a mediu "
+    },
+    {
+     "w": "comel",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y muy mal "
+    },
+    {
+     "w": "pasal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Comu que era imposible"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "poel",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "dal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " allá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y entoncis un duru"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "valía un capital."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¿Y qué que valiera?"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Se vivía muy mal;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "estaban las cosas"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "muy mal montás"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con la Dentaura"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y el mal "
+    },
+    {
+     "w": "gobernal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con los reyis y flairis"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y tantu "
+    },
+    {
+     "w": "redal",
+     "r": [
+      "C09",
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡menúa chamusquina"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tenian formá!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Entri pagas de aquí,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "entri pagas de allá,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tenían a la genti"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "del tou subyugá."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Dendi entoncis ahora..."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡pos no varía ná!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "con el nuevu regil"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y la Sociedá,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "verás dentru e pocu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "la vuelta que dá."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Ahora el contratu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se tié que "
+    },
+    {
+     "w": "encargal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que los ricus y probis"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que paguin igual,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "cá uno en proporción,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu es natural;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y el que quera "
+    },
+    {
+     "w": "comel",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tié que "
+    },
+    {
+     "w": "trabajal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "¡Si asina ellu fueri!..."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡quién conocerá"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "siquiá pa los probis"
+    },
+    {
+     "verso": true
+    },
+    {
+     "w": "vivil",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": " "
+    },
+    {
+     "w": "regulal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "!"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pos yo sos alviertu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que se puei "
+    },
+    {
+     "w": "alcanzal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ","
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "porque pendi en nusotrus"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y en la Sociedá."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "D'aquí por delanti"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "bien claru está"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "cuando haiga elecionis,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "unios a "
+    },
+    {
+     "w": "votal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Rufino",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Pos yo he comprendíu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y asina será,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa mi cortu juiciu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que el mundu era un pan,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y que Dios nos llamó"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y nos diju: tomad,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "partilo pa tous;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¡vusotrus allá!"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "El que era mu ansiosu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "se cogió la mitá,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y el que éramus torpi"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "lo quearun sin ná."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Lo que atrás se queó"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "alanti no va;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "¿cómu es posible"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "que haiga igualdá?"
+    }
+   ]
+  },
+  {
+   "tipo": "turno",
+   "quien": "Domingo",
+   "tokens": [
+    {
+     "verso": true,
+     "primero": true
+    },
+    {
+     "t": "Por esi misteriu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "hay que "
+    },
+    {
+     "w": "dispertal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Fué Cristu el primeru"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de la Sociedá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu era tan buenu,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "tan justu y legal,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "claru, estorbaba,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "y lo mandarun "
+    },
+    {
+     "w": "mual",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": "."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "El se marchó; no volvió p'acá;"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "comu era el maestru,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pus claru se está,"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "está la colmena"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "queó derrotá."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "Y ahora se vuelvi"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "De nuevu a "
+    },
+    {
+     "w": "espenzal",
+     "r": [
+      "C06"
+     ]
+    },
+    {
+     "t": ";"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "misteriu y ejemplu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "de la realidá."
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "El mundu se hizu"
+    },
+    {
+     "verso": true
+    },
+    {
+     "t": "pa tous igual."
+    }
+   ]
+  }
+ ],
+ "glosario": [
+  {
+   "n": 1,
+   "forma": "Acacha",
+   "glosa": "agáchate, siéntate"
+  },
+  {
+   "n": 2,
+   "forma": "andi",
+   "glosa": "adónde"
+  },
+  {
+   "n": 3,
+   "forma": "jumemus",
+   "glosa": "fumemos"
+  },
+  {
+   "n": 4,
+   "forma": "abrigá",
+   "glosa": "lugar al abrigo"
+  },
+  {
+   "n": 5,
+   "forma": "en tantu",
+   "glosa": "mientras"
+  },
+  {
+   "n": 8,
+   "forma": "sus",
+   "glosa": "os"
+  },
+  {
+   "n": 10,
+   "forma": "varial",
+   "glosa": "cambiar"
+  },
+  {
+   "n": 11,
+   "forma": "bolsicu",
+   "glosa": "bolsillo"
+  },
+  {
+   "n": 13,
+   "forma": "cogéla",
+   "glosa": "cogedla"
+  },
+  {
+   "n": 16,
+   "forma": "al verdi o a colas",
+   "glosa": "?"
+  },
+  {
+   "n": 21,
+   "forma": "jigus",
+   "glosa": "?"
+  },
+  {
+   "n": 27,
+   "forma": "apretá",
+   "glosa": "apurada"
+  },
+  {
+   "n": 31,
+   "forma": "jartal",
+   "glosa": "hartar"
+  },
+  {
+   "n": 33,
+   "forma": "mairi",
+   "glosa": "madre"
+  },
+  {
+   "n": 37,
+   "forma": "empachal",
+   "glosa": "fastidiar"
+  },
+  {
+   "n": 39,
+   "forma": "toná",
+   "glosa": "cantinela"
+  },
+  {
+   "n": 41,
+   "forma": "pairi",
+   "glosa": "padre"
+  },
+  {
+   "n": 41,
+   "forma": "enfá",
+   "glosa": "enfada"
+  },
+  {
+   "n": 42,
+   "forma": "Carachu",
+   "glosa": "¡caramba!"
+  },
+  {
+   "n": 44,
+   "forma": "torniscón",
+   "glosa": "bofetada"
+  },
+  {
+   "n": 48,
+   "forma": "ha e'sel",
+   "glosa": "ha de ser"
+  },
+  {
+   "n": 49,
+   "forma": "poelus domal",
+   "glosa": "poderlos domar"
+  },
+  {
+   "n": 50,
+   "forma": "maletu",
+   "glosa": "malucho"
+  },
+  {
+   "n": 51,
+   "forma": "jadi",
+   "glosa": "hace"
+  },
+  {
+   "n": 54,
+   "forma": "pereda",
+   "glosa": "pereza"
+  },
+  {
+   "n": 56,
+   "forma": "rumatismu",
+   "glosa": "reúma"
+  },
+  {
+   "n": 60,
+   "forma": "méicu",
+   "glosa": "médico"
+  },
+  {
+   "n": 61,
+   "forma": "asina",
+   "glosa": "así"
+  },
+  {
+   "n": 63,
+   "forma": "caporal",
+   "glosa": "el que manda"
+  },
+  {
+   "n": 66,
+   "forma": "idi",
+   "glosa": "dice"
+  },
+  {
+   "n": 69,
+   "forma": "mos",
+   "glosa": "nos"
+  },
+  {
+   "n": 75,
+   "forma": "arrecial",
+   "glosa": "entumecerme"
+  },
+  {
+   "n": 77,
+   "forma": "paicía rigulal",
+   "glosa": "parecía normal"
+  },
+  {
+   "n": 78,
+   "forma": "dumbin",
+   "glosa": "?"
+  },
+  {
+   "n": 80,
+   "forma": "jocicu",
+   "glosa": "morro, cara de enfado"
+  },
+  {
+   "n": 82,
+   "forma": "arredín",
+   "glosa": "?"
+  },
+  {
+   "n": 84,
+   "forma": "pejiguera",
+   "glosa": "pesado, que molesta"
+  },
+  {
+   "n": 96,
+   "forma": "eris",
+   "glosa": "eres"
+  },
+  {
+   "n": 100,
+   "forma": "haberis",
+   "glosa": "bienes, dinero"
+  },
+  {
+   "n": 106,
+   "forma": "pa'l casu",
+   "glosa": "para el caso"
+  },
+  {
+   "n": 109,
+   "forma": "paeci",
+   "glosa": "parece"
+  },
+  {
+   "n": 119,
+   "forma": "vaga",
+   "glosa": "hay tiempo"
+  },
+  {
+   "n": 124,
+   "forma": "porfial",
+   "glosa": "discutir"
+  },
+  {
+   "n": 125,
+   "forma": "telesforun",
+   "glosa": "teléfono"
+  },
+  {
+   "n": 126,
+   "forma": "letriciá",
+   "glosa": "electricidad"
+  },
+  {
+   "n": 127,
+   "forma": "jilu",
+   "glosa": "hilo"
+  },
+  {
+   "n": 130,
+   "forma": "maera cuadrá",
+   "glosa": "madera cuadrada"
+  },
+  {
+   "n": 133,
+   "forma": "oíu",
+   "glosa": "oído"
+  },
+  {
+   "n": 134,
+   "forma": "espienza",
+   "glosa": "empieza"
+  },
+  {
+   "n": 137,
+   "forma": "Pikín",
+   "glosa": "Pekín"
+  },
+  {
+   "n": 138,
+   "forma": "Ultramal",
+   "glosa": "ultramar, América"
+  },
+  {
+   "n": 140,
+   "forma": "barbariá",
+   "glosa": "barbaridad"
+  },
+  {
+   "n": 142,
+   "forma": "Sociedá",
+   "glosa": "la sociedad obrera?"
+  },
+  {
+   "n": 153,
+   "forma": "menistru",
+   "glosa": "ministro"
+  },
+  {
+   "n": 158,
+   "forma": "antis p'atrás",
+   "glosa": "antes, en otro tiempo"
+  },
+  {
+   "n": 163,
+   "forma": "clisi",
+   "glosa": "crisis"
+  },
+  {
+   "n": 166,
+   "forma": "empeñá",
+   "glosa": "con deudas"
+  },
+  {
+   "n": 176,
+   "forma": "montás",
+   "glosa": "montadas"
+  },
+  {
+   "n": 177,
+   "forma": "Dentaura",
+   "glosa": "dictadura"
+  },
+  {
+   "n": 179,
+   "forma": "flairis",
+   "glosa": "frailes"
+  },
+  {
+   "n": 180,
+   "forma": "redal",
+   "glosa": "rezar"
+  },
+  {
+   "n": 181,
+   "forma": "chamusquina",
+   "glosa": "riña, jaleo"
+  },
+  {
+   "n": 187,
+   "forma": "Dendi",
+   "glosa": "desde"
+  },
+  {
+   "n": 189,
+   "forma": "regil",
+   "glosa": "régimen"
+  },
+  {
+   "n": 194,
+   "forma": "tié",
+   "glosa": "tiene"
+  },
+  {
+   "n": 197,
+   "forma": "cá uno",
+   "glosa": "cada uno"
+  },
+  {
+   "n": 199,
+   "forma": "quera",
+   "glosa": "quiera"
+  },
+  {
+   "n": 203,
+   "forma": "siquiá",
+   "glosa": "siquiera"
+  },
+  {
+   "n": 205,
+   "forma": "sos alviertu",
+   "glosa": "os advierto"
+  },
+  {
+   "n": 206,
+   "forma": "puei",
+   "glosa": "puede"
+  },
+  {
+   "n": 207,
+   "forma": "pendi",
+   "glosa": "depende"
+  },
+  {
+   "n": 211,
+   "forma": "haiga",
+   "glosa": "haya"
+  },
+  {
+   "n": 219,
+   "forma": "partilo",
+   "glosa": "partidlo"
+  },
+  {
+   "n": 221,
+   "forma": "ansiosu",
+   "glosa": "codicioso"
+  },
+  {
+   "n": 224,
+   "forma": "quearun",
+   "glosa": "quedaron"
+  },
+  {
+   "n": 226,
+   "forma": "alanti",
+   "glosa": "adelante"
+  },
+  {
+   "n": 230,
+   "forma": "dispertal",
+   "glosa": "despertar"
+  },
+  {
+   "n": 236,
+   "forma": "mual",
+   "glosa": "mudar?"
+  },
+  {
+   "n": 241,
+   "forma": "derrotá",
+   "glosa": "deshecha"
+  },
+  {
+   "n": 243,
+   "forma": "espenzal",
+   "glosa": "empezar"
+  }
+ ],
+ "_fuente": "Texto de la hoja TEX-06 (aula/hojas/MAR-E44.md) con las marcas de la guía de clase (texto.py, 13/11/2026)",
+ "detalle": {
+  "_fuente": "Guía de clase de TEX-06, rehecha el 13/11/2026 con el poema entero: secciones de los rasgos destacados y de los demás rasgos, resumidas a mano, sin lo que ya cuenta la página de cada rasgo (qué es, de dónde viene, qué encontraron las encuestas, cómo está, el mapa).",
+  "resumen": "Lo que hace Pedro Águila con cada uno, y los demás rasgos del poema",
+  "entradilla": "Pedro Águila escribió el poema en Torrejoncillo en 1932, veinte años después de la encuesta de Krüger y uno o dos después de la de Espinosa, que pasaron por el pueblo. Lo que hace con sus tres rasgos destacados se puede comparar con lo que ellos oyeron allí. Lo general de cada rasgo, con su mapa, está en su página.",
+  "rasgos": [
+   {
+    "codigo": "C08",
+    "parrafos": [
+     "Dos veces, en la misma queja de Rufino: *su mairi se vá* y *su pairi se enfá*, la madre y el padre de los nietos. Otro autor de Torrejoncillo, Aurelio Santos Moreno, ya lo escribía antes: *Mi paire* en 1912, y *la mairi* y *Peirinu*, por Pedrito, en 1915.",
+     "Krüger puso Torrejoncillo en 1912 entre los siete pueblos donde el cambio estaba hecho casi siempre. Pero allí solo apuntó *poiríu* ‘podrido’, y su informante, de setenta años, le dijo *madre* con d."
+    ],
+    "pregunta": "¿Quién decía *mairi* y *pairi*, y de qué pueblo era? ¿Alguien ha oído *mairina*, *lairón* o *Mairil*?"
+   },
+   {
+    "codigo": "C06",
+    "parrafos": [
+     "Es el rasgo que más se ve: 55 veces, en 46 palabras. No queda ni una -r al final de palabra, salvo la de *por*, que va con r las cinco veces.",
+     "Casi todo son verbos: *jumal*, *andal*, *aguantal*, *vivil*, *comel*, *llegal*, *votal* y *jablal*, que sale cuatro veces. También fuera del verbo: *rigulal* y *regulal*, ‘regular’, *Ultramal*, el *mal gobernal*. Delante del pronombre, la r se va: *poelus domal*, ‘poderlos domar’.",
+     "En 1912 Krüger oyó la -l en los ejemplos que recogió en Torrejoncillo, como *ayel*, salvo en *flor*, con r, que explica por analogía con el plural."
+    ],
+    "pregunta": "¿En casa se dice *comel* o *comer*? ¿Cambia según con quién se hable? ¿Y *pol* o *por*?"
+   },
+   {
+    "codigo": "C09",
+    "parrafos": [
+     "Cuatro palabras: *jadi* ‘hace’, *pereda* ‘pereza’, *idi* ‘dice’ y *redal* ‘rezar’, en *con los reyis y flairis / y tantu redal*. Las demás palabras con c o z van como en castellano: *hacia*, *vecis*, *vejez*, *conocerá*, *alcanzal*.",
+     "En 1912 Krüger apuntó en Torrejoncillo *idi* y *jadi*, como en el poema. En 1930 y 1931 Espinosa la encontró allí, según él, solo en «contadas personas de edad avanzada», y entre las palabras que da del pueblo está *redal*. Hacia 1970, el informante de Cummins en Torrejoncillo, un yuntero de 68 años, todavía decía *idil* con esa d."
+    ],
+    "pregunta": "¿Quién dice o decía *jadel*, *idil* o *adeiti*? ¿Alguien ha oído *pereda* o *redal*?"
+   }
+  ],
+  "otros": [
+   {
+    "codigo": "V01",
+    "texto": "En casi cada verso: *Rufinu*, *tardi*, *tabacu*, *nietus*, *tiempu*, *méicu*, *hombris*, *Cristu*, *riñin*, *tieni*. No siempre: *como es natural* junto a *comu es natural*, *unos doloris* junto a *unus añus*, *pues* junto a *pos*."
+   },
+   {
+    "codigo": "C01",
+    "texto": "*jumemus*, *jumal*, *jartal*, *jadi*, *juerza*, *jocicu*, *jilu* y *jablal*. Pero *hablemus*, *hija*, *hijo* y *hizu*, que también venían de f, van con h."
+   },
+   {
+    "codigo": "C07",
+    "texto": "*abrigá*, *toná*, *aburríu*, *méicu*, *paicía*, *maera cuadrá*, *oíu*, *queó*, *tou*; y al final, *Sociedá*, *mitá*, *igualdá*, *realidá*."
+   },
+   {
+    "codigo": "C20",
+    "texto": "*idi* ‘dice’ y *andi* ‘adónde’."
+   },
+   {
+    "codigo": "M08",
+    "texto": "*sus* y *sos* por *os*, y *mos* por *nos*; pero también *nos* y *nusotrus*."
+   },
+   {
+    "codigo": "V02",
+    "titulo": "Vocales átonas que cambian",
+    "texto": "*rumatismu*, *rigulal*, *menistru*, *dispertal*."
+   },
+   {
+    "codigo": "M24",
+    "texto": "*asina*, *asín*, *dendi*, *alanti*, *mesmu*, *siquiá*, *mu*."
+   },
+   {
+    "codigo": "M25",
+    "titulo": "Pa- delante del adverbio",
+    "texto": "*p'acá*, *p'allá*, *p'atrás*, *pa acá*, *pa allá*."
+   },
+   {
+    "codigo": "C05",
+    "titulo": "La r y la l al final de sílaba",
+    "texto": "Al revés, en grupo: *clisi* ‘crisis’ y *flairis* ‘frailes’."
+   },
+   {
+    "codigo": null,
+    "titulo": "Lo que la letra no deja ver",
+    "texto": "La jota, la s del final de sílaba y la ll y la y van escritas como en castellano: el periódico no dice cómo las pronunciaba Pedro Águila."
+   }
+  ],
+  "fuentes": "Datos de Krüger 1914, Espinosa 1935 y Cummins 1974, y de Martín 2023 para Aurelio Santos Moreno."
+ }
+}
